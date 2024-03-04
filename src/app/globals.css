@@ -73,6 +73,19 @@
   }
 }
 
+/* Colors */
+:root {
+  --black: #181818;
+  --gray-dark-text: #323539;
+  --gray-text: #858c95;
+  --gray-light-text: #cdd0d5;
+  --gray-stroke: #e5e5e7;
+  --gray-input: #f8f9fb;
+  --red-main: #f32c40;
+  --red-second: #ff5061;
+}
+/* Colors */
+
 * {
   box-sizing: border-box;
   padding: 0;
