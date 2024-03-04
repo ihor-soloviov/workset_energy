@@ -3,7 +3,7 @@ import { Inter_Tight } from 'next/font/google';
 import 'normalize.css';
 import './globals.css';
 import Header from '@/components/Header/Header';
-import Footer from '@/components/Header/Footer/Footer';
+import Footer from '@/components/Footer/Footer';
 
 const inter = Inter_Tight({ subsets: ['latin'] });
 
