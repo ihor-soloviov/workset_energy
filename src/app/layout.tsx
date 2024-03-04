@@ -1,21 +1,30 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter_Tight } from 'next/font/google';
+import 'normalize.css';
 import './globals.css';
+import Header from '@/components/Header/Header';
+import Footer from '@/components/Header/Footer/Footer';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter_Tight({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'WorkSET Energy',
 };
 
-export const RootLayout = ({
+const RootLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) => {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 };
+
+export default RootLayout;

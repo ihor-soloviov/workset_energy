@@ -1,5 +1,7 @@
 import styles from './page.module.css';
 
-export const Home = () => {
+const PvSystem = () => {
   return <main className={styles.main}>workset</main>;
 };
+
+export default PvSystem;
