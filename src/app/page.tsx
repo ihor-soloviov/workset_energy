@@ -1,7 +1,7 @@
 import styles from './page.module.css';
 
-const PvSystem = () => {
-  return <main className={styles.main}>workset</main>;
+const HomePage = () => {
+  return <div>HomePage</div>;
 };
 
-export default PvSystem;
+export default HomePage;
