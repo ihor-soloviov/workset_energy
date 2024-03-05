@@ -1,7 +1,7 @@
 /* Colors */
 :root {
-  --white: #fff;
-  --black--main: #181818;
+  --white-main: #fff;
+  --black-main: #181818;
   --gray-dark-text: #323539;
   --gray-text: #858c95;
   --gray-light-text: #cdd0d5;
@@ -9,6 +9,7 @@
   --gray-input: #f8f9fb;
   --red-main: #f32c40;
   --red-second: #ff5061;
+  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Colors */
 
@@ -44,5 +45,6 @@ img {
 }
 
 button {
+  display: block;
   cursor: pointer;
 }

@@ -1,0 +1,123 @@
+.header {
+  background-color: black;
+  padding: 48px 0 18px;
+}
+
+.headerContainer {
+  width: 100%;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+.headerLogoLink {
+  transition: scale 100ms var(--cubic);
+}
+
+.headerLogo {
+  width: 73px;
+  height: 43px;
+}
+
+.headerLogoLink:hover {
+  scale: 1.05;
+}
+
+.headerNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerBurgerBtn {
+  width: fit-content;
+  height: fit-content;
+  background-color: transparent;
+  border: none;
+}
+
+.headerBurgerIconGray {
+  display: none;
+}
+
+.headerBurgerBtn:hover .headerBurgerIcon {
+  display: none;
+}
+
+.headerBurgerBtn:hover .headerBurgerIconGray {
+  display: block;
+}
+
+.headerList {
+  display: none;
+}
+
+.headerBtn {
+  display: none;
+}
+
+@media screen and (min-width: 390px) {
+  .headerContainer {
+    width: 390px;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .header {
+    padding: 24px 0;
+  }
+
+  .headerContainer {
+    width: 1728px;
+    padding: 0 117px;
+    display: flex;
+  }
+
+  .headerBurgerBtn {
+    display: none;
+  }
+
+  .headerNav {
+    gap: 145px;
+  }
+
+  .headerList {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .headerNavLink {
+    color: var(--white-main);
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 250ms var(--cubic);
+  }
+
+  .headerNavLink:hover {
+    color: var(--gray-dark-text);
+  }
+
+  .headerBtn {
+    width: 140px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    background-color: var(--red-main);
+    padding: 13px 19px;
+    margin-left: auto;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 6px;
+    color: var(--white-main);
+    transition:
+      border-color 250ms var(--cubic),
+      background-color 250ms var(--cubic);
+  }
+}
+
+.headerBtn:hover {
+  border-color: var(--white-main);
+  background-color: transparent;
+}

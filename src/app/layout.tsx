@@ -1,13 +1,12 @@
 import type { Metadata } from 'next';
-import { Inter_Tight } from 'next/font/google';
+
 import 'normalize.css';
 import './globals.css';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
+import { interTight } from '@/utils/fonts';
 
-const inter = Inter_Tight({ subsets: ['latin'] });
-
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: 'WorkSET Energy',
 };
 
@@ -18,7 +17,7 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={interTight.className}>
         <main>
           <Header />
           {children}

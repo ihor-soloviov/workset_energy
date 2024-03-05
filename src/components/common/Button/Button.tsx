@@ -3,11 +3,19 @@ type ButtonProps = {
   type: 'submit' | 'reset' | 'button';
   className: string;
   children?: React.ReactNode;
+  handleClick?: () => void;
+  handleSubmit?: () => void;
 };
 
-const Button = ({ text, type, className, children }: ButtonProps) => {
+const Button = ({
+  text,
+  type,
+  className,
+  children,
+  handleClick,
+}: ButtonProps) => {
   return (
-    <button type={type} className={className}>
+    <button onClick={handleClick} type={type} className={className}>
       <>
         {text}
         {children}

@@ -1,0 +1,207 @@
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100vh;
+  padding: 48px 0px 64px;
+  background-color: var(--black-main);
+  overflow-y: auto;
+}
+
+.menuTopWrap {
+  width: 100%;
+  padding: 0 24px;
+  margin: 0 auto;
+  margin-bottom: 18px;
+}
+
+.menuCrossBtn {
+  width: fit-content;
+  height: fit-content;
+  background-color: transparent;
+  border: none;
+  margin-left: auto;
+}
+
+.menuCrossIconGray {
+  display: none;
+}
+
+.menuCrossBtn:hover .menuCrossIcon {
+  display: none;
+}
+
+.menuCrossBtn:hover .menuCrossIconGray {
+  display: block;
+}
+
+.menuLine {
+  border-bottom: 0.7px solid var(--gray-text);
+  width: 100%;
+  margin-bottom: 64px;
+}
+
+.menuNav {
+  margin-bottom: 44px;
+}
+
+.menuTopList {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+}
+
+.menuTopItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.menuTopItemText {
+  color: var(--white-main);
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 160%;
+}
+
+.menuArrowIconWhite {
+  display: none;
+}
+
+.menuNavLink:hover .menuArrowIcon {
+  display: none;
+}
+
+.menuNavLink:hover .menuArrowIconWhite {
+  display: block;
+}
+
+.menuSubmitBtn {
+  width: 100%;
+  height: 46px;
+  display: flex;
+  padding: 12px 91px 12px 97px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border: none;
+  color: var(--gray-input);
+  background-color: var(--red-main);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 0.95;
+  border-radius: 6px;
+  margin-bottom: 60px;
+  transition:
+    background-color 250ms var(--cubic),
+    color 250ms var(--cubic);
+}
+
+.menuSubmitIcon {
+  height: 22px;
+}
+
+.menuSubmitIconRed {
+  height: 22px;
+  display: none;
+}
+
+.menuSubmitBtn:hover {
+  background-color: var(--white-main);
+  color: var(--red-main);
+}
+
+.menuSubmitBtn:hover .menuSubmitIcon {
+  display: none;
+}
+
+.menuSubmitBtn:hover .menuSubmitIconRed {
+  display: block;
+}
+
+.menuList {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.menuItem {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: fit-content;
+}
+
+.menuItemText {
+  color: var(--gray-text);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 160%;
+  width: fit-content;
+  user-select: none;
+}
+
+.menuLink {
+  color: var(--white-main);
+  width: fit-content;
+  font-size: 18px;
+  line-height: 160%;
+  transition: color 250ms var(--cubic);
+}
+
+.menuLink:hover {
+  color: var(--gray-text);
+}
+
+.menuBottomList {
+  display: flex;
+  gap: 10px;
+}
+
+.menuBottomLink {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--white-main);
+  background-color: transparent;
+  transition: background-color 250ms var(--cubic);
+}
+
+.menuSocialIconRed {
+  display: none;
+}
+
+.menuBottomLink:hover {
+  background-color: var(--white-main);
+}
+
+.menuBottomLink:hover .menuSocialIcon {
+  display: none;
+}
+
+.menuBottomLink:hover .menuSocialIconRed {
+  display: block;
+}
+
+@media screen and (min-width: 390px) {
+  .menuTopWrap {
+    width: 390px;
+  }
+
+  .menuSubmitBtn {
+    width: 342px;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .menu {
+    display: none;
+  }
+}
