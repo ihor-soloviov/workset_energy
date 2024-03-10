@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import styles from './Header.module.css';
 import MobileMenu from './MobileMenu/MobileMenu';
 import Button from '../common/Button/Button';
-import HeaderList from './HeaderList/HeaderList';
+import HeaderNavList from './HeaderNavList/HeaderNavList';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -96,7 +96,7 @@ const Header = () => {
               />
             </svg>
           </Button>
-          <HeaderList />
+          <HeaderNavList />
         </nav>
         <Button text="Zum Angebot" type="button" className={styles.headerBtn} />
       </div>

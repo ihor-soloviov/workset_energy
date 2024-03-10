@@ -1,15 +1,14 @@
-'use client';
-
 import Link from 'next/link';
 import React from 'react';
-import styles from './HeaderList.module.css';
+import styles from './HeaderNavList.module.css';
 import { inter } from '@/utils/fonts';
-type NavLinkItem = {
+
+export type NavLinkItem = {
   href: string;
   text: string;
 };
 
-const HeaderList = () => {
+const HeaderNavList = () => {
   const navLinkItems: NavLinkItem[] = [
     { href: '/pvsystem', text: 'PV-System' },
     { href: '/stormspeicher', text: 'Stormspeicher' },
@@ -31,4 +30,4 @@ const HeaderList = () => {
   );
 };
 
-export default HeaderList;
+export default HeaderNavList;

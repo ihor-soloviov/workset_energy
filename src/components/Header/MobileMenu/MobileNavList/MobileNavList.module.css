@@ -1,0 +1,28 @@
+.menuTopList {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+}
+
+.menuTopItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.menuTopItemText {
+  color: var(--white-main);
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 160%;
+}
+
+.menuArrowIcon {
+  stroke: var(--gray-text);
+  transition: stroke 250ms var(--cubic);
+}
+
+.menuArrowIcon:hover {
+  stroke: var(--white-main);
+}

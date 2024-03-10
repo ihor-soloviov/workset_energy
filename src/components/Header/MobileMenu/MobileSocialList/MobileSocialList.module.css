@@ -1,0 +1,30 @@
+.menuBottomList {
+  display: flex;
+  gap: 10px;
+}
+
+.menuBottomLink {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--white-main);
+  background-color: transparent;
+  transition:
+    background-color 250ms var(--cubic),
+    fill 250ms var(--cubic);
+}
+
+.menuBottomLink:hover {
+  background-color: var(--white-main);
+}
+
+.menuSocialIcon {
+  fill: var(--white-main);
+}
+
+.menuBottomLink:hover .menuSocialIcon {
+  fill: var(--red-main);
+}

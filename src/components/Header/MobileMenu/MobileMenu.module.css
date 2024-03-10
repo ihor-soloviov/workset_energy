@@ -43,35 +43,6 @@
   margin-bottom: 44px;
 }
 
-.menuTopList {
-  display: flex;
-  gap: 24px;
-  flex-direction: column;
-}
-
-.menuTopItem {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  user-select: none;
-}
-
-.menuTopItemText {
-  color: var(--white-main);
-  font-size: 26px;
-  font-weight: 500;
-  line-height: 160%;
-}
-
-.menuArrowIcon {
-  stroke: var(--gray-text);
-  transition: stroke 250ms var(--cubic);
-}
-
-.menuArrowIcon:hover {
-  stroke: var(--white-main);
-}
-
 .menuBtn {
   width: 100%;
   height: 46px;
@@ -140,37 +111,6 @@
 
 .menuLink:hover {
   color: var(--gray-text);
-}
-
-.menuBottomList {
-  display: flex;
-  gap: 10px;
-}
-
-.menuBottomLink {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid var(--white-main);
-  background-color: transparent;
-  transition:
-    background-color 250ms var(--cubic),
-    fill 250ms var(--cubic);
-}
-
-.menuBottomLink:hover {
-  background-color: var(--white-main);
-}
-
-.menuSocialIcon {
-  fill: var(--white-main);
-}
-
-.menuBottomLink:hover .menuSocialIcon {
-  fill: var(--red-main);
 }
 
 @media screen and (min-width: 390px) {
