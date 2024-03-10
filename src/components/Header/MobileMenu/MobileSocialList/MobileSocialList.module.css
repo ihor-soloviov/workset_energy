@@ -25,6 +25,6 @@
   fill: var(--white-main);
 }
 
-.menuBottomLink:hover .menuSocialIcon {
+.socialLink:hover .menuSocialIcon {
   fill: var(--red-main);
 }
