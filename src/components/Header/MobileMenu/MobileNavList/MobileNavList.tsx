@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import styles from './MobileNavList.module.css';
 import { NavLinkItem } from '../../HeaderNavList/HeaderNavList';
+import MenuArrowIcon from '/public/icons/menu-arrow.svg';
 
 type MobileNavListProps = {
   handleMenuClick: () => void;
@@ -28,29 +29,7 @@ const MobileNavList = ({ handleMenuClick }: MobileNavListProps) => {
             href={href}
             className={styles.menuNavLink}
           >
-            <svg
-              className={styles.menuArrowIcon}
-              width="40"
-              height="40"
-              viewBox="0 0 40 40"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M14.5454 27.3096L26.2121 14.7927"
-                stroke=""
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M14.0154 14.2231L26.2124 14.7921L26.7427 27.8779"
-                stroke=""
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+            <MenuArrowIcon className={styles.menuArrowIcon} />
           </Link>
         </li>
       ))}

@@ -4,6 +4,7 @@ import MobileNavList from './MobileNavList/MobileNavList';
 import Button from '../../common/Button/Button';
 import { inter } from '@/utils/fonts';
 import MobileSocialList from './MobileSocialList/MobileSocialList';
+import MenuBtnIcon from '/public/icons/small-arrow-btn.svg';
 
 type MobileMenuProps = {
   handleMenuClick: () => void;
@@ -52,21 +53,7 @@ const MobileMenu = ({ handleMenuClick }: MobileMenuProps) => {
           className={styles.menuBtn}
           type="button"
         >
-          <svg
-            className={styles.menuBtnIcon}
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M4.16675 10H15.0001M10.8334 5L15.2442 9.41074C15.5696 9.73618 15.5696 10.2638 15.2442 10.5893L10.8334 15"
-              stroke=""
-              strokeWidth="1.67"
-              strokeLinecap="round"
-            />
-          </svg>
+          <MenuBtnIcon className={styles.menuBtnIcon} />
         </Button>
         <ul className={`${styles.menuList} ${inter.className}`}>
           <li className={styles.menuItem}>
