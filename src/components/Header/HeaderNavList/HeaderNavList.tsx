@@ -8,15 +8,15 @@ export type NavLinkItem = {
   text: string;
 };
 
-const HeaderNavList = () => {
-  const navLinkItems: NavLinkItem[] = [
-    { href: '/pvsystem', text: 'PV-System' },
-    { href: '/stormspeicher', text: 'Stormspeicher' },
-    { href: '/wallbox', text: 'Wallbox' },
-    { href: '/karrier', text: 'Karrier' },
-    { href: '/uberuns', text: 'Über uns' },
-  ];
+export const navLinkItems: NavLinkItem[] = [
+  { href: '/pvsystem', text: 'PV-System' },
+  { href: '/stormspeicher', text: 'Stormspeicher' },
+  { href: '/wallbox', text: 'Wallbox' },
+  { href: '/karrier', text: 'Karrier' },
+  { href: '/uberuns', text: 'Über uns' },
+];
 
+const HeaderNavList = () => {
   return (
     <ul className={`${styles.headerList} ${inter.className}`}>
       {navLinkItems.map(({ text, href }) => (
