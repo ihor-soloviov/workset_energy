@@ -1,17 +1,17 @@
-.menuTopList {
+.menuNavList {
   display: flex;
   gap: 24px;
   flex-direction: column;
 }
 
-.menuTopItem {
+.menuNavItem {
   display: flex;
   align-items: center;
   justify-content: space-between;
   user-select: none;
 }
 
-.menuTopItemText {
+.menuNavItemText {
   color: var(--white-main);
   font-size: 26px;
   font-weight: 500;

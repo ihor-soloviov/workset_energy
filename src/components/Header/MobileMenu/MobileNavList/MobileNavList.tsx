@@ -19,10 +19,10 @@ const MobileNavList = ({ handleMenuClick }: MobileNavListProps) => {
   const handleLinkClick = () => handleMenuClick();
 
   return (
-    <ul className={styles.menuTopList}>
+    <ul className={styles.menuNavList}>
       {navLinkItems.map(({ text, href }) => (
-        <li key={text} className={styles.menuTopItem}>
-          <p className={styles.menuTopItemText}>{text}</p>
+        <li key={text} className={styles.menuNavItem}>
+          <p className={styles.menuNavItemText}>{text}</p>
           <Link
             onClick={handleLinkClick}
             href={href}

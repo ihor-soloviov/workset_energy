@@ -3,9 +3,9 @@ import styles from './MobileSocialList.module.css';
 
 const MobileSocialList = () => {
   return (
-    <ul className={styles.menuBottomList}>
-      <li className={styles.menuItem}>
-        <a className={styles.menuBottomLink}>
+    <ul className={styles.socialList}>
+      <li className={styles.socialItem}>
+        <a className={styles.socialLink}>
           <svg
             className={styles.menuSocialIcon}
             width="18"
@@ -28,8 +28,8 @@ const MobileSocialList = () => {
           </svg>
         </a>
       </li>
-      <li className={styles.menuBottomItem}>
-        <a className={styles.menuBottomLink}>
+      <li className={styles.socialItem}>
+        <a className={styles.socialLink}>
           <svg
             className={styles.menuSocialIcon}
             width="18"
@@ -45,8 +45,8 @@ const MobileSocialList = () => {
           </svg>
         </a>
       </li>
-      <li className={styles.menuBottomItem}>
-        <a className={styles.menuBottomLink}>
+      <li className={styles.socialItem}>
+        <a className={styles.socialLink}>
           <svg
             className={styles.menuSocialIcon}
             width="16"
