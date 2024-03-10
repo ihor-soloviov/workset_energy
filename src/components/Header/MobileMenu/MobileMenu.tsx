@@ -5,7 +5,7 @@ import Button from '../../common/Button/Button';
 import { inter } from '@/utils/fonts';
 import MobileSocialList from './MobileSocialList/MobileSocialList';
 import MenuBtnIcon from '/public/icons/small-arrow-btn.svg';
-
+import MenuCrossIcon from '/public/icons/cross.svg';
 type MobileMenuProps = {
   handleMenuClick: () => void;
 };
@@ -21,25 +21,7 @@ const MobileMenu = ({ handleMenuClick }: MobileMenuProps) => {
           className={styles.menuCrossBtn}
           type="button"
         >
-          <svg
-            className={styles.menuCrossIcon}
-            width="44"
-            height="44"
-            viewBox="0 0 44 44"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M31.8993 12.1001L12.1003 31.8991"
-              stroke=""
-              strokeWidth="1.5"
-            />
-            <path
-              d="M31.899 31.8994L12.1001 12.1004"
-              stroke=""
-              strokeWidth="1.5"
-            />
-          </svg>
+          <MenuCrossIcon className={styles.menuCrossIcon} />
         </Button>
       </div>
       <div className={styles.menuLine}></div>
