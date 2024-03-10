@@ -10,12 +10,15 @@
 }
 
 .headerLogoLink {
+  width: 73px;
+  height: 43px;
   transition: scale 100ms var(--cubic);
 }
 
 .headerLogo {
   width: 73px;
   height: 43px;
+  fill: var(--white-main);
 }
 
 .headerLogoLink:hover {
@@ -35,20 +38,13 @@
   border: none;
 }
 
-.headerBurgerIconGray {
-  display: none;
+.headerBurgerIcon {
+  stroke: var(--white-main);
+  transition: stroke 250ms var(--cubic);
 }
 
-.headerBurgerBtn:hover .headerBurgerIcon {
-  display: none;
-}
-
-.headerBurgerBtn:hover .headerBurgerIconGray {
-  display: block;
-}
-
-.headerList {
-  display: none;
+.headerBurgerIcon:hover {
+  stroke: var(--gray-text);
 }
 
 .headerBtn {
@@ -74,27 +70,6 @@
 
   .headerBurgerBtn {
     display: none;
-  }
-
-  .headerNav {
-    gap: 145px;
-  }
-
-  .headerList {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-  }
-
-  .headerNavLink {
-    color: var(--white-main);
-    font-size: 16px;
-    font-weight: 600;
-    transition: color 250ms var(--cubic);
-  }
-
-  .headerNavLink:hover {
-    color: var(--gray-dark-text);
   }
 
   .headerBtn {

@@ -25,16 +25,12 @@
   margin-left: auto;
 }
 
-.menuCrossIconGray {
-  display: none;
+.menuCrossIcon {
+  stroke: var(--white-main);
+  transition: stroke 250ms var(--cubic);
 }
-
-.menuCrossBtn:hover .menuCrossIcon {
-  display: none;
-}
-
-.menuCrossBtn:hover .menuCrossIconGray {
-  display: block;
+.menuCrossIcon:hover {
+  stroke: var(--gray-text);
 }
 
 .menuLine {
@@ -67,19 +63,16 @@
   line-height: 160%;
 }
 
-.menuArrowIconWhite {
-  display: none;
+.menuArrowIcon {
+  stroke: var(--gray-text);
+  transition: stroke 250ms var(--cubic);
 }
 
-.menuNavLink:hover .menuArrowIcon {
-  display: none;
+.menuArrowIcon:hover {
+  stroke: var(--white-main);
 }
 
-.menuNavLink:hover .menuArrowIconWhite {
-  display: block;
-}
-
-.menuSubmitBtn {
+.menuBtn {
   width: 100%;
   height: 46px;
   display: flex;
@@ -97,29 +90,21 @@
   margin-bottom: 60px;
   transition:
     background-color 250ms var(--cubic),
-    color 250ms var(--cubic);
+    color 250ms var(--cubic),
+    stroke 250ms var(--cubic);
 }
 
-.menuSubmitIcon {
-  height: 22px;
+.menuBtnIcon {
+  stroke: var(--white-main);
 }
 
-.menuSubmitIconRed {
-  height: 22px;
-  display: none;
-}
-
-.menuSubmitBtn:hover {
+.menuBtn:hover {
   background-color: var(--white-main);
   color: var(--red-main);
 }
 
-.menuSubmitBtn:hover .menuSubmitIcon {
-  display: none;
-}
-
-.menuSubmitBtn:hover .menuSubmitIconRed {
-  display: block;
+.menuBtn:hover .menuBtnIcon {
+  stroke: var(--red-main);
 }
 
 .menuList {
@@ -171,23 +156,21 @@
   align-items: center;
   border: 1px solid var(--white-main);
   background-color: transparent;
-  transition: background-color 250ms var(--cubic);
-}
-
-.menuSocialIconRed {
-  display: none;
+  transition:
+    background-color 250ms var(--cubic),
+    fill 250ms var(--cubic);
 }
 
 .menuBottomLink:hover {
   background-color: var(--white-main);
 }
 
-.menuBottomLink:hover .menuSocialIcon {
-  display: none;
+.menuSocialIcon {
+  fill: var(--white-main);
 }
 
-.menuBottomLink:hover .menuSocialIconRed {
-  display: block;
+.menuBottomLink:hover .menuSocialIcon {
+  fill: var(--red-main);
 }
 
 @media screen and (min-width: 390px) {
