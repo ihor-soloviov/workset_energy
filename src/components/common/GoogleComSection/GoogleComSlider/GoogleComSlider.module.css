@@ -1,0 +1,160 @@
+.sliderMainWrap {
+  width: 100%;
+}
+
+.sliderWrap {
+  padding-left: 15px;
+  height: 318px;
+}
+
+.slideWrap {
+  width: 315px;
+  margin-right: 15px;
+}
+
+.slide {
+  cursor: pointer;
+  padding: 24px;
+  height: 318px;
+  border-radius: 10.8px;
+  border: 0.9px solid var(--gray-stroke);
+  background-color: var(--white-main);
+}
+
+.slideTitle {
+  color: var(--gray-light-text);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 160%;
+  margin-bottom: 18px;
+}
+
+.slideText {
+  color: var(--gray-text);
+  line-height: 160%;
+  font-size: 14px;
+  margin-bottom: 57px;
+  width: 265px;
+  height: 114px;
+}
+
+.slideBottomWrap {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.slideImg {
+  width: 63px;
+  border-radius: 10.8px;
+  height: 63px;
+}
+
+.slideRatingWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 9px;
+}
+
+.slideUserName {
+  color: var(--black-main);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 160%;
+  margin-right: auto;
+}
+
+.slideRating {
+  margin-right: auto;
+  display: flex;
+  gap: 6px;
+}
+
+.sliderBtnWrap {
+  display: none;
+}
+
+.nextArrow,
+.prevArrow {
+  stroke: var(--gray-text);
+}
+
+@media screen and (min-width: 1728px) {
+  .sliderMainWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sliderWrap {
+    padding-left: unset;
+    height: 360px;
+    width: 1222px;
+    display: flex;
+    margin: 0 24px;
+  }
+
+  .slideWrap {
+    margin-right: 20px;
+    width: 394px;
+  }
+
+  .slide {
+    padding: 28px;
+    height: 360px;
+  }
+
+  .slideTitle {
+    margin-bottom: 20px;
+  }
+
+  .slideText {
+    font-size: 16px;
+    width: 324px;
+    height: 130px;
+    margin-bottom: 64px;
+  }
+
+  .slideBottomWrap {
+    gap: 20px;
+  }
+
+  .slideImg {
+    width: 70px;
+    height: 70px;
+  }
+
+  .slideUserName {
+    color: var(--black-second);
+  }
+
+  .sliderBtnWrap {
+    cursor: pointer;
+    display: flex;
+    width: 73px;
+    height: 73px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid var(--gray-stroke);
+    flex-shrink: 0;
+    transition:
+      stroke 250ms var(--cubic),
+      border-color 250ms var(--cubic);
+  }
+
+  .sliderBtnWrap:hover {
+    border-color: var(--red-main);
+  }
+
+  .sliderBtnWrap:hover .nextArrow,
+  .sliderBtnWrap:hover .prevArrow {
+    stroke: var(--red-main);
+  }
+
+  .nextArrow {
+    transform: rotate(180deg);
+  }
+}
