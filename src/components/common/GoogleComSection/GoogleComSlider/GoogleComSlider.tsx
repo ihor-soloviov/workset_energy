@@ -3,23 +3,26 @@
 import 'swiper/css';
 import Image from 'next/image';
 import { inter } from '@/utils/fonts';
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef } from 'react';
 import styles from './GoogleComSlider.module.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import { Swiper as SwiperType } from 'swiper';
-import ReactStars from 'react-stars';
 import commentsData from '../../../../comments.json';
 import ArrowIcon from '/public/icons/slide-arrow.svg';
+import StarIcon from '/public/icons/star.svg';
 
 const GoogleComSlider = () => {
   const comments = commentsData.result.reviews;
   const swiperRef = useRef<SwiperType>();
-  const [isMounted, setIsMounted] = useState(false);
 
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+  const starsArr = (count: number) => {
+    return count < 1 || count > 5
+      ? null
+      : Array.from({ length: count }, (_, index) => (
+          <StarIcon className={styles.slideArrowIcon} key={index} />
+        ));
+  };
 
   return (
     <div className={styles.sliderMainWrap}>
@@ -64,19 +67,8 @@ const GoogleComSlider = () => {
                   />
                   <div className={styles.slideRatingWrap}>
                     <h3 className={styles.slideUserName}>{author_name}</h3>
-                    {isMounted && (
-                      <ReactStars
-                        className={styles.slideRating}
-                        count={5}
-                        value={rating}
-                        size={20}
-                        half={true}
-                        color1={'#fff'}
-                        color2={'#F5D140'}
-                        edit={false}
-                        char={'★'}
-                      />
-                    )}
+
+                    <div className={styles.slideRating}>{starsArr(rating)}</div>
                   </div>
                 </div>
               </div>

@@ -72,6 +72,10 @@
   gap: 6px;
 }
 
+.slideArrowIcon {
+  fill: var(--star-main);
+}
+
 .sliderBtnWrap {
   display: none;
 }
@@ -156,5 +160,9 @@
 
   .nextArrow {
     transform: rotate(180deg);
+  }
+  .slideArrowIcon {
+    width: 21px;
+    height: 21px;
   }
 }
