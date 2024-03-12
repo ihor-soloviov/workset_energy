@@ -24,7 +24,7 @@ const HeaderNavList = () => {
       {navLinkItems.map(({ text, href }) => (
         <li
           key={text}
-          className={`${styles.headerItem}${pathname === href ? styles.active : ''}`}
+          className={`${styles.headerItem} ${pathname === href ? styles.active : ''}`}
         >
           <Link href={href} className={styles.headerNavLink}>
             {text}

@@ -25,10 +25,12 @@
     position: absolute;
     content: '';
     border-radius: 2px;
-    border: 1px solid var(--white-main);
+
     background: var(--white-main);
-    width: 88px;
+    width: 100%;
     height: 3px;
+    left: 0px;
+    top: 54.5px;
   }
 
   .headerNavLink:hover {
