@@ -1,0 +1,129 @@
+.contactUsForm {
+  width: 100%;
+}
+
+.contactUsLabelWrap {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.contactUsLabel,
+.contactUsLabelTextArea {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--black-main);
+  font-weight: 600;
+  width: 100%;
+  position: relative;
+}
+
+.contactUsLabelTextArea {
+  margin-bottom: 48px;
+}
+
+.contactUsLabel:not(:last-child) {
+  margin-bottom: 18px;
+}
+
+.contactUsInput {
+  color: var(--black-main);
+  font-size: 15px;
+  padding: 14px 12px;
+  width: 100%;
+  height: 46px;
+  border: 1px solid var(--gray-stroke);
+  border-radius: 6px;
+  background-color: var(--gray-input);
+  outline: none;
+}
+
+.contactUsInput.error {
+  border: 1px solid var(--red-main);
+}
+
+.contactUsInput::placeholder {
+  color: var(--gray-text);
+}
+
+.contactUsTextArea {
+  border: 1px solid var(--gray-stroke);
+  background-color: var(--gray-input);
+  width: 100%;
+  height: 112px;
+  padding: 14px 12px;
+  border-radius: 6px;
+  resize: none;
+  outline: none;
+}
+
+.contactUsTextArea::placeholder {
+  color: var(--gray-text);
+}
+
+.errorText {
+  position: absolute;
+  right: 10px;
+  top: 77px;
+  width: fit-content;
+  color: var(--red-main);
+  font-size: 10px;
+}
+
+.ContactUsBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 142px;
+  color: var(--gray-input);
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+  height: 48px;
+  background-color: var(--red-main);
+  border: none;
+  border-radius: 6px;
+}
+
+@media screen and (min-width: 390px) {
+  .contactUsInput,
+  .contactUsTextArea,
+  .ContactUsBtn {
+    width: 342px;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .contactUsLabelWrap {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .contactUsLabel {
+    gap: 6px;
+  }
+
+  .contactUsLabel.email {
+    margin-bottom: unset;
+  }
+
+  .contactUsLabelTextArea {
+    margin-bottom: 24px;
+  }
+
+  .contactUsInput {
+    width: 100%;
+  }
+
+  .contactUsTextArea {
+    width: 100%;
+    height: 100px;
+  }
+
+  .ContactUsBtn {
+    width: 92px;
+    height: 46px;
+    padding: 14px 20px;
+  }
+}

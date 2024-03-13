@@ -1,0 +1,139 @@
+.contactUsImgWrap {
+  position: relative;
+}
+
+.contactUsImgMob {
+  width: 342px;
+  height: 481px;
+  border-radius: 12px;
+}
+
+.contactUsImgDesc {
+  display: none;
+}
+
+.contactUsAddressMainWrap {
+  display: flex;
+  gap: 18px;
+  position: absolute;
+  top: 334px;
+  left: 16px;
+  width: 310px;
+  height: 129px;
+  display: flex;
+  border-radius: 10px;
+  border: 1px solid var(--gray-stroke);
+  background: var(--white-main);
+  padding: 16px 20px;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.04);
+}
+
+.contactUsLocationWrap {
+  position: absolute;
+  top: 76px;
+  right: 43px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactUsLocationText {
+  color: var(--gray-dark-text);
+  width: 150px;
+  font-weight: 600;
+  line-height: 157%;
+  position: absolute;
+  top: 8px;
+  left: 12px;
+}
+
+.contactUsPointIcon {
+  margin: 0 auto;
+}
+
+.contactUsAddressWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contactUsList {
+  display: flex;
+  width: 100%;
+  gap: 19px;
+  flex-direction: column;
+}
+
+.contactUsItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contactUsTitle {
+  color: var(--gray-dark-text);
+  font-size: 16px;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.contactUsLink {
+  color: var(--red-main);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.contactUsLink.address {
+  color: var(--gray-text);
+  line-height: 160%;
+  width: 128px;
+}
+
+.contactUsBr {
+  display: none;
+}
+
+@media screen and (min-width: 390px) {
+}
+
+@media screen and (min-width: 1728px) {
+  .contactUsImgWrap {
+    order: 1;
+  }
+
+  .contactUsImgMob {
+    display: none;
+  }
+
+  .contactUsImgDesc {
+    display: block;
+    width: 668px;
+    height: 490px;
+    border-radius: 12px;
+  }
+
+  .contactUsAddressMainWrap {
+    width: 604px;
+    height: 146px;
+    gap: 24px;
+    top: 312px;
+    left: 32px;
+  }
+
+  .contactUsLocationWrap {
+    top: 78px;
+    right: 174px;
+  }
+
+  .contactUsLocationText {
+    line-height: 160%;
+    text-align: center;
+  }
+
+  .contactUsAddressWrap {
+    width: calc(100% / 2);
+  }
+
+  .contactUsList {
+    width: calc(100% / 2);
+  }
+}
