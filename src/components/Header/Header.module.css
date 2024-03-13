@@ -1,5 +1,6 @@
 .header {
-  background-color: transparent;
+  /* background-color: transparent; */
+  background-color: black;
   padding: 48px 0 18px;
   border-bottom: 0.7px solid var(--white-main);
   width: 100%;
