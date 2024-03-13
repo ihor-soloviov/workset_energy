@@ -2,6 +2,7 @@ type ButtonProps = {
   text?: string;
   type: 'submit' | 'reset' | 'button';
   className: string;
+  disabled?: boolean;
   children?: React.ReactNode;
   handleClick?: () => void;
   handleSubmit?: () => void;
@@ -13,9 +14,15 @@ const Button = ({
   className,
   children,
   handleClick,
+  disabled,
 }: ButtonProps) => {
   return (
-    <button onClick={handleClick} type={type} className={className}>
+    <button
+      disabled={disabled}
+      onClick={handleClick}
+      type={type}
+      className={className}
+    >
       <>
         {text}
         {children}

@@ -1,11 +1,12 @@
-.footerContainer {
-  width: 390px;
-  padding: 0px 10px 0px 24px;
-  margin: 0 auto;
-}
 .footer {
   padding: 58px 0px 84px;
   background-color: var(--black-main);
+}
+
+.footerContainer {
+  width: 100%;
+  padding: 0 24px;
+  margin: 0 auto;
 }
 
 .footerMainList {
@@ -167,6 +168,13 @@
   line-height: 160%;
   width: fit-content;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 390px) {
+  .footerContainer {
+    width: 390px;
+    padding: 0px 10px 0px 24px;
+  }
 }
 
 @media screen and (min-width: 1728px) {

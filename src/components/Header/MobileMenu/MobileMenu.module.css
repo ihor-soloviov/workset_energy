@@ -78,41 +78,6 @@
   stroke: var(--red-main);
 }
 
-.menuList {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  margin-bottom: 32px;
-}
-
-.menuItem {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  width: fit-content;
-}
-
-.menuItemText {
-  color: var(--gray-text);
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 160%;
-  width: fit-content;
-  user-select: none;
-}
-
-.menuLink {
-  color: var(--white-main);
-  width: fit-content;
-  font-size: 18px;
-  line-height: 160%;
-  transition: color 250ms var(--cubic);
-}
-
-.menuLink:hover {
-  color: var(--gray-text);
-}
-
 @media screen and (min-width: 390px) {
   .menuTopWrap {
     width: 390px;

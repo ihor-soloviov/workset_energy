@@ -1,7 +1,9 @@
 .header {
-  background-color: black;
+  background-color: transparent;
   padding: 48px 0 18px;
-  border-bottom: 0.7px solid var(--gray-text);
+  border-bottom: 0.7px solid var(--white-main);
+  width: 100%;
+  position: absolute;
 }
 
 .headerContainer {

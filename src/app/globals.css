@@ -2,12 +2,14 @@
 :root {
   --white-main: #fff;
   --black-main: #181818;
-  --black-second: #323539;
+  --neutral-main: #2b2d33;
+
   --gray-dark-text: #323539;
   --gray-text: #858c95;
   --gray-light-text: #cdd0d5;
   --gray-stroke: #e5e5e7;
   --gray-input: #f8f9fb;
+  --gray-slider: #ecf0f4;
   --red-main: #f32c40;
   --red-second: #ff5061;
   --star-main: #f5d140;

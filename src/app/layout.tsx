@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-
 import 'normalize.css';
 import './globals.css';
 import Header from '@/components/Header/Header';
@@ -18,11 +17,9 @@ const RootLayout = ({
   return (
     <html lang="en">
       <body className={interTight.className}>
-        <main>
-          <Header />
-          {children}
-          <Footer />
-        </main>
+        <Header />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

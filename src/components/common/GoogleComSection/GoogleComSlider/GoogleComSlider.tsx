@@ -66,7 +66,11 @@ const GoogleComSlider = () => {
                     alt="user photo"
                   />
                   <div className={styles.slideRatingWrap}>
-                    <h3 className={styles.slideUserName}>{author_name}</h3>
+                    <h3 className={styles.slideUserName}>
+                      {author_name.length > 18
+                        ? `${author_name.slice(0, 18)}...`
+                        : author_name}
+                    </h3>
 
                     <div className={styles.slideRating}>{starsArr(rating)}</div>
                   </div>

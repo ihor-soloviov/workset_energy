@@ -2,7 +2,7 @@ import styles from './MobileMenu.module.css';
 import Container from '../../common/Container/Container';
 import MobileNavList from './MobileNavList/MobileNavList';
 import Button from '../../common/Button/Button';
-import { inter } from '@/utils/fonts';
+import MobileContactList from './MobileContactList/MobileContactList';
 import MobileSocialList from './MobileSocialList/MobileSocialList';
 import MenuBtnIcon from '/public/icons/small-arrow-btn.svg';
 import MenuCrossIcon from '/public/icons/cross.svg';
@@ -37,24 +37,7 @@ const MobileMenu = ({ handleMenuClick }: MobileMenuProps) => {
         >
           <MenuBtnIcon className={styles.menuBtnIcon} />
         </Button>
-        <ul className={`${styles.menuList} ${inter.className}`}>
-          <li className={styles.menuItem}>
-            <p className={styles.menuItemText}>Address</p>
-            <p className={styles.menuLink}>Magirus-Deutz-Str, 1289077 Ulm</p>
-          </li>
-          <li className={styles.menuItem}>
-            <p className={styles.menuItemText}>E-mail</p>
-            <a href="mailto:office@work-set.eu" className={styles.menuLink}>
-              office@work-set.eu
-            </a>
-          </li>
-          <li className={styles.menuItem}>
-            <p className={styles.menuItemText}>Telefonnummer</p>
-            <a href="tel:+4973114613210" className={styles.menuLink}>
-              +49-73-114-613-210
-            </a>
-          </li>
-        </ul>
+        <MobileContactList />
         <MobileSocialList />
       </Container>
     </div>
