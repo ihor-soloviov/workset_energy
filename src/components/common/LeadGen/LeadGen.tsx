@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 
 import styles from './LeadGen.module.css';
-import Button from '../common/Button/Button';
+import Button from '../../common/Button/Button';
 import BurgerIcon from '/public/icons/lead-burger.svg';
 import BackArrowIcon from '/public/icons/lead-arrow.svg';
 import LeadStepOne from './LeadStepOne/LeadStepOne';
@@ -13,9 +13,9 @@ import LeadStepFive from './LeadStepFive/LeadStepFive';
 import LeadStepSix from './LeadStepSix/LeadStepSix';
 import LeadStepSeven from './LeadStepSeven/LeadStepSeven';
 import LeadStepEight from './LeadStepEight/LeadStepEight';
-import MobileContactList from '../Header/MobileMenu/MobileContactList/MobileContactList';
-import MobileSocialList from '../Header/MobileMenu/MobileSocialList/MobileSocialList';
-import MobileMenu from '../Header/MobileMenu/MobileMenu';
+import MobileContactList from '../../Header/MobileMenu/MobileContactList/MobileContactList';
+import MobileSocialList from '../../Header/MobileMenu/MobileSocialList/MobileSocialList';
+import MobileMenu from '../../Header/MobileMenu/MobileMenu';
 
 export type FormInitialValue = {
   stepOne: string;
@@ -28,7 +28,7 @@ export type FormInitialValue = {
 };
 
 const LeadGen = () => {
-  const FormInitialValue = {
+  const formInitialValue = {
     stepOne: '',
     stepTwo: '',
     stepThree: '',
@@ -38,7 +38,7 @@ const LeadGen = () => {
     stepSeven: '',
   };
 
-  const [formData, setFormData] = useState(FormInitialValue);
+  const [formData, setFormData] = useState(formInitialValue);
   const [step, setStep] = useState(1);
   const [isDisabledBtn, setIsDisabledBtn] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
