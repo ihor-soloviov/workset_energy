@@ -11,7 +11,7 @@ const HomePage = () => {
   return (
     <>
       {/* <div>HomePage</div> */}
-      {/* <VideoSection {...firstVideo} /> */}
+      {/* <VideoSection {...secondVideo} /> */}
       <QuestionSection />
       <TeamSection />
       <ContactUsSection />

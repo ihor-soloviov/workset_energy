@@ -44,11 +44,11 @@
     height: 420px;
   }
 
-  .first {
+  .left {
     order: -1;
   }
 
-  .second {
+  .right {
     order: 1;
   }
 
