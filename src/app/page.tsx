@@ -5,7 +5,7 @@ import GoogleComSection from '@/components/common/GoogleComSection/GoogleComSect
 import TeamSection from '@/components/common/TeamSection/TeamSection';
 import VideoSection from '@/components/common/VideoSection/VideoSection';
 import { firstVideo, secondVideo } from '@/utils/video';
-import QuestionSection from '@/components/home/QuestionsSection/QuestionSection';
+import QuestionSection from '@/components/home/QuestionSection/QuestionSection';
 
 const HomePage = () => {
   return (

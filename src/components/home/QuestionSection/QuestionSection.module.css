@@ -1,0 +1,48 @@
+.questSection {
+  padding: 64px 0;
+}
+.questContainer {
+  width: 100%;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+.questMainTitle {
+  color: var(--black-second);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 130%;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 16px;
+}
+.questMainText {
+  color: var(--gray-text);
+  width: fit-content;
+  font-size: 16px;
+  line-height: 160%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 390px) {
+  .questContainer {
+    width: 390px;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .questSection {
+    padding: 100px 0;
+  }
+  .questContainer {
+    width: 1728px;
+    padding: 0 256px;
+  }
+  .questMainTitle {
+    font-size: 34px;
+  }
+  .questMainText {
+    font-size: 18px;
+    margin-bottom: 50px;
+  }
+}
