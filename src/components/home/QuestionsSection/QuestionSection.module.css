@@ -1,0 +1,133 @@
+.questSection {
+  padding: 64px 0;
+}
+.questContainer {
+  width: 100%;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+.questMainTitle {
+  color: var(--black-second);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 130%;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 16px;
+}
+.questMainText {
+  color: var(--gray-text);
+  width: fit-content;
+  font-size: 16px;
+  line-height: 160%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.questList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.questItem {
+  border-radius: 6px;
+  border: 1px solid var(--gray-stroke);
+  background-color: var(--white-main);
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  height: auto;
+}
+
+.questTitleWrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.questTitle {
+  color: var(--gray-dark-text);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 160%;
+  width: 282px;
+}
+.questToggleBtn {
+  border: none;
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+}
+
+.toggleIcon {
+  stroke: var(--gray-dark-text);
+  transform: rotate(180deg);
+  transition: transform 250ms var(--cubic);
+}
+
+.toggleIcon.visible {
+  transform: unset;
+}
+
+.questTextWrap {
+  display: none;
+}
+
+.questTextWrap.visible {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.questText {
+  color: var(--gray-text);
+  line-height: 160%;
+}
+.questConsultBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px;
+  color: var(--white-main);
+  font-size: 15px;
+  font-weight: 600;
+  width: 181px;
+  height: 42px;
+  background-color: var(--red-main);
+  border: none;
+  border-radius: 6px;
+}
+
+@media screen and (min-width: 390px) {
+  .questContainer {
+    width: 390px;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .questSection {
+  }
+  .questContainer {
+    width: 1216px;
+    padding: 0 256px;
+  }
+  .questMainTitle {
+  }
+  .questMainText {
+  }
+  .questList {
+  }
+  .questItem {
+  }
+  .questTitle {
+  }
+  .questToggleBtn {
+  }
+  .questTextWrap {
+  }
+  .questText {
+  }
+  .questConsultBtn {
+  }
+}

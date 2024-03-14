@@ -5,11 +5,14 @@ import GoogleComSection from '@/components/common/GoogleComSection/GoogleComSect
 import TeamSection from '@/components/common/TeamSection/TeamSection';
 import VideoSection from '@/components/common/VideoSection/VideoSection';
 import { firstVideo, secondVideo } from '@/utils/video';
+import QuestionSection from '@/components/home/QuestionsSection/QuestionSection';
+
 const HomePage = () => {
   return (
     <>
       {/* <div>HomePage</div> */}
-      <VideoSection {...firstVideo} />
+      {/* <VideoSection {...firstVideo} /> */}
+      <QuestionSection />
       <TeamSection />
       <ContactUsSection />
       <SendEmailSection />
