@@ -78,7 +78,7 @@ const QuestionList = () => {
               </Button>
             </div>
             <div
-              className={`${styles.questTextWrap} ${openItem[title] ? styles.visible : ''}`}
+              className={`${styles.questTextWrap} ${openItem[title] ? styles.visible : styles.hidden}`}
             >
               <p className={`${styles.questText} ${inter.className}`}>{text}</p>
               <Button type="button" className={styles.questConsultBtn}>
@@ -113,7 +113,7 @@ const QuestionList = () => {
               </Button>
             </div>
             <div
-              className={`${styles.questTextWrap} ${openItem[title] ? styles.visible : ''}`}
+              className={`${styles.questTextWrap} ${openItem[title] ? styles.visible : styles.hidden}`}
             >
               <p className={`${styles.questText} ${inter.className}`}>{text}</p>
               <Button type="button" className={styles.questConsultBtn}>

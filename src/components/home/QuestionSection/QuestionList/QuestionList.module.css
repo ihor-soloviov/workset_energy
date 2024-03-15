@@ -1,32 +1,32 @@
-@keyframes fadeIn {
+@keyframes fadeToggleOpen {
   0% {
     opacity: 0;
+    max-height: 0;
   }
+
   100% {
     opacity: 1;
+    max-height: 1000px;
   }
 }
 
-@keyframes fadeOff {
+@keyframes fadeToggleClose {
   0% {
     opacity: 1;
+    max-height: 1000px;
     margin-top: 8px;
   }
 
-  30% {
+  70% {
     margin-top: 8px;
   }
-
-  50% {
-    margin-top: 8px;
-  }
-
   90% {
-    margin-top: 0px;
     opacity: 1;
   }
   100% {
+    margin-top: 0px;
     opacity: 0;
+    max-height: 0;
   }
 }
 
@@ -95,8 +95,6 @@
 .questTextWrap {
   overflow: hidden;
   max-height: 0;
-  transition: max-height 0.4s var(--cubic);
-  animation: fadeOff 0.4s linear;
   opacity: 0;
 }
 
@@ -104,9 +102,12 @@
   display: flex;
   flex-direction: column;
   margin-top: 8px;
-  animation: fadeIn 0.4s linear;
   max-height: 1000px;
+  animation: fadeToggleOpen 0.4s var(--cubic);
   opacity: 1;
+}
+.questTextWrap.hidden {
+  animation: fadeToggleClose 0.2s var(--cubic);
 }
 .questText {
   color: var(--gray-text);
