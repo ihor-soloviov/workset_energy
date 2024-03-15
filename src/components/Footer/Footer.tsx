@@ -2,11 +2,11 @@ import React from 'react';
 import styles from './Footer.module.css';
 import Link from 'next/link';
 import { inter } from '@/utils/fonts';
-import FooterInstIcon from '/public/icons/instagram.svg';
-import FooterFacebookIcon from '/public/icons/facebook.svg';
-import FooterYoutubeIcon from '/public/icons/youtube.svg';
-import FooterTikTokIcon from '/public/icons/tiktok.svg';
-import FooterArrowIcon from '/public/icons/footer-arrow.svg';
+import InstIcon from '/public/icons/instagram.svg';
+import FacebookIcon from '/public/icons/facebook.svg';
+import YoutubeIcon from '/public/icons/youtube.svg';
+import TikTokIcon from '/public/icons/tiktok.svg';
+import ArrowIcon from '/public/icons/footer-arrow.svg';
 const Footer = () => {
   type NavLink = { text: string; href: string };
   type NavLinkItem = {
@@ -85,7 +85,7 @@ const Footer = () => {
           ))}
         </ul>
         <button className={styles.footerUpBtn}>
-          <FooterArrowIcon className={styles.UpBtnIcon} />
+          <ArrowIcon className={styles.UpBtnIcon} />
         </button>
         <p className={`${styles.companyText} ${inter.className}`}>
           © 2024 WorkSET Energy GmbH
@@ -93,26 +93,26 @@ const Footer = () => {
         <ul className={styles.footerSocialList}>
           <li className={styles.footerSocialItem}>
             <a className={`${styles.footerSocialLink} ${styles.facebook}`}>
-              <FooterInstIcon
+              <InstIcon
                 className={`${styles.footerSocialIcon} ${styles.instagram}`}
               />
             </a>
           </li>
           <li className={styles.footerSocialItem}>
             <a className={`${styles.footerSocialLink} ${styles.facebook}`}>
-              <FooterFacebookIcon
+              <FacebookIcon
                 className={`${styles.footerSocialIcon} ${styles.facebook}`}
               />
             </a>
           </li>
           <li className={styles.footerSocialItem}>
             <a className={styles.footerSocialLink}>
-              <FooterYoutubeIcon className={styles.footerSocialIcon} />
+              <YoutubeIcon className={styles.footerSocialIcon} />
             </a>
           </li>
           <li className={styles.footerSocialItem}>
             <a className={styles.footerSocialLink}>
-              <FooterTikTokIcon className={styles.footerSocialIcon} />
+              <TikTokIcon className={styles.footerSocialIcon} />
             </a>
           </li>
         </ul>
