@@ -24,7 +24,7 @@ const QuestionList = () => {
     {
       title:
         'Gibt es Folgekosten wie etwa für Wartung und Reparatur der Anlage?',
-      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nemo ut aliquam aliquid a numquam assumenda cupiditate dolorum sit hic vero dolorem, consequuntur temporibus illo enim quisquam! Repellendus est accusantium aliquam maxime culpa alias illo!',
+      text: 'Bei uns gibt es keine versteckten Kosten. Alle Kosten, die auf dich zukommen, erfährst du in unserem Kostenplan, den du unverbindlich vor der Auftragserteilung erhältst.Zudem sind unsere Anlagen so konzipiert, dass sie ohne Wartung auskommen. Einmal positioniert, produziert die Anlage ein Leben lang Strom.',
     },
 
     {
@@ -42,45 +42,77 @@ const QuestionList = () => {
     },
   ];
 
-  const [isTextVisible, setIsTextVisible] = useState<null | number>(null);
+  const [openItem, setOpenItem] = useState<{ [key: string]: boolean }>({});
 
-  const toggleTextVisibility = (index: number) => {
-    setIsTextVisible(isTextVisible === index ? null : index);
+  const toggleTextVisibility = (index: string) => {
+    setOpenItem(prevOpenItem => ({
+      ...prevOpenItem,
+      [index]: !prevOpenItem[index],
+    }));
   };
 
   return (
-    <ul className={styles.questList}>
-      {questItems.map(({ text, title }, index) => (
-        <li
-          onClick={() => toggleTextVisibility(index)}
-          key={title}
-          className={`${styles.questItem} ${isTextVisible ? styles.open : ''}`}
-        >
-          <div className={styles.questTitleWrap}>
-            <h3 className={`${styles.questTitle} ${inter.className}`}>
-              {title}
-            </h3>
-            <Button
-              handleClick={() => toggleTextVisibility(index)}
-              type="button"
-              className={styles.questToggleBtn}
+    <div className={styles.questListWrap}>
+      <ul className={styles.questList}>
+        {questItems.slice(0, 3).map(({ text, title }) => (
+          <li key={title} className={styles.questItem}>
+            <div className={styles.questTitleWrap}>
+              <h3 className={`${styles.questTitle} ${inter.className}`}>
+                {title}
+              </h3>
+              <Button
+                handleClick={() => toggleTextVisibility(title)}
+                type="button"
+                className={styles.questToggleBtn}
+              >
+                <DropArrowIcon
+                  className={`${styles.toggleIcon} ${openItem[title] ? styles.visible : ''}`}
+                />
+              </Button>
+            </div>
+            <div
+              className={`${styles.questTextWrap} ${openItem[title] ? styles.visible : ''}`}
             >
-              <DropArrowIcon
-                className={`${styles.toggleIcon} ${isTextVisible === index ? styles.visible : ''}`}
-              />
-            </Button>
-          </div>
-          <div
-            className={`${styles.questTextWrap} ${isTextVisible === index ? styles.visible : ''}`}
+              <p className={`${styles.questText} ${inter.className}`}>{text}</p>
+              <Button type="button" className={styles.questConsultBtn}>
+                Kostenlose Beratung
+              </Button>
+            </div>
+          </li>
+        ))}
+      </ul>
+      <ul className={styles.questList}>
+        {questItems.slice(3, 6).map(({ text, title }) => (
+          <li
+            key={title}
+            className={`${styles.questItem} ${openItem[title] ? styles.open : ''}`}
           >
-            <p className={`${styles.questText} ${inter.className}`}>{text}</p>
-            <Button type="button" className={styles.questConsultBtn}>
-              Kostenlose Beratung
-            </Button>
-          </div>
-        </li>
-      ))}
-    </ul>
+            <div className={styles.questTitleWrap}>
+              <h3 className={`${styles.questTitle} ${inter.className}`}>
+                {title}
+              </h3>
+              <Button
+                handleClick={() => toggleTextVisibility(title)}
+                type="button"
+                className={styles.questToggleBtn}
+              >
+                <DropArrowIcon
+                  className={`${styles.toggleIcon} ${openItem[title] ? styles.visible : ''}`}
+                />
+              </Button>
+            </div>
+            <div
+              className={`${styles.questTextWrap} ${openItem[title] ? styles.visible : ''}`}
+            >
+              <p className={`${styles.questText} ${inter.className}`}>{text}</p>
+              <Button type="button" className={styles.questConsultBtn}>
+                Kostenlose Beratung
+              </Button>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 
