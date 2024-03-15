@@ -13,12 +13,19 @@
     margin-top: 8px;
   }
 
+  30% {
+    margin-top: 8px;
+  }
+
   50% {
     margin-top: 8px;
   }
 
-  100% {
+  90% {
     margin-top: 0px;
+    opacity: 1;
+  }
+  100% {
     opacity: 0;
   }
 }
@@ -43,6 +50,15 @@
   flex-direction: column;
   cursor: pointer;
   width: 100%;
+  transition: border-color 250ms var(--cubic);
+}
+
+.questItem:hover {
+  border-color: var(--black-main);
+}
+
+.questItem.open:hover {
+  border-color: var(--gray-stroke);
 }
 
 .questTitleWrap {

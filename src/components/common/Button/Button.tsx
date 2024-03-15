@@ -4,7 +4,7 @@ type ButtonProps = {
   className: string;
   disabled?: boolean;
   children?: React.ReactNode;
-  handleClick?: () => void;
+  handleClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   handleSubmit?: () => void;
 };
 

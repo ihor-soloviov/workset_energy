@@ -55,13 +55,20 @@ const QuestionList = () => {
     <div className={styles.questListWrap}>
       <ul className={styles.questList}>
         {questItems.slice(0, 3).map(({ text, title }) => (
-          <li key={title} className={styles.questItem}>
+          <li
+            onClick={() => toggleTextVisibility(title)}
+            key={title}
+            className={`${styles.questItem} ${openItem[title] ? styles.open : ''}`}
+          >
             <div className={styles.questTitleWrap}>
               <h3 className={`${styles.questTitle} ${inter.className}`}>
                 {title}
               </h3>
               <Button
-                handleClick={() => toggleTextVisibility(title)}
+                handleClick={e => {
+                  e.stopPropagation();
+                  toggleTextVisibility(title);
+                }}
                 type="button"
                 className={styles.questToggleBtn}
               >
@@ -84,6 +91,7 @@ const QuestionList = () => {
       <ul className={styles.questList}>
         {questItems.slice(3, 6).map(({ text, title }) => (
           <li
+            onClick={() => toggleTextVisibility(title)}
             key={title}
             className={`${styles.questItem} ${openItem[title] ? styles.open : ''}`}
           >
@@ -92,7 +100,10 @@ const QuestionList = () => {
                 {title}
               </h3>
               <Button
-                handleClick={() => toggleTextVisibility(title)}
+                handleClick={e => {
+                  e.stopPropagation();
+                  toggleTextVisibility(title);
+                }}
                 type="button"
                 className={styles.questToggleBtn}
               >
