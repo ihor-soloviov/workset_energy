@@ -6,11 +6,13 @@ import TeamSection from '@/components/common/TeamSection/TeamSection';
 import VideoSection from '@/components/common/VideoSection/VideoSection';
 import { firstVideo, secondVideo } from '@/utils/video';
 import QuestionSection from '@/components/home/QuestionSection/QuestionSection';
+import AngebotSection from '@/components/home/AngebotSection/AngebotSection';
 
 const HomePage = () => {
   return (
     <>
       {/* <div>HomePage</div> */}
+      <AngebotSection />
       {/* <VideoSection {...secondVideo} /> */}
       <QuestionSection />
       <TeamSection />

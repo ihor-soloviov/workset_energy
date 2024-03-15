@@ -1,0 +1,229 @@
+.angebotForm {
+  width: 100%;
+}
+
+.angebotLabelWrap {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.angebotLabel {
+}
+
+.angebotLabel,
+.angebotLabelTextArea {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--white-main);
+
+  width: 100%;
+  position: relative;
+}
+
+.angebotLabel:not(:last-child) {
+  margin-bottom: 18px;
+}
+
+.angebotInput,
+.angebotInputFile {
+  color: var(--black-main);
+  font-size: 15px;
+  padding: 12px;
+  width: 100%;
+  height: 46px;
+  border: 1px solid var(--gray-stroke);
+  border-radius: 6px;
+  background-color: var(--gray-input);
+  outline: none;
+}
+
+.angebotInputFile {
+  font-size: 0px;
+  border-radius: 6px 0px 0px 6px;
+  cursor: pointer;
+  width: 226px;
+  content-visibility: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.angebotFilePlaceholderMob,
+.angebotFilePlaceholderDesc {
+  position: absolute;
+  color: var(--gray-text);
+  line-height: 157%;
+  top: 36px;
+  z-index: 2;
+  left: 12px;
+  cursor: pointer;
+}
+
+.angebotFilePlaceholderDesc {
+  display: none;
+}
+
+.angebotUploadBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 116px;
+  height: 46px;
+  border-radius: 0px 6px 6px 0px;
+  color: var(--white-main);
+  background-color: var(--red-main);
+  padding: 14px 32px;
+  font-size: 15px;
+  font-weight: 500;
+  position: absolute;
+  right: 0;
+  top: 24px;
+  cursor: pointer;
+}
+
+.angebotInput.error {
+  border: 1px solid var(--red-main);
+}
+
+.angebotInput::placeholder {
+  color: var(--gray-text);
+}
+
+.angebotLabelTextArea {
+  margin-bottom: 24px;
+}
+
+.angebotTextArea {
+  border: 1px solid var(--gray-stroke);
+  background-color: var(--gray-input);
+  width: 100%;
+  height: 145px;
+  padding: 12px 16px;
+  border-radius: 6px;
+  resize: none;
+  outline: none;
+}
+
+.angebotTextArea::placeholder {
+  color: var(--gray-text);
+}
+.errorText {
+  position: absolute;
+  right: 10px;
+  top: 77px;
+  width: fit-content;
+  color: var(--red-main);
+  font-size: 10px;
+}
+
+.angebotBtnWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.angebotText {
+  color: var(--white-main);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: -0.16px;
+}
+
+.angebotBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 143px;
+  color: var(--gray-input);
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+  height: 48px;
+  background-color: var(--red-main);
+  border: none;
+  border-radius: 6px;
+}
+
+@media screen and (min-width: 390px) {
+  .angebotInput,
+  .angebotTextArea,
+  .angebotBtn {
+    width: 342px;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .angebotForm {
+    width: 530px;
+  }
+
+  .angebotLabelWrap {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .angebotLabel {
+    gap: 6px;
+  }
+
+  .angebotLabel.email {
+    margin-bottom: unset;
+  }
+
+  .angebotLabelTextArea {
+    margin-bottom: 24px;
+  }
+  .angebotTextArea {
+    height: 102px;
+    width: 100%;
+  }
+
+  .angebotInput {
+    width: 100%;
+  }
+
+  .angebotInput::placeholder {
+    line-height: 110%;
+  }
+
+  .angebotFilePlaceholderMob {
+    display: none;
+  }
+
+  .angebotFilePlaceholderDesc {
+    display: block;
+    top: 38px;
+    line-height: 110%;
+  }
+
+  .angebotInputFile {
+    width: 414px;
+  }
+
+  .angebotUploadBtn {
+    top: 22px;
+  }
+
+  .angebotBtnWrap {
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .angebotText {
+    font-size: 14px;
+    width: 417px;
+  }
+
+  .angebotBr {
+    display: none;
+  }
+
+  .angebotBtn {
+    width: 92px;
+    height: 46px;
+    padding: 14px 20px;
+  }
+}
