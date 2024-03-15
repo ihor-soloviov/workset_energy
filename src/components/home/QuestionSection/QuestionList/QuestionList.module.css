@@ -130,24 +130,7 @@
   .questItem {
     width: 598px;
   }
-  .questItem:nth-child(1) {
-    order: 1;
-  }
-  .questItem:nth-child(2) {
-    order: 3;
-  }
-  .questItem:nth-child(3) {
-    order: 5;
-  }
-  .questItem:nth-child(4) {
-    order: 2;
-  }
-  .questItem:nth-child(5) {
-    order: 4;
-  }
-  .questItem:nth-child(6) {
-    order: 6;
-  }
+
   .questTitle {
     width: fit-content;
     max-width: 523px;
