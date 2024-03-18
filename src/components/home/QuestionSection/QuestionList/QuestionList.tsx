@@ -51,89 +51,54 @@ const QuestionList = () => {
     }));
   };
 
+  const renderListItems = (items: QuestItem[]) => {
+    return items.map(({ text, title }) => (
+      <li
+        onClick={() => toggleTextVisibility(title)}
+        key={title}
+        className={`${styles.questItem} ${openItem[title] ? styles.open : ''}`}
+      >
+        <div className={styles.questTitleWrap}>
+          <h3 className={`${styles.questTitle} ${inter.className}`}>{title}</h3>
+          <Button
+            handleClick={e => {
+              e.stopPropagation();
+              toggleTextVisibility(title);
+            }}
+            type="button"
+            className={styles.questToggleBtn}
+          >
+            <DropArrowIcon
+              className={`${styles.toggleIcon} ${openItem[title] ? styles.visible : ''}`}
+            />
+          </Button>
+        </div>
+        <div
+          className={`${styles.questTextWrap} ${openItem[title] ? styles.visible : styles.hidden}`}
+        >
+          <p className={`${styles.questText} ${inter.className}`}>{text}</p>
+          <Button
+            handleClick={e => {
+              e.stopPropagation();
+            }}
+            type="button"
+            className={styles.questConsultBtn}
+          >
+            Kostenlose Beratung
+          </Button>
+        </div>
+      </li>
+    ));
+  };
+
+  const firstListItems = questItems.slice(0, 3);
+  const secondListItems = questItems.slice(3, 6);
+
   return (
     <div className={styles.questListWrap}>
+      <ul className={styles.questList}>{renderListItems(firstListItems)}</ul>
       <ul className={styles.questList}>
-        {questItems.slice(0, 3).map(({ text, title }) => (
-          <li
-            onClick={() => toggleTextVisibility(title)}
-            key={title}
-            className={`${styles.questItem} ${openItem[title] ? styles.open : ''}`}
-          >
-            <div className={styles.questTitleWrap}>
-              <h3 className={`${styles.questTitle} ${inter.className}`}>
-                {title}
-              </h3>
-              <Button
-                handleClick={e => {
-                  e.stopPropagation();
-                  toggleTextVisibility(title);
-                }}
-                type="button"
-                className={styles.questToggleBtn}
-              >
-                <DropArrowIcon
-                  className={`${styles.toggleIcon} ${openItem[title] ? styles.visible : ''}`}
-                />
-              </Button>
-            </div>
-            <div
-              className={`${styles.questTextWrap} ${openItem[title] ? styles.visible : styles.hidden}`}
-            >
-              <p className={`${styles.questText} ${inter.className}`}>{text}</p>
-              <Button
-                handleClick={e => {
-                  e.stopPropagation();
-                }}
-                type="button"
-                className={styles.questConsultBtn}
-              >
-                Kostenlose Beratung
-              </Button>
-            </div>
-          </li>
-        ))}
-      </ul>
-      <ul className={styles.questList}>
-        {questItems.slice(3, 6).map(({ text, title }) => (
-          <li
-            onClick={() => toggleTextVisibility(title)}
-            key={title}
-            className={`${styles.questItem} ${openItem[title] ? styles.open : ''}`}
-          >
-            <div className={styles.questTitleWrap}>
-              <h3 className={`${styles.questTitle} ${inter.className}`}>
-                {title}
-              </h3>
-              <Button
-                handleClick={e => {
-                  e.stopPropagation();
-                  toggleTextVisibility(title);
-                }}
-                type="button"
-                className={styles.questToggleBtn}
-              >
-                <DropArrowIcon
-                  className={`${styles.toggleIcon} ${openItem[title] ? styles.visible : ''}`}
-                />
-              </Button>
-            </div>
-            <div
-              className={`${styles.questTextWrap} ${openItem[title] ? styles.visible : styles.hidden}`}
-            >
-              <p className={`${styles.questText} ${inter.className}`}>{text}</p>
-              <Button
-                handleClick={e => {
-                  e.stopPropagation();
-                }}
-                type="button"
-                className={styles.questConsultBtn}
-              >
-                Kostenlose Beratung
-              </Button>
-            </div>
-          </li>
-        ))}
+        <ul className={styles.questList}>{renderListItems(secondListItems)}</ul>
       </ul>
     </div>
   );
