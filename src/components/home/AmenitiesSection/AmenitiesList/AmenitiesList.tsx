@@ -1,70 +1,67 @@
 import Button from '@/components/common/Button/Button';
 import styles from './AmenitiesList.module.css';
 import { inter } from '@/utils/fonts';
+import AmenitiesFirstIcon from '/public/icons/amenities-1.svg';
+import AmenitiesSecondIcon from '/public/icons/amenities-2.svg';
+import AmenitiesThirdIcon from '/public/icons/amenities-3.svg';
+import AmenitiesFourthIcon from '/public/icons/amenities-4.svg';
 import BtnArrowIcon from '/public/icons/small-product-arrow.svg';
-import Image from 'next/image';
-import pvAnlagenImgMob from '/public/images/pv-anlagen-mob.jpg';
-import stromspeicherImgMob from '/public/images/stromspeicher-mob.jpg';
-import walaboxImgMob from '/public/images/wallbox-mob.jpg';
-import pvAnlagenImgDesc from '/public/images/pv-anlagen-desc.jpg';
-import stromspeicherImgDesc from '/public/images/stromspeicher-desc.jpg';
-import walaboxImgDesc from '/public/images/wallbox-desc.jpg';
-import { StaticImageData } from 'next/image';
-
 type amenitiesItem = {
   title: string;
   text: string;
   link: string;
-  imgMob: StaticImageData;
-  imgDesc: StaticImageData;
 };
 
 export const amenitiesItems: amenitiesItem[] = [
   {
-    imgMob: pvAnlagenImgMob,
-    imgDesc: pvAnlagenImgDesc,
     link: '',
-    text: 'Sie wandelt Sonnenlicht in Strom um und ist daher eine nachhaltige und umweltfreundliche Energiequelle.',
-    title: 'PV-Anlagen',
+    text: 'Mit Menschen für Menschen, dank Menschen! Wir schätzen unsere Kunden und setzen alles daran, ihre Bedürfnisse zu verstehen und zu erfüllen',
+    title: 'Kundenzentriertheit',
   },
   {
-    imgMob: stromspeicherImgMob,
-    imgDesc: stromspeicherImgDesc,
     link: '',
-    text: 'Eine zuverlässige Resrve, die überschüssigen Strom für den künftigen Verbrauch speichert.',
-    title: 'Stormspeicher',
+    text: 'Kundenwünsche sind unsere Verantwortung. Wir legen großen Wert darauf, die individuellen Bedürfnisse unserer Kunden genau zu verstehen',
+    title: 'Personalisierung',
   },
   {
-    imgMob: walaboxImgMob,
-    imgDesc: walaboxImgDesc,
     link: '',
-    text: 'Ein hochmodernes Ladesystem für Elektrofahrzeuge, das bequeme und effiziente Betankungsmöglichkeiten bietet.',
-    title: 'Wallbox',
+    text: 'Unternehmenskultur auf Augenhöhe. Wir schätzen jeden Mitarbeiter, unabhängig von seiner Position',
+    title: 'Fairness',
+  },
+  {
+    link: '',
+    text: 'Maximale Qualitätskontrolle, durch ausschließlich firmeneigene Mitarbeiter, ist für uns nicht nur ein Grundsatz, sondern auch ein Versprechen',
+    title: 'Qualitätskontrolle',
   },
 ];
 
 const AmenitiesList = () => {
+  const currentIcon = (title: string) => {
+    switch (title) {
+      case 'Kundenzentriertheit':
+        return <AmenitiesFirstIcon className={styles.amenitiesIcon} />;
+      case 'Personalisierung':
+        return <AmenitiesSecondIcon className={styles.amenitiesIcon} />;
+      case 'Fairness':
+        return <AmenitiesThirdIcon className={styles.amenitiesIcon} />;
+      case 'Qualitätskontrolle':
+        return <AmenitiesFourthIcon className={styles.amenitiesIcon} />;
+      default:
+        return;
+    }
+  };
+
   return (
     <ul className={styles.amenitiesList}>
-      {amenitiesItems.map(({ text, title, link, imgMob, imgDesc }) => (
+      {amenitiesItems.map(({ text, title, link }) => (
         <li className={styles.amenitiesItem} key={title}>
-          <Image className={styles.amenitiesImgMob} src={imgMob} alt={title} />
-          <Image
-            className={styles.amenitiesImgDesc}
-            src={imgDesc}
-            alt={title}
-          />
-
-          <div className={styles.amenitiesTextWrap}>
-            <h3 className={styles.amenitiesTitle}>{title}</h3>
-            <p className={`${styles.amenitiesText} ${inter.className}`}>
-              {text}
-            </p>
-            <Button className={styles.amenitiesBtn} type="button">
-              Mehr Info
-              <BtnArrowIcon className={styles.productIcon} />
-            </Button>
-          </div>
+          <div className={styles.amenitiesIconWrap}>{currentIcon(title)}</div>
+          <h3 className={styles.amenitiesTitle}>{title}</h3>
+          <p className={`${styles.amenitiesText} ${inter.className}`}>{text}</p>
+          <Button className={styles.amenitiesBtn} type="button">
+            Mehr Info
+            <BtnArrowIcon className={styles.amenitiesBtnIcon} />
+          </Button>
         </li>
       ))}
     </ul>
