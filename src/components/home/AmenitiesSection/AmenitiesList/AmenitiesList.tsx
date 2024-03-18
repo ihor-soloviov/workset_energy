@@ -1,7 +1,6 @@
 import Button from '@/components/common/Button/Button';
-import styles from './ProductList.module.css';
+import styles from './AmenitiesList.module.css';
 import { inter } from '@/utils/fonts';
-import { StaticImageData } from 'next/image';
 import BtnArrowIcon from '/public/icons/small-product-arrow.svg';
 import Image from 'next/image';
 import pvAnlagenImgMob from '/public/images/pv-anlagen-mob.jpg';
@@ -10,16 +9,17 @@ import walaboxImgMob from '/public/images/wallbox-mob.jpg';
 import pvAnlagenImgDesc from '/public/images/pv-anlagen-desc.jpg';
 import stromspeicherImgDesc from '/public/images/stromspeicher-desc.jpg';
 import walaboxImgDesc from '/public/images/wallbox-desc.jpg';
+import { StaticImageData } from 'next/image';
 
-type ProductItem = {
+type amenitiesItem = {
   title: string;
   text: string;
+  link: string;
   imgMob: StaticImageData;
   imgDesc: StaticImageData;
-  link: string;
 };
 
-export const productsItems: ProductItem[] = [
+export const amenitiesItems: amenitiesItem[] = [
   {
     imgMob: pvAnlagenImgMob,
     imgDesc: pvAnlagenImgDesc,
@@ -43,23 +43,24 @@ export const productsItems: ProductItem[] = [
   },
 ];
 
-const ProductList = () => {
+const AmenitiesList = () => {
   return (
-    <ul className={styles.productList}>
-      {productsItems.map(({ text, title, link, imgMob, imgDesc }) => (
-        <li className={styles.productItem} key={title}>
-          <div className={styles.productImgWrap}>
-            <Image className={styles.productImgMob} src={imgMob} alt={title} />
-            <Image
-              className={styles.productImgDesc}
-              src={imgDesc}
-              alt={title}
-            />
-          </div>
-          <div className={styles.productTextWrap}>
-            <h3 className={styles.productTitle}>{title}</h3>
-            <p className={`${styles.productText} ${inter.className}`}>{text}</p>
-            <Button className={styles.productBtn} type="button">
+    <ul className={styles.amenitiesList}>
+      {amenitiesItems.map(({ text, title, link, imgMob, imgDesc }) => (
+        <li className={styles.amenitiesItem} key={title}>
+          <Image className={styles.amenitiesImgMob} src={imgMob} alt={title} />
+          <Image
+            className={styles.amenitiesImgDesc}
+            src={imgDesc}
+            alt={title}
+          />
+
+          <div className={styles.amenitiesTextWrap}>
+            <h3 className={styles.amenitiesTitle}>{title}</h3>
+            <p className={`${styles.amenitiesText} ${inter.className}`}>
+              {text}
+            </p>
+            <Button className={styles.amenitiesBtn} type="button">
               Mehr Info
               <BtnArrowIcon className={styles.productIcon} />
             </Button>
@@ -70,4 +71,4 @@ const ProductList = () => {
   );
 };
 
-export default ProductList;
+export default AmenitiesList;
