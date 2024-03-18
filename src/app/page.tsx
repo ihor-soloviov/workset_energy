@@ -7,16 +7,19 @@ import VideoSection from '@/components/common/VideoSection/VideoSection';
 import { firstVideo, secondVideo } from '@/utils/video';
 import QuestionSection from '@/components/home/QuestionSection/QuestionSection';
 import AngebotSection from '@/components/home/AngebotSection/AngebotSection';
+import ProductSection from '@/components/home/ProductSection/ProductSection';
 
 const HomePage = () => {
   return (
     <>
       {/* <div>HomePage</div> */}
+      <ProductSection />
       <AngebotSection />
-      <VideoSection {...firstVideo} />
+      {/* <VideoSection {...firstVideo} /> */}
       <QuestionSection />
       <TeamSection />
-      <VideoSection {...secondVideo} />
+      {/* <VideoSection {...secondVideo} /> */}
+
       <ContactUsSection />
       <SendEmailSection />
       <GoogleComSection />
