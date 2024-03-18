@@ -4,15 +4,17 @@
 .angebotImgWrap {
   background-image: url('/images/angebot-mob.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   width: 100%;
   height: 442px;
 }
+
 .angebotFormWrap {
   width: 100%;
   padding: 64px 24px;
   margin: 0 auto;
 }
+
 .angebotTitle {
   color: var(--white-main);
   font-size: 24px;
@@ -34,14 +36,19 @@
   }
 }
 
+@media screen and (min-width: 391px) {
+  .angebotImgWrap {
+    background-size: cover;
+    background-image: url('/images/angebot-desc.jpg');
+  }
+}
+
 @media screen and (min-width: 1728px) {
   .angebotSection {
     display: flex;
   }
   .angebotImgWrap {
-    background-image: url('/images/angebot-desc.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     width: calc(100% / 2);
     height: 972px;
   }

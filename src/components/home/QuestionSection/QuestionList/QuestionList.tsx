@@ -81,7 +81,13 @@ const QuestionList = () => {
               className={`${styles.questTextWrap} ${openItem[title] ? styles.visible : styles.hidden}`}
             >
               <p className={`${styles.questText} ${inter.className}`}>{text}</p>
-              <Button type="button" className={styles.questConsultBtn}>
+              <Button
+                handleClick={e => {
+                  e.stopPropagation();
+                }}
+                type="button"
+                className={styles.questConsultBtn}
+              >
                 Kostenlose Beratung
               </Button>
             </div>
@@ -116,7 +122,13 @@ const QuestionList = () => {
               className={`${styles.questTextWrap} ${openItem[title] ? styles.visible : styles.hidden}`}
             >
               <p className={`${styles.questText} ${inter.className}`}>{text}</p>
-              <Button type="button" className={styles.questConsultBtn}>
+              <Button
+                handleClick={e => {
+                  e.stopPropagation();
+                }}
+                type="button"
+                className={styles.questConsultBtn}
+              >
                 Kostenlose Beratung
               </Button>
             </div>

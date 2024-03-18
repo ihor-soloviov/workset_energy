@@ -4,6 +4,10 @@
     max-height: 0;
   }
 
+  60% {
+    opacity: 1;
+  }
+
   100% {
     opacity: 1;
     max-height: 1000px;
@@ -20,9 +24,11 @@
   70% {
     margin-top: 8px;
   }
+
   90% {
     opacity: 1;
   }
+
   100% {
     margin-top: 0px;
     opacity: 0;
@@ -74,6 +80,7 @@
   line-height: 160%;
   width: fit-content;
   max-width: 272px;
+  user-select: none;
 }
 .questToggleBtn {
   border: none;
@@ -103,16 +110,20 @@
   flex-direction: column;
   margin-top: 8px;
   max-height: 1000px;
-  animation: fadeToggleOpen 0.6s var(--cubic);
+  user-select: none;
+  animation: fadeToggleOpen 0.7s var(--cubic);
   opacity: 1;
 }
+
 .questTextWrap.hidden {
-  animation: fadeToggleClose 0.2s var(--cubic);
+  animation: fadeToggleClose 0.4s var(--cubic);
 }
+
 .questText {
   color: var(--gray-text);
   line-height: 160%;
 }
+
 .questConsultBtn {
   margin-top: 20px;
   display: flex;

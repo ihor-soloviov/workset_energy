@@ -13,7 +13,7 @@ const HomePage = () => {
     <>
       {/* <div>HomePage</div> */}
       <AngebotSection />
-      {/* <VideoSection {...secondVideo} /> */}
+      <VideoSection {...firstVideo} />
       <QuestionSection />
       <TeamSection />
       <ContactUsSection />

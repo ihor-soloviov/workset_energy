@@ -111,7 +111,7 @@
 .errorText {
   position: absolute;
   right: 10px;
-  top: 77px;
+  top: 73px;
   width: fit-content;
   color: var(--red-main);
   font-size: 10px;

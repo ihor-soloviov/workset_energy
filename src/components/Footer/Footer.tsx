@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import styles from './Footer.module.css';
 import Link from 'next/link';
@@ -7,6 +9,7 @@ import FacebookIcon from '/public/icons/facebook.svg';
 import YoutubeIcon from '/public/icons/youtube.svg';
 import TikTokIcon from '/public/icons/tiktok.svg';
 import ArrowIcon from '/public/icons/footer-arrow.svg';
+import Button from '../common/Button/Button';
 const Footer = () => {
   type NavLink = { text: string; href: string };
   type NavLinkItem = {
@@ -63,6 +66,10 @@ const Footer = () => {
     },
   ];
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContainer}>
@@ -84,9 +91,13 @@ const Footer = () => {
             </li>
           ))}
         </ul>
-        <button className={styles.footerUpBtn}>
+        <Button
+          type="button"
+          handleClick={scrollToTop}
+          className={styles.footerUpBtn}
+        >
           <ArrowIcon className={styles.UpBtnIcon} />
-        </button>
+        </Button>
         <p className={`${styles.companyText} ${inter.className}`}>
           © 2024 WorkSET Energy GmbH
         </p>
