@@ -51,8 +51,8 @@ const QuestionList = () => {
     }));
   };
 
-  const renderListItems = (items: QuestItem[]) => {
-    return items.map(({ text, title }) => (
+  const renderListItems = (items: QuestItem[]) =>
+    items.map(({ text, title }) => (
       <li
         onClick={() => toggleTextVisibility(title)}
         key={title}
@@ -89,7 +89,6 @@ const QuestionList = () => {
         </div>
       </li>
     ));
-  };
 
   const firstListItems = questItems.slice(0, 3);
   const secondListItems = questItems.slice(3, 6);
