@@ -97,9 +97,7 @@ const QuestionList = () => {
   return (
     <div className={styles.questListWrap}>
       <ul className={styles.questList}>{renderListItems(firstListItems)}</ul>
-      <ul className={styles.questList}>
-        <ul className={styles.questList}>{renderListItems(secondListItems)}</ul>
-      </ul>
+      <ul className={styles.questList}>{renderListItems(secondListItems)}</ul>
     </div>
   );
 };
