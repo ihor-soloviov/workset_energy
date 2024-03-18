@@ -16,6 +16,7 @@ const HomePage = () => {
       <VideoSection {...firstVideo} />
       <QuestionSection />
       <TeamSection />
+      <VideoSection {...secondVideo} />
       <ContactUsSection />
       <SendEmailSection />
       <GoogleComSection />

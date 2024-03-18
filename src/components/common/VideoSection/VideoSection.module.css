@@ -11,6 +11,7 @@
   border: none;
   width: 342px;
   height: 216px;
+  object-fit: cover;
 }
 
 .videoTitle {
@@ -53,7 +54,7 @@
   }
 
   .videoTextWrap {
-    width: calc(100% / 2);
+    width: 530px;
   }
   .videoTitle {
     font-size: 34px;

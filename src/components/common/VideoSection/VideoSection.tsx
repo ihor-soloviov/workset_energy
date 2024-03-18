@@ -17,7 +17,12 @@ const VideoSection = ({ title, text, link, className }: VideoSectionProps) => {
     <section className={styles.videoSection}>
       <Container>
         <div className={styles.videoMainWrap}>
-          <iframe src={link} className={videoFrameClass} allowFullScreen />
+          <iframe
+            src={link}
+            className={videoFrameClass}
+            allow="accelerometer"
+            allowFullScreen
+          />
 
           <div className={styles.videoTextWrap}>
             <h2 className={styles.videoTitle}>{title}</h2>
