@@ -126,6 +126,9 @@
     padding: 114px 204px 114px 68px;
   }
 
+  .stepTextWrap.white {
+    order: -1;
+  }
   .stepCount {
     display: none;
   }

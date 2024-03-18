@@ -15,18 +15,18 @@ const HomePage = () => {
   return (
     <>
       {/* <div>HomePage</div> */}
-      <StepSection />
-      <AmenitiesSection />
+      <VideoSection {...firstVideo} />
       <ProductSection />
-      <AngebotSection />
-      {/* <VideoSection {...firstVideo} /> */}
-      <QuestionSection />
+      <VideoSection {...secondVideo} />
       <TeamSection />
-      {/* <VideoSection {...secondVideo} /> */}
+      <AmenitiesSection />
 
-      <ContactUsSection />
-      <SendEmailSection />
+      <QuestionSection />
       <GoogleComSection />
+      <AngebotSection />
+      <StepSection />
+      {/* <SendEmailSection /> */}
+      <ContactUsSection />
     </>
   );
 };
