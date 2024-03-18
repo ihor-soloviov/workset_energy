@@ -1,0 +1,144 @@
+.stepList {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  user-select: none;
+}
+
+.stepItem {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.stepImgMob {
+  width: 342px;
+  height: 342px;
+  border-radius: 12px;
+}
+
+.stepImgDesc {
+  display: none;
+  border-radius: 12px;
+}
+
+.stepTextWrap {
+  border-radius: 12px;
+  padding: 40px 25px;
+  cursor: pointer;
+  border: 1px solid var(--gray-stroke);
+  background-color: var(--white-main);
+  transition: border-color 250ms var(--cubic);
+}
+
+.stepTextWrap.white {
+  background-color: var(--red-main);
+  border: 1px solid var(--red-main);
+}
+
+.stepTextWrap:hover {
+  border-color: var(--black-main);
+}
+
+.stepCount {
+  color: var(--gray-text);
+  font-size: 18px;
+  line-height: 160%;
+  margin-bottom: 24px;
+}
+
+.stepCount.white {
+  color: var(--gray-input);
+}
+
+.stepTitle {
+  color: var(--black-main);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 130%;
+  width: 292px;
+  margin-bottom: 8px;
+}
+
+.stepTitle.white {
+  color: var(--white-main);
+}
+
+.stepText {
+  color: var(--gray-text);
+  font-size: 16px;
+  line-height: 160%;
+  margin-bottom: 36px;
+}
+
+.stepText.white {
+  color: var(--gray-input);
+}
+
+.stepBtn {
+  background-color: var(--red-main);
+  color: var(--gray-input);
+  font-size: 16px;
+  font-weight: 500;
+  padding: 13px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 6px;
+  width: 170px;
+  height: 48px;
+  gap: 8px;
+}
+
+.stepBtn.white {
+  color: var(--red-main);
+  background-color: var(--white-main);
+}
+
+.stepBtnIcon {
+  stroke: var(--gray-input);
+  width: 22px;
+  height: 22px;
+}
+
+.stepBtnIcon.white {
+  stroke: var(--red-main);
+}
+
+@media screen and (min-width: 1728px) {
+  .stepItem {
+    flex-direction: row;
+    height: 462px;
+  }
+
+  .stepImgMob {
+    display: none;
+  }
+
+  .stepImgDesc {
+    display: block;
+    width: 393px;
+    height: 462px;
+  }
+
+  .stepTextWrap {
+    padding: 114px 204px 114px 68px;
+  }
+
+  .stepCount {
+    display: none;
+  }
+
+  .stepTitle {
+    font-size: 34px;
+    width: fit-content;
+    margin-bottom: 14px;
+  }
+
+  .stepText {
+    width: 670px;
+    height: 104px;
+    margin-bottom: 24px;
+  }
+}

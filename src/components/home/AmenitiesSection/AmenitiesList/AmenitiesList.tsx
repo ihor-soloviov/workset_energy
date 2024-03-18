@@ -6,13 +6,13 @@ import AmenitiesSecondIcon from '/public/icons/amenities-2.svg';
 import AmenitiesThirdIcon from '/public/icons/amenities-3.svg';
 import AmenitiesFourthIcon from '/public/icons/amenities-4.svg';
 import BtnArrowIcon from '/public/icons/small-product-arrow.svg';
-type amenitiesItem = {
+type AmenitiesItem = {
   title: string;
   text: string;
   link: string;
 };
 
-export const amenitiesItems: amenitiesItem[] = [
+export const amenitiesItems: AmenitiesItem[] = [
   {
     link: '',
     text: 'Mit Menschen für Menschen, dank Menschen! Wir schätzen unsere Kunden und setzen alles daran, ihre Bedürfnisse zu verstehen und zu erfüllen',
