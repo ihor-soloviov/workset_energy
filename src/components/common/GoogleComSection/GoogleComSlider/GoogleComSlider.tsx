@@ -6,7 +6,7 @@ import { inter } from '@/utils/fonts';
 import React, { useRef } from 'react';
 import styles from './GoogleComSlider.module.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 import { Swiper as SwiperType } from 'swiper';
 import commentsData from '../../../../comments.json';
 import ArrowIcon from '/public/icons/slide-arrow.svg';
@@ -36,8 +36,10 @@ const GoogleComSlider = () => {
       </Button>
       <Swiper
         className={styles.sliderWrap}
-        modules={[Navigation]}
+        modules={[Navigation, Autoplay]}
         navigation
+        loop={true}
+        autoplay={true}
         slidesPerView={'auto'}
         onBeforeInit={swiper => {
           swiperRef.current = swiper;

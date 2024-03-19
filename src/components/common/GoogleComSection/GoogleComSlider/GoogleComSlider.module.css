@@ -19,6 +19,11 @@
   border-radius: 10.8px;
   border: 0.9px solid var(--gray-stroke);
   background-color: var(--white-main);
+  transition: border-color 250ms var(--cubic);
+}
+
+.slide:hover {
+  border-color: var(--black-main);
 }
 
 .slideTitle {
