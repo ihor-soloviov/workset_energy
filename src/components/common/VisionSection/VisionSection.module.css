@@ -1,39 +1,48 @@
-.visionSection {
-}
-
-.visionMainWrap {
-  display: none;
-}
-
-.active {
-  display: block;
-}
-
 .visionImgWrap {
   padding: 45px 0 47px;
   height: 477px;
 }
+
 .visionImgContainer {
   width: 100%;
   margin: 0 auto;
-  padding: 0 24px;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
-.visionImgMob {
+.visionImgMob,
+.visionImgDesc {
+  display: block;
+  position: absolute;
+  left: 24px;
+  top: 0;
+  opacity: 0;
+  transition: opacity 750ms var(--cubic);
 }
+
 .visionImgDesc {
   display: none;
 }
 
 .first {
+  z-index: 3;
 }
+
 .second {
+  z-index: 2;
+  top: 10px;
+  left: 27px;
 }
+
 .third {
+  z-index: 1;
+  top: 15px;
+  left: 47px;
 }
+
 .visible {
+  opacity: 1;
 }
 
 .visionTextWrap {
@@ -46,14 +55,25 @@
   width: 100%;
   margin: 0 auto;
   padding: 0 24px;
+  visibility: hidden;
+  height: 0px;
+  opacity: 0;
+  transition: opacity 1250ms var(--cubic);
 }
+
+.visionTextContainer.active {
+  height: auto;
+  visibility: visible;
+  opacity: 1;
+}
+
 .visionTitle {
   color: var(--white-main);
   font-size: 36px;
   font-weight: 500;
-
   width: fit-content;
   margin-bottom: 16px;
+  transition: opacity 250ms var(--cubic);
 }
 
 .visionText {
@@ -62,6 +82,7 @@
   width: 341px;
   margin: 0 auto;
   line-height: 160%;
+  transition: opacity 250ms var(--cubic);
 }
 
 .visionBtnWrap {
@@ -70,6 +91,7 @@
   justify-content: center;
   margin-bottom: 32px;
 }
+
 .visionBtn {
   cursor: pointer;
   display: flex;
@@ -108,6 +130,14 @@
   stroke: var(--white-main);
 }
 
+.visionCount {
+  display: none;
+}
+
+.visionDotsWrap {
+  display: none;
+}
+
 @media screen and (min-width: 390px) {
   .visionTextContainer,
   .visionImgContainer {
@@ -116,8 +146,125 @@
 }
 
 @media screen and (min-width: 1728px) {
-  .visionContainer {
-    /* width: 1728px; */
+  .visionMainWrap {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+  }
+
+  .visionBtnWrap {
+    position: absolute;
+    bottom: 56px;
+    right: 54px;
+    z-index: 1;
     margin: unset;
+  }
+
+  .visionBtn {
+    border-color: var(--white-main);
+  }
+
+  .visionBtn:hover {
+    border-color: var(--white-main);
+    background-color: var(--white-main);
+  }
+
+  .nextArrow,
+  .prevArrow {
+    stroke: var(--white-main);
+  }
+
+  .visionBtn:hover .nextArrow,
+  .visionBtn:hover .prevArrow {
+    stroke: var(--red-main);
+  }
+
+  .visionImgWrap {
+    width: calc(100% / 2);
+    height: 837px;
+    position: static;
+    padding: 70px 0px 62px;
+  }
+  .visionImgMob {
+    display: none;
+  }
+
+  .visionImgDesc {
+    display: block;
+  }
+
+  .visionTextWrap {
+    width: calc(100% / 2);
+    height: 837px;
+    padding: 271px 46px 56px 59px;
+    position: relative;
+  }
+
+  .visionTextContainer {
+    margin: unset;
+    width: 551px;
+    position: relative;
+    padding: unset;
+  }
+
+  .visionImgContainer {
+    width: 600px;
+  }
+
+  .first {
+  }
+
+  .second {
+    top: 20px;
+    left: 35px;
+  }
+
+  .third {
+    top: 35px;
+    left: 57px;
+  }
+
+  .visionTitle {
+    font-size: 64px;
+    margin-bottom: 24px;
+  }
+
+  .visionText {
+    font-size: 18px;
+    width: 551px;
+    height: 174px;
+    margin: unset;
+  }
+
+  .visionCount {
+    display: block;
+    color: var(--white-second);
+    font-size: 18px;
+    line-height: 160%;
+    width: fit-content;
+    position: absolute;
+    top: 48px;
+    left: 59px;
+  }
+
+  .visionDotsWrap {
+    display: block;
+    width: fit-content;
+    position: absolute;
+    bottom: 56px;
+    left: 59px;
+    display: flex;
+    gap: 10px;
+  }
+
+  .visionDot {
+    border-radius: 50%;
+    width: 6px;
+    background-color: rgba(255, 255, 255, 0.4);
+    height: 6px;
+  }
+
+  .visionDot.active {
+    background-color: var(--white-main);
   }
 }

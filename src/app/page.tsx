@@ -16,6 +16,7 @@ const HomePage = () => {
   return (
     <>
       <VisionSection />
+      <AngebotSection />
       {/* <VideoSection {...firstVideo} /> */}
       <ProductSection />
       {/* <VideoSection {...secondVideo} /> */}
@@ -24,7 +25,7 @@ const HomePage = () => {
 
       <QuestionSection />
       <GoogleComSection />
-      <AngebotSection />
+
       <StepSection />
       {/* <SendEmailSection /> */}
       <ContactUsSection />
