@@ -16,11 +16,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: border-color 250ms var(--cubic);
+  cursor: pointer;
+  transition: background-color 250ms var(--cubic);
 }
 
 .amenitiesItem:hover {
-  border-color: var(--black-main);
+  background-color: var(--red-main);
 }
 
 .amenitiesIconWrap {
@@ -50,6 +51,7 @@
   margin: 0 auto;
   margin-bottom: 18px;
   line-height: 160%;
+  transition: color 250ms var(--cubic);
 }
 
 .amenitiesText {
@@ -60,6 +62,7 @@
   text-align: center;
   margin: 0 auto;
   margin-bottom: 18px;
+  transition: color 250ms var(--cubic);
 }
 
 .amenitiesBtn {
@@ -74,10 +77,22 @@
   font-size: 16px;
   gap: 6px;
   font-weight: 600;
+  transition: color 250ms var(--cubic);
+}
+
+.amenitiesItem:hover .amenitiesTitle,
+.amenitiesItem:hover .amenitiesText,
+.amenitiesItem:hover .amenitiesBtn {
+  color: var(--white-main);
 }
 
 .amenitiesBtnIcon {
   stroke: var(--red-main);
+  transition: stroke 250ms var(--cubic);
+}
+
+.amenitiesItem:hover .amenitiesBtnIcon {
+  stroke: var(--white-main);
 }
 
 @media screen and (min-width: 1728px) {

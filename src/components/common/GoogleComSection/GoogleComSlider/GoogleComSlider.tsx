@@ -11,6 +11,7 @@ import { Swiper as SwiperType } from 'swiper';
 import commentsData from '../../../../comments.json';
 import ArrowIcon from '/public/icons/slide-arrow.svg';
 import StarIcon from '/public/icons/star.svg';
+import Button from '../../Button/Button';
 
 const GoogleComSlider = () => {
   const comments = commentsData.result.reviews;
@@ -20,18 +21,19 @@ const GoogleComSlider = () => {
     return count < 1 || count > 5
       ? null
       : Array.from({ length: count }, (_, index) => (
-          <StarIcon className={styles.slideArrowIcon} key={index} />
+          <StarIcon className={styles.slideStarIcon} key={index} />
         ));
   };
 
   return (
     <div className={styles.sliderMainWrap}>
-      <div
-        onClick={() => swiperRef.current?.slidePrev()}
+      <Button
+        type="button"
+        handleClick={() => swiperRef.current?.slidePrev()}
         className={styles.sliderBtnWrap}
       >
         <ArrowIcon className={styles.prevArrow} />
-      </div>
+      </Button>
       <Swiper
         className={styles.sliderWrap}
         modules={[Navigation]}
@@ -80,12 +82,13 @@ const GoogleComSlider = () => {
           ),
         )}
       </Swiper>
-      <div
-        onClick={() => swiperRef.current?.slideNext()}
+      <Button
+        type="button"
+        handleClick={() => swiperRef.current?.slideNext()}
         className={styles.sliderBtnWrap}
       >
         <ArrowIcon className={styles.nextArrow} />
-      </div>
+      </Button>
     </div>
   );
 };
