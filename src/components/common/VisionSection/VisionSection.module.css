@@ -1,0 +1,123 @@
+.visionSection {
+}
+
+.visionMainWrap {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.visionImgWrap {
+  padding: 45px 0 47px;
+  height: 477px;
+}
+.visionImgContainer {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.visionImgMob {
+}
+.visionImgDesc {
+  display: none;
+}
+
+.first {
+}
+.second {
+}
+.third {
+}
+.visible {
+}
+
+.visionTextWrap {
+  background-color: var(--red-main);
+  padding: 64px 0px;
+  height: 396px;
+}
+
+.visionTextContainer {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.visionTitle {
+  color: var(--white-main);
+  font-size: 36px;
+  font-weight: 500;
+
+  width: fit-content;
+  margin-bottom: 16px;
+}
+
+.visionText {
+  color: var(--white-second);
+  font-size: 16px;
+  width: 341px;
+  margin: 0 auto;
+  line-height: 160%;
+}
+
+.visionBtnWrap {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+.visionBtn {
+  cursor: pointer;
+  display: flex;
+  width: 73px;
+  height: 73px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid var(--gray-stroke);
+  flex-shrink: 0;
+  transition:
+    background-color 250ms var(--cubic),
+    border-color 250ms var(--cubic);
+}
+
+.visionBtn:hover {
+  border-color: var(--red-main);
+  background-color: var(--red-main);
+}
+
+.nextArrow,
+.prevArrow {
+  stroke: var(--gray-text);
+  width: 24px;
+  height: 24px;
+  transition: stroke 250ms var(--cubic);
+}
+
+.nextArrow {
+  transform: rotate(180deg);
+}
+
+.visionBtn:hover .nextArrow,
+.visionBtn:hover .prevArrow {
+  stroke: var(--white-main);
+}
+
+@media screen and (min-width: 390px) {
+  .visionTextContainer,
+  .visionImgContainer {
+    width: 390px;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .visionContainer {
+    /* width: 1728px; */
+    margin: unset;
+  }
+}
