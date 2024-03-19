@@ -9,63 +9,6 @@
   margin: 0 auto;
 }
 
-.footerMainList {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  width: 100%;
-  gap: 40px 32px;
-  margin-bottom: 70px;
-}
-
-.footerMainItem {
-  width: 162px;
-}
-
-.footerMainItem:last-child {
-  margin-bottom: auto;
-}
-
-.footerMainLink {
-  color: var(--white-main);
-  font-size: 16px;
-  font-weight: 600;
-  width: fit-content;
-  margin-bottom: 24px;
-  display: block;
-  transition: scale 250ms var(--cubic);
-}
-
-.footerMainLink:hover {
-  scale: 1.05;
-}
-
-.footerList {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.footerItem {
-  width: fit-content;
-  cursor: pointer;
-}
-
-.footerLink {
-  color: var(--gray-text);
-  font-size: 14px;
-  font-weight: 500;
-  width: fit-content;
-  transition: color 100ms var(--cubic);
-}
-
-.footerLink:hover {
-  color: var(--white-main);
-}
-
 .footerUpBtn {
   display: flex;
   padding: 12px;
@@ -107,60 +50,6 @@
   margin-bottom: 12px;
 }
 
-.footerSocialList {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  margin: 0 auto;
-  margin-bottom: 18px;
-  justify-content: center;
-}
-
-.footerSocialItem {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 13px;
-  transition:
-    background-color 250ms var(--cubic),
-    fill 250ms var(--cubic);
-}
-
-.footerSocialLink {
-  height: 16px;
-  width: 16px;
-}
-
-.footerSocialIcon {
-  fill: var(--white-main);
-  height: 16px;
-  width: 16px;
-}
-
-.footerSocialIcon.instagram,
-.footerSocialIcon.facebook,
-.footerSocialLink.instagram,
-.footerSocialLink.facebook {
-  height: 18px;
-  width: 18px;
-}
-
-.footerSocialItem:hover {
-  background-color: var(--white-main);
-}
-
-.footerSocialIcon {
-  fill: var(--white-main);
-}
-
-.footerSocialItem:hover .footerSocialIcon {
-  fill: var(--red-main);
-}
-
 .footerBottomText {
   color: var(--gray-text);
   font-size: 16px;
@@ -190,20 +79,6 @@
     padding: 120px 0px 38px;
   }
 
-  .footerMainList {
-    justify-content: flex-end;
-    gap: 0px 90px;
-    margin-bottom: 124px;
-  }
-
-  .footerMainItem {
-    width: fit-content;
-  }
-
-  .footerLink {
-    font-size: 16px;
-  }
-
   .footerUpBtn {
     position: absolute;
     bottom: 42px;
@@ -214,13 +89,6 @@
   .companyText {
     font-size: 16px;
     margin-bottom: unset;
-  }
-
-  .footerSocialList {
-    position: absolute;
-    top: 97px;
-    left: 185px;
-    margin: unset;
   }
 
   .footerBottomText {

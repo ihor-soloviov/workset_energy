@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './HeaderNavList.module.css';
 import { inter } from '@/utils/fonts';
 import { usePathname } from 'next/navigation';
+
 export type NavLinkItem = {
   href: string;
   text: string;

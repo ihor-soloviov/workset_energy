@@ -1,25 +1,42 @@
 import React from 'react';
 import styles from './MobileContactList.module.css';
 import { inter } from '@/utils/fonts';
+
+type ContactLinkItem = {
+  href?: string;
+  text: string;
+  title: string;
+};
+
 const MobileContactList = () => {
+  const contactLinkItems: ContactLinkItem[] = [
+    { text: 'Magirus-Deutz-Str, 1289077 Ulm', title: 'Address' },
+    {
+      href: 'mailto:office@work-set.eu',
+      text: 'office@work-set.eu',
+      title: 'E-mail',
+    },
+    {
+      href: 'tel:+4973114613210',
+      text: '+49-73-114-613-210',
+      title: 'Telefonnummer',
+    },
+  ];
+
   return (
     <ul className={`${styles.menuList} ${inter.className}`}>
-      <li className={styles.menuItem}>
-        <h3 className={styles.menuItemTitle}>Address</h3>
-        <p className={styles.menuLink}>Magirus-Deutz-Str, 1289077 Ulm</p>
-      </li>
-      <li className={styles.menuItem}>
-        <h3 className={styles.menuItemTitle}>E-mail</h3>
-        <a href="mailto:office@work-set.eu" className={styles.menuLink}>
-          office@work-set.eu
-        </a>
-      </li>
-      <li className={styles.menuItem}>
-        <h3 className={styles.menuItemTitle}>Telefonnummer</h3>
-        <a href="tel:+4973114613210" className={styles.menuLink}>
-          +49-73-114-613-210
-        </a>
-      </li>
+      {contactLinkItems.map(({ text, title, href }) => (
+        <li key={title} className={styles.menuItem}>
+          <h3 className={styles.menuItemTitle}>{title}</h3>
+          {title === 'Address' ? (
+            <p className={styles.menuLink}>{text}</p>
+          ) : (
+            <a href={href} className={styles.menuLink}>
+              {text}
+            </a>
+          )}
+        </li>
+      ))}
     </ul>
   );
 };
