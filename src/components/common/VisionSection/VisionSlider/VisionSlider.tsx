@@ -79,9 +79,9 @@ const VisionSlider = () => {
     setSlide(slide + 1);
   };
 
-  function addVisibleClass(slide: number, expectedSlides: number[]) {
-    return expectedSlides.includes(slide) ? styles.visible : '';
-  }
+  const addVisibleClass = (slide: number, expectedSlides: number[]) =>
+    expectedSlides.includes(slide) ? styles.visible : '';
+
   return (
     <div className={styles.visionMainWrap}>
       <div className={styles.visionImgWrap}>

@@ -17,7 +17,7 @@ const HomePage = () => {
     <>
       <VisionSection />
       <AngebotSection />
-      {/* <VideoSection {...firstVideo} /> */}
+      <VideoSection {...firstVideo} />
       <ProductSection />
       {/* <VideoSection {...secondVideo} /> */}
       <TeamSection />
