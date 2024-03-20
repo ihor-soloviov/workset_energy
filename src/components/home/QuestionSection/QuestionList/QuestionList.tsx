@@ -78,9 +78,7 @@ const QuestionList = () => {
         >
           <p className={`${styles.questText} ${inter.className}`}>{text}</p>
           <Button
-            handleClick={e => {
-              e.stopPropagation();
-            }}
+            handleClick={e => e.stopPropagation()}
             type="button"
             className={styles.questConsultBtn}
           >

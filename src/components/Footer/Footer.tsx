@@ -9,9 +9,7 @@ import FooterSocialList from './FooterSocialList/FooterSocialList';
 import FooterMainList from './FooterMainList/FooterMainList';
 
 const Footer = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   return (
     <footer className={styles.footer}>
