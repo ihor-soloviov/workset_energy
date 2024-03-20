@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styles from './LeadStepTwo.module.css';
 import { inter } from '@/utils/fonts';
-import ReactSlider from 'react-slider';
-import WorksetIcon from '/public/icons/workset.svg';
-import CountWrapIcon from '/public/icons/range-wrap.svg';
+
+import LeadStepTwoSlider from './LeadStepTwoSlider/LeadStepTwoSlider';
+
 const LeadStepTwo = () => {
   const [rangeValue, setRangeValue] = useState<number>(4000);
 
   console.log(rangeValue);
+
   const formatValue = (value: number) =>
     value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 
@@ -30,33 +31,10 @@ const LeadStepTwo = () => {
           </div>
         </div>
         <div className={styles.stepTwoInputWrap}>
-          <ReactSlider
-            step={1000}
-            min={1000}
-            max={15000}
-            defaultValue={4000}
-            onChange={value => setRangeValue(value)}
-            className={styles.stepTwoInput}
-            thumbClassName={styles.stepTwoInputThumb}
-            thumbActiveClassName={styles.active}
-            trackClassName={styles.stepTwoInputTrack}
-            renderTrack={(props, state) => (
-              <div
-                {...props}
-                className={`${props.className} ${state.index === 0 ? styles.stepTwoInputTrackCompleted : ''}`}
-                key={props.key}
-              />
-            )}
-            renderThumb={(props, state) => (
-              <div {...props} key={props.key}>
-                <div className={styles.stepTwoRangeCountWrap}>
-                  <CountWrapIcon className={styles.stepTwoRangeIcon} />
-                  <span className={styles.stepTwoRangeCount}>
-                    {formatValue(rangeValue)}
-                  </span>
-                </div>
-              </div>
-            )}
+          <LeadStepTwoSlider
+            rangeValue={rangeValue}
+            setRangeValue={setRangeValue}
+            formatValue={formatValue}
           />
           <div className={styles.stepTwoRangeWrap}>
             <span className={`${styles.stepTwoRange} ${inter.className}`}>
