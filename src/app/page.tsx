@@ -11,13 +11,15 @@ import ProductSection from '@/components/home/ProductSection/ProductSection';
 import AmenitiesSection from '@/components/home/AmenitiesSection/AmenitiesSection';
 import StepSection from '@/components/home/StepSection/StepSection';
 import VisionSection from '@/components/common/VisionSection/VisionSection';
+import EmployeeSection from '@/components/common/EmployeeSection/EmployeeSection';
 
 const HomePage = () => {
   return (
     <>
+      <EmployeeSection />
       <VisionSection />
       <AngebotSection />
-      <VideoSection {...firstVideo} />
+      {/* <VideoSection {...firstVideo} /> */}
       <ProductSection />
       {/* <VideoSection {...secondVideo} /> */}
       <TeamSection />
