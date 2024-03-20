@@ -138,7 +138,7 @@ const VisionSlider = () => {
             <div
               key={index}
               className={`${styles.visionDot} ${slide === index ? styles.active : ''}`}
-            ></div>
+            />
           ))}
         </div>
       </div>
