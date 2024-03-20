@@ -10,11 +10,11 @@ export type NavLinkItem = {
 };
 
 export const navLinkItems: NavLinkItem[] = [
-  { href: '/pvsystem', text: 'PV-System' },
+  { href: '/pv-anlagen', text: 'PV-Anlagen' },
   { href: '/stormspeicher', text: 'Stormspeicher' },
   { href: '/wallbox', text: 'Wallbox' },
   { href: '/karrier', text: 'Karrier' },
-  { href: '/uberuns', text: 'Über uns' },
+  { href: '/uber-uns', text: 'Über uns' },
 ];
 
 const HeaderNavList = () => {

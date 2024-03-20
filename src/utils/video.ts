@@ -11,3 +11,10 @@ export const secondVideo = {
   text: 'Erfahre, wie das Kreditsystem Einsparungen bei Photovoltaikanlagen ermöglicht – ohne Geldeinlagen! Schau dir unser kurzes Video über die Schonung deiner Finanzen an und bleibe in den schwarzen Zahlen.',
   link: 'https://www.youtube.com/embed/4BRt2jU6DME',
 };
+
+export const pvAnlagenVideo = {
+  className: 'left',
+  title: 'Bleibe in den schwarzen Zahlen',
+  text: 'Erfahre, wie das Kreditsystem Einsparungen mit Photovoltaik-Modulen ohne Einlagen ermöglicht! Schau dir unser kurzes Video über die Schonung deiner Finanzen an und bleibe in den schwarzen Zahlen.',
+  link: 'https://www.youtube.com/embed/M9CIRKXwVZE',
+};
