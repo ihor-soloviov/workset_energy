@@ -8,6 +8,7 @@ import Button from '../common/Button/Button';
 import HeaderNavList from './HeaderNavList/HeaderNavList';
 import WorksetIcon from '/public/icons/workset.svg';
 import BurgerIcon from '/public/icons/burger.svg';
+import ArrowIcon from '/public/icons/small-arrow-btn.svg';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,7 +31,10 @@ const Header = () => {
           </Button>
           <HeaderNavList />
         </nav>
-        <Button text="Zum Angebot" type="button" className={styles.headerBtn} />
+        <Link href="/leadgen" className={styles.headerLeadLink}>
+          Jetzt Berechnen
+          <ArrowIcon className={styles.headerIcon} />
+        </Link>
       </div>
       {isMenuOpen && <MobileMenu handleMenuClick={handleMenuClick} />}
     </header>

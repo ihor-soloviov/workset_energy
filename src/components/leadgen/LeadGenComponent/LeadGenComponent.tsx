@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect, useContext } from 'react';
 
-import styles from './LeadGen.module.css';
+import styles from './LeadGenComponent.module.css';
 import Button from '../../common/Button/Button';
 import BurgerIcon from '/public/icons/lead-burger.svg';
 import BackArrowIcon from '/public/icons/lead-arrow.svg';
@@ -27,7 +27,7 @@ export type FormInitialValue = {
   stepSeven: string;
 };
 
-const LeadGen = () => {
+const LeadGenComponent = () => {
   const formInitialValue = {
     stepOne: '',
     stepTwo: '',
@@ -122,18 +122,11 @@ const LeadGen = () => {
             Weiter
           </Button>
         </div>
-        {step !== 1 && step !== 8 && (
-          <div className={styles.leadContactWrap}>
-            <div className={styles.leadContactContainer}>
-              <MobileContactList />
-              <MobileSocialList />
-            </div>
-          </div>
-        )}
+
         {isMenuOpen && <MobileMenu handleMenuClick={handleMenuClick} />}
       </div>
     </>
   );
 };
 
-export default LeadGen;
+export default LeadGenComponent;

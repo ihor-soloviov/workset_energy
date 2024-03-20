@@ -1,12 +1,14 @@
 .stepTwoMainWrap {
-  padding: 32px 0 82px;
+  padding: 32px 0 128px;
 }
+
 .stepTwoTitle {
   color: var(--neutral-main);
   text-align: center;
   font-size: 22px;
   font-weight: 600;
   line-height: 160%;
+  height: 68px;
   margin-bottom: 12px;
 }
 
@@ -17,6 +19,7 @@
   line-height: 160%;
   margin-bottom: 40px;
 }
+
 .stepTwoWrap {
   height: 278px;
   border-radius: 12px;
@@ -24,6 +27,7 @@
   background-color: var(--white-main);
   padding: 51px 24px;
 }
+
 .stepTwoLabelWrap {
   display: flex;
   align-items: center;
@@ -31,12 +35,14 @@
   justify-content: flex-end;
   margin-bottom: 42px;
 }
+
 .stepTwoLabel {
   color: var(--black-main);
   font-size: 18px;
   font-weight: 500;
   width: 46px;
 }
+
 .stepTwoCountWrap {
   width: 80px;
   padding: 10px 17px;
@@ -47,17 +53,74 @@
   border-radius: 6px;
   height: 39px;
 }
+
 .stepTwoCount {
   color: var(--gray-input);
   font-size: 16px;
   font-weight: 600;
 }
+
 .stepTwoInputWrap {
 }
+
 .stepTwoInput {
   width: 100%;
   margin-bottom: 15px;
+  height: 6px;
 }
+
+.stepTwoInputThumb {
+  height: 20px;
+  width: 20px;
+  background-color: var(--white-main);
+  border: 2px solid var(--gray-stroke);
+  top: -6px;
+  border-radius: 20px;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.04);
+  position: relative;
+}
+
+.stepTwoInputTrack {
+  height: 6px;
+  border-radius: 3px;
+  background-color: var(--gray-stroke);
+}
+
+.stepTwoInputTrackCompleted {
+  background-color: var(--red-main);
+}
+
+.stepTwoInputThumb.active .stepTwoRangeCountWrap {
+  display: flex;
+}
+
+.stepTwoRangeCountWrap {
+  display: none;
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  align-items: center;
+  justify-content: center;
+  bottom: 26px;
+  right: -23px;
+  width: 67px;
+  height: 38px;
+}
+
+.stepTwoRangeIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.stepTwoRangeCount {
+  color: var(--gray-dark-text);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 146%;
+  z-index: 2;
+}
+
 .stepTwoRangeWrap {
   display: flex;
   align-items: center;
