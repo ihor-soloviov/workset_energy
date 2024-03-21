@@ -1,0 +1,70 @@
+.pricingPlansSection {
+  padding: 90px 0;
+  margin: 0 auto;
+}
+
+.pricingPlansWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 194px;
+}
+
+.pricingPlansHeader {
+  max-width: 342px;
+  text-align: center;
+}
+
+.plansTitle {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 130%;
+  color: var(--black-main);
+  margin-bottom: 12px;
+}
+
+.plansText {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
+  color: var(--gray-text);
+}
+
+.pricingPlansItems {
+  display: flex;
+  flex-direction: column;
+  gap: 210px;
+}
+
+.pricingPlansItem {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  max-width: 342px;
+  padding: 140px 24px 64px;
+  border-radius: 10px;
+  border: 1px solid var(--gray-stroke);
+  
+}
+
+.plansImageMob {
+  width: 260px;
+  position: absolute;
+  top: -146px;
+  left: 41px;
+}
+
+.plansImageDesk {
+  display: none;
+}
+
+@media screen and (min-width: 1728px) {
+  .plansImageMob {
+    display: none;
+  }
+
+  .plansImageDesk {
+    display: block;
+  }
+}
