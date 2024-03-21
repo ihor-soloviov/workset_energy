@@ -52,4 +52,5 @@ img {
 button {
   display: block;
   cursor: pointer;
+  border: none;
 }

@@ -1,0 +1,16 @@
+.sliderDots {
+  display: flex;
+  gap: 10px;
+}
+
+.sliderDot {
+  border-radius: 50%;
+  width: 6px;
+  background-color: rgba(255, 255, 255, 0.4);
+  height: 6px;
+  transition: background-color 250ms var(--cubic);
+}
+
+.sliderDot.active {
+  background-color: var(--white-main);
+}

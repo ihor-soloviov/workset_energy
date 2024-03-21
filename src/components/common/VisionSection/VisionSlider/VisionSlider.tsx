@@ -6,25 +6,14 @@ import { inter } from '@/utils/fonts';
 import Button from '../../Button/Button';
 import ArrowIcon from '/public/icons/slide-arrow.svg';
 import Image from 'next/image';
-import { StaticImageData } from 'next/image';
 import visionFirstImgMob from '/public/images/vision-1-mob.png';
 import visionSecondImgMob from '/public/images/vision-2-mob.png';
 import visionThirdImgMob from '/public/images/vision-3-mob.png';
 import visionFirstImgDesc from '/public/images/vision-1-desc.png';
 import visionSecondImgDesc from '/public/images/vision-2-desc.png';
 import visionThirdImgDesc from '/public/images/vision-3-desc.png';
-
-type VisionLinkItem = {
-  title: string;
-  text: string;
-};
-
-type VisionImageItem = {
-  mobile: StaticImageData;
-  desktop: StaticImageData;
-  className: string;
-  rangeSlides: number[];
-};
+import { VisionImageItem, VisionLinkItem } from '@/types/infoTypes';
+import SliderDots from '../../SliderDots/SliderDots';
 
 const VisionSlider = () => {
   const [slide, setSlide] = useState(1);
@@ -82,6 +71,8 @@ const VisionSlider = () => {
   const addVisibleClass = (slide: number, expectedSlides: number[]) =>
     expectedSlides.includes(slide) ? styles.visible : '';
 
+  const handleActiveSlide = (index: number) => setSlide(index + 1);
+
   return (
     <div className={styles.visionMainWrap}>
       <div className={styles.visionImgWrap}>
@@ -134,12 +125,11 @@ const VisionSlider = () => {
           </div>
         ))}
         <div className={styles.visionDotsWrap}>
-          {[1, 2, 3].map(index => (
-            <div
-              key={index}
-              className={`${styles.visionDot} ${slide === index ? styles.active : ''}`}
-            />
-          ))}
+          <SliderDots
+            handleActiveSlide={handleActiveSlide}
+            count={3}
+            activeSlide={slide - 1}
+          />
         </div>
       </div>
     </div>
