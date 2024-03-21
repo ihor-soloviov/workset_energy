@@ -9,6 +9,7 @@ import Image from 'next/image';
 import { sliderImages } from './slides';
 import { vorteileItems } from './slides';
 import ArrowIcon from '/public/icons/slide-arrow.svg';
+import SliderDots from '../../SliderDots/SliderDots';
 
 const VorteileSlider = () => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
@@ -18,6 +19,8 @@ const VorteileSlider = () => {
 
   const handleNextSlide = () =>
     setActiveSlideIndex(prev => (prev === 5 ? 0 : prev + 1));
+
+  const handleActiveSlide = (index: number) => setActiveSlideIndex(index);
 
   return (
     <div className={styles.vorteileSliderWrap}>
@@ -34,29 +37,41 @@ const VorteileSlider = () => {
         />
       </React.Fragment>
       <div className={styles.sliderInfoWrap}>
+        <p className={`${styles.sliderInfoCounter} ${inter.className}`}>
+          0{activeSlideIndex + 1}
+        </p>
         <div className={styles.sliderInfo}>
-          <h2 className={`${styles.sliderTitle} ${interTight.className}`}>
+          <h2 className={styles.sliderTitle}>
             {vorteileItems[activeSlideIndex].title}
           </h2>
           <p className={`${styles.sliderText} ${inter.className}`}>
             {vorteileItems[activeSlideIndex].text}
           </p>
         </div>
-        <div className={styles.sliderButtonsWrap}>
-          <Button
-            handleClick={handlePrevSlide}
-            type="button"
-            className={styles.sliderBtn}
-          >
-            <ArrowIcon className={styles.prevArrow} />
-          </Button>
-          <Button
-            handleClick={handleNextSlide}
-            type="button"
-            className={styles.sliderBtn}
-          >
-            <ArrowIcon className={styles.nextArrow} />
-          </Button>
+        <div className={styles.sliderControllers}>
+          <div className={styles.sliderDotsWrap}>
+            <SliderDots
+              handleActiveSlide={handleActiveSlide}
+              count={6}
+              activeSlide={activeSlideIndex}
+            />
+          </div>
+          <div className={styles.sliderButtonsWrap}>
+            <Button
+              handleClick={handlePrevSlide}
+              type="button"
+              className={styles.sliderBtn}
+            >
+              <ArrowIcon className={styles.prevArrow} />
+            </Button>
+            <Button
+              handleClick={handleNextSlide}
+              type="button"
+              className={styles.sliderBtn}
+            >
+              <ArrowIcon className={styles.nextArrow} />
+            </Button>
+          </div>
         </div>
       </div>
     </div>
