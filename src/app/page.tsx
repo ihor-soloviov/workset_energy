@@ -19,7 +19,7 @@ const HomePage = () => {
       <EmployeeSection />
       <VisionSection />
       <AngebotSection />
-      {/* <VideoSection {...firstVideo} /> */}
+      <VideoSection {...firstVideo} />
       <ProductSection />
       {/* <VideoSection {...secondVideo} /> */}
       <TeamSection />
