@@ -1,0 +1,121 @@
+.stepOneMainWrap {
+  padding: 52px 0px 0;
+}
+
+.stepOneMainTitle {
+  color: var(--black-main);
+  width: 342px;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 130%;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 8px;
+}
+
+.stepOneText {
+  color: var(--gray-text);
+  text-align: center;
+  font-size: 16px;
+  line-height: 160%;
+  margin: 0 auto;
+  margin-bottom: 32px;
+}
+
+.stepOneTitle {
+  color: var(--gray-dark-text);
+  font-size: 20px;
+  width: fit-content;
+  font-weight: 600;
+  margin: 0 auto;
+  margin-bottom: 18px;
+  height: 28px;
+}
+
+.leadStepOneBtn {
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 6px;
+  border: 1px solid var(--red-main);
+  background-color: var(--red-main);
+  color: var(--white-main);
+  padding: 17px 148px;
+  width: 100%;
+  height: 52px;
+  margin: 0 auto;
+}
+
+.leadStepOneBtn:disabled {
+  background-color: transparent;
+  border: 1px solid var(--gray-stroke);
+  color: var(--black-main);
+}
+
+.leadStepOneBtnDesc {
+  display: none;
+}
+
+@media screen and (min-width: 1728px) {
+  .stepOneMainWrap {
+    padding: 44px 0 0;
+    height: 563px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stepOneMainTitle {
+    width: 460px;
+    font-size: 28px;
+    height: 36px;
+  }
+
+  .stepOneBr {
+    display: none;
+  }
+
+  .stepOneText {
+    font-size: 18px;
+    width: 398px;
+    margin-bottom: 46px;
+  }
+
+  .stepOneTitle {
+    font-size: 22px;
+    margin-bottom: 34px;
+  }
+
+  .leadStepOneBtn {
+    display: none;
+  }
+
+  .leadStepOneBtnDesc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 116px;
+    height: 46px;
+    color: var(--black-main);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 13px 22px;
+    border-radius: 6px;
+    border: 1px solid var(--gray-stroke);
+    background-color: var(--white-main);
+    margin-left: auto;
+  }
+
+  .leadStepOneBtnDesc:disabled {
+    color: var(--gray-text);
+  }
+
+  .leadIcon {
+    width: 20px;
+    height: 21px;
+    stroke: var(--black-main);
+  }
+
+  .leadStepOneBtnDesc:disabled .leadIcon {
+    stroke: var(--gray-text);
+  }
+}

@@ -4,7 +4,6 @@ import './globals.css';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 import { interTight } from '@/utils/fonts';
-
 export const metadata: Metadata = {
   title: 'WorkSET Energy',
 };

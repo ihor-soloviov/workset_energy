@@ -1,0 +1,63 @@
+.stepTwoInput {
+  width: 100%;
+  margin-bottom: 15px;
+  height: 6px;
+}
+
+.stepTwoInputThumb {
+  height: 20px;
+  width: 20px;
+  background-color: var(--white-main);
+  border: 2px solid var(--gray-stroke);
+  top: -7px;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.04);
+}
+
+.stepTwoInputTrack {
+  height: 6px;
+  border-radius: 3px;
+  background-color: var(--gray-stroke);
+}
+
+.stepTwoInputTrackCompleted {
+  background-color: var(--red-main);
+}
+
+.stepTwoInputThumb.active .stepTwoActiveWrap {
+  display: flex;
+}
+
+.stepTwoActiveWrap {
+  display: none;
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  align-items: center;
+  justify-content: center;
+  bottom: 28px;
+  right: -23px;
+  width: 67px;
+  height: 38px;
+}
+
+.stepTwoActiveIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.stepTwoActiveCount {
+  color: var(--gray-dark-text);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 146%;
+  z-index: 2;
+}
+
+@media screen and (min-width: 1728px) {
+  .stepTwoActiveWrap {
+    bottom: 32px;
+  }
+}

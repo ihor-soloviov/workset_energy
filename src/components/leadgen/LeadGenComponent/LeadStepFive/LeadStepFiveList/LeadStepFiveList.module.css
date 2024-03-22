@@ -1,0 +1,97 @@
+.stepFiveList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 20px;
+  height: 344px;
+  justify-content: center;
+  flex-direction: row;
+  margin-bottom: 160px;
+}
+
+.stepFiveItem {
+  border-radius: 9.431px;
+  border: 0.802px solid var(--gray-stroke);
+  background-color: var(--white-main);
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 160px;
+  transition: background-color 250ms var(--cubic);
+  cursor: pointer;
+}
+
+.stepFiveItem.active {
+  background-color: var(--red-main);
+}
+
+.stepFiveWrap {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.stepFiveTitle {
+  color: #39383c;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 250ms var(--cubic);
+}
+
+.stepFiveTitle.active {
+  color: var(--gray-input);
+}
+
+.stepFiveIconWrap {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stepFiveIcon {
+  width: 71px;
+  height: 55px;
+  fill: var(--gray-dark-text);
+  transition: fill 250ms var(--cubic);
+}
+
+.stepFiveIcon.active {
+  fill: var(--white-main);
+}
+
+@media screen and (min-width: 1728px) {
+  .stepFiveList {
+    height: 360px;
+    width: 360px;
+    margin: 0 auto;
+    margin-bottom: 16px;
+    gap: 20px 20px;
+  }
+
+  .stepFiveItem {
+    width: 170px;
+    height: 170px;
+  }
+
+  .stepFiveWrap {
+    gap: 22px;
+  }
+
+  .stepFiveTitle {
+    font-size: 16px;
+  }
+
+  .stepFiveIconWrap {
+    width: 85px;
+    height: 85px;
+  }
+
+  .stepFiveIcon {
+    width: 75px;
+    height: 58px;
+  }
+}

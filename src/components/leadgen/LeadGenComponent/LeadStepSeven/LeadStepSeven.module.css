@@ -1,0 +1,56 @@
+.stepSevenMainWrap {
+  padding: 32px 0 104px;
+}
+
+.stepSevenMainTitle {
+  color: var(--neutral-main);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 160%;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.stepSevenText,
+.stepSevenTextDesc {
+  color: var(--gray-text);
+  font-size: 16px;
+  width: 275px;
+  line-height: 160%;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  height: 82px;
+}
+
+.stepSevenTextDesc {
+  display: none;
+}
+
+@media screen and (min-width: 1728px) {
+  .stepSevenMainWrap {
+    padding: 44px 0 0px;
+    height: 563px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stepSevenMainTitle {
+    font-size: 28px;
+    line-height: normal;
+    margin-bottom: 8px;
+  }
+
+  .stepSevenText {
+    display: none;
+  }
+
+  .stepSevenTextDesc {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 36px;
+    width: 484px;
+    height: fit-content;
+  }
+}
