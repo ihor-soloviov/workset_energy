@@ -1,6 +1,5 @@
-import ContactUsSection from '@/components/common/ContactUsSection/ContactUsSection';
 import styles from './page.module.css';
-import SendEmailSection from '@/components/common/SendEmailSection/SendEmailSection';
+import ContactUsSection from '@/components/common/ContactUsSection/ContactUsSection';
 import GoogleComSection from '@/components/common/GoogleComSection/GoogleComSection';
 import TeamSection from '@/components/common/TeamSection/TeamSection';
 import VideoSection from '@/components/common/VideoSection/VideoSection';
@@ -11,26 +10,28 @@ import ProductSection from '@/components/home/ProductSection/ProductSection';
 import AmenitiesSection from '@/components/home/AmenitiesSection/AmenitiesSection';
 import StepSection from '@/components/home/StepSection/StepSection';
 import VisionSection from '@/components/common/VisionSection/VisionSection';
-import EmployeeSection from '@/components/common/EmployeeSection/EmployeeSection';
+import HeroSection from '@/components/common/HeroSection/HeroSection';
 
 const HomePage = () => {
   return (
     <>
-      <EmployeeSection />
-      <VisionSection />
-      <AngebotSection />
+      <HeroSection
+        imgMob="/images/home-hero-mob.jpg"
+        title="Dein Fachpartner WorkSET Energy"
+        text="Gemeinsam machen wir die Welt etwas grüner und Sie unabhängiger"
+        imgDesc="/images/home-hero-desc.jpg"
+      />
       <VideoSection {...firstVideo} />
       <ProductSection />
-      {/* <VideoSection {...secondVideo} /> */}
+      <VideoSection {...secondVideo} />
       <TeamSection />
       <AmenitiesSection />
-
       <QuestionSection />
       <GoogleComSection />
-
-      <StepSection />
-      {/* <SendEmailSection /> */}
+      <AngebotSection />
+      <VisionSection />
       <ContactUsSection />
+      <StepSection />
     </>
   );
 };

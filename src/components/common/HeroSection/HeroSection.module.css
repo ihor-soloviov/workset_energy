@@ -1,0 +1,129 @@
+.heroSection {
+  width: 100%;
+  height: auto;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 239px 0 125px;
+}
+
+.heroContainer {
+  width: 100%;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+.heroMainTitle {
+  color: var(--white-main);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 130%;
+  width: fit-content;
+  margin-bottom: 16px;
+}
+
+.heroMainText {
+  color: var(--white-main);
+  font-size: 16px;
+  line-height: 160%;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+
+.heroBtnWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.heroLink {
+  width: 342px;
+  height: 46px;
+  padding: 12px 97px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  background-color: var(--red-main);
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 6px;
+  gap: 12px;
+  color: var(--gray-input);
+  transition:
+    border-color 250ms var(--cubic),
+    background-color 250ms var(--cubic);
+}
+
+.heroIcon {
+  stroke: var(--gray-input);
+}
+
+.heroBtn {
+  border-radius: 6px;
+  width: 342px;
+  height: 46px;
+  padding: 12px 122px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--white-main);
+  background-color: transparent;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 110%;
+  color: var(--gray-input);
+}
+
+@media screen and (min-width: 390px) {
+  .heroContainer {
+    width: 390px;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .heroSection {
+    height: 972px;
+    padding: 219px 0 221px;
+  
+  }
+
+  .heroContainer {
+    width: 1728px;
+    padding: 0 117px 0 120px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .heroMainTitle {
+    margin-top: 118px;
+    font-size: 64px;
+    width: 512px;
+  }
+
+  .heroMainText {
+    margin-bottom: 48px;
+    font-size: 18px;
+    width: 338px;
+  }
+
+  .heroBtnWrap {
+    flex-direction: row;
+    gap: 18px;
+    width: fit-content;
+  }
+
+  .heroLink {
+    width: 192px;
+    height: 52px;
+    padding: 14px 18px;
+    font-size: 16px;
+  }
+
+  .heroBtn {
+    padding: 16px 19px;
+    width: 140px;
+    height: 52px;
+    font-size: 16px;
+  }
+}

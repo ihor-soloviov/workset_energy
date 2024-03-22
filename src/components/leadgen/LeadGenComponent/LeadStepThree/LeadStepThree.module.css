@@ -25,7 +25,7 @@
   margin: 0 auto;
 }
 
-.leadStepOneBtn:disabled {
+.leadStepThreeBtn:disabled {
   background-color: transparent;
   border: 1px solid var(--gray-stroke);
   color: var(--black-main);
