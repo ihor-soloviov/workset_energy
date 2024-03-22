@@ -59,6 +59,12 @@
   margin-top: 86px;
 }
 
+.leadStepSixBtn:disabled {
+  background-color: transparent;
+  border: 1px solid var(--gray-stroke);
+  color: var(--black-main);
+}
+
 .leadStepSixBtnDesc {
   display: none;
 }
@@ -99,9 +105,17 @@
     margin-top: 130px;
   }
 
+  .leadStepSixBtnDesc:disabled {
+    color: var(--gray-text);
+  }
+
   .leadIcon {
     width: 20px;
     height: 21px;
     stroke: var(--black-main);
+  }
+
+  .leadStepSixBtnDesc:disabled .leadIcon {
+    stroke: var(--gray-text);
   }
 }

@@ -31,6 +31,9 @@
 @media screen and (min-width: 1728px) {
   .stepSevenMainWrap {
     padding: 44px 0 0px;
+    height: 563px;
+    display: flex;
+    flex-direction: column;
   }
 
   .stepSevenMainTitle {
@@ -50,5 +53,4 @@
     width: 484px;
     height: fit-content;
   }
- 
 }

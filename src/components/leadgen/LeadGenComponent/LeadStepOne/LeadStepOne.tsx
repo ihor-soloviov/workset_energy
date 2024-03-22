@@ -5,6 +5,7 @@ import { LeadStepProps } from '../types';
 import Button from '@/components/common/Button/Button';
 import LeadIcon from '/public/icons/lead-btn-arrow.svg';
 import LeadStepOneList from './LeadStepOneList/LeadStepOneList';
+
 const LeadStepOne = ({
   formData,
   setFormData,

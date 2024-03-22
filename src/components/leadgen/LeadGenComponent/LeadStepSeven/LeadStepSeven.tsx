@@ -1,5 +1,4 @@
 import { inter } from '@/utils/fonts';
-
 import React from 'react';
 import styles from './LeadStepSeven.module.css';
 import { LeadStepProps } from '../types';

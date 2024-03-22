@@ -12,28 +12,29 @@ const LeadStepSevenForm = ({
   step,
   setStep,
 }: LeadStepProps) => {
-  const { handleSubmit, errors, touched, getFieldProps } = useFormik({
-    initialValues: {
-      name: '',
-      email: '',
-      telefonnummer: '',
-      message: '',
-    },
-    validationSchema: Yup.object({
-      name: Yup.string().required('Required'),
-      email: Yup.string().email('Invalid email address').required('Required'),
-      telefonnummer: Yup.number()
-        .typeError('Invalid number')
-        .required('Required'),
-      message: Yup.string(),
-    }),
-    onSubmit: values => {
-      console.log(values);
+  const { handleSubmit, errors, touched, getFieldProps, isValid, dirty } =
+    useFormik({
+      initialValues: {
+        name: '',
+        email: '',
+        telefonnummer: '',
+        message: '',
+      },
+      validationSchema: Yup.object({
+        name: Yup.string().required('Required'),
+        email: Yup.string().email('Invalid email address').required('Required'),
+        telefonnummer: Yup.number()
+          .typeError('Invalid number')
+          .required('Required'),
+        message: Yup.string(),
+      }),
+      onSubmit: values => {
+        console.log(values);
 
-      setFormData({ ...formData, stepSeven: values });
-      setStep(step + 1);
-    },
-  });
+        setFormData({ ...formData, stepSeven: values });
+        setStep(step + 1);
+      },
+    });
   return (
     <form
       className={`${styles.stepSevenForm} ${inter.className}`}
@@ -83,7 +84,7 @@ const LeadStepSevenForm = ({
         />
       </label>
       <Button
-        // disabled={isDisabledBtn}
+        disabled={!(isValid && dirty)}
         className={`${styles.leadStepSevenBtn} ${interTight.className}`}
         type="submit"
       >
@@ -91,7 +92,7 @@ const LeadStepSevenForm = ({
       </Button>
 
       <Button
-        // disabled={isDisabledBtn}
+        disabled={!(isValid && dirty)}
         className={`${styles.leadStepSevenBtnDesc} ${interTight.className}`}
         type="submit"
       >

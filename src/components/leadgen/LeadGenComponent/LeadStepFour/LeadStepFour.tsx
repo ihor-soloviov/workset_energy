@@ -1,4 +1,4 @@
-import React, { useState, useEffect, MouseEvent } from 'react';
+import React, { useState, MouseEvent } from 'react';
 import styles from './LeadStepFour.module.css';
 
 import { LeadStepProps } from '../types';

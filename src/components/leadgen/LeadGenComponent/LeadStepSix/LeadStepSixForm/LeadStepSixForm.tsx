@@ -12,25 +12,26 @@ const LeadStepSixForm = ({
   step,
   setStep,
 }: LeadStepProps) => {
-  const { handleSubmit, errors, touched, getFieldProps } = useFormik({
-    initialValues: {
-      plz: '',
-      ort: '',
-      straße: '',
-      housnummer: '',
-    },
-    validationSchema: Yup.object({
-      plz: Yup.string().required('Required'),
-      ort: Yup.string().required('Required'),
-      straße: Yup.string().required('Required'),
-      housnummer: Yup.string().required('Required'),
-    }),
-    onSubmit: values => {
-      console.log(values);
-      setFormData({ ...formData, stepSix: values });
-      setStep(step + 1);
-    },
-  });
+  const { handleSubmit, errors, touched, getFieldProps, isValid, dirty } =
+    useFormik({
+      initialValues: {
+        plz: '',
+        ort: '',
+        straße: '',
+        housnummer: '',
+      },
+      validationSchema: Yup.object({
+        plz: Yup.string().required('Required'),
+        ort: Yup.string().required('Required'),
+        straße: Yup.string().required('Required'),
+        housnummer: Yup.string().required('Required'),
+      }),
+      onSubmit: values => {
+        console.log(values);
+        setFormData({ ...formData, stepSix: values });
+        setStep(step + 1);
+      },
+    });
 
   return (
     <form
@@ -83,8 +84,7 @@ const LeadStepSixForm = ({
       </label>
       <Button
         className={`${styles.leadStepSixBtn} ${interTight.className}`}
-        // disabled={isDisabledBtn}
-
+        disabled={!(isValid && dirty)}
         type="submit"
       >
         Weiter
@@ -92,7 +92,7 @@ const LeadStepSixForm = ({
 
       <Button
         className={`${styles.leadStepSixBtnDesc} ${interTight.className}`}
-        // disabled={isDisabledBtn}
+        disabled={!(isValid && dirty)}
         type="submit"
       >
         Weiter

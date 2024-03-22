@@ -26,6 +26,9 @@
 @media screen and (min-width: 1728px) {
   .stepSixMainWrap {
     padding: 44px 0 0px;
+      height: 563px;
+    display: flex;
+    flex-direction: column;
   }
 
   .stepSixMainTitle {

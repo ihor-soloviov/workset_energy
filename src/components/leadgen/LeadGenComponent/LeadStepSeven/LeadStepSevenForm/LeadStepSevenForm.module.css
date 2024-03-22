@@ -69,6 +69,12 @@
   margin-top: 86px;
 }
 
+.leadStepSevenBtn:disabled {
+  background-color: transparent;
+  border: 1px solid var(--gray-stroke);
+  color: var(--black-main);
+}
+
 @media screen and (min-width: 1728px) {
   .stepSevenForm {
     gap: 24px;
@@ -105,9 +111,17 @@
     margin-top: 44px;
   }
 
+  .leadStepSevenBtnDesc:disabled {
+    color: var(--gray-text);
+  }
+
   .leadIcon {
     width: 20px;
     height: 21px;
     stroke: var(--black-main);
+  }
+
+  .leadStepSevenBtnDesc:disabled .leadIcon {
+    stroke: var(--gray-text);
   }
 }
