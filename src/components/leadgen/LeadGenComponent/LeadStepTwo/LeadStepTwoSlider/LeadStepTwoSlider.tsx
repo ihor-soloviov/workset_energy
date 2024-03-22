@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import styles from './LeadStepTwoSlider.module.css';
 import ReactSlider from 'react-slider';
 import CountWrapIcon from '/public/icons/range-wrap.svg';
@@ -19,7 +18,7 @@ const LeadStepTwoSlider = ({
 
   return (
     <ReactSlider
-      step={1000}
+      step={50}
       min={1000}
       max={15000}
       defaultValue={4000}

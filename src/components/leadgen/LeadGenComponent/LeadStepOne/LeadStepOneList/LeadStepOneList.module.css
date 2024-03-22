@@ -1,0 +1,96 @@
+.stepOneList {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 74px;
+}
+
+.stepOneItem {
+  width: calc(100% / 2);
+  height: 160px;
+  border-radius: 10px;
+  border: 0.805px solid var(--gray-stroke);
+  background-color: var(--white-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 250ms var(--cubic);
+}
+
+.stepOneItem.active {
+  background-color: var(--red-main);
+}
+
+.stepOneWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+
+  align-items: center;
+}
+
+.stepOneItemTitle {
+  color: #39383c;
+  font-size: 13px;
+  font-weight: 500;
+  transition: color 250ms var(--cubic);
+}
+
+.stepOneItemTitle.active {
+  color: var(--gray-input);
+}
+
+.stepOneIconWrap {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stepOneIcon {
+  width: 80px;
+  height: 80px;
+  fill: var(--gray-dark-text);
+  transition: fill 250ms var(--cubic);
+}
+
+.stepOneIcon.active {
+  fill: var(--white-main);
+}
+
+@media screen and (min-width: 390px) {
+}
+
+@media screen and (min-width: 1728px) {
+  .stepOneList {
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 64px;
+  }
+
+  .stepOneItem {
+    width: 200px;
+    height: 200px;
+  }
+
+  .stepOneWrap {
+    gap: 26px;
+  }
+
+  .stepOneIconWrap {
+    width: 100px;
+    height: 100px;
+  }
+
+  .stepOneIcon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .stepOneItemTitle {
+    font-size: 16px;
+  }
+}

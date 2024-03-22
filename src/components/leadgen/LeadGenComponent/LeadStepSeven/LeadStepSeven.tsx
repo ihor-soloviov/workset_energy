@@ -1,31 +1,33 @@
-import React, { useState, useEffect } from 'react';
+import { inter } from '@/utils/fonts';
+
+import React from 'react';
 import styles from './LeadStepSeven.module.css';
+import { LeadStepProps } from '../types';
+import LeadStepSevenForm from './LeadStepSevenForm/LeadStepSevenForm';
 
-import WorksetIcon from '/public/icons/workset.svg';
-
-const LeadStepSeven = () => {
+const LeadStepSeven = ({
+  formData,
+  setFormData,
+  step,
+  setStep,
+}: LeadStepProps) => {
   return (
-    <div>
-      <h2>Was kostet dich dein PV-Project?</h2>
-      <p>
-        Füllen Sie das kurze Formular aus und erhalten Sie Ihr individuelles
-        Angebot!
+    <div className={styles.stepSevenMainWrap}>
+      <h3 className={styles.stepSevenMainTitle}>Glückwunsh!</h3>
+      <p className={`${styles.stepSevenText} ${inter.className}`}>
+        Gerne erstellen wir eine kostenlose Wirtschaftlichkeitsanalyse für dein
+        PV-Projekt!
       </p>
-      <h3>Welcher  Immobilieentyp</h3>
-      <ul>
-        <li>
-          <div className={styles.stepBtn}>
-            <WorksetIcon />
-            <p></p>
-          </div>
-        </li>
-        <li>
-          <div className={styles.stepBtn}>
-            <WorksetIcon />
-            <p></p>
-          </div>
-        </li>
-      </ul>
+      <p className={`${styles.stepSevenTextDesc} ${inter.className}`}>
+        Wir künen dir eine kostenfreie Wirtschaftlichkeitsanalyse für dich
+        PV-Projekt erstellen!
+      </p>
+      <LeadStepSevenForm
+        formData={formData}
+        setFormData={setFormData}
+        step={step}
+        setStep={setStep}
+      />
     </div>
   );
 };

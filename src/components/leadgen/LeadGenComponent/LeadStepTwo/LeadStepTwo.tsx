@@ -1,23 +1,33 @@
 import React, { useState } from 'react';
 import styles from './LeadStepTwo.module.css';
 import { inter } from '@/utils/fonts';
-
+import { LeadStepProps } from '../types';
 import LeadStepTwoSlider from './LeadStepTwoSlider/LeadStepTwoSlider';
+import Button from '@/components/common/Button/Button';
+import LeadIcon from '/public/icons/lead-btn-arrow.svg';
 
-const LeadStepTwo = () => {
+const LeadStepTwo = ({
+  formData,
+  setFormData,
+  step,
+  setStep,
+}: LeadStepProps) => {
   const [rangeValue, setRangeValue] = useState<number>(4000);
-
-  console.log(rangeValue);
 
   const formatValue = (value: number) =>
     value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+
+  const handleNextStepClick = () => {
+    setFormData({ ...formData, stepTwo: formatValue(rangeValue) });
+    setStep(step + 1);
+  };
 
   return (
     <div className={styles.stepTwoMainWrap}>
       <h3 className={styles.stepTwoTitle}>
         Dein geschätzter Jahresstromverbrauch?
       </h3>
-      <p className={`${styles.stepTwoTopText} ${inter.className}`}>
+      <p className={`${styles.stepTwoText} ${inter.className}`}>
         Sie finden Ihren Stromverbrauch auf Ihrer aktuellen Jahresabrechnung des
         Energieversorgers
       </p>
@@ -46,6 +56,21 @@ const LeadStepTwo = () => {
           </div>
         </div>
       </div>
+      <Button
+        className={styles.leadStepTwoBtn}
+        type="button"
+        handleClick={handleNextStepClick}
+      >
+        Weiter
+      </Button>
+      <Button
+        className={styles.leadStepTwoBtnDesc}
+        type="button"
+        handleClick={handleNextStepClick}
+      >
+        Weiter
+        <LeadIcon className={styles.leadIcon} />
+      </Button>
     </div>
   );
 };

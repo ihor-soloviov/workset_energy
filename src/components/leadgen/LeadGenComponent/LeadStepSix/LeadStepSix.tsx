@@ -1,31 +1,29 @@
-import React, { useState, useEffect } from 'react';
+import { inter } from '@/utils/fonts';
+import React from 'react';
 import styles from './LeadStepSix.module.css';
-
-import WorksetIcon from '/public/icons/workset.svg';
-
-const LeadStepSix = () => {
+import { LeadStepProps } from '../types';
+import LeadStepSixForm from './LeadStepSixForm/LeadStepSixForm';
+const LeadStepSix = ({
+  formData,
+  setFormData,
+  step,
+  setStep,
+}: LeadStepProps) => {
   return (
-    <div>
-      <h2>Was kostet dich dein PV-Project?</h2>
-      <p>
-        Füllen Sie das kurze Formular aus und erhalten Sie Ihr individuelles
-        Angebot!
+    <div className={styles.stepSixMainWrap}>
+      <h3 className={styles.stepSixMainTitle}>
+        Wo ist das PV-Projekt geplant?
+      </h3>
+      <p className={`${styles.stepSixText} ${inter.className}`}>
+        Geben Sie die folgenden Details an, damit wir ein genaueres Angebot
+        erstellen können
       </p>
-      <h3>Welcher  Immobilieentyp</h3>
-      <ul>
-        <li>
-          <div className={styles.stepBtn}>
-            <WorksetIcon />
-            <p></p>
-          </div>
-        </li>
-        <li>
-          <div className={styles.stepBtn}>
-            <WorksetIcon />
-            <p></p>
-          </div>
-        </li>
-      </ul>
+      <LeadStepSixForm
+        setFormData={setFormData}
+        formData={formData}
+        setStep={setStep}
+        step={step}
+      />
     </div>
   );
 };
