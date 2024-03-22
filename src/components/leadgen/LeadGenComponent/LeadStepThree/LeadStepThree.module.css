@@ -37,7 +37,7 @@
   .stepThreeMainTitle {
     font-size: 28px;
     line-height: normal;
-    height: 36px;
+    height: auto;
   }
 
   .leadStepThreeBtn {

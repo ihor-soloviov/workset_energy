@@ -117,7 +117,7 @@
   .leadNav.active {
     position: absolute;
     margin-bottom: unset;
-    top: 65px;
+    top: 60px;
   }
 
   .leadBurgerBtn {
