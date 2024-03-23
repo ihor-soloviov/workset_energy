@@ -33,7 +33,7 @@
 }
 
 .stepFourTitle {
-  color: #39383c;
+  color: var(--black-third);
   font-size: 15px;
   font-weight: 500;
 }

@@ -7,7 +7,7 @@
   height: 100vh;
   padding: 48px 0px 64px;
   background-color: var(--black-main);
-  overflow-y: auto;
+  /* overflow-y: auto; */
 }
 
 .menuTopWrap {

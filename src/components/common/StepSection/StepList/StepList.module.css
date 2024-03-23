@@ -36,10 +36,6 @@
   border: 1px solid var(--red-main);
 }
 
-.stepTextWrap:hover {
-  border-color: var(--black-main);
-}
-
 .stepCount {
   color: var(--gray-text);
   font-size: 18px;

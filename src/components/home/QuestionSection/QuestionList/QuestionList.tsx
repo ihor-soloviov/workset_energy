@@ -42,39 +42,36 @@ const QuestionList = () => {
     },
   ];
 
-  const [openItem, setOpenItem] = useState<{ [key: string]: boolean }>({});
+  const [activeItem, setActiveItem] = useState<string | null>(null);
 
-  const toggleTextVisibility = (index: string) => {
-    setOpenItem(prevOpenItem => ({
-      ...prevOpenItem,
-      [index]: !prevOpenItem[index],
-    }));
+  const toggleActiveItem = (title: string) => {
+    setActiveItem(prevActiveItem => (prevActiveItem === title ? null : title));
   };
 
   const renderListItems = (items: QuestItem[]) =>
     items.map(({ text, title }) => (
       <li
-        onClick={() => toggleTextVisibility(title)}
+        onClick={() => toggleActiveItem(title)}
         key={title}
-        className={`${styles.questItem} ${openItem[title] ? styles.open : ''}`}
+        className={`${styles.questItem} ${activeItem === title ? styles.open : ''}`}
       >
         <div className={styles.questTitleWrap}>
           <h3 className={`${styles.questTitle} ${inter.className}`}>{title}</h3>
           <Button
             handleClick={e => {
               e.stopPropagation();
-              toggleTextVisibility(title);
+              toggleActiveItem(title);
             }}
             type="button"
             className={styles.questToggleBtn}
           >
             <DropArrowIcon
-              className={`${styles.toggleIcon} ${openItem[title] ? styles.visible : ''}`}
+              className={`${styles.toggleIcon} ${activeItem === title ? styles.visible : ''}`}
             />
           </Button>
         </div>
         <div
-          className={`${styles.questTextWrap} ${openItem[title] ? styles.visible : styles.hidden}`}
+          className={`${styles.questTextWrap} ${activeItem === title ? styles.visible : styles.hidden}`}
         >
           <p className={`${styles.questText} ${inter.className}`}>{text}</p>
           <Button

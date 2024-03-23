@@ -34,7 +34,7 @@
 }
 
 .stepFiveTitle {
-  color: #39383c;
+  color: var(--black-third);
   font-size: 15px;
   font-weight: 500;
   transition: color 250ms var(--cubic);

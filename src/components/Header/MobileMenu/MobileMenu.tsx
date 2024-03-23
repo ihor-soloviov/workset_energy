@@ -7,12 +7,20 @@ import MobileSocialList from './MobileSocialList/MobileSocialList';
 import MenuBtnIcon from '/public/icons/small-arrow-btn.svg';
 import MenuCrossIcon from '/public/icons/cross.svg';
 import Link from 'next/link';
+import { useEffect } from 'react';
 type MobileMenuProps = {
   handleMenuClick: () => void;
 };
 
 const MobileMenu = ({ handleMenuClick }: MobileMenuProps) => {
   const handleLinkClick = () => handleMenuClick();
+
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, []);
 
   return (
     <div className={styles.menu}>
