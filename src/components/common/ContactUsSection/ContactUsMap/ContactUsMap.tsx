@@ -1,8 +1,8 @@
 import styles from './ContactUsMap.module.css';
 import Image from 'next/image';
 import { inter } from '@/utils/fonts';
-import mapMobImg from '/public/images/map-mob.jpg';
-import mapDescImg from '/public/images/map-desc.jpg';
+import mapMobImg from '/public/images/common/map-mob.jpg';
+import mapDescImg from '/public/images/common/map-desc.jpg';
 import AddressWrapIcon from '/public/icons/address-wrap.svg';
 import PointIcon from '/public/icons/point.svg';
 

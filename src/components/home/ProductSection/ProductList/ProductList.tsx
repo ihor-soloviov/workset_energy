@@ -4,12 +4,12 @@ import { inter } from '@/utils/fonts';
 import { StaticImageData } from 'next/image';
 import BtnArrowIcon from '/public/icons/small-product-arrow.svg';
 import Image from 'next/image';
-import pvAnlagenImgMob from '/public/images/pv-anlagen-mob.jpg';
-import stromspeicherImgMob from '/public/images/stromspeicher-mob.jpg';
-import walaboxImgMob from '/public/images/wallbox-mob.jpg';
-import pvAnlagenImgDesc from '/public/images/pv-anlagen-desc.jpg';
-import stromspeicherImgDesc from '/public/images/stromspeicher-desc.jpg';
-import walaboxImgDesc from '/public/images/wallbox-desc.jpg';
+import pvAnlagenImgMob from '/public/images/home-page/pv-anlagen-mob.jpg';
+import stromspeicherImgMob from '/public/images/home-page/stromspeicher-mob.jpg';
+import walaboxImgMob from '/public/images/home-page/wallbox-mob.jpg';
+import pvAnlagenImgDesc from '/public/images/home-page/pv-anlagen-desc.jpg';
+import stromspeicherImgDesc from '/public/images/home-page/stromspeicher-desc.jpg';
+import walaboxImgDesc from '/public/images/home-page/wallbox-desc.jpg';
 
 type ProductItem = {
   title: string;

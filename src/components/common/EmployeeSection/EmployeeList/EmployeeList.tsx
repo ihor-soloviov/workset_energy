@@ -1,10 +1,10 @@
 import styles from './EmployeeList.module.css';
-import employeeFirstImgMob from '/public/images/employee-1-mob.jpg';
-import employeeSecondImgMob from '/public/images/employee-2-mob.jpg';
-import employeeThirdImgMob from '/public/images/employee-3-mob.jpg';
-import employeeFirstImgDesc from '/public/images/employee-1-desc.jpg';
-import employeeSecondImgDesc from '/public/images/employee-2-desc.jpg';
-import employeeThirdImgDesc from '/public/images/employee-3-desc.jpg';
+import employeeFirstImgMob from '/public/images/common/employee-1-mob.jpg';
+import employeeSecondImgMob from '/public/images/common/employee-2-mob.jpg';
+import employeeThirdImgMob from '/public/images/common/employee-3-mob.jpg';
+import employeeFirstImgDesc from '/public/images/common/employee-1-desc.jpg';
+import employeeSecondImgDesc from '/public/images/common/employee-2-desc.jpg';
+import employeeThirdImgDesc from '/public/images/common/employee-3-desc.jpg';
 import { StaticImageData } from 'next/image';
 import Image from 'next/image';
 import { inter } from '@/utils/fonts';

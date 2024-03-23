@@ -2,7 +2,7 @@
   background-color: var(--black-main);
 }
 .angebotImgWrap {
-  background-image: url('/images/angebot-mob.jpg');
+  background-image: url('/images/home-page/angebot-mob.jpg');
   background-repeat: no-repeat;
   background-size: contain;
   width: 100%;
@@ -39,7 +39,7 @@
 @media screen and (min-width: 391px) {
   .angebotImgWrap {
     background-size: cover;
-    background-image: url('/images/angebot-desc.jpg');
+    background-image: url('/images/home-page/angebot-desc.jpg');
   }
 }
 

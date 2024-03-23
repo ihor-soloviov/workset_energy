@@ -3,16 +3,16 @@ import styles from './StepList.module.css';
 import { inter } from '@/utils/fonts';
 import Image from 'next/image';
 import { StaticImageData } from 'next/image';
-import stepOneImgMob from '/public/images/step-1-mob.jpg';
-import stepTwoImgMob from '/public/images/step-2-mob.jpg';
-import stepThreeImgMob from '/public/images/step-3-mob.jpg';
-import stepFourImgMob from '/public/images/step-4-mob.jpg';
-import stepFiveImgMob from '/public/images/step-5-mob.jpg';
-import stepOneImgDesc from '/public/images/step-1-desc.jpg';
-import stepTwoImgDesc from '/public/images/step-2-desc.jpg';
-import stepThreeImgDesc from '/public/images/step-3-desc.jpg';
-import stepFourImgDesc from '/public/images/step-4-desc.jpg';
-import stepFiveImgDesc from '/public/images/step-5-desc.jpg';
+import stepOneImgMob from '/public/images/home-page/step-1-mob.jpg';
+import stepTwoImgMob from '/public/images/home-page/step-2-mob.jpg';
+import stepThreeImgMob from '/public/images/home-page/step-3-mob.jpg';
+import stepFourImgMob from '/public/images/home-page/step-4-mob.jpg';
+import stepFiveImgMob from '/public/images/home-page/step-5-mob.jpg';
+import stepOneImgDesc from '/public/images/home-page/step-1-desc.jpg';
+import stepTwoImgDesc from '/public/images/home-page/step-2-desc.jpg';
+import stepThreeImgDesc from '/public/images/home-page/step-3-desc.jpg';
+import stepFourImgDesc from '/public/images/home-page/step-4-desc.jpg';
+import stepFiveImgDesc from '/public/images/home-page/step-5-desc.jpg';
 import BtnArrowIcon from '/public/icons/small-arrow-btn.svg';
 
 type StepItem = {

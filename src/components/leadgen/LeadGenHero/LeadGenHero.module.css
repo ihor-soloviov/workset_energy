@@ -1,7 +1,7 @@
 .leadHeroSection {
   width: 100%;
   height: 202px;
-  background-image: url('/images/lead-hero-mob.jpg');
+  background-image: url('/images/leadgen-page/lead-hero-mob.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -21,7 +21,7 @@
   .leadHeroSection {
     height: 972px;
     padding: 159px 0 87px;
-    background-image: url('/images/lead-hero-desc.jpg');
+    background-image: url('/images/leadgen-page/lead-hero-desc.jpg');
   }
   .leadHeroContainer {
     width: 1728px;
