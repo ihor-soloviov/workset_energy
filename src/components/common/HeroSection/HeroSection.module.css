@@ -28,6 +28,11 @@
   line-height: 160%;
   font-weight: 300;
   margin-bottom: 40px;
+  width: 305px;
+}
+
+.heroMainText.wallbox {
+  width: 342px;
 }
 
 .heroBtnWrap {
@@ -85,7 +90,6 @@
   .heroSection {
     height: 972px;
     padding: 219px 0 221px;
-  
   }
 
   .heroContainer {
@@ -97,6 +101,10 @@
 
   .heroMainTitle {
     margin-top: 118px;
+    font-size: 90px;
+  }
+
+  .heroMainTitle.home {
     font-size: 64px;
     width: 512px;
   }
@@ -104,7 +112,20 @@
   .heroMainText {
     margin-bottom: 48px;
     font-size: 18px;
+    height: 58px;
+  }
+
+  .heroMainText.home {
     width: 338px;
+  }
+  .heroMainText.pvAnlagen {
+    width: 470px;
+  }
+  .heroMainText.stormspeicher {
+    width: 390px;
+  }
+  .heroMainText.wallbox {
+    width: 488px;
   }
 
   .heroBtnWrap {

@@ -13,9 +13,16 @@ type HeroProps = {
   imgDesc: string;
   title: string;
   text: string;
+  className: string;
 };
 
-const HeroSection = ({ imgMob, imgDesc, title, text }: HeroProps) => {
+const HeroSection = ({
+  imgMob,
+  imgDesc,
+  title,
+  text,
+  className,
+}: HeroProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
   const handleModalClick = () => setIsModalOpen(!isModalOpen);
@@ -42,8 +49,12 @@ const HeroSection = ({ imgMob, imgDesc, title, text }: HeroProps) => {
       >
         <div className={styles.heroContainer}>
           <div className={styles.heroTextWrap}>
-            <h2 className={styles.heroMainTitle}>{title}</h2>
-            <p className={`${styles.heroMainText} ${inter.className}`}>
+            <h2 className={`${styles.heroMainTitle} ${styles[className]}`}>
+              {title}
+            </h2>
+            <p
+              className={`${styles.heroMainText} ${styles[className]} ${inter.className}`}
+            >
               {text}
             </p>
             <div className={styles.heroBtnWrap}>

@@ -6,12 +6,13 @@ import MobileContactList from './MobileContactList/MobileContactList';
 import MobileSocialList from './MobileSocialList/MobileSocialList';
 import MenuBtnIcon from '/public/icons/small-arrow-btn.svg';
 import MenuCrossIcon from '/public/icons/cross.svg';
+import Link from 'next/link';
 type MobileMenuProps = {
   handleMenuClick: () => void;
 };
 
 const MobileMenu = ({ handleMenuClick }: MobileMenuProps) => {
-  const handleBtnSubmit = () => {};
+  const handleLinkClick = () => handleMenuClick();
 
   return (
     <div className={styles.menu}>
@@ -29,14 +30,14 @@ const MobileMenu = ({ handleMenuClick }: MobileMenuProps) => {
         <nav className={styles.menuNav}>
           <MobileNavList handleMenuClick={handleMenuClick} />
         </nav>
-        <Button
-          handleSubmit={handleBtnSubmit}
-          text="Jetzt Berechnen"
+        <Link
+          onClick={handleLinkClick}
+          href="/leadgen"
           className={styles.menuBtn}
-          type="button"
         >
+          Jetzt Berechnen
           <MenuBtnIcon className={styles.menuBtnIcon} />
-        </Button>
+        </Link>
         <MobileContactList />
         <MobileSocialList />
       </Container>

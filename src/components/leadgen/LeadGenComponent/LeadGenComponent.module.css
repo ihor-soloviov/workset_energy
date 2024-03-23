@@ -36,6 +36,9 @@
   background-color: transparent;
   width: 44px;
   height: 44px;
+  transition:
+    stroke 250ms var(--cubic),
+    fill 250ms var(--cubic);
 }
 
 .leadBackIcon {
@@ -44,6 +47,14 @@
 
 .leadBurgerBtn {
   stroke: var(--gray-dark-text);
+}
+
+.leadBurgerBtn:hover {
+  stroke: var(--gray-text);
+}
+
+.leadBackIcon:hover {
+  fill: var(--gray-text);
 }
 
 .leadLine {

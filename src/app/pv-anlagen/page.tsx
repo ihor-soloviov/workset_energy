@@ -3,6 +3,7 @@ import ModulesVorteileSection from '@/components/common/ModulesVorteileSection/M
 import PricingPlansSection from '@/components/common/PricingPlans/PricingPlansSection';
 import VideoSection from '@/components/common/VideoSection/VideoSection';
 import { pvAnlagenVideo } from '@/utils/video';
+import { pvAnlagenHero } from '@/utils/hero';
 import React from 'react';
 
 const PvAnlagen = () => {
@@ -10,12 +11,7 @@ const PvAnlagen = () => {
     <>
       {/* <VideoSection {...pvAnlagenVideo} /> */}
       {/* <ModulesVorteileSection /> */}
-      <HeroSection
-        imgMob="/images/pv-anlagen-hero-mob.jpg"
-        title="PV-Anlagen"
-        text="Sie wandelt Sonnenlicht in Strom um und ist daher eine nachhaltige und umweltfreundliche Energiequelle."
-        imgDesc="/images/pv-anlagen-hero-desc.jpg"
-      />
+      <HeroSection {...pvAnlagenHero} />
       <PricingPlansSection />
     </>
   );

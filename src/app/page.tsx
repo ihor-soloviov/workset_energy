@@ -4,6 +4,7 @@ import GoogleComSection from '@/components/common/GoogleComSection/GoogleComSect
 import TeamSection from '@/components/common/TeamSection/TeamSection';
 import VideoSection from '@/components/common/VideoSection/VideoSection';
 import { firstVideo, secondVideo } from '@/utils/video';
+import { homeHero } from '@/utils/hero';
 import QuestionSection from '@/components/home/QuestionSection/QuestionSection';
 import AngebotSection from '@/components/home/AngebotSection/AngebotSection';
 import ProductSection from '@/components/home/ProductSection/ProductSection';
@@ -15,12 +16,7 @@ import HeroSection from '@/components/common/HeroSection/HeroSection';
 const HomePage = () => {
   return (
     <>
-      <HeroSection
-        imgMob="/images/home-hero-mob.jpg"
-        title="Dein Fachpartner WorkSET Energy"
-        text="Gemeinsam machen wir die Welt etwas grüner und Sie unabhängiger"
-        imgDesc="/images/home-hero-desc.jpg"
-      />
+      <HeroSection {...homeHero} />
       <VideoSection {...firstVideo} />
       <ProductSection />
       <VideoSection {...secondVideo} />

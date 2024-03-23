@@ -97,7 +97,6 @@ const AngebotForm = () => {
         <input
           id="angebot"
           type="file"
-          required
           placeholder="Lade dein(e) Angebot(e) hoch"
           className={styles.angebotInputFile}
           onChange={handleFileChange}
