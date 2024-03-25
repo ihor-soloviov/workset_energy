@@ -35,6 +35,18 @@ type ObjectItem = {
 
 type RedHelp = TitleText & {
   icon: React.ElementType;
+  href?: HrefObject;
+  arrayOfLinks?: Link[];
+};
+
+type Link = {
+  icon: React.ElementType;
+  linkTo: string;
+};
+
+type HrefObject = {
+  title: string;
+  linkTo: string;
 };
 
 export type {
