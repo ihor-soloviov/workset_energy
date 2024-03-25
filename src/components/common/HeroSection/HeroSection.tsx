@@ -73,7 +73,7 @@ const HeroSection = ({
                 <ArrowIcon className={styles.heroIcon} />
               </Link>
               <Button
-                handleClick={handleModalClick}
+                handleClick={() => !isDesktop && handleModalClick()}
                 type="button"
                 className={styles.heroBtn}
               >
