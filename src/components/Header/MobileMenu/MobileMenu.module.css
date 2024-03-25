@@ -1,5 +1,5 @@
 .menu {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 99;
@@ -7,7 +7,6 @@
   height: 100vh;
   padding: 48px 0px 64px;
   background-color: var(--black-main);
-  /* overflow-y: auto; */
 }
 
 .menuTopWrap {

@@ -5,7 +5,7 @@ import { inter } from '@/utils/fonts';
 import Button from '../Button/Button';
 import Link from 'next/link';
 import ArrowIcon from '/public/icons/small-arrow-btn.svg';
-import HeroForm from './HeroForm/HeroForm';
+import HeroFormModal from './HeroFormModal/HeroFormModal';
 import { useEffect, useState } from 'react';
 
 type HeroProps = {
@@ -25,6 +25,8 @@ const HeroSection = ({
 }: HeroProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  console.log(isModalOpen);
+
   const handleModalClick = () => setIsModalOpen(!isModalOpen);
 
   useEffect(() => {
@@ -40,6 +42,15 @@ const HeroSection = ({
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = 'hidden';
+      return () => {
+        document.body.style.overflow = 'unset';
+      };
+    }
+  }, [isModalOpen]);
 
   return (
     <>
@@ -71,10 +82,20 @@ const HeroSection = ({
               </Button>
             </div>
           </div>
-          {isDesktop && <HeroForm handleModalClick={handleModalClick} />}
+          {isDesktop && (
+            <HeroFormModal
+              isDesktop={isDesktop}
+              handleModalClick={handleModalClick}
+            />
+          )}
         </div>
       </section>
-      {isModalOpen && <HeroForm handleModalClick={handleModalClick} />}
+      {isModalOpen && (
+        <HeroFormModal
+          isDesktop={isDesktop}
+          handleModalClick={handleModalClick}
+        />
+      )}
     </>
   );
 };

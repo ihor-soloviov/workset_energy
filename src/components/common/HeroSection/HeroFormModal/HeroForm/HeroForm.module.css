@@ -1,0 +1,76 @@
+.heroForm {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.heroLabel {
+  color: var(--black-main);
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+}
+
+.heroInput {
+  color: var(--black-main);
+  font-size: 15px;
+  padding: 14px 12px;
+  width: 100%;
+  height: 46px;
+  border: 1px solid var(--gray-stroke);
+  border-radius: 6px;
+  background-color: var(--gray-input);
+  outline: none;
+}
+
+.heroInput.error {
+  border: 1px solid var(--red-main);
+}
+
+.heroInput::placeholder {
+  color: var(--gray-text);
+}
+
+.heroFormBtn {
+  display: flex;
+  padding: 11px 124px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--red-second);
+  background-color: var(--red-second);
+  width: 342px;
+  height: 46px;
+  border-radius: 6px;
+  font-size: 16px;
+  color: var(--gray-input);
+  margin-top: 72px;
+}
+
+.heroIcon {
+  stroke: var(--gray-input);
+}
+
+.errorText {
+  position: absolute;
+  right: 10px;
+  top: 77px;
+  width: fit-content;
+  color: var(--red-main);
+  font-size: 10px;
+}
+
+@media screen and (min-width: 1728px) {
+  .heroForm {
+    width: 364px;
+    gap: 16px;
+  }
+
+  .heroFormBtn {
+    padding: 12px 135px;
+    width: 364px;
+    height: 48px;
+  }
+}
