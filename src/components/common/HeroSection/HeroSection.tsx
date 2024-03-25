@@ -25,7 +25,6 @@ const HeroSection = ({
 }: HeroProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
-  console.log(isModalOpen);
 
   const handleModalClick = () => setIsModalOpen(!isModalOpen);
 

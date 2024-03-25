@@ -17,9 +17,9 @@ const HomePage = () => {
   return (
     <>
       <HeroSection {...homeHero} />
-      <VideoSection {...firstVideo} />
+      {/* <VideoSection {...firstVideo} /> */}
       <ProductSection />
-      <VideoSection {...secondVideo} />
+      {/* <VideoSection {...secondVideo} /> */}
       <TeamSection />
       <AmenitiesSection />
       <QuestionSection />

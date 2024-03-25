@@ -6,12 +6,12 @@ import { inter } from '@/utils/fonts';
 import Button from '../../Button/Button';
 import ArrowIcon from '/public/icons/slide-arrow.svg';
 import Image from 'next/image';
-import visionFirstImgMob from '/public/images/common/vision-1-mob.png';
-import visionSecondImgMob from '/public/images/common/vision-2-mob.png';
-import visionThirdImgMob from '/public/images/common/vision-3-mob.png';
-import visionFirstImgDesc from '/public/images/common/vision-1-desc.png';
-import visionSecondImgDesc from '/public/images/common/vision-2-desc.png';
-import visionThirdImgDesc from '/public/images/common/vision-3-desc.png';
+import visionFirstImgMob from '/public/images/common/vision-1-mob.jpg';
+import visionSecondImgMob from '/public/images/common/vision-2-mob.jpg';
+import visionThirdImgMob from '/public/images/common/vision-3-mob.jpg';
+import visionFirstImgDesc from '/public/images/common/vision-1-desc.jpg';
+import visionSecondImgDesc from '/public/images/common/vision-2-desc.jpg';
+import visionThirdImgDesc from '/public/images/common/vision-3-desc.jpg';
 import { VisionImageItem, VisionLinkItem } from '@/types/infoTypes';
 import SliderDots from '../../SliderDots/SliderDots';
 
