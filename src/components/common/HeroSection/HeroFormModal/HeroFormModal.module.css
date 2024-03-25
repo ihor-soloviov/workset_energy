@@ -103,6 +103,7 @@
 
   .heroFormContainer {
     padding: unset;
+    width: fit-content;
   }
 
   .heroTopWrap {

@@ -18,9 +18,17 @@ type VisionImageItem = ImportedImages & {
 type VisionLinkItem = TitleText;
 type VorteileSliderItems = TitleText;
 
+type ObjectItem = {
+  standort: string;
+  gesamtleistung: string;
+  stückzahl: string;
+  speichersystem: string;
+};
+
 export type {
   VisionLinkItem,
   VorteileSliderItems,
   ImportedImages,
   VisionImageItem,
+  ObjectItem,
 };
