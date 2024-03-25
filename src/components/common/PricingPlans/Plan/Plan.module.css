@@ -51,6 +51,7 @@
 }
 
 .planArticle {
+  color: var(--gray-text);
   text-align: center;
   width: 272px;
   padding-bottom: 32px;

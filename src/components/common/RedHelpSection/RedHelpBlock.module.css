@@ -1,0 +1,28 @@
+.redHelpSection {
+  padding: 90px 24px;
+  background-color: var(--red-main);
+}
+
+.redHelpWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 130%;
+  color: var(--white-main);
+  max-width: 300px;
+  margin: 0 auto 12px;
+}
+
+.text {
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 160%;
+  color: var(--white-second);
+}

@@ -41,6 +41,9 @@
 }
 
 @media screen and (min-width: 1728px) {
+  .pricingPlansSection {
+    padding-bottom: 130px;
+  }
   .pricingPlansWrap {
     gap: 263px;
   }

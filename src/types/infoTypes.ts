@@ -27,10 +27,15 @@ type Plan = {
   benefits: string[];
 };
 
+type RedHelp = TitleText & {
+  icon: React.ElementType;
+};
+
 export type {
   VisionLinkItem,
   VorteileSliderItems,
   ImportedImages,
   VisionImageItem,
   Plan,
+  RedHelp,
 };
