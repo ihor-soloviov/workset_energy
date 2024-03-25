@@ -1,0 +1,144 @@
+.sliderButtonsWrap {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 32px;
+  justify-content: center;
+}
+
+.sliderNavBtn {
+  cursor: pointer;
+  display: flex;
+  width: 73px;
+  height: 73px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid var(--gray-stroke);
+  flex-shrink: 0;
+  transition:
+    background-color 250ms var(--cubic),
+    border-color 250ms var(--cubic);
+}
+
+.nextArrow,
+.prevArrow {
+  stroke: var(--gray-text);
+  width: 24px;
+  height: 24px;
+}
+
+.nextArrow {
+  transform: rotate(180deg);
+}
+
+.sliderImgDesk {
+  display: none;
+}
+
+.sliderWrap {
+  padding: 32px 25px 48px 25px;
+  border-radius: 0px 0px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  border: 1px solid var(--gray-stroke);
+  border-top: unset;
+  background-color: var(--white-main);
+}
+
+.sliderTopWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: 0.5px solid var(--gray-stroke);
+  padding-bottom: 16px;
+}
+
+.sliderIconWrap {
+  display: flex;
+  gap: 6px;
+}
+
+.sliderIcon {
+  fill: var(--gray-dark-text);
+}
+
+.sliderTopText {
+  color: var(--gray-dark-text);
+  font-size: 18px;
+}
+
+.sliderTitle {
+  color: var(--black-main);
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.sliderList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+
+.sliderText {
+  color: var(--gray-text);
+  font-size: 16px;
+}
+
+.sliderBtn {
+  color: var(--gray-input);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 150%;
+  border-radius: 6px;
+  background-color: var(--red-main);
+  width: 149px;
+  height: 56px;
+}
+
+@media screen and (min-width: 1728px) {
+  .sliderMainWrap {
+    position: relative;
+  }
+
+  .sliderButtonsWrap {
+    position: absolute;
+    right: 0;
+    top: -105px;
+  }
+
+  .sliderMainItem {
+    display: flex;
+  }
+
+  .sliderImgMob {
+    display: none;
+  }
+
+  .sliderImgDesk {
+    display: block;
+  }
+
+  .sliderWrap {
+    padding: 111px 136px 111px 90px;
+    width: 618px;
+    border-radius: 0px 12px 12px 0px;
+    border-left: unset;
+    gap: unset;
+    border-top: 1px solid var(--gray-stroke);
+  }
+
+  .sliderTopWrap {
+    margin-bottom: 32px;
+  }
+
+  .sliderList {
+    margin-bottom: 90px;
+  }
+}

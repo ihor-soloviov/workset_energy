@@ -26,6 +26,12 @@ type Plan = {
   imageDesk: StaticImageData;
   benefits: string[];
 };
+type ObjectItem = {
+  standort: string;
+  gesamtleistung: string;
+  stückzahl: string;
+  speichersystem: string;
+};
 
 export type {
   VisionLinkItem,
@@ -33,4 +39,5 @@ export type {
   ImportedImages,
   VisionImageItem,
   Plan,
+  ObjectItem,
 };
