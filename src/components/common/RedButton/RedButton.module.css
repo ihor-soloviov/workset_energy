@@ -1,0 +1,13 @@
+.redButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--gray-input);
+  padding: 14px 0;
+  border-radius: 6px;
+  background-color: var(--red-main);
+}

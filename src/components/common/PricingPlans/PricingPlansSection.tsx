@@ -2,52 +2,26 @@ import React from 'react';
 import styles from './PricingPlansSection.module.css';
 import { inter } from '@/utils/fonts';
 import { plans } from './plans';
-import Image from 'next/image';
-import CheckMarker from '/public/icons/check-circle.svg';
+import Plan from './Plan/Plan';
 
-const PricingPlansSection = () => {
-  return (
-    <section className={styles.pricingPlansSection}>
-      <div className={styles.pricingPlansWrap}>
-        <div className={styles.pricingPlansHeader}>
-          <h3 className={styles.plansTitle}>Affordable pricing plans</h3>
-          <p className={`${styles.plansText} ${inter.className}`}>
-            Lorem ipsum dolor sit amet consectetur adipiscing elit tortor eu
-            egestas morbi sem vulputate etiam facilisis pellentesque ut quis
-          </p>
-        </div>
-        <ul className={styles.pricingPlansItems}>
-          {plans.map(
-            ({ name, price, imageMob, imageDesk, article, benefits }) => (
-              <li key={name} className={styles.pricingPlansItem}>
-                <Image
-                  className={styles.plansImageMob}
-                  alt={`${name} plan collage`}
-                  src={imageMob}
-                />
-                <Image
-                  className={styles.plansImageDesk}
-                  alt={`${name} plan collage`}
-                  src={imageDesk}
-                />
-                <span className={styles.plansPrice}>ab {price}</span>
-                <h4>{name}</h4>
-                <article>{article}</article>
-                <ul className={styles.plansBenefits}>
-                  {benefits.map(benefit => (
-                    <li key={benefit}>
-                      <CheckMarker />
-                      <span>{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
-              </li>
-            ),
-          )}
-        </ul>
+const PricingPlansSection = () => (
+  <section className={styles.pricingPlansSection}>
+    <div className={styles.pricingPlansWrap}>
+      <div className={styles.pricingPlansHeader}>
+        <h3 className={styles.plansTitle}>Günstige Preise für PV-Anlagen</h3>
+        <p className={`${styles.plansText} ${inter.className}`}>
+          Entdecken Sie unser Angebot an hochwertigen Produkten zu
+          erschwinglichen Preisen und machen Sie den nächsten Schritt in
+          Richtung einer umweltfreundlichen Zukunft.
+        </p>
       </div>
-    </section>
-  );
-};
+      <ul className={styles.pricingPlansItems}>
+        {plans.map(plan => (
+          <Plan key={plan.name} plan={plan} />
+        ))}
+      </ul>
+    </div>
+  </section>
+);
 
 export default PricingPlansSection;

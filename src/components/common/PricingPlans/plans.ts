@@ -1,16 +1,17 @@
 import huaweiStarterMob from '../../../../public/images/pv-anlagen-page/plans/HuaweiStarter-mob.png';
-import huaweiStarter from '/public/images/pv-anlagen-page/plans/HuaweiStarter.jpg';
+import huaweiStarter from '/public/images/pv-anlagen-page/plans/HuaweiStarter.png';
 import huaweiBasicMob from '../../../../public/images/pv-anlagen-page/plans/HuaweiBasic-mob.png';
-import huaweiBasic from '/public/images/pv-anlagen-page/plans/HuaweiBasic.jpg';
+import huaweiBasic from '/public/images/pv-anlagen-page/plans/HuaweiBasic.png';
 import enphaseProMob from '../../../../public/images/pv-anlagen-page/plans/Enphase-mob.png';
-import enphasePro from '/public/images/pv-anlagen-page/plans/Enphase.jpg';
+import enphasePro from '/public/images/pv-anlagen-page/plans/Enphase.png';
+import { Plan } from '@/types/infoTypes';
 
-export const plans = [
+export const plans: Plan[] = [
   {
     price: '15.116 EUR',
     name: 'Huawei Starter',
     article:
-      'Lorem ipsum dolor sit amet consectet adipiscing eli consectetur aliquet id enim neque turpis urna',
+      'Starte in die E-Mobilität mit dem "Huawei Starter”-Paket – die ideale Wallbox-Lösung für Einsteiger, die Wert auf Qualität und Effizienz legen.',
     imageMob: huaweiStarterMob,
     imageDesk: huaweiStarter,
     benefits: [
@@ -25,7 +26,7 @@ export const plans = [
     price: '17.850 EUR',
     name: 'Huawei Basic',
     article:
-      'Lorem ipsum dolor sit amet consectet adipiscing eli consectetur aliquet id enim neque turpis urna',
+      'Das "Huawei Basic”-Paket bietet dir eine zuverlässige und benutzerfreundliche Ladeinfrastruktur, perfekt für den täglichen Gebrauch.',
     imageMob: huaweiBasicMob,
     imageDesk: huaweiBasic,
     benefits: [
@@ -40,7 +41,7 @@ export const plans = [
     price: '22.300 EUR',
     name: 'Enphase Pro',
     article:
-      'Lorem ipsum dolor sit amet consectet adipiscing eli consectetur aliquet id enim neque turpis urna',
+      'Wähle “Enphase Pro” für höchste Ladeleistung und smarte Technologie, um dein Elektrofahrzeug schnell und intelligent zu laden.',
     imageMob: enphaseProMob,
     imageDesk: enphasePro,
     benefits: [

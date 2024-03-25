@@ -1,0 +1,124 @@
+.pricingPlansItem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 342px;
+  padding: 140px 24px 64px;
+  border-radius: 10px;
+  border: 1px solid var(--gray-stroke);
+}
+
+.pricingPlanInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 294px;
+}
+
+.planImageMob {
+  width: 260px;
+  position: absolute;
+  top: -146px;
+  left: 41px;
+}
+
+.planImageDesk {
+  display: none;
+}
+
+.planPrice {
+  display: block;
+  width: max-content;
+
+  font-size: 15px;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--white-main);
+  background-color: var(--red-main);
+
+  padding: 8px 11px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.planTitle {
+  width: max-content;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 130%;
+  color: var(--gray-dark-text);
+  margin-bottom: 14px;
+}
+
+.planArticle {
+  text-align: center;
+  width: 272px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--gray-stroke);
+  margin-bottom: 28px;
+}
+
+.planBenefits {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 251px;
+  margin-bottom: 72px;
+}
+
+.planBenefit {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.benefit {
+  font-size: 16px;
+  font-style: normal;
+  line-height: 160%;
+  color: var(--gray-text);
+}
+
+@media screen and (min-width: 1728px) {
+  .pricingPlansItem {
+    max-width: 394px;
+    padding: 160px 27px 90px;
+  }
+
+  .pricingPlanInfo {
+    width: 340px;
+  }
+
+  .planImageMob {
+    display: none;
+  }
+
+  .planImageDesk {
+    display: block;
+    width: 265px;
+    position: absolute;
+    top: -169px;
+    left: 64px;
+  }
+
+  .planPrice {
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+
+  .planTitle {
+    font-size: 34px;
+    margin-bottom: 16px;
+  }
+
+  .planArticle {
+    font-size: 15px;
+    width: 314px;
+    padding-bottom: 38px;
+    margin-bottom: 32px;
+  }
+
+  .planBenefits {
+    gap: 18px;
+  }
+}

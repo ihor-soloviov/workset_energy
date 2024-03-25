@@ -18,9 +18,19 @@ type VisionImageItem = ImportedImages & {
 type VisionLinkItem = TitleText;
 type VorteileSliderItems = TitleText;
 
+type Plan = {
+  price: string;
+  name: string;
+  article: string;
+  imageMob: StaticImageData;
+  imageDesk: StaticImageData;
+  benefits: string[];
+};
+
 export type {
   VisionLinkItem,
   VorteileSliderItems,
   ImportedImages,
   VisionImageItem,
+  Plan,
 };
