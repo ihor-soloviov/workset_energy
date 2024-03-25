@@ -26,6 +26,12 @@ type Plan = {
   imageDesk: StaticImageData;
   benefits: string[];
 };
+type ObjectItem = {
+  standort: string;
+  gesamtleistung: string;
+  stückzahl: string;
+  speichersystem: string;
+};
 
 type RedHelp = TitleText & {
   icon: React.ElementType;
@@ -37,5 +43,6 @@ export type {
   ImportedImages,
   VisionImageItem,
   Plan,
+  ObjectItem,
   RedHelp,
 };

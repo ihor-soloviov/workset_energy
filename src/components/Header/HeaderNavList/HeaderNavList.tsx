@@ -13,7 +13,7 @@ export const navLinkItems: NavLinkItem[] = [
   { href: '/pv-anlagen', text: 'PV-Anlagen' },
   { href: '/stormspeicher', text: 'Stormspeicher' },
   { href: '/wallbox', text: 'Wallbox' },
-  { href: '/karrier', text: 'Karrier' },
+  { href: '/karriere', text: 'Karriere' },
   { href: '/uber-uns', text: 'Über uns' },
 ];
 

@@ -16,8 +16,7 @@
 .visionImgDesc {
   display: block;
   position: absolute;
-  left: 24px;
-  top: 0;
+
   opacity: 0;
   transition: opacity 750ms var(--cubic);
 }
@@ -27,19 +26,26 @@
 }
 
 .first {
+  width: 306px;
+  height: 355px;
+  transform: rotate(2.983deg);
   z-index: 3;
 }
 
 .second {
+  top: 27px;
+  left: 65px;
+  width: 280px;
+  height: 340px;
   z-index: 2;
-  top: 10px;
-  left: 27px;
+  transform: rotate(-10.113deg);
 }
 
 .third {
+  top: 8px;
+  width: 280px;
+  height: 340px;
   z-index: 1;
-  top: 15px;
-  left: 47px;
 }
 
 .visible {
@@ -213,16 +219,21 @@
   }
 
   .first {
+    width: 546px;
+    height: 636px;
   }
 
   .second {
-    top: 20px;
-    left: 35px;
+    top: 40px;
+    left: 70px;
+    width: 500px;
+    height: 608px;
   }
 
   .third {
-    top: 35px;
-    left: 57px;
+    top: 15px;
+    width: 500px;
+    height: 608px;
   }
 
   .visionTitle {

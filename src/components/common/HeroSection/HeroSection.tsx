@@ -25,7 +25,6 @@ const HeroSection = ({
 }: HeroProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
-  console.log(isModalOpen);
 
   const handleModalClick = () => setIsModalOpen(!isModalOpen);
 
@@ -74,7 +73,7 @@ const HeroSection = ({
                 <ArrowIcon className={styles.heroIcon} />
               </Link>
               <Button
-                handleClick={handleModalClick}
+                handleClick={() => !isDesktop && handleModalClick()}
                 type="button"
                 className={styles.heroBtn}
               >
