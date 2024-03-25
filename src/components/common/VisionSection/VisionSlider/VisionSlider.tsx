@@ -54,19 +54,9 @@ const VisionSlider = () => {
     },
   ];
 
-  const handlePrevClick = () => {
-    if (slide === 1) {
-      return;
-    }
-    setSlide(slide - 1);
-  };
+  const handlePrevClick = () => setSlide(prev => (prev === 1 ? 3 : prev - 1));
 
-  const handleNextClick = () => {
-    if (slide === 3) {
-      return;
-    }
-    setSlide(slide + 1);
-  };
+  const handleNextClick = () => setSlide(prev => (prev === 3 ? 1 : prev + 1));
 
   const addVisibleClass = (slide: number, expectedSlides: number[]) =>
     expectedSlides.includes(slide) ? styles.visible : '';
