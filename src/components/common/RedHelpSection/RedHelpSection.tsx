@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './RedHelpBlock.module.css';
+import styles from './RedHelpSection.module.css';
 import { items } from './items';
 import RedHelpItem from './RedHelpItem/RedHelpItem';
 

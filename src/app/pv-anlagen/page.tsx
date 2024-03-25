@@ -5,7 +5,7 @@ import VideoSection from '@/components/common/VideoSection/VideoSection';
 import { pvAnlagenVideo } from '@/utils/video';
 import { pvAnlagenHero } from '@/utils/hero';
 import React from 'react';
-import RedHelpBlock from '@/components/common/RedHelpSection/RedHelpBlock';
+import RedHelpBlock from '@/components/common/RedHelpSection/RedHelpSection';
 
 const PvAnlagen = () => {
   return (

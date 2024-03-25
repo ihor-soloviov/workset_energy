@@ -26,3 +26,9 @@
   line-height: 160%;
   color: var(--white-second);
 }
+
+.redHelpItems {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}

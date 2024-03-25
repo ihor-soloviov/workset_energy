@@ -1,10 +1,11 @@
 .redHelpItem {
-  padding: 36px 31px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: var(--white-main);
+  height: 340px;
+  padding: 36px 31px;
   border-radius: 12px;
+  background-color: var(--white-main);
 }
 
 .icon {
@@ -34,4 +35,53 @@
   font-weight: 400;
   line-height: 150%;
   color: var(--gray-text);
+  margin-bottom: 26px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.animated {
+  transition: all 0.2s var(--cubic);
+}
+
+.contactLink {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+
+  color: var(--red-main);
+  padding: 15px 20px;
+  border: 1px solid var(--gray-stroke);
+  border-radius: 5.2px;
+}
+
+.contactLink:hover {
+  background-color: var(--red-main);
+  color: var(--white-main);
+}
+
+.socialLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--gray-stroke);
+}
+
+.socialLink:hover {
+  background-color: var(--red-main);
+  border-color: var(--white-main);
+}
+
+.socialLink:hover .socialIcon {
+  fill: var(--white-main);
+}
+
+.socialIcon {
+  fill: var(--red-main);
 }
