@@ -15,17 +15,12 @@ const MobileNavList = ({ handleMenuClick }: MobileNavListProps) => {
       {navLinkItems.map(({ text, href }) => (
         <li key={text} className={styles.menuNavItem}>
           <Link
-            onClick={handleLinkClick}
-            href={href}
-            className={styles.menuNavItemText}
-          >
-            {text}
-          </Link>
-          <Link
-            onClick={handleLinkClick}
-            href={href}
             className={styles.menuNavLink}
+            onClick={handleLinkClick}
+            href={href}
           >
+            <p className={styles.menuNavItemText}>{text}</p>
+
             <MenuArrowIcon className={styles.menuArrowIcon} />
           </Link>
         </li>
