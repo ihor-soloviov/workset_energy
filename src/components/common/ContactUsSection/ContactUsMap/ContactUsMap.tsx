@@ -6,7 +6,26 @@ import mapDescImg from '/public/images/common/map-desc.jpg';
 import AddressWrapIcon from '/public/icons/address-wrap.svg';
 import PointIcon from '/public/icons/point.svg';
 
+type ContactUsItem = {
+  title: string;
+  text: string;
+  href: string;
+};
+
 const ContactUsMap = () => {
+  const contactUsItems: ContactUsItem[] = [
+    {
+      title: 'E-Mail',
+      text: 'office@work-set.eu',
+      href: 'mailto:office@work-set.eu',
+    },
+    {
+      title: 'Telefon-Nr.',
+      text: '+49-73-114-613-210',
+      href: 'tel:+4973114613210',
+    },
+  ];
+
   return (
     <div className={styles.contactUsImgWrap}>
       <Image src={mapMobImg} alt="map" className={styles.contactUsImgMob} />
@@ -28,28 +47,22 @@ const ContactUsMap = () => {
             className={`${styles.contactUsLink} ${styles.address} ${inter.className}`}
           >
             Magirus-Deutz-Str. 12
-            <br className={styles.contactUsBr} /> 89077 Ulm
+            <br className={styles.contactUsBr} />
+            89077 Ulm
           </p>
         </div>
         <ul className={styles.contactUsList}>
-          <li className={styles.contactUsItem}>
-            <h3 className={styles.contactUsTitle}>E-Mail</h3>
-            <a
-              className={`${styles.contactUsLink} ${inter.className}`}
-              href="mailto:office@work-set.eu"
-            >
-              office@work-set.eu
-            </a>
-          </li>
-          <li className={styles.contactUsItem}>
-            <h3 className={styles.contactUsTitle}>Telefon-Nr.</h3>
-            <a
-              className={`${styles.contactUsLink} ${inter.className}`}
-              href="tel:+4973114613210"
-            >
-              +49-73-114-613-210
-            </a>
-          </li>
+          {contactUsItems.map(({ text, title, href }) => (
+            <li key={title} className={styles.contactUsItem}>
+              <h3 className={styles.contactUsTitle}>{title}</h3>
+              <a
+                className={`${styles.contactUsLink} ${inter.className}`}
+                href={href}
+              >
+                {text}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
