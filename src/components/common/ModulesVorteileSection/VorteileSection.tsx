@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './ModulesVorteileSection.module.css';
+import styles from './VorteileSection.module.css';
 import VorteileSlider from './VorteileSlider/VorteileSlider';
 
-const ModulesVorteileSection = () => {
+const VorteileSection = () => {
   return (
     <section className={styles.modulesVorteileSection}>
       <VorteileSlider />
@@ -10,4 +10,4 @@ const ModulesVorteileSection = () => {
   );
 };
 
-export default ModulesVorteileSection;
+export default VorteileSection;
