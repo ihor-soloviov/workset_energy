@@ -1,0 +1,85 @@
+.uberHeroSection {
+  padding: 239px 0 125px;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('/images/uberuns-page/uberuns-hero-mob.jpg');
+}
+
+.uberHeroContainer {
+  width: 100%;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+.uberHeroTitle {
+  color: var(--white-main);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 130%;
+  margin-bottom: 12px;
+}
+
+.uberHeroText {
+  margin: 0 auto;
+  margin-bottom: 32px;
+  color: var(--gray-input);
+  font-size: 16px;
+  line-height: 160%;
+  width: 320px;
+  letter-spacing: 0.3px;
+}
+
+.uberHeroBtn {
+  border-radius: 6px;
+  display: flex;
+  padding: 14px 44px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--red-main);
+  color: var(--gray-input);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 390px) {
+  .uberHeroContainer {
+    width: 390px;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .uberHeroSection {
+    padding: 193px 0 172px;
+    height: 649px;
+    background-image: url('/images/uberuns-page/uberuns-hero-desc.jpg');
+  }
+
+  .uberHeroContainer {
+    width: 1728px;
+    padding: 0 588px;
+  }
+
+  .uberHeroTitle {
+    font-size: 50px;
+    width: 552px;
+    font-weight: 600;
+    margin: 0 auto;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .uberHeroText {
+    font-size: 18px;
+    width: 507px;
+    text-align: center;
+  }
+
+  .uberHeroBtn {
+    margin: 0 auto;
+  }
+
+  .uberBr {
+    display: none;
+  }
+}
