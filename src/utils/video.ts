@@ -18,3 +18,10 @@ export const pvAnlagenVideo = {
   text: 'Erfahre, wie das Kreditsystem Einsparungen mit Photovoltaik-Modulen ohne Einlagen ermöglicht! Schau dir unser kurzes Video über die Schonung deiner Finanzen an und bleibe in den schwarzen Zahlen.',
   link: 'https://www.youtube.com/embed/M9CIRKXwVZE',
 };
+
+export const stormSteicherVideo = {
+  className: 'left',
+  title: 'Der Stromspeicher ist die Basis für Autonomie',
+  text: 'Der Stromspeicher bietet dir eine umweltfreundliche und kostengünstige Lösung. Unsere innovativen Technologien optimieren den Einsatz von Energie, was dir erhebliche Einsparungen bei deinen Ressourcen einbringt. Von der intelligenten Steuerung des Stromverbrauchs bis hin zur effizienten Speicherung.',
+  link: 'https://www.youtube.com/emberd/M9CIRKXwVZE',
+};
