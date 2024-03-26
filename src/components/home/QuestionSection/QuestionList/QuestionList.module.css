@@ -122,6 +122,7 @@
 .questText {
   color: var(--gray-text);
   line-height: 160%;
+  letter-spacing: 0.5px;
 }
 
 .questConsultBtn {
