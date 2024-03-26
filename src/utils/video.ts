@@ -25,3 +25,10 @@ export const stormSteicherVideo = {
   text: 'Der Stromspeicher bietet dir eine umweltfreundliche und kostengünstige Lösung. Unsere innovativen Technologien optimieren den Einsatz von Energie, was dir erhebliche Einsparungen bei deinen Ressourcen einbringt. Von der intelligenten Steuerung des Stromverbrauchs bis hin zur effizienten Speicherung.',
   link: 'https://www.youtube.com/emberd/M9CIRKXwVZE',
 };
+
+export const wallboxVideo = {
+  className: 'left',
+  title: '0 € pro Tankvorgang!',
+  text: 'Die Wallbox ist dein Held beim Energiesparen. Hör auf, für das Betanken deiner Elektroautos zu bezahlen. Wie das funktioniert und wie du Geld sparen kannst? Mr. Energy antwortet in diesem Video ausführlich darauf. Lass dich von den Details überzeugen! Nutze diese Gelegenheit, deine Sichtweise auf das Energiesparen zu ändern.',
+  link: 'https://www.youtube.com/emberd/M9CIRKXwVZE',
+};

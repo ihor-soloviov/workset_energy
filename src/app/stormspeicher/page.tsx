@@ -5,7 +5,6 @@ import VorteileSection from '@/components/common/ModulesVorteileSection/Vorteile
 
 import { stormspeicherHero } from '@/utils/hero';
 import { stormSteicherVideo } from '@/utils/video';
-
 import { sliderImages, vorteileItems } from './slides';
 
 const Stormspeicher = () => {
