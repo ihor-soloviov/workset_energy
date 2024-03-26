@@ -36,12 +36,6 @@
   border-left: 1px solid var(--gray-stroke);
   border-bottom: 1px solid var(--gray-stroke);
   padding: 24px 22px 28px 25px;
-  transition: border-color 250ms var(--cubic);
-}
-
-.productItem:hover .productImgWrap,
-.productItem:hover .productTextWrap {
-  border-color: var(--black-main);
 }
 
 .productTitle {
@@ -59,7 +53,7 @@
   line-height: 150%;
   margin-bottom: 36px;
 }
-.productBtn {
+.productLink {
   width: 137px;
   height: 46px;
   display: flex;

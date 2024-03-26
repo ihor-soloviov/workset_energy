@@ -18,7 +18,9 @@ const HeroFormModal = ({ handleModalClick, isDesktop }: HeroFormModalProps) => {
   const handleThankYouClick = () => setIsThankYouOpen(!isThankYouOpen);
 
   return (
-    <div className={styles.heroFormWrap}>
+    <div
+      className={`${styles.heroFormWrap} ${isThankYouOpen ? styles.active : ''}`}
+    >
       <div className={styles.heroTopWrap}>
         <Button
           handleClick={() => {
@@ -31,7 +33,9 @@ const HeroFormModal = ({ handleModalClick, isDesktop }: HeroFormModalProps) => {
           <CrossIcon className={styles.heroCloseIcon} />
         </Button>
       </div>
-      <div className={styles.heroFormContainer}>
+      <div
+        className={`${styles.heroFormContainer} ${isThankYouOpen ? styles.active : ''}`}
+      >
         {!isThankYouOpen ? (
           <>
             <h2 className={styles.heroTitle}>Kontaktiere uns</h2>
