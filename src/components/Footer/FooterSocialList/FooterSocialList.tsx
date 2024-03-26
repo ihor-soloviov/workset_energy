@@ -18,7 +18,10 @@ const FooterSocialList = () => {
       icon: FacebookIcon,
     },
     { href: 'https://www.youtube.com/@WorkSETEnergy', icon: YoutubeIcon },
-    { href: '', icon: TikTokIcon },
+    {
+      href: 'https://www.tiktok.com/@caplicon/video/6959087922247191810',
+      icon: TikTokIcon,
+    },
   ];
 
   const getClassByIndex = (index: number) => {
