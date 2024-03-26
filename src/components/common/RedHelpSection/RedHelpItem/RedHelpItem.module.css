@@ -85,3 +85,17 @@
 .socialIcon {
   fill: var(--red-main);
 }
+
+@media screen and (min-width: 1728px) {
+  .redHelpItem {
+    padding: 48px 36px;
+    height: 372px;
+    width: 392px;
+    margin-bottom: 24px;
+  }
+
+  .text {
+    font-size: 16px;
+    max-width: 310px;
+  }
+}

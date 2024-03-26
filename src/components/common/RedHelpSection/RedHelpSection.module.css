@@ -32,3 +32,32 @@
   flex-direction: column;
   gap: 34px;
 }
+
+@media screen and (min-width: 1728px) {
+  .redHelpSection {
+    padding: 140px 0;
+    margin: 0 auto;
+  }
+
+  .redHelpWrap {
+    align-items: center;
+  }
+  .redHelpHeader {
+    width: max-content;
+  }
+  .title {
+    font-size: 50px;
+    max-width: 100%;
+    margin-bottom: 14px;
+  }
+
+  .text {
+    font-size: 18px;
+    max-width: 436px;
+  }
+
+  .redHelpItems {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
