@@ -6,34 +6,29 @@ import MenuYoutubeIcon from '/public/icons/youtube.svg';
 
 type SocialLinkItem = {
   href: string;
+  icon: React.ElementType;
 };
 
 const MobileSocialList = () => {
   const socialLinkItems: SocialLinkItem[] = [
-    { href: '' },
-    { href: '' },
-    { href: '' },
+    { href: 'https://www.instagram.com/workset.energy/', icon: MenuInstIcon },
+    {
+      href: 'https://www.facebook.com/profile.php?id=100090207079736',
+      icon: MenuFacebookIcon,
+    },
+    { href: 'https://www.youtube.com/@WorkSETEnergy', icon: MenuYoutubeIcon },
   ];
-
-  const currentIcon = (index: number) => {
-    switch (index + 1) {
-      case 1:
-        return <MenuInstIcon className={styles.menuSocialIcon} />;
-      case 2:
-        return <MenuFacebookIcon className={styles.menuSocialIcon} />;
-      case 3:
-        return <MenuYoutubeIcon className={styles.menuSocialIcon} />;
-      default:
-        return;
-    }
-  };
 
   return (
     <ul className={styles.socialList}>
-      {socialLinkItems.map(({ href }, index) => (
+      {socialLinkItems.map(({ href, icon }, index) => (
         <li key={index} className={styles.socialItem}>
-          <a href={href} className={styles.socialLink}>
-            {currentIcon(index)}
+          <a target="_blank" href={href} className={styles.socialLink}>
+            {React.createElement(
+              icon,
+              { className: styles.menuSocialIcon },
+              null,
+            )}
           </a>
         </li>
       ))}

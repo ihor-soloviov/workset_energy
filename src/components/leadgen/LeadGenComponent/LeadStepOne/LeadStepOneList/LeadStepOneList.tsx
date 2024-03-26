@@ -10,6 +10,7 @@ type LeadStepOneListProps = {
 
 type LeadStepOneItem = {
   title: string;
+  icon: React.ElementType;
 };
 
 const LeadStepOneList = ({
@@ -17,33 +18,13 @@ const LeadStepOneList = ({
   stepOneValue,
 }: LeadStepOneListProps) => {
   const leadStepOneItems: LeadStepOneItem[] = [
-    { title: 'Privathaushalt' },
-    { title: 'Gewerbe' },
+    { title: 'Privathaushalt', icon: LeadStepFirstIcon },
+    { title: 'Gewerbe', icon: LeadStepSecondIcon },
   ];
-
-  const currentIcon = (index: number, title: string) => {
-    switch (index + 1) {
-      case 1:
-        return (
-          <LeadStepFirstIcon
-            className={`${styles.stepOneIcon} ${stepOneValue === title ? styles.active : ''}`}
-          />
-        );
-      case 2:
-        return (
-          <LeadStepSecondIcon
-            className={`${styles.stepOneIcon} ${stepOneValue === title ? styles.active : ''}`}
-          />
-        );
-
-      default:
-        return;
-    }
-  };
 
   return (
     <ul className={styles.stepOneList}>
-      {leadStepOneItems.map(({ title }, index) => (
+      {leadStepOneItems.map(({ title, icon }, index) => (
         <li
           onClick={e => handleItemClick(e, title)}
           className={`${styles.stepOneItem} ${stepOneValue === title ? styles.active : ''}`}
@@ -51,7 +32,13 @@ const LeadStepOneList = ({
         >
           <div className={styles.stepOneWrap}>
             <div className={styles.stepOneIconWrap}>
-              {currentIcon(index, title)}
+              {React.createElement(
+                icon,
+                {
+                  className: `${styles.stepOneIcon} ${stepOneValue === title ? styles.active : ''}`,
+                },
+                null,
+              )}
             </div>
             <h4
               className={`${styles.stepOneItemTitle} ${stepOneValue === title ? styles.active : ''}`}

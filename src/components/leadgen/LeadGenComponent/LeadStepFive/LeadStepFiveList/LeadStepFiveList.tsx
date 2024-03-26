@@ -12,6 +12,7 @@ type LeadStepFiveListProps = {
 
 type LeadStepFiveItem = {
   title: string;
+  icon: React.ElementType;
 };
 
 const LeadStepFiveList = ({
@@ -19,46 +20,15 @@ const LeadStepFiveList = ({
   stepFiveValue,
 }: LeadStepFiveListProps) => {
   const leadStepFiveItems: LeadStepFiveItem[] = [
-    { title: '0-60 m²' },
-    { title: '60-200 m²' },
-    { title: '200-800 m²' },
-    { title: '800+ m²' },
+    { title: '0-60 m²', icon: LeadStepFirstIcon },
+    { title: '60-200 m²', icon: LeadStepSecondIcon },
+    { title: '200-800 m²', icon: LeadStepThirdIcon },
+    { title: '800+ m²', icon: LeadStepFourthIcon },
   ];
-
-  const currentIcon = (index: number, title: string) => {
-    switch (index + 1) {
-      case 1:
-        return (
-          <LeadStepFirstIcon
-            className={`${styles.stepFiveIcon} ${stepFiveValue === title ? styles.active : ''}`}
-          />
-        );
-      case 2:
-        return (
-          <LeadStepSecondIcon
-            className={`${styles.stepFiveIcon} ${stepFiveValue === title ? styles.active : ''}`}
-          />
-        );
-      case 3:
-        return (
-          <LeadStepThirdIcon
-            className={`${styles.stepFiveIcon} ${stepFiveValue === title ? styles.active : ''}`}
-          />
-        );
-      case 4:
-        return (
-          <LeadStepFourthIcon
-            className={`${styles.stepFiveIcon} ${stepFiveValue === title ? styles.active : ''}`}
-          />
-        );
-      default:
-        return;
-    }
-  };
 
   return (
     <ul className={styles.stepFiveList}>
-      {leadStepFiveItems.map(({ title }, index) => (
+      {leadStepFiveItems.map(({ title, icon }) => (
         <li
           onClick={e => handleItemClick(e, title)}
           className={`${styles.stepFiveItem} ${stepFiveValue === title ? styles.active : ''}`}
@@ -66,7 +36,13 @@ const LeadStepFiveList = ({
         >
           <div className={styles.stepFiveWrap}>
             <div className={styles.stepFiveIconWrap}>
-              {currentIcon(index, title)}
+              {React.createElement(
+                icon,
+                {
+                  className: `${styles.stepFiveIcon} ${stepFiveValue === title ? styles.active : ''}`,
+                },
+                null,
+              )}
             </div>
             <h4
               className={`${styles.stepFiveTitle} ${stepFiveValue === title ? styles.active : ''}`}

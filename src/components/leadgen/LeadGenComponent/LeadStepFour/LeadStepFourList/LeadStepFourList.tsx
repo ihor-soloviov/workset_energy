@@ -13,6 +13,7 @@ type LeadStepFourListProps = {
 
 type LeadStepFourItem = {
   title: string;
+  icon: React.ElementType;
 };
 
 const LeadStepFourList = ({
@@ -20,53 +21,33 @@ const LeadStepFourList = ({
   stepFourValue,
 }: LeadStepFourListProps) => {
   const leadStepFourItems: LeadStepFourItem[] = [
-    { title: 'Flachdach' },
-    { title: 'Pultdach' },
-    { title: 'Satteldach' },
-    { title: 'Zeltdach' },
-    { title: 'Sonstiges Dach' },
+    { title: 'Flachdach', icon: LeadStepFirstIcon },
+    { title: 'Pultdach', icon: LeadStepSecondIcon },
+    { title: 'Satteldach', icon: LeadStepThirdIcon },
+    { title: 'Zeltdach', icon: LeadStepFourthIcon },
+    { title: 'Sonstiges Dach', icon: LeadStepFifthIcon },
   ];
 
-  const currentIcon = (index: number, title: string) => {
+  const getClassByIndex = (index: number) => {
     switch (index + 1) {
       case 1:
-        return (
-          <LeadStepFirstIcon
-            className={`${styles.stepFourIcon} ${styles.first} ${stepFourValue === title ? styles.active : ''}`}
-          />
-        );
+        return styles.first;
       case 2:
-        return (
-          <LeadStepSecondIcon
-            className={`${styles.stepFourIcon} ${styles.second} ${stepFourValue === title ? styles.active : ''}`}
-          />
-        );
+        return styles.second;
       case 3:
-        return (
-          <LeadStepThirdIcon
-            className={`${styles.stepFourIcon} ${styles.third} ${stepFourValue === title ? styles.active : ''}`}
-          />
-        );
+        return styles.third;
       case 4:
-        return (
-          <LeadStepFourthIcon
-            className={`${styles.stepFourIcon} ${styles.fourth} ${stepFourValue === title ? styles.active : ''}`}
-          />
-        );
+        return styles.fourth;
       case 5:
-        return (
-          <LeadStepFifthIcon
-            className={`${styles.stepFourIcon} ${styles.fifth} ${stepFourValue === title ? styles.active : ''}`}
-          />
-        );
+        return styles.fifth;
       default:
-        return;
+        return '';
     }
   };
 
   return (
     <ul className={styles.stepFourList}>
-      {leadStepFourItems.map(({ title }, index) => (
+      {leadStepFourItems.map(({ title, icon }, index) => (
         <li
           onClick={e => handleItemClick(e, title)}
           className={`${styles.stepFourItem} ${stepFourValue === title ? styles.active : ''}`}
@@ -74,7 +55,13 @@ const LeadStepFourList = ({
         >
           <div className={styles.stepFourWrap}>
             <div className={styles.stepFourIconWrap}>
-              {currentIcon(index, title)}
+              {React.createElement(
+                icon,
+                {
+                  className: `${styles.stepFourIcon} ${getClassByIndex(index)} ${stepFourValue === title ? styles.active : ''}`,
+                },
+                null,
+              )}
             </div>
             <h4
               className={`${styles.stepFourTitle} ${stepFourValue === title ? styles.active : ''}`}

@@ -12,6 +12,7 @@ type LeadStepThreeListProps = {
 
 type LeadStepThreeItem = {
   title: string;
+  icon: React.ElementType;
 };
 
 const LeadStepThreeList = ({
@@ -19,46 +20,30 @@ const LeadStepThreeList = ({
   stepThreeValue,
 }: LeadStepThreeListProps) => {
   const leadStepThreeItems: LeadStepThreeItem[] = [
-    { title: 'Vor dem Jahr 200' },
-    { title: 'Nach dem Jahr 200' },
-    { title: 'Vor Kurzem' },
-    { title: 'In Planung' },
+    { title: 'Vor dem Jahr 200', icon: LeadStepFirstIcon },
+    { title: 'Nach dem Jahr 200', icon: LeadStepSecondIcon },
+    { title: 'Vor Kurzem', icon: LeadStepThirdIcon },
+    { title: 'In Planung', icon: LeadStepFourthIcon },
   ];
 
-  const currentIcon = (index: number, title: string) => {
+  const getClassByIndex = (index: number) => {
     switch (index + 1) {
       case 1:
-        return (
-          <LeadStepFirstIcon
-            className={`${styles.stepThreeIcon} ${styles.first} ${stepThreeValue === title ? styles.active : ''}`}
-          />
-        );
+        return styles.first;
       case 2:
-        return (
-          <LeadStepSecondIcon
-            className={`${styles.stepThreeIcon} ${styles.second} ${stepThreeValue === title ? styles.active : ''}`}
-          />
-        );
+        return styles.second;
       case 3:
-        return (
-          <LeadStepThirdIcon
-            className={`${styles.stepThreeIcon} ${styles.third} ${stepThreeValue === title ? styles.active : ''}`}
-          />
-        );
+        return styles.third;
       case 4:
-        return (
-          <LeadStepFourthIcon
-            className={`${styles.stepThreeIcon}  ${styles.fourth} ${stepThreeValue === title ? styles.active : ''}`}
-          />
-        );
+        return styles.fourth;
       default:
-        return;
+        return '';
     }
   };
 
   return (
     <ul className={styles.stepThreeList}>
-      {leadStepThreeItems.map(({ title }, index) => (
+      {leadStepThreeItems.map(({ title, icon }, index) => (
         <li
           onClick={e => handleItemClick(e, title)}
           className={`${styles.stepThreeItem} ${stepThreeValue === title ? styles.active : ''}`}
@@ -66,7 +51,13 @@ const LeadStepThreeList = ({
         >
           <div className={styles.stepThreeWrap}>
             <div className={styles.stepThreeIconWrap}>
-              {currentIcon(index, title)}
+              {React.createElement(
+                icon,
+                {
+                  className: `${styles.stepThreeIcon} ${getClassByIndex(index)} ${stepThreeValue === title ? styles.active : ''}`,
+                },
+                null,
+              )}
             </div>
             <h4
               className={`${styles.stepThreeTitle} ${stepThreeValue === title ? styles.active : ''}`}

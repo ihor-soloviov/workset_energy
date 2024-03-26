@@ -7,49 +7,47 @@ import TikTokIcon from '/public/icons/tiktok.svg';
 
 type SocialLinkItem = {
   href: string;
+  icon: React.ElementType;
 };
 
 const FooterSocialList = () => {
   const socialLinkItems: SocialLinkItem[] = [
-    { href: '' },
-    { href: '' },
-    { href: '' },
-    { href: '' },
+    { href: 'https://www.instagram.com/workset.energy/', icon: InstIcon },
+    {
+      href: 'https://www.facebook.com/profile.php?id=100090207079736',
+      icon: FacebookIcon,
+    },
+    { href: 'https://www.youtube.com/@WorkSETEnergy', icon: YoutubeIcon },
+    { href: '', icon: TikTokIcon },
   ];
 
-  const currentIcon = (index: number) => {
+  const getClassByIndex = (index: number) => {
     switch (index + 1) {
       case 1:
-        return (
-          <InstIcon
-            className={`${styles.footerSocialIcon} ${styles.instagram}`}
-          />
-        );
-
+        return styles.instagram;
       case 2:
-        return (
-          <FacebookIcon
-            className={`${styles.footerSocialIcon} ${styles.facebook}`}
-          />
-        );
-
-      case 3:
-        return <YoutubeIcon className={styles.footerSocialIcon} />;
-      case 4:
-        return <TikTokIcon className={styles.footerSocialIcon} />;
+        return styles.facebook;
       default:
-        return;
+        return '';
     }
   };
 
   return (
     <ul className={styles.footerSocialList}>
-      {socialLinkItems.map((_, index) => (
+      {socialLinkItems.map(({ href, icon }, index) => (
         <li key={index} className={styles.footerSocialItem}>
           <a
-            className={`${styles.footerSocialLink} ${index + 1 === 1 ? styles.instagram : ''} ${index + 1 === 2 ? styles.facebook : ''}`}
+            target="_blank"
+            href={href}
+            className={`${styles.footerSocialLink} ${getClassByIndex(index)}`}
           >
-            {currentIcon(index)}
+            {React.createElement(
+              icon,
+              {
+                className: `${styles.footerSocialIcon} ${getClassByIndex(index)}`,
+              },
+              null,
+            )}
           </a>
         </li>
       ))}
