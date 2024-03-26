@@ -17,22 +17,30 @@ const HeroFormModal = ({ handleModalClick, isDesktop }: HeroFormModalProps) => {
 
   const handleThankYouClick = () => setIsThankYouOpen(!isThankYouOpen);
 
+  const handleBtnCloseClick = () => {
+    handleModalClick();
+    handleThankYouClick();
+  };
+
+  const handleBtnClick = () => {
+    !isDesktop && handleModalClick();
+    handleThankYouClick();
+  };
+
   return (
     <div
       className={`${styles.heroFormWrap} ${isThankYouOpen ? styles.active : ''}`}
     >
       <div className={styles.heroTopWrap}>
         <Button
-          handleClick={() => {
-            handleModalClick();
-            handleThankYouClick();
-          }}
+          handleClick={handleBtnCloseClick}
           type="button"
           className={styles.heroCloseBtn}
         >
           <CrossIcon className={styles.heroCloseIcon} />
         </Button>
       </div>
+      <div className={styles.heroLine}></div>
       <div
         className={`${styles.heroFormContainer} ${isThankYouOpen ? styles.active : ''}`}
       >
@@ -55,10 +63,7 @@ const HeroFormModal = ({ handleModalClick, isDesktop }: HeroFormModalProps) => {
               Weg zu nachhaltiger Energie unterstützen zu dürfen
             </p>
             <Button
-              handleClick={() => {
-                !isDesktop && handleModalClick();
-                handleThankYouClick();
-              }}
+              handleClick={handleBtnClick}
               className={styles.heroThankBtn}
               type="button"
             >

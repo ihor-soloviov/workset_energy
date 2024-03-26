@@ -25,8 +25,19 @@ const HeroSection = ({
 }: HeroProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  console.log(isModalOpen);
 
   const handleModalClick = () => setIsModalOpen(!isModalOpen);
+  const handleBtnClick = () => {
+    if (isDesktop) {
+      const teamSection = document.getElementById('team-section');
+      teamSection && teamSection.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    if (!isDesktop) {
+      handleModalClick();
+    }
+  };
 
   useEffect(() => {
     setIsDesktop(window.innerWidth > 1728);
@@ -73,11 +84,11 @@ const HeroSection = ({
                 <ArrowIcon className={styles.heroIcon} />
               </Link>
               <Button
-                handleClick={() => !isDesktop && handleModalClick()}
+                handleClick={handleBtnClick}
                 type="button"
                 className={styles.heroBtn}
               >
-                Zum Angebot
+                {!isDesktop ? 'Zum Angebot' : 'Unsere Team'}
               </Button>
             </div>
           </div>

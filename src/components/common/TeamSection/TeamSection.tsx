@@ -6,7 +6,7 @@ import TeamSlider from './TeamSlider/TeamSlider';
 import ArrowIcon from '/public/icons/small-arrow-btn.svg';
 const TeamSection = () => {
   return (
-    <section className={styles.teamSection}>
+    <section id="team-section" className={styles.teamSection}>
       <Container>
         <div className={styles.teamMainWrap}>
           <div className={styles.teamTextWrap}>

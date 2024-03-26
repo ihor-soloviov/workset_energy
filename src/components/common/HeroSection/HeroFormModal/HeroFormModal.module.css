@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   padding: 0 0 216px;
-  z-index: 97;
+  z-index: 99;
   width: 100%;
   height: 100vh;
   background-color: var(--white-main);
@@ -16,8 +16,12 @@
 }
 
 .heroTopWrap {
-  border-bottom: 0.7px solid var(--gray-stroke);
   padding: 48px 24px 18px;
+}
+
+.heroLine {
+  border-bottom: 0.7px solid var(--gray-stroke);
+  width: 100%;
 }
 
 .heroCloseBtn {
@@ -60,6 +64,7 @@
   margin-top: 86px;
   margin-bottom: 16px;
 }
+
 .heroThankText {
   color: var(--gray-text);
   text-align: center;
@@ -70,6 +75,7 @@
   margin: 0 auto;
   margin-bottom: 32px;
 }
+
 .heroThankBtn {
   font-size: 16px;
   font-weight: 500;
@@ -88,6 +94,11 @@
   .heroFormContainer {
     width: 390px;
   }
+
+  .heroTopWrap {
+    width: 390px;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (min-width: 1728px) {
@@ -100,6 +111,7 @@
     position: static;
     border-radius: 12px;
   }
+
   .heroFormWrap.active {
     position: absolute;
     padding: 350px 0 288px;
@@ -107,6 +119,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 97;
     border-radius: unset;
     height: 972px;
   }
@@ -122,6 +135,10 @@
   }
 
   .heroTopWrap {
+    display: none;
+  }
+
+  .heroLine {
     display: none;
   }
 
