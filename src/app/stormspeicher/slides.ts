@@ -13,8 +13,8 @@ import pvSlide6Mob from '/public/images/pv-anlagen-page/PVSlide6Mob.jpg';
 import pvSlide6Desk from '/public/images/pv-anlagen-page/pvSlide6Desk.jpg';
 export const vorteileItems: VorteileSliderItems[] = [
   {
-    title: 'PV-Anlage Vorteile',
-    text: 'Solarmodule sind eine fortschrittliche und effiziente Technologie, die viele Vorteile bietet und weltweit immer beliebter wird. Hier sind einige Gründe, warum Sonnenkollektoren eine coole und rentable Investition sind',
+    title: 'Stormspeicher',
+    text: 'Stormspeicher ist eine Technologie zur Speicherung von Daten in verteilten Systemen, die auf dem Prinzip eines Data Warehouse basiert, das große Mengen an Informationen verarbeiten kann und ausfallsicher ist. Hier sind einige der Vorteile von Stormspeicher:',
   },
   {
     title: 'Energiekosten sparen',

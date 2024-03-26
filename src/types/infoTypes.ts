@@ -49,6 +49,11 @@ type HrefObject = {
   linkTo: string;
 };
 
+type VorteileSliderT = {
+  sliderImages: ImportedImages[];
+  sliderText: VorteileSliderItems[];
+};
+
 export type {
   VisionLinkItem,
   VorteileSliderItems,
@@ -57,4 +62,5 @@ export type {
   Plan,
   ObjectItem,
   RedHelp,
+  VorteileSliderT,
 };

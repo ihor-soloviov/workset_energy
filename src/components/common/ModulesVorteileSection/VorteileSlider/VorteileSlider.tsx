@@ -6,12 +6,13 @@ import styles from './VorteileSlider.module.css';
 import Button from '../../Button/Button';
 import Image from 'next/image';
 
-import { sliderImages } from './slides';
-import { vorteileItems } from './slides';
 import ArrowIcon from '/public/icons/slide-arrow.svg';
 import SliderDots from '../../SliderDots/SliderDots';
+import { VorteileSliderT } from '@/types/infoTypes';
 
-const VorteileSlider = () => {
+type Props = VorteileSliderT;
+
+const VorteileSlider: React.FC<Props> = ({ sliderImages, sliderText }) => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
   const handlePrevSlide = () =>
@@ -42,10 +43,10 @@ const VorteileSlider = () => {
         </p>
         <div className={styles.sliderInfo}>
           <h2 className={styles.sliderTitle}>
-            {vorteileItems[activeSlideIndex].title}
+            {sliderText[activeSlideIndex].title}
           </h2>
           <p className={`${styles.sliderText} ${inter.className}`}>
-            {vorteileItems[activeSlideIndex].text}
+            {sliderText[activeSlideIndex].text}
           </p>
         </div>
         <div className={styles.sliderControllers}>
