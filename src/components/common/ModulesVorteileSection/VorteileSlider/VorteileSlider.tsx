@@ -1,25 +1,40 @@
 'use client';
 import React, { useState } from 'react';
-import { inter, interTight } from '@/utils/fonts';
+import { inter } from '@/utils/fonts';
 import styles from './VorteileSlider.module.css';
 
 import Button from '../../Button/Button';
-import Image from 'next/image';
 
 import ArrowIcon from '/public/icons/slide-arrow.svg';
 import SliderDots from '../../SliderDots/SliderDots';
 import { VorteileSliderT } from '@/types/infoTypes';
+import Image from 'next/image';
 
 type Props = VorteileSliderT;
 
 const VorteileSlider: React.FC<Props> = ({ sliderImages, sliderText }) => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+  const [animateTo, setAnimateTo] = useState('');
 
-  const handlePrevSlide = () =>
-    setActiveSlideIndex(prev => (prev === 0 ? 5 : prev - 1));
+  const handlePrevSlide = () => {
+    setAnimateTo('left');
+    setTimeout(() => {
+      setActiveSlideIndex(prev => (prev === 0 ? 5 : prev - 1));
+    }, 600);
+    setTimeout(() => {
+      setAnimateTo('');
+    }, 630);
+  };
 
-  const handleNextSlide = () =>
-    setActiveSlideIndex(prev => (prev === 5 ? 0 : prev + 1));
+  const handleNextSlide = () => {
+    setAnimateTo('right');
+    setTimeout(() => {
+      setActiveSlideIndex(prev => (prev === 5 ? 0 : prev + 1));
+    }, 600);
+    setTimeout(() => {
+      setAnimateTo('');
+    }, 630);
+  };
 
   const handleActiveSlide = (index: number) => setActiveSlideIndex(index);
 
@@ -34,7 +49,7 @@ const VorteileSlider: React.FC<Props> = ({ sliderImages, sliderText }) => {
           alt="slide"
         />
         <Image
-          className={styles.sliderImgDesk}
+          className={`${styles.sliderImgDesk} ${styles[animateTo]}`}
           src={sliderImages[activeSlideIndex].desktop}
           layout="fill"
           objectFit="cover"
