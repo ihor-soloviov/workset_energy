@@ -99,12 +99,31 @@
     height: max-content;
   }
 
+  .vorteileImageWrap {
+    width: 100%;
+    height: 837px;
+  }
+
   .sliderImgMob {
     display: none;
   }
 
   .sliderImgDesk {
     display: block;
+  }
+
+  .right {
+    transform: translateX(-100%);
+    transition: transform 0.55s ease-in-out;
+  }
+
+  .left {
+    transform: translateX(100%);
+    transition: transform 0.55s ease-in-out;
+  }
+
+  .sliderInfoContainer {
+    width: 100%;
   }
 
   .sliderInfoWrap {
