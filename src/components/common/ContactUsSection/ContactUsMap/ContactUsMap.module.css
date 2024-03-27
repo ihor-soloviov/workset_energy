@@ -1,15 +1,9 @@
 .contactUsImgWrap {
   position: relative;
-}
-
-.contactUsImgMob {
   width: 342px;
   height: 481px;
   border-radius: 12px;
-}
-
-.contactUsImgDesc {
-  display: none;
+  overflow: hidden;
 }
 
 .contactUsAddressMainWrap {
@@ -29,19 +23,19 @@
 }
 
 .contactUsLocationWrap {
-  position: absolute;
-  top: 76px;
-  right: 43px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 36px;
 }
 
 .contactUsLocationText {
   color: var(--gray-dark-text);
   width: 150px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 157%;
   position: absolute;
+  text-align: center;
   top: 8px;
   left: 12px;
 }
@@ -98,17 +92,8 @@
 @media screen and (min-width: 1728px) {
   .contactUsImgWrap {
     order: 1;
-  }
-
-  .contactUsImgMob {
-    display: none;
-  }
-
-  .contactUsImgDesc {
-    display: block;
     width: 668px;
     height: 490px;
-    border-radius: 12px;
   }
 
   .contactUsAddressMainWrap {
