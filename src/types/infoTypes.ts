@@ -18,7 +18,7 @@ type VisionImageItem = ImportedImages & {
 type VisionLinkItem = TitleText;
 type VorteileSliderItems = TitleText;
 
-type Plan = {
+type PlanT = {
   price: string;
   name: string;
   article: string;
@@ -26,6 +26,7 @@ type Plan = {
   imageDesk: StaticImageData;
   benefits: string[];
 };
+
 type ObjectItem = {
   standort: string;
   gesamtleistung: string;
@@ -49,6 +50,8 @@ type HrefObject = {
   linkTo: string;
 };
 
+type NavLinkItem = HrefObject;
+
 type VorteileSliderT = {
   sliderImages: ImportedImages[];
   sliderText: VorteileSliderItems[];
@@ -59,8 +62,9 @@ export type {
   VorteileSliderItems,
   ImportedImages,
   VisionImageItem,
-  Plan,
+  PlanT,
   ObjectItem,
   RedHelp,
   VorteileSliderT,
+  NavLinkItem,
 };

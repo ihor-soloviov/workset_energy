@@ -3,32 +3,24 @@ import React from 'react';
 import styles from './HeaderNavList.module.css';
 import { inter } from '@/utils/fonts';
 import { usePathname } from 'next/navigation';
-
-export type NavLinkItem = {
-  href: string;
-  text: string;
-};
-
-export const navLinkItems: NavLinkItem[] = [
-  { href: '/pv-anlagen', text: 'PV-Anlagen' },
-  { href: '/stormspeicher', text: 'Stormspeicher' },
-  { href: '/wallbox', text: 'Wallbox' },
-  { href: '/karriere', text: 'Karriere' },
-  { href: '/uber-uns', text: 'Über uns' },
-];
+import { useThankYouStore } from '@/store/hero-store';
+import { navLinkItems } from './navlist';
 
 const HeaderNavList = () => {
   const pathname = usePathname();
+  //можеш юзать)))
+  const { isStylesChanged } = useThankYouStore();
+  console.log(isStylesChanged);
 
   return (
     <ul className={`${styles.headerList} ${inter.className}`}>
-      {navLinkItems.map(({ text, href }) => (
+      {navLinkItems.map(({ title, linkTo }) => (
         <li
-          key={text}
-          className={`${styles.headerItem} ${pathname === href ? styles.active : ''}`}
+          key={title}
+          className={`${styles.headerItem} ${pathname === linkTo ? styles.active : ''}`}
         >
-          <Link href={href} className={styles.headerNavLink}>
-            {text}
+          <Link href={linkTo} className={styles.headerNavLink}>
+            {title}
           </Link>
         </li>
       ))}

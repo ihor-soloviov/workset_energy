@@ -1,13 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
 import CheckMarker from '/public/icons/check-circle.svg';
-import { Plan } from '@/types/infoTypes';
+import { PlanT } from '@/types/infoTypes';
 import styles from './Plan.module.css';
 import { inter } from '@/utils/fonts';
 import RedButton from '../../RedButton/RedButton';
 
 type Props = {
-  plan: Plan;
+  plan: PlanT;
 };
 
 const Plan: React.FC<Props> = ({

@@ -4,9 +4,9 @@ import huaweiBasicMob from '../../../../public/images/pv-anlagen-page/plans/Huaw
 import huaweiBasic from '/public/images/pv-anlagen-page/plans/HuaweiBasic.png';
 import enphaseProMob from '../../../../public/images/pv-anlagen-page/plans/Enphase-mob.png';
 import enphasePro from '/public/images/pv-anlagen-page/plans/Enphase.png';
-import { Plan } from '@/types/infoTypes';
+import { PlanT } from '@/types/infoTypes';
 
-export const plans: Plan[] = [
+export const plans: PlanT[] = [
   {
     price: '15.116 EUR',
     name: 'Huawei Starter',

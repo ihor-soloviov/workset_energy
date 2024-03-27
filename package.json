@@ -26,7 +26,8 @@
     "react-dom": "^18",
     "react-slider": "^2.0.6",
     "swiper": "^11.0.7",
-    "yup": "^1.4.0"
+    "yup": "^1.4.0",
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
     "@types/node": "^20",
