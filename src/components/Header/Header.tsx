@@ -7,20 +7,30 @@ import MobileMenu from './MobileMenu/MobileMenu';
 import Button from '../common/Button/Button';
 import HeaderNavList from './HeaderNavList/HeaderNavList';
 import WorksetIcon from '/public/icons/workset.svg';
+import WorksetColorIcon from '/public/icons/workset-color.svg';
 import BurgerIcon from '/public/icons/burger.svg';
 import ArrowIcon from '/public/icons/small-arrow-btn.svg';
+import { useThankYouStore } from '@/store/hero-store';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const { isStylesChanged } = useThankYouStore();
+
   const handleMenuClick = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className={styles.header}>
+    <header
+      className={`${styles.header} ${isStylesChanged ? styles.blackStyle : ''}`}
+    >
       <div className={styles.headerContainer}>
         <nav className={styles.headerNav}>
           <Link className={styles.headerLogoLink} href="/">
-            <WorksetIcon className={styles.headerLogo} />
+            {isStylesChanged ? (
+              <WorksetColorIcon className={styles.headerLogo} />
+            ) : (
+              <WorksetIcon className={styles.headerLogo} />
+            )}
           </Link>
           <Button
             handleClick={handleMenuClick}

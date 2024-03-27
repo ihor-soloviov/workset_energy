@@ -7,6 +7,10 @@
   z-index: 98;
 }
 
+.header.blackStyle {
+  border-bottom: 0.7px solid var(--gray-stroke);
+}
+
 .headerContainer {
   width: 100%;
   padding: 0 24px;

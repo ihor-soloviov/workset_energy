@@ -4,9 +4,9 @@ import styles from './HeroFormModal.module.css';
 import CrossIcon from '/public/icons/cross.svg';
 import Button from '../../Button/Button';
 import { inter } from '@/utils/fonts';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import HeroForm from './HeroForm/HeroForm';
-
+import { useThankYouStore } from '@/store/hero-store';
 type HeroFormModalProps = {
   handleModalClick: () => void;
   isDesktop: boolean;
@@ -14,6 +14,7 @@ type HeroFormModalProps = {
 
 const HeroFormModal = ({ handleModalClick, isDesktop }: HeroFormModalProps) => {
   const [isThankYouOpen, setIsThankYouOpen] = useState(false);
+  const { toggleStyles } = useThankYouStore();
 
   const handleThankYouClick = () => setIsThankYouOpen(!isThankYouOpen);
 
@@ -24,8 +25,13 @@ const HeroFormModal = ({ handleModalClick, isDesktop }: HeroFormModalProps) => {
 
   const handleBtnClick = () => {
     !isDesktop && handleModalClick();
+    isDesktop && toggleStyles();
     handleThankYouClick();
   };
+
+  useEffect(() => {
+    isDesktop && isThankYouOpen && toggleStyles();
+  }, [isDesktop, isThankYouOpen, toggleStyles]);
 
   return (
     <div

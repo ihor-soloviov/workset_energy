@@ -17,6 +17,10 @@
     transition: color 250ms var(--cubic);
   }
 
+  .headerNavLink.blackStyle {
+    color: var(--black-main);
+  }
+
   .headerItem {
     position: relative;
   }
@@ -25,12 +29,15 @@
     position: absolute;
     content: '';
     border-radius: 2px;
-
     background: var(--white-main);
     width: 100%;
     height: 3px;
     left: 0px;
     top: 56.5px;
+  }
+
+  .headerItem.active.blackStyle::after {
+    background: var(--black-main);
   }
 
   .headerNavLink:hover {
