@@ -37,7 +37,9 @@ const Header = () => {
             className={styles.headerBurgerBtn}
             type="button"
           >
-            <BurgerIcon className={styles.headerBurgerIcon} />
+            <BurgerIcon
+              className={`${styles.headerBurgerIcon} ${isStylesChanged ? styles.blackStyle : ''}`}
+            />
           </Button>
           <HeaderNavList />
         </nav>

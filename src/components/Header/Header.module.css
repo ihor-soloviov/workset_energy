@@ -51,6 +51,10 @@
   transition: stroke 250ms var(--cubic);
 }
 
+.headerBurgerIcon.blackStyle {
+  stroke: var(--black-main);
+}
+
 .headerBurgerIcon:hover {
   stroke: var(--gray-text);
 }

@@ -7,6 +7,7 @@ import { inter } from '@/utils/fonts';
 import { useEffect, useState } from 'react';
 import HeroForm from './HeroForm/HeroForm';
 import { useThankYouStore } from '@/store/hero-store';
+
 type HeroFormModalProps = {
   handleModalClick: () => void;
   isDesktop: boolean;
