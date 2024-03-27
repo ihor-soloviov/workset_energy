@@ -1,15 +1,33 @@
 .contactUsImgWrap {
   position: relative;
-}
-
-.contactUsImgMob {
   width: 342px;
   height: 481px;
   border-radius: 12px;
+  overflow: hidden;
 }
 
-.contactUsImgDesc {
-  display: none;
+/*Delete outline from google map  */
+
+.contactUsImgWrap > div > div > div > div:nth-of-type(2) {
+  border: none !important;
+  opacity: 0 !important;
+}
+/*Delete shadow from google info  */
+
+.contactUsImgWrap
+  > div
+  > div
+  > div
+  > div
+  > div
+  > div
+  > div
+  > div
+  > div
+  > div
+  > div {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px !important;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px !important;
 }
 
 .contactUsAddressMainWrap {
@@ -29,19 +47,19 @@
 }
 
 .contactUsLocationWrap {
-  position: absolute;
-  top: 76px;
-  right: 43px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 36px;
 }
 
 .contactUsLocationText {
   color: var(--gray-dark-text);
   width: 150px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 157%;
   position: absolute;
+  text-align: center;
   top: 8px;
   left: 12px;
 }
@@ -98,17 +116,8 @@
 @media screen and (min-width: 1728px) {
   .contactUsImgWrap {
     order: 1;
-  }
-
-  .contactUsImgMob {
-    display: none;
-  }
-
-  .contactUsImgDesc {
-    display: block;
     width: 668px;
     height: 490px;
-    border-radius: 12px;
   }
 
   .contactUsAddressMainWrap {
