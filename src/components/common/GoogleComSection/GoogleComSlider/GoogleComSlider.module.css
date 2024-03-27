@@ -4,7 +4,8 @@
 
 .sliderWrap {
   padding-left: 15px;
-  height: 318px;
+  padding-top: 1px; 
+  /*додав такий костиль до кращих часів. верхній бордер слайдів на мобілці перекривався*/
 }
 
 .slideWrap {

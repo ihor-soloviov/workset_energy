@@ -8,10 +8,13 @@
   flex-direction: column;
   align-items: center;
   gap: 194px;
+  padding: 0 24px;
+  margin: 0 auto;
+  width: 390px;
+  height: 100%;
 }
 
 .pricingPlansHeader {
-  max-width: 342px;
   display: flex;
   flex-direction: column;
   align-items: center;

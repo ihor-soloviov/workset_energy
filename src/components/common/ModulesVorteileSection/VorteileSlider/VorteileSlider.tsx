@@ -25,53 +25,59 @@ const VorteileSlider: React.FC<Props> = ({ sliderImages, sliderText }) => {
 
   return (
     <div className={styles.vorteileSliderWrap}>
-      <React.Fragment>
+      <div className={styles.vorteileImageWrap}>
         <Image
           className={styles.sliderImgMob}
           src={sliderImages[activeSlideIndex].mobile}
+          layout="fill"
+          objectFit="cover"
           alt="slide"
         />
         <Image
           className={styles.sliderImgDesk}
           src={sliderImages[activeSlideIndex].desktop}
+          layout="fill"
+          objectFit="cover"
           alt="slide"
         />
-      </React.Fragment>
+      </div>
       <div className={styles.sliderInfoWrap}>
-        <p className={`${styles.sliderInfoCounter} ${inter.className}`}>
-          0{activeSlideIndex + 1}
-        </p>
-        <div className={styles.sliderInfo}>
-          <h2 className={styles.sliderTitle}>
-            {sliderText[activeSlideIndex].title}
-          </h2>
-          <p className={`${styles.sliderText} ${inter.className}`}>
-            {sliderText[activeSlideIndex].text}
+        <div className={styles.sliderInfoContainer}>
+          <p className={`${styles.sliderInfoCounter} ${inter.className}`}>
+            0{activeSlideIndex + 1}
           </p>
-        </div>
-        <div className={styles.sliderControllers}>
-          <div className={styles.sliderDotsWrap}>
-            <SliderDots
-              handleActiveSlide={handleActiveSlide}
-              count={6}
-              activeSlide={activeSlideIndex}
-            />
+          <div className={styles.sliderInfo}>
+            <h2 className={styles.sliderTitle}>
+              {sliderText[activeSlideIndex].title}
+            </h2>
+            <p className={`${styles.sliderText} ${inter.className}`}>
+              {sliderText[activeSlideIndex].text}
+            </p>
           </div>
-          <div className={styles.sliderButtonsWrap}>
-            <Button
-              handleClick={handlePrevSlide}
-              type="button"
-              className={styles.sliderBtn}
-            >
-              <ArrowIcon className={styles.prevArrow} />
-            </Button>
-            <Button
-              handleClick={handleNextSlide}
-              type="button"
-              className={styles.sliderBtn}
-            >
-              <ArrowIcon className={styles.nextArrow} />
-            </Button>
+          <div className={styles.sliderControllers}>
+            <div className={styles.sliderDotsWrap}>
+              <SliderDots
+                handleActiveSlide={handleActiveSlide}
+                count={6}
+                activeSlide={activeSlideIndex}
+              />
+            </div>
+            <div className={styles.sliderButtonsWrap}>
+              <Button
+                handleClick={handlePrevSlide}
+                type="button"
+                className={styles.sliderBtn}
+              >
+                <ArrowIcon className={styles.prevArrow} />
+              </Button>
+              <Button
+                handleClick={handleNextSlide}
+                type="button"
+                className={styles.sliderBtn}
+              >
+                <ArrowIcon className={styles.nextArrow} />
+              </Button>
+            </div>
           </div>
         </div>
       </div>

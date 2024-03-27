@@ -1,7 +1,14 @@
 .vorteileSliderWrap {
   display: flex;
   flex-direction: column;
+  align-items: center;
   overflow: hidden;
+}
+
+.vorteileImageWrap {
+  position: relative;
+  height: 446px;
+  width: 390px;
 }
 
 .sliderImgDesk {
@@ -9,12 +16,20 @@
 }
 
 .sliderInfoWrap {
+  height: 496px;
+  width: 100%;
+  padding: 32px 0 64px;
+  background-color: var(--red-main);
+}
+
+.sliderInfoContainer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 496px;
-  padding: 32px 0 64px;
-  background-color: var(--red-main);
+  padding: 0 24px;
+  margin: 0 auto;
+  width: 390px;
+  height: 100%;
 }
 
 .sliderInfoCounter {
@@ -39,11 +54,6 @@
   font-weight: 400;
   line-height: 160%;
   color: var(--white-main);
-}
-
-.sliderControllers {
-  width: 342px;
-  margin: 0 auto;
 }
 
 .sliderDotsWrap {
@@ -95,7 +105,6 @@
 
   .sliderImgDesk {
     display: block;
-    max-height: 837px;
   }
 
   .sliderInfoWrap {
