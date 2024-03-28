@@ -3,6 +3,7 @@
 import styles from './HeroSection.module.css';
 import { inter } from '@/utils/fonts';
 import Button from '../Button/Button';
+import Image from 'next/image';
 import Link from 'next/link';
 import ArrowIcon from '/public/icons/small-arrow-btn.svg';
 import HeroFormModal from './HeroFormModal/HeroFormModal';
@@ -26,7 +27,7 @@ const HeroSection = ({
 }: HeroProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
-  const { toggleStyles, isStylesChanged } = useThankYouStore();
+  const { isStylesChanged } = useThankYouStore();
 
   console.log('isStylesChanged', isStylesChanged);
 
@@ -67,10 +68,22 @@ const HeroSection = ({
 
   return (
     <>
-      <section
-        style={{ backgroundImage: `url(${isDesktop ? imgDesc : imgMob})` }}
-        className={styles.heroSection}
-      >
+      <section className={styles.heroSection}>
+        <Image
+          className={styles.heroImgMob}
+          src={imgMob}
+          layout="fill"
+          objectFit="cover"
+          alt="slide"
+        />
+        <Image
+          className={styles.heroImgDesc}
+          src={imgDesc}
+          layout="fill"
+          objectFit="cover"
+          alt="slide"
+        />
+
         <div className={styles.heroContainer}>
           <div className={styles.heroTextWrap}>
             <h2 className={`${styles.heroMainTitle} ${styles[className]}`}>

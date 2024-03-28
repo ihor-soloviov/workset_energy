@@ -15,9 +15,10 @@ import { useThankYouStore } from '@/store/hero-store';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const { isStylesChanged } = useThankYouStore();
+  const { toggleStyles, isStylesChanged } = useThankYouStore();
 
   const handleMenuClick = () => setIsMenuOpen(!isMenuOpen);
+  const handleLinkClick = () => isStylesChanged && toggleStyles();
 
   return (
     <header
@@ -25,7 +26,11 @@ const Header = () => {
     >
       <div className={styles.headerContainer}>
         <nav className={styles.headerNav}>
-          <Link className={styles.headerLogoLink} href="/">
+          <Link
+            onClick={handleLinkClick}
+            className={styles.headerLogoLink}
+            href="/"
+          >
             {isStylesChanged ? (
               <WorksetColorIcon className={styles.headerLogo} />
             ) : (
@@ -43,7 +48,11 @@ const Header = () => {
           </Button>
           <HeaderNavList />
         </nav>
-        <Link href="/leadgen" className={styles.headerLeadLink}>
+        <Link
+          onClick={handleLinkClick}
+          href="/leadgen"
+          className={styles.headerLeadLink}
+        >
           Jetzt Berechnen
           <ArrowIcon className={styles.headerIcon} />
         </Link>

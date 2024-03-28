@@ -1,16 +1,27 @@
 .heroSection {
   width: 100%;
-  height: auto;
-
+  height: 634px;
+  position: relative;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 239px 0 125px;
+}
+
+.heroImgMob {
+}
+.heroImgDesc {
+  display: none;
 }
 
 .heroContainer {
   width: 100%;
   padding: 0 24px;
   margin: 0 auto;
+}
+
+.heroTextWrap {
+  position: relative;
+  z-index: 2;
 }
 
 .heroMainTitle {
@@ -92,6 +103,13 @@
     padding: 219px 0 221px;
   }
 
+  .heroImgMob {
+    display: none;
+  }
+  .heroImgDesc {
+    display: block;
+  }
+
   .heroContainer {
     width: 1728px;
     padding: 0 117px 0 120px;
@@ -147,5 +165,4 @@
     height: 52px;
     font-size: 16px;
   }
- 
 }
