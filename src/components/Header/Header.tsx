@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './Header.module.css';
 import MobileMenu from './MobileMenu/MobileMenu';
 import Button from '../common/Button/Button';
@@ -11,14 +11,23 @@ import WorksetColorIcon from '/public/icons/workset-color.svg';
 import BurgerIcon from '/public/icons/burger.svg';
 import ArrowIcon from '/public/icons/small-arrow-btn.svg';
 import { useThankYouStore } from '@/store/hero-store';
+import { usePathname } from 'next/navigation';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const pathname = usePathname();
   const { toggleStyles, isStylesChanged } = useThankYouStore();
+  console.log(isStylesChanged);
+  console.log(pathname);
 
   const handleMenuClick = () => setIsMenuOpen(!isMenuOpen);
   const handleLinkClick = () => isStylesChanged && toggleStyles();
+  const handleLogoClick = () =>
+    pathname !== '/' && isStylesChanged && toggleStyles();
+
+  useEffect(() => {
+    pathname === '/karriere' && toggleStyles();
+  }, [pathname, toggleStyles]);
 
   return (
     <header
@@ -27,7 +36,7 @@ const Header = () => {
       <div className={styles.headerContainer}>
         <nav className={styles.headerNav}>
           <Link
-            onClick={handleLinkClick}
+            onClick={handleLogoClick}
             className={styles.headerLogoLink}
             href="/"
           >

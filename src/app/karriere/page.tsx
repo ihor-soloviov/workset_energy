@@ -1,7 +1,12 @@
+import KarriereHero from '@/components/karriere/KarriereHero/KarriereHero';
 import React from 'react';
 
 const Karriere = () => {
-  return <div>Karriere</div>;
+  return (
+    <>
+      <KarriereHero />
+    </>
+  );
 };
 
 export default Karriere;

@@ -110,6 +110,7 @@
     width: 460px;
     height: 530px;
     position: static;
+    overflow-y: unset;
     border-radius: 12px;
   }
 

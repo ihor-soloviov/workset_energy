@@ -7,7 +7,7 @@ interface Props {
 }
 
 const Job = ({ params: { id } }: Props) => {
-  return <div>Job id is: {id}</div>;
+  return <div>child: {id}</div>;
 };
 
 export default Job;

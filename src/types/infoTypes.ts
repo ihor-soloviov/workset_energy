@@ -57,6 +57,10 @@ type VorteileSliderT = {
   sliderText: VorteileSliderItems[];
 };
 
+type HeroItem = {
+  title: string;
+} & ImportedImages;
+
 export type {
   VisionLinkItem,
   VorteileSliderItems,
@@ -67,4 +71,5 @@ export type {
   RedHelp,
   VorteileSliderT,
   NavLinkItem,
+  HeroItem,
 };
