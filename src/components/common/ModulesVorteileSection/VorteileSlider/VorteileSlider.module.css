@@ -114,6 +114,7 @@
 
   .prev {
     transform: translateX(-100%);
+    z-index: 3;
   }
 
   .next {

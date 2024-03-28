@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { inter } from '@/utils/fonts';
 import styles from './VorteileSlider.module.css';
 
@@ -34,6 +34,10 @@ const VorteileSlider: React.FC<Props> = ({ sliderImages, sliderText }) => {
       setAnimateTo('');
     }, 450);
   };
+
+  useEffect(() => {
+    console.log(animateTo);
+  }, [animateTo]);
 
   const handleActiveSlide = (index: number) => setActiveSlideIndex(index);
 
