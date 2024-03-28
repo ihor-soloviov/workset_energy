@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { inter } from '@/utils/fonts';
 import styles from './VorteileSlider.module.css';
 
@@ -16,41 +16,58 @@ const VorteileSlider: React.FC<Props> = ({ sliderImages, sliderText }) => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
   const [animateTo, setAnimateTo] = useState('');
 
+  const nextIndex = activeSlideIndex === 5 ? 0 : activeSlideIndex + 1;
+  const prevIndex = activeSlideIndex === 0 ? 5 : activeSlideIndex - 1;
+
   const handlePrevSlide = () => {
-    setAnimateTo('left');
+    setAnimateTo('toPrev');
     setTimeout(() => {
       setActiveSlideIndex(prev => (prev === 0 ? 5 : prev - 1));
-    }, 600);
-    setTimeout(() => {
       setAnimateTo('');
-    }, 630);
+    }, 450);
   };
 
   const handleNextSlide = () => {
-    setAnimateTo('right');
+    setAnimateTo('toNext');
     setTimeout(() => {
       setActiveSlideIndex(prev => (prev === 5 ? 0 : prev + 1));
-    }, 600);
-    setTimeout(() => {
       setAnimateTo('');
-    }, 630);
+    }, 450);
   };
+
+  useEffect(() => {
+    console.log(animateTo);
+  }, [animateTo]);
 
   const handleActiveSlide = (index: number) => setActiveSlideIndex(index);
 
   return (
     <div className={styles.vorteileSliderWrap}>
       <div className={styles.vorteileImageWrap}>
-        <Image
+        {/* <Image
           className={styles.sliderImgMob}
           src={sliderImages[activeSlideIndex].mobile}
           layout="fill"
           objectFit="cover"
           alt="slide"
+        /> */}
+        <Image
+          className={`${styles.sliderImgDesk} ${styles.prev} ${animateTo === 'toPrev' ? styles[animateTo] : ''}`}
+          src={sliderImages[prevIndex].desktop}
+          layout="fill"
+          objectFit="cover"
+          alt="slide"
         />
         <Image
-          className={`${styles.sliderImgDesk} ${styles[animateTo]}`}
+          className={styles.sliderImgDesk}
           src={sliderImages[activeSlideIndex].desktop}
+          layout="fill"
+          objectFit="cover"
+          alt="slide"
+        />
+        <Image
+          className={`${styles.sliderImgDesk} ${styles.next} ${animateTo === 'toNext' ? styles[animateTo] : ''}`}
+          src={sliderImages[nextIndex].desktop}
           layout="fill"
           objectFit="cover"
           alt="slide"
