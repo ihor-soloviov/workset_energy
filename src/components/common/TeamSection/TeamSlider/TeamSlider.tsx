@@ -1,5 +1,5 @@
 'use client';
-
+import 'swiper/css';
 import React, { useEffect, useState } from 'react';
 import styles from './TeamSlider.module.css';
 import { inter } from '@/utils/fonts';

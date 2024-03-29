@@ -13,31 +13,26 @@ import KarriereSlide5Desk from '/public/images/karriere-page/hero-slide-5-desk.j
 export const heroItems: HeroItem[] = [
   {
     title: 'Trainee Sales Manager',
-
     mobile: KarriereSlide1Mob,
     desktop: KarriereSlide1Desk,
   },
   {
     title: 'Junior Sales Manager',
-
     mobile: KarriereSlide2Mob,
     desktop: KarriereSlide2Desk,
   },
   {
     title: 'Middle Sales Manager',
-
     mobile: KarriereSlide3Mob,
     desktop: KarriereSlide3Desk,
   },
   {
     title: 'Elektroinstallateur',
-
     mobile: KarriereSlide4Mob,
     desktop: KarriereSlide4Desk,
   },
   {
     title: 'PV-Modul-Installateur',
-
     mobile: KarriereSlide5Mob,
     desktop: KarriereSlide5Desk,
   },
