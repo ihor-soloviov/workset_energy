@@ -119,6 +119,7 @@
     height: 726px;
     padding: 56px 0;
     position: relative;
+    overflow-y: unset;
   }
 
   .leadContainer {

@@ -9,21 +9,23 @@ import { navLinkItems } from './navlist';
 const HeaderNavList = () => {
   const pathname = usePathname();
 
-  const { toggleStyles, isStylesChanged } = useThankYouStore();
+  const { isThankYouOpen, setStylesChangedToFalse } = useThankYouStore();
 
-  const handleLinkClick = () => isStylesChanged && toggleStyles();
+  const handleLinkClick = () => {
+    isThankYouOpen && setStylesChangedToFalse();
+  };
 
   return (
     <ul className={`${styles.headerList} ${inter.className}`}>
       {navLinkItems.map(({ title, linkTo }) => (
         <li
           key={title}
-          className={`${styles.headerItem} ${pathname === linkTo ? styles.active : ''} ${isStylesChanged ? styles.blackStyle : ''}`}
+          className={`${styles.headerItem} ${pathname === linkTo ? styles.active : ''} ${isThankYouOpen ? styles.blackStyle : ''}`}
         >
           <Link
             onClick={handleLinkClick}
             href={linkTo}
-            className={`${styles.headerNavLink} ${isStylesChanged ? styles.blackStyle : ''}`}
+            className={`${styles.headerNavLink} ${isThankYouOpen ? styles.blackStyle : ''}`}
           >
             {title}
           </Link>

@@ -14,24 +14,41 @@ import { useThankYouStore } from '@/store/hero-store';
 import { usePathname } from 'next/navigation';
 
 const Header = () => {
+  const [isDesktop, setIsDesktop] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
-  const { toggleStyles, isStylesChanged } = useThankYouStore();
-  console.log(isStylesChanged);
-  console.log(pathname);
+  const { isThankYouOpen, setStylesChangedToFalse, setStylesChangedToTrue } =
+    useThankYouStore();
 
   const handleMenuClick = () => setIsMenuOpen(!isMenuOpen);
-  const handleLinkClick = () => isStylesChanged && toggleStyles();
-  const handleLogoClick = () =>
-    pathname !== '/' && isStylesChanged && toggleStyles();
+  const handleLinkClick = () => {
+    isThankYouOpen && setStylesChangedToFalse();
+  };
+  const handleLogoClick = () => {
+    isThankYouOpen && setStylesChangedToFalse();
+  };
 
   useEffect(() => {
-    pathname === '/karriere' && toggleStyles();
-  }, [pathname, toggleStyles]);
+    pathname === '/karriere' && setStylesChangedToTrue();
+  }, [pathname, setStylesChangedToTrue]);
+
+  useEffect(() => {
+    setIsDesktop(window.innerWidth > 1728);
+
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth > 1728);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <header
-      className={`${styles.header} ${isStylesChanged ? styles.blackStyle : ''}`}
+      className={`${styles.header} ${(isDesktop && isThankYouOpen) || pathname === '/karriere' ? styles.blackStyle : ''}`}
     >
       <div className={styles.headerContainer}>
         <nav className={styles.headerNav}>
@@ -40,7 +57,7 @@ const Header = () => {
             className={styles.headerLogoLink}
             href="/"
           >
-            {isStylesChanged ? (
+            {(isDesktop && isThankYouOpen) || pathname === '/karriere' ? (
               <WorksetColorIcon className={styles.headerLogo} />
             ) : (
               <WorksetIcon className={styles.headerLogo} />
@@ -52,7 +69,7 @@ const Header = () => {
             type="button"
           >
             <BurgerIcon
-              className={`${styles.headerBurgerIcon} ${isStylesChanged ? styles.blackStyle : ''}`}
+              className={`${styles.headerBurgerIcon} ${(isDesktop && isThankYouOpen) || pathname === '/karriere' ? styles.blackStyle : ''}`}
             />
           </Button>
           <HeaderNavList />

@@ -27,9 +27,10 @@ const HeroSection = ({
 }: HeroProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
-  const { isStylesChanged } = useThankYouStore();
+  const { isThankYouOpen, setStylesChangedToFalse, setStylesChangedToTrue } =
+    useThankYouStore();
 
-  console.log('isStylesChanged', isStylesChanged);
+  console.log('isStylesChanged', isThankYouOpen);
 
   const handleModalClick = () => setIsModalOpen(!isModalOpen);
   const handleBtnClick = () => {
