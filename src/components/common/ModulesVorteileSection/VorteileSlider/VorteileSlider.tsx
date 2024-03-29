@@ -8,67 +8,34 @@ import Button from '../../Button/Button';
 import ArrowIcon from '/public/icons/slide-arrow.svg';
 import SliderDots from '../../SliderDots/SliderDots';
 import { VorteileSliderT } from '@/types/infoTypes';
-import Image from 'next/image';
 import { useSliderStore } from '@/store/sliders-store';
+import SliderWrap from '../SliderWrap/SliderWrap';
 
 type Props = VorteileSliderT;
 
 const VorteileSlider: React.FC<Props> = ({ sliderImages, sliderText }) => {
-  const [animateTo, setAnimateTo] = useState('');
-  const { currIndex, prevIndex, nextIndex, setIndex } = useSliderStore();
+  const { currIndex, prevIndex, nextIndex, setIndex, setAnimate } =
+    useSliderStore();
 
   const handlePrevSlide = () => {
-    setAnimateTo('toPrev');
+    setAnimate('toPrev');
     setTimeout(() => {
       setIndex(prevIndex);
-      setAnimateTo('');
+      setAnimate('');
     }, 450);
   };
 
   const handleNextSlide = () => {
-    setAnimateTo('toNext');
+    setAnimate('toNext');
     setTimeout(() => {
       setIndex(nextIndex);
-      setAnimateTo('');
+      setAnimate('');
     }, 450);
   };
 
-  useEffect(() => {
-    console.log(animateTo);
-  }, [animateTo]);
-
   return (
     <div className={styles.vorteileSliderWrap}>
-      <div className={styles.vorteileImageWrap}>
-        {/* <Image
-          className={styles.sliderImgMob}
-          src={sliderImages[activeSlideIndex].mobile}
-          layout="fill"
-          objectFit="cover"
-          alt="slide"
-        /> */}
-        <Image
-          className={`${styles.sliderImgDesk} ${styles.prev} ${animateTo === 'toPrev' ? styles[animateTo] : ''}`}
-          src={sliderImages[prevIndex].desktop}
-          layout="fill"
-          objectFit="cover"
-          alt="slide"
-        />
-        <Image
-          className={styles.sliderImgDesk}
-          src={sliderImages[currIndex].desktop}
-          layout="fill"
-          objectFit="cover"
-          alt="slide"
-        />
-        <Image
-          className={`${styles.sliderImgDesk} ${styles.next} ${animateTo === 'toNext' ? styles[animateTo] : ''}`}
-          src={sliderImages[nextIndex].desktop}
-          layout="fill"
-          objectFit="cover"
-          alt="slide"
-        />
-      </div>
+      <SliderWrap sliderImages={sliderImages} />
       <div className={styles.sliderInfoWrap}>
         <div className={styles.sliderInfoContainer}>
           <p className={`${styles.sliderInfoCounter} ${inter.className}`}>

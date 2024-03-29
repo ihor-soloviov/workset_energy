@@ -5,6 +5,8 @@ type State = {
   prevIndex: number;
   nextIndex: number;
   setIndex: (index: number) => void;
+  animateTo: string;
+  setAnimate: (direction: string) => void;
 };
 
 export const useSliderStore = create<State>(set => ({
@@ -26,4 +28,7 @@ export const useSliderStore = create<State>(set => ({
         nextIndex: newIndex === 5 ? 0 : newIndex + 1,
       };
     }),
+
+  animateTo: '',
+  setAnimate: (direction: string) => set(state => ({ animateTo: direction })),
 }));
