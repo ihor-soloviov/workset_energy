@@ -12,21 +12,36 @@ import BurgerIcon from '/public/icons/burger.svg';
 import ArrowIcon from '/public/icons/small-arrow-btn.svg';
 import { useThankYouStore } from '@/store/hero-store';
 import { usePathname } from 'next/navigation';
+import { log } from 'console';
 
 const Header = () => {
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
+  const [currentPathname, setCurrentPathname] = useState('');
+
   const { isThankYouOpen, setStylesChangedToFalse, setStylesChangedToTrue } =
     useThankYouStore();
+  console.log(isThankYouOpen);
+  console.log(currentPathname);
+  console.log(pathname);
 
   const handleMenuClick = () => setIsMenuOpen(!isMenuOpen);
   const handleLinkClick = () => {
     isThankYouOpen && setStylesChangedToFalse();
+    setCurrentPathname(pathname);
   };
   const handleLogoClick = () => {
     isThankYouOpen && setStylesChangedToFalse();
+    setCurrentPathname(pathname);
   };
+  useEffect(() => {
+    setCurrentPathname(pathname);
+  }, []);
+
+  useEffect(() => {
+    pathname !== currentPathname && setStylesChangedToFalse();
+  }, [pathname, isDesktop, currentPathname, setStylesChangedToFalse]);
 
   useEffect(() => {
     pathname === '/karriere' && setStylesChangedToTrue();

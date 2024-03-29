@@ -8,8 +8,7 @@ import Button from '../../../Button/Button';
 import { useThankYouStore } from '@/store/hero-store';
 
 const HeroForm = () => {
-  const { setStylesChangedToTrue, setStylesChangedToFalse } =
-    useThankYouStore();
+  const { setStylesChangedToTrue } = useThankYouStore();
 
   const { handleSubmit, errors, touched, getFieldProps } = useFormik({
     initialValues: {
