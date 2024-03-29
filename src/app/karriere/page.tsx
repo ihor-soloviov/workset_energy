@@ -1,6 +1,7 @@
 import EmployeeSection from '@/components/common/EmployeeSection/EmployeeSection';
 import RedHelpBlock from '@/components/common/RedHelpSection/RedHelpSection';
 import AdvantagesSection from '@/components/karriere/AdvatnagesSection/AdvantagesSection';
+import KarriereFormSection from '@/components/karriere/KarriereFormSection/KarriereFormSection';
 import KarriereHero from '@/components/karriere/KarriereHero/KarriereHero';
 import OfferSection from '@/components/karriere/OfferSection/OfferSection';
 import React from 'react';
@@ -12,6 +13,7 @@ const Karriere = () => {
       <AdvantagesSection />
       <OfferSection />
       <EmployeeSection />
+      <KarriereFormSection />
       <RedHelpBlock />
     </>
   );
