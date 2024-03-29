@@ -9,20 +9,18 @@ import ArrowIcon from '/public/icons/slide-arrow.svg';
 import SliderDots from '../../SliderDots/SliderDots';
 import { VorteileSliderT } from '@/types/infoTypes';
 import Image from 'next/image';
+import { useSliderStore } from '@/store/sliders-store';
 
 type Props = VorteileSliderT;
 
 const VorteileSlider: React.FC<Props> = ({ sliderImages, sliderText }) => {
-  const [activeSlideIndex, setActiveSlideIndex] = useState(0);
   const [animateTo, setAnimateTo] = useState('');
-
-  const nextIndex = activeSlideIndex === 5 ? 0 : activeSlideIndex + 1;
-  const prevIndex = activeSlideIndex === 0 ? 5 : activeSlideIndex - 1;
+  const { currIndex, prevIndex, nextIndex, setIndex } = useSliderStore();
 
   const handlePrevSlide = () => {
     setAnimateTo('toPrev');
     setTimeout(() => {
-      setActiveSlideIndex(prev => (prev === 0 ? 5 : prev - 1));
+      setIndex(prevIndex);
       setAnimateTo('');
     }, 450);
   };
@@ -30,7 +28,7 @@ const VorteileSlider: React.FC<Props> = ({ sliderImages, sliderText }) => {
   const handleNextSlide = () => {
     setAnimateTo('toNext');
     setTimeout(() => {
-      setActiveSlideIndex(prev => (prev === 5 ? 0 : prev + 1));
+      setIndex(nextIndex);
       setAnimateTo('');
     }, 450);
   };
@@ -38,8 +36,6 @@ const VorteileSlider: React.FC<Props> = ({ sliderImages, sliderText }) => {
   useEffect(() => {
     console.log(animateTo);
   }, [animateTo]);
-
-  const handleActiveSlide = (index: number) => setActiveSlideIndex(index);
 
   return (
     <div className={styles.vorteileSliderWrap}>
@@ -60,7 +56,7 @@ const VorteileSlider: React.FC<Props> = ({ sliderImages, sliderText }) => {
         />
         <Image
           className={styles.sliderImgDesk}
-          src={sliderImages[activeSlideIndex].desktop}
+          src={sliderImages[currIndex].desktop}
           layout="fill"
           objectFit="cover"
           alt="slide"
@@ -76,22 +72,22 @@ const VorteileSlider: React.FC<Props> = ({ sliderImages, sliderText }) => {
       <div className={styles.sliderInfoWrap}>
         <div className={styles.sliderInfoContainer}>
           <p className={`${styles.sliderInfoCounter} ${inter.className}`}>
-            0{activeSlideIndex + 1}
+            0{currIndex + 1}
           </p>
           <div className={styles.sliderInfo}>
             <h2 className={styles.sliderTitle}>
-              {sliderText[activeSlideIndex].title}
+              {sliderText[currIndex].title}
             </h2>
             <p className={`${styles.sliderText} ${inter.className}`}>
-              {sliderText[activeSlideIndex].text}
+              {sliderText[currIndex].text}
             </p>
           </div>
           <div className={styles.sliderControllers}>
             <div className={styles.sliderDotsWrap}>
               <SliderDots
-                handleActiveSlide={handleActiveSlide}
+                handleActiveSlide={setIndex}
                 count={6}
-                activeSlide={activeSlideIndex}
+                activeSlide={currIndex}
               />
             </div>
             <div className={styles.sliderButtonsWrap}>
