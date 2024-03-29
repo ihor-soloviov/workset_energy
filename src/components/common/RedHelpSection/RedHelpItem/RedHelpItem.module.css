@@ -86,12 +86,17 @@
   fill: var(--red-main);
 }
 
+@media screen and (min-width: 390px) {
+  .redHelpItem {
+    width: 342px;
+  }
+}
+
 @media screen and (min-width: 1728px) {
   .redHelpItem {
     padding: 48px 36px;
     height: 372px;
     width: 392px;
-    margin-bottom: 24px;
   }
 
   .text {
