@@ -12,58 +12,44 @@ import BurgerIcon from '/public/icons/burger.svg';
 import ArrowIcon from '/public/icons/small-arrow-btn.svg';
 import { useThankYouStore } from '@/store/hero-store';
 import { usePathname } from 'next/navigation';
-import { log } from 'console';
 
 const Header = () => {
-  const [isDesktop, setIsDesktop] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
   const [currentPathname, setCurrentPathname] = useState('');
 
   const { isThankYouOpen, setStylesChangedToFalse, setStylesChangedToTrue } =
     useThankYouStore();
-  console.log(isThankYouOpen);
-  console.log(currentPathname);
-  console.log(pathname);
+
+  console.log('pathname', pathname);
+
+  console.log('currentPathname', currentPathname);
+
+  console.log('isThankYouOpen', isThankYouOpen);
 
   const handleMenuClick = () => setIsMenuOpen(!isMenuOpen);
   const handleLinkClick = () => {
     isThankYouOpen && setStylesChangedToFalse();
-    setCurrentPathname(pathname);
   };
   const handleLogoClick = () => {
     isThankYouOpen && setStylesChangedToFalse();
-    setCurrentPathname(pathname);
   };
+
   useEffect(() => {
     setCurrentPathname(pathname);
-  }, []);
-
-  useEffect(() => {
-    pathname !== currentPathname && setStylesChangedToFalse();
-  }, [pathname, isDesktop, currentPathname, setStylesChangedToFalse]);
-
-  useEffect(() => {
     pathname === '/karriere' && setStylesChangedToTrue();
-  }, [pathname, setStylesChangedToTrue]);
-
-  useEffect(() => {
-    setIsDesktop(window.innerWidth > 1728);
-
-    const handleResize = () => {
-      setIsDesktop(window.innerWidth > 1728);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+    pathname !== currentPathname && setStylesChangedToFalse();
+  }, [
+    pathname,
+    currentPathname,
+    setCurrentPathname,
+    setStylesChangedToTrue,
+    setStylesChangedToFalse,
+  ]);
 
   return (
     <header
-      className={`${styles.header} ${(isDesktop && isThankYouOpen) || pathname === '/karriere' ? styles.blackStyle : ''}`}
+      className={`${styles.header} ${isThankYouOpen ? styles.blackStyle : ''}`}
     >
       <div className={styles.headerContainer}>
         <nav className={styles.headerNav}>
@@ -72,7 +58,7 @@ const Header = () => {
             className={styles.headerLogoLink}
             href="/"
           >
-            {(isDesktop && isThankYouOpen) || pathname === '/karriere' ? (
+            {isThankYouOpen ? (
               <WorksetColorIcon className={styles.headerLogo} />
             ) : (
               <WorksetIcon className={styles.headerLogo} />
@@ -84,7 +70,7 @@ const Header = () => {
             type="button"
           >
             <BurgerIcon
-              className={`${styles.headerBurgerIcon} ${(isDesktop && isThankYouOpen) || pathname === '/karriere' ? styles.blackStyle : ''}`}
+              className={`${styles.headerBurgerIcon} ${isThankYouOpen ? styles.blackStyle : ''}`}
             />
           </Button>
           <HeaderNavList />
