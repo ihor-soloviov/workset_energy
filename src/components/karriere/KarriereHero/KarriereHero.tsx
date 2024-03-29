@@ -76,11 +76,7 @@ const KarriereHero = () => {
               Unternehmen. Komm zu uns, um deine Ambitionen zu verwirklichen und
               neue Höhen in deiner Karriere zu erreichen
             </p>
-            <Button
-              handleClick={handleNextSlide}
-              className={styles.HeroBtn}
-              type="button"
-            >
+            <Button className={styles.HeroBtn} type="button">
               Bewerben
             </Button>
           </div>
