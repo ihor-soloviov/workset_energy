@@ -21,16 +21,8 @@ const Header = () => {
   const { isThankYouOpen, setStylesChangedToFalse, setStylesChangedToTrue } =
     useThankYouStore();
 
-  console.log('pathname', pathname);
-
-  console.log('currentPathname', currentPathname);
-
-  console.log('isThankYouOpen', isThankYouOpen);
-
   const handleMenuClick = () => setIsMenuOpen(!isMenuOpen);
-  const handleLinkClick = () => {
-    isThankYouOpen && setStylesChangedToFalse();
-  };
+
   const handleLogoClick = () => {
     isThankYouOpen && setStylesChangedToFalse();
   };
@@ -75,11 +67,7 @@ const Header = () => {
           </Button>
           <HeaderNavList />
         </nav>
-        <Link
-          onClick={handleLinkClick}
-          href="/leadgen"
-          className={styles.headerLeadLink}
-        >
+        <Link href="/leadgen" className={styles.headerLeadLink}>
           Jetzt Berechnen
           <ArrowIcon className={styles.headerIcon} />
         </Link>
