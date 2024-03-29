@@ -14,7 +14,7 @@ import pvSlide6Desk from '/public/images/pv-anlagen-page/pvSlide6Desk.jpg';
 export const vorteileItems: VorteileSliderItems[] = [
   {
     title: 'Vorteile einer PV-Anlage',
-    text: 'Solarmodule sind eine fortschrittliche und effiziente Technologie, die viele Vorteile bietet und weltweit immer beliebter wird. Hier sind einige Gründe, warum Sonnenkollektoren eine coole und rentable Investition sind',
+    text: 'PV-Anlagen sind eine fortschrittliche und effiziente Technologie, die viele Vorteile bietet und weltweit immer beliebter wird. Hier sind einige Gründe, warum Investitionen in Photovoltaik schlau und einträglich sind.',
   },
   {
     title: 'Energiekosten sparen',
