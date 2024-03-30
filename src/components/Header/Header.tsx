@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 'use client';
 
 import Link from 'next/link';
@@ -31,13 +32,7 @@ const Header = () => {
     setCurrentPathname(pathname);
     pathname === '/karriere' && setStylesChangedToTrue();
     pathname !== currentPathname && setStylesChangedToFalse();
-  }, [
-    pathname,
-    currentPathname,
-    setCurrentPathname,
-    setStylesChangedToTrue,
-    setStylesChangedToFalse,
-  ]);
+  }, [pathname, currentPathname]);
 
   return (
     <header
