@@ -1,0 +1,81 @@
+.jobInfoList {
+  display: flex;
+  padding: 32px 31px;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 342px;
+  height: 298px;
+  background-color: var(--red-main);
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+.jobInfoItem {
+  width: 100%;
+  padding-bottom: 8px;
+  height: 58px;
+  border-bottom: 0.3px solid var(--white-main);
+}
+
+.jobInfoTitleWrap {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-bottom: 2px;
+}
+
+.jobInfoIcon {
+  fill: var(--white-main);
+  width: 14px;
+  height: 14px;
+}
+
+.jobInfoTitle {
+  color: var(--white-main);
+  font-weight: 500;
+  line-height: 160%;
+  width: fit-content;
+  font-size: 14px;
+}
+
+.jobInfoText {
+  color: var(--white-main);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 160%;
+}
+
+@media screen and (min-width: 1728px) {
+  .jobInfoList {
+    padding: 48px;
+    gap: 54px;
+    width: 530px;
+    height: 442px;
+    border-radius: 12px;
+  }
+
+  .jobInfoItem {
+    padding-bottom: 16px;
+    height: 80px;
+  }
+
+  .jobInfoTitleWrap {
+    margin-bottom: 6px;
+  }
+
+  .jobInfoIcon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .jobInfoTitle {
+    font-size: 20px;
+    line-height: normal;
+  }
+
+  .jobInfoText {
+    font-size: 26px;
+    line-height: 130%;
+  }
+}

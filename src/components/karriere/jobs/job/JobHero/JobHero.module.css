@@ -1,0 +1,130 @@
+.JobHeroSection {
+  padding: 150px 0 98px;
+  position: relative;
+  height: 670px;
+}
+
+.JobHeroContainer {
+  width: 100%;
+  padding: 0 24px;
+  margin: 0 auto;
+  z-index: 2;
+  position: relative;
+}
+
+.JobHeroImgDesc {
+  display: none;
+}
+
+.jobHeroLink {
+  color: var(--white-main);
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 192px;
+  margin-bottom: 90px;
+}
+
+.jobHeroIcon {
+  fill: var(--white-main);
+  width: 18px;
+  height: 18px;
+}
+
+.JobHeroTitle {
+  color: var(--white-main);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 130%;
+  width: 330px;
+  margin-right: auto;
+  margin-bottom: 16px;
+}
+
+.JobHeroTextMob {
+  width: 339px;
+  color: var(--white-main);
+  font-size: 16px;
+  line-height: 160%;
+  margin-right: auto;
+  margin-bottom: 24px;
+}
+
+.JobHeroTextDesk {
+  display: none;
+}
+
+.JobHeroBtn {
+  width: 164px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  background-color: var(--red-main);
+  margin-right: auto;
+  color: var(--gray-input);
+  font-size: 16px;
+  gap: 8px;
+  font-weight: 600;
+  padding: 14px 31px;
+}
+
+.JobHeroIcon {
+  stroke: var(--gray-input);
+  width: 23px;
+  height: 23px;
+}
+
+@media screen and (min-width: 390px) {
+  .JobHeroContainer {
+    width: 390px;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .JobHeroSection {
+    padding: 192px 0 207px;
+    height: 852px;
+  }
+
+  .JobHeroContainer {
+    width: 1728px;
+    padding: 0 117px;
+  }
+
+  .JobHeroImgMob {
+    display: none;
+  }
+
+  .JobHeroImgDesc {
+    display: block;
+  }
+
+  .jobHeroLink {
+    font-size: 18px;
+    width: 214px;
+    margin-bottom: 171px;
+  }
+
+  .JobHeroTitle {
+    font-size: 64px;
+    width: 674px;
+  }
+
+  .JobHeroTextMob {
+    display: none;
+  }
+
+  .JobHeroTextDesk {
+    display: block;
+    color: var(--white-main);
+    font-size: 20px;
+    line-height: 160%;
+    margin-bottom: 48px;
+    width: 478px;
+  }
+}

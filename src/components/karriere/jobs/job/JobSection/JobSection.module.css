@@ -1,0 +1,9 @@
+.jobSection {
+  padding: 64px 0 90px;
+}
+
+@media screen and (min-width: 1728px) {
+  .jobSection {
+    padding: 200px 0 100px;
+  }
+}

@@ -94,10 +94,27 @@
   border-radius: 6px;
   background-color: var(--red-main);
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.04);
+  transition:
+    background-color 250ms var(--cubic),
+    color 250ms var(--cubic),
+    border-color 250ms var(--cubic),
+    box-shadow 250ms var(--cubic);
+}
+
+.offerLink:hover {
+  color: var(--red-main);
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: unset;
 }
 
 .offerIcon {
   stroke: var(--white-main);
+  transition: stroke 250ms var(--cubic);
+}
+
+.offerLink:hover .offerIcon {
+  stroke: var(--red-main);
 }
 
 @media screen and (min-width: 1728px) {
@@ -109,6 +126,7 @@
     display: flex;
     flex-direction: row;
     height: 360px;
+    justify-content: center;
   }
 
   .offerImgMob {
@@ -187,16 +205,5 @@
     line-height: 150%;
     letter-spacing: -0.16px;
     margin-bottom: 38px;
-  }
-
-  .offerLink {
-    color: var(--red-main);
-    background-color: transparent;
-    border-color: transparent;
-    box-shadow: unset;
-  }
-
-  .offerIcon {
-    stroke: var(--red-main);
   }
 }

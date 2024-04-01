@@ -1,0 +1,26 @@
+.jobsSection {
+  padding: 90px 0;
+}
+
+.jobsContainer {
+  width: 100%;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 390px) {
+  .jobsContainer {
+    width: 390px;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .jobsSection {
+    padding: 64px 0 130px;
+  }
+
+  .jobsContainer {
+    width: 1728px;
+    padding: 0 254px;
+  }
+}

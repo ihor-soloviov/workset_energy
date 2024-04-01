@@ -8,6 +8,7 @@ import Button from '../common/Button/Button';
 import FooterSocialList from './FooterSocialList/FooterSocialList';
 import FooterMainList from './FooterMainList/FooterMainList';
 import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 const Footer = () => {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
@@ -19,6 +20,15 @@ const Footer = () => {
         <footer className={styles.footer}>
           <div className={styles.footerContainer}>
             <FooterMainList />
+
+            <div className={styles.footerCookieWrap}>
+              <Link href="" className={styles.cookieText}>
+                Cookie-Einstellungen
+              </Link>
+              <Link href="" className={styles.impressumText}>
+                Impressum
+              </Link>
+            </div>
             <Button
               type="button"
               handleClick={scrollToTop}
