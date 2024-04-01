@@ -6,13 +6,15 @@ import VorteileSection from '@/components/common/ModulesVorteileSection/Vorteile
 import { stormspeicherHero } from '@/utils/hero';
 import { stormSteicherVideo } from '@/utils/video';
 import { sliderImages, vorteileItems } from './slides';
+import SwitcherSection from '@/components/stormspeicher/SwitcherSection/SwitcherSection';
 
 const Stormspeicher = () => {
   return (
     <>
       <HeroSection {...stormspeicherHero} />
-      <VideoSection {...stormSteicherVideo} />
-      <VorteileSection sliderText={vorteileItems} sliderImages={sliderImages} />
+      {/* <VideoSection {...stormSteicherVideo} /> */}
+      {/* <VorteileSection sliderText={vorteileItems} sliderImages={sliderImages} /> */}
+      <SwitcherSection />
     </>
   );
 };

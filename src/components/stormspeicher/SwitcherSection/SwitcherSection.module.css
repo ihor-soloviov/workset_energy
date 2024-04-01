@@ -1,0 +1,115 @@
+.switcherSection {
+  padding: 79px 0 89px;
+  background-color: var(--gray-input);
+  transition: all 0.2s ease-in-out;
+}
+
+.switcherSectionDark {
+  background-color: var(--black-main);
+}
+
+.switcherContainer {
+  width: 390px;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+.switcherWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 37px;
+}
+
+.switcherTitle {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 130%;
+
+  margin-bottom: 18px;
+}
+
+.switcherTitleDark {
+  color: var(--white-main);
+}
+
+.switcherArticle {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
+
+  color: var(--gray-text);
+}
+
+.switcherArticleDark {
+  color: var(--gray-input);
+}
+
+.switcherAnim {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+
+  padding: 54px 14px 23px;
+
+  border-radius: 12px;
+  border: 0.391px solid var(--gray-stroke);
+  background: var(--white-main);
+}
+
+.switcherAnimDark {
+  background: var(--gray-dark-text);
+}
+
+.switcherAnimMob {
+  width: 100%;
+  height: auto;
+}
+
+.switcherAnimDesk {
+  display: none;
+}
+
+@media screen and (min-width: 1728px) {
+  .switcherSection {
+    padding: 174px 0 196px;
+  }
+
+  .switcherContainer {
+    width: 1728px;
+    padding: 0 118px;
+  }
+
+  .switcherWrap {
+    flex-direction: row;
+    gap: 69px;
+  }
+
+  .switcherInfo {
+    width: 549px;
+    padding-top: 158px;
+  }
+
+  .switcherTitle {
+    font-size: 50px;
+  }
+
+  .switcherArticle {
+    max-width: 529px;
+  }
+
+  .switcherAnim {
+    gap: 56px;
+    padding: 52px 86px 16px;
+  }
+
+  .switcherAnimMob {
+    display: none;
+  }
+
+  .switcherAnimDesk {
+    display: block;
+    width: 703px;
+    height: auto;
+  }
+}

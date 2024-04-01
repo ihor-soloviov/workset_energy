@@ -1,0 +1,41 @@
+.toggleButton {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.toggleLabel {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 62px;
+  height: 34px;
+  background: var(--gray-light-text);
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+.toggleLabel:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 28px;
+  height: 28px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+.toggleButton:checked + .toggleLabel {
+  background: var(--red-main);
+}
+
+.toggleButton:checked + .toggleLabel:after {
+  left: calc(100% - 3px);
+  transform: translateX(-100%);
+}
+
+.toggleLabel:active:after {
+  width: 40px;
+}
