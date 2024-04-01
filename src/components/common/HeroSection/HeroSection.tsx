@@ -8,7 +8,6 @@ import Link from 'next/link';
 import ArrowIcon from '/public/icons/small-arrow-btn.svg';
 import HeroFormModal from './HeroFormModal/HeroFormModal';
 import { useEffect, useState } from 'react';
-import { useThankYouStore } from '@/store/hero-store';
 
 type HeroProps = {
   imgMob: string;
@@ -27,9 +26,6 @@ const HeroSection = ({
 }: HeroProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
-  const { isStylesChanged } = useThankYouStore();
-
-  console.log('isStylesChanged', isStylesChanged);
 
   const handleModalClick = () => setIsModalOpen(!isModalOpen);
   const handleBtnClick = () => {

@@ -12,83 +12,6 @@
 .heroImgWrap {
   width: 100%;
   height: 100%;
-  position: absolute;
-}
-
-.heroImgMob {
-  border-radius: 16px;
-  width: 100%;
-  height: 100%;
-}
-
-.heroImgDesk {
-  width: 100%;
-  height: 100%;
-  display: none;
-  border-radius: 16px;
-}
-
-.heroTextWrap {
-  position: absolute;
-  z-index: 2;
-  top: 246px;
-  left: 24px;
-}
-
-.heroTitle {
-  color: var(--white-main);
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 130%;
-  width: fit-content;
-  margin: 0 auto;
-  margin-bottom: 10px;
-}
-
-.heroTextMob,
-.heroTextDesk {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: var(--white-second);
-  width: 292px;
-  line-height: 160%;
-  height: 110px;
-  margin: 0 auto;
-  margin-bottom: 24px;
-}
-
-.heroTextDesk {
-  display: none;
-}
-
-.heroSpan {
-  display: block;
-  width: fit-content;
-  margin: 0 auto;
-}
-
-.heroSpan:last-child {
-  width: 256px;
-}
-
-.HeroBtn {
-  width: 158px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid transparent;
-  background-color: var(--red-main);
-  padding: 14px 42px;
-  margin: 0 auto;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 6px;
-  color: var(--gray-input);
-  transition:
-    border-color 250ms var(--cubic),
-    background-color 250ms var(--cubic);
 }
 
 .nextSlideBtn,
@@ -111,51 +34,6 @@
     margin: unset;
   }
 
-  .heroImgMob {
-    display: none;
-  }
-
-  .heroImgDesk {
-    display: block;
-  }
-
-  .heroTextWrap {
-    top: 267px;
-    left: 337px;
-    width: 682px;
-  }
-
-  .heroTitle {
-    font-size: 64px;
-    margin-bottom: 14px;
-    height: auto;
-  }
-
-  .heroTextMob {
-    display: none;
-  }
-
-  .heroTextDesk {
-    display: block;
-    font-size: 18px;
-    width: 648px;
-    text-align: center;
-    margin-bottom: 36px;
-    height: auto;
-  }
-
-  .heroSpan {
-    margin: unset;
-    display: inline-block;
-    width: fit-content;
-  }
-
-  .heroSpan:last-child {
-    margin: unset;
-    display: inline-block;
-    width: fit-content;
-  }
-
   .nextSlideBtn,
   .prevSlideBtn {
     display: block;
@@ -172,6 +50,7 @@
   .nextSlideBtn {
     transform: rotate(90deg);
   }
+
   .prevSlideBtn {
     transform: rotate(-90deg);
   }

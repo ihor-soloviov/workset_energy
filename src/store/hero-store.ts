@@ -1,12 +1,13 @@
 import { create } from 'zustand';
 
 type ThankYouStoreState = {
-  isStylesChanged: boolean;
-  toggleStyles: () => void;
+  isThankYouOpen: boolean;
+  setStylesChangedToTrue: () => void;
+  setStylesChangedToFalse: () => void;
 };
 
 export const useThankYouStore = create<ThankYouStoreState>(set => ({
-  isStylesChanged: false,
-  toggleStyles: () =>
-    set(state => ({ isStylesChanged: !state.isStylesChanged })),
+  isThankYouOpen: false,
+  setStylesChangedToTrue: () => set(state => ({ isThankYouOpen: true })),
+  setStylesChangedToFalse: () => set(state => ({ isThankYouOpen: false })),
 }));

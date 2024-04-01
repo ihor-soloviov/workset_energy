@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 'use client';
 
 import Link from 'next/link';
@@ -16,22 +17,26 @@ import { usePathname } from 'next/navigation';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
-  const { toggleStyles, isStylesChanged } = useThankYouStore();
-  console.log(isStylesChanged);
-  console.log(pathname);
+  const [currentPathname, setCurrentPathname] = useState('');
+
+  const { isThankYouOpen, setStylesChangedToFalse, setStylesChangedToTrue } =
+    useThankYouStore();
 
   const handleMenuClick = () => setIsMenuOpen(!isMenuOpen);
-  const handleLinkClick = () => isStylesChanged && toggleStyles();
-  const handleLogoClick = () =>
-    pathname !== '/' && isStylesChanged && toggleStyles();
+
+  const handleLogoClick = () => {
+    isThankYouOpen && setStylesChangedToFalse();
+  };
 
   useEffect(() => {
-    pathname === '/karriere' && toggleStyles();
-  }, [pathname, toggleStyles]);
+    setCurrentPathname(pathname);
+    pathname === '/karriere' && setStylesChangedToTrue();
+    pathname !== currentPathname && setStylesChangedToFalse();
+  }, [pathname, currentPathname]);
 
   return (
     <header
-      className={`${styles.header} ${isStylesChanged ? styles.blackStyle : ''}`}
+      className={`${styles.header} ${isThankYouOpen ? styles.blackStyle : ''}`}
     >
       <div className={styles.headerContainer}>
         <nav className={styles.headerNav}>
@@ -40,7 +45,7 @@ const Header = () => {
             className={styles.headerLogoLink}
             href="/"
           >
-            {isStylesChanged ? (
+            {isThankYouOpen ? (
               <WorksetColorIcon className={styles.headerLogo} />
             ) : (
               <WorksetIcon className={styles.headerLogo} />
@@ -52,16 +57,12 @@ const Header = () => {
             type="button"
           >
             <BurgerIcon
-              className={`${styles.headerBurgerIcon} ${isStylesChanged ? styles.blackStyle : ''}`}
+              className={`${styles.headerBurgerIcon} ${isThankYouOpen ? styles.blackStyle : ''}`}
             />
           </Button>
           <HeaderNavList />
         </nav>
-        <Link
-          onClick={handleLinkClick}
-          href="/leadgen"
-          className={styles.headerLeadLink}
-        >
+        <Link href="/leadgen" className={styles.headerLeadLink}>
           Jetzt Berechnen
           <ArrowIcon className={styles.headerIcon} />
         </Link>

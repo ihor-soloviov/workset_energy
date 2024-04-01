@@ -41,6 +41,6 @@
   }
 
   .headerNavLink:hover {
-    color: var(--gray-dark-text);
+    color: var(--gray-light-text);
   }
 }

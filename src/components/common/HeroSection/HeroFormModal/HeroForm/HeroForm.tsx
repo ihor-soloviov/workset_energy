@@ -5,11 +5,11 @@ import * as Yup from 'yup';
 import { inter, interTight } from '@/utils/fonts';
 import ArrowIcon from '/public/icons/small-arrow-btn.svg';
 import Button from '../../../Button/Button';
-type HeroFormProps = {
-  handleThankYouClick: () => void;
-};
+import { useThankYouStore } from '@/store/hero-store';
 
-const HeroForm = ({ handleThankYouClick }: HeroFormProps) => {
+const HeroForm = () => {
+  const { setStylesChangedToTrue } = useThankYouStore();
+
   const { handleSubmit, errors, touched, getFieldProps } = useFormik({
     initialValues: {
       name: '',
@@ -21,7 +21,7 @@ const HeroForm = ({ handleThankYouClick }: HeroFormProps) => {
     }),
     onSubmit: values => {
       console.log(values);
-      handleThankYouClick();
+      setStylesChangedToTrue();
     },
   });
   return (

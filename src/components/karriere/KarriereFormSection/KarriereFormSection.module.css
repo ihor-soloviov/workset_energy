@@ -1,0 +1,59 @@
+.karriereFormSection {
+  padding: 90px 0;
+}
+
+.karriereFormContainer {
+  width: 100%;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+.karriereFormTitle {
+  color: var(--black--main);
+  margin: 0 auto;
+  margin-bottom: 16px;
+  font-size: 28px;
+  width: 342px;
+
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.karriereFormText {
+  color: var(--gray-text);
+  font-size: 16px;
+  line-height: 160%;
+  text-align: left;
+  margin: 0 auto;
+  margin-bottom: 36px;
+}
+
+@media screen and (min-width: 390px) {
+  .karriereFormContainer {
+    width: 390px;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .karriereFormSection {
+    padding: 174px 0;
+  }
+
+  .karriereFormContainer {
+    width: 1728px;
+    padding: 0 256px;
+  }
+
+  .karriereFormTitle {
+    font-size: 34px;
+    font-weight: 700;
+    width: 677px;
+    margin-bottom: 12px;
+  }
+
+  .karriereFormText {
+    font-size: 18px;
+    width: fit-content;
+    margin-bottom: 48px;
+  }
+}
