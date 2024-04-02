@@ -49,7 +49,7 @@ const SwitcherSection = () => {
               src={animDesk}
               alt="anim"
             /> */}
-            <Video />
+            <Video isDark={isDark} />
             <ToggleButton toggleDarkMode={toggleDarkMode} />
           </div>
         </div>

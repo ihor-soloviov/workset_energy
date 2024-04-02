@@ -13,11 +13,26 @@ import BurgerIcon from '/public/icons/burger.svg';
 import ArrowIcon from '/public/icons/small-arrow-btn.svg';
 import { useThankYouStore } from '@/store/hero-store';
 import { usePathname } from 'next/navigation';
+import { useGlobalStore } from '@/store/global-store';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
   const [currentPathname, setCurrentPathname] = useState('');
+  const { setIsDesktop } = useGlobalStore();
+  useEffect(() => {
+    setIsDesktop(window.innerWidth > 1728);
+
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth > 1728);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [setIsDesktop]);
 
   const { isThankYouOpen, setStylesChangedToFalse, setStylesChangedToTrue } =
     useThankYouStore();

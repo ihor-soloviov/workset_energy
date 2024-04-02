@@ -3,23 +3,9 @@
 import React, { useState, useEffect } from 'react';
 import LeadGenHero from '@/components/leadgen/LeadGenHero/LeadGenHero';
 import LeadGenComponent from '@/components/leadgen/LeadGenComponent/LeadGenComponent';
+import { useGlobalStore } from '@/store/global-store';
 const LeadGen = () => {
-  const [isDesktop, setIsDesktop] = useState(false);
-
-  useEffect(() => {
-    setIsDesktop(window.innerWidth > 1728);
-
-    const handleResize = () => {
-      setIsDesktop(window.innerWidth > 1728);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
+  const { isDesktop } = useGlobalStore();
   return (
     <>
       <LeadGenHero isDesktop={isDesktop} />

@@ -1,7 +1,7 @@
 .switcherSection {
   padding: 79px 0 89px;
   background-color: var(--gray-input);
-  transition: all 0.2s ease-in-out;
+  transition: all 0.4s var(--cubic);
 }
 
 .switcherSectionDark {
@@ -55,6 +55,7 @@
   border-radius: 12px;
   border: 0.391px solid var(--gray-stroke);
   background: var(--white-main);
+  transition: background-color 0.4s var(--cubic);
 }
 
 .switcherAnimDark {

@@ -8,6 +8,7 @@ import Link from 'next/link';
 import ArrowIcon from '/public/icons/small-arrow-btn.svg';
 import HeroFormModal from './HeroFormModal/HeroFormModal';
 import { useEffect, useState } from 'react';
+import { useGlobalStore } from '@/store/global-store';
 
 type HeroProps = {
   imgMob: string;
@@ -25,7 +26,7 @@ const HeroSection = ({
   className,
 }: HeroProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(false);
+  const { isDesktop } = useGlobalStore();
 
   const handleModalClick = () => setIsModalOpen(!isModalOpen);
   const handleBtnClick = () => {
@@ -38,20 +39,6 @@ const HeroSection = ({
       handleModalClick();
     }
   };
-
-  useEffect(() => {
-    setIsDesktop(window.innerWidth > 1728);
-
-    const handleResize = () => {
-      setIsDesktop(window.innerWidth > 1728);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
 
   useEffect(() => {
     if (isModalOpen) {

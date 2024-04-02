@@ -6,6 +6,7 @@ import { inter } from '@/utils/fonts';
 import cn from 'classnames';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
+import { useGlobalStore } from '@/store/global-store';
 
 type TeamItem = {
   title: string;
@@ -21,23 +22,9 @@ const TeamSlider = () => {
   ];
 
   const [activeItem, setActiveItem] = useState(1);
-  const [isDesktop, setIsDesktop] = useState(false);
+  const { isDesktop } = useGlobalStore();
 
   const handleItemClick = (num = 1) => setActiveItem(num);
-
-  useEffect(() => {
-    setIsDesktop(window.innerWidth > 1728);
-
-    const handleResize = () => {
-      setIsDesktop(window.innerWidth > 1728);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
 
   return (
     <div className={styles.teamImgMainWrap}>
