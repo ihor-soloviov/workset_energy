@@ -2,14 +2,15 @@ import Container from '@/components/common/Container/Container';
 import styles from './JobSection.module.css';
 import JobInfo from './JobInfo/JobInfo';
 import JobForm from './JobForm/JobForm';
-
+import JobList from './JobList/JobList';
 const JobSection = () => {
   return (
     <section className={styles.jobSection}>
-      <Container>
+      <div className={styles.jobContainer}>
         <JobInfo />
-        {/* <JobForm /> */}
-      </Container>
+        <JobList />
+        <JobForm />
+      </div>
     </section>
   );
 };

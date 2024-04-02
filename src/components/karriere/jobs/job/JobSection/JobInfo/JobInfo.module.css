@@ -9,6 +9,7 @@
   background-color: var(--red-main);
   border-radius: 8px;
   margin: 0 auto;
+  margin-bottom: 54px;
 }
 
 .jobInfoItem {
@@ -48,6 +49,11 @@
 
 @media screen and (min-width: 1728px) {
   .jobInfoList {
+    position: absolute;
+    right: 186px;
+    top: 200px;
+    margin: unset;
+
     padding: 48px;
     gap: 54px;
     width: 530px;
