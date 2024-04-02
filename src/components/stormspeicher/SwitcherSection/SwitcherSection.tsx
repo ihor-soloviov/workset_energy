@@ -6,6 +6,7 @@ import Image from 'next/image';
 import animMob from '/public/images/stormspeicher-page/animMob.jpg';
 import animDesk from '/public/images/stormspeicher-page/animDesk.jpg';
 import ToggleButton from '../ToggleButton/ToggleButton';
+import Video from '@/components/common/Video/Video';
 
 const SwitcherSection = () => {
   const [isDark, setIsDark] = useState(false);
@@ -38,17 +39,17 @@ const SwitcherSection = () => {
           <div
             className={`${styles.switcherAnim} ${isDark ? styles.switcherAnimDark : ''}`}
           >
-            <Image
+            {/* <Image
               className={styles.switcherAnimMob}
               src={animMob}
               alt="anim"
-            />
-            <Image
+            /> */}
+            {/* <Image
               className={styles.switcherAnimDesk}
               src={animDesk}
               alt="anim"
-            />
-
+            /> */}
+            <Video />
             <ToggleButton toggleDarkMode={toggleDarkMode} />
           </div>
         </div>
