@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './SliderDots.module.css';
 
 type Props = {
-  handleActiveSlide: (index: number) => void;
+  handleActiveSlide: (index: number, length: number) => void;
   count: number;
   activeSlide: number;
 };
@@ -13,7 +13,7 @@ const SliderDots: React.FC<Props> = ({
 }) => {
   const dots = Array.from({ length: count }, (_, index) => (
     <button
-      onClick={() => handleActiveSlide(index)}
+      onClick={() => handleActiveSlide(index, count)}
       key={index}
       className={`${styles.sliderDot} ${activeSlide === index ? styles.active : ''}`}
     />

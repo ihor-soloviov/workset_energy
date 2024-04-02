@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from '../VorteileSlider/VorteileSlider.module.css';
 import { VorteileSliderT } from '@/types/infoTypes';
 import { useSliderStore } from '@/store/sliders-store';
@@ -7,7 +7,12 @@ import Image from 'next/image';
 type Props = Omit<VorteileSliderT, 'sliderText'>;
 
 const SliderWrap: React.FC<Props> = ({ sliderImages }) => {
-  const { currIndex, prevIndex, nextIndex, animateTo } = useSliderStore();
+  const { currIndex, prevIndex, nextIndex, animateTo, updatePrevIndex } =
+    useSliderStore();
+
+  useEffect(() => {
+    updatePrevIndex(sliderImages.length);
+  }, [sliderImages.length, updatePrevIndex]);
 
   return (
     <div className={styles.vorteileImageWrap}>

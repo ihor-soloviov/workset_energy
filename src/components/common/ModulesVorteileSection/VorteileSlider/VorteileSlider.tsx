@@ -16,11 +16,12 @@ type Props = VorteileSliderT;
 const VorteileSlider: React.FC<Props> = ({ sliderImages, sliderText }) => {
   const { currIndex, prevIndex, nextIndex, setIndex, setAnimate } =
     useSliderStore();
+  const sliderLength = sliderImages.length;
 
   const handlePrevSlide = () => {
     setAnimate('toPrev');
     setTimeout(() => {
-      setIndex(prevIndex);
+      setIndex(prevIndex, sliderLength);
       setAnimate('');
     }, 450);
   };
@@ -28,7 +29,7 @@ const VorteileSlider: React.FC<Props> = ({ sliderImages, sliderText }) => {
   const handleNextSlide = () => {
     setAnimate('toNext');
     setTimeout(() => {
-      setIndex(nextIndex);
+      setIndex(nextIndex, sliderImages.length);
       setAnimate('');
     }, 450);
   };
@@ -53,7 +54,7 @@ const VorteileSlider: React.FC<Props> = ({ sliderImages, sliderText }) => {
             <div className={styles.sliderDotsWrap}>
               <SliderDots
                 handleActiveSlide={setIndex}
-                count={6}
+                count={sliderLength}
                 activeSlide={currIndex}
               />
             </div>
