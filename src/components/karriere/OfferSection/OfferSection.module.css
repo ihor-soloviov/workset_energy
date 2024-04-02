@@ -27,6 +27,7 @@
 }
 .offerMainBtn {
   margin: 0 auto;
+  margin-top: 54px;
   width: 342px;
   display: flex;
   align-items: center;

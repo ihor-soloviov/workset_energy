@@ -4,11 +4,18 @@ import Image from 'next/image';
 import { offerItems } from './offerItem';
 import LinkArrowIcon from '/public/icons/small-product-arrow.svg';
 import Link from 'next/link';
+import type { OfferItem } from './offerItem';
 
-const OfferList = () => {
+type OfferListProps = {
+  showItems: boolean;
+};
+const OfferList = ({ showItems }: OfferListProps) => {
+  const currentItems = (offerItems: OfferItem[]) =>
+    showItems ? offerItems : offerItems.slice(0, 3);
+
   return (
     <ul className={`${styles.offerList} ${inter.className}`}>
-      {offerItems.map(
+      {currentItems(offerItems).map(
         ({ mainTitle, mainText, title, text, timeType, mobile, desktop }) => (
           <li className={styles.offerItem} key={mainTitle}>
             <Image className={styles.offerImgMob} alt={title} src={mobile} />
