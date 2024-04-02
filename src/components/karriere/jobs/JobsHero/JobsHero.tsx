@@ -3,6 +3,7 @@ import styles from './JobsHero.module.css';
 import Button from '@/components/common/Button/Button';
 import LinkArrowIcon from '/public/icons/jobs-arrow.svg';
 import { inter } from '@/utils/fonts';
+
 const JobsHero = () => {
   return (
     <section className={styles.jobsHeroSection}>

@@ -1,6 +1,6 @@
 import Button from '@/components/common/Button/Button';
 import styles from './JobsList.module.css';
-import { jobItems } from './jobItem';
+import { jobItems } from './jobsItem';
 import Link from 'next/link';
 import { inter } from '@/utils/fonts';
 
