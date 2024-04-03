@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import Image from 'next/image';
 import CheckMarker from '/public/icons/check-circle.svg';
@@ -5,15 +6,26 @@ import { PlanT } from '@/types/infoTypes';
 import styles from './Plan.module.css';
 import { inter } from '@/utils/fonts';
 import RedButton from '../../RedButton/RedButton';
+import { motion } from 'framer-motion';
+import { fromBotAnimation } from '@/animations/animations';
 
 type Props = {
   plan: PlanT;
+  index: number;
 };
 
 const Plan: React.FC<Props> = ({
   plan: { name, imageMob, imageDesk, price, article, benefits },
+  index,
 }) => (
-  <li className={styles.pricingPlansItem}>
+  <motion.li
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ amount: 0, once: true }}
+    custom={index + 0.4}
+    variants={fromBotAnimation}
+    className={styles.pricingPlansItem}
+  >
     <Image
       className={styles.planImageMob}
       alt={`${name} plan collage`}
@@ -40,7 +52,7 @@ const Plan: React.FC<Props> = ({
       </ul>
       <RedButton>Mehr Info</RedButton>
     </div>
-  </li>
+  </motion.li>
 );
 
 export default Plan;
