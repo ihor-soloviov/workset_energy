@@ -19,15 +19,14 @@ const OfferSection = () => {
           strategies to ensure domination.
         </p>
         <OfferList showItems={showItems} />
-        {!showItems && (
-          <Button
-            handleClick={toggleBtnClick}
-            type="button"
-            className={styles.offerMainBtn}
-          >
-            Mehr Info
-          </Button>
-        )}
+
+        <Button
+          handleClick={toggleBtnClick}
+          type="button"
+          className={styles.offerMainBtn}
+        >
+          Mehr Info
+        </Button>
       </div>
     </section>
   );
