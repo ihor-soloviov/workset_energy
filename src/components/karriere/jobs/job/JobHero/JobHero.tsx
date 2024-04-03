@@ -5,8 +5,7 @@ import BtnArrowIcon from '/public/icons/job-arrow.svg';
 import LinkArrowIcon from '/public/icons/jobs-arrow.svg';
 import { inter } from '@/utils/fonts';
 import Image from 'next/image';
-import JobHeroMob from '/public/images/karriere-page/job-hero-mob.jpg';
-import JobHeroDesk from '/public/images/karriere-page/job-hero-desk.jpg';
+import { currentImg } from './jobHeroItems';
 import type { KarrierJobItem } from '@/types/infoTypes';
 
 type JobHeroProps = {
@@ -14,30 +13,36 @@ type JobHeroProps = {
 };
 
 const JobHero = ({ response }: JobHeroProps) => {
+  const title = response?.data.attributes.job_title ?? '';
+  const imgSrc = currentImg(title);
+
   return (
     <section className={styles.JobHeroSection}>
-      <Image
-        objectFit="cover"
-        layout="fill"
-        className={styles.JobHeroImgMob}
-        alt="hero-img"
-        src={JobHeroMob}
-      />
-      <Image
-        layout="fill"
-        objectFit="cover"
-        className={styles.JobHeroImgDesc}
-        alt="hero-img"
-        src={JobHeroDesk}
-      />
+      {imgSrc && (
+        <>
+          <Image
+            fill
+            placeholder="blur"
+            className={styles.JobHeroImgMob}
+            alt="hero-img"
+            src={imgSrc.mobile}
+          />
+          <Image
+            fill
+            placeholder="blur"
+            className={styles.JobHeroImgDesc}
+            alt="hero-img"
+            src={imgSrc.desktop}
+          />
+        </>
+      )}
+
       <div className={styles.JobHeroContainer}>
         <Link className={styles.jobHeroLink} href="/karriere/jobs">
           <LinkArrowIcon className={styles.jobHeroIcon} />
           Zu allen offenen Stellen
         </Link>
-        <h2 className={styles.JobHeroTitle}>
-          {response?.data.attributes.job_title}
-        </h2>
+        <h2 className={styles.JobHeroTitle}>{title}</h2>
         <p className={`${styles.JobHeroTextMob} ${inter.className}`}>
           Entdecke einzigartige Entwicklungsmöglichkeiten in unserem
           Unternehmen. Komm zu uns, um deine Ambitionen zu verwirklichen und

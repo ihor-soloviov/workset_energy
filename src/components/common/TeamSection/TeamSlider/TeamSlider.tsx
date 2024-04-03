@@ -1,26 +1,15 @@
 'use client';
 import 'swiper/css';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import styles from './TeamSlider.module.css';
 import { inter } from '@/utils/fonts';
 import cn from 'classnames';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import { useGlobalStore } from '@/store/global-store';
-
-type TeamItem = {
-  title: string;
-  text: string;
-  className: string;
-};
+import { teamItems } from './teamItem';
 
 const TeamSlider = () => {
-  const teamItems: TeamItem[] = [
-    { title: 'Eric Blumenstein', text: 'Fachberater', className: 'first' },
-    { title: 'Eric Blumenstein', text: 'Fachberater', className: 'second' },
-    { title: 'Eric Blumenstein', text: 'Fachberater', className: 'third' },
-  ];
-
   const [activeItem, setActiveItem] = useState(1);
   const { isDesktop } = useGlobalStore();
 

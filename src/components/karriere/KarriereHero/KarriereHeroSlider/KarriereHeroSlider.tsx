@@ -30,17 +30,17 @@ const KarriereHeroSlider = ({ swiperRef }: Props) => {
       {heroItems.map(({ title, mobile, desktop }, index) => (
         <SwiperSlide className={styles.slide} key={index}>
           <Image
-            layout="fill"
-            objectFit="cover"
-            alt="slide"
+            fill
+            alt="hero-slide"
+            priority={title == 'Trainee Sales Manager' ? true : false}
             src={mobile}
             className={styles.heroImgMob}
           />
           <Image
-            objectFit="cover"
-            layout="fill"
-            alt="slide"
+            fill
+            alt="hero-slide"
             src={desktop}
+            priority={title == 'Trainee Sales Manager' ? true : false}
             className={styles.heroImgDesk}
           />
 

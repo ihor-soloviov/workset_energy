@@ -71,11 +71,13 @@ const VisionSlider = () => {
             ({ mobile, desktop, className, rangeSlides }, index) => (
               <React.Fragment key={index}>
                 <Image
+                  loading="lazy"
                   className={`${styles.visionImgMob} ${styles[className]} ${addVisibleClass(slide, rangeSlides)}`}
                   src={mobile}
                   alt="img"
                 />
                 <Image
+                  loading="lazy"
                   className={`${styles.visionImgDesc} ${styles[className]} ${addVisibleClass(slide, rangeSlides)}`}
                   alt="img"
                   src={desktop}

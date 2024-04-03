@@ -3,7 +3,6 @@ import Button from '@/components/common/Button/Button';
 import styles from './StepList.module.css';
 import { inter } from '@/utils/fonts';
 import Image from 'next/image';
-
 import BtnArrowIcon from '/public/icons/small-arrow-btn.svg';
 
 import { motion } from 'framer-motion';
@@ -25,8 +24,18 @@ const StepList = () => {
           className={`${styles.stepItem} ${getClass(index)}`}
           key={title}
         >
-          <Image className={styles.stepImgMob} alt="title" src={imgMob} />
-          <Image className={styles.stepImgDesc} alt="title" src={imgDesc} />
+          <Image
+            loading="lazy"
+            className={styles.stepImgMob}
+            alt="title"
+            src={imgMob}
+          />
+          <Image
+            loading="lazy"
+            className={styles.stepImgDesc}
+            alt="title"
+            src={imgDesc}
+          />
           <div className={`${styles.stepTextWrap} ${getClass(index)}`}>
             <p
               className={`${styles.stepCount} ${getClass(index)} ${inter.className}`}
