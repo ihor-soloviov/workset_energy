@@ -19,7 +19,9 @@ export const useSliderStore = create<State>(set => ({
     set(state => {
       const lastIndex = length - 1;
       return {
-        prevIndex: state.currIndex === 0 ? lastIndex : state.currIndex - 1,
+        currIndex: 0,
+        prevIndex: lastIndex,
+        nextIndex: 1,
       };
     }),
 

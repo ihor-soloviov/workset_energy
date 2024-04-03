@@ -12,6 +12,9 @@ import stromspeicherImgDesc from '/public/images/home-page/stromspeicher-desc.jp
 import walaboxImgDesc from '/public/images/home-page/wallbox-desc.jpg';
 import Link from 'next/link';
 
+import { motion } from 'framer-motion';
+import { fromBotAnimation } from '@/animations/animations';
+
 type ProductItem = {
   title: string;
   text: string;
@@ -47,8 +50,16 @@ export const productsItems: ProductItem[] = [
 const ProductList = () => {
   return (
     <ul className={styles.productList}>
-      {productsItems.map(({ text, title, href, imgMob, imgDesc }) => (
-        <li className={styles.productItem} key={title}>
+      {productsItems.map(({ text, title, href, imgMob, imgDesc }, index) => (
+        <motion.li
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0 }}
+          custom={index + 0.4}
+          variants={fromBotAnimation}
+          className={styles.productItem}
+          key={title}
+        >
           <div className={styles.productImgWrap}>
             <Image className={styles.productImgMob} src={imgMob} alt={title} />
             <Image
@@ -65,7 +76,7 @@ const ProductList = () => {
               <BtnArrowIcon className={styles.productIcon} />
             </Link>
           </div>
-        </li>
+        </motion.li>
       ))}
     </ul>
   );

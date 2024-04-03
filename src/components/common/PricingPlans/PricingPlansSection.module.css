@@ -51,6 +51,7 @@
     gap: 263px;
   }
   .pricingPlansHeader {
+    width: max-content;
     max-width: 729px;
   }
 

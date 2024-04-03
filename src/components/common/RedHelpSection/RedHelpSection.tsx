@@ -3,7 +3,7 @@ import styles from './RedHelpSection.module.css';
 import { items } from './items';
 import RedHelpItem from './RedHelpItem/RedHelpItem';
 
-const RedHelpBlock = () => (
+const RedHelpSection = () => (
   <section className={styles.redHelpSection}>
     <div className={styles.redHelpWrap}>
       <div className={styles.redHelpHeader}>
@@ -22,4 +22,4 @@ const RedHelpBlock = () => (
   </section>
 );
 
-export default RedHelpBlock;
+export default RedHelpSection;

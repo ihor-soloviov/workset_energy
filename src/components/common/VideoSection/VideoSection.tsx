@@ -1,7 +1,8 @@
 import styles from './VideoSection.module.css';
 import Container from '../Container/Container';
-import { inter } from '@/utils/fonts';
 import cn from 'classnames';
+import TextWrap from './TextWrap/TextWrap';
+import IFrame from './IFrame/IFrame';
 
 type VideoSectionProps = {
   className: string;
@@ -17,17 +18,8 @@ const VideoSection = ({ title, text, link, className }: VideoSectionProps) => {
     <section className={styles.videoSection}>
       <Container>
         <div className={styles.videoMainWrap}>
-          <iframe
-            src={link}
-            className={videoFrameClass}
-            allow="accelerometer"
-            allowFullScreen
-          />
-
-          <div className={styles.videoTextWrap}>
-            <h2 className={styles.videoTitle}>{title}</h2>
-            <p className={`${styles.videoText} ${inter.className}`}>{text}</p>
-          </div>
+          <IFrame link={link} videoFrameClass={videoFrameClass} />
+          <TextWrap title={title} text={text} />
         </div>
       </Container>
     </section>

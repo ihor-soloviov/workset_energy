@@ -1,16 +1,19 @@
 import Container from '@/components/common/Container/Container';
 import ProductList from './AmenitiesList/AmenitiesList';
 import styles from './AmenitiesSection.module.css';
+import RecycleTextWrap from '@/components/common/RecycleTextWrap/RecycleTextWrap';
 import { inter } from '@/utils/fonts';
 
 const AmenitiesSection = () => {
   return (
     <section className={styles.amenitiesSection}>
       <Container>
-        <h2 className={styles.amenitiesMainTitle}>Warum WorkSET Energy?</h2>
-        <p className={`${styles.amenitiesMainText} ${inter.className}`}>
-          Entscheide dich für Zuverlässigkeit und Teamwork!
-        </p>
+        <RecycleTextWrap
+          title="Warum WorkSET Energy?"
+          titleClass={styles.amenitiesMainTitle}
+          text="Entscheide dich für Zuverlässigkeit und Teamwork!"
+          textClass={`${styles.amenitiesMainText} ${inter.className}`}
+        />
         <ProductList />
       </Container>
     </section>

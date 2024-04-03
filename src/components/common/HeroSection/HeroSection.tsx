@@ -10,6 +10,12 @@ import HeroFormModal from './HeroFormModal/HeroFormModal';
 import { useEffect, useState } from 'react';
 import { useGlobalStore } from '@/store/global-store';
 
+import { motion } from 'framer-motion';
+import {
+  opacityAnimation,
+  textAnimationToRight,
+} from '@/animations/animations';
+
 type HeroProps = {
   imgMob: string;
   imgDesc: string;
@@ -69,15 +75,33 @@ const HeroSection = ({
 
         <div className={styles.heroContainer}>
           <div className={styles.heroTextWrap}>
-            <h2 className={`${styles.heroMainTitle} ${styles[className]}`}>
+            <motion.h2
+              className={`${styles.heroMainTitle} ${styles[className]}`}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ amount: 0 }}
+              variants={textAnimationToRight}
+              custom={0}
+            >
               {title}
-            </h2>
-            <p
+            </motion.h2>
+            <motion.p
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ amount: 0 }}
+              variants={textAnimationToRight}
+              custom={1}
               className={`${styles.heroMainText} ${styles[className]} ${inter.className}`}
             >
               {text}
-            </p>
-            <div className={styles.heroBtnWrap}>
+            </motion.p>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ amount: 0 }}
+              variants={opacityAnimation}
+              className={styles.heroBtnWrap}
+            >
               <Link className={styles.heroLink} href="/leadgen">
                 Jetzt Berechnen
                 <ArrowIcon className={styles.heroIcon} />
@@ -89,7 +113,7 @@ const HeroSection = ({
               >
                 {!isDesktop ? 'Zum Angebot' : 'Unsere Team'}
               </Button>
-            </div>
+            </motion.div>
           </div>
           {isDesktop && (
             <HeroFormModal

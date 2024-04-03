@@ -5,7 +5,7 @@ import VideoSection from '@/components/common/VideoSection/VideoSection';
 import { pvAnlagenVideo } from '@/utils/video';
 import { pvAnlagenHero } from '@/utils/hero';
 import React from 'react';
-import RedHelpBlock from '@/components/common/RedHelpSection/RedHelpSection';
+import RedHelpSection from '@/components/common/RedHelpSection/RedHelpSection';
 import EmployeeSection from '@/components/common/EmployeeSection/EmployeeSection';
 import GoogleComSection from '@/components/common/GoogleComSection/GoogleComSection';
 import TeamSection from '@/components/common/TeamSection/TeamSection';
@@ -23,7 +23,7 @@ const PvAnlagen = () => {
       <GoogleComSection />
       <TeamSection />
       <ContactUsSection />
-      <RedHelpBlock />
+      <RedHelpSection />
     </>
   );
 };

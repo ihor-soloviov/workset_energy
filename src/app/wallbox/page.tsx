@@ -12,7 +12,7 @@ import { wallboxVideo } from '@/utils/video';
 
 import { sliderImages, vorteileItems } from './slides';
 import ContactUsSection from '@/components/common/ContactUsSection/ContactUsSection';
-import RedHelpBlock from '@/components/common/RedHelpSection/RedHelpSection';
+import RedHelpSection from '@/components/common/RedHelpSection/RedHelpSection';
 
 const Wallbox = () => {
   return (
@@ -25,7 +25,7 @@ const Wallbox = () => {
       <GoogleComSection />
       <TeamSection />
       <ContactUsSection />
-      <RedHelpBlock />
+      <RedHelpSection />
     </>
   );
 };
