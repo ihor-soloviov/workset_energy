@@ -2,11 +2,15 @@ import { StaticImageData } from 'next/image';
 import Offer1Mob from '/public/images/karriere-page/offer-1-mob.jpg';
 import Offer2Mob from '/public/images/karriere-page/offer-2-mob.jpg';
 import Offer3Mob from '/public/images/karriere-page/offer-3-mob.jpg';
+import Offer4Mob from '/public/images/karriere-page/offer-4-mob.jpg';
+import Offer5Mob from '/public/images/karriere-page/offer-5-mob.jpg';
 import Offer1Desc from '/public/images/karriere-page/offer-1-desk.jpg';
 import Offer2Desc from '/public/images/karriere-page/offer-2-desk.jpg';
 import Offer3Desc from '/public/images/karriere-page/offer-3-desk.jpg';
+import Offer4Desc from '/public/images/karriere-page/offer-4-desk.jpg';
+import Offer5Desc from '/public/images/karriere-page/offer-5-desk.jpg';
 
-type OfferItem = {
+export type OfferItem = {
   mainTitle: string;
   mainText: string;
   title: string;
@@ -45,5 +49,24 @@ export const offerItems: OfferItem[] = [
     timeType: 'Full time',
     mobile: Offer3Mob,
     desktop: Offer3Desc,
+  },
+  {
+    mainTitle: 'PV-Modul-Installateur',
+    mainText: 'Helfen Sie uns bei der Schaffung einer sauberen Energiezukunft',
+    title: '2,1K+Gehalt',
+    text: 'Lorem ipsum dolor sit amet consectetur',
+    timeType: 'Full time',
+    mobile: Offer4Mob,
+    desktop: Offer4Desc,
+  },
+  {
+    mainTitle: 'Middle Sales Maneger',
+    mainText:
+      'Möglichkeit zur beruflichen Weiterentwicklung in einem erfolgreichen Verkaufsteam',
+    title: '4,2K+Gehalt',
+    text: 'Lorem ipsum dolor sit amet consectetur',
+    timeType: 'Full time',
+    mobile: Offer5Mob,
+    desktop: Offer5Desc,
   },
 ];

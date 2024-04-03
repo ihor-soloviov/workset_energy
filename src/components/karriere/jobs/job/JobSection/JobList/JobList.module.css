@@ -1,0 +1,135 @@
+.jobTitle {
+  color: var(--black--main);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 130%;
+  width: fit-content;
+  margin-right: auto;
+  margin-bottom: 24px;
+}
+
+.jobCategoryList {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  margin-bottom: 48px;
+}
+
+.jobCategoryItem {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.jobCategoryItem.description {
+  gap: 8px;
+}
+
+.jobCategoryTitle {
+  color: var(--gray-dark-text);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 160%;
+  width: fit-content;
+  margin-right: auto;
+}
+
+.jobDescription {
+  color: var(--gray-text);
+  font-size: 16px;
+  line-height: 160%;
+  width: fit-content;
+}
+
+.jobSubCategoryList {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.jobSubCategoryItem {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.jobSubCategoryTitle {
+  color: var(--gray-text);
+  font-size: 20px;
+  font-weight: 500;
+  width: fit-content;
+}
+
+.jobPointList {
+  list-style: disc;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.jobPointItem::marker {
+  color: var(--gray-text);
+}
+
+.jobPointText {
+  color: var(--gray-text);
+  font-size: 16px;
+  line-height: 160%;
+  width: 330px;
+}
+
+.jobMessage {
+  color: var(--gray-dark-text);
+  font-size: 16px;
+  line-height: 160%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.jobMessageSpan {
+  display: block;
+}
+
+@media screen and (min-width: 1728px) {
+  .jobListWrap {
+    width: 599px;
+  }
+
+  .jobTitle {
+    font-size: 50px;
+    margin-bottom: 40px;
+  }
+
+  .jobCategoryList {
+    width: 599px;
+    margin-bottom: 54px;
+  }
+
+  .jobCategoryItem {
+    gap: 14px;
+  }
+
+  .jobCategoryTitle {
+    font-size: 28px;
+    line-height: normal;
+  }
+
+  .jobDescription {
+    width: 599px;
+  }
+
+  .jobSubCategoryTitle {
+    font-size: 22px;
+  }
+
+  .jobPointText {
+    font-size: 18px;
+    width: 100%;
+  }
+
+  .jobMessage {
+    font-size: 18px;
+    width: 599px;
+  }
+}

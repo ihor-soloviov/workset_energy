@@ -1,0 +1,32 @@
+.jobSection {
+  padding: 64px 0 90px;
+}
+
+.jobContainer {
+  width: 100%;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 390px) {
+  .jobContainer {
+    width: 390px;
+  }
+}
+@media screen and (min-width: 1728px) {
+  .jobSection {
+    padding: 200px 0 100px;
+
+    background: linear-gradient(
+      to right,
+      var(--white-main) 50.4%,
+      var(--gray-input) 49.6%
+    );
+  }
+
+  .jobContainer {
+    position: relative;
+    width: 1728px;
+    padding: 0 186px;
+  }
+}

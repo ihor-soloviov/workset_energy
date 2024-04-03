@@ -1,0 +1,105 @@
+.jobsSelectForm {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 90px;
+}
+
+.jobsLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--black-main);
+  font-weight: 500;
+  line-height: 142.8%;
+}
+
+/* Select container */
+.jobsSelect {
+  cursor: pointer;
+  height: 46px;
+  border-radius: 6px;
+  background-color: var(--gray-input);
+  border: 1px solid #e5e5e7;
+  padding: 12px 16px;
+  position: relative;
+}
+
+/* Select control */
+
+.jobsSelect > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Select placeholder */
+
+.jobsSelect > div > div:nth-of-type(1) {
+  color: var(--black-main);
+  font-size: 15px;
+  line-height: 146.7%;
+}
+
+/* Select menu */
+.jobsSelect > div:nth-of-type(2) {
+  background-color: var(--white-main);
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: auto;
+  position: absolute;
+  top: 44px;
+  left: -1px;
+  width: 342px;
+  z-index: 2;
+  border: 1px solid #e5e5e7;
+  padding: 4px 0;
+  border-radius: 6px;
+}
+
+/* Select option */
+.jobsSelect > div:nth-of-type(2) > div {
+  color: var(--black-main);
+  line-height: 142.8%;
+  letter-spacing: -0.1px;
+  padding: 10px 16px;
+  font-size: 14px;
+  margin-right: auto;
+  width: 100%;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.jobsSelect > div:nth-of-type(2) > div:hover {
+  background-color: #ebebee;
+}
+
+.dropIconOpen {
+  stroke: var(--black-main);
+  cursor: pointer;
+}
+
+.dropIconClose {
+  stroke: var(--black-main);
+  transform: rotate(180deg);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1728px) {
+  .jobsSelectForm {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 33px;
+  }
+
+  .jobsLabel {
+    width: 384px;
+    letter-spacing: -0.1px;
+  }
+
+  /* Select menu */
+  .jobsSelect > div:nth-of-type(2) {
+    width: 384px;
+  }
+}

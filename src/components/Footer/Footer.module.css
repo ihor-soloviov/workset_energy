@@ -9,6 +9,23 @@
   margin: 0 auto;
 }
 
+.footerCookieWrap {
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: fit-content;
+  margin-bottom: 68px;
+}
+
+.cookieText,
+.impressumText {
+  color: var(--gray-text);
+  font-size: 15px;
+  font-weight: 500;
+  width: fit-content;
+}
+
 .footerUpBtn {
   display: flex;
   padding: 12px;
@@ -77,6 +94,21 @@
 
   .footer {
     padding: 120px 0px 38px;
+  }
+
+  .footerCookieWrap {
+    position: absolute;
+    bottom: 0;
+    left: 185px;
+    flex-direction: row;
+    gap: 28px;
+    margin: unset;
+    height: 23px;
+  }
+
+  .cookieText,
+  .impressumText {
+    font-size: 16px;
   }
 
   .footerUpBtn {

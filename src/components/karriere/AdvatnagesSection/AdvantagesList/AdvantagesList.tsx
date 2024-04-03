@@ -7,6 +7,7 @@ import AdvantagesSecondIcon from '/public/icons/advantages-2.svg';
 import AdvantagesThirdIcon from '/public/icons/advantages-3.svg';
 import AdvantagesFourthIcon from '/public/icons/advantages-4.svg';
 import AdvantagesFifthIcon from '/public/icons/advantages-5.svg';
+import AdvantagesSixIcon from '/public/icons/advantages-6.svg';
 
 import BtnArrowIcon from '/public/icons/small-product-arrow.svg';
 type AdvantagesItem = {
@@ -51,7 +52,7 @@ export const advantagesItems: AdvantagesItem[] = [
     link: '',
     text: 'Schließe dich der Bewegung für nachhaltige Energie an und wende dich von den herkömmlichen Energiequellen ab.',
     title: 'Soziale Bedeutung',
-    icon: AdvantagesFifthIcon,
+    icon: AdvantagesSixIcon,
   },
 ];
 

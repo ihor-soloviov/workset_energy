@@ -61,6 +61,46 @@ type HeroItem = {
   title: string;
 } & ImportedImages;
 
+type KarrierAttributes = {
+  job_title: string;
+  job_type: string;
+  job_description: string;
+  job_responsibilities: string;
+  job_requirements: string;
+  job_message: string;
+  job_location: string;
+  job_salary: string;
+  job_hours: string;
+  createdAt?: string;
+  updatedAt?: string;
+  publishedAt?: string;
+};
+
+type KarrierJobData = {
+  id: number;
+  attributes: KarrierAttributes;
+};
+
+type KarrierPagination = {
+  page: number;
+  pageSize: number;
+  pageCount: number;
+  total: number;
+};
+
+type KarrierJobMeta = {
+  pagination: KarrierPagination;
+};
+
+type KarrierJobItems = {
+  data: KarrierJobData[];
+  meta: KarrierJobMeta;
+};
+type KarrierJobItem = {
+  data: KarrierJobData;
+  meta?: KarrierJobMeta;
+};
+
 export type {
   VisionLinkItem,
   VorteileSliderItems,
@@ -72,4 +112,7 @@ export type {
   VorteileSliderT,
   NavLinkItem,
   HeroItem,
+  KarrierJobItems,
+  KarrierJobItem,
+  KarrierAttributes,
 };

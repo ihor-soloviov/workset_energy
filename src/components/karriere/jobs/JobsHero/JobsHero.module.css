@@ -1,0 +1,109 @@
+.jobsHeroSection {
+  padding: 150px 0 180px;
+  height: 726px;
+  background-color: var(--red-main);
+}
+
+.jobsHeroContainer {
+  width: 100%;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+.jobsHeroLink {
+  color: var(--white-main);
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 124px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.jobsHeroIcon {
+  fill: var(--white-main);
+  width: 18px;
+  height: 18px;
+}
+
+.jobsHeroTitle {
+  color: var(--white-main);
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 130%;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 12px;
+}
+
+.jobsHeroText {
+  color: var(--white-second);
+  text-align: center;
+  font-size: 16px;
+  line-height: 160%;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 36px;
+}
+
+.jobsHeroBtn {
+  color: var(--red-main);
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  padding: 14px 22px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  background-color: var(--white-main);
+  border: 1px solid var(--white-main);
+  width: 164px;
+  height: 48px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 390px) {
+  .jobsHeroContainer {
+    width: 390px;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .jobsHeroSection {
+    padding: 159px 0 151px;
+    height: 745px;
+  }
+
+  .jobsHeroContainer {
+    width: 1728px;
+    padding: 0px 114px;
+  }
+
+  .jobsHeroLink {
+    font-size: 18px;
+    line-height: 160%;
+    margin-bottom: 118px;
+  }
+
+  .jobsHeroIcon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .jobsHeroTitle {
+    font-size: 50px;
+    margin-bottom: 18px;
+    width: 612px;
+  }
+
+  .jobsHeroText {
+    font-size: 18px;
+    margin-bottom: 28px;
+    width: 668px;
+  }
+
+  .jobsHeroBtn {
+    height: 52px;
+  }
+}
