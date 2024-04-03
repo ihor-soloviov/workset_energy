@@ -83,8 +83,13 @@
     display: none;
   }
 
+  .sliderWrap {
+    border-radius: 32px;
+  }
+
   .heroImgDesk {
     display: block;
+    border-radius: 32px;
   }
 
   .heroTextWrap {
