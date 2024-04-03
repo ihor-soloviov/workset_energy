@@ -14,7 +14,7 @@ const IFrame: React.FC<Props> = ({ link, videoFrameClass }) => {
       <motion.iframe
         initial="hidden"
         whileInView="visible"
-        viewport={{ amount: 0 }}
+        viewport={{ amount: 0, once: true }}
         variants={fromBotAnimation}
         src={link}
         className={videoFrameClass}

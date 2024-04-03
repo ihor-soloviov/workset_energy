@@ -1,3 +1,4 @@
+'use client';
 import Button from '@/components/common/Button/Button';
 import styles from './StepList.module.css';
 import { inter } from '@/utils/fonts';
@@ -14,6 +15,9 @@ import stepThreeImgDesc from '/public/images/home-page/step-3-desc.jpg';
 import stepFourImgDesc from '/public/images/home-page/step-4-desc.jpg';
 import stepFiveImgDesc from '/public/images/home-page/step-5-desc.jpg';
 import BtnArrowIcon from '/public/icons/small-arrow-btn.svg';
+
+import { motion } from 'framer-motion';
+import { fromBotAnimation } from '@/animations/animations';
 
 type StepItem = {
   title: string;
@@ -68,7 +72,14 @@ const StepList = () => {
   return (
     <ul className={styles.stepList}>
       {stepItems.map(({ text, title, imgDesc, imgMob }, index) => (
-        <li className={`${styles.stepItem} ${getClass(index)}`} key={title}>
+        <motion.li
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0.6, once: true }}
+          variants={fromBotAnimation}
+          className={`${styles.stepItem} ${getClass(index)}`}
+          key={title}
+        >
           <Image className={styles.stepImgMob} alt="title" src={imgMob} />
           <Image className={styles.stepImgDesc} alt="title" src={imgDesc} />
           <div className={`${styles.stepTextWrap} ${getClass(index)}`}>
@@ -91,7 +102,7 @@ const StepList = () => {
               />
             </Button>
           </div>
-        </li>
+        </motion.li>
       ))}
     </ul>
   );

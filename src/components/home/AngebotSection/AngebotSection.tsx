@@ -1,6 +1,7 @@
 import styles from './AngebotSection.module.css';
 import { inter } from '@/utils/fonts';
 import AngebotForm from './AngebotForm/AngebotForm';
+import RecycleTextWrap from '@/components/common/RecycleTextWrap/RecycleTextWrap';
 
 const AngebotSection = () => {
   return (
@@ -8,13 +9,14 @@ const AngebotSection = () => {
       <div className={styles.angebotImgWrap}></div>
 
       <div className={styles.angebotFormWrap}>
-        <h2 className={styles.angebotTitle}>
-          Sichere dir dein individuelles Angebot
-        </h2>
-        <p className={`${styles.angebotMainText} ${inter.className}`}>
-          Wir erstellen kostenlos eine unverbindliche und auf dich persönlich
-          zugeschnittene Witrschaftlichkeitsanalyse
-        </p>
+        <RecycleTextWrap
+          title="Sichere dir dein individuelles Angebot"
+          titleClass={styles.angebotTitle}
+          text="Wir erstellen kostenlos eine unverbindliche und auf dich persönlich
+          zugeschnittene Witrschaftlichkeitsanalyse"
+          textClass={`${styles.angebotMainText} ${inter.className}`}
+        />
+
         <AngebotForm />
       </div>
     </section>

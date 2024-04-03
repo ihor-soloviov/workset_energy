@@ -7,6 +7,9 @@ import * as Yup from 'yup';
 import styles from './ContactUsForm.module.css';
 import Button from '../../Button/Button';
 
+import { motion } from 'framer-motion';
+import { opacityAnimation } from '@/animations/animations';
+
 const ContactUsForm = () => {
   const { handleSubmit, errors, touched, getFieldProps } = useFormik({
     initialValues: {
@@ -27,7 +30,11 @@ const ContactUsForm = () => {
   });
 
   return (
-    <form
+    <motion.form
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0, once: true }}
+      variants={opacityAnimation}
       onSubmit={handleSubmit}
       className={`${styles.contactUsForm} ${inter.className}`}
     >
@@ -80,7 +87,7 @@ const ContactUsForm = () => {
       >
         Senden
       </Button>
-    </form>
+    </motion.form>
   );
 };
 

@@ -54,7 +54,7 @@ const ProductList = () => {
         <motion.li
           initial="hidden"
           whileInView="visible"
-          viewport={{ amount: 0 }}
+          viewport={{ amount: 0, once: true }}
           custom={index + 0.4}
           variants={fromBotAnimation}
           className={styles.productItem}

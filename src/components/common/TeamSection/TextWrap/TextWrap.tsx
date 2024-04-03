@@ -16,7 +16,7 @@ const TextWrap = () => {
       <motion.h2
         initial="hidden"
         whileInView="visible"
-        viewport={{ amount: 0 }}
+        viewport={{ amount: 0, once: true }}
         variants={textAnimationToRight}
         className={styles.teamTitle}
       >
@@ -26,7 +26,7 @@ const TextWrap = () => {
       <motion.p
         initial="hidden"
         whileInView="visible"
-        viewport={{ amount: 0 }}
+        viewport={{ amount: 0, once: true }}
         variants={textAnimationToRight}
         custom={1}
         className={`${styles.teamText} ${inter.className}`}
@@ -37,7 +37,7 @@ const TextWrap = () => {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ amount: 0 }}
+        viewport={{ amount: 0, once: true }}
         variants={opacityAnimation}
         custom={3}
       >

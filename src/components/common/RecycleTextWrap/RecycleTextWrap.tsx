@@ -21,7 +21,7 @@ const RecycleTextWrap: React.FC<Props> = ({
       <motion.h2
         initial="hidden"
         whileInView="visible"
-        viewport={{ amount: 0 }}
+        viewport={{ amount: 0, once: true }}
         variants={fromBotAnimation}
         className={titleClass}
       >
@@ -31,7 +31,7 @@ const RecycleTextWrap: React.FC<Props> = ({
         <motion.p
           initial="hidden"
           whileInView="visible"
-          viewport={{ amount: 0 }}
+          viewport={{ amount: 0, once: true }}
           variants={fromBotAnimation}
           custom={0.4}
           className={textClass}

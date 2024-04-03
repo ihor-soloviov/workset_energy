@@ -1,13 +1,15 @@
 import React from 'react';
 import styles from './GoogleComSection.module.css';
 import GoogleComSlider from './GoogleComSlider/GoogleComSlider';
+import RecycleTextWrap from '../RecycleTextWrap/RecycleTextWrap';
 
 const GoogleComSection = () => {
   return (
     <section className={styles.googleComSection}>
-      <h2 className={styles.googleComTitle}>
-        Was sagen unsere Kunden über uns?
-      </h2>
+      <RecycleTextWrap
+        title="Was sagen unsere Kunden über uns?"
+        titleClass={styles.googleComTitle}
+      />
       <GoogleComSlider />
     </section>
   );

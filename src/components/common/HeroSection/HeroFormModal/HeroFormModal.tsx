@@ -7,6 +7,9 @@ import { inter } from '@/utils/fonts';
 import HeroForm from './HeroForm/HeroForm';
 import { useThankYouStore } from '@/store/hero-store';
 
+import { motion } from 'framer-motion';
+import { textAnimationToLeft } from '@/animations/animations';
+
 type HeroFormModalProps = {
   handleModalClick: () => void;
   isDesktop: boolean;
@@ -26,7 +29,11 @@ const HeroFormModal = ({ handleModalClick, isDesktop }: HeroFormModalProps) => {
   };
 
   return (
-    <div
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0, once: true }}
+      variants={textAnimationToLeft}
       className={`${styles.heroFormWrap} ${isThankYouOpen ? styles.active : ''}`}
     >
       <div className={styles.heroTopWrap}>
@@ -70,7 +77,7 @@ const HeroFormModal = ({ handleModalClick, isDesktop }: HeroFormModalProps) => {
           </>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

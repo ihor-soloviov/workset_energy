@@ -16,7 +16,7 @@ const TextWrap: React.FC<Props> = ({ title, text }) => {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ amount: 0 }}
+        viewport={{ amount: 0, once: true }}
         variants={fromBotAnimation}
         className={styles.videoTextWrap}
       >

@@ -26,7 +26,6 @@ const HomePage = () => {
       <GoogleComSection />
       <AngebotSection />
       <VisionSection />
-
       <StepSection />
       <ContactUsSection />
     </>

@@ -8,6 +8,9 @@ import * as Yup from 'yup';
 import Button from '@/components/common/Button/Button';
 import { useState, ChangeEvent } from 'react';
 
+import { motion } from 'framer-motion';
+import { opacityAnimation } from '@/animations/animations';
+
 const AngebotForm = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
@@ -43,7 +46,11 @@ const AngebotForm = () => {
   });
 
   return (
-    <form
+    <motion.form
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0, once: true }}
+      variants={opacityAnimation}
       onSubmit={handleSubmit}
       className={`${styles.angebotForm} ${inter.className}`}
     >
@@ -125,7 +132,7 @@ const AngebotForm = () => {
           Senden
         </Button>
       </div>
-    </form>
+    </motion.form>
   );
 };
 

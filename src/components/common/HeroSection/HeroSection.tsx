@@ -79,7 +79,7 @@ const HeroSection = ({
               className={`${styles.heroMainTitle} ${styles[className]}`}
               initial="hidden"
               whileInView="visible"
-              viewport={{ amount: 0 }}
+              viewport={{ amount: 0, once: true }}
               variants={textAnimationToRight}
               custom={0}
             >
@@ -88,7 +88,7 @@ const HeroSection = ({
             <motion.p
               initial="hidden"
               whileInView="visible"
-              viewport={{ amount: 0 }}
+              viewport={{ amount: 0, once: true }}
               variants={textAnimationToRight}
               custom={1}
               className={`${styles.heroMainText} ${styles[className]} ${inter.className}`}
@@ -98,7 +98,7 @@ const HeroSection = ({
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ amount: 0 }}
+              viewport={{ amount: 0, once: true }}
               variants={opacityAnimation}
               className={styles.heroBtnWrap}
             >
