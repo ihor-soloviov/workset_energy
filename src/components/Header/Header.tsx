@@ -19,7 +19,9 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
   const [currentPathname, setCurrentPathname] = useState('');
+
   const { setIsDesktop } = useGlobalStore();
+
   useEffect(() => {
     setIsDesktop(window.innerWidth > 1728);
 
