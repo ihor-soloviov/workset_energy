@@ -1,16 +1,15 @@
 .sliderWrap {
   height: 100%;
+  position: relative;
 }
 
 .heroImgMob {
   border-radius: 16px;
-  width: 100%;
-  height: 100%;
+  object-fit: cover;
 }
 
 .heroImgDesk {
-  width: 100%;
-  height: 100%;
+  object-fit: cover;
   display: none;
   border-radius: 16px;
 }

@@ -12,8 +12,13 @@
   position: relative;
 }
 
+.JobHeroImgMob {
+  object-fit: cover;
+}
+
 .JobHeroImgDesc {
   display: none;
+  object-fit: cover;
 }
 
 .jobHeroLink {

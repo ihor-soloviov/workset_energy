@@ -12,7 +12,9 @@ import { useGlobalStore } from '@/store/global-store';
 
 type HeroProps = {
   imgMob: string;
+  imgMobBlur: string;
   imgDesc: string;
+  imgDescBlur: string;
   title: string;
   text: string;
   className: string;
@@ -20,7 +22,9 @@ type HeroProps = {
 
 const HeroSection = ({
   imgMob,
+  imgMobBlur,
   imgDesc,
+  imgDescBlur,
   title,
   text,
   className,
@@ -55,16 +59,18 @@ const HeroSection = ({
         <Image
           className={styles.heroImgMob}
           src={imgMob}
-          layout="fill"
-          objectFit="cover"
-          alt="slide"
+          fill
+          placeholder="blur"
+          blurDataURL={imgMobBlur}
+          alt="hero-img"
         />
         <Image
           className={styles.heroImgDesc}
           src={imgDesc}
-          layout="fill"
-          objectFit="cover"
-          alt="slide"
+          fill
+          placeholder="blur"
+          blurDataURL={imgDescBlur}
+          alt="hero-img"
         />
 
         <div className={styles.heroContainer}>
