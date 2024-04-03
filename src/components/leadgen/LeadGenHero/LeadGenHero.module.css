@@ -1,14 +1,22 @@
 .leadHeroSection {
   width: 100%;
   height: 202px;
-  background-image: url('/images/leadgen-page/lead-hero-mob.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
 }
+
 .leadHeroContainer {
   width: 100%;
   padding: 0 24px;
   margin: 0 auto;
+}
+
+.leadHeroImgMob {
+  object-fit: cover;
+}
+
+.leadHeroImgDesc {
+  display: none;
+  object-fit: cover;
 }
 
 @media screen and (min-width: 390px) {
@@ -21,10 +29,18 @@
   .leadHeroSection {
     height: 972px;
     padding: 159px 0 87px;
-    background-image: url('/images/leadgen-page/lead-hero-desc.jpg');
   }
+
   .leadHeroContainer {
     width: 1728px;
     padding: 0 873px 0 117px;
+  }
+
+  .leadHeroImgMob {
+    display: none;
+  }
+
+  .leadHeroImgDesc {
+    display: block;
   }
 }

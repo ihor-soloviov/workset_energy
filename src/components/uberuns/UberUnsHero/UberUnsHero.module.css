@@ -1,15 +1,25 @@
 .uberHeroSection {
   padding: 239px 0 125px;
   height: auto;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url('/images/uberuns-page/uberuns-hero-mob.jpg');
+
+  position: relative;
+}
+
+.uberHeroImgMob {
+  object-fit: cover;
+}
+
+.uberHeroImgDesc {
+  display: none;
+  object-fit: cover;
 }
 
 .uberHeroContainer {
   width: 100%;
   padding: 0 24px;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .uberHeroTitle {
@@ -58,6 +68,14 @@
   .uberHeroContainer {
     width: 1728px;
     padding: 0 588px;
+  }
+
+  .uberHeroImgMob {
+    display: none;
+  }
+
+  .uberHeroImgDesc {
+    display: block;
   }
 
   .uberHeroTitle {

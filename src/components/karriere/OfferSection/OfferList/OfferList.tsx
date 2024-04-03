@@ -18,8 +18,20 @@ const OfferList = ({ showItems }: OfferListProps) => {
       {currentItems(offerItems).map(
         ({ mainTitle, mainText, title, text, timeType, mobile, desktop }) => (
           <li className={styles.offerItem} key={mainTitle}>
-            <Image className={styles.offerImgMob} alt={title} src={mobile} />
-            <Image className={styles.offerImgDesk} alt={title} src={desktop} />
+            <Image
+              className={styles.offerImgMob}
+              loading="lazy"
+              placeholder="blur"
+              alt={title}
+              src={mobile}
+            />
+            <Image
+              className={styles.offerImgDesk}
+              loading="lazy"
+              placeholder="blur"
+              alt={title}
+              src={desktop}
+            />
             <div className={styles.offerMainWrap}>
               <div className={styles.offerTopWrap}>
                 <h3
