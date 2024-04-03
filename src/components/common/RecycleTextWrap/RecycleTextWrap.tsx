@@ -1,6 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
-import { fromBotAnimation } from '@/animations/animations';
+import { fromBotAnimation } from '@/utils/animations';
 import React from 'react';
 
 type Props = {

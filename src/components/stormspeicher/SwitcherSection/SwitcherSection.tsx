@@ -5,7 +5,7 @@ import ToggleButton from '../ToggleButton/ToggleButton';
 import Video from '@/components/common/Video/Video';
 
 import { motion } from 'framer-motion';
-import { fromBotAnimation } from '@/animations/animations';
+import { fromBotAnimation } from '@/utils/animations';
 
 const SwitcherSection = () => {
   const [isDark, setIsDark] = useState(false);

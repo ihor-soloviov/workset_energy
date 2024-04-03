@@ -2,7 +2,7 @@
 import React from 'react';
 import styles from '../VideoSection.module.css';
 import { motion } from 'framer-motion';
-import { fromBotAnimation } from '@/animations/animations';
+import { fromBotAnimation } from '@/utils/animations';
 import { inter } from '@/utils/fonts';
 
 type Props = {

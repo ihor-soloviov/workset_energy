@@ -8,7 +8,7 @@ import HeroForm from './HeroForm/HeroForm';
 import { useThankYouStore } from '@/store/hero-store';
 
 import { motion } from 'framer-motion';
-import { textAnimationToLeft } from '@/animations/animations';
+import { textAnimationToLeft } from '@/utils/animations';
 
 type HeroFormModalProps = {
   handleModalClick: () => void;

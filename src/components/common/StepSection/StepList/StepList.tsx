@@ -6,7 +6,7 @@ import Image from 'next/image';
 import BtnArrowIcon from '/public/icons/small-arrow-btn.svg';
 
 import { motion } from 'framer-motion';
-import { fromBotAnimation } from '@/animations/animations';
+import { fromBotAnimation } from '@/utils/animations';
 import { stepItems } from './stepItems';
 
 const StepList = () => {

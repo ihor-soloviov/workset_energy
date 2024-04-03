@@ -5,10 +5,7 @@ import { inter } from '@/utils/fonts';
 import Button from '../../Button/Button';
 import ArrowIcon from '/public/icons/small-arrow-btn.svg';
 import { motion } from 'framer-motion';
-import {
-  opacityAnimation,
-  textAnimationToRight,
-} from '@/animations/animations';
+import { opacityAnimation, textAnimationToRight } from '@/utils/animations';
 
 const TextWrap = () => {
   return (

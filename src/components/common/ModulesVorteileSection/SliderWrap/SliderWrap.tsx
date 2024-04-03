@@ -16,13 +16,15 @@ const SliderWrap: React.FC<Props> = ({ sliderImages }) => {
 
   return (
     <div className={styles.vorteileImageWrap}>
-      <Image
-        className={`${styles.sliderImgMob} ${styles.prev} ${animateTo === 'toPrev' ? styles[animateTo] : ''}`}
-        src={sliderImages[prevIndex].mobile}
-        fill
-        loading="lazy"
-        alt="slide"
-      />
+      {sliderImages[prevIndex]?.mobile && (
+        <Image
+          className={`${styles.sliderImgMob} ${styles.prev} ${animateTo === 'toPrev' ? styles[animateTo] : ''}`}
+          src={sliderImages[prevIndex].mobile}
+          fill
+          loading="lazy"
+          alt="slide"
+        />
+      )}
       <Image
         className={styles.sliderImgMob}
         src={sliderImages[currIndex].mobile}
@@ -37,13 +39,15 @@ const SliderWrap: React.FC<Props> = ({ sliderImages }) => {
         loading="lazy"
         alt="slide"
       />
-      <Image
-        className={`${styles.sliderImgDesk} ${styles.prev} ${animateTo === 'toPrev' ? styles[animateTo] : ''}`}
-        src={sliderImages[prevIndex].desktop}
-        fill
-        loading="lazy"
-        alt="slide"
-      />
+      {sliderImages[prevIndex]?.desktop && (
+        <Image
+          className={`${styles.sliderImgDesk} ${styles.prev} ${animateTo === 'toPrev' ? styles[animateTo] : ''}`}
+          src={sliderImages[prevIndex].desktop}
+          fill
+          loading="lazy"
+          alt="slide"
+        />
+      )}
       <Image
         className={styles.sliderImgDesk}
         src={sliderImages[currIndex].desktop}

@@ -10,7 +10,7 @@ import EmployeeSection from '@/components/common/EmployeeSection/EmployeeSection
 import GoogleComSection from '@/components/common/GoogleComSection/GoogleComSection';
 import TeamSection from '@/components/common/TeamSection/TeamSection';
 import ContactUsSection from '@/components/common/ContactUsSection/ContactUsSection';
-import { sliderImages, vorteileItems } from './slides';
+import { sliderImages, vorteileItems } from '../../utils/pvSlides';
 
 const PvAnlagen = () => {
   return (

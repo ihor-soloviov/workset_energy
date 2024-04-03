@@ -4,7 +4,7 @@ import VideoSection from '@/components/common/VideoSection/VideoSection';
 import VorteileSection from '@/components/common/ModulesVorteileSection/VorteileSection';
 import { stormspeicherHero } from '@/utils/hero';
 import { stormSteicherVideo } from '@/utils/video';
-import { sliderImages, vorteileItems } from './slides';
+import { sliderImages, vorteileItems } from '../../utils/stormSlides';
 import SwitcherSection from '@/components/stormspeicher/SwitcherSection/SwitcherSection';
 import PricingPlansSection from '@/components/common/PricingPlans/PricingPlansSection';
 import EmployeeSection from '@/components/common/EmployeeSection/EmployeeSection';
