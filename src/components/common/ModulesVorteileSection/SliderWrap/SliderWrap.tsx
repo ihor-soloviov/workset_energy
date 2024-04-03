@@ -19,43 +19,43 @@ const SliderWrap: React.FC<Props> = ({ sliderImages }) => {
       <Image
         className={`${styles.sliderImgMob} ${styles.prev} ${animateTo === 'toPrev' ? styles[animateTo] : ''}`}
         src={sliderImages[prevIndex].mobile}
-        layout="fill"
-        objectFit="cover"
+        fill
+        loading="lazy"
         alt="slide"
       />
       <Image
         className={styles.sliderImgMob}
         src={sliderImages[currIndex].mobile}
-        layout="fill"
-        objectFit="cover"
+        fill
+        loading="lazy"
         alt="slide"
       />
       <Image
         className={`${styles.sliderImgMob} ${styles.next} ${animateTo === 'toNext' ? styles[animateTo] : ''}`}
         src={sliderImages[nextIndex].mobile}
-        layout="fill"
-        objectFit="cover"
+        fill
+        loading="lazy"
         alt="slide"
       />
       <Image
         className={`${styles.sliderImgDesk} ${styles.prev} ${animateTo === 'toPrev' ? styles[animateTo] : ''}`}
         src={sliderImages[prevIndex].desktop}
-        layout="fill"
-        objectFit="cover"
+        fill
+        loading="lazy"
         alt="slide"
       />
       <Image
         className={styles.sliderImgDesk}
         src={sliderImages[currIndex].desktop}
-        layout="fill"
-        objectFit="cover"
+        fill
+        loading="lazy"
         alt="slide"
       />
       <Image
         className={`${styles.sliderImgDesk} ${styles.next} ${animateTo === 'toNext' ? styles[animateTo] : ''}`}
         src={sliderImages[nextIndex].desktop}
-        layout="fill"
-        objectFit="cover"
+        fill
+        loading="lazy"
         alt="slide"
       />
     </div>

@@ -32,6 +32,7 @@ const KarriereHeroSlider = ({ swiperRef }: Props) => {
           <Image
             fill
             alt="hero-slide"
+            priority={title == 'Trainee Sales Manager' ? true : false}
             src={mobile}
             className={styles.heroImgMob}
           />
@@ -39,6 +40,7 @@ const KarriereHeroSlider = ({ swiperRef }: Props) => {
             fill
             alt="hero-slide"
             src={desktop}
+            priority={title == 'Trainee Sales Manager' ? true : false}
             className={styles.heroImgDesk}
           />
 
