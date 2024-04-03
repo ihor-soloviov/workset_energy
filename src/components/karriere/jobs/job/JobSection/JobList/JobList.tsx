@@ -1,6 +1,6 @@
 import styles from './JobList.module.css';
 import React from 'react';
-import { JobListItems } from './jobItem';
+import { JobListItems } from './jobItems';
 import { inter } from '@/utils/fonts';
 import { KarrierJobItem } from '@/types/infoTypes';
 

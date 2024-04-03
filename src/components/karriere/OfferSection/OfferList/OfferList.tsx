@@ -1,10 +1,9 @@
 import styles from './OfferList.module.css';
 import { inter, interTight } from '@/utils/fonts';
 import Image from 'next/image';
-import { offerItems } from './offerItem';
+import { offerItems, OfferItem } from './offerItems';
 import LinkArrowIcon from '/public/icons/small-product-arrow.svg';
 import Link from 'next/link';
-import type { OfferItem } from './offerItem';
 
 type OfferListProps = {
   showItems: boolean;

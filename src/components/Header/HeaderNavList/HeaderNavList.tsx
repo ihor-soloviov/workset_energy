@@ -4,7 +4,7 @@ import styles from './HeaderNavList.module.css';
 import { inter } from '@/utils/fonts';
 import { usePathname } from 'next/navigation';
 import { useThankYouStore } from '@/store/hero-store';
-import { navLinkItems } from './navlist';
+import { navLinkItems } from './navLinkItems';
 
 const HeaderNavList = () => {
   const pathname = usePathname();

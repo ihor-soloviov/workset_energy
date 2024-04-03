@@ -1,5 +1,5 @@
 import styles from './JobInfo.module.css';
-import { jobInfoItems } from './jobInfoItem';
+import { jobInfoItems } from './jobInfoItems';
 import React from 'react';
 import { inter } from '@/utils/fonts';
 import { KarrierJobItem } from '@/types/infoTypes';
