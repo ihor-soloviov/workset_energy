@@ -2,17 +2,21 @@ import styles from './JobInfo.module.css';
 import { jobInfoItems } from './jobInfoItem';
 import React from 'react';
 import { inter } from '@/utils/fonts';
-import { jobItem } from '../JobList/jobItem';
+import { KarrierJobItem } from '@/types/infoTypes';
 
-const JobInfo = () => {
+type JobInfoProps = {
+  response: KarrierJobItem | null;
+};
+
+const JobInfo = ({ response }: JobInfoProps) => {
   const currentData = (title: string) => {
     switch (title) {
       case 'Standort:':
-        return jobItem.location;
+        return response && response.data.attributes.job_location;
       case 'Gehalt:':
-        return jobItem.salary;
+        return response && response.data.attributes.job_salary;
       case 'Grafik:':
-        return jobItem.hours;
+        return response && response.data.attributes.job_hours;
       default:
         return;
     }

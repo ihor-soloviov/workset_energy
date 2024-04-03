@@ -51,7 +51,7 @@
   .jobInfoList {
     position: absolute;
     right: 186px;
-    top: 200px;
+    top: 0px;
     margin: unset;
 
     padding: 48px;

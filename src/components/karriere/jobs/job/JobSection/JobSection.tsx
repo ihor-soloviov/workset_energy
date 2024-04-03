@@ -3,12 +3,18 @@ import styles from './JobSection.module.css';
 import JobInfo from './JobInfo/JobInfo';
 import JobForm from './JobForm/JobForm';
 import JobList from './JobList/JobList';
-const JobSection = () => {
+import { KarrierJobItem } from '@/types/infoTypes';
+
+type JobSectionProps = {
+  response: KarrierJobItem | null;
+};
+
+const JobSection = ({ response }: JobSectionProps) => {
   return (
     <section className={styles.jobSection}>
       <div className={styles.jobContainer}>
-        <JobInfo />
-        <JobList />
+        <JobInfo response={response} />
+        <JobList response={response} />
         <JobForm />
       </div>
     </section>

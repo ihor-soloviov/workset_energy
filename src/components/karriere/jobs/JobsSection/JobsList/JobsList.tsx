@@ -1,40 +1,50 @@
 import Button from '@/components/common/Button/Button';
 import styles from './JobsList.module.css';
-import { jobItems } from './jobsItem';
 import Link from 'next/link';
 import { inter } from '@/utils/fonts';
+import type { KarrierJobItems } from '@/types/infoTypes';
 
-const JobsList = () => {
+type JobsListProps = {
+  response: KarrierJobItems | null;
+};
+
+const JobsList = ({ response }: JobsListProps) => {
   return (
     <ul className={styles.jobsList}>
-      {jobItems.map(({ text, title, timeType, location, id }, index) => (
-        <li className={styles.jobsItem} key={index}>
-          <div className={styles.jobsTopWrap}>
-            <h3 className={styles.jobsTitle}>{title}</h3>
-            <div className={styles.jobsTimeWrap}>
-              <p className={styles.jobsTimeType}>{timeType}</p>
+      {response &&
+        response.data.length !== 0 &&
+        response.data.map(({ id, attributes }, index) => (
+          <li className={styles.jobsItem} key={index}>
+            <div className={styles.jobsTopWrap}>
+              <h3 className={styles.jobsTitle}>{attributes.job_title}</h3>
+              <div className={styles.jobsTimeWrap}>
+                <p className={styles.jobsTimeType}>{attributes.job_type}</p>
+              </div>
             </div>
-          </div>
-          <div className={styles.jobsWrap}>
-            <p className={`${styles.jobsText} ${inter.className}`}>{text}</p>
-            <p className={`${styles.jobsLocation} ${inter.className}`}>
-              {location}
-            </p>
-          </div>
-          <div className={styles.jobsBottomWrap}>
-            <Link
-              id={title}
-              href={`/karriere/jobs/${id}`}
-              className={styles.jobsLink}
-            >
-              Mehr Info
-            </Link>
-            <Button type="button" className={styles.jobsBtn}>
-              Eine Anfrage stellen
-            </Button>
-          </div>
-        </li>
-      ))}
+            <div className={styles.jobsWrap}>
+              <p className={`${styles.jobsText} ${inter.className}`}>
+                {attributes.job_message.length > 138
+                  ? `${attributes.job_message.slice(0, 199)}...`
+                  : attributes.job_message}
+              </p>
+              <p className={`${styles.jobsLocation} ${inter.className}`}>
+                {attributes.job_location}
+              </p>
+            </div>
+            <div className={styles.jobsBottomWrap}>
+              <Link
+                id={id.toString()}
+                href={`/karriere/jobs/${id}`}
+                className={styles.jobsLink}
+              >
+                Mehr Info
+              </Link>
+              <Button type="button" className={styles.jobsBtn}>
+                Eine Anfrage stellen
+              </Button>
+            </div>
+          </li>
+        ))}
     </ul>
   );
 };

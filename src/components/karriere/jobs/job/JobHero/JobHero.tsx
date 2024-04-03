@@ -7,8 +7,13 @@ import { inter } from '@/utils/fonts';
 import Image from 'next/image';
 import JobHeroMob from '/public/images/karriere-page/job-hero-mob.jpg';
 import JobHeroDesk from '/public/images/karriere-page/job-hero-desk.jpg';
-import { jobItem } from '../../job/JobSection/JobList/jobItem';
-const JobHero = () => {
+import type { KarrierJobItem } from '@/types/infoTypes';
+
+type JobHeroProps = {
+  response: KarrierJobItem | null;
+};
+
+const JobHero = ({ response }: JobHeroProps) => {
   return (
     <section className={styles.JobHeroSection}>
       <Image
@@ -30,7 +35,9 @@ const JobHero = () => {
           <LinkArrowIcon className={styles.jobHeroIcon} />
           Zu allen offenen Stellen
         </Link>
-        <h2 className={styles.JobHeroTitle}>{jobItem.title}</h2>
+        <h2 className={styles.JobHeroTitle}>
+          {response?.data.attributes.job_title}
+        </h2>
         <p className={`${styles.JobHeroTextMob} ${inter.className}`}>
           Entdecke einzigartige Entwicklungsmöglichkeiten in unserem
           Unternehmen. Komm zu uns, um deine Ambitionen zu verwirklichen und
