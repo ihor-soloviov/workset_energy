@@ -7,7 +7,7 @@ import cn from 'classnames';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import { useGlobalStore } from '@/store/global-store';
-import { teamItems } from './teamItem';
+import { teamItems } from './teamItems';
 
 const TeamSlider = () => {
   const [activeItem, setActiveItem] = useState(1);

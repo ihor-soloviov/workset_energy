@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { inter } from '@/utils/fonts';
 import ArrowIcon from '/public/icons/small-arrow-btn.svg';
 import Button from '../../Button/Button';
-import { employeeItems } from './employeeItem';
+import { employeeItems } from './employeeItems';
 
 const EmployeeList = () => {
   return (
