@@ -1,7 +1,7 @@
 'use client';
 
-import JobHero from '@/components/karriere/jobs/job/JobHero/JobHero';
-import JobSection from '@/components/karriere/jobs/job/JobSection/JobSection';
+import JobHero from '@/components/karriere/job/JobHero/JobHero';
+import JobSection from '@/components/karriere/job/JobSection/JobSection';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import type { KarrierJobItem } from '@/types/infoTypes';
