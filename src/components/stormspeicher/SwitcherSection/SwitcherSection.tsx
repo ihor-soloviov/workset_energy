@@ -1,12 +1,11 @@
 'use client';
 import React, { useState } from 'react';
 import styles from './SwitcherSection.module.css';
-import Container from '@/components/common/Container/Container';
-import Image from 'next/image';
-import animMob from '/public/images/stormspeicher-page/animMob.jpg';
-import animDesk from '/public/images/stormspeicher-page/animDesk.jpg';
 import ToggleButton from '../ToggleButton/ToggleButton';
 import Video from '@/components/common/Video/Video';
+
+import { motion } from 'framer-motion';
+import { fromBotAnimation } from '@/animations/animations';
 
 const SwitcherSection = () => {
   const [isDark, setIsDark] = useState(false);
@@ -18,7 +17,13 @@ const SwitcherSection = () => {
     >
       <div className={styles.switcherContainer}>
         <div className={styles.switcherWrap}>
-          <article className={styles.switcherInfo}>
+          <motion.article
+            className={styles.switcherInfo}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ amount: 0, once: true }}
+            variants={fromBotAnimation}
+          >
             <h4
               className={`${styles.switcherTitle} ${isDark ? styles.switcherTitleDark : ''}`}
             >
@@ -35,20 +40,10 @@ const SwitcherSection = () => {
               würde, wird in einem Stromspeicher gespeichert. Von dort zapfen
               Sie am Abend einfach Ihren Strom ab.
             </p>
-          </article>
+          </motion.article>
           <div
             className={`${styles.switcherAnim} ${isDark ? styles.switcherAnimDark : ''}`}
           >
-            {/* <Image
-              className={styles.switcherAnimMob}
-              src={animMob}
-              alt="anim"
-            /> */}
-            {/* <Image
-              className={styles.switcherAnimDesk}
-              src={animDesk}
-              alt="anim"
-            /> */}
             <Video isDark={isDark} />
             <ToggleButton toggleDarkMode={toggleDarkMode} />
           </div>
