@@ -11,10 +11,7 @@ import { useEffect, useState } from 'react';
 import { useGlobalStore } from '@/store/global-store';
 
 import { motion } from 'framer-motion';
-import {
-  opacityAnimation,
-  textAnimationToRight,
-} from '@/animations/animations';
+import { opacityAnimation, textAnimationToRight } from '@/utils/animations';
 
 type HeroProps = {
   imgMob: string;

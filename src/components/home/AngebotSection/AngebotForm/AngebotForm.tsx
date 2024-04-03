@@ -9,7 +9,7 @@ import Button from '@/components/common/Button/Button';
 import { useState, ChangeEvent } from 'react';
 
 import { motion } from 'framer-motion';
-import { opacityAnimation } from '@/animations/animations';
+import { opacityAnimation } from '@/utils/animations';
 
 const AngebotForm = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);

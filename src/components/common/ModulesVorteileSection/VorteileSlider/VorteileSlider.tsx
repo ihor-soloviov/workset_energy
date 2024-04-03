@@ -16,6 +16,7 @@ type Props = VorteileSliderT;
 const VorteileSlider: React.FC<Props> = ({ sliderImages, sliderText }) => {
   const { currIndex, prevIndex, nextIndex, setIndex, setAnimate } =
     useSliderStore();
+
   const sliderLength = sliderImages.length;
 
   const handlePrevSlide = () => {

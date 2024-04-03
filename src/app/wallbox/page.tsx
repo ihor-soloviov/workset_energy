@@ -10,7 +10,7 @@ import TeamSection from '@/components/common/TeamSection/TeamSection';
 import { wallboxHero } from '@/utils/hero';
 import { wallboxVideo } from '@/utils/video';
 
-import { sliderImages, vorteileItems } from './slides';
+import { sliderImages, vorteileItems } from '../../utils/wallSlides';
 import ContactUsSection from '@/components/common/ContactUsSection/ContactUsSection';
 import RedHelpSection from '@/components/common/RedHelpSection/RedHelpSection';
 

@@ -7,7 +7,7 @@ import styles from './Plan.module.css';
 import { inter } from '@/utils/fonts';
 import RedButton from '../../RedButton/RedButton';
 import { motion } from 'framer-motion';
-import { fromBotAnimation } from '@/animations/animations';
+import { fromBotAnimation } from '@/utils/animations';
 
 type Props = {
   plan: PlanT;
