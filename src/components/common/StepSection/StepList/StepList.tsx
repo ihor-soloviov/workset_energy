@@ -8,8 +8,10 @@ import BtnArrowIcon from '/public/icons/small-arrow-btn.svg';
 import { motion } from 'framer-motion';
 import { fromBotAnimation } from '@/utils/animations';
 import { stepItems } from './stepItems';
+import { useGlobalStore } from '@/store/global-store';
 
 const StepList = () => {
+  const { isDesktop } = useGlobalStore();
   const getClass = (index: number) => {
     return (index + 1) % 2 === 0 ? styles.white : '';
   };
@@ -19,7 +21,7 @@ const StepList = () => {
         <motion.li
           initial="hidden"
           whileInView="visible"
-          viewport={{ amount: 0.6, once: true }}
+          viewport={{ amount: +`${isDesktop ? 0.6 : 0.3}`, once: true }}
           variants={fromBotAnimation}
           className={`${styles.stepItem} ${getClass(index)}`}
           key={title}
