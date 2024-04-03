@@ -8,6 +8,9 @@ import MenuBtnIcon from '/public/icons/small-arrow-btn.svg';
 import MenuCrossIcon from '/public/icons/cross.svg';
 import Link from 'next/link';
 import { useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { mobileMenuOpen } from '@/utils/animations';
+
 type MobileMenuProps = {
   handleMenuClick: () => void;
 };
@@ -23,7 +26,14 @@ const MobileMenu = ({ handleMenuClick }: MobileMenuProps) => {
   }, []);
 
   return (
-    <div className={styles.menu}>
+    <motion.div
+      className={styles.menu}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0 }}
+      exit={{ x: 500, opacity: 0, transition: { duration: 0.3 } }}
+      variants={mobileMenuOpen}
+    >
       <div className={styles.menuTopWrap}>
         <Button
           handleClick={handleMenuClick}
@@ -49,7 +59,7 @@ const MobileMenu = ({ handleMenuClick }: MobileMenuProps) => {
         <MobileContactList />
         <MobileSocialList />
       </Container>
-    </div>
+    </motion.div>
   );
 };
 

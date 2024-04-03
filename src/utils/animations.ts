@@ -22,6 +22,16 @@ export const textAnimationToLeft = {
   },
 };
 
+export const mobileMenuOpen = {
+  hidden: {
+    x: 300,
+  },
+  visible: {
+    x: 0,
+    transition: { duration: 0.2 },
+  },
+};
+
 export const EricOneAnimation = {
   hidden: {
     opacity: 0,
