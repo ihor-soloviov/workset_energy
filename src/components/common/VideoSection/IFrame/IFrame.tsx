@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { fromBotAnimation } from '@/animations/animations';
+import { fromBotAnimation } from '@/utils/animations';
 
 type Props = {
   link: string;

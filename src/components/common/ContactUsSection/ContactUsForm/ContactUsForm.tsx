@@ -8,7 +8,7 @@ import styles from './ContactUsForm.module.css';
 import Button from '../../Button/Button';
 
 import { motion } from 'framer-motion';
-import { opacityAnimation } from '@/animations/animations';
+import { opacityAnimation } from '@/utils/animations';
 
 const ContactUsForm = () => {
   const { handleSubmit, errors, touched, getFieldProps } = useFormik({

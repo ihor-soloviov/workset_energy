@@ -3,7 +3,7 @@ import ProductList from './ProductList/ProductList';
 import styles from './ProductSection.module.css';
 import { inter } from '@/utils/fonts';
 import { motion } from 'framer-motion';
-import { fromBotAnimation } from '@/animations/animations';
+import { fromBotAnimation } from '@/utils/animations';
 import RecycleTextWrap from '@/components/common/RecycleTextWrap/RecycleTextWrap';
 
 const ProductSection = () => {

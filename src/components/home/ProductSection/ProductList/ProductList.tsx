@@ -4,7 +4,7 @@ import BtnArrowIcon from '/public/icons/small-product-arrow.svg';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { fromBotAnimation } from '@/animations/animations';
+import { fromBotAnimation } from '@/utils/animations';
 import { productsItems } from './productItem';
 
 const ProductList = () => {
