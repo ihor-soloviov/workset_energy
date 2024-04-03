@@ -79,7 +79,10 @@ const Header = () => {
           </Button>
           <HeaderNavList />
         </nav>
-        <Link href="/leadgen" className={styles.headerLeadLink}>
+        <Link
+          href="/leadgen"
+          className={`${styles.headerLeadLink} ${pathname === '/karriere/jobs' ? styles.jobs : ''}`}
+        >
           Jetzt Berechnen
           <ArrowIcon className={styles.headerIcon} />
         </Link>

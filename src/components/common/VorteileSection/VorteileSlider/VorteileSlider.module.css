@@ -1,0 +1,187 @@
+.vorteileSliderWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.vorteileImageWrap {
+  position: relative;
+  height: 446px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.sliderImgMob {
+  object-fit: cover;
+}
+.sliderImgDesk {
+  display: none;
+  object-fit: cover;
+}
+
+.prev {
+  transform: translateX(-100%);
+  z-index: 2;
+}
+
+.toPrev {
+  transition: transform 0.4s ease-in-out;
+  transform: translateX(0);
+}
+
+.next {
+  transform: translateX(100%);
+}
+
+.toNext {
+  transition: transform 0.4s ease-in-out;
+  transform: translateX(0);
+}
+
+.sliderInfoWrap {
+  height: 496px;
+  width: 100%;
+  padding: 32px 0 64px;
+  background-color: var(--red-main);
+}
+
+.sliderInfoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 24px;
+  margin: 0 auto;
+  width: 390px;
+  height: 100%;
+}
+
+.sliderInfoCounter {
+  display: none;
+}
+
+.sliderInfo {
+  width: 342px;
+  margin: 0 auto;
+}
+
+.sliderTitle {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 12px;
+  color: var(--white-main);
+}
+
+.sliderText {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
+  color: var(--white-main);
+}
+
+.sliderDotsWrap {
+  display: none;
+}
+
+.sliderButtonsWrap {
+  display: flex;
+  gap: 8px;
+}
+
+.sliderBtn {
+  cursor: pointer;
+  display: flex;
+  width: 73px;
+  height: 73px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid var(--gray-stroke);
+  flex-shrink: 0;
+  transition:
+    background-color 250ms var(--cubic),
+    border-color 250ms var(--cubic);
+}
+
+.nextArrow,
+.prevArrow {
+  stroke: var(--white-main);
+  width: 24px;
+  height: 24px;
+}
+
+.nextArrow {
+  transform: rotate(180deg);
+}
+
+@media screen and (min-width: 1728px) {
+  .vorteileSliderWrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: max-content;
+  }
+
+  .vorteileImageWrap {
+    width: 100%;
+    height: 837px;
+  }
+
+  .sliderImgMob {
+    display: none;
+  }
+
+  .sliderImgDesk {
+    display: block;
+  }
+
+  .sliderInfoContainer {
+    width: 100%;
+  }
+
+  .sliderInfoWrap {
+    position: relative;
+    justify-content: space-between;
+    height: 837px;
+    padding: 271px 48px 56px 59px;
+  }
+
+  .sliderInfoCounter {
+    position: absolute;
+    display: block;
+    top: 48px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 160%;
+    color: var(--white-main);
+  }
+
+  .sliderInfo {
+    width: auto;
+    margin: 0;
+  }
+
+  .sliderTitle {
+    font-size: 64px;
+    line-height: 130%;
+    margin-bottom: 24px;
+  }
+
+  .sliderText {
+    font-size: 18px;
+    max-width: 620px;
+  }
+
+  .sliderControllers {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    margin: 0;
+  }
+
+  .sliderDotsWrap {
+    display: block;
+  }
+}

@@ -104,12 +104,21 @@
       background-color 250ms var(--cubic);
   }
 
-  .headerIcon {
-    stroke: var(--gray-input);
+  .headerLeadLink.jobs {
+    border-color: var(--white-main);
+    background-color: transparent;
   }
 
   .headerLeadLink:hover {
     border-color: var(--white-main);
     background-color: transparent;
+  }
+
+  .headerLeadLink.jobs:hover {
+    border-color: transparent;
+  }
+
+  .headerIcon {
+    stroke: var(--gray-input);
   }
 }

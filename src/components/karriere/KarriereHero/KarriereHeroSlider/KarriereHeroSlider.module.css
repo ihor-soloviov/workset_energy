@@ -1,6 +1,7 @@
 .sliderWrap {
   height: 100%;
   position: relative;
+  cursor: pointer;
 }
 
 .heroImgMob {

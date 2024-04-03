@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import LeadGenHero from '@/components/leadgen/LeadGenHero/LeadGenHero';
 import LeadGenComponent from '@/components/leadgen/LeadGenComponent/LeadGenComponent';
 import { useGlobalStore } from '@/store/global-store';

@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import styles from './SwitcherSection.module.css';
 import ToggleButton from '../ToggleButton/ToggleButton';
-import Video from '@/components/common/Video/Video';
+import Video from '@/components/stormspeicher/Video/Video';
 
 import { motion } from 'framer-motion';
 import { fromBotAnimation } from '@/utils/animations';
