@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { fromBotAnimation } from '@/animations/animations';
-import { productsItems } from './productItem';
+import { productsItems } from './productItems';
 
 const ProductList = () => {
   return (

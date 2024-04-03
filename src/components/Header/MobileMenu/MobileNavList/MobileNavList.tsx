@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import styles from './MobileNavList.module.css';
 import MenuArrowIcon from '/public/icons/menu-arrow.svg';
-import { navLinkItems } from '../../HeaderNavList/navlist';
+import { navLinkItems } from '../../HeaderNavList/navLinkItems';
 
 type MobileNavListProps = {
   handleMenuClick: () => void;
