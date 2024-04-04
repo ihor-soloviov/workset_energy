@@ -1,7 +1,7 @@
 import JobsList from './JobsList/JobsList';
 import styles from './JobsSection.module.css';
 import React from 'react';
-import JobsSelect from './JobsSelect/JobsSelect';
+import JobsSelectForm from './JobsSelectForm/JobsSelectForm';
 import type { KarrierJobItems } from '@/types/infoTypes';
 
 type JobsSectionProps = {
@@ -12,7 +12,7 @@ const JobsSection = ({ response }: JobsSectionProps) => {
   return (
     <section className={styles.jobsSection}>
       <div className={styles.jobsContainer}>
-        <JobsSelect />
+        <JobsSelectForm />
         <JobsList response={response} />
       </div>
     </section>
