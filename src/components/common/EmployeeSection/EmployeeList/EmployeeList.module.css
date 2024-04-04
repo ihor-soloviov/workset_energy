@@ -41,6 +41,7 @@
 }
 
 .employeeIcon {
+  transition: stroke 250ms var(--cubic);
   stroke: var(--gray-input);
 }
 
@@ -95,5 +96,19 @@
     border: none;
     border-radius: 6px;
     gap: 8px;
+    transition:
+      border-color 250ms var(--cubic),
+      color 250ms var(--cubic),
+      background-color 250ms var(--cubic);
+  }
+
+  .employeeItemBtn:hover {
+    border-color: var(--white-main);
+    background-color: var(--white-main);
+    color: var(--red-main);
+  }
+
+  .employeeItemBtn:hover .employeeIcon {
+    stroke: var(--red-main);
   }
 }

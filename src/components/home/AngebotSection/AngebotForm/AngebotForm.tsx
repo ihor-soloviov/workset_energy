@@ -26,24 +26,25 @@ const AngebotForm = () => {
     }
   };
 
-  const { handleSubmit, errors, touched, getFieldProps } = useFormik({
-    initialValues: {
-      name: '',
-      email: '',
-      tel: '',
-      message: '',
-    },
-    validationSchema: Yup.object({
-      name: Yup.string().required('Required'),
-      email: Yup.string().email('Invalid email address').required('Required'),
-      tel: Yup.number().typeError('Invalid number').required('Required'),
+  const { handleSubmit, errors, touched, getFieldProps, isValid, dirty } =
+    useFormik({
+      initialValues: {
+        name: '',
+        email: '',
+        tel: '',
+        message: '',
+      },
+      validationSchema: Yup.object({
+        name: Yup.string().required('Required'),
+        email: Yup.string().email('Invalid email address').required('Required'),
+        tel: Yup.number().typeError('Invalid number').required('Required'),
 
-      message: Yup.string(),
-    }),
-    onSubmit: values => {
-      console.log({ ...values, angebot: selectedFile });
-    },
-  });
+        message: Yup.string(),
+      }),
+      onSubmit: values => {
+        console.log({ ...values, angebot: selectedFile });
+      },
+    });
 
   return (
     <motion.form
@@ -90,7 +91,7 @@ const AngebotForm = () => {
         </label>
       </div>
       <label className={styles.angebotLabel}>
-        Wir prüfen dein PV-Angebot
+        Wir prüfen dein PV-Angebot*
         <p className={styles.angebotFilePlaceholderMob}>
           {selectedFile
             ? truncateText(selectedFile.name, 23)
@@ -104,11 +105,15 @@ const AngebotForm = () => {
         <input
           id="angebot"
           type="file"
+          required
           placeholder="Lade dein(e) Angebot(e) hoch"
           className={styles.angebotInputFile}
           onChange={handleFileChange}
         />
-        <label htmlFor="angebot" className={styles.angebotUploadBtn}>
+        <label
+          htmlFor="angebot"
+          className={`${styles.angebotUploadBtn} ${selectedFile ? styles.withFile : ''}`}
+        >
           Upload
         </label>
       </label>
@@ -126,6 +131,7 @@ const AngebotForm = () => {
           <br className={styles.angebotBr} /> Vielen Dank für deine Nachricht!
         </p>
         <Button
+          disabled={!(isValid && dirty && selectedFile)}
           className={`${styles.angebotBtn} ${interTight.className}`}
           type="submit"
         >

@@ -17,6 +17,7 @@
   margin: 0 auto;
   margin-bottom: 12px;
 }
+
 .offerMainText {
   color: var(--gray-text);
   text-align: center;
@@ -25,6 +26,7 @@
   margin: 0 auto;
   margin-bottom: 48px;
 }
+
 .offerMainBtn {
   margin: 0 auto;
   margin-top: 54px;
@@ -40,6 +42,18 @@
   border-radius: 6px;
   background-color: var(--red-second);
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.04);
+  transition:
+    border-color 250ms var(--cubic),
+    color 250ms var(--cubic),
+    background-color 250ms var(--cubic),
+    box-shadow 250ms var(--cubic);
+}
+
+.offerMainBtn:hover {
+  border-color: var(--white-main);
+  background-color: var(--white-main);
+  color: var(--red-main);
+  box-shadow: unset;
 }
 
 @media screen and (min-width: 390px) {

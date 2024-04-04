@@ -23,28 +23,34 @@ const KarriereForm = () => {
     }
   };
 
-  const { handleSubmit, errors, touched, getFieldProps, resetForm } = useFormik(
-    {
-      initialValues: {
-        name: '',
-        email: '',
-        tel: '',
-        message: '',
-      },
-      validationSchema: Yup.object({
-        name: Yup.string().required('Required'),
-        email: Yup.string().email('Invalid email address').required('Required'),
-        tel: Yup.number().typeError('Invalid number').required('Required'),
-
-        message: Yup.string(),
-      }),
-      onSubmit: values => {
-        console.log({ ...values, angebot: selectedFile });
-        resetForm();
-        setSelectedFile(null);
-      },
+  const {
+    handleSubmit,
+    errors,
+    touched,
+    getFieldProps,
+    resetForm,
+    isValid,
+    dirty,
+  } = useFormik({
+    initialValues: {
+      name: '',
+      email: '',
+      tel: '',
+      message: '',
     },
-  );
+    validationSchema: Yup.object({
+      name: Yup.string().required('Required'),
+      email: Yup.string().email('Invalid email address').required('Required'),
+      tel: Yup.number().typeError('Invalid number').required('Required'),
+
+      message: Yup.string(),
+    }),
+    onSubmit: values => {
+      console.log({ ...values, angebot: selectedFile });
+      resetForm();
+      setSelectedFile(null);
+    },
+  });
 
   return (
     <form
@@ -101,13 +107,17 @@ const KarriereForm = () => {
               : `Keine Datei gewählt`}
           </p>
           <input
-            id="angebot"
+            id="cv"
             type="file"
+            required
             placeholder="Keine Datei gewählt"
             className={styles.karriereInputFile}
             onChange={handleFileChange}
           />
-          <label htmlFor="angebot" className={styles.karriereUploadBtn}>
+          <label
+            htmlFor="cv"
+            className={`${styles.karriereUploadBtn} ${selectedFile ? styles.withFile : ''}`}
+          >
             Upload
           </label>
         </label>
@@ -126,6 +136,7 @@ const KarriereForm = () => {
           vertraulich
         </p>
         <Button
+          disabled={!(isValid && dirty && selectedFile)}
           className={`${styles.karriereBtn} ${interTight.className}`}
           type="submit"
         >

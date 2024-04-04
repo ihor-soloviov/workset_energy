@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 36px;
 }
+
 .jobsItem {
   padding: 40px 25px;
   border-radius: 12px;
@@ -11,9 +12,11 @@
   width: 342px;
   height: 518px;
 }
+
 .jobsTopWrap {
   margin-bottom: 24px;
 }
+
 .jobsTitle {
   color: var(--black-main);
   font-size: 24px;
@@ -23,6 +26,7 @@
   margin-right: auto;
   margin-bottom: 16px;
 }
+
 .jobsTimeWrap {
   display: flex;
   padding: 10px 19px;
@@ -41,9 +45,11 @@
   text-transform: uppercase;
   margin-right: auto;
 }
+
 .jobsWrap {
   margin-bottom: 40px;
 }
+
 .jobsText {
   color: var(--gray-text);
   font-size: 15px;
@@ -54,6 +60,7 @@
   height: 138px;
   margin-bottom: 18px;
 }
+
 .jobsLocation {
   color: var(--black-main);
   font-size: 15px;
@@ -61,12 +68,14 @@
   width: fit-content;
   margin-right: auto;
 }
+
 .jobsBottomWrap {
   display: flex;
   flex-direction: column;
   width: 292px;
   gap: 14px;
 }
+
 .jobsLink,
 .jobsBtn {
   font-size: 15px;
@@ -86,13 +95,34 @@
   font-weight: 700;
   background-color: var(--red-main);
   border: 1px solid transparent;
+  transition:
+    border-color 250ms var(--cubic),
+    color 250ms var(--cubic),
+    background-color 250ms var(--cubic);
 }
+
 .jobsBtn {
   color: var(--black-main);
   padding: 12px 76px;
   font-weight: 500;
   border: 1px solid var(--gray-stroke);
   background-color: transparent;
+  transition:
+    border-color 250ms var(--cubic),
+    color 250ms var(--cubic),
+    background-color 250ms var(--cubic);
+}
+
+.jobsLink:hover {
+  border-color: var(--white-main);
+  background-color: var(--white-main);
+  color: var(--red-main);
+}
+
+.jobsBtn:hover {
+  border-color: var(--red-main);
+  background-color: var(--red-main);
+  color: var(--white-main);
 }
 
 @media screen and (min-width: 1728px) {

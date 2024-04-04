@@ -68,19 +68,35 @@
     border: 1px solid var(--gray-stroke);
     background-color: var(--white-main);
     margin-left: auto;
+    transition:
+      border-color 250ms var(--cubic),
+      color 250ms var(--cubic),
+      background-color 250ms var(--cubic);
   }
 
   .leadStepThreeBtnDesc:disabled {
     color: var(--gray-text);
+    cursor: not-allowed;
   }
 
   .leadIcon {
     width: 20px;
     height: 21px;
     stroke: var(--black-main);
+    transition: stroke 250ms var(--cubic);
   }
 
   .leadStepThreeBtnDesc:disabled .leadIcon {
     stroke: var(--gray-text);
+  }
+
+  .leadStepThreeBtnDesc:not(:disabled):hover {
+    border-color: var(--red-main);
+    background-color: var(--red-main);
+    color: var(--white-main);
+  }
+
+  .leadStepThreeBtnDesc:not(:disabled):hover .leadIcon {
+    stroke: var(--white-main);
   }
 }

@@ -50,6 +50,16 @@
   color: var(--gray-input);
   font-size: 16px;
   font-weight: 600;
+  transition:
+    border-color 250ms var(--cubic),
+    color 250ms var(--cubic),
+    background-color 250ms var(--cubic);
+}
+
+.uberHeroBtn:hover {
+  border-color: var(--white-main);
+  background-color: var(--white-main);
+  color: var(--red-main);
 }
 
 @media screen and (min-width: 390px) {

@@ -83,6 +83,12 @@
   cursor: pointer;
 }
 
+.karriereUploadBtn.withFile {
+  background-color: var(--red-main);
+  border-color: var(--red-main);
+  color: var(--white-main);
+}
+
 .karriereInput.error {
   border: 1px solid var(--red-main);
 }
@@ -136,6 +142,22 @@
   background-color: var(--red-main);
   border: none;
   border-radius: 6px;
+  transition:
+    border-color 250ms var(--cubic),
+    color 250ms var(--cubic),
+    background-color 250ms var(--cubic);
+}
+
+.karriereBtn:disabled {
+  border-color: var(--red-second);
+  background-color: var(--red-second);
+  cursor: not-allowed;
+}
+
+.karriereBtn:not(:disabled):hover {
+  border-color: var(--white-main);
+  background-color: var(--white-main);
+  color: var(--red-main);
 }
 
 @media screen and (min-width: 390px) {

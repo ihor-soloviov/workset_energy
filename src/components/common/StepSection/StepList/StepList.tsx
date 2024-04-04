@@ -50,7 +50,7 @@ const StepList = () => {
               className={`${styles.stepBtn} ${getClass(index)}`}
               type="button"
             >
-              Zum Angebot{' '}
+              Zum Angebot
               <BtnArrowIcon
                 className={`${styles.stepBtnIcon} ${getClass(index)}`}
               />

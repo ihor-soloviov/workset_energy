@@ -5,9 +5,9 @@ import CheckMarker from '/public/icons/check-circle.svg';
 import { PlanT } from '@/types/infoTypes';
 import styles from './Plan.module.css';
 import { inter } from '@/utils/fonts';
-import RedButton from '../../RedButton/RedButton';
 import { motion } from 'framer-motion';
 import { fromBotAnimation } from '@/utils/animations';
+import Button from '../../Button/Button';
 
 type Props = {
   plan: PlanT;
@@ -52,7 +52,9 @@ const Plan: React.FC<Props> = ({
           </li>
         ))}
       </ul>
-      <RedButton>Mehr Info</RedButton>
+      <Button type="button" className={styles.planBtn}>
+        Mehr Info
+      </Button>
     </div>
   </motion.li>
 );

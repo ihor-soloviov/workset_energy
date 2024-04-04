@@ -39,10 +39,25 @@
   border: none;
   border-radius: 6px;
   gap: 8px;
+  transition:
+    border-color 250ms var(--cubic),
+    color 250ms var(--cubic),
+    background-color 250ms var(--cubic);
 }
 
 .teamIcon {
   stroke: var(--gray-input);
+  transition: stroke 250ms var(--cubic);
+}
+
+.teamBtn:hover {
+  border-color: var(--white-main);
+  background-color: var(--white-main);
+  color: var(--red-main);
+}
+
+.teamBtn:hover .teamIcon {
+  stroke: var(--red-main);
 }
 
 @media screen and (min-width: 1728px) {

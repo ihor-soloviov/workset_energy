@@ -22,25 +22,31 @@ const JobForm = () => {
     }
   };
 
-  const { handleSubmit, errors, touched, getFieldProps, resetForm } = useFormik(
-    {
-      initialValues: {
-        name: '',
+  const {
+    handleSubmit,
+    errors,
+    touched,
+    getFieldProps,
+    resetForm,
+    isValid,
+    dirty,
+  } = useFormik({
+    initialValues: {
+      name: '',
 
-        tel: '',
-      },
-      validationSchema: Yup.object({
-        name: Yup.string().required('Required'),
-
-        tel: Yup.number().typeError('Invalid number').required('Required'),
-      }),
-      onSubmit: values => {
-        console.log({ ...values, angebot: selectedFile });
-        resetForm();
-        setSelectedFile(null);
-      },
+      tel: '',
     },
-  );
+    validationSchema: Yup.object({
+      name: Yup.string().required('Required'),
+
+      tel: Yup.number().typeError('Invalid number').required('Required'),
+    }),
+    onSubmit: values => {
+      console.log({ ...values, angebot: selectedFile });
+      resetForm();
+      setSelectedFile(null);
+    },
+  });
   return (
     <div className={styles.jobFormWrap}>
       <h2 className={styles.jobFormTitle}>
@@ -91,19 +97,23 @@ const JobForm = () => {
                 : `Keine Datei gewählt`}
             </p>
             <input
-              id="angebot"
+              id="cv"
               type="file"
               placeholder="Keine Datei gewählt"
               className={styles.jobInputFile}
               onChange={handleFileChange}
             />
-            <label htmlFor="angebot" className={styles.jobUploadBtn}>
+            <label
+              htmlFor="cv"
+              className={`${styles.jobUploadBtn} ${selectedFile ? styles.withFile : ''}`}
+            >
               Upload
             </label>
           </label>
         </div>
 
         <Button
+          disabled={!(isValid && dirty && selectedFile)}
           className={`${styles.jobBtn} ${interTight.className}`}
           type="submit"
         >

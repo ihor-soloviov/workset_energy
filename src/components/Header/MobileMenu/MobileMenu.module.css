@@ -61,12 +61,12 @@
   margin-bottom: 60px;
   transition:
     background-color 250ms var(--cubic),
-    color 250ms var(--cubic),
-    stroke 250ms var(--cubic);
+    color 250ms var(--cubic);
 }
 
 .menuBtnIcon {
   stroke: var(--white-main);
+  transition: stroke 250ms var(--cubic);
 }
 
 .menuBtn:hover {

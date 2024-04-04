@@ -6,7 +6,7 @@ import { stormspeicherHero } from '@/utils/hero';
 import { stormSteicherVideo } from '@/utils/video';
 import { sliderImages, vorteileItems } from '../../utils/stormSlides';
 import SwitcherSection from '@/components/stormspeicher/SwitcherSection/SwitcherSection';
-import PricingPlansSection from '@/components/common/PricingPlans/PricingPlansSection';
+import PricingPlansSection from '@/components/common/PricingPlansSection/PricingPlansSection';
 import EmployeeSection from '@/components/common/EmployeeSection/EmployeeSection';
 import GoogleComSection from '@/components/common/GoogleComSection/GoogleComSection';
 import TeamSection from '@/components/common/TeamSection/TeamSection';

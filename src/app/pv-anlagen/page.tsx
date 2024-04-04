@@ -1,6 +1,6 @@
 import HeroSection from '@/components/common/HeroSection/HeroSection';
 import VorteileSection from '@/components/common/VorteileSection/VorteileSection';
-import PricingPlansSection from '@/components/common/PricingPlans/PricingPlansSection';
+import PricingPlansSection from '@/components/common/PricingPlansSection/PricingPlansSection';
 import VideoSection from '@/components/common/VideoSection/VideoSection';
 import { pvAnlagenVideo } from '@/utils/video';
 import { pvAnlagenHero } from '@/utils/hero';

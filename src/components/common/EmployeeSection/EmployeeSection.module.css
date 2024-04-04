@@ -36,10 +36,25 @@
   border: none;
   border-radius: 6px;
   gap: 8px;
+  transition:
+    border-color 250ms var(--cubic),
+    color 250ms var(--cubic),
+    background-color 250ms var(--cubic);
 }
 
 .employeeIcon {
   stroke: var(--gray-input);
+  transition: stroke 250ms var(--cubic);
+}
+
+.employeeBtn:hover {
+  border-color: var(--white-main);
+  background-color: var(--white-main);
+  color: var(--red-main);
+}
+
+.employeeBtn:hover .employeeIcon {
+  stroke: var(--red-main);
 }
 
 @media screen and (min-width: 1728px) {

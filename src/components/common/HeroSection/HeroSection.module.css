@@ -70,11 +70,22 @@
   color: var(--gray-input);
   transition:
     border-color 250ms var(--cubic),
+    color 250ms var(--cubic),
     background-color 250ms var(--cubic);
 }
 
 .heroIcon {
   stroke: var(--gray-input);
+  transition: stroke 250ms var(--cubic);
+}
+
+.heroLink:hover {
+  border-color: var(--white-main);
+  background-color: var(--white-main);
+  color: var(--red-main);
+}
+.heroLink:hover .heroIcon {
+  stroke: var(--red-main);
 }
 
 .heroBtn {
@@ -91,6 +102,14 @@
   font-weight: 600;
   line-height: 110%;
   color: var(--gray-input);
+  transition:
+    border-color 250ms var(--cubic),
+    background-color 250ms var(--cubic);
+}
+
+.heroBtn:hover {
+  border-color: var(--red-main);
+  background-color: var(--red-main);
 }
 
 @media screen and (min-width: 390px) {

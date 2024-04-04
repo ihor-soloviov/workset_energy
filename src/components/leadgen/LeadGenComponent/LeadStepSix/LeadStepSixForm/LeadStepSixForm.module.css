@@ -103,19 +103,35 @@
     background-color: var(--white-main);
     margin-left: auto;
     margin-top: 130px;
+    transition:
+      border-color 250ms var(--cubic),
+      color 250ms var(--cubic),
+      background-color 250ms var(--cubic);
   }
 
   .leadStepSixBtnDesc:disabled {
     color: var(--gray-text);
+    cursor: not-allowed;
   }
 
   .leadIcon {
     width: 20px;
     height: 21px;
     stroke: var(--black-main);
+    transition: stroke 250ms var(--cubic);
   }
 
   .leadStepSixBtnDesc:disabled .leadIcon {
     stroke: var(--gray-text);
+  }
+
+  .leadStepSixBtnDesc:not(:disabled):hover {
+    border-color: var(--red-main);
+    background-color: var(--red-main);
+    color: var(--white-main);
+  }
+
+  .leadStepSixBtnDesc:not(:disabled):hover .leadIcon {
+    stroke: var(--white-main);
   }
 }

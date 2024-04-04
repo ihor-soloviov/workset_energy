@@ -20,7 +20,7 @@
 .headerLogoLink {
   width: 73px;
   height: 43px;
-  transition: scale 100ms var(--cubic);
+  transition: scale 150ms var(--cubic);
 }
 
 .headerLogo {
@@ -48,7 +48,7 @@
 
 .headerBurgerIcon {
   stroke: var(--white-main);
-  transition: stroke 250ms var(--cubic);
+  transition: scale 150ms var(--cubic);
 }
 
 .headerBurgerIcon.blackStyle {
@@ -56,7 +56,7 @@
 }
 
 .headerBurgerIcon:hover {
-  stroke: var(--gray-text);
+  scale: 1.1;
 }
 
 .headerLeadLink {
@@ -101,7 +101,13 @@
     color: var(--white-main);
     transition:
       border-color 250ms var(--cubic),
+      color 250ms var(--cubic),
       background-color 250ms var(--cubic);
+  }
+
+  .headerIcon {
+    stroke: var(--gray-input);
+    transition: stroke 250ms var(--cubic);
   }
 
   .headerLeadLink.jobs {
@@ -111,14 +117,11 @@
 
   .headerLeadLink:hover {
     border-color: var(--white-main);
-    background-color: transparent;
+    background-color: var(--white-main);
+    color: var(--red-main);
   }
 
-  .headerLeadLink.jobs:hover {
-    border-color: transparent;
-  }
-
-  .headerIcon {
-    stroke: var(--gray-input);
+  .headerLeadLink:hover .headerIcon {
+    stroke: var(--red-main);
   }
 }

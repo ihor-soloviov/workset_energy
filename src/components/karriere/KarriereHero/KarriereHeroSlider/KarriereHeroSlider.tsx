@@ -32,7 +32,7 @@ const KarriereHeroSlider = ({ swiperRef }: Props) => {
           <Image
             fill
             alt="hero-slide"
-            priority={title == 'Trainee Sales Manager' ? true : false}
+            priority
             src={mobile}
             className={styles.heroImgMob}
           />
@@ -40,7 +40,7 @@ const KarriereHeroSlider = ({ swiperRef }: Props) => {
             fill
             alt="hero-slide"
             src={desktop}
-            priority={title == 'Trainee Sales Manager' ? true : false}
+            priority
             className={styles.heroImgDesk}
           />
 
@@ -59,7 +59,7 @@ const KarriereHeroSlider = ({ swiperRef }: Props) => {
               Unternehmen. Komm zu uns, um deine Ambitionen zu verwirklichen und
               neue Höhen in deiner Karriere zu erreichen
             </p>
-            <Button className={styles.HeroBtn} type="button">
+            <Button className={styles.heroBtn} type="button">
               Bewerben
             </Button>
           </div>

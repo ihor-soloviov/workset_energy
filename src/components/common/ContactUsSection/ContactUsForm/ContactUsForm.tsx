@@ -11,23 +11,24 @@ import { motion } from 'framer-motion';
 import { opacityAnimation } from '@/utils/animations';
 
 const ContactUsForm = () => {
-  const { handleSubmit, errors, touched, getFieldProps } = useFormik({
-    initialValues: {
-      name: '',
-      email: '',
-      tel: '',
-      message: '',
-    },
-    validationSchema: Yup.object({
-      name: Yup.string().required('Required'),
-      email: Yup.string().email('Invalid email address').required('Required'),
-      tel: Yup.number().typeError('Invalid number').required('Required'),
-      message: Yup.string(),
-    }),
-    onSubmit: values => {
-      console.log(values);
-    },
-  });
+  const { handleSubmit, errors, touched, getFieldProps, isValid, dirty } =
+    useFormik({
+      initialValues: {
+        name: '',
+        email: '',
+        tel: '',
+        message: '',
+      },
+      validationSchema: Yup.object({
+        name: Yup.string().required('Required'),
+        email: Yup.string().email('Invalid email address').required('Required'),
+        tel: Yup.number().typeError('Invalid number').required('Required'),
+        message: Yup.string(),
+      }),
+      onSubmit: values => {
+        console.log(values);
+      },
+    });
 
   return (
     <motion.form
@@ -82,6 +83,7 @@ const ContactUsForm = () => {
         />
       </label>
       <Button
+        disabled={!(isValid && dirty)}
         className={`${styles.ContactUsBtn} ${interTight.className}`}
         type="submit"
       >

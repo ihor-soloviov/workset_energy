@@ -35,6 +35,11 @@
 
 .heroCloseIcon {
   stroke: var(--black-main);
+  transition: stroke 250ms var(--cubic);
+}
+
+.heroCloseBtn:hover .heroCloseIcon {
+  stroke: var(--gray-text);
 }
 
 .heroTitle {
@@ -89,6 +94,16 @@
   height: 48px;
   justify-content: center;
   margin: 0 auto;
+  transition:
+    border-color 250ms var(--cubic),
+    color 250ms var(--cubic),
+    background-color 250ms var(--cubic);
+}
+
+.heroThankBtn:hover {
+  border-color: var(--white-main);
+  background-color: var(--white-main);
+  color: var(--red-main);
 }
 
 @media screen and (min-width: 390px) {

@@ -3,7 +3,7 @@ import Button from '@/components/common/Button/Button';
 import React, { useRef } from 'react';
 import styles from './KarriereHero.module.css';
 import { Swiper as SwiperType } from 'swiper';
-import DropArrowIcon from '/public/icons/drop-arrow.svg';
+import SlideArrowIcon from '/public/icons/slider-karrier-arrow.svg';
 import KarriereHeroSlider from './KarriereHeroSlider/KarriereHeroSlider';
 
 const KarriereHero = () => {
@@ -16,7 +16,7 @@ const KarriereHero = () => {
         className={styles.prevSlideBtn}
         type="button"
       >
-        <DropArrowIcon className={styles.slideIcon} />
+        <SlideArrowIcon className={styles.slideIcon} />
       </Button>
       <div className={styles.karriereHeroContainer}>
         <div className={styles.heroImgWrap}>
@@ -28,7 +28,7 @@ const KarriereHero = () => {
         className={styles.nextSlideBtn}
         type="button"
       >
-        <DropArrowIcon className={styles.slideIcon} />
+        <SlideArrowIcon className={styles.slideIcon} />
       </Button>
     </section>
   );

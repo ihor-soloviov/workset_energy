@@ -30,12 +30,22 @@
   gap: 5px;
   width: 192px;
   margin-bottom: 90px;
+  transition: color 250ms var(--cubic);
 }
 
 .jobHeroIcon {
   fill: var(--white-main);
   width: 18px;
   height: 18px;
+  transition: fill 250ms var(--cubic);
+}
+
+.jobHeroLink:hover {
+  color: var(--gray-stroke);
+}
+
+.jobHeroLink:hover .jobHeroIcon {
+  fill: var(--gray-stroke);
 }
 
 .JobHeroTitle {
@@ -76,12 +86,27 @@
   gap: 8px;
   font-weight: 600;
   padding: 14px 31px;
+  transition:
+    border-color 250ms var(--cubic),
+    color 250ms var(--cubic),
+    background-color 250ms var(--cubic);
 }
 
 .JobHeroIcon {
   stroke: var(--gray-input);
   width: 23px;
   height: 23px;
+  transition: stroke 250ms var(--cubic);
+}
+
+.JobHeroBtn:hover {
+  border-color: var(--white-main);
+  background-color: var(--white-main);
+  color: var(--red-main);
+}
+
+.JobHeroBtn:hover .JobHeroIcon {
+  stroke: var(--red-main);
 }
 
 @media screen and (min-width: 390px) {

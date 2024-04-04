@@ -122,7 +122,6 @@
 .questText {
   color: var(--gray-text);
   line-height: 160%;
-  letter-spacing: 0.5px;
 }
 
 .questConsultBtn {
@@ -139,9 +138,16 @@
   background-color: var(--red-main);
   border: none;
   border-radius: 6px;
+  transition:
+    border-color 250ms var(--cubic),
+    color 250ms var(--cubic),
+    background-color 250ms var(--cubic);
 }
 
-@media screen and (min-width: 390px) {
+.questConsultBtn:hover {
+  border-color: var(--white-main);
+  background-color: var(--white-main);
+  color: var(--red-main);
 }
 
 @media screen and (min-width: 1728px) {

@@ -84,6 +84,22 @@
   background-color: var(--red-main);
   border: none;
   border-radius: 6px;
+  transition:
+    border-color 250ms var(--cubic),
+    color 250ms var(--cubic),
+    background-color 250ms var(--cubic);
+}
+
+.ContactUsBtn:disabled {
+  border-color: var(--red-second);
+  background-color: var(--red-second);
+  cursor: not-allowed;
+}
+
+.ContactUsBtn:not(:disabled):hover {
+  border-color: var(--white-main);
+  background-color: var(--white-main);
+  color: var(--red-main);
 }
 
 @media screen and (min-width: 390px) {
