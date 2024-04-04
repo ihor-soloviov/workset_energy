@@ -14,7 +14,6 @@ import ArrowIcon from '/public/icons/small-arrow-btn.svg';
 import { useThankYouStore } from '@/store/hero-store';
 import { usePathname } from 'next/navigation';
 import { useGlobalStore } from '@/store/global-store';
-import { AnimatePresence } from 'framer-motion';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -88,9 +87,8 @@ const Header = () => {
           <ArrowIcon className={styles.headerIcon} />
         </Link>
       </div>
-      <AnimatePresence>
-        {isMenuOpen && <MobileMenu handleMenuClick={handleMenuClick} />}
-      </AnimatePresence>
+
+      {isMenuOpen && <MobileMenu handleMenuClick={handleMenuClick} />}
     </header>
   );
 };

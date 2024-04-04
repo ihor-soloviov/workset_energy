@@ -5,8 +5,6 @@ import { inter } from '@/utils/fonts';
 import Image from 'next/image';
 import uberHeroImgMob from '/public/images/uberuns-page/uberuns-hero-mob.jpg';
 import uberHeroImgDesk from '/public/images/uberuns-page/uberuns-hero-desc.jpg';
-import { LazyMotion, domAnimation, m } from 'framer-motion';
-import { opacityAnimation, textAnimationToRight } from '@/utils/animations';
 
 const UberUnsHero = () => {
   return (
@@ -29,40 +27,18 @@ const UberUnsHero = () => {
       />
 
       <div className={styles.uberHeroContainer}>
-        <LazyMotion features={domAnimation}>
-          <m.h2
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ amount: 0, once: true }}
-            variants={textAnimationToRight}
-            custom={0}
-            className={styles.uberHeroTitle}
-          >
-            Ihr zuverlässiger Partner für
-            <br className={styles.uberBr} /> PV-Anlage
-          </m.h2>
-          <m.p
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ amount: 0, once: true }}
-            variants={textAnimationToRight}
-            custom={1}
-            className={`${styles.uberHeroText} ${inter.className}`}
-          >
-            Wir erleichtern Ihnen den Übergang zu einer nachhaltigen Zukunft mit
-            Solarlösungen
-          </m.p>
-          <m.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ amount: 0, once: true }}
-            variants={opacityAnimation}
-          >
-            <Button type="button" className={styles.uberHeroBtn}>
-              Mehr Info
-            </Button>
-          </m.div>
-        </LazyMotion>
+        <h2 className={styles.uberHeroTitle}>
+          Ihr zuverlässiger Partner für
+          <br className={styles.uberBr} /> PV-Anlage
+        </h2>
+        <p className={`${styles.uberHeroText} ${inter.className}`}>
+          Wir erleichtern Ihnen den Übergang zu einer nachhaltigen Zukunft mit
+          Solarlösungen
+        </p>
+
+        <Button type="button" className={styles.uberHeroBtn}>
+          Mehr Info
+        </Button>
       </div>
     </section>
   );
