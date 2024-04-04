@@ -128,10 +128,10 @@
   stroke: var(--gray-input);
 }
 
-@media screen and (min-width: 1728px) {
+@media screen and (min-width: 1440px) {
   .stepItem {
     flex-direction: row;
-    height: 462px;
+    height: 46.2rem;
   }
 
   .stepImgMob {
@@ -140,12 +140,12 @@
 
   .stepImgDesc {
     display: block;
-    width: 393px;
-    height: 462px;
+    width: 39.3rem;
+    height: 46.2rem;
   }
 
   .stepTextWrap {
-    padding: 114px 204px 114px 68px;
+    padding: 11.4rem 20.4rem 11.4rem 6.8rem;
   }
 
   .stepTextWrap.white {
@@ -156,8 +156,34 @@
   }
 
   .stepTitle {
-    font-size: 34px;
+    font-size: 3.4rem;
     width: fit-content;
+    margin-bottom: 1.4rem;
+  }
+
+  .stepText {
+    width: 67rem;
+    height: 10.4rem;
+    margin-bottom: 2.4rem;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .stepItem {
+    height: 462px;
+  }
+
+  .stepImgDesc {
+    width: 393px;
+    height: 462px;
+  }
+
+  .stepTextWrap {
+    padding: 114px 204px 114px 68px;
+  }
+
+  .stepTitle {
+    font-size: 34px;
     margin-bottom: 14px;
   }
 

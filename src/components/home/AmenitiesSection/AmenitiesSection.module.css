@@ -24,6 +24,22 @@
 
 @media screen and (min-width: 1728px) {
   .amenitiesSection {
+    padding: 15rem 0;
+  }
+
+  .amenitiesMainTitle {
+    font-size: 3.4rem;
+  }
+
+  .amenitiesMainText {
+    font-size: 1.8rem;
+    width: fit-content;
+    margin-bottom: 5rem;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .amenitiesSection {
     padding: 150px 0;
   }
 
@@ -33,7 +49,6 @@
 
   .amenitiesMainText {
     font-size: 18px;
-    width: fit-content;
     margin-bottom: 50px;
   }
 }

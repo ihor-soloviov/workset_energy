@@ -95,7 +95,7 @@
 
 @media screen and (min-width: 1728px) {
   .productList {
-    gap: 40px;
+    gap: 4rem;
     flex-direction: row;
     width: fit-content;
   }
@@ -105,8 +105,8 @@
   }
 
   .productTextWrap {
-    padding: 25px;
-    width: 392px;
+    padding: 2.5rem;
+    width: 39.2rem;
   }
 
   .productImgMob {
@@ -115,6 +115,33 @@
 
   .productImgDesc {
     display: block;
+    width: 39.2rem;
+    height: 23.9rem;
+  }
+
+  .productTitle {
+    font-size: 2.2rem;
+  }
+
+  .productText {
+    margin-bottom: 3.5rem;
+    font-size: 1.6rem;
+    width: 30.9rem;
+    height: 7.8rem;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .productList {
+    gap: 40px;
+  }
+  .productTextWrap {
+    padding: 25px;
+    width: 392px;
+  }
+
+
+  .productImgDesc {
     width: 392px;
     height: 239px;
   }

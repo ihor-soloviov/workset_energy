@@ -43,6 +43,35 @@
   gap: 210px;
 }
 
+@media screen and (min-width: 1440px) {
+  .pricingPlansSection {
+    padding-bottom: 13rem;
+  }
+  .pricingPlansWrap {
+    gap: 26.3rem;
+  }
+  .pricingPlansHeader {
+    width: max-content;
+    max-width: 72.9rem;
+  }
+
+  .plansTitle {
+    font-size: 5rem;
+    max-width: max-content;
+    margin-bottom: 1.6rem;
+  }
+
+  .plansText {
+    font-size: 1.8rem;
+    max-width: 55rem;
+  }
+
+  .pricingPlansItems {
+    flex-direction: row;
+    gap: 2.4rem;
+  }
+}
+
 @media screen and (min-width: 1728px) {
   .pricingPlansSection {
     padding-bottom: 130px;
@@ -51,13 +80,11 @@
     gap: 263px;
   }
   .pricingPlansHeader {
-    width: max-content;
     max-width: 729px;
   }
 
   .plansTitle {
     font-size: 50px;
-    max-width: max-content;
     margin-bottom: 16px;
   }
 
@@ -67,7 +94,6 @@
   }
 
   .pricingPlansItems {
-    flex-direction: row;
     gap: 24px;
   }
 }

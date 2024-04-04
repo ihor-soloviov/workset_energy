@@ -33,16 +33,16 @@
 
 @media screen and (min-width: 1728px) {
   .videoSection {
-    padding: 150px 0 100px;
+    padding: 15rem 0 10rem;
   }
   .videoMainWrap {
     flex-direction: row;
-    gap: 160px;
+    gap: 16rem;
     align-items: center;
   }
   .videoFrame {
     width: calc(100% / 2);
-    height: 420px;
+    height: 42rem;
   }
 
   .left {
@@ -51,6 +51,29 @@
 
   .right {
     order: 1;
+  }
+
+  .videoTextWrap {
+    width: 53rem;
+  }
+  .videoTitle {
+    font-size: 3.4rem;
+    margin-bottom: 1.6rem;
+  }
+  .videoText {
+    width: 53rem;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .videoSection {
+    padding: 150px 0 100px;
+  }
+  .videoMainWrap {
+    gap: 160px;
+  }
+  .videoFrame {
+    height: 420px;
   }
 
   .videoTextWrap {

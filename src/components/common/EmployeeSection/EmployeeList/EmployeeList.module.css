@@ -45,7 +45,7 @@
   stroke: var(--gray-input);
 }
 
-@media screen and (min-width: 1728px) {
+@media screen and (min-width: 1440px) {
   .employeeList {
     gap: unset;
   }
@@ -53,8 +53,8 @@
   .employeeItem {
     flex-direction: row;
     align-items: center;
-    gap: 80px;
-    width: 1356px;
+    gap: 8rem;
+    width: 135.6rem;
   }
 
   .employeeItem:nth-child(2n) {
@@ -70,32 +70,32 @@
   }
 
   .employeeTextWrap {
-    gap: 12px;
+    gap: 1.2rem;
   }
 
   .employeeTitle {
-    font-size: 34px;
+    font-size: 3.4rem;
   }
 
   .employeeText {
-    width: 459px;
+    width: 45.9rem;
   }
 
   .employeeItemBtn {
     display: flex;
-    margin-top: 6px;
+    margin-top: 0.6rem;
     justify-content: center;
     align-items: center;
-    padding: 13px 20px;
+    padding: 1.3rem 2rem;
     color: var(--gray-input);
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 600;
-    width: 170px;
-    height: 48px;
+    width: 17rem;
+    height: 4.8rem;
     background-color: var(--red-main);
     border: none;
     border-radius: 6px;
-    gap: 8px;
+    gap: 0.8rem;
     transition:
       border-color 250ms var(--cubic),
       color 250ms var(--cubic),
@@ -110,5 +110,33 @@
 
   .employeeItemBtn:hover .employeeIcon {
     stroke: var(--red-main);
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .employeeItem {
+    gap: 80px;
+    width: 1356px;
+  }
+
+  .employeeTextWrap {
+    gap: 12px;
+  }
+
+  .employeeTitle {
+    font-size: 34px;
+  }
+
+  .employeeText {
+    width: 459px;
+  }
+
+  .employeeItemBtn {
+    margin-top: 6px;
+    padding: 13px 20px;
+    font-size: 16px;
+    width: 170px;
+    height: 48px;
+    gap: 8px;
   }
 }

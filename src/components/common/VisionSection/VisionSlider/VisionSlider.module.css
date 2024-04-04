@@ -152,7 +152,7 @@
   }
 }
 
-@media screen and (min-width: 1728px) {
+@media screen and (min-width: 1440px) {
   .visionMainWrap {
     display: flex;
     position: relative;
@@ -161,8 +161,8 @@
 
   .visionBtnWrap {
     position: absolute;
-    bottom: 56px;
-    right: 54px;
+    bottom: 5.6rem;
+    right: 5.4rem;
     z-index: 1;
     margin: unset;
   }
@@ -188,9 +188,9 @@
 
   .visionImgWrap {
     width: calc(100% / 2);
-    height: 837px;
+    height: 83.7rem;
     position: static;
-    padding: 70px 0px 62px;
+    padding: 7rem 0px 6.2rem;
   }
   .visionImgMob {
     display: none;
@@ -202,16 +202,90 @@
 
   .visionTextWrap {
     width: calc(100% / 2);
-    height: 837px;
-    padding: 271px 46px 56px 59px;
+    height: 83.7rem;
+    padding: 27.1rem 4.6rem 5.6rem 5.9rem;
     position: relative;
   }
 
   .visionTextContainer {
     margin: unset;
-    width: 551px;
+    width: 55.1rem;
     position: relative;
     padding: unset;
+  }
+
+  .visionImgContainer {
+    width: 60rem;
+  }
+
+  .first {
+    width: 54.6rem;
+    height: 63.6rem;
+  }
+
+  .second {
+    top: 4rem;
+    left: 7rem;
+    width: 50rem;
+    height: 60.8rem;
+  }
+
+  .third {
+    top: 1.5rem;
+    width: 50rem;
+    height: 60.8rem;
+  }
+
+  .visionTitle {
+    font-size: 6.4rem;
+    margin-bottom: 2.4rem;
+  }
+
+  .visionText {
+    font-size: 1.8rem;
+    width: 55.1rem;
+    height: 17.4rem;
+    margin: unset;
+  }
+
+  .visionCount {
+    display: block;
+    color: var(--white-second);
+    font-size: 1.8rem;
+    line-height: 160%;
+    width: fit-content;
+    position: absolute;
+    top: 4.8rem;
+    left: 5.9rem;
+  }
+
+  .visionDotsWrap {
+    display: block;
+    width: fit-content;
+    position: absolute;
+    bottom: 5.6rem;
+    left: 5.9rem;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .visionBtnWrap {
+    bottom: 56px;
+    right: 54px;
+  }
+
+  .visionImgWrap {
+    height: 837px;
+    padding: 70px 0px 62px;
+  }
+
+  .visionTextWrap {
+    height: 837px;
+    padding: 271px 46px 56px 59px;
+  }
+
+  .visionTextContainer {
+    width: 551px;
   }
 
   .visionImgContainer {
@@ -245,24 +319,15 @@
     font-size: 18px;
     width: 551px;
     height: 174px;
-    margin: unset;
   }
 
   .visionCount {
-    display: block;
-    color: var(--white-second);
     font-size: 18px;
-    line-height: 160%;
-    width: fit-content;
-    position: absolute;
     top: 48px;
     left: 59px;
   }
 
   .visionDotsWrap {
-    display: block;
-    width: fit-content;
-    position: absolute;
     bottom: 56px;
     left: 59px;
   }

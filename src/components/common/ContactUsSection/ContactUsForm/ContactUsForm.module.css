@@ -110,14 +110,14 @@
   }
 }
 
-@media screen and (min-width: 1728px) {
+@media screen and (min-width: 1440px) {
   .contactUsLabelWrap {
     flex-direction: row;
-    gap: 20px;
+    gap: 2rem;
   }
 
   .contactUsLabel {
-    gap: 6px;
+    gap: 0.6rem;
   }
 
   .contactUsLabel.email {
@@ -125,7 +125,7 @@
   }
 
   .contactUsLabelTextArea {
-    margin-bottom: 24px;
+    margin-bottom: 2.4rem;
   }
 
   .contactUsInput {
@@ -135,6 +135,26 @@
   .contactUsTextArea {
     width: 100%;
     height: 100px;
+  }
+
+  .ContactUsBtn {
+    width: 9.2rem;
+    height: 4.6rem;
+    padding: 1.4rem 2rem;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .contactUsLabelWrap {
+    gap: 20px;
+  }
+
+  .contactUsLabel {
+    gap: 6px;
+  }
+
+  .contactUsLabelTextArea {
+    margin-bottom: 24px;
   }
 
   .ContactUsBtn {

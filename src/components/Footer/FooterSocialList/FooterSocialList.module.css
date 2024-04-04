@@ -53,11 +53,18 @@
   fill: var(--red-main);
 }
 
-@media screen and (min-width: 1728px) {
+@media screen and (min-width: 1440px) {
   .footerSocialList {
     position: absolute;
+    top: 9.7rem;
+    left: 18.5rem;
+    margin: unset;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .footerSocialList {
     top: 97px;
     left: 185px;
-    margin: unset;
   }
 }

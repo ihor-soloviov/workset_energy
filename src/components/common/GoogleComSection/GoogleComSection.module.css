@@ -14,6 +14,18 @@
   margin-bottom: 40px;
 }
 
+@media screen and (min-width: 1440px) {
+  .googleComSection {
+    padding: 10rem 15.7rem 20rem;
+  }
+
+  .googleComTitle {
+    font-size: 3.4rem;
+    width: 57.8rem;
+    margin-bottom: 5rem;
+  }
+}
+
 @media screen and (min-width: 1728px) {
   .googleComSection {
     padding: 100px 157px 200px;

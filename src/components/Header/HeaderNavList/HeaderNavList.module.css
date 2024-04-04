@@ -2,18 +2,18 @@
   display: none;
 }
 
-@media screen and (min-width: 1728px) {
+@media screen and (min-width: 1440px) {
   .headerList {
     display: flex;
     align-items: center;
-    gap: 32px;
-    margin-left: 145px;
+    gap: 3.2rem;
+    margin-left: 14.5rem;
     height: 100%;
   }
 
   .headerNavLink {
     color: var(--white-main);
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 600;
     height: 100%;
     display: flex;
@@ -49,5 +49,16 @@
 
   .headerNavLink:hover {
     color: var(--gray-light-text);
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .headerList {
+    gap: 32px;
+    margin-left: 145px;
+  }
+
+  .headerNavLink {
+    font-size: 16px;
   }
 }

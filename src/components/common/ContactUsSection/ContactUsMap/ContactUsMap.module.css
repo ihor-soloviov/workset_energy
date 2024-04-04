@@ -110,12 +110,42 @@
   display: none;
 }
 
-@media screen and (min-width: 390px) {
+@media screen and (min-width: 1440px) {
+  .contactUsImgWrap {
+    order: 1;
+    width: 66.8rem;
+    height: 49rem;
+  }
+
+  .contactUsAddressMainWrap {
+    width: 60.4rem;
+    height: 14.6rem;
+    gap: 2.4rem;
+    top: 31.2rem;
+    left: 3.2rem;
+  }
+
+  .contactUsLocationWrap {
+    top: 7.8rem;
+    right: 17.4rem;
+  }
+
+  .contactUsLocationText {
+    line-height: 160%;
+    text-align: center;
+  }
+
+  .contactUsAddressWrap {
+    width: calc(100% / 2);
+  }
+
+  .contactUsList {
+    width: calc(100% / 2);
+  }
 }
 
 @media screen and (min-width: 1728px) {
   .contactUsImgWrap {
-    order: 1;
     width: 668px;
     height: 490px;
   }
@@ -131,18 +161,5 @@
   .contactUsLocationWrap {
     top: 78px;
     right: 174px;
-  }
-
-  .contactUsLocationText {
-    line-height: 160%;
-    text-align: center;
-  }
-
-  .contactUsAddressWrap {
-    width: calc(100% / 2);
-  }
-
-  .contactUsList {
-    width: calc(100% / 2);
   }
 }

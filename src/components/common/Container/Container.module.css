@@ -10,6 +10,12 @@
   }
 }
 
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 39rem;
+  }
+}
+
 @media screen and (min-width: 1728px) {
   .container {
     width: 1728px;

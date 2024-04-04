@@ -57,17 +57,17 @@
   stroke: var(--red-main);
 }
 
-@media screen and (min-width: 1728px) {
+@media screen and (min-width: 1440px) {
   .employeeSection {
-    padding: 150px 0;
+    padding: 15rem 0;
     position: relative;
   }
 
   .employeeMainTitle {
-    font-size: 50px;
+    font-size: 5rem;
     font-weight: 700;
     line-height: 130%;
-    width: 676px;
+    width: 67.6rem;
   }
 
   .employeeMainText {
@@ -75,5 +75,27 @@
   }
   .employeeBtn {
     display: none;
+  }
+
+  .employeeMainText {
+    width: 66.8rem;
+  }
+  .employeeBtn {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .employeeSection {
+    padding: 150px 0;
+  }
+
+  .employeeMainTitle {
+    font-size: 50px;
+    width: 676px;
+  }
+
+  .employeeMainText {
+    width: 668px;
   }
 }

@@ -177,18 +177,18 @@
   }
 }
 
-@media screen and (min-width: 1728px) {
+@media screen and (min-width: 1440px) {
   .angebotForm {
-    width: 530px;
+    width: 53rem;
   }
 
   .angebotLabelWrap {
     flex-direction: row;
-    gap: 20px;
+    gap: 2rem;
   }
 
   .angebotLabel {
-    gap: 6px;
+    gap: 0.6rem;
   }
 
   .angebotLabel.email {
@@ -196,10 +196,10 @@
   }
 
   .angebotLabelTextArea {
-    margin-bottom: 24px;
+    margin-bottom: 2.4rem;
   }
   .angebotTextArea {
-    height: 102px;
+    height: 10.2rem;
     width: 100%;
   }
 
@@ -217,8 +217,66 @@
 
   .angebotFilePlaceholderDesc {
     display: block;
-    top: 38px;
+    top: 3.8rem;
     line-height: 110%;
+  }
+
+  .angebotInputFile {
+    width: 41.4rem;
+  }
+
+  .angebotUploadBtn {
+    top: 2.2rem;
+  }
+
+  .angebotBtnWrap {
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .angebotText {
+    font-size: 1.4rem;
+    width: 41.7rem;
+  }
+
+  .angebotBr {
+    display: none;
+  }
+
+  .angebotBtn {
+    width: 9.2rem;
+    height: 4.6rem;
+    padding: 1.4rem 2rem;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .angebotForm {
+    width: 530px;
+  }
+
+  .angebotLabelWrap {
+    gap: 20px;
+  }
+
+  .angebotLabel {
+    gap: 6px;
+  }
+
+  .angebotLabelTextArea {
+    margin-bottom: 24px;
+  }
+  .angebotTextArea {
+    height: 102px;
+  }
+
+  .angebotInput::placeholder {
+    line-height: 110%;
+  }
+
+  .angebotFilePlaceholderDesc {
+    top: 38px;
   }
 
   .angebotInputFile {
@@ -230,18 +288,12 @@
   }
 
   .angebotBtnWrap {
-    flex-direction: row;
     gap: 20px;
-    align-items: center;
   }
 
   .angebotText {
     font-size: 14px;
     width: 417px;
-  }
-
-  .angebotBr {
-    display: none;
   }
 
   .angebotBtn {

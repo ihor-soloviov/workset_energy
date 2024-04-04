@@ -96,21 +96,37 @@
   stroke: var(--white-main);
 }
 
-@media screen and (min-width: 1728px) {
+@media screen and (min-width: 1440px) {
   .amenitiesList {
-    gap: 20px;
+    gap: 2rem;
     flex-direction: row;
-
     width: fit-content;
   }
   .amenitiesItem {
-    height: 342px;
-    padding: 28px;
+    height: 34.2rem;
+    padding: 2.8rem;
   }
 
   .amenitiesTitle {
     line-height: normal;
   }
+  .amenitiesText {
+    margin-bottom: 1.7rem;
+    font-size: 1.6rem;
+    width: 26.8rem;
+    height: 13rem;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .amenitiesList {
+    gap: 20px;
+  }
+  .amenitiesItem {
+    height: 342px;
+    padding: 28px;
+  }
+  
   .amenitiesText {
     margin-bottom: 17px;
     font-size: 16px;

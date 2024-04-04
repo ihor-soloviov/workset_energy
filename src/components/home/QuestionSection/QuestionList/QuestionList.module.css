@@ -150,15 +150,38 @@
   color: var(--red-main);
 }
 
-@media screen and (min-width: 1728px) {
+@media screen and (min-width: 1440px) {
   .questListWrap {
-    gap: 20px;
+    gap: 2rem;
     flex-direction: row;
   }
 
   .questList {
     flex-direction: column;
     flex-wrap: nowrap;
+    gap: 2rem;
+  }
+
+  .questItem {
+    width: 59.8rem;
+  }
+
+  .questTitle {
+    width: fit-content;
+    max-width: 52.3rem;
+  }
+  .questText {
+    max-width: 53.3rem;
+  }
+
+}
+
+@media screen and (min-width: 1728px) {
+  .questListWrap {
+    gap: 20px;
+  }
+
+  .questList {
     gap: 20px;
   }
 
@@ -167,16 +190,10 @@
   }
 
   .questTitle {
-    width: fit-content;
     max-width: 523px;
-  }
-  .questToggleBtn {
-  }
-  .questTextWrap {
   }
   .questText {
     max-width: 533px;
   }
-  .questConsultBtn {
-  }
+
 }

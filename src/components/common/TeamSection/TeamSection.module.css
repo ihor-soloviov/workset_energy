@@ -60,15 +60,35 @@
   stroke: var(--red-main);
 }
 
+@media screen and (min-width: 1440px) {
+  .teamSection {
+    padding: 10rem 0;
+  }
+
+  .teamMainWrap {
+    flex-direction: row;
+    gap: 13.9rem;
+    align-items: center;
+  }
+
+  .teamTitle {
+    font-size: 5rem;
+  }
+
+  .teamText {
+    font-size: 1.8rem;
+    width: 30.4rem;
+    margin-bottom: 5rem;
+  }
+}
+
 @media screen and (min-width: 1728px) {
   .teamSection {
     padding: 100px 0px;
   }
 
   .teamMainWrap {
-    flex-direction: row;
     gap: 139px;
-    align-items: center;
   }
 
   .teamTitle {

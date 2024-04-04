@@ -104,6 +104,55 @@
   color: var(--red-main);
 }
 
+@media screen and (min-width: 1440px) {
+  .pricingPlansItem {
+    max-width: 39.4rem;
+    padding: 16rem 2.7rem 9rem;
+  }
+
+  .pricingPlanInfo {
+    width: 34rem;
+  }
+
+  .planImageMob {
+    display: none;
+  }
+
+  .planImageDesk {
+    display: block;
+    width: 26.5rem;
+    position: absolute;
+    top: -16.9rem;
+    left: 6.4rem;
+  }
+
+  .planPrice {
+    font-size: 1.8rem;
+    margin-bottom: 2.4rem;
+  }
+
+  .planTitle {
+    font-size: 3.4rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .planArticle {
+    font-size: 1.5rem;
+    width: 30rem;
+    padding-bottom: 3.8rem;
+    margin-bottom: 3.2rem;
+  }
+
+  .planBenefits {
+    gap: 1.8rem;
+  }
+
+  .planBtn {
+    width: 32.4rem;
+    padding: 1.4rem 12.6rem;
+  }
+}
+
 @media screen and (min-width: 1728px) {
   .pricingPlansItem {
     max-width: 394px;
@@ -114,14 +163,8 @@
     width: 340px;
   }
 
-  .planImageMob {
-    display: none;
-  }
-
   .planImageDesk {
-    display: block;
     width: 265px;
-    position: absolute;
     top: -169px;
     left: 64px;
   }

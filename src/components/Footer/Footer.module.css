@@ -88,13 +88,63 @@
   }
 }
 
+@media screen and (min-width: 1440px) {
+  .footerContainer {
+    padding: 0 23.1rem 0 18.5rem;
+    width: 172.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .footer {
+    padding: 12rem 0 3.8rem;
+  }
+
+  .footerCookieWrap {
+    position: absolute;
+    bottom: 0;
+    left: 18.5rem;
+    flex-direction: row;
+    gap: 2.8rem;
+    margin: unset;
+  }
+
+  .footerCookieWrap {
+    left: 18.5rem;
+    gap: 2.8rem;
+  }
+
+  .cookieText,
+  .impressumText {
+    font-size: 1.6rem;
+  }
+
+  .footerUpBtn {
+    position: absolute;
+    bottom: 4.2rem;
+    margin: unset;
+    left: 81.6rem;
+  }
+
+  .companyText {
+    font-size: 1.6rem;
+    margin-bottom: unset;
+  }
+
+  .footerBottomText {
+    position: absolute;
+    font-size: 1.8rem;
+    width: 24.7rem;
+    top: 0;
+    left: 18.5rem;
+  }
+}
+
 @media screen and (min-width: 1728px) {
   .footerContainer {
     padding: 0px 231px 0px 185px;
     width: 1728px;
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
   }
 
   .footer {
@@ -102,12 +152,8 @@
   }
 
   .footerCookieWrap {
-    position: absolute;
-    bottom: 0;
     left: 185px;
-    flex-direction: row;
     gap: 28px;
-    margin: unset;
   }
 
   .cookieText,
@@ -116,22 +162,17 @@
   }
 
   .footerUpBtn {
-    position: absolute;
     bottom: 42px;
-    margin: unset;
     left: 816px;
   }
 
   .companyText {
     font-size: 16px;
-    margin-bottom: unset;
   }
 
   .footerBottomText {
-    position: absolute;
     font-size: 18px;
     width: 247px;
-    top: 0;
     left: 185px;
   }
 }

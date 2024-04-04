@@ -44,14 +44,14 @@
   }
 }
 
-@media screen and (min-width: 1728px) {
+@media screen and (min-width: 1440px) {
   .angebotSection {
     display: flex;
   }
 
   .angebotImgWrap {
     width: calc(100% / 2);
-    height: 972px;
+    height: 97.2rem;
   }
 
   .angebotImgMob {
@@ -60,6 +60,29 @@
 
   .angebotImgDesc {
     display: block;
+  }
+
+  .angebotTitle {
+    font-size: 3.4rem;
+    margin-bottom: 1.2rem;
+    width: 53rem;
+  }
+
+  .angebotMainText {
+    width: 53rem;
+    margin-bottom: 3.2rem;
+  }
+
+  .angebotFormWrap {
+    width: calc(100% / 2);
+    padding: 15.6rem 18.6rem 15.6rem 14.8rem;
+    margin: unset;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .angebotImgWrap {
+    height: 972px;
   }
 
   .angebotTitle {
@@ -74,9 +97,7 @@
   }
 
   .angebotFormWrap {
-    width: calc(100% / 2);
     padding: 156px 186px 156px 148px;
-    margin: unset;
   }
 }
 

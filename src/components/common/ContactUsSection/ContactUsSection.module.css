@@ -27,31 +27,31 @@
   margin-bottom: 36px;
 }
 
-@media screen and (min-width: 1728px) {
+@media screen and (min-width: 1440px) {
   .contactUsSection {
-    padding: 184px 0;
+    padding: 18.4rem 0;
   }
 
   .contactUsMainWrap {
     flex-direction: row;
-    gap: 160px;
+    gap: 16rem;
     justify-content: space-between;
   }
 
   .contactUsFormWrap {
-    width: 530px;
-    height: 522px;
+    width: 53rem;
+    height: 52.2rem;
   }
 
   .contactUsTitle {
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 160%;
   }
 
   .contactUsLink {
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 143%;
-    letter-spacing: -0.1px;
+    letter-spacing: -0.01rem;
     cursor: pointer;
   }
 
@@ -64,6 +64,38 @@
 
   .contactUsBr {
     display: block;
+  }
+
+  .contactUsMainTitle {
+    font-size: 3.4rem;
+  }
+  .contactUsText {
+    width: 53rem;
+    margin-bottom: 3.2rem;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .contactUsSection {
+    padding: 184px 0;
+  }
+
+  .contactUsMainWrap {
+    gap: 160px;
+  }
+
+  .contactUsFormWrap {
+    width: 530px;
+    height: 522px;
+  }
+
+  .contactUsTitle {
+    font-size: 14px;
+  }
+
+  .contactUsLink {
+    font-size: 14px;
+    letter-spacing: -0.1px;
   }
 
   .contactUsMainTitle {

@@ -32,6 +32,23 @@
 
 @media screen and (min-width: 1728px) {
   .questSection {
+    padding: 10rem 0;
+  }
+  .questContainer {
+    width: 172.8rem;
+    padding: 0 25.6rem;
+  }
+  .questMainTitle {
+    font-size: 3.4rem;
+  }
+  .questMainText {
+    font-size: 1.8rem;
+    margin-bottom: 5rem;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .questSection {
     padding: 100px 0;
   }
   .questContainer {

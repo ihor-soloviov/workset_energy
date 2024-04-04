@@ -127,7 +127,7 @@
   stroke: var(--red-main);
 }
 
-@media screen and (min-width: 1728px) {
+@media screen and (min-width: 1440px) {
   .vorteileSliderWrap {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -136,7 +136,7 @@
 
   .vorteileImageWrap {
     width: 100%;
-    height: 837px;
+    height: 83.7rem;
   }
 
   .sliderImgMob {
@@ -154,15 +154,15 @@
   .sliderInfoWrap {
     position: relative;
     justify-content: space-between;
-    height: 837px;
-    padding: 271px 48px 56px 59px;
+    height: 83.7rem;
+    padding: 27.1rem 4.8rem 5.6rem 5.9rem;
   }
 
   .sliderInfoCounter {
     position: absolute;
     display: block;
-    top: 48px;
-    font-size: 18px;
+    top: 4.8rem;
+    font-size: 1.8rem;
     font-weight: 400;
     line-height: 160%;
     color: var(--white-main);
@@ -174,14 +174,14 @@
   }
 
   .sliderTitle {
-    font-size: 64px;
+    font-size: 6.4rem;
     line-height: 130%;
-    margin-bottom: 24px;
+    margin-bottom: 2.4rem;
   }
 
   .sliderText {
-    font-size: 18px;
-    max-width: 620px;
+    font-size: 1.8rem;
+    max-width: 62rem;
   }
 
   .sliderControllers {
@@ -194,5 +194,31 @@
 
   .sliderDotsWrap {
     display: block;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .vorteileImageWrap {
+    height: 837px;
+  }
+
+  .sliderInfoWrap {
+    height: 837px;
+    padding: 271px 48px 56px 59px;
+  }
+
+  .sliderInfoCounter {
+    top: 48px;
+    font-size: 18px;
+  }
+
+  .sliderTitle {
+    font-size: 64px;
+    margin-bottom: 24px;
+  }
+
+  .sliderText {
+    font-size: 18px;
+    max-width: 620px;
   }
 }

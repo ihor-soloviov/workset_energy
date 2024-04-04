@@ -13,6 +13,20 @@
   margin-bottom: 48px;
 }
 
+@media screen and (min-width: 1440px) {
+  .stepSection {
+    padding: 20rem 0 13rem;
+  }
+
+  .stepMainTitle {
+    width: 71.4rem;
+    font-size: 5rem;
+  }
+  .stepBr {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 1728px) {
   .stepSection {
     padding: 200px 0 130px;
@@ -21,8 +35,5 @@
   .stepMainTitle {
     width: 714px;
     font-size: 50px;
-  }
-  .stepBr {
-    display: none;
   }
 }
