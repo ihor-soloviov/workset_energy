@@ -7,7 +7,7 @@ import RecycleTextWrap from '../RecycleTextWrap/RecycleTextWrap';
 
 const ContactUsSection = () => {
   return (
-    <section className={styles.contactUsSection}>
+    <section id="contact" className={styles.contactUsSection}>
       <Container>
         <div className={styles.contactUsMainWrap}>
           <ContactUsMap />

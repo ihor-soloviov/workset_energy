@@ -5,7 +5,7 @@ import RecycleTextWrap from '../RecycleTextWrap/RecycleTextWrap';
 
 const GoogleComSection = () => {
   return (
-    <section className={styles.googleComSection}>
+    <section id="feedback" className={styles.googleComSection}>
       <RecycleTextWrap
         title="Was sagen unsere Kunden über uns?"
         titleClass={styles.googleComTitle}

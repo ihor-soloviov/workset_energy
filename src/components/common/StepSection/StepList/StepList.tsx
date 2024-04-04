@@ -9,19 +9,21 @@ import { motion } from 'framer-motion';
 import { fromBotAnimation } from '@/utils/animations';
 import { stepItems } from './stepItems';
 import { useGlobalStore } from '@/store/global-store';
+import { useEffect } from 'react';
 
 const StepList = () => {
   const { isDesktop } = useGlobalStore();
   const getClass = (index: number) => {
     return (index + 1) % 2 === 0 ? styles.white : '';
   };
+
   return (
     <ul className={styles.stepList}>
       {stepItems.map(({ text, title, imgDesc, imgMob }, index) => (
         <motion.li
           initial="hidden"
           whileInView="visible"
-          viewport={{ amount: +`${isDesktop ? 0.6 : 0.3}`, once: true }}
+          viewport={{ amount: +`${isDesktop ? 0.6 : 0.2}`, once: true }}
           variants={fromBotAnimation}
           className={`${styles.stepItem} ${getClass(index)}`}
           key={title}

@@ -19,7 +19,11 @@ const Wallbox = () => {
     <>
       <HeroSection {...wallboxHero} />
       <VideoSection {...wallboxVideo} />
-      <VorteileSection sliderText={vorteileItems} sliderImages={sliderImages} />
+      <VorteileSection
+        sliderText={vorteileItems}
+        sliderImages={sliderImages}
+        id="wallbox-vorteile"
+      />
       <PricingPlansSection />
       <EmployeeSection />
       <GoogleComSection />

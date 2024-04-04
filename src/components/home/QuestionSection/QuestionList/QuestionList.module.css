@@ -92,7 +92,7 @@
   height: 20px;
   stroke: var(--gray-dark-text);
   transform: rotate(180deg);
-  transition: transform 250ms var(--cubic);
+  transition: transform 0.7s var(--cubic);
 }
 
 .toggleIcon.visible {

@@ -3,11 +3,13 @@ import styles from './VorteileSection.module.css';
 import VorteileSlider from './VorteileSlider/VorteileSlider';
 import { VorteileSliderT } from '@/types/infoTypes';
 
-type Props = VorteileSliderT;
+type Props = VorteileSliderT & {
+  id: string;
+};
 
-const VorteileSection: React.FC<Props> = ({ sliderImages, sliderText }) => {
+const VorteileSection: React.FC<Props> = ({ sliderImages, sliderText, id }) => {
   return (
-    <section className={styles.modulesVorteileSection}>
+    <section id={id} className={styles.modulesVorteileSection}>
       <VorteileSlider sliderImages={sliderImages} sliderText={sliderText} />
     </section>
   );

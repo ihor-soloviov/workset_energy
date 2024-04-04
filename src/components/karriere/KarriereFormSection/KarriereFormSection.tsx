@@ -1,3 +1,4 @@
+import RecycleTextWrap from '@/components/common/RecycleTextWrap/RecycleTextWrap';
 import KarriereForm from './KarriereForm/KarriereForm';
 import styles from './KarriereFormSection.module.css';
 import { inter } from '@/utils/fonts';
@@ -6,13 +7,13 @@ const KarriereFormSection = () => {
   return (
     <section className={styles.karriereFormSection}>
       <div className={styles.karriereFormContainer}>
-        <h2 className={styles.karriereFormTitle}>
-          Sie haben keine passende Stelle gefunden?
-        </h2>
-        <p className={`${styles.karriereFormText} ${inter.className}`}>
-          Schicken Sie uns Ihren Lebenslauf, vielleicht suchen wir ja nach
-          Ihnen!
-        </p>
+        <RecycleTextWrap
+          title="Sie haben keine passende Stelle gefunden?"
+          titleClass={styles.karriereFormTitle}
+          text=" Schicken Sie uns Ihren Lebenslauf, vielleicht suchen wir ja nach
+          Ihnen!"
+          textClass={`${styles.karriereFormText} ${inter.className}`}
+        />
         <KarriereForm />
       </div>
     </section>

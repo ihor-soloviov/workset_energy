@@ -17,7 +17,11 @@ const PvAnlagen = () => {
     <>
       <HeroSection {...pvAnlagenHero} />
       <VideoSection {...pvAnlagenVideo} />
-      <VorteileSection sliderText={vorteileItems} sliderImages={sliderImages} />
+      <VorteileSection
+        sliderText={vorteileItems}
+        sliderImages={sliderImages}
+        id="pv-vorteile"
+      />
       <PricingPlansSection />
       <EmployeeSection />
       <GoogleComSection />
