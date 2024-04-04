@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, LazyMotion, domAnimation } from 'framer-motion';
 import { fromBotAnimation } from '@/utils/animations';
 
 type Props = {
@@ -10,8 +10,8 @@ type Props = {
 
 const IFrame: React.FC<Props> = ({ link, videoFrameClass }) => {
   return (
-    <AnimatePresence>
-      <motion.iframe
+    <LazyMotion features={domAnimation}>
+      <m.iframe
         initial="hidden"
         whileInView="visible"
         viewport={{ amount: 0, once: true }}
@@ -21,7 +21,7 @@ const IFrame: React.FC<Props> = ({ link, videoFrameClass }) => {
         allow="accelerometer"
         allowFullScreen
       />
-    </AnimatePresence>
+    </LazyMotion>
   );
 };
 

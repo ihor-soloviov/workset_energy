@@ -10,7 +10,7 @@ import HeroFormModal from './HeroFormModal/HeroFormModal';
 import { useEffect, useState } from 'react';
 import { useGlobalStore } from '@/store/global-store';
 
-import { motion } from 'framer-motion';
+import { LazyMotion, domAnimation, m } from 'framer-motion';
 import { opacityAnimation, textAnimationToRight } from '@/utils/animations';
 
 type HeroProps = {
@@ -57,7 +57,7 @@ const HeroSection = ({
   }, [isModalOpen]);
 
   return (
-    <>
+    <LazyMotion features={domAnimation}>
       <section className={styles.heroSection}>
         <Image
           className={styles.heroImgMob}
@@ -78,7 +78,7 @@ const HeroSection = ({
 
         <div className={styles.heroContainer}>
           <div className={styles.heroTextWrap}>
-            <motion.h2
+            <m.h2
               className={`${styles.heroMainTitle} ${styles[className]}`}
               initial="hidden"
               whileInView="visible"
@@ -87,8 +87,8 @@ const HeroSection = ({
               custom={0}
             >
               {title}
-            </motion.h2>
-            <motion.p
+            </m.h2>
+            <m.p
               initial="hidden"
               whileInView="visible"
               viewport={{ amount: 0, once: true }}
@@ -97,8 +97,8 @@ const HeroSection = ({
               className={`${styles.heroMainText} ${styles[className]} ${inter.className}`}
             >
               {text}
-            </motion.p>
-            <motion.div
+            </m.p>
+            <m.div
               initial="hidden"
               whileInView="visible"
               viewport={{ amount: 0, once: true }}
@@ -116,7 +116,7 @@ const HeroSection = ({
               >
                 {!isDesktop ? 'Zum Angebot' : 'Unsere Team'}
               </Button>
-            </motion.div>
+            </m.div>
           </div>
           {isDesktop && (
             <HeroFormModal
@@ -132,7 +132,7 @@ const HeroSection = ({
           handleModalClick={handleModalClick}
         />
       )}
-    </>
+    </LazyMotion>
   );
 };
 

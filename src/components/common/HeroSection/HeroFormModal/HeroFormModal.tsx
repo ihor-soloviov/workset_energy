@@ -7,7 +7,7 @@ import { inter } from '@/utils/fonts';
 import HeroForm from './HeroForm/HeroForm';
 import { useThankYouStore } from '@/store/hero-store';
 
-import { motion } from 'framer-motion';
+import { LazyMotion, domAnimation, m } from 'framer-motion';
 import { textAnimationToLeft } from '@/utils/animations';
 
 type HeroFormModalProps = {
@@ -29,55 +29,57 @@ const HeroFormModal = ({ handleModalClick, isDesktop }: HeroFormModalProps) => {
   };
 
   return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ amount: 0, once: true }}
-      variants={textAnimationToLeft}
-      className={`${styles.heroFormWrap} ${isThankYouOpen ? styles.active : ''}`}
-    >
-      <div className={styles.heroTopWrap}>
-        <Button
-          handleClick={handleBtnCloseClick}
-          type="button"
-          className={styles.heroCloseBtn}
-        >
-          <CrossIcon className={styles.heroCloseIcon} />
-        </Button>
-      </div>
-      <div className={styles.heroLine}></div>
-      <div
-        className={`${styles.heroFormContainer} ${isThankYouOpen ? styles.active : ''}`}
+    <LazyMotion features={domAnimation}>
+      <m.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0, once: true }}
+        variants={textAnimationToLeft}
+        className={`${styles.heroFormWrap} ${isThankYouOpen ? styles.active : ''}`}
       >
-        {!isThankYouOpen ? (
-          <>
-            <h2 className={styles.heroTitle}>Kontaktiere uns</h2>
-            <p className={styles.heroText}>
-              Bitte fülle das untenstehende Formular aus und wir werden uns in
-              Kürze mit dir in Verbindung setzen
-            </p>
-            <HeroForm />
-          </>
-        ) : (
-          <>
-            <h2 className={styles.heroThankTitle}>
-              WorkSET Energy sagt Danke!
-            </h2>
-            <p className={`${styles.heroThankText} ${inter.className}`}>
-              Wir haben deine Anfrage erhalten und freuen uns, dich auf deinem
-              Weg zu nachhaltiger Energie unterstützen zu dürfen
-            </p>
-            <Button
-              handleClick={handleBtnClick}
-              className={styles.heroThankBtn}
-              type="button"
-            >
-              Hauptseite
-            </Button>
-          </>
-        )}
-      </div>
-    </motion.div>
+        <div className={styles.heroTopWrap}>
+          <Button
+            handleClick={handleBtnCloseClick}
+            type="button"
+            className={styles.heroCloseBtn}
+          >
+            <CrossIcon className={styles.heroCloseIcon} />
+          </Button>
+        </div>
+        <div className={styles.heroLine}></div>
+        <div
+          className={`${styles.heroFormContainer} ${isThankYouOpen ? styles.active : ''}`}
+        >
+          {!isThankYouOpen ? (
+            <>
+              <h2 className={styles.heroTitle}>Kontaktiere uns</h2>
+              <p className={styles.heroText}>
+                Bitte fülle das untenstehende Formular aus und wir werden uns in
+                Kürze mit dir in Verbindung setzen
+              </p>
+              <HeroForm />
+            </>
+          ) : (
+            <>
+              <h2 className={styles.heroThankTitle}>
+                WorkSET Energy sagt Danke!
+              </h2>
+              <p className={`${styles.heroThankText} ${inter.className}`}>
+                Wir haben deine Anfrage erhalten und freuen uns, dich auf deinem
+                Weg zu nachhaltiger Energie unterstützen zu dürfen
+              </p>
+              <Button
+                handleClick={handleBtnClick}
+                className={styles.heroThankBtn}
+                type="button"
+              >
+                Hauptseite
+              </Button>
+            </>
+          )}
+        </div>
+      </m.div>
+    </LazyMotion>
   );
 };
 
