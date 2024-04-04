@@ -18,7 +18,11 @@ const Stormspeicher = () => {
     <>
       <HeroSection {...stormspeicherHero} />
       <VideoSection {...stormSteicherVideo} />
-      <VorteileSection sliderText={vorteileItems} sliderImages={sliderImages} />
+      <VorteileSection
+        sliderText={vorteileItems}
+        sliderImages={sliderImages}
+        id="storm-vorteile"
+      />
       <SwitcherSection />
       <PricingPlansSection />
       <EmployeeSection />

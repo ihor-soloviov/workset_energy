@@ -8,7 +8,7 @@ import RecycleTextWrap from '../RecycleTextWrap/RecycleTextWrap';
 
 const EmployeeSection = () => {
   return (
-    <section className={styles.employeeSection}>
+    <section id="mitarbeiter" className={styles.employeeSection}>
       <Container>
         <RecycleTextWrap
           title="Unsere wichtigste Ressource sind unsere Mitarbeiter"

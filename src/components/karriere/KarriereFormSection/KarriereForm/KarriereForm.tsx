@@ -7,6 +7,8 @@ import { inter } from '@/utils/fonts';
 import * as Yup from 'yup';
 import Button from '@/components/common/Button/Button';
 import { useState, ChangeEvent } from 'react';
+import { motion } from 'framer-motion';
+import { opacityAnimation } from '@/utils/animations';
 
 const KarriereForm = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -47,7 +49,11 @@ const KarriereForm = () => {
   );
 
   return (
-    <form
+    <motion.form
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0, once: true }}
+      variants={opacityAnimation}
       onSubmit={handleSubmit}
       className={`${styles.karriereForm} ${inter.className}`}
     >
@@ -132,7 +138,7 @@ const KarriereForm = () => {
           Senden
         </Button>
       </div>
-    </form>
+    </motion.form>
   );
 };
 

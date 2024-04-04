@@ -6,7 +6,7 @@ import Plan from './Plan/Plan';
 import RecycleTextWrap from '../RecycleTextWrap/RecycleTextWrap';
 
 const PricingPlansSection = () => (
-  <section className={styles.pricingPlansSection}>
+  <section id="tarifpläne" className={styles.pricingPlansSection}>
     <div className={styles.pricingPlansWrap}>
       <div className={styles.pricingPlansHeader}>
         <RecycleTextWrap
