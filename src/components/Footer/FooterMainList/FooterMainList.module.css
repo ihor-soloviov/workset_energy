@@ -25,7 +25,7 @@
   width: fit-content;
   margin-bottom: 24px;
   display: block;
-  transition: scale 250ms var(--cubic);
+  transition: scale 100ms var(--cubic);
 }
 
 .footerMainLink:hover {

@@ -22,10 +22,6 @@
   transition: border-color 250ms var(--cubic);
 }
 
-.slide:hover {
-  border-color: var(--black-main);
-}
-
 .slideTitle {
   color: var(--gray-light-text);
   font-size: 14px;

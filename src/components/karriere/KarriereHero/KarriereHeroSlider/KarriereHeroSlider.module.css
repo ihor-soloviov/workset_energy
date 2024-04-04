@@ -59,7 +59,7 @@
   width: 256px;
 }
 
-.HeroBtn {
+.heroBtn {
   width: 158px;
   height: 48px;
   display: flex;
@@ -75,7 +75,14 @@
   color: var(--gray-input);
   transition:
     border-color 250ms var(--cubic),
+    color 250ms var(--cubic),
     background-color 250ms var(--cubic);
+}
+
+.heroBtn:hover {
+  border-color: var(--white-main);
+  background-color: var(--white-main);
+  color: var(--red-main);
 }
 
 @media screen and (min-width: 1728px) {

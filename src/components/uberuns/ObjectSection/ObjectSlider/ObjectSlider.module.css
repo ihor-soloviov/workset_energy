@@ -26,10 +26,21 @@
   stroke: var(--gray-text);
   width: 24px;
   height: 24px;
+  transition: stroke 250ms var(--cubic);
 }
 
 .nextArrow {
   transform: rotate(180deg);
+}
+
+.sliderNavBtn:hover {
+  border-color: var(--red-main);
+  background-color: var(--red-main);
+}
+
+.sliderNavBtn:hover .nextArrow,
+.sliderNavBtn:hover .prevArrow {
+  stroke: var(--white-main);
 }
 
 .sliderImgDesk {
@@ -100,6 +111,16 @@
   background-color: var(--red-main);
   width: 149px;
   height: 56px;
+  transition:
+    border-color 250ms var(--cubic),
+    color 250ms var(--cubic),
+    background-color 250ms var(--cubic);
+}
+
+.sliderBtn:hover {
+  border-color: var(--white-main);
+  background-color: var(--white-main);
+  color: var(--red-main);
 }
 
 @media screen and (min-width: 1728px) {

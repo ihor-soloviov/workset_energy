@@ -86,6 +86,10 @@
   width: 170px;
   height: 48px;
   gap: 8px;
+  transition:
+    border-color 250ms var(--cubic),
+    color 250ms var(--cubic),
+    background-color 250ms var(--cubic);
 }
 
 .stepBtn.white {
@@ -97,10 +101,31 @@
   stroke: var(--gray-input);
   width: 22px;
   height: 22px;
+  transition: stroke 250ms var(--cubic);
 }
 
 .stepBtnIcon.white {
   stroke: var(--red-main);
+}
+
+.stepBtn:hover {
+  border-color: var(--white-main);
+  background-color: var(--white-main);
+  color: var(--red-main);
+}
+
+.stepBtn:hover .stepBtnIcon {
+  stroke: var(--red-main);
+}
+
+.stepBtn.white:hover {
+  border-color: var(--red-main);
+  background-color: var(--red-main);
+  color: var(--gray-input);
+}
+
+.stepBtn.white:hover .stepBtnIcon.white {
+  stroke: var(--gray-input);
 }
 
 @media screen and (min-width: 1728px) {

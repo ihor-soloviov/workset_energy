@@ -8,9 +8,6 @@
   margin-bottom: 18px;
 }
 
-.angebotLabel {
-}
-
 .angebotLabel,
 .angebotLabelTextArea {
   display: flex;
@@ -72,14 +69,18 @@
   height: 46px;
   border-radius: 0px 6px 6px 0px;
   color: var(--white-main);
-  background-color: var(--red-main);
+  background-color: var(--red-second);
   padding: 14px 32px;
   font-size: 15px;
   font-weight: 500;
   position: absolute;
-  right: 0;
+  right: 1px;
   top: 24px;
   cursor: pointer;
+}
+
+.angebotUploadBtn.withFile {
+  background-color: var(--red-main);
 }
 
 .angebotInput.error {
@@ -108,6 +109,7 @@
 .angebotTextArea::placeholder {
   color: var(--gray-text);
 }
+
 .errorText {
   position: absolute;
   right: 10px;
@@ -144,6 +146,22 @@
   background-color: var(--red-main);
   border: none;
   border-radius: 6px;
+  transition:
+    border-color 250ms var(--cubic),
+    color 250ms var(--cubic),
+    background-color 250ms var(--cubic);
+}
+
+.angebotBtn:disabled {
+  border-color: var(--red-second);
+  background-color: var(--red-second);
+  cursor: not-allowed;
+}
+
+.angebotBtn:not(:disabled):hover {
+  border-color: var(--white-main);
+  background-color: var(--white-main);
+  color: var(--red-main);
 }
 
 @media screen and (min-width: 390px) {

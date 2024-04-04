@@ -10,20 +10,21 @@ import { useThankYouStore } from '@/store/hero-store';
 const HeroForm = () => {
   const { setStylesChangedToTrue } = useThankYouStore();
 
-  const { handleSubmit, errors, touched, getFieldProps } = useFormik({
-    initialValues: {
-      name: '',
-      tel: '',
-    },
-    validationSchema: Yup.object({
-      name: Yup.string().required('Required'),
-      tel: Yup.number().typeError('Invalid number').required('Required'),
-    }),
-    onSubmit: values => {
-      console.log(values);
-      setStylesChangedToTrue();
-    },
-  });
+  const { handleSubmit, errors, touched, getFieldProps, isValid, dirty } =
+    useFormik({
+      initialValues: {
+        name: '',
+        tel: '',
+      },
+      validationSchema: Yup.object({
+        name: Yup.string().required('Required'),
+        tel: Yup.number().typeError('Invalid number').required('Required'),
+      }),
+      onSubmit: values => {
+        console.log(values);
+        setStylesChangedToTrue();
+      },
+    });
   return (
     <form
       onSubmit={handleSubmit}
@@ -52,6 +53,7 @@ const HeroForm = () => {
         )}
       </label>
       <Button
+        disabled={!(isValid && dirty)}
         className={`${styles.heroFormBtn} ${interTight.className}`}
         type="submit"
       >

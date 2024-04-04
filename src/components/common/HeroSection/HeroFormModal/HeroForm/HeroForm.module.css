@@ -38,19 +38,41 @@
   padding: 11px 124px;
   justify-content: center;
   align-items: center;
+  font-weight: 500;
   gap: 12px;
-  border: 1px solid var(--red-second);
-  background-color: var(--red-second);
+  border: 1px solid var(--red-main);
+  background-color: var(--red-main);
   width: 342px;
   height: 46px;
   border-radius: 6px;
   font-size: 16px;
   color: var(--gray-input);
   margin-top: 72px;
+  transition:
+    border-color 250ms var(--cubic),
+    color 250ms var(--cubic),
+    background-color 250ms var(--cubic);
+}
+
+.heroFormBtn:disabled {
+  border-color: var(--red-second);
+  background-color: var(--red-second);
+  cursor: not-allowed;
 }
 
 .heroIcon {
   stroke: var(--gray-input);
+  transition: stroke 250ms var(--cubic);
+}
+
+.heroFormBtn:not(:disabled):hover {
+  border-color: var(--white-main);
+  background-color: var(--white-main);
+  color: var(--red-main);
+}
+
+.heroFormBtn:not(:disabled):hover .heroIcon {
+  stroke: var(--red-main);
 }
 
 .errorText {

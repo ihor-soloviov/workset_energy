@@ -22,10 +22,10 @@ const Footer = () => {
             <FooterMainList />
 
             <div className={styles.footerCookieWrap}>
-              <Link href="" className={styles.cookieText}>
+              <Link href="" className={styles.cookieLink}>
                 Cookie-Einstellungen
               </Link>
-              <Link href="" className={styles.impressumText}>
+              <Link href="" className={styles.impressumLink}>
                 Impressum
               </Link>
             </div>

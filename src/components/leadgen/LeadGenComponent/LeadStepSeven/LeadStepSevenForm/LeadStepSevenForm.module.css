@@ -109,19 +109,35 @@
     background-color: var(--white-main);
     margin-left: auto;
     margin-top: 44px;
+    transition:
+      border-color 250ms var(--cubic),
+      color 250ms var(--cubic),
+      background-color 250ms var(--cubic);
   }
 
   .leadStepSevenBtnDesc:disabled {
     color: var(--gray-text);
+    cursor: not-allowed;
   }
 
   .leadIcon {
     width: 20px;
     height: 21px;
     stroke: var(--black-main);
+    transition: stroke 250ms var(--cubic);
   }
 
   .leadStepSevenBtnDesc:disabled .leadIcon {
     stroke: var(--gray-text);
+  }
+
+  .leadStepSevenBtnDesc:not(:disabled):hover {
+    border-color: var(--red-main);
+    background-color: var(--red-main);
+    color: var(--white-main);
+  }
+
+  .leadStepSevenBtnDesc:not(:disabled):hover .leadIcon {
+    stroke: var(--white-main);
   }
 }

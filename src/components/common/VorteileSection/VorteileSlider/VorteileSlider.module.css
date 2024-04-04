@@ -110,10 +110,21 @@
   stroke: var(--white-main);
   width: 24px;
   height: 24px;
+  transition: stroke 250ms var(--cubic);
 }
 
 .nextArrow {
   transform: rotate(180deg);
+}
+
+.sliderBtn:hover {
+  border-color: var(--white-main);
+  background-color: var(--white-main);
+}
+
+.sliderBtn:hover .nextArrow,
+.sliderBtn:hover .prevArrow {
+  stroke: var(--red-main);
 }
 
 @media screen and (min-width: 1728px) {

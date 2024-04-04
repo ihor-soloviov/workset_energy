@@ -36,7 +36,6 @@
 
   .nextSlideBtn,
   .prevSlideBtn {
-    display: block;
     background-color: var(--white-main);
     border: 1px solid var(--gray-stroke);
     display: flex;
@@ -45,17 +44,28 @@
     border-radius: 50%;
     width: 50px;
     height: 50px;
+    transition:
+      border-color 250ms var(--cubic),
+      background-color 250ms var(--cubic);
   }
 
   .nextSlideBtn {
-    transform: rotate(90deg);
-  }
-
-  .prevSlideBtn {
-    transform: rotate(-90deg);
+    transform: rotate(180deg);
   }
 
   .slideIcon {
     stroke: var(--gray-text);
+    transition: stroke 250ms var(--cubic);
+  }
+
+  .nextSlideBtn:hover,
+  .prevSlideBtn:hover {
+    border-color: var(--red-main);
+    background-color: var(--red-main);
+  }
+
+  .nextSlideBtn:hover .slideIcon,
+  .prevSlideBtn:hover .slideIcon {
+    stroke: var(--white-main);
   }
 }
