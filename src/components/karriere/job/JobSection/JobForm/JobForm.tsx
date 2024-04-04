@@ -86,12 +86,16 @@ const JobForm = () => {
 
           <label className={styles.jobLabel}>
             Zusammenfassung*
-            <p className={styles.jobFilePlaceholderMob}>
+            <p
+              className={`${styles.jobFilePlaceholderMob} ${selectedFile ? styles.withFile : ''}`}
+            >
               {selectedFile
                 ? truncateText(selectedFile.name, 23)
                 : `Keine Datei gewählt`}
             </p>
-            <p className={styles.jobFilePlaceholderDesc}>
+            <p
+              className={`${styles.jobFilePlaceholderDesc} ${selectedFile ? styles.withFile : ''}`}
+            >
               {selectedFile
                 ? truncateText(selectedFile.name, 47)
                 : `Keine Datei gewählt`}
@@ -99,6 +103,7 @@ const JobForm = () => {
             <input
               id="cv"
               type="file"
+              accept=".pdf,.doc,.docx"
               placeholder="Keine Datei gewählt"
               className={styles.jobInputFile}
               onChange={handleFileChange}

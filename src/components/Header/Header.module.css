@@ -18,8 +18,9 @@
 }
 
 .headerLogoLink {
-  width: 73px;
-  height: 43px;
+  height: 100%;
+  display: flex;
+  align-items: center;
   transition: scale 150ms var(--cubic);
 }
 
@@ -71,17 +72,26 @@
 
 @media screen and (min-width: 1728px) {
   .header {
-    padding: 24px 0;
+    height: 101px;
+    padding: unset;
+    display: flex;
+    align-items: center;
   }
 
   .headerContainer {
     width: 1728px;
     padding: 0 117px;
+    height: 100%;
     display: flex;
+    align-items: center;
   }
 
   .headerBurgerBtn {
     display: none;
+  }
+
+  .headerNav {
+    height: 100%;
   }
 
   .headerLeadLink {

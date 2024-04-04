@@ -57,6 +57,11 @@
   cursor: pointer;
 }
 
+.angebotFilePlaceholderMob.withFile,
+.angebotFilePlaceholderDesc.withFile {
+  color: var(--black-main);
+}
+
 .angebotFilePlaceholderDesc {
   display: none;
 }

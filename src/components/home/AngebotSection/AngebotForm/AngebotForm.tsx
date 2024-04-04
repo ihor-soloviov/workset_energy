@@ -92,12 +92,16 @@ const AngebotForm = () => {
       </div>
       <label className={styles.angebotLabel}>
         Wir prüfen dein PV-Angebot*
-        <p className={styles.angebotFilePlaceholderMob}>
+        <p
+          className={`${styles.angebotFilePlaceholderMob} ${selectedFile ? styles.withFile : ''}`}
+        >
           {selectedFile
             ? truncateText(selectedFile.name, 23)
             : `Lade dein(e) Angebot(e) hoch`}
         </p>
-        <p className={styles.angebotFilePlaceholderDesc}>
+        <p
+          className={`${styles.angebotFilePlaceholderDesc} ${selectedFile ? styles.withFile : ''}`}
+        >
           {selectedFile
             ? truncateText(selectedFile.name, 47)
             : `Lade dein(e) Angebot(e) hoch`}
@@ -105,6 +109,7 @@ const AngebotForm = () => {
         <input
           id="angebot"
           type="file"
+          accept=".pdf,.doc,.docx"
           required
           placeholder="Lade dein(e) Angebot(e) hoch"
           className={styles.angebotInputFile}

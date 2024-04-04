@@ -59,6 +59,11 @@
   line-height: 157%;
 }
 
+.karriereFilePlaceholderMob.withFile,
+.karriereFilePlaceholderDesc.withFile {
+  color: var(--black-main);
+}
+
 .karriereFilePlaceholderDesc {
   display: none;
 }

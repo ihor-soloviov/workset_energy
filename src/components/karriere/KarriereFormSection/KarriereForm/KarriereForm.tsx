@@ -102,12 +102,16 @@ const KarriereForm = () => {
 
         <label className={styles.karriereLabel}>
           Zusammenfassung*
-          <p className={styles.karriereFilePlaceholderMob}>
+          <p
+            className={`${styles.karriereFilePlaceholderMob} ${selectedFile ? styles.withFile : ''}`}
+          >
             {selectedFile
               ? truncateText(selectedFile.name, 23)
               : `Keine Datei gewählt`}
           </p>
-          <p className={styles.karriereFilePlaceholderDesc}>
+          <p
+            className={`${styles.karriereFilePlaceholderDesc} ${selectedFile ? styles.withFile : ''}`}
+          >
             {selectedFile
               ? truncateText(selectedFile.name, 47)
               : `Keine Datei gewählt`}
@@ -116,6 +120,7 @@ const KarriereForm = () => {
             id="cv"
             type="file"
             required
+            accept=".pdf,.doc,.docx"
             placeholder="Keine Datei gewählt"
             className={styles.karriereInputFile}
             onChange={handleFileChange}
