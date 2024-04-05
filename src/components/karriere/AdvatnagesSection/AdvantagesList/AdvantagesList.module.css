@@ -114,14 +114,53 @@
   stroke: var(--red-main);
 }
 
-@media screen and (min-width: 1728px) {
+@media screen and (min-width: 1440px) {
   .advantagesList {
-    gap: 20px;
+    gap: 2rem;
     flex-direction: row;
-    height: 706px;
+    height: 70.6rem;
     width: fit-content;
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .advantagesItem {
+    width: 39.2rem;
+    height: 34.3rem;
+    padding: 3.2rem;
+  }
+
+  .advantagesTitle {
+    margin-bottom: 1.2rem;
+  }
+
+  .advantagesText {
+    margin-bottom: 2.4rem;
+    line-height: 150%;
+
+    letter-spacing: unset;
+    width: 32.8rem;
+    height: 9.2rem;
+  }
+
+  .advantagesItem:nth-child(1) .advantagesText {
+    width: 31rem;
+  }
+
+  .advantagesItem:nth-child(4) .advantagesText {
+    width: 31rem;
+  }
+
+  .advantagesBtn {
+    width: 13.8rem;
+    height: 4.5rem;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .advantagesList {
+    gap: 20px;
+    height: 706px;
   }
 
   .advantagesItem {
@@ -136,9 +175,7 @@
 
   .advantagesText {
     margin-bottom: 24px;
-    line-height: 150%;
 
-    letter-spacing: unset;
     width: 328px;
     height: 92px;
   }

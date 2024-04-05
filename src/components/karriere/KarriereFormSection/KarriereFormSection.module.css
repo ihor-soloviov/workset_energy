@@ -34,6 +34,30 @@
   }
 }
 
+@media screen and (min-width: 1440px) {
+  .karriereFormSection {
+    padding: 17.4rem 0;
+  }
+
+  .karriereFormContainer {
+    width: 172.8rem;
+    padding: 0 25.6rem;
+  }
+
+  .karriereFormTitle {
+    font-size: 3.4rem;
+    font-weight: 700;
+    width: 67.7rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .karriereFormText {
+    font-size: 1.8rem;
+    width: fit-content;
+    margin-bottom: 4.8rem;
+  }
+}
+
 @media screen and (min-width: 1728px) {
   .karriereFormSection {
     padding: 174px 0;
@@ -46,14 +70,12 @@
 
   .karriereFormTitle {
     font-size: 34px;
-    font-weight: 700;
     width: 677px;
     margin-bottom: 12px;
   }
 
   .karriereFormText {
     font-size: 18px;
-    width: fit-content;
     margin-bottom: 48px;
   }
 }

@@ -19,6 +19,57 @@
   display: none;
 }
 
+@media screen and (min-width: 1440px) {
+  .karriereHeroSection {
+    padding: 11.8rem 0 7.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.9rem;
+  }
+
+  .karriereHeroContainer {
+    width: 135.6rem;
+    height: 77.2rem;
+    margin: unset;
+  }
+
+  .nextSlideBtn,
+  .prevSlideBtn {
+    background-color: var(--white-main);
+    border: 1px solid var(--gray-stroke);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rme;
+    transition:
+      border-color 250ms var(--cubic),
+      background-color 250ms var(--cubic);
+  }
+
+  .nextSlideBtn {
+    transform: rotate(180deg);
+  }
+
+  .slideIcon {
+    stroke: var(--gray-text);
+    transition: stroke 250ms var(--cubic);
+  }
+
+  .nextSlideBtn:hover,
+  .prevSlideBtn:hover {
+    border-color: var(--red-main);
+    background-color: var(--red-main);
+  }
+
+  .nextSlideBtn:hover .slideIcon,
+  .prevSlideBtn:hover .slideIcon {
+    stroke: var(--white-main);
+  }
+}
+
 @media screen and (min-width: 1728px) {
   .karriereHeroSection {
     padding: 118px 0 79px;

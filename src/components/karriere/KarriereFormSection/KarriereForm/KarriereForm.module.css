@@ -173,21 +173,21 @@
   }
 }
 
-@media screen and (min-width: 1728px) {
+@media screen and (min-width: 1440px) {
   .karriereForm {
-    width: 1216px;
+    width: 121.6rem;
     display: flex;
     flex-direction: column;
-    padding: 32px;
+    padding: 3.2rem;
     border: 1px solid var(--gray-stroke);
-    gap: 24px;
-    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.04);
-    border-radius: 12px;
+    gap: 2.4rem;
+    box-shadow: 0 0.1rem 0.2rem 0 rgba(16, 24, 40, 0.04);
+    border-radius: 1.2rem;
   }
 
   .karriereLabelWrap {
     flex-direction: row;
-    gap: 24px;
+    gap: 2.4rem;
     margin-bottom: unset;
   }
 
@@ -208,14 +208,14 @@
   }
 
   .karriereTextArea {
-    height: 124px;
+    height: 12.4rem;
     width: 100%;
-    padding: 12px 16px;
+    padding: 1.2rem 1.6rem;
   }
 
   .karriereInput {
     width: 100%;
-    padding: 14px 16px;
+    padding: 1.4rem 1.6rem;
   }
 
   .karriereInput::placeholder {
@@ -228,31 +228,31 @@
 
   .karriereFilePlaceholderDesc {
     display: block;
-    top: 36px;
-    left: 16px;
+    top: 3.6rem;
+    left: 1.6rem;
     line-height: 110%;
   }
 
   .karriereInputFile {
-    width: 472px;
+    width: 47.2rem;
   }
 
   .karriereUploadBtn {
-    padding: 13px 20px;
-    width: 92px;
+    padding: 1.3rem 2rem;
+    width: 9.2rem;
     border-left: 1px solid var(--gray-stroke);
-    top: 22px;
+    top: 2.2rem;
   }
 
   .karriereBtnWrap {
     flex-direction: row;
-    gap: 20px;
+    gap: 2rem;
     align-items: center;
   }
 
   .karriereText {
-    font-size: 14px;
-    width: 417px;
+    font-size: 1.4rem;
+    width: 41.7rme;
   }
 
   .karriereBr {
@@ -269,6 +269,68 @@
     display: block;
     color: var(--gray-text);
     font-weight: 500;
+    line-height: 142.8%;
+    letter-spacing: -0.01rem;
+  }
+
+  .karriereBtn {
+    width: 9.2rem;
+    height: 4.6rem;
+    padding: 1.4rem 2rem;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .karriereForm {
+    width: 1216px;
+    padding: 32px;
+    gap: 24px;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.04);
+    border-radius: 12px;
+  }
+
+  .karriereLabelWrap {
+    gap: 24px;
+  }
+
+  .karriereLabel {
+    gap: 6px;
+  }
+
+  .karriereTextArea {
+    height: 124px;
+    padding: 12px 16px;
+  }
+
+  .karriereInput {
+    padding: 14px 16px;
+  }
+
+  .karriereFilePlaceholderDesc {
+    top: 36px;
+    left: 16px;
+  }
+
+  .karriereInputFile {
+    width: 472px;
+  }
+
+  .karriereUploadBtn {
+    padding: 13px 20px;
+    width: 92px;
+    top: 22px;
+  }
+
+  .karriereBtnWrap {
+    gap: 20px;
+  }
+
+  .karriereText {
+    font-size: 14px;
+    width: 417px;
+  }
+
+  .karriereBtnText {
     line-height: 142.8%;
     letter-spacing: -0.1px;
   }

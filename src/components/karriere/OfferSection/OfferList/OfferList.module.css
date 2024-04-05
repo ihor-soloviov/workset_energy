@@ -116,15 +116,15 @@
   stroke: var(--red-main);
 }
 
-@media screen and (min-width: 1728px) {
+@media screen and (min-width: 1440px) {
   .offerList {
-    gap: 54px;
+    gap: 5.4rem;
   }
 
   .offerItem {
     display: flex;
     flex-direction: row;
-    height: 360px;
+    height: 36rme;
     justify-content: center;
   }
 
@@ -137,28 +137,100 @@
   }
 
   .offerMainWrap {
-    padding: 91px 64px;
+    padding: 9.1rem 6.4rem;
     display: flex;
-    gap: 102px;
+    gap: 10.2rem;
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
     border-top: 1px solid var(--gray-stroke);
     border-left: unset;
+    border-radius: 0 1.2rem 1.2rem 0;
+  }
+
+  .offerTopTitle {
+    font-size: 3.6rem;
+    width: 38.8rem;
+    line-height: normal;
+    letter-spacing: -0.054rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .offerTopText {
+    font-size: 1.8rem;
+    line-height: 130%;
+    letter-spacing: -0.027rem;
+    margin-bottom: 2.2rem;
+    width: 34.1rem;
+    height: 7rem;
+  }
+
+  .offerItem:nth-child(2) .offerTopText {
+    width: 35.2rem;
+  }
+
+  .offerTimeWrap {
+    padding: 0.3rem 1.1rem;
+  }
+
+  .offerTime {
+    line-height: 150%;
+    letter-spacing: -0.016px;
+  }
+
+  .offerBottomWrap {
+    padding-left: 4.8rem;
+    position: relative;
+  }
+
+  .offerBottomWrap::after {
+    content: '';
+    position: absolute;
+    background: var(--gray-stroke);
+    left: 0;
+    top: 0;
+    height: 15.4rem;
+    width: 0.1rem;
+  }
+
+  .offerBottomTitle {
+    font-size: 2.8rem;
+    letter-spacing: -0.042rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .offerBottomText {
+    width: 16.2rem;
+    line-height: 150%;
+    letter-spacing: -0.016rem;
+    margin-bottom: 3.8rem;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .offerList {
+    gap: 54px;
+  }
+
+  .offerItem {
+    height: 360px;
+  }
+
+  .offerMainWrap {
+    padding: 91px 64px;
+    gap: 102px;
     border-radius: 0px 12px 12px 0px;
   }
 
   .offerTopTitle {
     font-size: 36px;
     width: 388px;
-    line-height: normal;
     letter-spacing: -0.54px;
     margin-bottom: 12px;
   }
 
   .offerTopText {
     font-size: 18px;
-    line-height: 130%;
     letter-spacing: -0.27px;
     margin-bottom: 22px;
     width: 341px;
@@ -174,21 +246,14 @@
   }
 
   .offerTime {
-    line-height: 150%;
     letter-spacing: -0.16px;
   }
 
   .offerBottomWrap {
     padding-left: 48px;
-    position: relative;
   }
 
   .offerBottomWrap::after {
-    content: '';
-    position: absolute;
-    background: var(--gray-stroke);
-    left: 0;
-    top: 0;
     height: 154px;
     width: 1px;
   }
@@ -201,7 +266,6 @@
 
   .offerBottomText {
     width: 162px;
-    line-height: 150%;
     letter-spacing: -0.16px;
     margin-bottom: 38px;
   }

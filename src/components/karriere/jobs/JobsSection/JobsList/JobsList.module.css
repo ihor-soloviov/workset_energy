@@ -125,6 +125,68 @@
   color: var(--white-main);
 }
 
+@media screen and (min-width: 1440px) {
+  .jobsList {
+    gap: 3.2rem;
+  }
+
+  .jobsItem {
+    width: 122rem;
+    height: 23rem;
+    padding: 4.8rem 4.8rem 4.8rem 6.8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .jobsTopWrap {
+    margin-bottom: unset;
+    width: 24rem;
+  }
+
+  .jobsTitle {
+    line-height: normal;
+    letter-spacing: -0.0456rem;
+    margin-bottom: 2.2rem;
+  }
+
+  .jobsTimeType {
+    letter-spacing: -0.0304rem;
+  }
+
+  .jobsWrap {
+    margin-bottom: unset;
+  }
+
+  .jobsText {
+    font-size: 1.6rem;
+    width: 44.6rem;
+    height: 9.6rem;
+  }
+
+  .jobsLocation {
+    font-size: 1.6rem;
+  }
+
+  .jobsBottomWrap {
+    gap: 1.2rem;
+    width: fit-content;
+  }
+
+  .jobsLink,
+  .jobsBtn {
+    width: 18.8rme;
+  }
+
+  .jobsLink {
+    padding: 1.2rem 5.9rem;
+  }
+
+  .jobsBtn {
+    padding: 1.2rem 2.4rem;
+  }
+}
+
 @media screen and (min-width: 1728px) {
   .jobsList {
     gap: 32px;

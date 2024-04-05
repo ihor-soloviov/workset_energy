@@ -34,6 +34,29 @@
   }
 }
 
+@media screen and (min-width: 1440px) {
+  .advantagesSection {
+    padding: 10rem 0;
+  }
+
+  .advantagesContainer {
+    width: 172.8rem;
+    padding: 0 25.5rem;
+  }
+
+  .advantagesMainTitle {
+    font-size: 3.4rem;
+    width: 59.2rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .advantagesMainText {
+    font-size: 1.8rem;
+    width: 66.4rem;
+    margin-bottom: 5.4rem;
+  }
+}
+
 @media screen and (min-width: 1728px) {
   .advantagesSection {
     padding: 100px 0;

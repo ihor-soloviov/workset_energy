@@ -13,9 +13,10 @@
     width: 390px;
   }
 }
-@media screen and (min-width: 1728px) {
+
+@media screen and (min-width: 1440px) {
   .jobSection {
-    padding: 200px 0 100px;
+    padding: 20rem 0 10rem;
 
     background: linear-gradient(
       to right,
@@ -26,6 +27,17 @@
 
   .jobContainer {
     position: relative;
+    width: 172.8rem;
+    padding: 0 18.6rem;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .jobSection {
+    padding: 200px 0 100px;
+  }
+
+  .jobContainer {
     width: 1728px;
     padding: 0 186px;
   }

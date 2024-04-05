@@ -92,6 +92,52 @@
   display: block;
 }
 
+@media screen and (min-width: 1440px) {
+  .jobListWrap {
+    width: 59.9rem;
+  }
+
+  .jobTitle {
+    font-size: 5rem;
+    margin-bottom: 4rem;
+  }
+
+  .jobCategoryList {
+    width: 59.9rem;
+    margin-bottom: 5.4rem;
+  }
+
+  .jobCategoryItem {
+    gap: 1.4rem;
+  }
+
+  .jobCategoryTitle {
+    font-size: 2.8rem;
+    line-height: normal;
+  }
+
+  .jobDescription {
+    width: 59.9rem;
+  }
+
+  .jobSubCategoryTitle {
+    font-size: 2.2rem;
+  }
+  .jobPointList {
+    margin-left: 2.8rem;
+  }
+
+  .jobPointText {
+    font-size: 1.8rem;
+    width: 100%;
+  }
+
+  .jobMessage {
+    font-size: 1.8rem;
+    width: 59.9rem;
+  }
+}
+
 @media screen and (min-width: 1728px) {
   .jobListWrap {
     width: 599px;
@@ -113,7 +159,6 @@
 
   .jobCategoryTitle {
     font-size: 28px;
-    line-height: normal;
   }
 
   .jobDescription {
@@ -129,11 +174,11 @@
 
   .jobPointText {
     font-size: 18px;
-    width: 100%;
   }
 
   .jobMessage {
     font-size: 18px;
     width: 599px;
   }
+
 }

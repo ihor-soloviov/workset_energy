@@ -169,46 +169,46 @@
   }
 }
 
-@media screen and (min-width: 1728px) {
+@media screen and (min-width: 1440px) {
   .jobFormWrap {
     position: absolute;
-    right: 186px;
-    top: 562px;
-    width: 530px;
-    height: 676px;
-    padding: 72px 69px;
+    right: 18.6rem;
+    top: 56.2rem;
+    width: 53rem;
+    height: 67.6rem;
+    padding: 7.2rem 6.9rem;
     border: 1px solid var(--gray-stroke);
-    box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.08);
-    border-radius: 12px;
+    box-shadow: 0px 0.4px 1.8rem 0px rgba(0, 0, 0, 0.08);
+    border-radius: 1.2rem;
   }
 
   .jobFormTitle {
-    margin-bottom: 14px;
+    margin-bottom: 1.4rem;
     line-height: normal;
   }
 
   .jobFormText {
-    font-size: 18px;
-    margin-bottom: 32px;
+    font-size: 1.8rem;
+    margin-bottom: 3.2rem;
   }
 
   .jobForm {
-    width: 392px;
+    width: 39.2rem;
     display: flex;
     flex-direction: column;
   }
 
   .jobLabelWrap {
-    margin-bottom: 54px;
+    margin-bottom: 5.4rem;
   }
 
   .jobLabel {
-    gap: 6px;
+    gap: 0.6rem;
   }
 
   .jobInput {
     width: 100%;
-    padding: 14px 16px;
+    padding: 1.4rem 1.6rem;
   }
 
   .jobInput::placeholder {
@@ -221,9 +221,66 @@
 
   .jobFilePlaceholderDesc {
     display: block;
+    top: 3.6rem;
+    left: 1.6rem;
+    line-height: 110%;
+  }
+
+  .jobInputFile {
+    width: 27.6rem;
+  }
+
+  .jobUploadBtn {
+    padding: 1.4rem 3.2rem;
+    width: 11.6rem;
+    top: 2.2rem;
+  }
+
+  .jobBtn {
+    width: 100%;
+    padding: 1.5rem 16.8rem;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .jobFormWrap {
+    right: 186px;
+    top: 562px;
+    width: 530px;
+    height: 676px;
+    padding: 72px 69px;
+    box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+  }
+
+  .jobFormTitle {
+    margin-bottom: 14px;
+  }
+
+  .jobFormText {
+    font-size: 18px;
+    margin-bottom: 32px;
+  }
+
+  .jobForm {
+    width: 392px;
+  }
+
+  .jobLabelWrap {
+    margin-bottom: 54px;
+  }
+
+  .jobLabel {
+    gap: 6px;
+  }
+
+  .jobInput {
+    padding: 14px 16px;
+  }
+
+  .jobFilePlaceholderDesc {
     top: 36px;
     left: 16px;
-    line-height: 110%;
   }
 
   .jobInputFile {
@@ -237,7 +294,6 @@
   }
 
   .jobBtn {
-    width: 100%;
     padding: 15px 168px;
   }
 }

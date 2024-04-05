@@ -89,6 +89,45 @@
   }
 }
 
+@media screen and (min-width: 1440px) {
+  .jobsHeroSection {
+    padding: 15.9rem 0 15.1rem;
+    height: 74.5rem;
+  }
+
+  .jobsHeroContainer {
+    width: 172.8rem;
+    padding: 0 11.4rem;
+  }
+
+  .jobsHeroLink {
+    font-size: 1.8rem;
+    line-height: 160%;
+    margin-bottom: 11.8rem;
+  }
+
+  .jobsHeroIcon {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .jobsHeroTitle {
+    font-size: 5rem;
+    margin-bottom: 1.8rem;
+    width: 61.2rem;
+  }
+
+  .jobsHeroText {
+    font-size: 1.8rem;
+    margin-bottom: 2.8rem;
+    width: 66.8rem;
+  }
+
+  .jobsHeroBtn {
+    height: 5.2rem;
+  }
+}
+
 @media screen and (min-width: 1728px) {
   .jobsHeroSection {
     padding: 159px 0 151px;

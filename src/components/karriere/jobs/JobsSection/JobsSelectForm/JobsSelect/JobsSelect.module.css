@@ -99,11 +99,27 @@
   cursor: pointer;
 }
 
-@media screen and (min-width: 1728px) {
+@media screen and (min-width: 1440px) {
   .jobsSelectForm {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 3.3rem;
+  }
+
+  .jobsLabel {
+    width: 38.4rem;
+    letter-spacing: -0.01rem;
+  }
+
+  /* Select menu */
+  .jobsSelect > div:nth-of-type(2) {
+    width: 38.4rem;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .jobsSelectForm {
     gap: 33px;
   }
 
