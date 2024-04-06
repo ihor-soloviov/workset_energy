@@ -1,7 +1,6 @@
 'use client';
-import { m, LazyMotion, domAnimation } from 'framer-motion';
-import { fromBotAnimation } from '@/utils/animations';
-import React from 'react';
+import React, { useEffect } from 'react';
+import styles from './RecycleTextWrap.module.css';
 type Props = {
   title: string;
   titleClass: string;
@@ -15,31 +14,38 @@ const RecycleTextWrap: React.FC<Props> = ({
   text,
   textClass,
 }) => {
+  const hiddenElements = document.querySelectorAll(
+    `${styles.scrollTitleHidden}`,
+  );
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add(styles.scrollTitleVisible);
+        } else {
+          entry.target.classList.remove(styles.scrollTitleVisible);
+        }
+      });
+    });
+
+    const hiddenElements = document.querySelectorAll(
+      `.${styles.scrollTitleHidden}`,
+    );
+
+    hiddenElements.forEach(el => observer.observe(el));
+
+    // Cleanup function
+    return () => {
+      hiddenElements.forEach(el => observer.unobserve(el));
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <>
-      <LazyMotion features={domAnimation}>
-        <m.h2
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ amount: 0, once: true }}
-          variants={fromBotAnimation}
-          className={titleClass}
-        >
-          {title}
-        </m.h2>
-        {text && (
-          <m.p
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ amount: 0, once: true }}
-            variants={fromBotAnimation}
-            custom={0.4}
-            className={textClass}
-          >
-            {text}
-          </m.p>
-        )}
-      </LazyMotion>
+      <h2 className={`${titleClass} ${styles.scrollTitleHidden}`}>{title}</h2>
+      {text && <p className={textClass}>{text}</p>}
     </>
   );
 };

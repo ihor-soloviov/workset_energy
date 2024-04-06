@@ -7,8 +7,6 @@ import { inter } from '@/utils/fonts';
 import * as Yup from 'yup';
 import Button from '@/components/common/Button/Button';
 import { useState, ChangeEvent } from 'react';
-import { LazyMotion, domAnimation, m } from 'framer-motion';
-import { opacityAnimation } from '@/utils/animations';
 
 const KarriereForm = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -55,108 +53,102 @@ const KarriereForm = () => {
   });
 
   return (
-    <LazyMotion features={domAnimation}>
-      <m.form
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0, once: true }}
-        variants={opacityAnimation}
-        onSubmit={handleSubmit}
-        className={`${styles.karriereForm} ${inter.className}`}
-      >
-        <div className={styles.karriereLabelWrap}>
-          <label className={styles.karriereLabel}>
-            Name, Nachname*
-            <input
-              placeholder="Name, Nachname"
-              className={`${styles.karriereInput} ${touched.name && errors.name && styles.error}`}
-              {...getFieldProps('name')}
-            />
-            {touched.name && errors.name && (
-              <p className={styles.errorText}>{errors.name}</p>
-            )}
-          </label>
-          <label className={`${styles.karriereLabel} ${styles.email}`}>
-            E-Mail*
-            <input
-              placeholder="E-Mail"
-              className={`${styles.karriereInput} ${touched.email && errors.email && styles.error}`}
-              {...getFieldProps('email')}
-            />
-            {touched.email && errors.email && (
-              <p className={styles.errorText}>{errors.email}</p>
-            )}
-          </label>
-        </div>
-        <div className={styles.karriereLabelWrap}>
-          <label className={styles.karriereLabel}>
-            Telefon-Nr.*
-            <input
-              placeholder="Telefon-Nr."
-              className={`${styles.karriereInput} ${touched.tel && errors.tel && styles.error}`}
-              {...getFieldProps('tel')}
-            />
-            {touched.tel && errors.tel && (
-              <p className={styles.errorText}>{errors.tel}</p>
-            )}
-          </label>
-
-          <label className={styles.karriereLabel}>
-            Zusammenfassung*
-            <p
-              className={`${styles.karriereFilePlaceholderMob} ${selectedFile ? styles.withFile : ''}`}
-            >
-              {selectedFile
-                ? truncateText(selectedFile.name, 23)
-                : `Keine Datei gewählt`}
-            </p>
-            <p
-              className={`${styles.karriereFilePlaceholderDesc} ${selectedFile ? styles.withFile : ''}`}
-            >
-              {selectedFile
-                ? truncateText(selectedFile.name, 47)
-                : `Keine Datei gewählt`}
-            </p>
-            <input
-              id="cv"
-              type="file"
-              required
-              accept=".pdf,.doc,.docx"
-              placeholder="Keine Datei gewählt"
-              className={styles.karriereInputFile}
-              onChange={handleFileChange}
-            />
-            <label
-              htmlFor="cv"
-              className={`${styles.karriereUploadBtn} ${selectedFile ? styles.withFile : ''}`}
-            >
-              Upload
-            </label>
-          </label>
-        </div>
-        <label className={styles.karriereLabelTextArea}>
-          Nachricht
-          <textarea
-            placeholder="Nachricht"
-            className={styles.karriereTextArea}
-            {...getFieldProps('message')}
+    <form
+      onSubmit={handleSubmit}
+      className={`${styles.karriereForm} ${inter.className}`}
+    >
+      <div className={styles.karriereLabelWrap}>
+        <label className={styles.karriereLabel}>
+          Name, Nachname*
+          <input
+            placeholder="Name, Nachname"
+            className={`${styles.karriereInput} ${touched.name && errors.name && styles.error}`}
+            {...getFieldProps('name')}
           />
+          {touched.name && errors.name && (
+            <p className={styles.errorText}>{errors.name}</p>
+          )}
         </label>
-        <div className={styles.karriereBtnWrap}>
-          <p className={styles.karriereBtnText}>
-            Ihre Anfrage wird in einem sicheren Modus gesendet und bleibt
-            vertraulich
-          </p>
-          <Button
-            disabled={!(isValid && dirty && selectedFile)}
-            className={`${styles.karriereBtn} ${interTight.className}`}
-            type="submit"
+        <label className={`${styles.karriereLabel} ${styles.email}`}>
+          E-Mail*
+          <input
+            placeholder="E-Mail"
+            className={`${styles.karriereInput} ${touched.email && errors.email && styles.error}`}
+            {...getFieldProps('email')}
+          />
+          {touched.email && errors.email && (
+            <p className={styles.errorText}>{errors.email}</p>
+          )}
+        </label>
+      </div>
+      <div className={styles.karriereLabelWrap}>
+        <label className={styles.karriereLabel}>
+          Telefon-Nr.*
+          <input
+            placeholder="Telefon-Nr."
+            className={`${styles.karriereInput} ${touched.tel && errors.tel && styles.error}`}
+            {...getFieldProps('tel')}
+          />
+          {touched.tel && errors.tel && (
+            <p className={styles.errorText}>{errors.tel}</p>
+          )}
+        </label>
+
+        <label className={styles.karriereLabel}>
+          Zusammenfassung*
+          <p
+            className={`${styles.karriereFilePlaceholderMob} ${selectedFile ? styles.withFile : ''}`}
           >
-            Senden
-          </Button>
-        </div>
-      </m.form>
-    </LazyMotion>
+            {selectedFile
+              ? truncateText(selectedFile.name, 23)
+              : `Keine Datei gewählt`}
+          </p>
+          <p
+            className={`${styles.karriereFilePlaceholderDesc} ${selectedFile ? styles.withFile : ''}`}
+          >
+            {selectedFile
+              ? truncateText(selectedFile.name, 47)
+              : `Keine Datei gewählt`}
+          </p>
+          <input
+            id="cv"
+            type="file"
+            required
+            accept=".pdf,.doc,.docx"
+            placeholder="Keine Datei gewählt"
+            className={styles.karriereInputFile}
+            onChange={handleFileChange}
+          />
+          <label
+            htmlFor="cv"
+            className={`${styles.karriereUploadBtn} ${selectedFile ? styles.withFile : ''}`}
+          >
+            Upload
+          </label>
+        </label>
+      </div>
+      <label className={styles.karriereLabelTextArea}>
+        Nachricht
+        <textarea
+          placeholder="Nachricht"
+          className={styles.karriereTextArea}
+          {...getFieldProps('message')}
+        />
+      </label>
+      <div className={styles.karriereBtnWrap}>
+        <p className={styles.karriereBtnText}>
+          Ihre Anfrage wird in einem sicheren Modus gesendet und bleibt
+          vertraulich
+        </p>
+        <Button
+          disabled={!(isValid && dirty && selectedFile)}
+          className={`${styles.karriereBtn} ${interTight.className}`}
+          type="submit"
+        >
+          Senden
+        </Button>
+      </div>
+    </form>
   );
 };
 

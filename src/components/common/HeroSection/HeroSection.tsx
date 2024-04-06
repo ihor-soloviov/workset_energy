@@ -10,9 +10,6 @@ import HeroFormModal from './HeroFormModal/HeroFormModal';
 import { useEffect, useState } from 'react';
 import { useGlobalStore } from '@/store/global-store';
 
-import { LazyMotion, domAnimation, m } from 'framer-motion';
-import { opacityAnimation, textAnimationToRight } from '@/utils/animations';
-
 type HeroProps = {
   imgMob: string;
   imgMobBlur: string;
@@ -56,8 +53,30 @@ const HeroSection = ({
     }
   }, [isModalOpen]);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add(styles.heroAnimVisible);
+        } else {
+          entry.target.classList.remove(styles.heroAnimVisible);
+        }
+      });
+    });
+
+    const hiddenElements = document.querySelectorAll(`.${styles.heroAnim}`);
+
+    hiddenElements.forEach(el => observer.observe(el));
+
+    // Cleanup function
+    return () => {
+      hiddenElements.forEach(el => observer.unobserve(el));
+      observer.disconnect();
+    };
+  }, []);
+
   return (
-    <LazyMotion features={domAnimation}>
+    <>
       <section className={styles.heroSection}>
         <Image
           className={styles.heroImgMob}
@@ -78,33 +97,17 @@ const HeroSection = ({
 
         <div className={styles.heroContainer}>
           <div className={styles.heroTextWrap}>
-            <m.h2
-              className={`${styles.heroMainTitle} ${styles[className]}`}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ amount: 0, once: true }}
-              variants={textAnimationToRight}
-              custom={0}
+            <h2
+              className={`${styles.heroMainTitle} ${styles.heroAnim} ${styles[className]}`}
             >
               {title}
-            </m.h2>
-            <m.p
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ amount: 0, once: true }}
-              variants={textAnimationToRight}
-              custom={1}
-              className={`${styles.heroMainText} ${styles[className]} ${inter.className}`}
+            </h2>
+            <p
+              className={`${styles.heroMainText} ${styles.heroAnim} ${styles[className]} ${inter.className}`}
             >
               {text}
-            </m.p>
-            <m.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ amount: 0, once: true }}
-              variants={opacityAnimation}
-              className={styles.heroBtnWrap}
-            >
+            </p>
+            <div className={`${styles.heroBtnWrap} ${styles.heroAnim}`}>
               <Link className={styles.heroLink} href="/leadgen">
                 Jetzt Berechnen
                 <ArrowIcon className={styles.heroIcon} />
@@ -116,7 +119,7 @@ const HeroSection = ({
               >
                 {!isDesktop ? 'Zum Angebot' : 'Unsere Team'}
               </Button>
-            </m.div>
+            </div>
           </div>
           {isDesktop && (
             <HeroFormModal
@@ -132,7 +135,7 @@ const HeroSection = ({
           handleModalClick={handleModalClick}
         />
       )}
-    </LazyMotion>
+    </>
   );
 };
 

@@ -129,6 +129,25 @@
     border-radius: 1.2rem;
   }
 
+  .scrollHeroFormHidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: all 0.4s;
+  }
+  
+  .scrollHeroFormVisible {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+  }
+  
+  @media (prefers-reduced-motion) {
+    .scrollTitleHidden {
+      transition: none;
+    }
+  }
+
   .heroFormWrap.active {
     position: absolute;
     padding: 35rem 0 28.8rem;
