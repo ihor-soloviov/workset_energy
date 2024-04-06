@@ -35,16 +35,16 @@
   display: none;
 }
 
-@media screen and (min-width: 1728px) {
+@media screen and (min-width: 1440px) {
   .stepThreeMainWrap {
-    padding: 44px 0 0px;
-    height: 563px;
+    padding: 4.4rem 0 0;
+    height: 56.3rem;
     display: flex;
     flex-direction: column;
   }
 
   .stepThreeMainTitle {
-    font-size: 28px;
+    font-size: 2.8rem;
     line-height: normal;
     height: auto;
   }
@@ -57,14 +57,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 6px;
-    width: 116px;
-    height: 46px;
+    gap: 0.6rem;
+    width: 11.6rem;
+    height: 4.6rem;
     color: var(--black-main);
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 500;
-    padding: 13px 22px;
-    border-radius: 6px;
+    padding: 1.3rem 2.2rem;
+    border-radius: 0.6rem;
     border: 1px solid var(--gray-stroke);
     background-color: var(--white-main);
     margin-left: auto;
@@ -80,8 +80,8 @@
   }
 
   .leadIcon {
-    width: 20px;
-    height: 21px;
+    width: 2rem;
+    height: 2.1rem;
     stroke: var(--black-main);
     transition: stroke 250ms var(--cubic);
   }
@@ -98,5 +98,30 @@
 
   .leadStepThreeBtnDesc:not(:disabled):hover .leadIcon {
     stroke: var(--white-main);
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .stepThreeMainWrap {
+    padding: 44px 0 0px;
+    height: 563px;
+  }
+
+  .stepThreeMainTitle {
+    font-size: 28px;
+  }
+
+  .leadStepThreeBtnDesc {
+    gap: 6px;
+    width: 116px;
+    height: 46px;
+    font-size: 16px;
+    padding: 13px 22px;
+    border-radius: 6px;
+  }
+
+  .leadIcon {
+    width: 20px;
+    height: 21px;
   }
 }

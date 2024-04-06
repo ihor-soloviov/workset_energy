@@ -64,9 +64,39 @@
 @media screen and (min-width: 390px) {
 }
 
-@media screen and (min-width: 1728px) {
+@media screen and (min-width: 1440px) {
   .stepOneList {
     justify-content: center;
+    gap: 2.4rem;
+    margin-bottom: 6.4rem;
+  }
+
+  .stepOneItem {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .stepOneWrap {
+    gap: 2.6rem;
+  }
+
+  .stepOneIconWrap {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .stepOneIcon {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .stepOneItemTitle {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .stepOneList {
     gap: 24px;
     margin-bottom: 64px;
   }

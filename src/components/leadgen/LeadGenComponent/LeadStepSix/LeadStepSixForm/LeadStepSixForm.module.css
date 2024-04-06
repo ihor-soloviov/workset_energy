@@ -69,10 +69,10 @@
   display: none;
 }
 
-@media screen and (min-width: 1728px) {
+@media screen and (min-width: 1440px) {
   .stepSixForm {
-    gap: 24px 20px;
-    height: 172px;
+    gap: 2.4rem 2rem;
+    height: 17.2rem;
     flex-direction: row;
     width: 100%;
     flex-wrap: wrap;
@@ -80,7 +80,7 @@
   }
 
   .stepSixLabel {
-    width: 290px;
+    width: 29rem;
   }
 
   .leadStepSixBtn {
@@ -91,18 +91,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 6px;
-    width: 116px;
-    height: 46px;
+    gap: .6rem;
+    width: 11.6rem;
+    height: 4.6rem;
     color: var(--black-main);
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 500;
-    padding: 13px 22px;
-    border-radius: 6px;
+    padding: 1.3rem 2.2rem;
+    border-radius: .6rem;
     border: 1px solid var(--gray-stroke);
     background-color: var(--white-main);
     margin-left: auto;
-    margin-top: 130px;
+    margin-top: 13rem;
     transition:
       border-color 250ms var(--cubic),
       color 250ms var(--cubic),
@@ -115,8 +115,8 @@
   }
 
   .leadIcon {
-    width: 20px;
-    height: 21px;
+    width: 2rem;
+    height: 2.1rem;
     stroke: var(--black-main);
     transition: stroke 250ms var(--cubic);
   }
@@ -133,5 +133,31 @@
 
   .leadStepSixBtnDesc:not(:disabled):hover .leadIcon {
     stroke: var(--white-main);
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .stepSixForm {
+    gap: 24px 20px;
+    height: 172px;
+  }
+
+  .stepSixLabel {
+    width: 290px;
+  }
+
+  .leadStepSixBtnDesc {
+    gap: 6px;
+    width: 116px;
+    height: 46px;
+    font-size: 16px;
+    padding: 13px 22px;
+    border-radius: 6px;
+    margin-top: 130px;
+  }
+
+  .leadIcon {
+    width: 20px;
+    height: 21px;
   }
 }

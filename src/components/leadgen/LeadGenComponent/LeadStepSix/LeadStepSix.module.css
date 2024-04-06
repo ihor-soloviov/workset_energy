@@ -23,19 +23,36 @@
   height: 58px;
 }
 
-@media screen and (min-width: 1728px) {
+@media screen and (min-width: 1440px) {
   .stepSixMainWrap {
-    padding: 44px 0 0px;
-      height: 563px;
+    padding: 4.4rem 0 0;
+    height: 56.3rem;
     display: flex;
     flex-direction: column;
   }
 
   .stepSixMainTitle {
-    font-size: 28px;
+    font-size: 2.8rem;
     line-height: normal;
-    margin-bottom: 8px;
+    margin-bottom: 0.8rem;
     width: fit-content;
+  }
+
+  .stepSixText {
+    font-size: 1.8rem;
+    width: 41.8rem;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .stepSixMainWrap {
+    padding: 44px 0 0px;
+    height: 563px;
+  }
+
+  .stepSixMainTitle {
+    font-size: 28px;
+    margin-bottom: 8px;
   }
 
   .stepSixText {

@@ -56,6 +56,12 @@
   z-index: 2;
 }
 
+@media screen and (min-width: 1440px) {
+  .stepTwoActiveWrap {
+    bottom: 3.2rem;
+  }
+}
+
 @media screen and (min-width: 1728px) {
   .stepTwoActiveWrap {
     bottom: 32px;

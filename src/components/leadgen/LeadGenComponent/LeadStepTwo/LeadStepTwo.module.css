@@ -91,19 +91,99 @@
 .leadStepTwoBtnDesc {
   display: none;
 }
-
-@media screen and (min-width: 1728px) {
+@media screen and (min-width: 1440px) {
   .stepTwoMainWrap {
-    padding: 44px 0 0px;
-    height: 563px;
+    padding: 4.4rem 0 0;
+    height: 56.3rem;
     display: flex;
     flex-direction: column;
   }
 
   .stepTwoTitle {
-    font-size: 28px;
+    font-size: 2.8rem;
     line-height: normal;
     width: fit-content;
+    height: 3.6rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .stepTwoText {
+    font-size: 1.8rem;
+    width: 44rem;
+    margin-bottom: 5.4rem;
+  }
+
+  .stepTwoWrap {
+    width: 52.6rem;
+    height: 22.1rem;
+    margin: 0 auto;
+    padding: 3.2rem;
+    margin-bottom: 9.7rem;
+  }
+
+  .stepTwoLabelWrap {
+    margin-bottom: 7.9rem;
+  }
+
+  .stepTwoCountWrap {
+    margin-right: auto;
+  }
+
+  .stepTwoInputWrap {
+    width: 46.2rem;
+  }
+
+  .leadStepTwoBtn {
+    display: none;
+  }
+
+  .leadStepTwoBtnDesc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    width: 11.6rem;
+    height: 4.6rem;
+    color: var(--black-main);
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding: 1.3rem 2.2rem;
+    border-radius: 0.6rem;
+    border: 1px solid var(--gray-stroke);
+    background-color: var(--white-main);
+    margin-left: auto;
+    transition:
+      border-color 250ms var(--cubic),
+      color 250ms var(--cubic),
+      background-color 250ms var(--cubic);
+  }
+
+  .leadIcon {
+    width: 2rem;
+    height: 2.1rem;
+    stroke: var(--black-main);
+    transition: stroke 250ms var(--cubic);
+  }
+
+  .leadStepTwoBtnDesc:hover {
+    border-color: var(--red-main);
+    background-color: var(--red-main);
+    color: var(--white-main);
+  }
+
+  .leadStepTwoBtnDesc:hover .leadIcon {
+    stroke: var(--white-main);
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .stepTwoMainWrap {
+    padding: 44px 0 0px;
+    height: 563px;
+  }
+
+  .stepTwoTitle {
+    font-size: 28px;
     height: 36px;
     margin-bottom: 8px;
   }
@@ -117,7 +197,6 @@
   .stepTwoWrap {
     width: 526px;
     height: 221px;
-    margin: 0 auto;
     padding: 32px;
     margin-bottom: 97px;
   }
@@ -126,53 +205,21 @@
     margin-bottom: 79px;
   }
 
-  .stepTwoCountWrap {
-    margin-right: auto;
-  }
-
   .stepTwoInputWrap {
     width: 462px;
   }
 
-  .leadStepTwoBtn {
-    display: none;
-  }
-
   .leadStepTwoBtnDesc {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 6px;
     width: 116px;
     height: 46px;
-    color: var(--black-main);
     font-size: 16px;
-    font-weight: 500;
     padding: 13px 22px;
     border-radius: 6px;
-    border: 1px solid var(--gray-stroke);
-    background-color: var(--white-main);
-    margin-left: auto;
-    transition:
-      border-color 250ms var(--cubic),
-      color 250ms var(--cubic),
-      background-color 250ms var(--cubic);
   }
 
   .leadIcon {
     width: 20px;
     height: 21px;
-    stroke: var(--black-main);
-    transition: stroke 250ms var(--cubic);
-  }
-
-  .leadStepTwoBtnDesc:hover {
-    border-color: var(--red-main);
-    background-color: var(--red-main);
-    color: var(--white-main);
-  }
-
-  .leadStepTwoBtnDesc:hover .leadIcon {
-    stroke: var(--white-main);
   }
 }

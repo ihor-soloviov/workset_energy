@@ -75,18 +75,18 @@
   color: var(--black-main);
 }
 
-@media screen and (min-width: 1728px) {
+@media screen and (min-width: 1440px) {
   .stepSevenForm {
-    gap: 24px;
+    gap: 2.4rem;
   }
 
   .stepSevenLabelWrap {
     flex-direction: row;
-    gap: 20px;
+    gap: 2rem;
   }
 
   .stepSevenLabelWrap .stepSevenInput {
-    width: 290px;
+    width: 29rem;
   }
 
   .leadStepSevenBtn {
@@ -97,18 +97,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 6px;
-    width: 116px;
-    height: 46px;
+    gap: 0.6rem;
+    width: 11.6rem;
+    height: 4.6rem;
     color: var(--black-main);
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 500;
-    padding: 13px 22px;
-    border-radius: 6px;
+    padding: 1.3rem 2.2rem;
+    border-radius: 0.6rem;
     border: 1px solid var(--gray-stroke);
     background-color: var(--white-main);
     margin-left: auto;
-    margin-top: 44px;
+    margin-top: 4.4rem;
     transition:
       border-color 250ms var(--cubic),
       color 250ms var(--cubic),
@@ -121,8 +121,8 @@
   }
 
   .leadIcon {
-    width: 20px;
-    height: 21px;
+    width: 2rem;
+    height: 2.1rem;
     stroke: var(--black-main);
     transition: stroke 250ms var(--cubic);
   }
@@ -141,3 +141,33 @@
     stroke: var(--white-main);
   }
 }
+
+@media screen and (min-width: 1728px) {
+  .stepSevenForm {
+    gap: 24px;
+  }
+
+  .stepSevenLabelWrap {
+    gap: 20px;
+  }
+
+  .stepSevenLabelWrap .stepSevenInput {
+    width: 290px;
+  }
+
+  .leadStepSevenBtnDesc {
+    gap: 6px;
+    width: 116px;
+    height: 46px;
+    font-size: 16px;
+    padding: 13px 22px;
+    border-radius: 6px;
+    margin-top: 44px;
+  }
+
+  .leadIcon {
+    width: 20px;
+    height: 21px;
+  }
+
+ }

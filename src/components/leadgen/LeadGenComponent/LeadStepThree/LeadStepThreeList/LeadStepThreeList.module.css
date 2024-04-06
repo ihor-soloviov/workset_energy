@@ -79,11 +79,58 @@
   fill: var(--white-main);
 }
 
+@media screen and (min-width: 1440px) {
+  .stepThreeList {
+    width: 36rem;
+    height: 36rem;
+    margin: 0 auto;
+    margin-bottom: 4.6rem;
+    gap: 2rem;
+  }
+
+  .stepThreeItem {
+    width: 17rem;
+    height: 17rem;
+  }
+
+  .stepThreeWrap {
+    gap: 2.2rem;
+  }
+
+  .stepThreeTitle {
+    font-size: 1.6rem;
+  }
+
+  .stepThreeIconWrap {
+    width: 8.5rem;
+    height: 8.5rem;
+  }
+
+  .first {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+
+  .second {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+
+  .third {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+
+  .fourth {
+    width: 8.5rem;
+    height: 8.5rem;
+  }
+}
+
 @media screen and (min-width: 1728px) {
   .stepThreeList {
     width: 360px;
     height: 360px;
-    margin: 0 auto;
     margin-bottom: 46px;
     gap: 20px;
   }

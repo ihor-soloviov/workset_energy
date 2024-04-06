@@ -104,12 +104,12 @@
   }
 }
 
-@media screen and (min-width: 1728px) {
+@media screen and (min-width: 1440px) {
   .LeadModalMainWrap {
-    width: 738px;
-    height: 726px;
-    padding: 205px 125px;
-    border-radius: 12px;
+    width: 73.8rem;
+    height: 72.6rem;
+    padding: 20.5rem 12.5rem;
+    border-radius: 1.2rem;
   }
 
   .LeadModalCloseBtn {
@@ -127,10 +127,10 @@
 
   .LeadModalTitleDesc {
     display: block;
-    font-size: 50px;
+    font-size: 5rem;
     width: fit-content;
     height: auto;
-    margin-bottom: 14px;
+    margin-bottom: 1.4rem;
   }
 
   .LeadModalText {
@@ -139,7 +139,7 @@
 
   .LeadModalTextDesc {
     display: block;
-    font-size: 18px;
+    font-size: 1.8rem;
   }
 
   .LeadModalBtn {
@@ -148,10 +148,10 @@
 
   .LeadModalBtnDesc {
     display: flex;
-    padding: 14px 20px;
-    width: 154px;
-    height: 52px;
-    line-height: 24px;
+    padding: 1.4rem 2rem;
+    width: 15.4rem;
+    height: 5.2rem;
+    line-height: 2.4rem;
     transition:
       border-color 250ms var(--cubic),
       color 250ms var(--cubic),
@@ -162,5 +162,30 @@
     border-color: var(--white-main);
     background-color: var(--white-main);
     color: var(--red-main);
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .LeadModalMainWrap {
+    width: 738px;
+    height: 726px;
+    padding: 205px 125px;
+    border-radius: 12px;
+  }
+
+  .LeadModalTitleDesc {
+    font-size: 50px;
+    margin-bottom: 14px;
+  }
+
+  .LeadModalTextDesc {
+    font-size: 18px;
+  }
+
+  .LeadModalBtnDesc {
+    padding: 14px 20px;
+    width: 154px;
+    height: 52px;
+    line-height: 24px;
   }
 }
