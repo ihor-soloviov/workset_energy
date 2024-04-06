@@ -6,15 +6,27 @@ import Button from '../../Button/Button';
 import { inter } from '@/utils/fonts';
 import HeroForm from './HeroForm/HeroForm';
 import { useThankYouStore } from '@/store/hero-store';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 type HeroFormModalProps = {
   handleModalClick: () => void;
   isDesktop: boolean;
 };
 
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add(styles.scrollHeroFormVisible);
+    } else {
+      entry.target.classList.remove(styles.scrollHeroFormVisible);
+    }
+  });
+});
+
 const HeroFormModal = ({ handleModalClick, isDesktop }: HeroFormModalProps) => {
   const { isThankYouOpen, setStylesChangedToFalse } = useThankYouStore();
+
+  const hiddenForm = useRef(null);
 
   const handleBtnCloseClick = () => {
     handleModalClick();
@@ -28,32 +40,35 @@ const HeroFormModal = ({ handleModalClick, isDesktop }: HeroFormModalProps) => {
 
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add(styles.scrollHeroFormVisible);
-        } else {
-          entry.target.classList.remove(styles.scrollHeroFormVisible);
-        }
-      });
+      const entry = entries[0];
+
+      if (entry.isIntersecting) {
+        entry.target.classList.add(styles.scrollHeroFormVisible);
+      } else {
+        entry.target.classList.remove(styles.scrollHeroFormVisible);
+      }
     });
 
-    const hiddenElements = document.querySelectorAll(
-      `.${styles.scrollHeroFormHidden}`,
-    );
+    const ref = hiddenForm.current;
+    // Перевіряємо, чи елемент доступний, і тоді спостерігаємо за ним
+    if (ref) {
+      setTimeout(() => {
+        observer.observe(ref);
+      }, 1000);
+    }
 
-    setTimeout(() => {
-      hiddenElements.forEach(el => observer.observe(el));
-    }, 1000);
-
-    // Cleanup function
+    // Функція очищення
     return () => {
-      hiddenElements.forEach(el => observer.unobserve(el));
+      if (ref) {
+        observer.unobserve(ref);
+      }
       observer.disconnect();
     };
   }, []);
 
   return (
     <div
+      ref={hiddenForm}
       className={`${styles.heroFormWrap} ${styles.scrollHeroFormHidden} ${isThankYouOpen ? styles.active : ''}`}
     >
       <div className={styles.heroTopWrap}>

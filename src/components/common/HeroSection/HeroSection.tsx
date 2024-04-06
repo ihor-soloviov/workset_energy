@@ -54,25 +54,26 @@ const HeroSection = ({
   }, [isModalOpen]);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add(styles.heroAnimVisible);
-        } else {
-          entry.target.classList.remove(styles.heroAnimVisible);
-        }
+    if (typeof window !== 'undefined') {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles.heroAnimVisible);
+          } else {
+            entry.target.classList.remove(styles.heroAnimVisible);
+          }
+        });
       });
-    });
 
-    const hiddenElements = document.querySelectorAll(`.${styles.heroAnim}`);
+      const hiddenElements = document.querySelectorAll(`.${styles.heroAnim}`);
 
-    hiddenElements.forEach(el => observer.observe(el));
+      hiddenElements.forEach(el => observer.observe(el));
 
-    // Cleanup function
-    return () => {
-      hiddenElements.forEach(el => observer.unobserve(el));
-      observer.disconnect();
-    };
+      return () => {
+        hiddenElements.forEach(el => observer.unobserve(el));
+        observer.disconnect();
+      };
+    }
   }, []);
 
   return (

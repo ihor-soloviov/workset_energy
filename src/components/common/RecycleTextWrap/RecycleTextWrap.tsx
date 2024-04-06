@@ -19,27 +19,29 @@ const RecycleTextWrap: React.FC<Props> = ({
   );
 
   useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add(styles.scrollTitleVisible);
-        } else {
-          entry.target.classList.remove(styles.scrollTitleVisible);
-        }
+    if (typeof window !== 'undefined') {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles.scrollTitleVisible);
+          } else {
+            entry.target.classList.remove(styles.scrollTitleVisible);
+          }
+        });
       });
-    });
 
-    const hiddenElements = document.querySelectorAll(
-      `.${styles.scrollTitleHidden}`,
-    );
+      const hiddenElements = document.querySelectorAll(
+        `.${styles.scrollTitleHidden}`,
+      );
 
-    hiddenElements.forEach(el => observer.observe(el));
+      hiddenElements.forEach(el => observer.observe(el));
 
-    // Cleanup function
-    return () => {
-      hiddenElements.forEach(el => observer.unobserve(el));
-      observer.disconnect();
-    };
+      // Cleanup function
+      return () => {
+        hiddenElements.forEach(el => observer.unobserve(el));
+        observer.disconnect();
+      };
+    }
   }, []);
 
   return (
