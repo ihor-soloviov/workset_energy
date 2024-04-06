@@ -25,6 +25,26 @@
   }
 }
 
+@media screen and (min-width: 1440px) {
+  .leadHeroSection {
+    height: 97.2rem;
+    padding: 15.9rem 0 8.7rem;
+  }
+
+  .leadHeroContainer {
+    width: 172.8rem;
+    padding: 0 87.3rem 0 11.7rem;
+  }
+
+  .leadHeroImgMob {
+    display: none;
+  }
+
+  .leadHeroImgDesc {
+    display: block;
+  }
+}
+
 @media screen and (min-width: 1728px) {
   .leadHeroSection {
     height: 972px;
@@ -34,13 +54,5 @@
   .leadHeroContainer {
     width: 1728px;
     padding: 0 873px 0 117px;
-  }
-
-  .leadHeroImgMob {
-    display: none;
-  }
-
-  .leadHeroImgDesc {
-    display: block;
   }
 }

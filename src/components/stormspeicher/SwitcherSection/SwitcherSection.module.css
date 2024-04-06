@@ -71,6 +71,50 @@
   display: none;
 }
 
+@media screen and (min-width: 1440px) {
+  .switcherSection {
+    padding: 17.4rem 0 19.6rem;
+  }
+
+  .switcherContainer {
+    width: 172.8rem;
+    padding: 0 11.8rem;
+  }
+
+  .switcherWrap {
+    flex-direction: row;
+    gap: 6.9rem;
+  }
+
+  .switcherInfo {
+    width: 54.9rem;
+    padding-top: 15.8rem;
+  }
+
+  .switcherTitle {
+    font-size: 5rem;
+  }
+
+  .switcherArticle {
+    max-width: 52.9rem;
+  }
+
+  .switcherAnim {
+    gap: 5.6rem;
+    padding: 5.2rem 8.6rem 1.6rem;
+  }
+
+  .switcherAnimMob {
+    display: none;
+  }
+
+  .switcherAnimDesk {
+    display: block;
+    width: 70.3rem;
+    height: auto;
+  }
+}
+
 @media screen and (min-width: 1728px) {
   .switcherSection {
     padding: 174px 0 196px;
@@ -82,7 +126,6 @@
   }
 
   .switcherWrap {
-    flex-direction: row;
     gap: 69px;
   }
 
@@ -104,13 +147,7 @@
     padding: 52px 86px 16px;
   }
 
-  .switcherAnimMob {
-    display: none;
-  }
-
   .switcherAnimDesk {
-    display: block;
     width: 703px;
-    height: auto;
   }
 }
