@@ -12,7 +12,8 @@
 
 @media screen and (min-width: 1440px) {
   .container {
-    width: 39rem;
+    width: 172.8rem;
+    padding: 0 18.6rem;
   }
 }
 

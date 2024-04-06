@@ -47,11 +47,12 @@
 @media screen and (min-width: 1440px) {
   .angebotSection {
     display: flex;
+    height: max-content;
   }
 
   .angebotImgWrap {
     width: calc(100% / 2);
-    height: 97.2rem;
+    height: auto;
   }
 
   .angebotImgMob {

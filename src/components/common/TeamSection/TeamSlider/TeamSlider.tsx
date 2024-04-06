@@ -13,7 +13,7 @@ const TeamSlider = () => {
   const [activeItem, setActiveItem] = useState(1);
   const { isDesktop } = useGlobalStore();
 
-  const handleItemClick = (num = 1) => setActiveItem(num);
+  const handleItemClick = (num: number) => setActiveItem(num);
 
   return (
     <div className={styles.teamImgMainWrap}>

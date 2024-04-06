@@ -84,6 +84,20 @@
   font-size: 10px;
 }
 
+@media screen and (min-width: 1440px) {
+  .heroForm {
+    width: 36.4rem;
+    gap: 1.6rem;
+  }
+
+  .heroFormBtn {
+    padding: 1.2rem;
+    width: 36.4rem;
+    height: 4.8rem;
+    margin: 5.6rem auto 0;
+  }
+}
+
 @media screen and (min-width: 1728px) {
   .heroForm {
     width: 364px;
@@ -94,5 +108,6 @@
     padding: 12px 135px;
     width: 364px;
     height: 48px;
+    margin-top: 56px;
   }
 }

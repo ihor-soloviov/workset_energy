@@ -74,15 +74,15 @@
     background-image: url('/images/common/team-3-desk.jpg');
   }
 
-  .active {
-    width: 49.5rem;
-    background-position: unset;
-  }
-
   .first:hover,
   .second:hover,
   .third:hover {
     width: 49.5rem;
+  }
+
+  .active {
+    width: 49.5rem;
+    background-position: unset;
   }
 
   .teamTextWrap {
@@ -123,14 +123,14 @@
     height: 620px;
   }
 
-   .active {
+  .active {
     width: 495px;
   }
 
   .first:hover,
   .second:hover,
   .third:hover {
-    width: 495px;
+    width: 100%;
   }
 
   .teamTextWrap {

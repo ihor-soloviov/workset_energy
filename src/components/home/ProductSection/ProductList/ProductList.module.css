@@ -93,7 +93,7 @@
   stroke: var(--white-main);
 }
 
-@media screen and (min-width: 1728px) {
+@media screen and (min-width: 1440px) {
   .productList {
     gap: 4rem;
     flex-direction: row;

@@ -24,10 +24,10 @@ const Header = () => {
   const { setIsDesktop } = useGlobalStore();
 
   useEffect(() => {
-    setIsDesktop(window.innerWidth > 1728);
+    setIsDesktop(window.innerWidth >= 1440);
 
     const handleResize = () => {
-      setIsDesktop(window.innerWidth > 1728);
+      setIsDesktop(window.innerWidth >= 1440);
     };
 
     window.addEventListener('resize', handleResize);
