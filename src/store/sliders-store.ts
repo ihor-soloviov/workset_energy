@@ -16,7 +16,7 @@ export const useSliderStore = create<State>(set => ({
   nextIndex: 1,
 
   updatePrevIndex: length =>
-    set(state => {
+    set(_state => {
       const lastIndex = length - 1;
       return {
         currIndex: 0,
@@ -42,5 +42,5 @@ export const useSliderStore = create<State>(set => ({
     }),
 
   animateTo: '',
-  setAnimate: (direction: string) => set(state => ({ animateTo: direction })),
+  setAnimate: direction => set(_state => ({ animateTo: direction })),
 }));

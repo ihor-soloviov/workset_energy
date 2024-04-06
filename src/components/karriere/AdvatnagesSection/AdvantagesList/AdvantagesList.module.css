@@ -90,7 +90,7 @@
     background-color 250ms var(--cubic),
     border-color 250ms var(--cubic),
     color 250ms var(--cubic);
-  padding: 12px 20px;
+  padding: 12px 0;
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.04);
 }
 

@@ -35,7 +35,7 @@
   align-items: center;
   justify-content: center;
   color: var(--gray-input);
-  padding: 16px 135px;
+  padding: 16px 0;
   font-size: 16px;
   font-weight: 700;
   line-height: 150%;
@@ -82,7 +82,7 @@
     width: 80rem;
   }
   .offerMainBtn {
-    padding: 1.6rem 3.1rem;
+    padding: 1.6rem 0;
     width: 13.4rem;
   }
 }

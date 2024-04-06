@@ -81,7 +81,7 @@
 
 .planBtn {
   display: flex;
-  padding: 14px 110px;
+  padding: 14px 0;
   justify-content: center;
   align-items: center;
   border: 1px solid var(--red-main);
@@ -149,7 +149,7 @@
 
   .planBtn {
     width: 32.4rem;
-    padding: 1.4rem 12.6rem;
+    padding: 1.4rem 0;
   }
 }
 

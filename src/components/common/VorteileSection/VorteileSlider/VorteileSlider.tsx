@@ -14,7 +14,7 @@ import SliderWrap from '../SliderWrap/SliderWrap';
 type Props = VorteileSliderT;
 
 const VorteileSlider: React.FC<Props> = ({ sliderImages, sliderText }) => {
-  const { currIndex, prevIndex, nextIndex, setIndex, setAnimate } =
+  const { currIndex, prevIndex, nextIndex, setIndex, setAnimate, animateTo } =
     useSliderStore();
 
   const sliderLength = sliderImages.length;
@@ -30,7 +30,7 @@ const VorteileSlider: React.FC<Props> = ({ sliderImages, sliderText }) => {
   const handleNextSlide = () => {
     setAnimate('toNext');
     setTimeout(() => {
-      setIndex(nextIndex, sliderImages.length);
+      setIndex(nextIndex, sliderLength);
       setAnimate('');
     }, 450);
   };

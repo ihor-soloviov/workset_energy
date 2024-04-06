@@ -67,6 +67,7 @@
 
   .employeeImgDesc {
     display: block;
+    width: calc(100% / 2);
   }
 
   .employeeTextWrap {
@@ -90,7 +91,7 @@
     color: var(--gray-input);
     font-size: 1.6rem;
     font-weight: 600;
-    width: 17rem;
+    width: 20rem;
     height: 4.8rem;
     background-color: var(--red-main);
     border: none;
