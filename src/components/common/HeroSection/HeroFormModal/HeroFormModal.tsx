@@ -13,20 +13,8 @@ type HeroFormModalProps = {
   isDesktop: boolean;
 };
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add(styles.scrollHeroFormVisible);
-    } else {
-      entry.target.classList.remove(styles.scrollHeroFormVisible);
-    }
-  });
-});
-
 const HeroFormModal = ({ handleModalClick, isDesktop }: HeroFormModalProps) => {
   const { isThankYouOpen, setStylesChangedToFalse } = useThankYouStore();
-
-  const hiddenForm = useRef(null);
 
   const handleBtnCloseClick = () => {
     handleModalClick();
@@ -39,36 +27,33 @@ const HeroFormModal = ({ handleModalClick, isDesktop }: HeroFormModalProps) => {
   };
 
   useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      const entry = entries[0];
+    if (typeof window !== 'undefined') {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles.scrollHeroFormVisible);
+          } else {
+            entry.target.classList.remove(styles.scrollHeroFormVisible);
+          }
+        });
+      });
 
-      if (entry.isIntersecting) {
-        entry.target.classList.add(styles.scrollHeroFormVisible);
-      } else {
-        entry.target.classList.remove(styles.scrollHeroFormVisible);
-      }
-    });
+      const hiddenElements = document.querySelectorAll(
+        `.${styles.scrollHeroFormHidden}`,
+      );
 
-    const ref = hiddenForm.current;
-    // Перевіряємо, чи елемент доступний, і тоді спостерігаємо за ним
-    if (ref) {
-      setTimeout(() => {
-        observer.observe(ref);
-      }, 1000);
+      hiddenElements.forEach(el => observer.observe(el));
+
+      // Cleanup function
+      return () => {
+        hiddenElements.forEach(el => observer.unobserve(el));
+        observer.disconnect();
+      };
     }
-
-    // Функція очищення
-    return () => {
-      if (ref) {
-        observer.unobserve(ref);
-      }
-      observer.disconnect();
-    };
   }, []);
 
   return (
     <div
-      ref={hiddenForm}
       className={`${styles.heroFormWrap} ${styles.scrollHeroFormHidden} ${isThankYouOpen ? styles.active : ''}`}
     >
       <div className={styles.heroTopWrap}>

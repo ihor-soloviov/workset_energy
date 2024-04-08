@@ -14,10 +14,6 @@ const RecycleTextWrap: React.FC<Props> = ({
   text,
   textClass,
 }) => {
-  const hiddenElements = document.querySelectorAll(
-    `${styles.scrollTitleHidden}`,
-  );
-
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const observer = new IntersectionObserver(entries => {
