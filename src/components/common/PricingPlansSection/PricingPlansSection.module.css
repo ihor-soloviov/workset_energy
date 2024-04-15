@@ -64,6 +64,7 @@
   .plansText {
     font-size: 1.8rem;
     max-width: 55rem;
+    margin: 0 auto;
   }
 
   .pricingPlansItems {
