@@ -13,7 +13,7 @@ const StepList = () => {
     return (index + 1) % 2 === 0 ? styles.white : '';
   };
   const handleBtnClick = () => {
-    const teamSection = document.getElementById('contact-us-section');
+    const teamSection = document.getElementById('contact');
     teamSection && teamSection.scrollIntoView({ behavior: 'smooth' });
   };
 

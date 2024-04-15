@@ -9,7 +9,7 @@ import RecycleTextWrap from '../RecycleTextWrap/RecycleTextWrap';
 
 const PricingPlansSection = () => {
   const handleBtnClick = () => {
-    const teamSection = document.getElementById('contact-us-section');
+    const teamSection = document.getElementById('contact');
     teamSection && teamSection.scrollIntoView({ behavior: 'smooth' });
   };
 

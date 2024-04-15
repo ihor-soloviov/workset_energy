@@ -22,7 +22,7 @@ const QuestionList = () => {
 
   const handleBtnClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
-    const teamSection = document.getElementById('contact-us-section');
+    const teamSection = document.getElementById('contact');
     teamSection && teamSection.scrollIntoView({ behavior: 'smooth' });
   };
 

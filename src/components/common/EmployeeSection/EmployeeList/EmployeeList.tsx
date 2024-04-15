@@ -9,7 +9,7 @@ import { employeeItems } from './employeeItems';
 
 const EmployeeList = () => {
   const handleBtnClick = () => {
-    const teamSection = document.getElementById('contact-us-section');
+    const teamSection = document.getElementById('contact');
     teamSection && teamSection.scrollIntoView({ behavior: 'smooth' });
   };
   return (

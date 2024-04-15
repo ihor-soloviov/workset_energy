@@ -15,7 +15,7 @@ export const navLinkItems: NavLinkItem[] = [
       { text: 'Unsere Mitarbeiter', href: '/pv-anlagen#mitarbeiter' },
       { text: 'Feedback', href: '/pv-anlagen#feedback' },
       { text: 'Unsere Team', href: '/pv-anlagen#team-section' },
-      { text: 'Kontakt', href: '/pv-anlagen#contact-us-section' },
+      { text: 'Kontakt', href: '/pv-anlagen#contact' },
     ],
   },
   {
@@ -27,7 +27,7 @@ export const navLinkItems: NavLinkItem[] = [
       { text: 'Unsere Mitarbeiter', href: '/stormspeicher#mitarbeiter' },
       { text: 'Feedback', href: '/stormspeicher#feedback' },
       { text: 'Unsere Team', href: '/stormspeicher#team-section' },
-      { text: 'Kontakt', href: '/stormspeicher#contact-us-section' },
+      { text: 'Kontakt', href: '/stormspeicher#contact' },
     ],
   },
   {
@@ -39,7 +39,7 @@ export const navLinkItems: NavLinkItem[] = [
       { text: 'Unsere Mitarbeiter', href: '/wallbox#mitarbeiter' },
       { text: 'Feedback', href: '/wallbox#feedback' },
       { text: 'Unsere Team', href: '/wallbox#team-section' },
-      { text: 'Kontakt', href: '/wallbox#contact-us-section' },
+      { text: 'Kontakt', href: '/wallbox#contact' },
     ],
   },
   {
@@ -48,7 +48,7 @@ export const navLinkItems: NavLinkItem[] = [
     links: [
       { text: 'Über uns', href: '/uber-uns' },
       { text: 'Karrier', href: '/karriere' },
-      { text: 'Contact', href: '/uber-uns#contact-us-section' },
+      { text: 'Contact', href: '/uber-uns#contact' },
     ],
   },
 ];
