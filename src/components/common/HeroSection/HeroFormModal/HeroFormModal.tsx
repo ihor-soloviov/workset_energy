@@ -6,7 +6,7 @@ import Button from '../../Button/Button';
 import { inter } from '@/utils/fonts';
 import HeroForm from './HeroForm/HeroForm';
 import { useThankYouStore } from '@/store/hero-store';
-import { useEffect, useRef } from 'react';
+import useObserver from '@/hooks/useObserver';
 
 type HeroFormModalProps = {
   handleModalClick: () => void;
@@ -25,32 +25,10 @@ const HeroFormModal = ({ handleModalClick, isDesktop }: HeroFormModalProps) => {
     !isDesktop && handleModalClick();
     isThankYouOpen && setStylesChangedToFalse();
   };
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add(styles.scrollHeroFormVisible);
-          } else {
-            entry.target.classList.remove(styles.scrollHeroFormVisible);
-          }
-        });
-      });
-
-      const hiddenElements = document.querySelectorAll(
-        `.${styles.scrollHeroFormHidden}`,
-      );
-
-      hiddenElements.forEach(el => observer.observe(el));
-
-      // Cleanup function
-      return () => {
-        hiddenElements.forEach(el => observer.unobserve(el));
-        observer.disconnect();
-      };
-    }
-  }, []);
+  useObserver(
+    `.${styles.scrollHeroFormHidden}`,
+    `${styles.scrollHeroFormVisible}`,
+  );
 
   return (
     <div

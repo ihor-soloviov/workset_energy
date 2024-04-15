@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react';
 import styles from './RecycleTextWrap.module.css';
+import useObserver from '@/hooks/useObserver';
 
 type Props = {
   title: string;
@@ -16,37 +17,16 @@ const RecycleTextWrap: React.FC<Props> = ({
   text,
   textClass,
 }) => {
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add(styles.scrollTitleVisible);
-          } else {
-            entry.target.classList.remove(styles.scrollTitleVisible);
-          }
-        });
-      });
-
-      const hiddenElements = document.querySelectorAll(
-        `.${styles.scrollTitleHidden}`,
-      );
-
-      hiddenElements.forEach(el => observer.observe(el));
-
-      // Cleanup function
-      return () => {
-        hiddenElements.forEach(el => observer.unobserve(el));
-        observer.disconnect();
-      };
-    }
-  }, []);
+  useObserver(
+    `.${styles.scrollArticleHidden}`,
+    `${styles.scrollArticleVisible}`,
+  );
 
   return (
-    <>
-      <h2 className={`${titleClass} ${styles.scrollTitleHidden}`}>{title}</h2>
+    <article className={`${styles.scrollArticleHidden}`}>
+      <h2 className={titleClass}>{title}</h2>
       {text && <p className={textClass}>{text}</p>}
-    </>
+    </article>
   );
 };
 

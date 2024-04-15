@@ -4,11 +4,13 @@ import Image from 'next/image';
 import { offerItems, OfferItem } from './offerItems';
 import LinkArrowIcon from '/public/icons/small-product-arrow.svg';
 import Link from 'next/link';
+import useObserver from '@/hooks/useObserver';
 
 type OfferListProps = {
   showItems: boolean;
 };
 const OfferList = ({ showItems }: OfferListProps) => {
+  useObserver(`.${styles.offerItem}`, `${styles.offerItemVisible}`);
   const currentItems = (offerItems: OfferItem[]) =>
     showItems ? offerItems : offerItems.slice(0, 3);
 

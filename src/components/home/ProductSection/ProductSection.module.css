@@ -6,6 +6,7 @@
   padding: 0 24px;
   margin: 0 auto;
 }
+
 .productMainTitle {
   color: var(--black-main);
   font-size: 24px;
@@ -15,6 +16,7 @@
   margin: 0 auto;
   margin-bottom: 12px;
 }
+
 .productMainText {
   color: var(--gray-text);
   width: fit-content;

@@ -9,12 +9,14 @@ import { Navigation, Autoplay } from 'swiper/modules';
 import { Swiper as SwiperType } from 'swiper';
 import { heroItems } from '../heroItems';
 import Button from '@/components/common/Button/Button';
+import useObserver from '@/hooks/useObserver';
 
 type Props = {
   swiperRef: MutableRefObject<SwiperType | undefined>;
 };
 
 const KarriereHeroSlider = ({ swiperRef }: Props) => {
+  useObserver(`.${styles.heroTextWrap}`, `${styles.heroTextWrapVisible}`);
   return (
     <Swiper
       className={styles.sliderWrap}

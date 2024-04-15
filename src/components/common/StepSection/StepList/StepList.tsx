@@ -5,8 +5,10 @@ import { inter } from '@/utils/fonts';
 import Image from 'next/image';
 import BtnArrowIcon from '/public/icons/small-arrow-btn.svg';
 import { stepItems } from './stepItems';
+import useObserver from '@/hooks/useObserver';
 
 const StepList = () => {
+  useObserver(`.${styles.stepItem}`, `${styles.stepItemVisible}`);
   const getClass = (index: number) => {
     return (index + 1) % 2 === 0 ? styles.white : '';
   };

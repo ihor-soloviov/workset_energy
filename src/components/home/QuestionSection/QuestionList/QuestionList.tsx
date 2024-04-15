@@ -6,11 +6,18 @@ import DropArrowIcon from '/public/icons/drop-arrow.svg';
 import { useState } from 'react';
 import { inter } from '@/utils/fonts';
 import { QuestItem, questItems } from './questionItems';
+
 const QuestionList = () => {
-  const [activeItem, setActiveItem] = useState<string | null>(null);
+  const [activeItems, setActiveItems] = useState<Array<string>>([]);
 
   const toggleActiveItem = (title: string) => {
-    setActiveItem(prevActiveItem => (prevActiveItem === title ? null : title));
+    let result = [];
+    if (activeItems?.includes(title)) {
+      result = activeItems.filter(el => el !== title);
+    } else {
+      result = [...activeItems, title];
+    }
+    setActiveItems(result);
   };
 
   const handleBtnClick = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -24,7 +31,7 @@ const QuestionList = () => {
       <li
         onClick={() => toggleActiveItem(title)}
         key={title}
-        className={`${styles.questItem} ${activeItem === title ? styles.open : ''}`}
+        className={`${styles.questItem} ${activeItems.includes(title) ? styles.open : ''}`}
       >
         <div className={styles.questTitleWrap}>
           <h3 className={`${styles.questTitle} ${inter.className}`}>{title}</h3>
@@ -37,12 +44,12 @@ const QuestionList = () => {
             className={styles.questToggleBtn}
           >
             <DropArrowIcon
-              className={`${styles.toggleIcon} ${activeItem === title ? styles.visible : ''}`}
+              className={`${styles.toggleIcon} ${activeItems.includes(title) ? styles.visible : ''}`}
             />
           </Button>
         </div>
         <div
-          className={`${styles.questTextWrap} ${activeItem === title ? styles.visible : styles.hidden}`}
+          className={`${styles.questTextWrap} ${activeItems.includes(title) ? styles.visible : styles.hidden}`}
         >
           <p className={`${styles.questText} ${inter.className}`}>{text}</p>
           <Button
