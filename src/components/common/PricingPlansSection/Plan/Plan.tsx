@@ -5,6 +5,7 @@ import CheckMarker from '/public/icons/check-circle.svg';
 import { PlanT } from '@/types/infoTypes';
 import styles from './Plan.module.css';
 import { inter } from '@/utils/fonts';
+
 import Button from '../../Button/Button';
 
 type Props = {

@@ -1,6 +1,8 @@
 'use client';
+
 import React, { useEffect } from 'react';
 import styles from './RecycleTextWrap.module.css';
+
 type Props = {
   title: string;
   titleClass: string;

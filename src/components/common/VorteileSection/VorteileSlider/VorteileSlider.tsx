@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { inter } from '@/utils/fonts';
 import styles from './VorteileSlider.module.css';
 

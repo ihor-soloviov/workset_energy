@@ -14,7 +14,7 @@ import ArrowIcon from '/public/icons/small-arrow-btn.svg';
 import { useThankYouStore } from '@/store/hero-store';
 import { usePathname } from 'next/navigation';
 import { useGlobalStore } from '@/store/global-store';
-import { AnimatePresence } from 'framer-motion';
+import { pathnames, jobPathRegex } from '@/utils/pathnames';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -53,45 +53,48 @@ const Header = () => {
   }, [pathname, currentPathname]);
 
   return (
-    <header
-      className={`${styles.header} ${isThankYouOpen ? styles.blackStyle : ''}`}
-    >
-      <div className={styles.headerContainer}>
-        <nav className={styles.headerNav}>
-          <Link
-            onClick={handleLogoClick}
-            className={styles.headerLogoLink}
-            href="/"
-          >
-            {isThankYouOpen ? (
-              <WorksetColorIcon className={styles.headerLogo} />
-            ) : (
-              <WorksetIcon className={styles.headerLogo} />
-            )}
-          </Link>
-          <Button
-            handleClick={handleMenuClick}
-            className={styles.headerBurgerBtn}
-            type="button"
-          >
-            <BurgerIcon
-              className={`${styles.headerBurgerIcon} ${isThankYouOpen ? styles.blackStyle : ''}`}
-            />
-          </Button>
-          <HeaderNavList />
-        </nav>
-        <Link
-          href="/leadgen"
-          className={`${styles.headerLeadLink} ${pathname === '/karriere/jobs' ? styles.jobs : ''}`}
+    <>
+      {(pathnames.includes(pathname) || jobPathRegex.test(pathname)) && (
+        <header
+          className={`${styles.header} ${isThankYouOpen ? styles.blackStyle : ''}`}
         >
-          Jetzt Berechnen
-          <ArrowIcon className={styles.headerIcon} />
-        </Link>
-      </div>
-      <AnimatePresence>
-        {isMenuOpen && <MobileMenu handleMenuClick={handleMenuClick} />}
-      </AnimatePresence>
-    </header>
+          <div className={styles.headerContainer}>
+            <nav className={styles.headerNav}>
+              <Link
+                onClick={handleLogoClick}
+                className={styles.headerLogoLink}
+                href="/"
+              >
+                {isThankYouOpen ? (
+                  <WorksetColorIcon className={styles.headerLogo} />
+                ) : (
+                  <WorksetIcon className={styles.headerLogo} />
+                )}
+              </Link>
+              <Button
+                handleClick={handleMenuClick}
+                className={styles.headerBurgerBtn}
+                type="button"
+              >
+                <BurgerIcon
+                  className={`${styles.headerBurgerIcon} ${isThankYouOpen ? styles.blackStyle : ''}`}
+                />
+              </Button>
+              <HeaderNavList />
+            </nav>
+            <Link
+              href="/leadgen"
+              className={`${styles.headerLeadLink} ${pathname === '/karriere/jobs' ? styles.jobs : ''}`}
+            >
+              Jetzt Berechnen
+              <ArrowIcon className={styles.headerIcon} />
+            </Link>
+          </div>
+
+          {isMenuOpen && <MobileMenu handleMenuClick={handleMenuClick} />}
+        </header>
+      )}
+    </>
   );
 };
 
