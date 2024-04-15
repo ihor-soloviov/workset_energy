@@ -2,41 +2,46 @@
 
 import styles from './HeroFormModal.module.css';
 import CrossIcon from '/public/icons/cross.svg';
-import Button from '../../Button/Button';
-import { inter } from '@/utils/fonts';
+import useObserver from '@/hooks/useObserver';
+import Button from '@/components/common/Button/Button';
 import HeroForm from './HeroForm/HeroForm';
 import { useThankYouStore } from '@/store/hero-store';
-import useObserver from '@/hooks/useObserver';
+import { handleHeader } from '@/utils/handleHeader';
+import { stopScroll } from '@/utils/stopScroll';
 
-type HeroFormModalProps = {
-  handleModalClick: () => void;
-  isDesktop: boolean;
-};
+const HeroFormModal = () => {
+  const { isThankYouOpen, setIsThankYouOpen, removeStyles, handleModal } =
+    useThankYouStore();
 
-const HeroFormModal = ({ handleModalClick, isDesktop }: HeroFormModalProps) => {
-  const { isThankYouOpen, setStylesChangedToFalse } = useThankYouStore();
-
-  const handleBtnCloseClick = () => {
-    handleModalClick();
-    isThankYouOpen && setStylesChangedToFalse();
+  const handleModalClose = () => {
+    handleHeader('block');
+    handleModal();
+    isThankYouOpen && removeStyles();
   };
 
-  const handleBtnClick = () => {
-    !isDesktop && handleModalClick();
-    isThankYouOpen && setStylesChangedToFalse();
+  const sendModalForm = () => {
+    stopScroll(true);
+    handleHeader('block');
+    const form = document.querySelector(`.${styles.scrollHeroFormHidden}`);
+    if (form) {
+      form.classList.remove(`${styles.scrollHeroFormVisible}`);
+    }
+    setTimeout(() => {
+      handleModal();
+      setIsThankYouOpen();
+    }, 1000);
   };
+
   useObserver(
     `.${styles.scrollHeroFormHidden}`,
     `${styles.scrollHeroFormVisible}`,
   );
 
   return (
-    <div
-      className={`${styles.heroFormWrap} ${styles.scrollHeroFormHidden} ${isThankYouOpen ? styles.active : ''}`}
-    >
+    <div className={`${styles.heroFormWrap} ${styles.scrollHeroFormHidden}`}>
       <div className={styles.heroTopWrap}>
         <Button
-          handleClick={handleBtnCloseClick}
+          handleClick={handleModalClose}
           type="button"
           className={styles.heroCloseBtn}
         >
@@ -44,36 +49,13 @@ const HeroFormModal = ({ handleModalClick, isDesktop }: HeroFormModalProps) => {
         </Button>
       </div>
       <div className={styles.heroLine}></div>
-      <div
-        className={`${styles.heroFormContainer} ${isThankYouOpen ? styles.active : ''}`}
-      >
-        {!isThankYouOpen ? (
-          <>
-            <h2 className={styles.heroTitle}>Kontaktiere uns</h2>
-            <p className={styles.heroText}>
-              Bitte fülle das untenstehende Formular aus und wir werden uns in
-              Kürze mit dir in Verbindung setzen
-            </p>
-            <HeroForm />
-          </>
-        ) : (
-          <>
-            <h2 className={styles.heroThankTitle}>
-              WorkSET Energy sagt Danke!
-            </h2>
-            <p className={`${styles.heroThankText} ${inter.className}`}>
-              Wir haben deine Anfrage erhalten und freuen uns, dich auf deinem
-              Weg zu nachhaltiger Energie unterstützen zu dürfen
-            </p>
-            <Button
-              handleClick={handleBtnClick}
-              className={styles.heroThankBtn}
-              type="button"
-            >
-              Hauptseite
-            </Button>
-          </>
-        )}
+      <div className={`${styles.heroFormContainer}`}>
+        <h2 className={styles.heroTitle}>Kontaktiere uns</h2>
+        <p className={styles.heroText}>
+          Bitte fülle das untenstehende Formular aus und wir werden uns in Kürze
+          mit dir in Verbindung setzen
+        </p>
+        <HeroForm hideModal={sendModalForm} />
       </div>
     </div>
   );

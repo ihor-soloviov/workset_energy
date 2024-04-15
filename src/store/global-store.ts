@@ -8,5 +8,5 @@ type State = {
 export const useGlobalStore = create<State>(set => ({
   isDesktop: false,
 
-  setIsDesktop: value => set(state => ({ isDesktop: value })),
+  setIsDesktop: value => set(_state => ({ isDesktop: value })),
 }));

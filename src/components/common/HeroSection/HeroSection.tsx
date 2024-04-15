@@ -10,6 +10,9 @@ import HeroFormModal from './HeroFormModal/HeroFormModal';
 import { useEffect, useState } from 'react';
 import { useGlobalStore } from '@/store/global-store';
 import useObserver from '@/hooks/useObserver';
+import { useThankYouStore } from '@/store/hero-store';
+import HeroFormTY from './HeroFormModal/HeroForm/HeroFormTY/HeroFormTY';
+import { handleHeader } from '@/utils/handleHeader';
 
 type HeroProps = {
   imgMob: string;
@@ -30,31 +33,39 @@ const HeroSection = ({
   text,
   className,
 }: HeroProps) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const { isDesktop } = useGlobalStore();
+  const { handleModal, setIsModalOpen, isModalOpen, isThankYouOpen } =
+    useThankYouStore();
 
   useObserver(`.${styles.heroAnim}`, `${styles.heroAnimVisible}`);
 
-  const handleModalClick = () => setIsModalOpen(!isModalOpen);
-  const handleBtnClick = () => {
-    if (isDesktop) {
-      const teamSection = document.getElementById('team-section');
-      teamSection && teamSection.scrollIntoView({ behavior: 'smooth' });
-    }
-
+  const scrollToTeamSection = () => {
     if (!isDesktop) {
-      handleModalClick();
+      handleHeader('none');
+      handleModal();
+      return;
     }
+    const teamSection = document.getElementById('team-section');
+    teamSection && teamSection.scrollIntoView({ behavior: 'smooth' });
   };
 
   useEffect(() => {
+    if (isDesktop) {
+      setIsModalOpen(true);
+    }
+  }, [handleModal, isDesktop, setIsModalOpen]);
+
+  useEffect(() => {
+    if (isDesktop) {
+      return;
+    }
     if (isModalOpen) {
       document.body.style.overflow = 'hidden';
       return () => {
         document.body.style.overflow = 'unset';
       };
     }
-  }, [isModalOpen]);
+  }, [isDesktop, isModalOpen]);
 
   return (
     <>
@@ -94,7 +105,7 @@ const HeroSection = ({
                 <ArrowIcon className={styles.heroIcon} />
               </Link>
               <Button
-                handleClick={handleBtnClick}
+                handleClick={scrollToTeamSection}
                 type="button"
                 className={styles.heroBtn}
               >
@@ -102,20 +113,10 @@ const HeroSection = ({
               </Button>
             </div>
           </div>
-          {isDesktop && (
-            <HeroFormModal
-              isDesktop={isDesktop}
-              handleModalClick={handleModalClick}
-            />
-          )}
+          {isModalOpen && <HeroFormModal />}
         </div>
+        {isThankYouOpen && <HeroFormTY />}
       </section>
-      {isModalOpen && (
-        <HeroFormModal
-          isDesktop={isDesktop}
-          handleModalClick={handleModalClick}
-        />
-      )}
     </>
   );
 };

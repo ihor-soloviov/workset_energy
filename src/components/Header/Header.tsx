@@ -37,25 +37,26 @@ const Header = () => {
     };
   }, [setIsDesktop]);
 
-  const { isThankYouOpen, setStylesChangedToFalse, setStylesChangedToTrue } =
+  const { isThankYouOpen, isModalOpen, removeStyles, addStyles } =
     useThankYouStore();
 
   const handleMenuClick = () => setIsMenuOpen(!isMenuOpen);
 
   const handleLogoClick = () => {
-    isThankYouOpen && setStylesChangedToFalse();
+    isThankYouOpen && removeStyles();
   };
 
   useEffect(() => {
     setCurrentPathname(pathname);
-    pathname === '/karriere' && setStylesChangedToTrue();
-    pathname !== currentPathname && setStylesChangedToFalse();
+    pathname === '/karriere' && addStyles();
+    pathname !== currentPathname && removeStyles();
   }, [pathname, currentPathname]);
 
   return (
     <>
       {(pathnames.includes(pathname) || jobPathRegex.test(pathname)) && (
         <header
+          id="header"
           className={`${styles.header} ${isThankYouOpen ? styles.blackStyle : ''}`}
         >
           <div className={styles.headerContainer}>

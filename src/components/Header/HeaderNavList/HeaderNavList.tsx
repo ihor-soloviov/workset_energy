@@ -9,10 +9,10 @@ import { navLinkItems } from './navLinkItems';
 const HeaderNavList = () => {
   const pathname = usePathname();
 
-  const { isThankYouOpen, setStylesChangedToFalse } = useThankYouStore();
+  const { isThankYouOpen, removeStyles } = useThankYouStore();
 
   const handleLinkClick = () => {
-    isThankYouOpen && setStylesChangedToFalse();
+    isThankYouOpen && removeStyles();
   };
 
   return (

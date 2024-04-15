@@ -2,6 +2,7 @@
   width: 100%;
   height: 634px;
   position: relative;
+  z-index: 1;
   overflow: hidden;
   padding: 239px 0 125px;
 }
@@ -158,10 +159,10 @@
   }
 
   .heroContainer {
-    width: 172.8rem;
-    padding: 0 11.7rem 0 12rem;
     display: flex;
     justify-content: space-between;
+    width: 172.8rem;
+    padding: 0 11.7rem 0 12rem;
   }
 
   .heroMainTitle {
