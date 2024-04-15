@@ -1,0 +1,14 @@
+.impressumSection {
+  padding: 64px 0px;
+}
+
+@media screen and (min-width: 1440px) {
+  .impressumSection {
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .impressumSection {
+    padding: 100px 0px;
+  }
+}

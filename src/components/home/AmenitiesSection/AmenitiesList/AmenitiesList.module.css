@@ -66,7 +66,7 @@
   transition: color 250ms var(--cubic);
 }
 
-.amenitiesBtn {
+.amenitiesLink {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,16 +83,16 @@
 
 .amenitiesItem:hover .amenitiesTitle,
 .amenitiesItem:hover .amenitiesText,
-.amenitiesItem:hover .amenitiesBtn {
+.amenitiesItem:hover .amenitiesLink {
   color: var(--white-main);
 }
 
-.amenitiesBtnIcon {
+.amenitiesLinkIcon {
   stroke: var(--red-main);
   transition: stroke 250ms var(--cubic);
 }
 
-.amenitiesItem:hover .amenitiesBtnIcon {
+.amenitiesItem:hover .amenitiesLinkIcon {
   stroke: var(--white-main);
 }
 

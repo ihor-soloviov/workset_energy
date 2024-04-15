@@ -1,9 +1,11 @@
+'use client';
+
 import React from 'react';
-import Button from '@/components/common/Button/Button';
 import styles from './AmenitiesList.module.css';
 import { inter } from '@/utils/fonts';
 import { amenitiesItems } from './amenitiesItems';
 import BtnArrowIcon from '/public/icons/small-product-arrow.svg';
+import Link from 'next/link';
 
 const AmenitiesList = () => {
   return (
@@ -21,10 +23,10 @@ const AmenitiesList = () => {
           </div>
           <h3 className={styles.amenitiesTitle}>{title}</h3>
           <p className={`${styles.amenitiesText} ${inter.className}`}>{text}</p>
-          <Button className={styles.amenitiesBtn} type="button">
+          <Link href="/uber-uns" className={styles.amenitiesLink} type="button">
             Mehr Info
-            <BtnArrowIcon className={styles.amenitiesBtnIcon} />
-          </Button>
+            <BtnArrowIcon className={styles.amenitiesLinkIcon} />
+          </Link>
         </li>
       ))}
     </ul>

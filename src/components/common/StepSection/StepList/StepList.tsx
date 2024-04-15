@@ -10,6 +10,10 @@ const StepList = () => {
   const getClass = (index: number) => {
     return (index + 1) % 2 === 0 ? styles.white : '';
   };
+  const handleBtnClick = () => {
+    const teamSection = document.getElementById('contact-us-section');
+    teamSection && teamSection.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <ul className={styles.stepList}>
@@ -38,6 +42,7 @@ const StepList = () => {
             </h3>
             <p className={`${styles.stepText} ${getClass(index)}`}>{text}</p>
             <Button
+              handleClick={handleBtnClick}
               className={`${styles.stepBtn} ${getClass(index)}`}
               type="button"
             >

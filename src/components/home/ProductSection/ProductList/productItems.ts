@@ -1,10 +1,10 @@
 import { StaticImageData } from 'next/image';
-import pvAnlagenImgMob from '/public/images/home-page/pv-anlagen-mob.jpg';
-import stromspeicherImgMob from '/public/images/home-page/stromspeicher-mob.jpg';
-import walaboxImgMob from '/public/images/home-page/wallbox-mob.jpg';
-import pvAnlagenImgDesc from '/public/images/home-page/pv-anlagen-desc.jpg';
-import stromspeicherImgDesc from '/public/images/home-page/stromspeicher-desc.jpg';
-import walaboxImgDesc from '/public/images/home-page/wallbox-desc.jpg';
+import product1Mob from '/public/images/home-page/product-1-mob.jpg';
+import product2Mob from '/public/images/home-page/product-2-mob.jpg';
+import product3Mob from '/public/images/home-page/product-3-mob.jpg';
+import product1Desk from '/public/images/home-page/product-1-desk.jpg';
+import product2Desk from '/public/images/home-page/product-2-desk.jpg';
+import product3Desk from '/public/images/home-page/product-3-desk.jpg';
 
 type ProductItem = {
   title: string;
@@ -16,22 +16,22 @@ type ProductItem = {
 
 export const productsItems: ProductItem[] = [
   {
-    imgMob: pvAnlagenImgMob,
-    imgDesc: pvAnlagenImgDesc,
+    imgMob: product1Mob,
+    imgDesc: product1Desk,
     href: '/pv-anlagen',
     text: 'Sie wandelt Sonnenlicht in Strom um und ist daher eine nachhaltige und umweltfreundliche Energiequelle.',
     title: 'PV-Anlagen',
   },
   {
-    imgMob: stromspeicherImgMob,
-    imgDesc: stromspeicherImgDesc,
+    imgMob: product2Mob,
+    imgDesc: product2Desk,
     href: '/stormspeicher',
     text: 'Eine zuverlässige Resrve, die überschüssigen Strom für den künftigen Verbrauch speichert.',
     title: 'Stormspeicher',
   },
   {
-    imgMob: walaboxImgMob,
-    imgDesc: walaboxImgDesc,
+    imgMob: product3Mob,
+    imgDesc: product3Desk,
     href: '/wallbox',
     text: 'Ein hochmodernes Ladesystem für Elektrofahrzeuge, das bequeme und effiziente Betankungsmöglichkeiten bietet.',
     title: 'Wallbox',

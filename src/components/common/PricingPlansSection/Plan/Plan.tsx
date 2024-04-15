@@ -1,4 +1,3 @@
-'use client';
 import React from 'react';
 import Image from 'next/image';
 import CheckMarker from '/public/icons/check-circle.svg';
@@ -11,11 +10,13 @@ import Button from '../../Button/Button';
 type Props = {
   plan: PlanT;
   index: number;
+  handleBtnClick: () => void;
 };
 
 const Plan: React.FC<Props> = ({
   plan: { name, imageMob, imageDesk, price, article, benefits },
   index,
+  handleBtnClick,
 }) => (
   <li className={styles.pricingPlansItem}>
     <Image
@@ -44,8 +45,12 @@ const Plan: React.FC<Props> = ({
           </li>
         ))}
       </ul>
-      <Button type="button" className={styles.planBtn}>
-        Mehr Info
+      <Button
+        handleClick={handleBtnClick}
+        type="button"
+        className={styles.planBtn}
+      >
+        Zum Angebot
       </Button>
     </div>
   </li>

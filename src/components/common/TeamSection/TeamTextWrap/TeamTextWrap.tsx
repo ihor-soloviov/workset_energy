@@ -5,7 +5,11 @@ import { inter } from '@/utils/fonts';
 import Button from '../../Button/Button';
 import ArrowIcon from '/public/icons/small-arrow-btn.svg';
 
-const TextWrap = () => {
+const TeamTextWrap = () => {
+  const handleBtnClick = () => {
+    const teamSection = document.getElementById('contact-us-section');
+    teamSection && teamSection.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
     <div className={styles.teamTextWrap}>
       <h2 className={styles.teamTitle}>
@@ -17,7 +21,11 @@ const TextWrap = () => {
         kontaktieren dich
       </p>
       <div>
-        <Button className={styles.teamBtn} type="button">
+        <Button
+          handleClick={handleBtnClick}
+          className={styles.teamBtn}
+          type="button"
+        >
           Zum Angebot
           <ArrowIcon className={styles.teamIcon} />
         </Button>
@@ -26,4 +34,4 @@ const TextWrap = () => {
   );
 };
 
-export default TextWrap;
+export default TeamTextWrap;

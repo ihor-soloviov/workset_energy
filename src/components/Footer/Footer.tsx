@@ -10,6 +10,7 @@ import FooterMainList from './FooterMainList/FooterMainList';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { pathnames, jobPathRegex } from '@/utils/pathnames';
+
 const Footer = () => {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
@@ -27,7 +28,7 @@ const Footer = () => {
                 <Link href="" className={styles.cookieLink}>
                   Cookie-Einstellungen
                 </Link>
-                <Link href="" className={styles.impressumLink}>
+                <Link href="/impressum" className={styles.impressumLink}>
                   Impressum
                 </Link>
               </div>

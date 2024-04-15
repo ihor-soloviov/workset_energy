@@ -13,6 +13,12 @@ const QuestionList = () => {
     setActiveItem(prevActiveItem => (prevActiveItem === title ? null : title));
   };
 
+  const handleBtnClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
+    const teamSection = document.getElementById('contact-us-section');
+    teamSection && teamSection.scrollIntoView({ behavior: 'smooth' });
+  };
+
   const renderListItems = (items: QuestItem[]) =>
     items.map(({ text, title }) => (
       <li
@@ -40,7 +46,7 @@ const QuestionList = () => {
         >
           <p className={`${styles.questText} ${inter.className}`}>{text}</p>
           <Button
-            handleClick={e => e.stopPropagation()}
+            handleClick={handleBtnClick}
             type="button"
             className={styles.questConsultBtn}
           >

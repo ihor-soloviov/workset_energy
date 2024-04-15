@@ -7,6 +7,7 @@ const pathnames = [
   '/karriere/jobs',
   '/uber-uns',
   '/wallbox',
+  '/impressum',
 ];
 const jobPathRegex = /^\/karriere\/jobs\/\d+$/;
 

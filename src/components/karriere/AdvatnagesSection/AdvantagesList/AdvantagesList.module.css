@@ -74,7 +74,7 @@
   letter-spacing: unset;
 }
 
-.advantagesBtn {
+.advantagesLink {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,18 +99,18 @@
   color: var(--white-main);
 }
 
-.advantagesItem:hover .advantagesBtn {
+.advantagesItem:hover .advantagesLink {
   color: var(--red-main);
   background-color: var(--white-main);
   border: 1px solid var(--white-main);
 }
 
-.advantagesBtnIcon {
+.advantagesLinkIcon {
   stroke: var(--gray-dark-text);
   transition: stroke 250ms var(--cubic);
 }
 
-.advantagesItem:hover .advantagesBtnIcon {
+.advantagesItem:hover .advantagesLinkIcon {
   stroke: var(--red-main);
 }
 
@@ -151,7 +151,7 @@
     width: 31rem;
   }
 
-  .advantagesBtn {
+  .advantagesLink {
     width: 13.8rem;
     height: 4.5rem;
   }
@@ -188,7 +188,7 @@
     width: 310px;
   }
 
-  .advantagesBtn {
+  .advantagesLink {
     width: 138px;
     height: 45px;
   }

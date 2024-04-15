@@ -1,3 +1,5 @@
+'use client';
+
 import styles from './EmployeeList.module.css';
 import Image from 'next/image';
 import { inter } from '@/utils/fonts';
@@ -6,6 +8,10 @@ import Button from '../../Button/Button';
 import { employeeItems } from './employeeItems';
 
 const EmployeeList = () => {
+  const handleBtnClick = () => {
+    const teamSection = document.getElementById('contact-us-section');
+    teamSection && teamSection.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
     <ul className={styles.employeeList}>
       {employeeItems.map(({ text, title, imgMob, imgDesc, btn }) => (
@@ -28,7 +34,11 @@ const EmployeeList = () => {
               {text}
             </p>
             {btn && (
-              <Button className={styles.employeeItemBtn} type="button">
+              <Button
+                handleClick={handleBtnClick}
+                className={styles.employeeItemBtn}
+                type="button"
+              >
                 Zum Angebot
                 <ArrowIcon className={styles.employeeIcon} />
               </Button>

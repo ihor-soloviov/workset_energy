@@ -3,7 +3,7 @@ import { inter } from '@/utils/fonts';
 import AngebotForm from './AngebotForm/AngebotForm';
 import RecycleTextWrap from '@/components/common/RecycleTextWrap/RecycleTextWrap';
 import angebotImgMob from '/public/images/home-page/angebot-mob.jpg';
-import angebotImgDesk from '/public/images/home-page/angebot-desc.jpg';
+import angebotImgDesk from '/public/images/home-page/angebot-desk.jpg';
 import Image from 'next/image';
 
 const AngebotSection = () => {
