@@ -59,7 +59,7 @@
     height: 62rem;
     background-position: center;
     cursor: pointer;
-    transition: all 300ms var(--cubic);
+    transition: all 600ms var(--cubic);
   }
 
   .first {
@@ -74,12 +74,6 @@
     background-image: url('/images/common/team-3-desk.jpg');
   }
 
-  .first:hover,
-  .second:hover,
-  .third:hover {
-    width: 49.5rem;
-  }
-
   .active {
     width: 49.5rem;
     background-position: unset;
@@ -89,16 +83,10 @@
     bottom: 4.5rem;
     left: 2.9rem;
     opacity: 0;
-    transition: opacity 300ms var(--cubic);
+    transition: opacity 600ms var(--cubic);
   }
 
   .active .teamTextWrap {
-    opacity: 1;
-  }
-
-  .first:hover .teamTextWrap,
-  .second:hover .teamTextWrap,
-  .third:hover .teamTextWrap {
     opacity: 1;
   }
 
@@ -125,12 +113,7 @@
 
   .active {
     width: 495px;
-  }
-
-  .first:hover,
-  .second:hover,
-  .third:hover {
-    width: 100%;
+    background-position: unset;
   }
 
   .teamTextWrap {

@@ -13,7 +13,13 @@ const TeamSlider = () => {
   const [activeItem, setActiveItem] = useState(1);
   const { isDesktop } = useGlobalStore();
 
-  const handleItemClick = (num: number) => setActiveItem(num);
+  const handleMouseEnter = (index: number) => {
+    setActiveItem(index + 1);
+  };
+
+  const handleMouseLeave = (index: number) => {
+    activeItem !== index + 1 && setActiveItem(1);
+  };
 
   return (
     <div className={styles.teamImgMainWrap}>
@@ -43,8 +49,9 @@ const TeamSlider = () => {
         <>
           {teamItems.map(({ text, title, className }, index) => (
             <div
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={() => handleMouseLeave(index)}
               key={index}
-              onClick={() => handleItemClick(index + 1)}
               className={cn(styles.teamImgWrap, styles[className], {
                 [styles.active]: activeItem === index + 1,
               })}
