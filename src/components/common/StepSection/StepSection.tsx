@@ -10,7 +10,6 @@ const StepSection = () => {
           5 Schritte zu deiner
           <br className={styles.stepBr} /> PV-Anlage
         </h2>
-
         <StepList />
       </Container>
     </section>

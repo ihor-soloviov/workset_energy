@@ -9,6 +9,7 @@ import ArrowIcon from '/public/icons/small-arrow-btn.svg';
 import HeroFormModal from './HeroFormModal/HeroFormModal';
 import { useEffect, useState } from 'react';
 import { useGlobalStore } from '@/store/global-store';
+import useObserver from '@/hooks/useObserver';
 
 type HeroProps = {
   imgMob: string;
@@ -32,6 +33,8 @@ const HeroSection = ({
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { isDesktop } = useGlobalStore();
 
+  useObserver(`.${styles.heroAnim}`, `${styles.heroAnimVisible}`);
+
   const handleModalClick = () => setIsModalOpen(!isModalOpen);
   const handleBtnClick = () => {
     if (isDesktop) {
@@ -52,29 +55,6 @@ const HeroSection = ({
       };
     }
   }, [isModalOpen]);
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add(styles.heroAnimVisible);
-          } else {
-            entry.target.classList.remove(styles.heroAnimVisible);
-          }
-        });
-      });
-
-      const hiddenElements = document.querySelectorAll(`.${styles.heroAnim}`);
-
-      hiddenElements.forEach(el => observer.observe(el));
-
-      return () => {
-        hiddenElements.forEach(el => observer.unobserve(el));
-        observer.disconnect();
-      };
-    }
-  }, []);
 
   return (
     <>

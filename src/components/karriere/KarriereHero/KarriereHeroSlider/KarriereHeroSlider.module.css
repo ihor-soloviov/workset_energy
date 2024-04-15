@@ -103,6 +103,14 @@
     top: 26.7rem;
     left: 33.7rem;
     width: 68.2rem;
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 0.4s;
+  }
+
+  .heroTextWrapVisible {
+    opacity: 1;
+    filter: blur(0);
   }
 
   .heroTitle {
@@ -138,7 +146,6 @@
 }
 
 @media screen and (min-width: 1728px) {
-
   .sliderWrap {
     border-radius: 32px;
   }

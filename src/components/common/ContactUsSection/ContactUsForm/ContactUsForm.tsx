@@ -6,8 +6,10 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import styles from './ContactUsForm.module.css';
 import Button from '../../Button/Button';
+import useObserver from '@/hooks/useObserver';
 
 const ContactUsForm = () => {
+  useObserver(`.${styles.contactUsForm}`, `${styles.contactUsFormVisible}`);
   const { handleSubmit, errors, touched, getFieldProps, isValid, dirty } =
     useFormik({
       initialValues: {

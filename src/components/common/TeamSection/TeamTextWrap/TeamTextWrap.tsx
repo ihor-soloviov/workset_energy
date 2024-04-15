@@ -4,12 +4,16 @@ import styles from '../TeamSection.module.css';
 import { inter } from '@/utils/fonts';
 import Button from '../../Button/Button';
 import ArrowIcon from '/public/icons/small-arrow-btn.svg';
+import useObserver from '@/hooks/useObserver';
 
 const TeamTextWrap = () => {
   const handleBtnClick = () => {
     const teamSection = document.getElementById('contact-us-section');
     teamSection && teamSection.scrollIntoView({ behavior: 'smooth' });
   };
+
+  useObserver(`.${styles.teamTextWrap}`, `${styles.teamTextWrapVisible}`);
+
   return (
     <div className={styles.teamTextWrap}>
       <h2 className={styles.teamTitle}>
