@@ -1,19 +1,20 @@
 const roleOptions = [
-  { value: 'role-1', label: 'role-1' },
-  { value: 'role-2', label: 'role-2' },
-  { value: 'role-3', label: 'role-3' },
-  { value: 'role-4', label: 'role-4' },
-  { value: 'role-5', label: 'role-5' },
+  { value: '', label: 'All roles' },
+  { value: 'Trainee Sales Manager', label: 'Trainee Sales Manager' },
+  { value: 'Junior Sales Manager', label: 'Junior Sales Manager' },
+  { value: 'Middle Sales Manager', label: 'Middle Sales Maneger' },
+  { value: 'Elektroinstallateur', label: 'Elektroinstallateur' },
+  { value: 'PV-Modul-Installateur', label: 'PV-Modul-Installateur' },
 ];
 const locationOptions = [
-  { value: 'location-1', label: 'location-1' },
-  { value: 'location-2', label: 'location-2' },
-  { value: 'location-3', label: 'location-3' },
+  { value: '', label: 'All locations' },
+  { value: 'Deutschland, Ulm', label: 'Deutschland,Ulm' },
+  { value: 'Deutschland, Berlin', label: 'Deutschland,Berlin' },
 ];
 const contractOptions = [
-  { value: 'contract-1', label: 'contract-1' },
-  { value: 'contract-2', label: 'contract-2' },
-  { value: 'contract-3', label: 'contract-3' },
+  { value: '', label: 'All contract types' },
+  { value: 'full-time', label: 'Full-time' },
+  { value: 'part-time', label: 'Part-time' },
 ];
 
 export { contractOptions, locationOptions, roleOptions };

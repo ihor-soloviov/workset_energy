@@ -101,6 +101,12 @@ type KarrierJobItem = {
   meta?: KarrierJobMeta;
 };
 
+type SelectValues = {
+  role: string;
+  location: string;
+  contract: string;
+};
+
 export type {
   VisionLinkItem,
   VorteileSliderItems,
@@ -115,4 +121,5 @@ export type {
   KarrierJobItems,
   KarrierJobItem,
   KarrierAttributes,
+  SelectValues,
 };

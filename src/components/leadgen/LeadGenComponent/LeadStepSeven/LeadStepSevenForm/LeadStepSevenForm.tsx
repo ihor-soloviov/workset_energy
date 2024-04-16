@@ -5,6 +5,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { interTight, inter } from '@/utils/fonts';
 import { LeadStepProps } from '../../types';
+import { formDataPost } from '@/utils/api';
 
 const LeadStepSevenForm = ({
   formData,
@@ -12,29 +13,51 @@ const LeadStepSevenForm = ({
   step,
   setStep,
 }: LeadStepProps) => {
-  const { handleSubmit, errors, touched, getFieldProps, isValid, dirty } =
-    useFormik({
-      initialValues: {
-        name: '',
-        email: '',
-        telefonnummer: '',
-        message: '',
-      },
-      validationSchema: Yup.object({
-        name: Yup.string().required('Required'),
-        email: Yup.string().email('Invalid email address').required('Required'),
-        telefonnummer: Yup.number()
-          .typeError('Invalid number')
-          .required('Required'),
-        message: Yup.string(),
-      }),
-      onSubmit: values => {
-        console.log(values);
+  const {
+    handleSubmit,
+    errors,
+    touched,
+    getFieldProps,
+    isValid,
+    dirty,
+    resetForm,
+  } = useFormik({
+    initialValues: {
+      userName: '',
+      userEmail: '',
+      userPhone: '',
+      userComment: '',
+    },
+    validationSchema: Yup.object({
+      userName: Yup.string().required('Required'),
+      userEmail: Yup.string()
+        .email('Invalid email address')
+        .required('Required'),
+      userPhone: Yup.number().typeError('Invalid number').required('Required'),
+      userComment: Yup.string(),
+    }),
+    onSubmit: async values => {
+      console.log(values);
 
-        setFormData({ ...formData, stepSeven: values });
-        setStep(step + 1);
-      },
-    });
+      setFormData({ ...formData, contactData: values });
+      const leadGenData = new FormData();
+
+      Object.entries(formData).forEach(([key, value]) => {
+        if (typeof value === 'object' && !Array.isArray(value)) {
+          leadGenData.append(key, JSON.stringify(value));
+        } else {
+          leadGenData.append(key, value.toString());
+        }
+      });
+      const status = await formDataPost(
+        leadGenData,
+        'https://mailer.work-set.eu/energyApi/leadgen',
+      );
+      status === 200 && console.log('200');
+      resetForm();
+      setStep(step + 1);
+    },
+  });
   return (
     <form
       className={`${styles.stepSevenForm} ${inter.className}`}
@@ -44,11 +67,11 @@ const LeadStepSevenForm = ({
         Ihr Name, Nachname*
         <input
           placeholder="Ihr Name, Nachname"
-          className={`${styles.stepSevenInput} ${touched.name && errors.name && styles.error}`}
-          {...getFieldProps('name')}
+          className={`${styles.stepSevenInput} ${touched.userName && errors.userName && styles.error}`}
+          {...getFieldProps('userName')}
         />
-        {touched.name && errors.name && (
-          <p className={styles.errorText}>{errors.name}</p>
+        {touched.userName && errors.userName && (
+          <p className={styles.errorText}>{errors.userName}</p>
         )}
       </label>
       <div className={styles.stepSevenLabelWrap}>
@@ -56,22 +79,22 @@ const LeadStepSevenForm = ({
           E-mail*
           <input
             placeholder="E-mail"
-            className={`${styles.stepSevenInput} ${touched.email && errors.email && styles.error}`}
-            {...getFieldProps('email')}
+            className={`${styles.stepSevenInput} ${touched.userEmail && errors.userEmail && styles.error}`}
+            {...getFieldProps('userEmail')}
           />
-          {touched.email && errors.email && (
-            <p className={styles.errorText}>{errors.email}</p>
+          {touched.userEmail && errors.userEmail && (
+            <p className={styles.errorText}>{errors.userEmail}</p>
           )}
         </label>
         <label className={styles.stepSevenLabel}>
           Telefonnummer*
           <input
             placeholder="Telefonnummer"
-            className={`${styles.stepSevenInput} ${touched.telefonnummer && errors.telefonnummer && styles.error}`}
-            {...getFieldProps('telefonnummer')}
+            className={`${styles.stepSevenInput} ${touched.userPhone && errors.userPhone && styles.error}`}
+            {...getFieldProps('userPhone')}
           />
-          {touched.telefonnummer && errors.telefonnummer && (
-            <p className={styles.errorText}>{errors.telefonnummer}</p>
+          {touched.userPhone && errors.userPhone && (
+            <p className={styles.errorText}>{errors.userPhone}</p>
           )}
         </label>
       </div>
@@ -80,7 +103,7 @@ const LeadStepSevenForm = ({
         <input
           placeholder="Wann kann man dich am Besten erreichen?"
           className={styles.stepSevenInput}
-          {...getFieldProps('message')}
+          {...getFieldProps('userComment')}
         />
       </label>
       <Button

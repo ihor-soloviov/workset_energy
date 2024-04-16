@@ -18,7 +18,7 @@ const LeadStepTwo = ({
     value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 
   const handleNextStepClick = () => {
-    setFormData({ ...formData, stepTwo: formatValue(rangeValue) });
+    setFormData({ ...formData, kWhConsumption: formatValue(rangeValue) });
     setStep(step + 1);
   };
 

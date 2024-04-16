@@ -1,44 +1,40 @@
-'use client';
 import styles from './JobsSelectForm.module.css';
 import { Option } from 'react-dropdown';
 import { inter } from '@/utils/fonts';
-import { useState } from 'react';
 import { roleOptions, contractOptions, locationOptions } from '@/utils/select';
 import JobsSelect from './JobsSelect/JobsSelect';
+import { SelectValues } from '@/types/infoTypes';
 
-const JobsSelectForm = () => {
-  const [roleValue, setRoleValue] = useState('');
-  const [locationValue, setLocationValue] = useState('');
-  const [contractValue, setContractValue] = useState('');
-  console.log('roleValue', roleValue);
-  console.log('locationValue', locationValue);
-  console.log('contractValue', contractValue);
+type JobsSelectFormProps = {
+  selectValues: SelectValues;
+  handleSelectChange: (field: string, value: string) => void;
+};
 
-  const handleRoleChange = (e: Option) => setRoleValue(e.value);
-  const handleLocationChange = (e: Option) => setLocationValue(e.value);
-  const handleContractChange = (e: Option) => setContractValue(e.value);
-
+const JobsSelectForm = ({
+  selectValues,
+  handleSelectChange,
+}: JobsSelectFormProps) => {
   return (
     <form className={`${styles.jobsSelectForm} ${inter.className}`}>
       <JobsSelect
         label="Role"
         options={roleOptions}
-        value={roleValue}
-        onChange={handleRoleChange}
-        placeholder={'All'}
+        value={selectValues.role}
+        onChange={(e: Option) => handleSelectChange('role', e.value)}
+        placeholder={'All roles'}
       />
       <JobsSelect
         label="Location"
         options={locationOptions}
-        value={locationValue}
-        onChange={handleLocationChange}
-        placeholder={'Deutschland,Ulm'}
+        value={selectValues.location}
+        onChange={(e: Option) => handleSelectChange('location', e.value)}
+        placeholder={'All locations'}
       />
       <JobsSelect
         label="Contract types"
         options={contractOptions}
-        value={contractValue}
-        onChange={handleContractChange}
+        value={selectValues.contract}
+        onChange={(e: Option) => handleSelectChange('contract', e.value)}
         placeholder={'All contract types'}
       />
     </form>

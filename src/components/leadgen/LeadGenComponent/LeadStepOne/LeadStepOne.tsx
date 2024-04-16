@@ -16,7 +16,7 @@ const LeadStepOne = ({
   const [isDisabled, setIsDisabled] = useState(true);
 
   const handleNextStepClick = () => {
-    stepOneValue && setFormData({ ...formData, stepOne: stepOneValue });
+    stepOneValue && setFormData({ ...formData, propertyType: stepOneValue });
     setStep(step + 1);
   };
   const handleItemClick = (e: MouseEvent<HTMLLIElement>, itemValue: string) => {

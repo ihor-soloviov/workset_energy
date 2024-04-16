@@ -9,12 +9,14 @@ import type { KarrierJobItems } from '@/types/infoTypes';
 import { fetchJobsData } from '@/utils/api';
 const Jobs = () => {
   const [response, setResponse] = useState<KarrierJobItems | null>(null);
-  console.log(response);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const fetchDataAndUpdateState = async () => {
+      setIsLoading(true);
       const response = await fetchJobsData();
       setResponse(response);
+      setIsLoading(false);
     };
 
     fetchDataAndUpdateState();
@@ -23,7 +25,7 @@ const Jobs = () => {
   return (
     <>
       <JobsHero />
-      <JobsSection response={response} />
+      <JobsSection isLoading={isLoading} response={response} />
       <KarriereFormSection />
     </>
   );

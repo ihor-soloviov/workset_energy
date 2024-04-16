@@ -16,17 +16,17 @@ import MobileMenu from '../../Header/MobileMenu/MobileMenu';
 import { FormInitialValue } from './types';
 
 const formInitialValue: FormInitialValue = {
-  stepOne: '',
-  stepTwo: '',
-  stepThree: '',
-  stepFour: '',
-  stepFive: '',
-  stepSix: { plz: '', ort: '', straße: '', housnummer: '' },
-  stepSeven: {
-    name: '',
-    email: '',
-    telefonnummer: '',
-    message: '',
+  propertyType: '',
+  kWhConsumption: '',
+  roofBuiltTime: '',
+  roofType: '',
+  solarSizesArea: '',
+  pvPlanForm: { postcode: '', location: '', street: '', houseNumber: '' },
+  contactData: {
+    userName: '',
+    userEmail: '',
+    userPhone: '',
+    userComment: '',
   },
 };
 
@@ -112,38 +112,41 @@ const LeadGenComponent = () => {
   const clearStepValue = (step: number) => {
     switch (step) {
       case 1:
-        return setFormData({ ...formData, stepOne: formInitialValue.stepOne });
+        return setFormData({
+          ...formData,
+          propertyType: formInitialValue.propertyType,
+        });
 
       case 2:
         return setFormData({
           ...formData,
-          stepTwo: formInitialValue.stepTwo,
+          kWhConsumption: formInitialValue.kWhConsumption,
         });
 
       case 3:
         return setFormData({
           ...formData,
-          stepThree: formInitialValue.stepThree,
+          roofBuiltTime: formInitialValue.roofBuiltTime,
         });
       case 4:
         return setFormData({
           ...formData,
-          stepFour: formInitialValue.stepFour,
+          roofType: formInitialValue.roofType,
         });
       case 5:
         return setFormData({
           ...formData,
-          stepFive: formInitialValue.stepFive,
+          solarSizesArea: formInitialValue.solarSizesArea,
         });
       case 6:
         return setFormData({
           ...formData,
-          stepSix: formInitialValue.stepSix,
+          pvPlanForm: formInitialValue.pvPlanForm,
         });
       case 7:
         return setFormData({
           ...formData,
-          stepSeven: formInitialValue.stepSeven,
+          contactData: formInitialValue.contactData,
         });
 
       default:

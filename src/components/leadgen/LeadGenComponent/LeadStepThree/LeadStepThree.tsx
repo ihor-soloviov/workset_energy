@@ -16,7 +16,8 @@ const LeadStepThree = ({
   const [isDisabled, setIsDisabled] = useState(true);
 
   const handleNextStepClick = () => {
-    stepThreeValue && setFormData({ ...formData, stepThree: stepThreeValue });
+    stepThreeValue &&
+      setFormData({ ...formData, roofBuiltTime: stepThreeValue });
     setStep(step + 1);
   };
   const handleItemClick = (e: MouseEvent<HTMLLIElement>, itemValue: string) => {

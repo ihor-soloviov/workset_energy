@@ -1,15 +1,20 @@
 export type FormInitialValue = {
-  stepOne: string;
-  stepTwo: string;
-  stepThree: string;
-  stepFour: string;
-  stepFive: string;
-  stepSix: { plz: string; ort: string; straße: string; housnummer: string };
-  stepSeven: {
-    name: string;
-    email: string;
-    telefonnummer: string;
-    message: string;
+  propertyType: string;
+  kWhConsumption: string;
+  roofBuiltTime: string;
+  roofType: string;
+  solarSizesArea: string;
+  pvPlanForm: {
+    postcode: string;
+    location: string;
+    street: string;
+    houseNumber: string;
+  };
+  contactData: {
+    userName: string;
+    userEmail: string;
+    userPhone: string;
+    userComment: string;
   };
 };
 

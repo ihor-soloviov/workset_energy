@@ -125,6 +125,14 @@
   color: var(--white-main);
 }
 
+.jobsErrorText {
+  color: var(--gray-text);
+  font-size: 22px;
+  line-height: 150%;
+  width: fit-content;
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 1440px) {
   .jobsList {
     gap: 3.2rem;
@@ -184,6 +192,9 @@
 
   .jobsBtn {
     padding: 1.2rem 2.4rem;
+  }
+  .jobsErrorText {
+    font-size: 2.4rem;
   }
 }
 
@@ -246,5 +257,8 @@
 
   .jobsBtn {
     padding: 12px 24px;
+  }
+  .jobsErrorText {
+    font-size: 24px;
   }
 }

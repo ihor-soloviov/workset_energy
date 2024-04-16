@@ -15,7 +15,8 @@ const LeadStepFive = ({
   const [isDisabled, setIsDisabled] = useState(true);
 
   const handleNextStepClick = () => {
-    stepFiveValue && setFormData({ ...formData, stepFive: stepFiveValue });
+    stepFiveValue &&
+      setFormData({ ...formData, solarSizesArea: stepFiveValue });
     setStep(step + 1);
   };
   const handleItemClick = (e: MouseEvent<HTMLLIElement>, itemValue: string) => {

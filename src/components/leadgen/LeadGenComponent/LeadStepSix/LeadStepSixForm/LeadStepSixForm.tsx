@@ -15,20 +15,20 @@ const LeadStepSixForm = ({
   const { handleSubmit, errors, touched, getFieldProps, isValid, dirty } =
     useFormik({
       initialValues: {
-        plz: '',
-        ort: '',
-        straße: '',
-        housnummer: '',
+        postcode: '',
+        location: '',
+        street: '',
+        houseNumber: '',
       },
       validationSchema: Yup.object({
-        plz: Yup.string().required('Required'),
-        ort: Yup.string().required('Required'),
-        straße: Yup.string().required('Required'),
-        housnummer: Yup.string().required('Required'),
+        postcode: Yup.string().required('Required'),
+        location: Yup.string().required('Required'),
+        street: Yup.string().required('Required'),
+        houseNumber: Yup.string().required('Required'),
       }),
       onSubmit: values => {
         console.log(values);
-        setFormData({ ...formData, stepSix: values });
+        setFormData({ ...formData, pvPlanForm: values });
         setStep(step + 1);
       },
     });
@@ -42,44 +42,44 @@ const LeadStepSixForm = ({
         PLZ*
         <input
           placeholder="PLZ"
-          className={`${styles.stepSixInput} ${touched.plz && errors.plz && styles.error}`}
-          {...getFieldProps('plz')}
+          className={`${styles.stepSixInput} ${touched.postcode && errors.postcode && styles.error}`}
+          {...getFieldProps('postcode')}
         />
-        {touched.plz && errors.plz && (
-          <p className={styles.errorText}>{errors.plz}</p>
+        {touched.postcode && errors.postcode && (
+          <p className={styles.errorText}>{errors.postcode}</p>
         )}
       </label>
       <label className={styles.stepSixLabel}>
         Ort*
         <input
           placeholder="Ort"
-          className={`${styles.stepSixInput} ${touched.ort && errors.ort && styles.error}`}
-          {...getFieldProps('ort')}
+          className={`${styles.stepSixInput} ${touched.location && errors.location && styles.error}`}
+          {...getFieldProps('location')}
         />
-        {touched.ort && errors.ort && (
-          <p className={styles.errorText}>{errors.ort}</p>
+        {touched.location && errors.location && (
+          <p className={styles.errorText}>{errors.location}</p>
         )}
       </label>
       <label className={styles.stepSixLabel}>
         Straße*
         <input
           placeholder="Straße"
-          className={`${styles.stepSixInput} ${touched.straße && errors.straße && styles.error}`}
-          {...getFieldProps('straße')}
+          className={`${styles.stepSixInput} ${touched.street && errors.street && styles.error}`}
+          {...getFieldProps('street')}
         />
-        {touched.straße && errors.straße && (
-          <p className={styles.errorText}>{errors.straße}</p>
+        {touched.street && errors.street && (
+          <p className={styles.errorText}>{errors.street}</p>
         )}
       </label>
       <label className={styles.stepSixLabel}>
         Housnummer*
         <input
           placeholder="Housnummer"
-          className={`${styles.stepSixInput} ${touched.housnummer && errors.housnummer && styles.error}`}
-          {...getFieldProps('housnummer')}
+          className={`${styles.stepSixInput} ${touched.houseNumber && errors.houseNumber && styles.error}`}
+          {...getFieldProps('houseNumber')}
         />
-        {touched.housnummer && errors.housnummer && (
-          <p className={styles.errorText}>{errors.housnummer}</p>
+        {touched.houseNumber && errors.houseNumber && (
+          <p className={styles.errorText}>{errors.houseNumber}</p>
         )}
       </label>
       <Button

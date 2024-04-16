@@ -13,12 +13,15 @@ interface Props {
 
 const Job = ({ params: { id } }: Props) => {
   const [response, setResponse] = useState<KarrierJobItem | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
   console.log(response);
 
   useEffect(() => {
     const fetchDataAndUpdateState = async () => {
+      setIsLoading(true);
       const response = await fetchJobData(id);
       setResponse(response);
+      setIsLoading(false);
     };
 
     fetchDataAndUpdateState();
