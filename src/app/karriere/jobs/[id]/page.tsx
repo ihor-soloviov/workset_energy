@@ -3,8 +3,8 @@
 import JobHero from '@/components/karriere/job/JobHero/JobHero';
 import JobSection from '@/components/karriere/job/JobSection/JobSection';
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import type { KarrierJobItem } from '@/types/infoTypes';
+import { fetchJobData } from '@/utils/api';
 interface Props {
   params: {
     id: string;
@@ -16,20 +16,14 @@ const Job = ({ params: { id } }: Props) => {
   console.log(response);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const { data } = await axios.get(
-          `https://api.work-set.eu/api/jobs/${id}`,
-        );
-        setResponse(data);
-
-        return data;
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
+    const fetchDataAndUpdateState = async () => {
+      const response = await fetchJobData(id);
+      setResponse(response);
     };
-    fetchData();
+
+    fetchDataAndUpdateState();
   }, [id]);
+
   return (
     <>
       <JobHero response={response} />

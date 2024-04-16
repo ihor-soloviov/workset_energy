@@ -1,7 +1,7 @@
 export const firstVideo = {
   className: 'left',
   title: 'Die Energie der Zukunft!',
-  link: 'https://www.youtube.com/embed/GDfqlrJ_c8U',
+  link: 'https://www.youtube.com/embed/GDfqlrJ_c8U ',
   text: 'PV-Anlagen sind der Schlüssel zum Geldsparen. In einem kurzen Video erzählt dir dein Helfer Mr. Energy genauer, wie PV-Anlagen funktionieren. Mr. Energy verrät dir, wie PV-Anlagen deinen Verbrauch senken und dir Gewinn verschaffen. Investiere eine Minute deiner Zeit und erlange den Schlüssel zu einer unabhängigen Zukunft mit WorkSET Energy.',
 };
 

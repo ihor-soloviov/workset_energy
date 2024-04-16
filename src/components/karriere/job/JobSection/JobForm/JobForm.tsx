@@ -7,6 +7,8 @@ import { interTight } from '@/utils/fonts';
 import * as Yup from 'yup';
 import Button from '@/components/common/Button/Button';
 import { useState, ChangeEvent } from 'react';
+import { formDataPost } from '@/utils/api';
+
 const JobForm = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
@@ -41,10 +43,29 @@ const JobForm = () => {
 
       tel: Yup.number().typeError('Invalid number').required('Required'),
     }),
-    onSubmit: values => {
-      console.log({ ...values, angebot: selectedFile });
-      resetForm();
-      setSelectedFile(null);
+    onSubmit: async ({ name, tel }) => {
+      if (selectedFile) {
+        const formData = new FormData();
+        const formDataFields = {
+          userName: name,
+
+          userPhone: tel,
+        };
+
+        Object.entries(formDataFields).forEach(([key, value]) => {
+          formData.append(key, value);
+        });
+
+        formData.append('file', selectedFile);
+
+        const status = await formDataPost(
+          formData,
+          'https://mailer.work-set.eu/energyApi/cv',
+        );
+        status === 200 && console.log('200');
+        resetForm();
+        setSelectedFile(null);
+      }
     },
   });
   return (

@@ -6,28 +6,45 @@ import * as Yup from 'yup';
 import { inter, interTight } from '@/utils/fonts';
 import ArrowIcon from '/public/icons/small-arrow-btn.svg';
 import Button from '../../../Button/Button';
-import { useThankYouStore } from '@/store/hero-store';
+
+import { formDataPost } from '@/utils/api';
 
 type Props = {
   hideModal: () => void;
 };
 
 const HeroForm: React.FC<Props> = ({ hideModal }) => {
-  const { handleSubmit, errors, touched, getFieldProps, isValid, dirty } =
-    useFormik({
-      initialValues: {
-        name: '',
-        tel: '',
-      },
-      validationSchema: Yup.object({
-        name: Yup.string().required('Required'),
-        tel: Yup.number().typeError('Invalid number').required('Required'),
-      }),
-      onSubmit: values => {
-        console.log(values);
-        hideModal();
-      },
-    });
+  const {
+    handleSubmit,
+    errors,
+    touched,
+    getFieldProps,
+    isValid,
+    dirty,
+    resetForm,
+  } = useFormik({
+    initialValues: {
+      name: '',
+      tel: '',
+    },
+    validationSchema: Yup.object({
+      name: Yup.string().required('Required'),
+      tel: Yup.number().typeError('Invalid number').required('Required'),
+    }),
+    onSubmit: async ({ tel, name }) => {
+      const formData = new FormData();
+
+      formData.append('userPhone', tel);
+      formData.append('userName', name);
+
+      const status = await formDataPost(
+        formData,
+        'https://mailer.work-set.eu/energyApi/phone',
+      );
+      status === 200 && hideModal();
+      resetForm();
+    },
+  });
   return (
     <form
       onSubmit={handleSubmit}

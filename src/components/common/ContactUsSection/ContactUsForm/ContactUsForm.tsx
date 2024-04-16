@@ -7,27 +7,53 @@ import * as Yup from 'yup';
 import styles from './ContactUsForm.module.css';
 import Button from '../../Button/Button';
 import useObserver from '@/hooks/useObserver';
+import { formDataPost } from '@/utils/api';
 
 const ContactUsForm = () => {
   useObserver(`.${styles.contactUsForm}`, `${styles.contactUsFormVisible}`);
-  const { handleSubmit, errors, touched, getFieldProps, isValid, dirty } =
-    useFormik({
-      initialValues: {
-        name: '',
-        email: '',
-        tel: '',
-        message: '',
-      },
-      validationSchema: Yup.object({
-        name: Yup.string().required('Required'),
-        email: Yup.string().email('Invalid email address').required('Required'),
-        tel: Yup.number().typeError('Invalid number').required('Required'),
-        message: Yup.string(),
-      }),
-      onSubmit: values => {
-        console.log(values);
-      },
-    });
+  const {
+    handleSubmit,
+    errors,
+    touched,
+    getFieldProps,
+    isValid,
+    dirty,
+    resetForm,
+  } = useFormik({
+    initialValues: {
+      name: '',
+      email: '',
+      tel: '',
+      message: '',
+    },
+    validationSchema: Yup.object({
+      name: Yup.string().required('Required'),
+      email: Yup.string().email('Invalid email address').required('Required'),
+      tel: Yup.number().typeError('Invalid number').required('Required'),
+      message: Yup.string(),
+    }),
+    onSubmit: async ({ name, email, tel, message }) => {
+      const formData = new FormData();
+
+      const formDataFields = {
+        userName: name,
+        userEmail: email,
+        userPhone: tel,
+        userComment: message,
+      };
+
+      Object.entries(formDataFields).forEach(([key, value]) => {
+        formData.append(key, value);
+      });
+
+      const status = await formDataPost(
+        formData,
+        'https://mailer.work-set.eu/energyApi/contact-us',
+      );
+      status === 200 && console.log('200');
+      resetForm();
+    },
+  });
 
   return (
     <form
