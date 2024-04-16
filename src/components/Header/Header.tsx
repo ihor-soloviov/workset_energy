@@ -24,12 +24,12 @@ const Header = () => {
   const pathname = usePathname();
 
   const { setIsDesktop } = useGlobalStore();
-  const { isThankYouOpen, setStylesChangedToFalse, setStylesChangedToTrue } =
-    useThankYouStore();
+  const { isThankYouOpen, removeStyles, addStyles } = useThankYouStore();
 
   const handleMenuClick = () => setIsMenuOpen(!isMenuOpen);
+
   const handleLogoClick = () => {
-    isThankYouOpen && setStylesChangedToFalse();
+    isThankYouOpen && removeStyles();
   };
 
   useEffect(() => {
@@ -61,14 +61,15 @@ const Header = () => {
 
   useEffect(() => {
     setCurrentPathname(pathname);
-    pathname === '/karriere' && setStylesChangedToTrue();
-    pathname !== currentPathname && setStylesChangedToFalse();
+    pathname === '/karriere' && addStyles();
+    pathname !== currentPathname && removeStyles();
   }, [pathname, currentPathname]);
 
   return (
     <>
       {(pathnames.includes(pathname) || jobPathRegex.test(pathname)) && (
         <header
+          id="header"
           className={`${styles.header} ${isThankYouOpen ? styles.blackStyle : ''} ${isScrolled ? styles.scrolled : ''}`}
         >
           <div className={styles.headerContainer}>

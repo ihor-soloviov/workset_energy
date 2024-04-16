@@ -2,8 +2,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  padding: 0 0 216px;
-  z-index: 99;
+  bottom: 0;
+  z-index: 1000;
   width: 100%;
   height: 100vh;
   overflow-y: scroll;
@@ -58,6 +58,26 @@
   letter-spacing: 0.8px;
 }
 
+.heroThankYouWrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 97;
+  background-color: var(--white-main);
+  padding-top: 272px;
+  overflow: hidden;
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 0.4s;
+}
+
+.heroThankYouWrapVisible {
+  opacity: 1;
+  filter: blur(0);
+}
+
 .heroThankTitle {
   width: 342px;
   height: 94px;
@@ -67,7 +87,6 @@
   font-weight: 700;
   line-height: 130%;
   margin: 0 auto;
-  margin-top: 86px;
   margin-bottom: 16px;
 }
 
@@ -135,29 +154,27 @@
     transform: translateX(100%);
     transition: all 0.4s;
   }
-  
+
   .scrollHeroFormVisible {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
   }
-  
+
   @media (prefers-reduced-motion) {
     .scrollTitleHidden {
       transition: none;
     }
   }
 
-  .heroFormWrap.active {
-    position: absolute;
+  .heroThankYouWrap {
     padding: 35rem 0 28.8rem;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 97;
-    border-radius: unset;
     height: 97.2rem;
+  }
+
+  .heroThankYouContainer {
+    padding: 0 57.2rem;
+    width: 172.8rem;
   }
 
   .heroFormContainer {

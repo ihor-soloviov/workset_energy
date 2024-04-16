@@ -9,8 +9,10 @@ const useObserver: UseObserver = (selector, visibleClass) => {
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add(visibleClass);
+          const target = entry.target as HTMLElement; // Приведення типу
+          if (entry.isIntersecting && !target.dataset.hasBeenVisible) {
+            target.classList.add(visibleClass);
+            target.dataset.hasBeenVisible = 'true';
           }
         });
       },

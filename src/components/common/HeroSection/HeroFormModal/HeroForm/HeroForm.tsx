@@ -1,4 +1,5 @@
 'use client';
+
 import styles from './HeroForm.module.css';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
@@ -7,9 +8,11 @@ import ArrowIcon from '/public/icons/small-arrow-btn.svg';
 import Button from '../../../Button/Button';
 import { useThankYouStore } from '@/store/hero-store';
 
-const HeroForm = () => {
-  const { setStylesChangedToTrue } = useThankYouStore();
+type Props = {
+  hideModal: () => void;
+};
 
+const HeroForm: React.FC<Props> = ({ hideModal }) => {
   const { handleSubmit, errors, touched, getFieldProps, isValid, dirty } =
     useFormik({
       initialValues: {
@@ -22,7 +25,7 @@ const HeroForm = () => {
       }),
       onSubmit: values => {
         console.log(values);
-        setStylesChangedToTrue();
+        hideModal();
       },
     });
   return (
