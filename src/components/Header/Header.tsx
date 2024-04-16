@@ -17,11 +17,33 @@ import { useGlobalStore } from '@/store/global-store';
 import { pathnames, jobPathRegex } from '@/utils/pathnames';
 
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const pathname = usePathname();
   const [currentPathname, setCurrentPathname] = useState('');
 
+  const pathname = usePathname();
+
   const { setIsDesktop } = useGlobalStore();
+  const { isThankYouOpen, setStylesChangedToFalse, setStylesChangedToTrue } =
+    useThankYouStore();
+
+  const handleMenuClick = () => setIsMenuOpen(!isMenuOpen);
+  const handleLogoClick = () => {
+    isThankYouOpen && setStylesChangedToFalse();
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const isHeaderScrolled = scrollTop > 0;
+      setIsScrolled(isHeaderScrolled);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     setIsDesktop(window.innerWidth >= 1440);
@@ -37,15 +59,6 @@ const Header = () => {
     };
   }, [setIsDesktop]);
 
-  const { isThankYouOpen, setStylesChangedToFalse, setStylesChangedToTrue } =
-    useThankYouStore();
-
-  const handleMenuClick = () => setIsMenuOpen(!isMenuOpen);
-
-  const handleLogoClick = () => {
-    isThankYouOpen && setStylesChangedToFalse();
-  };
-
   useEffect(() => {
     setCurrentPathname(pathname);
     pathname === '/karriere' && setStylesChangedToTrue();
@@ -56,7 +69,7 @@ const Header = () => {
     <>
       {(pathnames.includes(pathname) || jobPathRegex.test(pathname)) && (
         <header
-          className={`${styles.header} ${isThankYouOpen ? styles.blackStyle : ''}`}
+          className={`${styles.header} ${isThankYouOpen ? styles.blackStyle : ''} ${isScrolled ? styles.scrolled : ''}`}
         >
           <div className={styles.headerContainer}>
             <nav className={styles.headerNav}>
