@@ -16,7 +16,7 @@
   object-fit: cover;
 }
 
-.impressiumHeroImgDesc {
+.impressiumHeroImgDesk {
   object-fit: cover;
   display: none;
 }
@@ -56,14 +56,14 @@
 
   .impressiumContainer {
     width: 1728px;
-    padding: 0 186px;
+    padding: 0 117px;
   }
 
   .impressiumHeroImgMob {
     display: none;
   }
 
-  .impressiumHeroImgDesc {
+  .impressiumHeroImgDesk {
     display: block;
   }
 

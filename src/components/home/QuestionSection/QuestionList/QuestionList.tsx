@@ -6,6 +6,7 @@ import DropArrowIcon from '/public/icons/drop-arrow.svg';
 import { useState } from 'react';
 import { inter } from '@/utils/fonts';
 import { QuestItem, questItems } from './questionItems';
+import { scrollToContact } from '@/utils/scroll';
 
 const QuestionList = () => {
   const [activeItems, setActiveItems] = useState<Array<string>>([]);
@@ -22,8 +23,7 @@ const QuestionList = () => {
 
   const handleBtnClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
-    const teamSection = document.getElementById('contact');
-    teamSection && teamSection.scrollIntoView({ behavior: 'smooth' });
+    scrollToContact();
   };
 
   const renderListItems = (items: QuestItem[]) =>

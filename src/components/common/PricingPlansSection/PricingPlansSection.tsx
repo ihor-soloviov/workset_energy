@@ -6,13 +6,9 @@ import { inter } from '@/utils/fonts';
 import { plans } from './plans';
 import Plan from './Plan/Plan';
 import RecycleTextWrap from '../RecycleTextWrap/RecycleTextWrap';
+import { scrollToContact } from '@/utils/scroll';
 
 const PricingPlansSection = () => {
-  const handleBtnClick = () => {
-    const teamSection = document.getElementById('contact');
-    teamSection && teamSection.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <section id="tarifpläne" className={styles.pricingPlansSection}>
       <div className={styles.pricingPlansWrap}>
@@ -29,7 +25,7 @@ const PricingPlansSection = () => {
         <ul className={styles.pricingPlansItems}>
           {plans.map((plan, index) => (
             <Plan
-              handleBtnClick={handleBtnClick}
+              handleBtnClick={scrollToContact}
               key={plan.name}
               plan={plan}
               index={index}

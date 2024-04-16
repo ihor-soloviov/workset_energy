@@ -6,12 +6,8 @@ import { inter } from '@/utils/fonts';
 import ArrowIcon from '/public/icons/small-arrow-btn.svg';
 import Button from '../../Button/Button';
 import { employeeItems } from './employeeItems';
-
+import { scrollToContact } from '@/utils/scroll';
 const EmployeeList = () => {
-  const handleBtnClick = () => {
-    const teamSection = document.getElementById('contact');
-    teamSection && teamSection.scrollIntoView({ behavior: 'smooth' });
-  };
   return (
     <ul className={styles.employeeList}>
       {employeeItems.map(({ text, title, imgMob, imgDesc, btn }) => (
@@ -35,7 +31,7 @@ const EmployeeList = () => {
             </p>
             {btn && (
               <Button
-                handleClick={handleBtnClick}
+                handleClick={scrollToContact}
                 className={styles.employeeItemBtn}
                 type="button"
               >

@@ -5,13 +5,8 @@ import { inter } from '@/utils/fonts';
 import Button from '../../Button/Button';
 import ArrowIcon from '/public/icons/small-arrow-btn.svg';
 import useObserver from '@/hooks/useObserver';
-
+import { scrollToContact } from '@/utils/scroll';
 const TeamTextWrap = () => {
-  const handleBtnClick = () => {
-    const teamSection = document.getElementById('contact');
-    teamSection && teamSection.scrollIntoView({ behavior: 'smooth' });
-  };
-
   useObserver(`.${styles.teamTextWrap}`, `${styles.teamTextWrapVisible}`);
 
   return (
@@ -26,7 +21,7 @@ const TeamTextWrap = () => {
       </p>
       <div>
         <Button
-          handleClick={handleBtnClick}
+          handleClick={scrollToContact}
           className={styles.teamBtn}
           type="button"
         >

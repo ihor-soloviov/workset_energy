@@ -6,15 +6,11 @@ import Image from 'next/image';
 import BtnArrowIcon from '/public/icons/small-arrow-btn.svg';
 import { stepItems } from './stepItems';
 import useObserver from '@/hooks/useObserver';
-
+import { scrollToContact } from '@/utils/scroll';
 const StepList = () => {
   useObserver(`.${styles.stepItem}`, `${styles.stepItemVisible}`);
   const getClass = (index: number) => {
     return (index + 1) % 2 === 0 ? styles.white : '';
-  };
-  const handleBtnClick = () => {
-    const teamSection = document.getElementById('contact');
-    teamSection && teamSection.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -44,7 +40,7 @@ const StepList = () => {
             </h3>
             <p className={`${styles.stepText} ${getClass(index)}`}>{text}</p>
             <Button
-              handleClick={handleBtnClick}
+              handleClick={scrollToContact}
               className={`${styles.stepBtn} ${getClass(index)}`}
               type="button"
             >

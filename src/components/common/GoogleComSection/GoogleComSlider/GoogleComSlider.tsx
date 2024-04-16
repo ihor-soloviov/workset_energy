@@ -12,11 +12,14 @@ import commentsData from '../../../../comments.json';
 import ArrowIcon from '/public/icons/slide-arrow.svg';
 import StarIcon from '/public/icons/star.svg';
 import Button from '../../Button/Button';
+import { useGlobalStore } from '@/store/global-store';
 
 const GoogleComSlider = () => {
   const comments = commentsData.result.reviews;
   const swiperRef = useRef<SwiperType>();
-
+  const { isDesktop } = useGlobalStore();
+  const currentSlidePrev = isDesktop ? 3 : 'auto';
+  const currentSlideSpace = isDesktop ? 20 : 15;
   const starsArr = (count: number) => {
     return count < 1 || count > 5
       ? null
@@ -37,10 +40,11 @@ const GoogleComSlider = () => {
       <Swiper
         className={styles.sliderWrap}
         modules={[Navigation, Autoplay]}
+        spaceBetween={currentSlideSpace}
         navigation
         loop={true}
         autoplay={true}
-        slidesPerView={'auto'}
+        slidesPerView={currentSlidePrev}
         onBeforeInit={swiper => {
           swiperRef.current = swiper;
         }}

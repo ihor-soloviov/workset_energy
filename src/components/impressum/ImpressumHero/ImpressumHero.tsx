@@ -1,7 +1,7 @@
 import styles from './ImpressumHero.module.css';
 import Image from 'next/image';
-import impressiumHeroImgMob from '/public/images/uberuns-page/uberuns-hero-mob.jpg';
-import impressiumHeroImgDesk from '/public/images/uberuns-page/uberuns-hero-desc.jpg';
+import impressiumHeroImgMob from '/public/images/impressum-page/impressum-hero-mob.jpg';
+import impressiumHeroImgDesk from '/public/images/impressum-page/impressum-hero-desk.jpg';
 
 const ImpressumHero = () => {
   return (
