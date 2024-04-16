@@ -17,6 +17,7 @@ const HeroFormTY = () => {
     `.${styles.heroThankYouWrap}`,
     `${styles.heroThankYouWrapVisible}`,
   );
+
   const hideThankYou = () => {
     const ty = document.querySelector(`.${styles.heroThankYouWrap}`);
     if (ty) {
