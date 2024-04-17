@@ -20,7 +20,7 @@ const HeaderNavList = () => {
       {navLinkItems.map(({ title, linkTo }) => (
         <li
           key={title}
-          className={`${styles.headerItem} ${pathname === linkTo ? styles.active : ''} ${isThankYouOpen ? styles.blackStyle : ''}`}
+          className={`${styles.headerItem} ${isThankYouOpen ? styles.blackStyle : ''}`}
         >
           <Link
             onClick={handleLinkClick}
@@ -29,6 +29,10 @@ const HeaderNavList = () => {
           >
             {title}
           </Link>
+
+          <div
+            className={`${styles.currentPage} ${pathname === linkTo ? styles.active : ''}`}
+          ></div>
         </li>
       ))}
     </ul>
