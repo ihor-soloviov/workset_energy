@@ -8,8 +8,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import { Swiper as SwiperType } from 'swiper';
 import { heroItems } from '../heroItems';
-import Button from '@/components/common/Button/Button';
 import useObserver from '@/hooks/useObserver';
+import Link from 'next/link';
 
 type Props = {
   swiperRef: MutableRefObject<SwiperType | undefined>;
@@ -61,9 +61,9 @@ const KarriereHeroSlider = ({ swiperRef }: Props) => {
               Unternehmen. Komm zu uns, um deine Ambitionen zu verwirklichen und
               neue Höhen in deiner Karriere zu erreichen
             </p>
-            <Button className={styles.heroBtn} type="button">
+            <Link href={'/karriere/jobs'} className={styles.heroLink}>
               Bewerben
-            </Button>
+            </Link>
           </div>
         </SwiperSlide>
       ))}

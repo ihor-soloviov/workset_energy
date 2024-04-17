@@ -7,7 +7,7 @@ import Button from '../Button/Button';
 import EmployeeList from './EmployeeList/EmployeeList';
 import RecycleTextWrap from '../RecycleTextWrap/RecycleTextWrap';
 import { usePathname } from 'next/navigation';
-import { scrollToContact } from '@/utils/scroll';
+import { scrollToSection } from '@/utils/scroll';
 const EmployeeSection = () => {
   const pathname = usePathname();
   return (
@@ -25,7 +25,7 @@ const EmployeeSection = () => {
         <EmployeeList pathname={pathname} />
         {pathname !== '/karriere' && (
           <Button
-            handleClick={scrollToContact}
+            handleClick={() => scrollToSection('contact')}
             className={styles.employeeBtn}
             type="button"
           >

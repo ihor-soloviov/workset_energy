@@ -6,7 +6,7 @@ import Image from 'next/image';
 import BtnArrowIcon from '/public/icons/small-arrow-btn.svg';
 import { stepItems } from './stepItems';
 import useObserver from '@/hooks/useObserver';
-import { scrollToContact } from '@/utils/scroll';
+import { scrollToSection } from '@/utils/scroll';
 const StepList = () => {
   useObserver(`.${styles.stepItem}`, `${styles.stepItemVisible}`);
   const getClass = (index: number) => {
@@ -40,7 +40,7 @@ const StepList = () => {
             </h3>
             <p className={`${styles.stepText} ${getClass(index)}`}>{text}</p>
             <Button
-              handleClick={scrollToContact}
+              handleClick={() => scrollToSection('contact')}
               className={`${styles.stepBtn} ${getClass(index)}`}
               type="button"
             >

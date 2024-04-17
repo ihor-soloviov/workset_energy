@@ -24,7 +24,7 @@ const JobsSection = ({ response, isLoading }: JobsSectionProps) => {
     }));
   };
   return (
-    <section className={styles.jobsSection}>
+    <section id="jobs" className={styles.jobsSection}>
       <div className={styles.jobsContainer}>
         <JobsSelectForm
           selectValues={selectValues}

@@ -59,7 +59,7 @@
   width: 256px;
 }
 
-.heroBtn {
+.heroLink {
   width: 158px;
   height: 48px;
   display: flex;
@@ -79,7 +79,7 @@
     background-color 250ms var(--cubic);
 }
 
-.heroBtn:hover {
+.heroLink:hover {
   border-color: var(--white-main);
   background-color: var(--white-main);
   color: var(--red-main);

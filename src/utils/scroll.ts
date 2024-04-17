@@ -1,4 +1,4 @@
-export const scrollToContact = () => {
-  const teamSection = document.getElementById('contact');
-  teamSection && teamSection.scrollIntoView({ behavior: 'smooth' });
+export const scrollToSection = (section: string) => {
+  const currentSection = document.getElementById(section);
+  currentSection && currentSection.scrollIntoView({ behavior: 'smooth' });
 };

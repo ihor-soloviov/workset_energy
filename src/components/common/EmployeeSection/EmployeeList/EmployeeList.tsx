@@ -4,7 +4,7 @@ import { inter } from '@/utils/fonts';
 import ArrowIcon from '/public/icons/small-arrow-btn.svg';
 import Button from '../../Button/Button';
 import { employeeItems } from './employeeItems';
-import { scrollToContact } from '@/utils/scroll';
+import { scrollToSection } from '@/utils/scroll';
 
 type EmployeeListProps = {
   pathname: string;
@@ -34,7 +34,7 @@ const EmployeeList = ({ pathname }: EmployeeListProps) => {
             </p>
             {btn && pathname !== '/karriere' && (
               <Button
-                handleClick={scrollToContact}
+                handleClick={() => scrollToSection('contact')}
                 className={styles.employeeItemBtn}
                 type="button"
               >

@@ -133,6 +133,11 @@
   margin: 0 auto;
 }
 
+.loader {
+  width: fit-content;
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 1440px) {
   .jobsList {
     gap: 3.2rem;

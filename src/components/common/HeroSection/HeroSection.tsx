@@ -13,6 +13,7 @@ import useObserver from '@/hooks/useObserver';
 import { useThankYouStore } from '@/store/hero-store';
 import HeroFormTY from './HeroFormModal/HeroForm/HeroFormTY/HeroFormTY';
 import { handleHeader } from '@/utils/handleHeader';
+import { scrollToSection } from '@/utils/scroll';
 
 type HeroProps = {
   imgMob: string;
@@ -45,8 +46,7 @@ const HeroSection = ({
       handleModal();
       return;
     }
-    const teamSection = document.getElementById('team-section');
-    teamSection && teamSection.scrollIntoView({ behavior: 'smooth' });
+    scrollToSection('team-section');
   };
 
   useEffect(() => {

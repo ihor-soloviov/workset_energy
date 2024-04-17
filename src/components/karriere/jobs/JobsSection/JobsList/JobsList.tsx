@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { inter } from '@/utils/fonts';
 import type { KarrierJobItems, SelectValues } from '@/types/infoTypes';
 import { filteredJobs } from '@/utils/filteredJobs';
-
+import { ThreeDots } from 'react-loader-spinner';
 type JobsListProps = {
   response: KarrierJobItems | null;
   selectValues: SelectValues;
@@ -16,9 +16,21 @@ const JobsList = ({ response, selectValues, isLoading }: JobsListProps) => {
 
   return (
     <>
-      {isLoading && <p>Loading...</p>}
+      {isLoading && (
+        <ThreeDots
+          visible={true}
+          height="50"
+          width="50"
+          color="#f32c40"
+          radius="9"
+          ariaLabel="three-dots-loading"
+          wrapperStyle={{}}
+          wrapperClass={styles.loader}
+        />
+      )}
       <ul className={styles.jobsList}>
-        {!isLoading && filteredJobsData && filteredJobsData.length !== 0 ? (
+        {filteredJobsData &&
+          filteredJobsData.length !== 0 &&
           filteredJobsData.map(({ id, attributes }, index) => {
             const { job_title, job_type, job_message } = attributes;
             return (
@@ -53,8 +65,8 @@ const JobsList = ({ response, selectValues, isLoading }: JobsListProps) => {
                 </div>
               </li>
             );
-          })
-        ) : (
+          })}
+        {!isLoading && filteredJobsData?.length === 0 && (
           <p className={styles.jobsErrorText}>No results</p>
         )}
       </ul>

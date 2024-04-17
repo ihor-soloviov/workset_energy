@@ -5,7 +5,7 @@ import VisionSlider from './VisionSlider/VisionSlider';
 
 const VisionSection = () => {
   return (
-    <section className={styles.visionSection}>
+    <section id="vision" className={styles.visionSection}>
       <VisionSlider />
     </section>
   );

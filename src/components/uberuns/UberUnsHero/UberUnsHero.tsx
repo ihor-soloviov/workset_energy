@@ -5,7 +5,7 @@ import { inter } from '@/utils/fonts';
 import Image from 'next/image';
 import uberHeroImgMob from '/public/images/uberuns-page/uberuns-hero-mob.jpg';
 import uberHeroImgDesk from '/public/images/uberuns-page/uberuns-hero-desc.jpg';
-
+import { scrollToSection } from '@/utils/scroll';
 const UberUnsHero = () => {
   return (
     <section className={styles.uberHeroSection}>
@@ -37,7 +37,11 @@ const UberUnsHero = () => {
             Solarlösungen
           </p>
           <div>
-            <Button type="button" className={styles.uberHeroBtn}>
+            <Button
+              handleClick={() => scrollToSection('vision')}
+              type="button"
+              className={styles.uberHeroBtn}
+            >
               Mehr Info
             </Button>
           </div>

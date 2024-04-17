@@ -6,7 +6,7 @@ import { inter } from '@/utils/fonts';
 import { plans } from './plans';
 import Plan from './Plan/Plan';
 import RecycleTextWrap from '../RecycleTextWrap/RecycleTextWrap';
-import { scrollToContact } from '@/utils/scroll';
+import { scrollToSection } from '@/utils/scroll';
 
 const PricingPlansSection = () => {
   return (
@@ -25,7 +25,7 @@ const PricingPlansSection = () => {
         <ul className={styles.pricingPlansItems}>
           {plans.map((plan, index) => (
             <Plan
-              handleBtnClick={scrollToContact}
+              handleBtnClick={() => scrollToSection('contact')}
               key={plan.name}
               plan={plan}
               index={index}

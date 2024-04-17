@@ -3,7 +3,7 @@ import styles from './JobsHero.module.css';
 import Button from '@/components/common/Button/Button';
 import LinkArrowIcon from '/public/icons/jobs-arrow.svg';
 import { inter } from '@/utils/fonts';
-
+import { scrollToSection } from '@/utils/scroll';
 const JobsHero = () => {
   return (
     <section className={styles.jobsHeroSection}>
@@ -22,7 +22,11 @@ const JobsHero = () => {
           Arbeiten wir zusammen, um eine nachhaltige Zukunft zu schaffen und den
           Wandel um uns herum positiv zu beeinflussen
         </p>
-        <Button className={styles.jobsHeroBtn} type="button">
+        <Button
+          handleClick={() => scrollToSection('jobs')}
+          className={styles.jobsHeroBtn}
+          type="button"
+        >
           Stellenangebote
         </Button>
       </div>
