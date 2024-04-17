@@ -8,8 +8,8 @@ const roleOptions = [
 ];
 const locationOptions = [
   { value: '', label: 'All locations' },
-  { value: 'Deutschland, Ulm', label: 'Deutschland,Ulm' },
-  { value: 'Deutschland, Berlin', label: 'Deutschland,Berlin' },
+  { value: 'Deutschland,Ulm', label: 'Deutschland,Ulm' },
+  { value: 'Deutschland,Berlin', label: 'Deutschland,Berlin' },
 ];
 const contractOptions = [
   { value: '', label: 'All contract types' },
