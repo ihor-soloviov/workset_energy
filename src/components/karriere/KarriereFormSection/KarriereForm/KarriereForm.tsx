@@ -135,7 +135,7 @@ const KarriereForm = () => {
             id="cv"
             type="file"
             required
-            accept=".pdf,.doc,.docx"
+            accept=".pdf,pdf/a,.doc,.docx,.png,.jpg,.xlm,.xls,.pdg"
             placeholder="Keine Datei gewählt"
             className={styles.karriereInputFile}
             onChange={handleFileChange}

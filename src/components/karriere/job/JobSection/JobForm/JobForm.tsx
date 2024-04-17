@@ -125,7 +125,7 @@ const JobForm = () => {
             <input
               id="cv"
               type="file"
-              accept=".pdf,.doc,.docx"
+              accept=".pdf,pdf/a,.doc,.docx,.png,.jpg,.xlm,.xls,.pdg"
               placeholder="Keine Datei gewählt"
               className={styles.jobInputFile}
               onChange={handleFileChange}

@@ -133,7 +133,7 @@ const AngebotForm = () => {
         <input
           id="angebot"
           type="file"
-          accept=".pdf,.doc,.docx"
+          accept=".pdf,pdf/a,.doc,.docx,.png,.jpg,.xlm,.xls,.pdg"
           required
           placeholder="Lade dein(e) Angebot(e) hoch"
           className={styles.angebotInputFile}
