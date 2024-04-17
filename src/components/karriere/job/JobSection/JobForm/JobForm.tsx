@@ -67,8 +67,8 @@ const JobForm = () => {
         );
         status === 200 && console.log('200');
         setIsLoading(false);
-        resetForm();
         setSelectedFile(null);
+        resetForm();
       }
     },
   });
