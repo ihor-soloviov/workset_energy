@@ -64,10 +64,7 @@ const KarriereForm = () => {
 
         formData.append('file', selectedFile);
 
-        const status = await formDataPost(
-          formData,
-          'https://mailer.work-set.eu/energyApi/cv',
-        );
+        const status = await formDataPost(formData, 'cv');
         status === 200 && console.log('200');
         setIsLoading(false);
         setSelectedFile(null);

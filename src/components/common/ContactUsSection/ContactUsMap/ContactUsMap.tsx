@@ -22,9 +22,12 @@ const ContactUsMap = () => {
 
   const toggleInfoWindowClick = () => setIsInfoWindowOpen(!isInfoWindowOpen);
 
+  const googleApiKey = process.env.NEXT_PUBLIC_GOOGLE_API_KEY
+    ? process.env.NEXT_PUBLIC_GOOGLE_API_KEY
+    : '';
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: 'AIzaSyCFu2436NGhyXMBwq8mLiAhsl_SSYYRhvI',
+    googleMapsApiKey: googleApiKey,
   });
 
   return (

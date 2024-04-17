@@ -41,10 +41,7 @@ const HeroForm: React.FC<Props> = ({ hideModal }) => {
       formData.append('userPhone', tel);
       formData.append('userName', name);
 
-      const status = await formDataPost(
-        formData,
-        'https://mailer.work-set.eu/energyApi/phone',
-      );
+      const status = await formDataPost(formData, 'phone');
       setIsLoading(false);
       status === 200 && hideModal();
 

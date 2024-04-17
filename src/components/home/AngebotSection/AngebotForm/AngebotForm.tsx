@@ -65,10 +65,7 @@ const AngebotForm = () => {
 
         formData.append('file', selectedFile);
 
-        const status = await formDataPost(
-          formData,
-          'https://mailer.work-set.eu/energyApi/angebot',
-        );
+        const status = await formDataPost(formData, 'angebot');
         status === 200 && console.log('200');
         setIsLoading(false);
         setSelectedFile(null);

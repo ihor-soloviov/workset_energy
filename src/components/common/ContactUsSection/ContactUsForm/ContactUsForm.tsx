@@ -52,10 +52,7 @@ const ContactUsForm = () => {
         formData.append(key, value);
       });
 
-      const status = await formDataPost(
-        formData,
-        'https://mailer.work-set.eu/energyApi/contact-us',
-      );
+      const status = await formDataPost(formData, 'contact-us');
       status === 200 && console.log('200');
       setIsLoading(false);
       resetForm();

@@ -5,7 +5,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { interTight, inter } from '@/utils/fonts';
 import { LeadStepProps } from '../../types';
-import { leadGenformDataPost } from '@/utils/api';
+import { formDataPost } from '@/utils/api';
 import { ThreeDots } from 'react-loader-spinner';
 import { useState } from 'react';
 const LeadStepSevenForm = ({
@@ -53,10 +53,7 @@ const LeadStepSevenForm = ({
           leadGenData.append(key, value.toString());
         }
       });
-      const status = await leadGenformDataPost(
-        leadGenData,
-        'https://mailer.work-set.eu/energyApi/leadgen',
-      );
+      const status = await formDataPost(leadGenData, 'leadgen');
       status === 200 && console.log('200');
       setIsLoading(false);
       resetForm();
