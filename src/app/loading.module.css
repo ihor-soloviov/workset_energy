@@ -14,5 +14,17 @@
 }
 
 .loader > svg {
-  width: 120px;
+  width: 80px;
+}
+
+@media screen and (min-width: 390px) {
+}
+
+@media screen and (min-width: 1440px) {
+}
+
+@media screen and (min-width: 1728px) {
+  .loader > svg {
+    width: 120px;
+  }
 }
