@@ -137,6 +137,9 @@
   width: fit-content;
   margin: 0 auto;
 }
+.loader > svg {
+  width: 85px;
+}
 
 @media screen and (min-width: 1440px) {
   .jobsList {
@@ -200,6 +203,9 @@
   }
   .jobsErrorText {
     font-size: 2.4rem;
+  }
+  .loader > svg {
+    width: 1.1rem;
   }
 }
 
@@ -265,5 +271,8 @@
   }
   .jobsErrorText {
     font-size: 24px;
+  }
+  .loader > svg {
+    width: 110px;
   }
 }

@@ -1,0 +1,52 @@
+.loader {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.loader > svg {
+  width: 80px;
+}
+
+.loaderWrap {
+  height: 70vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jobErrorWrap {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jobErrorText {
+  color: var(--gray-text);
+  font-size: 22px;
+  line-height: 150%;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1440px) {
+  .jobErrorText {
+    font-size: 2.4rem;
+  }
+
+  .loader > svg {
+    width: 1.1rem;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .jobErrorText {
+    font-size: 24px;
+  }
+  .loader > svg {
+    width: 110px;
+  }
+}
