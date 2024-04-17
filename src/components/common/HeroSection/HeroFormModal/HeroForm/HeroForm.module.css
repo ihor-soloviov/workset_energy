@@ -75,6 +75,10 @@
   stroke: var(--red-main);
 }
 
+.heroFormBtn:not(:disabled):hover .loader > svg {
+  fill: var(--red-main);
+}
+
 .errorText {
   position: absolute;
   right: 10px;

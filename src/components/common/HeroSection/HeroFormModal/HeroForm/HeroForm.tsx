@@ -8,12 +8,15 @@ import ArrowIcon from '/public/icons/small-arrow-btn.svg';
 import Button from '../../../Button/Button';
 
 import { formDataPost } from '@/utils/api';
+import { useState } from 'react';
+import { ThreeDots } from 'react-loader-spinner';
 
 type Props = {
   hideModal: () => void;
 };
 
 const HeroForm: React.FC<Props> = ({ hideModal }) => {
+  const [isLoading, setIsLoading] = useState(false);
   const {
     handleSubmit,
     errors,
@@ -32,6 +35,7 @@ const HeroForm: React.FC<Props> = ({ hideModal }) => {
       tel: Yup.number().typeError('Invalid number').required('Required'),
     }),
     onSubmit: async ({ tel, name }) => {
+      setIsLoading(true);
       const formData = new FormData();
 
       formData.append('userPhone', tel);
@@ -41,7 +45,9 @@ const HeroForm: React.FC<Props> = ({ hideModal }) => {
         formData,
         'https://mailer.work-set.eu/energyApi/phone',
       );
+      setIsLoading(false);
       status === 200 && hideModal();
+
       resetForm();
     },
   });
@@ -77,8 +83,23 @@ const HeroForm: React.FC<Props> = ({ hideModal }) => {
         className={`${styles.heroFormBtn} ${interTight.className}`}
         type="submit"
       >
-        Senden
-        <ArrowIcon className={styles.heroIcon} />
+        {isLoading ? (
+          <ThreeDots
+            visible={true}
+            height="50"
+            width="50"
+            color="#fff"
+            radius="9"
+            ariaLabel="three-dots-loading"
+            wrapperStyle={{}}
+            wrapperClass={styles.loader}
+          />
+        ) : (
+          <>
+            Senden
+            <ArrowIcon className={styles.heroIcon} />
+          </>
+        )}
       </Button>
     </form>
   );

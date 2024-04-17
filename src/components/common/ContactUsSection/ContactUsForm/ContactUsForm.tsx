@@ -8,9 +8,14 @@ import styles from './ContactUsForm.module.css';
 import Button from '../../Button/Button';
 import useObserver from '@/hooks/useObserver';
 import { formDataPost } from '@/utils/api';
+import { ThreeDots } from 'react-loader-spinner';
+import { useState } from 'react';
 
 const ContactUsForm = () => {
+  const [isLoading, setIsLoading] = useState(false);
+
   useObserver(`.${styles.contactUsForm}`, `${styles.contactUsFormVisible}`);
+
   const {
     handleSubmit,
     errors,
@@ -33,6 +38,7 @@ const ContactUsForm = () => {
       message: Yup.string(),
     }),
     onSubmit: async ({ name, email, tel, message }) => {
+      setIsLoading(true);
       const formData = new FormData();
 
       const formDataFields = {
@@ -51,6 +57,7 @@ const ContactUsForm = () => {
         'https://mailer.work-set.eu/energyApi/contact-us',
       );
       status === 200 && console.log('200');
+      setIsLoading(false);
       resetForm();
     },
   });
@@ -105,10 +112,23 @@ const ContactUsForm = () => {
       </label>
       <Button
         disabled={!(isValid && dirty)}
-        className={`${styles.ContactUsBtn} ${interTight.className}`}
+        className={`${styles.contactUsBtn} ${interTight.className}`}
         type="submit"
       >
-        Senden
+        {isLoading ? (
+          <ThreeDots
+            visible={true}
+            height="50"
+            width="50"
+            color="#fff"
+            radius="9"
+            ariaLabel="three-dots-loading"
+            wrapperStyle={{}}
+            wrapperClass={styles.loader}
+          />
+        ) : (
+          'Senden'
+        )}
       </Button>
     </form>
   );

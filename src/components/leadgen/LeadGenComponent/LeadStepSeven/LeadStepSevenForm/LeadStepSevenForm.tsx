@@ -5,14 +5,17 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { interTight, inter } from '@/utils/fonts';
 import { LeadStepProps } from '../../types';
-import { formDataPost } from '@/utils/api';
-
+import { leadGenformDataPost } from '@/utils/api';
+import { ThreeDots } from 'react-loader-spinner';
+import { useState } from 'react';
 const LeadStepSevenForm = ({
   formData,
   setFormData,
   step,
   setStep,
 }: LeadStepProps) => {
+  const [isLoading, setIsLoading] = useState(false);
+
   const {
     handleSubmit,
     errors,
@@ -37,6 +40,7 @@ const LeadStepSevenForm = ({
       userComment: Yup.string(),
     }),
     onSubmit: async values => {
+      setIsLoading(true);
       console.log(values);
 
       setFormData({ ...formData, contactData: values });
@@ -49,11 +53,12 @@ const LeadStepSevenForm = ({
           leadGenData.append(key, value.toString());
         }
       });
-      const status = await formDataPost(
+      const status = await leadGenformDataPost(
         leadGenData,
         'https://mailer.work-set.eu/energyApi/leadgen',
       );
       status === 200 && console.log('200');
+      setIsLoading(false);
       resetForm();
       setStep(step + 1);
     },
@@ -111,7 +116,20 @@ const LeadStepSevenForm = ({
         className={`${styles.leadStepSevenBtn} ${interTight.className}`}
         type="submit"
       >
-        Weiter
+        {isLoading ? (
+          <ThreeDots
+            visible={true}
+            height="50"
+            width="50"
+            color="#fff"
+            radius="9"
+            ariaLabel="three-dots-loading"
+            wrapperStyle={{}}
+            wrapperClass={styles.loader}
+          />
+        ) : (
+          'Weiter'
+        )}
       </Button>
 
       <Button
@@ -119,8 +137,23 @@ const LeadStepSevenForm = ({
         className={`${styles.leadStepSevenBtnDesc} ${interTight.className}`}
         type="submit"
       >
-        Weiter
-        <LeadIcon className={styles.leadIcon} />
+        {isLoading ? (
+          <ThreeDots
+            visible={true}
+            height="50"
+            width="50"
+            color="#f32c40"
+            radius="9"
+            ariaLabel="three-dots-loading"
+            wrapperStyle={{}}
+            wrapperClass={styles.loader}
+          />
+        ) : (
+          <>
+            Weiter
+            <LeadIcon className={styles.leadIcon} />
+          </>
+        )}
       </Button>
     </form>
   );

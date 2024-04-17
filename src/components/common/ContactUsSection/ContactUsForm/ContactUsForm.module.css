@@ -81,7 +81,7 @@
   font-size: 10px;
 }
 
-.ContactUsBtn {
+.contactUsBtn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,16 +100,20 @@
     background-color 250ms var(--cubic);
 }
 
-.ContactUsBtn:disabled {
+.contactUsBtn:disabled {
   border-color: var(--red-second);
   background-color: var(--red-second);
   cursor: not-allowed;
 }
 
-.ContactUsBtn:not(:disabled):hover {
+.contactUsBtn:not(:disabled):hover {
   border-color: var(--white-main);
   background-color: var(--white-main);
   color: var(--red-main);
+}
+
+.contactUsBtn:not(:disabled):hover .loader > svg {
+  fill: var(--red-main);
 }
 
 @media screen and (min-width: 390px) {
@@ -147,7 +151,7 @@
     height: 100px;
   }
 
-  .ContactUsBtn {
+  .contactUsBtn {
     width: 9.2rem;
     height: 4.6rem;
     padding: 1.4rem 2rem;
@@ -167,7 +171,7 @@
     margin-bottom: 24px;
   }
 
-  .ContactUsBtn {
+  .contactUsBtn {
     width: 92px;
     height: 46px;
     padding: 14px 20px;

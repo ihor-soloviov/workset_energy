@@ -8,9 +8,11 @@ import * as Yup from 'yup';
 import Button from '@/components/common/Button/Button';
 import { useState, ChangeEvent } from 'react';
 import { formDataPost } from '@/utils/api';
+import { ThreeDots } from 'react-loader-spinner';
 
 const JobForm = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const truncateText = (text: string, maxLength: number) => {
     return text.length > maxLength ? `${text.slice(0, maxLength)}...` : text;
@@ -45,6 +47,7 @@ const JobForm = () => {
     }),
     onSubmit: async ({ name, tel }) => {
       if (selectedFile) {
+        setIsLoading(true);
         const formData = new FormData();
         const formDataFields = {
           userName: name,
@@ -63,6 +66,7 @@ const JobForm = () => {
           'https://mailer.work-set.eu/energyApi/cv',
         );
         status === 200 && console.log('200');
+        setIsLoading(false);
         resetForm();
         setSelectedFile(null);
       }
@@ -143,7 +147,20 @@ const JobForm = () => {
           className={`${styles.jobBtn} ${interTight.className}`}
           type="submit"
         >
-          Senden
+          {isLoading ? (
+            <ThreeDots
+              visible={true}
+              height="50"
+              width="50"
+              color="#fff"
+              radius="9"
+              ariaLabel="three-dots-loading"
+              wrapperStyle={{}}
+              wrapperClass={styles.loader}
+            />
+          ) : (
+            'Senden'
+          )}
         </Button>
       </form>
     </div>

@@ -11,6 +11,17 @@ const formDataPost = async (formData: FormData, url: string) => {
   }
 };
 
+const leadGenformDataPost = async (formData: FormData, url: string) => {
+  try {
+    const { status } = await axios.post(url, { data: formData });
+    console.log(status);
+
+    return status;
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+};
+
 const fetchJobsData = async () => {
   try {
     const { data } = await axios.get('https://api.work-set.eu/api/jobs');
@@ -31,4 +42,4 @@ const fetchJobData = async (id: string) => {
   }
 };
 
-export { formDataPost, fetchJobsData, fetchJobData };
+export { formDataPost, leadGenformDataPost, fetchJobsData, fetchJobData };

@@ -169,6 +169,10 @@
   color: var(--red-main);
 }
 
+.angebotBtn:not(:disabled):hover .loader > svg {
+  fill: var(--red-main);
+}
+
 @media screen and (min-width: 390px) {
   .angebotInput,
   .angebotTextArea,

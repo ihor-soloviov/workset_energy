@@ -77,6 +77,8 @@
 .advantagesLink {
   display: flex;
   justify-content: center;
+  width: 136px;
+  height: 46px;
   align-items: center;
   border-radius: 6px;
   border: 1px solid var(--gray-stroke);
@@ -189,7 +191,7 @@
   }
 
   .advantagesLink {
-    width: 138px;
-    height: 45px;
+    width: 136px;
+    height: 44px;
   }
 }

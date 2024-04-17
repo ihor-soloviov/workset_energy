@@ -165,6 +165,10 @@
   color: var(--red-main);
 }
 
+.karriereBtn:not(:disabled):hover .loader > svg {
+  fill: var(--red-main);
+}
+
 @media screen and (min-width: 390px) {
   .karriereInput,
   .karriereTextArea,

@@ -8,10 +8,11 @@ import * as Yup from 'yup';
 import Button from '@/components/common/Button/Button';
 import { useState, ChangeEvent } from 'react';
 import { formDataPost } from '@/utils/api';
+import { ThreeDots } from 'react-loader-spinner';
 
 const AngebotForm = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
-
+  const [isLoading, setIsLoading] = useState(false);
   const truncateText = (text: string, maxLength: number) =>
     text.length > maxLength ? `${text.slice(0, maxLength)}...` : text;
 
@@ -49,6 +50,7 @@ const AngebotForm = () => {
     }),
     onSubmit: async ({ name, email, tel, message }) => {
       if (selectedFile) {
+        setIsLoading(true);
         const formData = new FormData();
         const formDataFields = {
           userName: name,
@@ -68,6 +70,7 @@ const AngebotForm = () => {
           'https://mailer.work-set.eu/energyApi/angebot',
         );
         status === 200 && console.log('200');
+        setIsLoading(false);
         resetForm();
         setSelectedFile(null);
       }
@@ -164,7 +167,20 @@ const AngebotForm = () => {
           className={`${styles.angebotBtn} ${interTight.className}`}
           type="submit"
         >
-          Senden
+          {isLoading ? (
+            <ThreeDots
+              visible={true}
+              height="50"
+              width="50"
+              color="#fff"
+              radius="9"
+              ariaLabel="three-dots-loading"
+              wrapperStyle={{}}
+              wrapperClass={styles.loader}
+            />
+          ) : (
+            'Senden'
+          )}
         </Button>
       </div>
     </form>
