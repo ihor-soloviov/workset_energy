@@ -7,6 +7,7 @@ import { objectItems, objectImages } from './slides';
 import LocationIcon from '/public/icons/location.svg';
 import ArrowIcon from '/public/icons/slide-arrow.svg';
 import { inter } from '@/utils/fonts';
+import { scrollToContact } from '@/utils/scroll';
 
 const ObjectSlider = () => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
@@ -90,7 +91,11 @@ const ObjectSlider = () => {
                   ),
               )}
             </ul>
-            <Button className={styles.sliderBtn} type="button">
+            <Button
+              handleClick={scrollToContact}
+              className={styles.sliderBtn}
+              type="button"
+            >
               Zum Angebot
             </Button>
           </div>

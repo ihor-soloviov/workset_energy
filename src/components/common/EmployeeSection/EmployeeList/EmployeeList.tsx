@@ -1,5 +1,3 @@
-'use client';
-
 import styles from './EmployeeList.module.css';
 import Image from 'next/image';
 import { inter } from '@/utils/fonts';
@@ -7,7 +5,12 @@ import ArrowIcon from '/public/icons/small-arrow-btn.svg';
 import Button from '../../Button/Button';
 import { employeeItems } from './employeeItems';
 import { scrollToContact } from '@/utils/scroll';
-const EmployeeList = () => {
+
+type EmployeeListProps = {
+  pathname: string;
+};
+
+const EmployeeList = ({ pathname }: EmployeeListProps) => {
   return (
     <ul className={styles.employeeList}>
       {employeeItems.map(({ text, title, imgMob, imgDesc, btn }) => (
@@ -29,7 +32,7 @@ const EmployeeList = () => {
             <p className={`${styles.employeeText} ${inter.className}`}>
               {text}
             </p>
-            {btn && (
+            {btn && pathname !== '/karriere' && (
               <Button
                 handleClick={scrollToContact}
                 className={styles.employeeItemBtn}
