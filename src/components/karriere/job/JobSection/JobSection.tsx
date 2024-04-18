@@ -10,7 +10,7 @@ type JobSectionProps = {
 
 const JobSection = ({ response }: JobSectionProps) => {
   return (
-    <section className={styles.jobSection}>
+    <section id="job" className={styles.jobSection}>
       <div className={styles.jobContainer}>
         <JobInfo response={response} />
         <JobList response={response} />

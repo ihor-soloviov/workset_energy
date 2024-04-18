@@ -5,7 +5,7 @@ import { inter } from '@/utils/fonts';
 
 const KarriereFormSection = () => {
   return (
-    <section className={styles.karriereFormSection}>
+    <section id="karriere-form" className={styles.karriereFormSection}>
       <div className={styles.karriereFormContainer}>
         <RecycleTextWrap
           title="Sie haben keine passende Stelle gefunden?"

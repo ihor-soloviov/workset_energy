@@ -5,6 +5,7 @@ import { inter } from '@/utils/fonts';
 import type { KarrierJobItems, SelectValues } from '@/types/infoTypes';
 import { filteredJobs } from '@/utils/filteredJobs';
 import { ThreeDots } from 'react-loader-spinner';
+import { scrollToSection } from '@/utils/scroll';
 type JobsListProps = {
   response: KarrierJobItems | null;
   selectValues: SelectValues;
@@ -59,7 +60,11 @@ const JobsList = ({ response, selectValues, isLoading }: JobsListProps) => {
                   >
                     Mehr Info
                   </Link>
-                  <Button type="button" className={styles.jobsBtn}>
+                  <Button
+                    handleClick={() => scrollToSection('karriere-form')}
+                    type="button"
+                    className={styles.jobsBtn}
+                  >
                     Eine Anfrage stellen
                   </Button>
                 </div>

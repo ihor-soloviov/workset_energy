@@ -7,6 +7,7 @@ import { inter } from '@/utils/fonts';
 import Image from 'next/image';
 import { currentImg } from './jobHeroItems';
 import type { KarrierJobItem } from '@/types/infoTypes';
+import { scrollToSection } from '@/utils/scroll';
 
 type JobHeroProps = {
   response: KarrierJobItem | null;
@@ -51,7 +52,11 @@ const JobHero = ({ response }: JobHeroProps) => {
         <p className={`${styles.JobHeroTextDesk} ${inter.className}`}>
           Eine Chance, eine erfolgreiche Karriere im Vertrieb zu starten!
         </p>
-        <Button className={styles.JobHeroBtn} type="button">
+        <Button
+          handleClick={() => scrollToSection('job')}
+          className={styles.JobHeroBtn}
+          type="button"
+        >
           Mehr Info
           <BtnArrowIcon className={styles.JobHeroIcon} />
         </Button>
