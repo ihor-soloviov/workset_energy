@@ -29,10 +29,8 @@ type PlanT = {
 
 type ObjectItem = {
   standort: string;
-  gesamtleistung: string;
-  stückzahl: string;
-  speichersystem: string;
-};
+  textList: string[];
+} & ImportedImages;
 
 type RedHelp = TitleText & {
   icon: React.ElementType;

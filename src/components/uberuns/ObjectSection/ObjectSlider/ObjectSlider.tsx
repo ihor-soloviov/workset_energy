@@ -1,106 +1,90 @@
 'use client';
-import { useState } from 'react';
+import { useRef } from 'react';
 import styles from './ObjectSlider.module.css';
 import Image from 'next/image';
 import Button from '@/components/common/Button/Button';
-import { objectItems, objectImages } from './slides';
+import { objectItems } from './slides';
 import LocationIcon from '/public/icons/location.svg';
 import ArrowIcon from '/public/icons/slide-arrow.svg';
 import { inter } from '@/utils/fonts';
 import { scrollToSection } from '@/utils/scroll';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Autoplay } from 'swiper/modules';
+import { Swiper as SwiperType } from 'swiper';
 
 const ObjectSlider = () => {
-  const [activeSlideIndex, setActiveSlideIndex] = useState(0);
-  console.log(activeSlideIndex);
-
-  const handlePrevSlide = () =>
-    setActiveSlideIndex(prev => (prev === 0 ? 2 : prev - 1));
-
-  const handleNextSlide = () =>
-    setActiveSlideIndex(prev => (prev === 2 ? 0 : prev + 1));
-
-  const renderText = (key: string) => {
-    switch (key) {
-      case 'gesamtleistung':
-        return 'PV-Anlage Gesamtleistung:';
-      case 'stückzahl':
-        return 'Stückzahl der Module:';
-      case 'speichersystem':
-        return 'Speichersystem:';
-      default:
-        return;
-    }
-  };
+  const swiperRef = useRef<SwiperType>();
 
   return (
     <div className={styles.sliderMainWrap}>
       <div className={styles.sliderButtonsWrap}>
         <Button
-          handleClick={handlePrevSlide}
+          handleClick={() => swiperRef.current?.slidePrev()}
           type="button"
           className={styles.sliderNavBtn}
         >
           <ArrowIcon className={styles.prevArrow} />
         </Button>
         <Button
-          handleClick={handleNextSlide}
+          handleClick={() => swiperRef.current?.slideNext()}
           type="button"
           className={styles.sliderNavBtn}
         >
           <ArrowIcon className={styles.nextArrow} />
         </Button>
       </div>
-      <div className={styles.sliderMainItem}>
-        <Image
-          className={styles.sliderImgMob}
-          src={objectImages[activeSlideIndex].mobile}
-          alt="slide"
-        />
-        <Image
-          className={styles.sliderImgDesk}
-          src={objectImages[activeSlideIndex].desktop}
-          alt="slide"
-        />
+      <Swiper
+        className={styles.sliderMainList}
+        modules={[Autoplay, Navigation]}
+        spaceBetween={25}
+        loop={true}
+        autoplay={true}
+        slidesPerView={1}
+        onBeforeInit={swiper => {
+          swiperRef.current = swiper;
+        }}
+      >
+        {objectItems.map(({ standort, textList, mobile, desktop }, index) => (
+          <SwiperSlide className={styles.slide} key={index}>
+            <div className={styles.sliderMainItem}>
+              <Image className={styles.sliderImgMob} src={mobile} alt="slide" />
+              <Image
+                className={styles.sliderImgDesk}
+                src={desktop}
+                alt="slide"
+              />
 
-        <div className={styles.sliderWrap}>
-          <div className={styles.sliderTopWrap}>
-            <div className={styles.sliderIconWrap}>
-              <LocationIcon className={styles.sliderIcon} />
-              <p className={`${styles.sliderTopText} ${inter.className}`}>
-                Standort:
-              </p>
+              <div className={styles.sliderWrap}>
+                <div className={styles.sliderTopWrap}>
+                  <div className={styles.sliderIconWrap}>
+                    <LocationIcon className={styles.sliderIcon} />
+                    <p className={`${styles.sliderTopText} ${inter.className}`}>
+                      Standort:
+                    </p>
+                  </div>
+                  <h3 className={styles.sliderTitle}>{standort}</h3>
+                </div>
+                <div className={styles.sliderBottomWrap}>
+                  <ul className={`${styles.sliderList} ${inter.className}`}>
+                    {textList.map((text, index) => (
+                      <li className={styles.sliderItem} key={index}>
+                        <p className={styles.sliderText}>{text}</p>
+                      </li>
+                    ))}
+                  </ul>
+                  <Button
+                    handleClick={() => scrollToSection('contact')}
+                    className={styles.sliderBtn}
+                    type="button"
+                  >
+                    Zum Angebot
+                  </Button>
+                </div>
+              </div>
             </div>
-            <h3 className={styles.sliderTitle}>
-              {objectItems[activeSlideIndex].standort}
-            </h3>
-          </div>
-          <div className={styles.sliderBottomWrap}>
-            <ul className={`${styles.sliderList} ${inter.className}`}>
-              {Object.entries(objectItems[activeSlideIndex]).map(
-                ([key, value]) =>
-                  key !== 'standort' && (
-                    <li className={styles.sliderItem} key={key}>
-                      <p className={styles.sliderText}>
-                        {renderText(key)}{' '}
-                        <span className={styles.sliderSpan}>
-                          {value} {key === 'gesamtleistung' && 'kWp'}{' '}
-                          {key === 'speichersystem' && 'kWh'}
-                        </span>
-                      </p>
-                    </li>
-                  ),
-              )}
-            </ul>
-            <Button
-              handleClick={() => scrollToSection('contact')}
-              className={styles.sliderBtn}
-              type="button"
-            >
-              Zum Angebot
-            </Button>
-          </div>
-        </div>
-      </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 };
