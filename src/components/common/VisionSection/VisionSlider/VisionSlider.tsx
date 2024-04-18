@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './VisionSlider.module.css';
 import { inter } from '@/utils/fonts';
 import Button from '../../Button/Button';
@@ -21,6 +21,12 @@ const VisionSlider = () => {
 
   const handleActiveSlide = (index: number) => setSlide(index + 1);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      handleNextClick();
+    }, 4000);
+    return () => clearTimeout(timer);
+  }, [slide]);
   return (
     <div className={styles.visionMainWrap}>
       <div className={styles.visionImgWrap}>
