@@ -5,18 +5,29 @@ import TikTokIcon from '/public/icons/tiktok.svg';
 
 type SocialLinkItem = {
   href: string;
+  ariaLabel: string;
   icon: React.ElementType;
 };
 
 export const socialLinkItems: SocialLinkItem[] = [
-  { href: 'https://www.instagram.com/workset.energy/', icon: InstIcon },
+  {
+    href: 'https://www.instagram.com/workset.energy/',
+    ariaLabel: 'instagram',
+    icon: InstIcon,
+  },
   {
     href: 'https://www.facebook.com/profile.php?id=100090207079736',
+    ariaLabel: 'facebook',
     icon: FacebookIcon,
   },
-  { href: 'https://www.youtube.com/@WorkSETEnergy', icon: YoutubeIcon },
+  {
+    href: 'https://www.youtube.com/@WorkSETEnergy',
+    ariaLabel: 'youtube',
+    icon: YoutubeIcon,
+  },
   {
     href: 'https://www.tiktok.com/@caplicon/video/6959087922247191810',
+    ariaLabel: 'tiktok',
     icon: TikTokIcon,
   },
 ];

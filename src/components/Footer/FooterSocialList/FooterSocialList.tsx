@@ -15,11 +15,12 @@ const FooterSocialList = () => {
 
   return (
     <ul className={styles.footerSocialList}>
-      {socialLinkItems.map(({ href, icon }, index) => (
+      {socialLinkItems.map(({ href, icon, ariaLabel }, index) => (
         <li key={index} className={styles.footerSocialItem}>
           <a
             target="_blank"
             href={href}
+            aria-label={ariaLabel}
             className={`${styles.footerSocialLink} ${getClassByIndex(index)}`}
           >
             {React.createElement(
