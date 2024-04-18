@@ -12,6 +12,7 @@ const IFrame: React.FC<Props> = ({ link, videoFrameClass }) => (
     className={videoFrameClass}
     allow="accelerometer"
     allowFullScreen
+    loading="eager"
   />
 );
 
