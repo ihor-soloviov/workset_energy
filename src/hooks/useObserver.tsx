@@ -16,7 +16,9 @@ const useObserver: UseObserver = (selector, visibleClass) => {
           }
         });
       },
-      { threshold: 0 },
+      {
+        threshold: [0, 0.5, 1],
+      },
     );
 
     const elements = document.querySelectorAll(selector);

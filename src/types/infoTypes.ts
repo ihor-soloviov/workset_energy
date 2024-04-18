@@ -57,9 +57,9 @@ type VorteileSliderT = {
   sliderText: VorteileSliderItems[];
 };
 
-type HeroItem = {
+type HeroItem = ImportedImages & {
   title: string;
-} & ImportedImages;
+};
 
 type KarrierAttributes = {
   job_title: string;
@@ -96,6 +96,7 @@ type KarrierJobItems = {
   data: KarrierJobData[];
   meta: KarrierJobMeta;
 };
+
 type KarrierJobItem = {
   data: KarrierJobData;
   meta?: KarrierJobMeta;
