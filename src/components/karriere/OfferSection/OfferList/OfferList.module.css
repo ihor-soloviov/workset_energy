@@ -124,7 +124,8 @@
   .offerItem {
     display: flex;
     flex-direction: row;
-    height: 36rme;
+    height: 36rem;
+
     justify-content: center;
     opacity: 0;
     filter: blur(5px);
@@ -144,6 +145,7 @@
 
   .offerImgDesk {
     display: block;
+    width: 38.6rem;
   }
 
   .offerMainWrap {
@@ -278,5 +280,8 @@
     width: 162px;
     letter-spacing: -0.16px;
     margin-bottom: 38px;
+  }
+  .offerImgDesk {
+    width: 386px;
   }
 }
