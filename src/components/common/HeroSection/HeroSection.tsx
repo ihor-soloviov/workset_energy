@@ -52,6 +52,8 @@ const HeroSection = ({
   useEffect(() => {
     if (isDesktop) {
       setIsModalOpen(true);
+    } else {
+      setIsModalOpen(false);
     }
   }, [handleModal, isDesktop, setIsModalOpen]);
 

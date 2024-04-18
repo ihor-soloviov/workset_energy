@@ -6,15 +6,12 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import styles from './ContactUsForm.module.css';
 import Button from '../../Button/Button';
-import useObserver from '@/hooks/useObserver';
 import { formDataPost } from '@/utils/api';
 import { ThreeDots } from 'react-loader-spinner';
 import { useState } from 'react';
 
 const ContactUsForm = () => {
   const [isLoading, setIsLoading] = useState(false);
-
-  useObserver(`.${styles.contactUsForm}`, `${styles.contactUsFormVisible}`);
 
   const {
     handleSubmit,

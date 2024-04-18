@@ -1,12 +1,8 @@
 import axios from 'axios';
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_API_URL
-  ? process.env.NEXT_PUBLIC_BASE_API_URL
-  : '';
+const baseUrl = process.env.NEXT_PUBLIC_BASE_API_URL ?? '';
 
-const baseStrapiUrl = process.env.NEXT_PUBLIC_BASE_STRAPI_URL
-  ? process.env.NEXT_PUBLIC_BASE_STRAPI_URL
-  : '';
+const baseStrapiUrl = process.env.NEXT_PUBLIC_BASE_STRAPI_URL ?? '';
 
 const formDataPost = async (formData: FormData, url: string) => {
   try {

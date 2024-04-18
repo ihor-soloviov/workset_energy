@@ -21,7 +21,6 @@ const HeroFormModal = () => {
 
   const sendModalForm = () => {
     stopScroll(true);
-    handleHeader('block');
     const form = document.querySelector(`.${styles.scrollHeroFormHidden}`);
     if (form) {
       form.classList.remove(`${styles.scrollHeroFormVisible}`);

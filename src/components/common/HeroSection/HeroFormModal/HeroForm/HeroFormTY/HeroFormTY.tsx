@@ -3,11 +3,13 @@
 import React from 'react';
 import styles from '@/components/common/HeroSection/HeroFormModal/HeroFormModal.module.css';
 import Button from '@/components/common/Button/Button';
+import CrossIcon from '/public/icons/cross.svg';
 import { inter } from '@/utils/fonts';
 import { useThankYouStore } from '@/store/hero-store';
 import useObserver from '@/hooks/useObserver';
 import { useGlobalStore } from '@/store/global-store';
 import { stopScroll } from '@/utils/stopScroll';
+import { handleHeader } from '@/utils/handleHeader';
 
 const HeroFormTY = () => {
   const { isDesktop } = useGlobalStore();
@@ -22,10 +24,11 @@ const HeroFormTY = () => {
     const ty = document.querySelector(`.${styles.heroThankYouWrap}`);
     if (ty) {
       ty.classList.remove(`${styles.heroThankYouWrapVisible}`);
+      handleHeader('block');
+      stopScroll(false);
 
       setTimeout(() => {
         setIsThankYouOpen();
-        stopScroll(false);
         if (isDesktop) {
           setIsModalOpen(true);
         }
@@ -35,18 +38,30 @@ const HeroFormTY = () => {
 
   return (
     <div className={styles.heroThankYouWrap}>
-      <h2 className={styles.heroThankTitle}>WorkSET Energy sagt Danke!</h2>
-      <p className={`${styles.heroThankText} ${inter.className}`}>
-        Wir haben deine Anfrage erhalten und freuen uns, dich auf deinem Weg zu
-        nachhaltiger Energie unterstützen zu dürfen
-      </p>
-      <Button
-        handleClick={hideThankYou}
-        className={styles.heroThankBtn}
-        type="button"
-      >
-        Hauptseite
-      </Button>
+      <div className={styles.heroTopWrap}>
+        <Button
+          handleClick={hideThankYou}
+          type="button"
+          className={styles.heroCloseBtn}
+        >
+          <CrossIcon className={styles.heroCloseIcon} />
+        </Button>
+      </div>
+      <div className={styles.heroLine}></div>
+      <div className={styles.heroThanYouContainer}>
+        <h2 className={styles.heroThankTitle}>WorkSET Energy sagt Danke!</h2>
+        <p className={`${styles.heroThankText} ${inter.className}`}>
+          Wir haben deine Anfrage erhalten und freuen uns, dich auf deinem Weg
+          zu nachhaltiger Energie unterstützen zu dürfen
+        </p>
+        <Button
+          handleClick={hideThankYou}
+          className={styles.heroThankBtn}
+          type="button"
+        >
+          Hauptseite
+        </Button>
+      </div>
     </div>
   );
 };

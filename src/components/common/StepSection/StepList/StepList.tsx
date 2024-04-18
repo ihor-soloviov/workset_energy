@@ -39,16 +39,6 @@ const StepList = () => {
               {title}
             </h3>
             <p className={`${styles.stepText} ${getClass(index)}`}>{text}</p>
-            <Button
-              handleClick={() => scrollToSection('contact')}
-              className={`${styles.stepBtn} ${getClass(index)}`}
-              type="button"
-            >
-              Zum Angebot
-              <BtnArrowIcon
-                className={`${styles.stepBtnIcon} ${getClass(index)}`}
-              />
-            </Button>
           </div>
         </li>
       ))}
