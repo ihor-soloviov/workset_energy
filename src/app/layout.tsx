@@ -8,7 +8,6 @@ import { interTight } from '@/utils/fonts';
 
 export const metadata: Metadata = {
   title: 'WorkSET Energy',
-  viewport: { width: 'device-width', initialScale: 1, maximumScale: 1 },
 };
 
 const RootLayout = ({
