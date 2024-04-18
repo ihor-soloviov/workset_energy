@@ -67,7 +67,7 @@
     padding: 11rem 0;
   }
   .offerContainer {
-    width: 172.8rem;
+    width: 168.001rem;
     padding: 0 25.5rem;
   }
 
@@ -86,7 +86,6 @@
     width: 13.4rem;
   }
 }
-
 
 @media screen and (min-width: 1728px) {
   .offerSection {

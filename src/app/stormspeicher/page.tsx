@@ -17,7 +17,7 @@ const Stormspeicher = () => {
   return (
     <>
       <HeroSection {...stormspeicherHero} />
-      <VideoSection {...stormSteicherVideo} />
+      {/* <VideoSection {...stormSteicherVideo} /> */}
       <VorteileSection
         sliderText={vorteileItems}
         sliderImages={sliderImages}
