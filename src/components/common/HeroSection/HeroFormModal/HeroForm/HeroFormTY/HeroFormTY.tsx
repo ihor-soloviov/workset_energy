@@ -24,7 +24,7 @@ const HeroFormTY = () => {
     const ty = document.querySelector(`.${styles.heroThankYouWrap}`);
     if (ty) {
       ty.classList.remove(`${styles.heroThankYouWrapVisible}`);
-      handleHeader('block');
+      handleHeader('flex');
       stopScroll(false);
 
       setTimeout(() => {

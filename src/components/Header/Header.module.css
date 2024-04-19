@@ -15,6 +15,14 @@
     rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
+.header.blackStyle.scrolled {
+  background-color: var(--white-main);
+}
+
+.header.blackStyle {
+  transition: unset;
+}
+
 .headerContainer {
   width: 100%;
   padding: 0 24px;

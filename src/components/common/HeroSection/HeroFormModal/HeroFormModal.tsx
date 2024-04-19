@@ -14,7 +14,7 @@ const HeroFormModal = () => {
     useThankYouStore();
 
   const handleModalClose = () => {
-    handleHeader('block');
+    handleHeader('flex');
     handleModal();
     isThankYouOpen && removeStyles();
   };
