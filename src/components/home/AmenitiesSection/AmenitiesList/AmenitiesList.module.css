@@ -74,6 +74,7 @@
   border: none;
   background-color: transparent;
   margin: 0 auto;
+  margin-top: auto;
   color: var(--red-main);
   font-size: 16px;
   gap: 6px;
@@ -116,6 +117,9 @@
     font-size: 1.6rem;
     width: 26.8rem;
     height: 13rem;
+  }
+  .amenitiesLink {
+    margin-top: unset;
   }
 }
 
