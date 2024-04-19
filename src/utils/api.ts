@@ -16,7 +16,7 @@ const formDataPost = async (
     console.error('Error fetching data:', error);
     setPopupAction({ visible: true, status: 'error' });
   } finally {
-    setTimeout(() => setPopupAction({ visible: false, status: '' }));
+    setTimeout(() => setPopupAction({ visible: false, status: '' }), 3000);
   }
 };
 

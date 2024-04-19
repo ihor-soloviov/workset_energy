@@ -16,7 +16,6 @@ import HeroSection from '@/components/common/HeroSection/HeroSection';
 const HomePage = () => {
   return (
     <>
-      <h1>Dein Fachpartner WorkSET Energy</h1>
       <HeroSection {...homeHero} />
       <VideoSection {...firstVideo} />
       <ProductSection />

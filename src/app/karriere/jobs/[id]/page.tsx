@@ -33,7 +33,6 @@ const Job = ({ params: { id } }: Props) => {
 
   return (
     <>
-      <h1>Job</h1>
       {isLoading && (
         <div className={styles.loaderWrap}>
           <ThreeDots

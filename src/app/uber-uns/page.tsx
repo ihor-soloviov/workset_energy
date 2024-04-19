@@ -11,7 +11,6 @@ import React from 'react';
 const UberUns = () => {
   return (
     <>
-      <h1>Uber-uns</h1>
       <UberUnsHero />
       <VisionSection />
       <EmployeeSection />
