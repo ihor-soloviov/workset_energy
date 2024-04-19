@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { PopupAction } from '@/types/infoTypes';
-const baseUrl = process.env.NEXT_PUBLIC_BASE_API_URL ?? '';
 
+const baseUrl = process.env.NEXT_PUBLIC_BASE_API_URL ?? '';
 const baseStrapiUrl = process.env.NEXT_PUBLIC_BASE_STRAPI_URL ?? '';
 
 const formDataPost = async (

@@ -19,7 +19,6 @@ import { pathnames, jobPathRegex } from '@/utils/pathnames';
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [currentPathname, setCurrentPathname] = useState('');
 
   const pathname = usePathname();
 
@@ -60,10 +59,8 @@ const Header = () => {
   }, [setIsDesktop]);
 
   useEffect(() => {
-    setCurrentPathname(pathname);
-    pathname === '/karriere' && addStyles();
-    pathname !== currentPathname && removeStyles();
-  }, [pathname, currentPathname]);
+    pathname === '/karriere' ? addStyles() : removeStyles();
+  }, [pathname]);
 
   return (
     <>

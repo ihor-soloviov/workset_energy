@@ -77,8 +77,8 @@
   filter: blur(0);
 }
 
-.heroThanYouContainer {
-  padding: 272px 25px 0;
+.heroThankYouContainer {
+  padding: 162px 25px 0;
 }
 
 .heroThankTitle {
@@ -96,7 +96,7 @@
 .heroThankText {
   color: var(--gray-text);
   text-align: center;
-  width: fit-content;
+  width: 342px;
   height: 78px;
   font-size: 16px;
   line-height: 160%;
@@ -215,6 +215,7 @@
     font-size: 1.8rem;
     height: auto;
     margin-bottom: 4rem;
+    width: 58.6rem;
   }
 
   .heroThankBtn {
@@ -269,6 +270,10 @@
     font-size: 34px;
     line-height: 130%;
   }
+  .heroThankYouWrap {
+    padding: 350px 0 288px;
+    height: 972px;
+  }
 
   .heroThankTitle {
     margin-top: unset;
@@ -280,6 +285,7 @@
   .heroThankText {
     font-size: 18px;
     height: auto;
+    width: 586px;
     margin-bottom: 40px;
   }
 

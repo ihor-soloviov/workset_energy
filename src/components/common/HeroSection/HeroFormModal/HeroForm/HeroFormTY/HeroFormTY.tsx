@@ -32,7 +32,7 @@ const HeroFormTY = () => {
         if (isDesktop) {
           setIsModalOpen(true);
         }
-      }, 400);
+      }, 100);
     }
   };
 
@@ -48,7 +48,7 @@ const HeroFormTY = () => {
         </Button>
       </div>
       <div className={styles.heroLine}></div>
-      <div className={styles.heroThanYouContainer}>
+      <div className={styles.heroThankYouContainer}>
         <h2 className={styles.heroThankTitle}>WorkSET Energy sagt Danke!</h2>
         <p className={`${styles.heroThankText} ${inter.className}`}>
           Wir haben deine Anfrage erhalten und freuen uns, dich auf deinem Weg
