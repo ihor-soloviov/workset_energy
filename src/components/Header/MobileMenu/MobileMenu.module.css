@@ -4,7 +4,7 @@
   left: 0;
   z-index: 99;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   padding: 18px 0 90px;
   overflow-y: scroll;
   background-color: var(--black-main);
