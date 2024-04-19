@@ -5,7 +5,7 @@ import React from 'react';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 import { interTight } from '@/utils/fonts';
-
+import Popup from '@/components/common/Popup/Popup';
 export const metadata: Metadata = {
   title: 'WorkSET Energy',
 };
@@ -21,6 +21,7 @@ const RootLayout = ({
         <Header />
         <main>{children}</main>
         <Footer />
+        <Popup />
       </body>
     </html>
   );

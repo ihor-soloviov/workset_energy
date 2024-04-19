@@ -24,6 +24,7 @@ const Jobs = () => {
 
   return (
     <>
+      <h1>Jobs</h1>
       <JobsHero />
       <JobsSection isLoading={isLoading} response={response} />
       <KarriereFormSection />

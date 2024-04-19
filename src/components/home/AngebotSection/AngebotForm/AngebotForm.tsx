@@ -9,8 +9,10 @@ import Button from '@/components/common/Button/Button';
 import { useState, ChangeEvent } from 'react';
 import { formDataPost } from '@/utils/api';
 import { ThreeDots } from 'react-loader-spinner';
+import { useGlobalStore } from '@/store/global-store';
 
 const AngebotForm = () => {
+  const { setPopupAction } = useGlobalStore();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const truncateText = (text: string, maxLength: number) =>
@@ -65,8 +67,8 @@ const AngebotForm = () => {
 
         formData.append('file', selectedFile);
 
-        const status = await formDataPost(formData, 'angebot');
-        status === 200 && console.log('200');
+        await formDataPost(formData, 'angebot', setPopupAction);
+
         setIsLoading(false);
         setSelectedFile(null);
         resetForm();

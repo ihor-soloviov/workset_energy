@@ -6,16 +6,17 @@ import * as Yup from 'yup';
 import { inter, interTight } from '@/utils/fonts';
 import ArrowIcon from '/public/icons/small-arrow-btn.svg';
 import Button from '../../../Button/Button';
-
 import { formDataPost } from '@/utils/api';
 import { useState } from 'react';
 import { ThreeDots } from 'react-loader-spinner';
+import { useGlobalStore } from '@/store/global-store';
 
 type Props = {
   hideModal: () => void;
 };
 
 const HeroForm: React.FC<Props> = ({ hideModal }) => {
+  const { setPopupAction } = useGlobalStore();
   const [isLoading, setIsLoading] = useState(false);
   const {
     handleSubmit,
@@ -41,10 +42,9 @@ const HeroForm: React.FC<Props> = ({ hideModal }) => {
       formData.append('userPhone', tel);
       formData.append('userName', name);
 
-      const status = await formDataPost(formData, 'phone');
+      await formDataPost(formData, 'phone', setPopupAction);
       setIsLoading(false);
-      status === 200 && hideModal();
-
+      hideModal();
       resetForm();
     },
   });

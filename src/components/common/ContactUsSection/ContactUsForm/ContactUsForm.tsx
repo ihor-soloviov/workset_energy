@@ -9,8 +9,10 @@ import Button from '../../Button/Button';
 import { formDataPost } from '@/utils/api';
 import { ThreeDots } from 'react-loader-spinner';
 import { useState } from 'react';
+import { useGlobalStore } from '@/store/global-store';
 
 const ContactUsForm = () => {
+  const { setPopupAction } = useGlobalStore();
   const [isLoading, setIsLoading] = useState(false);
 
   const {
@@ -49,8 +51,8 @@ const ContactUsForm = () => {
         formData.append(key, value);
       });
 
-      const status = await formDataPost(formData, 'contact-us');
-      status === 200 && console.log('200');
+      await formDataPost(formData, 'contact-us', setPopupAction);
+
       setIsLoading(false);
       resetForm();
     },

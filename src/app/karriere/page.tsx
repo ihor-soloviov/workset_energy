@@ -9,6 +9,7 @@ import React from 'react';
 const Karriere = () => {
   return (
     <>
+      <h1>Karriere</h1>
       <KarriereHero />
       <AdvantagesSection />
       <OfferSection />

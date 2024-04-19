@@ -17,6 +17,7 @@ import RedHelpSection from '@/components/common/RedHelpSection/RedHelpSection';
 const Wallbox = () => {
   return (
     <>
+      <h1>Wallbox</h1>
       <HeroSection {...wallboxHero} />
       <VideoSection {...wallboxVideo} />
       <VorteileSection

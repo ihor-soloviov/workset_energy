@@ -15,6 +15,7 @@ import { sliderImages, vorteileItems } from '../../utils/pvSlides';
 const PvAnlagen = () => {
   return (
     <>
+      <h1>PV-Anlagen</h1>
       <HeroSection {...pvAnlagenHero} />
       <VideoSection {...pvAnlagenVideo} />
       <VorteileSection

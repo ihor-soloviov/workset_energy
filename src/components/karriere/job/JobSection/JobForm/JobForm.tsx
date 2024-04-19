@@ -9,8 +9,10 @@ import Button from '@/components/common/Button/Button';
 import { useState, ChangeEvent } from 'react';
 import { formDataPost } from '@/utils/api';
 import { ThreeDots } from 'react-loader-spinner';
+import { useGlobalStore } from '@/store/global-store';
 
 const JobForm = () => {
+  const { setPopupAction } = useGlobalStore();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -61,8 +63,8 @@ const JobForm = () => {
 
         formData.append('file', selectedFile);
 
-        const status = await formDataPost(formData, 'cv');
-        status === 200 && console.log('200');
+        await formDataPost(formData, 'cv', setPopupAction);
+
         setIsLoading(false);
         setSelectedFile(null);
         resetForm();

@@ -106,6 +106,11 @@ type SelectValues = {
   contract: string;
 };
 
+type PopupAction = {
+  visible: boolean;
+  status: 'success' | 'error' | '';
+};
+
 export type {
   VisionLinkItem,
   VorteileSliderItems,
@@ -121,4 +126,5 @@ export type {
   KarrierJobItem,
   KarrierAttributes,
   SelectValues,
+  PopupAction,
 };

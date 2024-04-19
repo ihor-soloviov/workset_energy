@@ -7,6 +7,7 @@ import ImpressumSection from '@/components/impressum/ImpressumSection/ImpressumS
 const Impressum = () => {
   return (
     <>
+      <h1>Impressum</h1>
       <ImpressumHero />
       <ImpressumSection />
       <ContactUsSection />

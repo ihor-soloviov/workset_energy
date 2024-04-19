@@ -8,12 +8,15 @@ import { LeadStepProps } from '../../types';
 import { formDataPost } from '@/utils/api';
 import { ThreeDots } from 'react-loader-spinner';
 import { useState } from 'react';
+import { useGlobalStore } from '@/store/global-store';
+
 const LeadStepSevenForm = ({
   formData,
   setFormData,
   step,
   setStep,
 }: LeadStepProps) => {
+  const { setPopupAction } = useGlobalStore();
   const [isLoading, setIsLoading] = useState(false);
 
   const {
@@ -53,8 +56,8 @@ const LeadStepSevenForm = ({
           leadGenData.append(key, value.toString());
         }
       });
-      const status = await formDataPost(leadGenData, 'leadgen');
-      status === 200 && console.log('200');
+      await formDataPost(leadGenData, 'leadgen', setPopupAction);
+
       setIsLoading(false);
       resetForm();
       setStep(step + 1);

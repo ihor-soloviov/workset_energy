@@ -8,6 +8,7 @@ const LeadGen = () => {
   const { isDesktop } = useGlobalStore();
   return (
     <>
+      <h1>Angebot</h1>
       <LeadGenHero isDesktop={isDesktop} />
       {!isDesktop && <LeadGenComponent />}
     </>

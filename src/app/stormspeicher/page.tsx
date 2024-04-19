@@ -16,6 +16,7 @@ import RedHelpSection from '@/components/common/RedHelpSection/RedHelpSection';
 const Stormspeicher = () => {
   return (
     <>
+      <h1>Stormspeicher</h1>
       <HeroSection {...stormspeicherHero} />
       {/* <VideoSection {...stormSteicherVideo} /> */}
       <VorteileSection

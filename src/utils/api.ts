@@ -1,17 +1,22 @@
 import axios from 'axios';
-
+import { PopupAction } from '@/types/infoTypes';
 const baseUrl = process.env.NEXT_PUBLIC_BASE_API_URL ?? '';
 
 const baseStrapiUrl = process.env.NEXT_PUBLIC_BASE_STRAPI_URL ?? '';
 
-const formDataPost = async (formData: FormData, url: string) => {
+const formDataPost = async (
+  formData: FormData,
+  url: string,
+  setPopupAction: (action: PopupAction) => void,
+) => {
   try {
-    const { status } = await axios.post(`${baseUrl}${url}`, formData);
-    console.log(status);
-
-    return status;
+    await axios.post(`${baseUrl}${url}`, formData);
+    setPopupAction({ visible: true, status: 'success' });
   } catch (error) {
     console.error('Error fetching data:', error);
+    setPopupAction({ visible: true, status: 'error' });
+  } finally {
+    setTimeout(() => setPopupAction({ visible: false, status: '' }));
   }
 };
 
