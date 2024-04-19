@@ -32,6 +32,33 @@
   margin: 0 auto;
 }
 
+.jobHeroLink {
+  color: var(--gray-text);
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 192px;
+  margin-bottom: 90px;
+  transition: color 250ms var(--cubic);
+}
+
+.jobHeroIcon {
+  fill: var(--gray-text);
+  width: 18px;
+  height: 18px;
+  transition: fill 250ms var(--cubic);
+}
+
+.jobHeroLink:hover {
+  color: var(--gray-stroke);
+}
+
+.jobHeroLink:hover .jobHeroIcon {
+  fill: var(--gray-stroke);
+}
+
 @media screen and (min-width: 1440px) {
   .jobErrorText {
     font-size: 2.4rem;
@@ -39,6 +66,11 @@
 
   .loader > svg {
     width: 1.1rem;
+  }
+  .jobHeroLink {
+    font-size: 1.8rem;
+    width: 21.4rem;
+    margin-bottom: 17.1rem;
   }
 }
 
@@ -48,5 +80,10 @@
   }
   .loader > svg {
     width: 110px;
+  }
+  .jobHeroLink {
+    font-size: 18px;
+    width: 214px;
+    margin-bottom: 171px;
   }
 }

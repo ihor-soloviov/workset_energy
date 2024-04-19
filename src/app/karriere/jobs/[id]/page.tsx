@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 'use client';
 import styles from './page.module.css';
 import JobHero from '@/components/karriere/job/JobHero/JobHero';
@@ -6,6 +7,10 @@ import React, { useEffect, useState } from 'react';
 import type { KarrierJobItem } from '@/types/infoTypes';
 import { fetchJobData } from '@/utils/api';
 import { ThreeDots } from 'react-loader-spinner';
+import Link from 'next/link';
+import LinkArrowIcon from '/public/icons/jobs-arrow.svg';
+import { useThankYouStore } from '@/store/hero-store';
+
 interface Props {
   params: {
     id: string;
@@ -13,6 +18,7 @@ interface Props {
 }
 
 const Job = ({ params: { id } }: Props) => {
+  const { removeStyles, addStyles } = useThankYouStore();
   const [response, setResponse] = useState<KarrierJobItem | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -30,6 +36,10 @@ const Job = ({ params: { id } }: Props) => {
 
     fetchDataAndUpdateState();
   }, [id]);
+
+  useEffect(() => {
+    error ? addStyles() : removeStyles();
+  }, [error]);
 
   return (
     <>
@@ -55,7 +65,13 @@ const Job = ({ params: { id } }: Props) => {
       )}
       {error && (
         <div className={styles.jobErrorWrap}>
-          <p className={styles.jobErrorText}>No results</p>
+          <div className={styles.jobTextWrap}>
+            <Link className={styles.jobHeroLink} href="/karriere/jobs">
+              <LinkArrowIcon className={styles.jobHeroIcon} />
+              Zu allen offenen Stellen
+            </Link>
+            <p className={styles.jobErrorText}>No results</p>
+          </div>
         </div>
       )}
     </>
