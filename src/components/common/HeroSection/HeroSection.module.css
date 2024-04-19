@@ -1,10 +1,10 @@
 .heroSection {
   width: 100%;
-  height: 634px;
+  height: 610px;
   position: relative;
   z-index: 1;
   overflow: hidden;
-  padding: 239px 0 125px;
+  padding: 231px 0 74px;
 }
 
 .heroImgMob {
@@ -33,7 +33,7 @@
   font-weight: 700;
   line-height: 130%;
   width: fit-content;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .heroMainText {
@@ -41,7 +41,7 @@
   font-size: 16px;
   line-height: 160%;
   font-weight: 300;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
   width: 305px;
 }
 
@@ -91,7 +91,7 @@
   background-color: var(--red-main);
   font-size: 15px;
   font-weight: 600;
-  border-radius: 6px;
+  border-radius: 28px;
   gap: 12px;
   color: var(--gray-input);
   transition:
@@ -115,7 +115,7 @@
 }
 
 .heroBtn {
-  border-radius: 6px;
+  border-radius: 28px;
   width: 342px;
   height: 46px;
   padding: 12px 122px;
@@ -170,6 +170,7 @@
   .heroMainTitle {
     margin-top: 11.8rem;
     font-size: 9rem;
+    margin-bottom: 1.6rem;
   }
 
   .heroMainTitle.home {
@@ -210,6 +211,7 @@
     height: 5.2rem;
     padding: 1.4rem 1.7rem;
     font-size: 1.6rem;
+    border-radius: 0.6rem;
   }
 
   .heroBtn {
@@ -217,6 +219,7 @@
     width: 14rem;
     height: 5.2rem;
     font-size: 1.6rem;
+    border-radius: 0.6rem;
   }
 }
 
@@ -234,6 +237,7 @@
   .heroMainTitle {
     margin-top: 118px;
     font-size: 90px;
+    margin-bottom: 16px;
   }
 
   .heroMainTitle.home {
@@ -272,6 +276,7 @@
     height: 52px;
     padding: 14px 18px;
     font-size: 16px;
+    border-radius: 6px;
   }
 
   .heroBtn {
@@ -279,5 +284,6 @@
     width: 140px;
     height: 52px;
     font-size: 16px;
+    border-radius: 6px;
   }
 }

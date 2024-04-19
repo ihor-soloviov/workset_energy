@@ -27,10 +27,10 @@
 }
 
 .menuArrowIcon {
-  stroke: var(--gray-text);
+  stroke: var(--white-main);
   transition: stroke 250ms var(--cubic);
 }
 
 .menuArrowIcon:hover {
-  stroke: var(--white-main);
+  stroke: var(--gray-text);
 }

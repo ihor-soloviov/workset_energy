@@ -9,21 +9,23 @@ import Image from 'next/image';
 const AngebotSection = () => {
   return (
     <section className={styles.angebotSection}>
-      <div className={styles.angebotImgWrap}>
-        <Image
-          className={styles.angebotImgMob}
-          src={angebotImgMob}
-          fill
-          loading="lazy"
-          alt="hero-img"
-        />
-        <Image
-          className={styles.angebotImgDesc}
-          src={angebotImgDesk}
-          fill
-          loading="lazy"
-          alt="hero-img"
-        />
+      <div className={styles.angebotImgMainWrap}>
+        <div className={styles.angebotImgWrap}>
+          <Image
+            className={styles.angebotImgMob}
+            src={angebotImgMob}
+            fill
+            loading="lazy"
+            alt="hero-img"
+          />
+          <Image
+            className={styles.angebotImgDesc}
+            src={angebotImgDesk}
+            fill
+            loading="lazy"
+            alt="hero-img"
+          />
+        </div>
       </div>
 
       <div className={styles.angebotFormWrap}>

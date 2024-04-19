@@ -79,11 +79,12 @@
   color: var(--gray-input);
   font-size: 16px;
   font-weight: 600;
-  width: 100%;
+  width: 342px;
   height: 48px;
   background-color: var(--red-main);
   border: none;
-  border-radius: 6px;
+  border-radius: 28px;
+
   transition:
     border-color 250ms var(--cubic),
     color 250ms var(--cubic),
@@ -145,6 +146,7 @@
     width: 9.2rem;
     height: 4.6rem;
     padding: 1.4rem 2rem;
+    border-radius: 0.6rem;
   }
 }
 
@@ -165,5 +167,6 @@
     width: 92px;
     height: 46px;
     padding: 14px 20px;
+    border-radius: 6px;
   }
 }

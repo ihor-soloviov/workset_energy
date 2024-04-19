@@ -14,7 +14,29 @@
   }
 }
 
-@keyframes fadeToggleClose {
+@keyframes fadeToggleCloseMob {
+  0% {
+    opacity: 1;
+    max-height: 1000px;
+    margin-top: 18px;
+  }
+
+  70% {
+    margin-top: 18px;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    margin-top: 0px;
+    opacity: 0;
+    max-height: 0;
+  }
+}
+
+@keyframes fadeToggleCloseDesc {
   0% {
     opacity: 1;
     max-height: 1000px;
@@ -48,10 +70,10 @@
   gap: 20px;
 }
 .questItem {
-  border-radius: 6px;
+  border-radius: 12px;
   border: 1px solid var(--gray-stroke);
   background-color: var(--white-main);
-  padding: 16px 20px;
+  padding: 24px 20px;
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -108,7 +130,7 @@
 .questTextWrap.visible {
   display: flex;
   flex-direction: column;
-  margin-top: 8px;
+  margin-top: 18px;
   max-height: 1000px;
   user-select: none;
   animation: fadeToggleOpen 0.7s var(--cubic);
@@ -116,7 +138,7 @@
 }
 
 .questTextWrap.hidden {
-  animation: fadeToggleClose 0.4s var(--cubic);
+  animation: fadeToggleCloseMob 0.4s var(--cubic);
 }
 
 .questText {
@@ -125,7 +147,7 @@
 }
 
 .questConsultBtn {
-  margin-top: 20px;
+  margin-top: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -137,7 +159,7 @@
   height: 42px;
   background-color: var(--red-main);
   border: none;
-  border-radius: 6px;
+  border-radius: 28px;
   transition:
     border-color 250ms var(--cubic),
     color 250ms var(--cubic),
@@ -164,16 +186,28 @@
 
   .questItem {
     width: 59.8rem;
+    padding: 1.6rem 2rem;
+    border-radius: 0.6rem;
   }
 
   .questTitle {
     width: fit-content;
     max-width: 52.3rem;
   }
+  .questTextWrap.visible {
+    margin-top: 0.8rem;
+  }
+  .questTextWrap.hidden {
+    animation: fadeToggleCloseDesc 0.4s var(--cubic);
+  }
+
   .questText {
     max-width: 53.3rem;
   }
-
+  .questConsultBtn {
+    margin-top: 20rem;
+    border-radius: 0.6rem;
+  }
 }
 
 @media screen and (min-width: 1728px) {
@@ -187,13 +221,21 @@
 
   .questItem {
     width: 598px;
+    padding: 16px 20px;
+    border-radius: 6px;
   }
 
   .questTitle {
     max-width: 523px;
   }
+  .questTextWrap.visible {
+    margin-top: 8px;
+  }
   .questText {
     max-width: 533px;
   }
-
+  .questConsultBtn {
+    border-radius: 6px;
+    margin-top: 20px;
+  }
 }

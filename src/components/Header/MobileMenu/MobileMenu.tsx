@@ -35,7 +35,7 @@ const MobileMenu = ({ handleMenuClick }: MobileMenuProps) => {
           <MenuCrossIcon className={styles.menuCrossIcon} />
         </Button>
       </div>
-      <div className={styles.menuLine}></div>
+
       <Container>
         <nav className={styles.menuNav}>
           <MobileNavList handleMenuClick={handleMenuClick} />

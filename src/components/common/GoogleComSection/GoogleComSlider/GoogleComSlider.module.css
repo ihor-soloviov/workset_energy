@@ -16,7 +16,7 @@
   padding: 24px;
   height: 318px;
   width: 315px;
-  border-radius: 10.8px;
+  border-radius: 12px;
   border: 0.9px solid var(--gray-stroke);
   background-color: var(--white-main);
   transition: border-color 250ms var(--cubic);
@@ -111,6 +111,7 @@
     padding: 2.8rem;
     height: 36rem;
     width: 39.4rem;
+    border-radius: 1.8rem;
   }
 
   .slideTitle {
@@ -195,6 +196,7 @@
     padding: 28px;
     height: 360px;
     width: 394px;
+    border-radius: 10.8px;
   }
 
   .slideTitle {

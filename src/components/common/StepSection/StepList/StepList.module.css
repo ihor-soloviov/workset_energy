@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 36px;
   user-select: none;
+  width: 342px;
 }
 
 .stepItem {
@@ -34,7 +35,7 @@
 
 .stepTextWrap {
   border-radius: 12px;
-  padding: 40px 25px;
+  padding: 32px 25px;
   cursor: pointer;
   border: 1px solid var(--gray-stroke);
   background-color: var(--white-main);
@@ -50,7 +51,7 @@
   color: var(--gray-text);
   font-size: 18px;
   line-height: 160%;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .stepCount.white {
@@ -138,6 +139,9 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .stepList {
+    width: 100%;
+  }
   .stepItem {
     flex-direction: row;
     height: 46.2rem;

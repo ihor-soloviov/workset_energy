@@ -5,7 +5,7 @@
   z-index: 99;
   width: 100%;
   height: 100vh;
-  padding: 48px 0px 64px;
+  padding: 18px 0 90px;
   overflow-y: scroll;
   background-color: var(--black-main);
 }
@@ -14,7 +14,8 @@
   width: 100%;
   padding: 0 24px;
   margin: 0 auto;
-  margin-bottom: 18px;
+  padding-bottom: 18px;
+  margin-bottom: 36px;
 }
 
 .menuCrossBtn {
@@ -33,19 +34,13 @@
   stroke: var(--gray-text);
 }
 
-.menuLine {
-  border-bottom: 0.7px solid var(--gray-text);
-  width: 100%;
-  margin-bottom: 64px;
-}
-
 .menuNav {
   margin-bottom: 44px;
 }
 
 .menuBtn {
-  width: 100%;
-  height: 46px;
+  width: 342px;
+  height: 48px;
   display: flex;
   padding: 12px 91px 12px 97px;
   justify-content: center;
@@ -57,7 +52,8 @@
   font-size: 16px;
   font-weight: 600;
   line-height: 0.95;
-  border-radius: 6px;
+  border-radius: 28px;
+  margin: 0 auto;
   margin-bottom: 60px;
   transition:
     background-color 250ms var(--cubic),
