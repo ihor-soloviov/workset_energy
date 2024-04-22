@@ -1,6 +1,13 @@
+.sliderWrap {
+  width: 342px;
+}
+.slideWrap {
+  width: 342px;
+  position: relative;
+}
+
 .visionImgWrap {
-  padding: 45px 0 47px;
-  height: 477px;
+  padding: 60px 0 24px;
   background-color: var(--white-main);
 }
 
@@ -45,14 +52,10 @@
   z-index: 1;
 }
 
-.visible {
-  opacity: 1;
-}
-
 .visionTextWrap {
   background-color: var(--red-main);
-  padding: 64px 0px;
-  height: 396px;
+  padding: 24px 0px 36px;
+  height: 351px;
 }
 
 .visionTextContainer {
@@ -62,6 +65,7 @@
   visibility: hidden;
   height: 0px;
   opacity: 0;
+
   transition: opacity 1250ms var(--cubic);
 }
 
@@ -76,7 +80,7 @@
   font-size: 36px;
   font-weight: 500;
   width: fit-content;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   transition: opacity 250ms var(--cubic);
 }
 
@@ -138,7 +142,13 @@
   display: none;
 }
 
-.visionDotsWrap {
+.visionDotsWrapMob {
+  margin: 0 auto;
+  margin-bottom: 24px;
+  width: 342px;
+}
+
+.visionDotsWrapDesk {
   display: none;
 }
 
@@ -202,6 +212,10 @@
     transition: opacity 750ms var(--cubic);
   }
 
+  .visible {
+    opacity: 1;
+  }
+
   .visionTextWrap {
     width: calc(100% / 2);
     height: 83.7rem;
@@ -261,7 +275,11 @@
     left: 5.9rem;
   }
 
-  .visionDotsWrap {
+  .visionDotsWrapMob {
+    display: none;
+  }
+
+  .visionDotsWrapDesk {
     display: block;
     width: fit-content;
     position: absolute;
@@ -329,7 +347,7 @@
     left: 59px;
   }
 
-  .visionDotsWrap {
+  .visionDotsWrapDesk {
     bottom: 56px;
     left: 59px;
   }

@@ -16,9 +16,8 @@ import { Swiper as SwiperType } from 'swiper';
 const VisionSlider = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const { isDesktop } = useGlobalStore();
-  const swiperRef = useRef<SwiperType>();
 
-  console.log(activeIndex);
+  const swiperRef = useRef<SwiperType>();
 
   const handlePrevClick = () =>
     setActiveIndex(prev => (prev === 0 ? 2 : prev - 1));
@@ -36,10 +35,41 @@ const VisionSlider = () => {
 
   return (
     <div className={styles.visionMainWrap}>
-      {isDesktop ? (
-        <>
-          <div className={styles.visionImgWrap}>
-            <div className={styles.visionImgContainer}>
+      <div className={styles.visionImgWrap}>
+        <div className={styles.visionImgContainer}>
+          {!isDesktop ? (
+            <Swiper
+              className={styles.sliderWrap}
+              modules={[Autoplay, Navigation]}
+              spaceBetween={25}
+              onActiveIndexChange={e => setActiveIndex(e.realIndex)}
+              loop={true}
+              slidesPerView={1}
+              onBeforeInit={swiper => {
+                swiperRef.current = swiper;
+              }}
+            >
+              {visionImages.map(({ mobile, desktop }, index) => (
+                <SwiperSlide className={styles.slideWrap} key={index}>
+                  <React.Fragment key={index}>
+                    <Image
+                      loading="lazy"
+                      className={styles.visionImgMob}
+                      src={mobile}
+                      alt="img"
+                    />
+                    <Image
+                      loading="lazy"
+                      className={styles.visionImgDesc}
+                      alt="img"
+                      src={desktop}
+                    />
+                  </React.Fragment>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          ) : (
+            <>
               {visionImages.map(
                 ({ mobile, desktop, className, rangeSlides }, index) => (
                   <React.Fragment key={index}>
@@ -58,109 +88,55 @@ const VisionSlider = () => {
                   </React.Fragment>
                 ),
               )}
-            </div>
-          </div>
-          <div className={styles.visionBtnWrap}>
-            <Button
-              handleClick={handlePrevClick}
-              type="button"
-              className={styles.visionBtn}
-            >
-              <ArrowIcon className={styles.prevArrow} />
-            </Button>
-            <Button
-              handleClick={handleNextClick}
-              type="button"
-              className={styles.visionBtn}
-            >
-              <ArrowIcon className={styles.nextArrow} />
-            </Button>
-          </div>
-          <div className={styles.visionTextWrap}>
-            <p className={styles.visionCount}>
-              0<span className={styles.visionCountSpan}>{activeIndex + 1}</span>
-            </p>
-            {visionItems.map(({ text, title }, index) => (
-              <div
-                key={title}
-                className={`${styles.visionTextContainer} ${activeIndex === index ? styles.active : ''}`}
-              >
-                <h2 className={styles.visionTitle}>{title}</h2>
-                <p className={`${styles.visionText} ${inter.className}`}>
-                  {text}
-                </p>
-              </div>
-            ))}
-            <div className={styles.visionDotsWrap}>
-              <SliderDots
-                handleActiveSlide={handleActiveSlide}
-                count={3}
-                activeSlide={activeIndex}
-              />
-            </div>
-          </div>
-        </>
-      ) : (
-        <>
-          <Swiper
-            className={styles.sliderMainList}
-            modules={[Autoplay, Navigation]}
-            spaceBetween={25}
-            onActiveIndexChange={e => setActiveIndex(e.realIndex)}
-            loop={true}
-            slidesPerView={1}
-            onBeforeInit={swiper => {
-              swiperRef.current = swiper;
-            }}
+            </>
+          )}
+        </div>
+      </div>
+      <div className={styles.visionBtnWrap}>
+        <Button
+          handleClick={handlePrevClick}
+          type="button"
+          className={styles.visionBtn}
+        >
+          <ArrowIcon className={styles.prevArrow} />
+        </Button>
+        <Button
+          handleClick={handleNextClick}
+          type="button"
+          className={styles.visionBtn}
+        >
+          <ArrowIcon className={styles.nextArrow} />
+        </Button>
+      </div>
+      <div className={styles.visionTextWrap}>
+        <div className={styles.visionDotsWrapMob}>
+          <SliderDots
+            handleActiveSlide={handleActiveSlide}
+            count={3}
+            activeSlide={activeIndex}
+            className="vision"
+          />
+        </div>
+        <p className={styles.visionCount}>
+          0<span className={styles.visionCountSpan}>{activeIndex + 1}</span>
+        </p>
+        {visionItems.map(({ text, title }, index) => (
+          <div
+            key={title}
+            className={`${styles.visionTextContainer} ${activeIndex === index ? styles.active : ''}`}
           >
-            {visionImages.map(({ mobile, desktop }, index) => (
-              <SwiperSlide key={index}>
-                <div className={styles.visionImgWrap}>
-                  <div className={styles.visionImgContainer}>
-                    <React.Fragment key={index}>
-                      <Image
-                        loading="lazy"
-                        className={styles.visionImgMob}
-                        src={mobile}
-                        alt="img"
-                      />
-                      <Image
-                        loading="lazy"
-                        className={styles.visionImgDesc}
-                        alt="img"
-                        src={desktop}
-                      />
-                    </React.Fragment>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          <div className={styles.visionTextWrap}>
-            <p className={styles.visionCount}>
-              0<span className={styles.visionCountSpan}>{activeIndex + 1}</span>
-            </p>
-            {visionItems.map(({ text, title }, index) => (
-              <div
-                key={title}
-                className={`${styles.visionTextContainer} ${activeIndex === index ? styles.active : ''}`}
-              >
-                <h2 className={styles.visionTitle}>{title}</h2>
-                <p className={`${styles.visionText} ${inter.className}`}>
-                  {text}
-                </p>
-              </div>
-            ))}
-            <div className={styles.visionDotsWrap}>
-              <SliderDots
-                handleActiveSlide={handleActiveSlide}
-                count={3}
-                activeSlide={activeIndex}
-              />
-            </div>
+            <h2 className={styles.visionTitle}>{title}</h2>
+            <p className={`${styles.visionText} ${inter.className}`}>{text}</p>
           </div>
-        </>
-      )}
+        ))}
+        <div className={styles.visionDotsWrapDesk}>
+          <SliderDots
+            handleActiveSlide={handleActiveSlide}
+            count={3}
+            activeSlide={activeIndex}
+          />
+        </div>
+      </div>
     </div>
   );
 };

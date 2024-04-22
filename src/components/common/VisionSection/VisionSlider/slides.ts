@@ -13,7 +13,7 @@ export const visionItems: VisionLinkItem[] = [
   },
   {
     title: 'Unsere Mission',
-    text: 'Unser Unternehmen hat die Mission, eine nachhaltige Energieversorgung zu fördern, indem wir Photovoltaik-Anlagen bauen. Wir glauben daran, dass erneuerbare Energiequellen der Schlüssel zur Bekämpfung des Klimawandels sind, und deshalb arbeiten wir hart daran, saubere und effiziente Energiequellen zugänglicher zu machen',
+    text: 'Unser Unternehmen hat es sich zur Aufgabe gemacht, durch den Bau von Photovoltaikanlagen einen Beitrag zur nachhaltigen Energieversorgung zu leisten. Wir glauben, dass erneuerbare Energien der Schlüssel zur Bekämpfung des Klimawandels sind, und arbeiten daher hart daran, saubere Energie zugänglicher zu machen',
   },
   {
     title: 'Unsere Ziel',

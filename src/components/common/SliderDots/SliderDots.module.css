@@ -31,3 +31,22 @@
 .sliderDot.active.team {
   background-color: var(--black-main);
 }
+
+.sliderDots.vision {
+  margin-right: auto;
+  width: 29px;
+  gap: 4px;
+}
+
+.sliderDot.vision {
+  border-color: var(--gray-stroke);
+  border: 1px solid var(--gray-stroke);
+  background-color: transparent;
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+}
+
+.sliderDot.active.vision {
+  background-color: var(--white-main);
+}
