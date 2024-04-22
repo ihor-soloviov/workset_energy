@@ -21,12 +21,6 @@ const VisionSlider = () => {
 
   const handleActiveSlide = (index: number) => setSlide(index + 1);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      handleNextClick();
-    }, 4000);
-    return () => clearTimeout(timer);
-  }, [slide]);
   return (
     <div className={styles.visionMainWrap}>
       <div className={styles.visionImgWrap}>
