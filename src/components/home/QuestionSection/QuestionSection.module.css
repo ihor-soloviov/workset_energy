@@ -1,5 +1,5 @@
 .questSection {
-  padding: 64px 0;
+  padding: 36px 0 64px;
 }
 .questContainer {
   width: 100%;
@@ -27,7 +27,7 @@
 @media screen and (min-width: 390px) {
   .questContainer {
     width: 390px;
-    padding: 24px;
+    padding: 0 24px;
   }
 }
 

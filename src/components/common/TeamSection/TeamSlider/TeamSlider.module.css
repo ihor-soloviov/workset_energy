@@ -4,13 +4,14 @@
 
 .sliderWrap {
   margin-bottom: 20px;
+  border-radius: 16px;
 }
 
 .teamImgWrap {
   position: relative;
   width: 342px;
   height: 519px;
-  border-radius: 12px;
+  border-radius: 16px;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -107,6 +108,7 @@
     height: 62rem;
     background-position: center;
     cursor: pointer;
+    border-radius: 1.2rem;
     transition: all 600ms var(--cubic);
   }
 
@@ -163,6 +165,7 @@
   .teamImgWrap {
     width: 158px;
     height: 620px;
+    border-radius: 12px;
   }
 
   .active {

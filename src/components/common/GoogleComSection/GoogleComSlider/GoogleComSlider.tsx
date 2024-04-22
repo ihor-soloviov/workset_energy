@@ -43,7 +43,6 @@ const GoogleComSlider = () => {
         spaceBetween={currentSlideSpace}
         navigation
         loop={true}
-        autoplay={true}
         slidesPerView={currentSlidePrev}
         onBeforeInit={swiper => {
           swiperRef.current = swiper;
