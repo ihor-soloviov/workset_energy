@@ -1,31 +1,31 @@
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './HeaderNavList.module.css';
 import { inter } from '@/utils/fonts';
 import { usePathname } from 'next/navigation';
-import { useThankYouStore } from '@/store/hero-store';
+import { useModalStore } from '@/store/hero-store';
 import { navLinkItems } from './navLinkItems';
 
+const blackList = ['/karriere', '/thank-you'];
+
 const HeaderNavList = () => {
+  const [isBlack, setIsBlack] = useState(false);
   const pathname = usePathname();
 
-  const { isThankYouOpen, removeStyles } = useThankYouStore();
-
-  const handleLinkClick = () => {
-    isThankYouOpen && removeStyles();
-  };
+  useEffect(() => {
+    setIsBlack(blackList.includes(pathname));
+  }, [pathname]);
 
   return (
     <ul className={`${styles.headerList} ${inter.className}`}>
       {navLinkItems.map(({ title, linkTo }) => (
         <li
           key={title}
-          className={`${styles.headerItem} ${isThankYouOpen ? styles.blackStyle : ''}`}
+          className={`${styles.headerItem} ${isBlack ? styles.blackStyle : ''}`}
         >
           <Link
-            onClick={handleLinkClick}
             href={linkTo}
-            className={`${styles.headerNavLink} ${isThankYouOpen ? styles.blackStyle : ''}`}
+            className={`${styles.headerNavLink} ${isBlack ? styles.blackStyle : ''}`}
           >
             {title}
           </Link>

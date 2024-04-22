@@ -5,29 +5,28 @@ import CrossIcon from '/public/icons/cross.svg';
 import useObserver from '@/hooks/useObserver';
 import Button from '@/components/common/Button/Button';
 import HeroForm from './HeroForm/HeroForm';
-import { useThankYouStore } from '@/store/hero-store';
+import { useModalStore } from '@/store/hero-store';
 import { handleHeader } from '@/utils/handleHeader';
 import { stopScroll } from '@/utils/stopScroll';
+import { useRouter } from 'next/navigation';
 
 const HeroFormModal = () => {
-  const { isThankYouOpen, setIsThankYouOpen, removeStyles, handleModal } =
-    useThankYouStore();
+  const router = useRouter();
+  const { handleModal } = useModalStore();
 
   const handleModalClose = () => {
     handleHeader('flex');
     handleModal();
-    isThankYouOpen && removeStyles();
   };
 
   const sendModalForm = () => {
-    stopScroll(true);
     const form = document.querySelector(`.${styles.scrollHeroFormHidden}`);
     if (form) {
       form.classList.remove(`${styles.scrollHeroFormVisible}`);
     }
     setTimeout(() => {
       handleModal();
-      setIsThankYouOpen();
+      router.push('/thank-you');
     }, 1000);
   };
 

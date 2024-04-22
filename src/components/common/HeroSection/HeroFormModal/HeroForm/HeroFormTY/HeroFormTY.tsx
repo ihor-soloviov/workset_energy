@@ -5,15 +5,16 @@ import styles from '@/components/common/HeroSection/HeroFormModal/HeroFormModal.
 import Button from '@/components/common/Button/Button';
 import CrossIcon from '/public/icons/cross.svg';
 import { inter } from '@/utils/fonts';
-import { useThankYouStore } from '@/store/hero-store';
+import { useModalStore } from '@/store/hero-store';
 import useObserver from '@/hooks/useObserver';
 import { useGlobalStore } from '@/store/global-store';
-import { stopScroll } from '@/utils/stopScroll';
 import { handleHeader } from '@/utils/handleHeader';
+import { useRouter } from 'next/navigation';
 
 const HeroFormTY = () => {
+  const router = useRouter();
   const { isDesktop } = useGlobalStore();
-  const { setIsThankYouOpen, setIsModalOpen } = useThankYouStore();
+  const { setIsModalOpen } = useModalStore();
 
   useObserver(
     `.${styles.heroThankYouWrap}`,
@@ -25,10 +26,9 @@ const HeroFormTY = () => {
     if (ty) {
       ty.classList.remove(`${styles.heroThankYouWrapVisible}`);
       handleHeader('flex');
-      stopScroll(false);
+      router.back();
 
       setTimeout(() => {
-        setIsThankYouOpen();
         if (isDesktop) {
           setIsModalOpen(true);
         }

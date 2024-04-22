@@ -1,4 +1,3 @@
-import styles from './page.module.css';
 import ContactUsSection from '@/components/common/ContactUsSection/ContactUsSection';
 import GoogleComSection from '@/components/common/GoogleComSection/GoogleComSection';
 import TeamSection from '@/components/common/TeamSection/TeamSection';

@@ -9,7 +9,7 @@ import { fetchJobData } from '@/utils/api';
 import { ThreeDots } from 'react-loader-spinner';
 import Link from 'next/link';
 import LinkArrowIcon from '/public/icons/jobs-arrow.svg';
-import { useThankYouStore } from '@/store/hero-store';
+import { useModalStore } from '@/store/hero-store';
 
 interface Props {
   params: {
@@ -18,7 +18,6 @@ interface Props {
 }
 
 const Job = ({ params: { id } }: Props) => {
-  const { removeStyles, addStyles } = useThankYouStore();
   const [response, setResponse] = useState<KarrierJobItem | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -37,9 +36,9 @@ const Job = ({ params: { id } }: Props) => {
     fetchDataAndUpdateState();
   }, [id]);
 
-  useEffect(() => {
-    error ? addStyles() : removeStyles();
-  }, [error]);
+  // useEffect(() => {
+  //   error
+  // }, [error]);
 
   return (
     <>

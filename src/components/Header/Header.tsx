@@ -11,25 +11,23 @@ import WorksetIcon from '/public/icons/workset.svg';
 import WorksetColorIcon from '/public/icons/workset-color.svg';
 import BurgerIcon from '/public/icons/burger.svg';
 import ArrowIcon from '/public/icons/small-arrow-btn.svg';
-import { useThankYouStore } from '@/store/hero-store';
+import { useModalStore } from '@/store/hero-store';
 import { usePathname } from 'next/navigation';
 import { useGlobalStore } from '@/store/global-store';
 import { pathnames, jobPathRegex } from '@/utils/pathnames';
 
+const blackList = ['/karriere', '/thank-you'];
+
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isBlack, setIsBlack] = useState(false);
 
   const pathname = usePathname();
 
   const { setIsDesktop } = useGlobalStore();
-  const { isThankYouOpen, removeStyles, addStyles } = useThankYouStore();
 
   const handleMenuClick = () => setIsMenuOpen(!isMenuOpen);
-
-  const handleLogoClick = () => {
-    isThankYouOpen && removeStyles();
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,7 +57,7 @@ const Header = () => {
   }, [setIsDesktop]);
 
   useEffect(() => {
-    pathname === '/karriere' ? addStyles() : removeStyles();
+    setIsBlack(blackList.includes(pathname));
   }, [pathname]);
 
   return (
@@ -67,16 +65,12 @@ const Header = () => {
       {(pathnames.includes(pathname) || jobPathRegex.test(pathname)) && (
         <header
           id="header"
-          className={`${styles.header} ${isThankYouOpen ? styles.blackStyle : ''} ${isScrolled ? styles.scrolled : ''}`}
+          className={`${styles.header} ${isBlack ? styles.blackStyle : ''} ${isScrolled ? styles.scrolled : ''}`}
         >
           <div className={styles.headerContainer}>
             <nav className={styles.headerNav}>
-              <Link
-                onClick={handleLogoClick}
-                className={styles.headerLogoLink}
-                href="/"
-              >
-                {isThankYouOpen ? (
+              <Link className={styles.headerLogoLink} href="/">
+                {isBlack ? (
                   <WorksetColorIcon className={styles.headerLogo} />
                 ) : (
                   <WorksetIcon className={styles.headerLogo} />
@@ -88,7 +82,7 @@ const Header = () => {
                 type="button"
               >
                 <BurgerIcon
-                  className={`${styles.headerBurgerIcon} ${isThankYouOpen ? styles.blackStyle : ''}`}
+                  className={`${styles.headerBurgerIcon} ${isBlack ? styles.blackStyle : ''}`}
                 />
               </Button>
               <HeaderNavList />

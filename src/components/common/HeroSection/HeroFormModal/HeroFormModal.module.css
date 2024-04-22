@@ -78,7 +78,7 @@
 }
 
 .heroThankYouContainer {
-  padding: 162px 25px 0;
+  padding: 162px 13px 0;
 }
 
 .heroThankTitle {
@@ -131,6 +131,10 @@
 @media screen and (min-width: 390px) {
   .heroFormContainer {
     width: 390px;
+  }
+
+  .heroThankYouContainer {
+    padding: 162px 25px 0;
   }
 
   .heroTopWrap {
