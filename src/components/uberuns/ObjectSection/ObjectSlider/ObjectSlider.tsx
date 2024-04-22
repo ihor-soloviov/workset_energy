@@ -9,7 +9,7 @@ import ArrowIcon from '/public/icons/slide-arrow.svg';
 import { inter } from '@/utils/fonts';
 import { scrollToSection } from '@/utils/scroll';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 import { Swiper as SwiperType } from 'swiper';
 
 const ObjectSlider = () => {
@@ -35,10 +35,9 @@ const ObjectSlider = () => {
       </div>
       <Swiper
         className={styles.sliderMainList}
-        modules={[Autoplay, Navigation]}
+        modules={[Navigation]}
         spaceBetween={25}
         loop={true}
-        autoplay={true}
         slidesPerView={1}
         onBeforeInit={swiper => {
           swiperRef.current = swiper;

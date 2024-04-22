@@ -6,7 +6,7 @@
   background-color: var(--white-main);
   width: 100%;
 
-  padding: 36px 24px 24px 24px;
+  padding: 36px 13px 24px 13px;
   margin: 0 auto;
 }
 
@@ -55,6 +55,10 @@
 @media screen and (min-width: 390px) {
   .angebotFormWrap {
     width: 390px;
+  }
+
+  .angebotImgMainWrap {
+    padding: 68px 24px 24px 24px;
   }
 }
 
