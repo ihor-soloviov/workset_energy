@@ -84,6 +84,10 @@
   cursor: pointer;
 }
 
+/* .angebotUploadBtn.withFile {
+  background-color: var(--red-main);
+} */
+
 .angebotInput.error {
   border: 1px solid var(--red-main);
 }
@@ -229,7 +233,9 @@
   }
 
   .angebotUploadBtn {
-    top: 2.2rem;
+    top: 22px;
+    height: 46px;
+    width: 117px;
     border-radius: 0rem 0.6rem 0.6rem 0rem;
   }
 

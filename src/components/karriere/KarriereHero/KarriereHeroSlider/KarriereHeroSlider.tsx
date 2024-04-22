@@ -5,7 +5,7 @@ import { inter } from '@/utils/fonts';
 import React, { MutableRefObject } from 'react';
 import styles from './KarriereHeroSlider.module.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 import { Swiper as SwiperType } from 'swiper';
 import { heroItems } from '../heroItems';
 import useObserver from '@/hooks/useObserver';
@@ -20,10 +20,9 @@ const KarriereHeroSlider = ({ swiperRef }: Props) => {
   return (
     <Swiper
       className={styles.sliderWrap}
-      modules={[Autoplay, Navigation]}
+      modules={[Navigation]}
       spaceBetween={15}
       loop={true}
-      autoplay={true}
       slidesPerView={1}
       onBeforeInit={swiper => {
         swiperRef.current = swiper;

@@ -6,7 +6,6 @@ import { inter } from '@/utils/fonts';
 import cn from 'classnames';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperType } from 'swiper';
-import { Autoplay } from 'swiper/modules';
 import { useGlobalStore } from '@/store/global-store';
 import { teamItems } from './teamItems';
 import Link from 'next/link';
@@ -36,7 +35,6 @@ const TeamSlider = () => {
         <>
           <Swiper
             className={styles.sliderWrap}
-            modules={[Autoplay]}
             onActiveIndexChange={e => setActiveIndex(e.realIndex)}
             spaceBetween={15}
             loop={true}

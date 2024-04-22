@@ -36,15 +36,6 @@ const UberUnsHero = () => {
             Wir erleichtern Ihnen den Übergang zu einer nachhaltigen Zukunft mit
             Solarlösungen
           </p>
-          <div>
-            <Button
-              handleClick={() => scrollToSection('vision')}
-              type="button"
-              className={styles.uberHeroBtn}
-            >
-              Mehr Info
-            </Button>
-          </div>
         </>
       </div>
     </section>
