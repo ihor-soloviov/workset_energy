@@ -73,7 +73,7 @@
   border-radius: 12px;
   border: 1px solid var(--gray-stroke);
   background-color: var(--white-main);
-  padding: 24px 20px;
+  padding: 24px 19px;
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -133,6 +133,7 @@
   margin-top: 18px;
   max-height: 1000px;
   user-select: none;
+
   animation: fadeToggleOpen 0.7s var(--cubic);
   opacity: 1;
 }
@@ -143,6 +144,7 @@
 
 .questText {
   color: var(--gray-text);
+  width: 302px;
   line-height: 160%;
 }
 
@@ -194,16 +196,20 @@
     width: fit-content;
     max-width: 52.3rem;
   }
+
   .questTextWrap.visible {
     margin-top: 0.8rem;
   }
+
   .questTextWrap.hidden {
     animation: fadeToggleCloseDesc 0.4s var(--cubic);
   }
 
   .questText {
+    width: unset;
     max-width: 53.3rem;
   }
+
   .questConsultBtn {
     margin-top: 2rem;
     border-radius: 0.6rem;
@@ -228,12 +234,15 @@
   .questTitle {
     max-width: 523px;
   }
+
   .questTextWrap.visible {
     margin-top: 8px;
   }
+
   .questText {
     max-width: 533px;
   }
+
   .questConsultBtn {
     border-radius: 6px;
     margin-top: 20px;
