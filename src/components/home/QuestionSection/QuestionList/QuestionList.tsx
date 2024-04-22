@@ -26,6 +26,15 @@ const QuestionList = () => {
     scrollToSection('contact');
   };
 
+  const renderText = (text: string) => {
+    const lines = text.split('\n');
+    return lines.map((line, index) => (
+      <p className={`${styles.questText} ${inter.className}`} key={index}>
+        {line}
+      </p>
+    ));
+  };
+
   const renderListItems = (items: QuestItem[]) =>
     items.map(({ text, title }) => (
       <li
@@ -51,7 +60,7 @@ const QuestionList = () => {
         <div
           className={`${styles.questTextWrap} ${activeItems.includes(title) ? styles.visible : styles.hidden}`}
         >
-          <p className={`${styles.questText} ${inter.className}`}>{text}</p>
+          {renderText(text)}
           <Button
             handleClick={handleBtnClick}
             type="button"
