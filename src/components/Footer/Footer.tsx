@@ -11,6 +11,8 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { pathnames, jobPathRegex } from '@/utils/pathnames';
 
+const exclusionList = ['/leadgen', '/thank-you'];
+
 const Footer = () => {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
@@ -18,7 +20,7 @@ const Footer = () => {
 
   return (
     <>
-      {pathname !== '/leadgen' &&
+      {!exclusionList.includes(pathname) &&
         (pathnames.includes(pathname) || jobPathRegex.test(pathname)) && (
           <footer className={styles.footer}>
             <div className={styles.footerContainer}>

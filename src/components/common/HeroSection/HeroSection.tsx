@@ -10,7 +10,7 @@ import HeroFormModal from './HeroFormModal/HeroFormModal';
 import { useEffect, useState } from 'react';
 import { useGlobalStore } from '@/store/global-store';
 import useObserver from '@/hooks/useObserver';
-import { useThankYouStore } from '@/store/hero-store';
+import { useModalStore } from '@/store/hero-store';
 import HeroFormTY from './HeroFormModal/HeroForm/HeroFormTY/HeroFormTY';
 import { handleHeader } from '@/utils/handleHeader';
 import { scrollToSection } from '@/utils/scroll';
@@ -35,8 +35,7 @@ const HeroSection = ({
   className,
 }: HeroProps) => {
   const { isDesktop } = useGlobalStore();
-  const { handleModal, setIsModalOpen, isModalOpen, isThankYouOpen } =
-    useThankYouStore();
+  const { handleModal, setIsModalOpen, isModalOpen } = useModalStore();
 
   useObserver(`.${styles.heroAnim}`, `${styles.heroAnimVisible}`);
 
@@ -117,7 +116,6 @@ const HeroSection = ({
           </div>
           {isModalOpen && <HeroFormModal />}
         </div>
-        {isThankYouOpen && <HeroFormTY />}
       </section>
     </>
   );

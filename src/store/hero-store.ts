@@ -1,22 +1,13 @@
 import { create } from 'zustand';
 
-type ThankYouStoreState = {
-  isThankYouOpen: boolean;
-  setIsThankYouOpen: () => void;
+type ModalStoreState = {
   isModalOpen: boolean;
   setIsModalOpen: (newValue: boolean) => void;
   handleModal: () => void;
-  addStyles: () => void;
-  removeStyles: () => void;
 };
 
-export const useThankYouStore = create<ThankYouStoreState>(set => ({
-  isThankYouOpen: false,
-  setIsThankYouOpen: () =>
-    set(state => ({ isThankYouOpen: !state.isThankYouOpen })),
+export const useModalStore = create<ModalStoreState>(set => ({
   isModalOpen: false,
   setIsModalOpen: newValue => set(_state => ({ isModalOpen: newValue })),
   handleModal: () => set(state => ({ isModalOpen: !state.isModalOpen })),
-  addStyles: () => set(_state => ({ isThankYouOpen: true })),
-  removeStyles: () => set(_state => ({ isThankYouOpen: false })),
 }));
