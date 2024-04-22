@@ -10,7 +10,6 @@ type OfferListProps = {
   showItems: boolean;
 };
 const OfferList = ({ showItems }: OfferListProps) => {
-  useObserver(`.${styles.offerItem}`, `${styles.offerItemVisible}`);
   const currentItems = (offerItems: OfferItem[]) =>
     showItems ? offerItems : offerItems.slice(0, 3);
 
@@ -49,7 +48,7 @@ const OfferList = ({ showItems }: OfferListProps) => {
                 <h4 className={styles.offerBottomTitle}>{title}</h4>
                 <p className={styles.offerBottomText}>{text}</p>
                 <Link className={styles.offerLink} href="/karriere/jobs">
-                  Mehr Info
+                  Read more
                   <LinkArrowIcon className={styles.offerIcon} />
                 </Link>
               </div>

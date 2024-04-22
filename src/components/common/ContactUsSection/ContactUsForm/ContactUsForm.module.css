@@ -92,8 +92,6 @@
 }
 
 .contactUsBtn:disabled {
-  border-color: var(--red-second);
-  background-color: var(--red-second);
   cursor: not-allowed;
 }
 

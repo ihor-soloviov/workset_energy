@@ -244,8 +244,9 @@
   .karriereUploadBtn {
     padding: 1.3rem 2rem;
     width: 9.2rem;
+    
     border-left: 1px solid var(--gray-stroke);
-    top: 2.2rem;
+    top: 22px;
   }
 
   .karriereBtnWrap {
