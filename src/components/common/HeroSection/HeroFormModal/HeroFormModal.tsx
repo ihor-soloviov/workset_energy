@@ -7,7 +7,6 @@ import Button from '@/components/common/Button/Button';
 import HeroForm from './HeroForm/HeroForm';
 import { useModalStore } from '@/store/hero-store';
 import { handleHeader } from '@/utils/handleHeader';
-import { stopScroll } from '@/utils/stopScroll';
 import { useRouter } from 'next/navigation';
 
 const HeroFormModal = () => {
@@ -46,7 +45,7 @@ const HeroFormModal = () => {
           <CrossIcon className={styles.heroCloseIcon} />
         </Button>
       </div>
-      <div className={styles.heroLine}></div>
+
       <div className={`${styles.heroFormContainer}`}>
         <h2 className={styles.heroTitle}>Kontaktiere uns</h2>
         <p className={styles.heroText}>

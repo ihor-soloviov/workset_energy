@@ -12,13 +12,10 @@
   position: relative;
 }
 
-.visionImgMob,
-.visionImgDesc {
-  display: block;
-  position: absolute;
-
-  opacity: 0;
-  transition: opacity 750ms var(--cubic);
+.visionImgMob {
+  border-radius: 12px;
+  width: 342px;
+  height: 348px;
 }
 
 .visionImgDesc {
@@ -93,7 +90,7 @@
 }
 
 .visionBtnWrap {
-  display: flex;
+  display: none;
   gap: 8px;
   justify-content: center;
   margin-bottom: 32px;
@@ -165,6 +162,7 @@
     right: 5.4rem;
     z-index: 1;
     margin: unset;
+    display: flex;
   }
 
   .visionBtn {
@@ -192,12 +190,16 @@
     position: static;
     padding: 7rem 0px 6.2rem;
   }
+
   .visionImgMob {
     display: none;
   }
 
   .visionImgDesc {
+    position: absolute;
     display: block;
+    opacity: 0;
+    transition: opacity 750ms var(--cubic);
   }
 
   .visionTextWrap {

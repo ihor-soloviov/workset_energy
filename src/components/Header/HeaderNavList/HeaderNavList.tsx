@@ -3,10 +3,8 @@ import React, { useEffect, useState } from 'react';
 import styles from './HeaderNavList.module.css';
 import { inter } from '@/utils/fonts';
 import { usePathname } from 'next/navigation';
-import { useModalStore } from '@/store/hero-store';
 import { navLinkItems } from './navLinkItems';
-
-const blackList = ['/karriere', '/thank-you'];
+import { blackList } from '@/utils/pathnames';
 
 const HeaderNavList = () => {
   const [isBlack, setIsBlack] = useState(false);

@@ -7,11 +7,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ArrowIcon from '/public/icons/small-arrow-btn.svg';
 import HeroFormModal from './HeroFormModal/HeroFormModal';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useGlobalStore } from '@/store/global-store';
 import useObserver from '@/hooks/useObserver';
 import { useModalStore } from '@/store/hero-store';
-import HeroFormTY from './HeroFormModal/HeroForm/HeroFormTY/HeroFormTY';
+
 import { handleHeader } from '@/utils/handleHeader';
 import { scrollToSection } from '@/utils/scroll';
 

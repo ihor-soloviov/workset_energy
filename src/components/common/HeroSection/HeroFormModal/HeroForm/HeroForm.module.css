@@ -20,7 +20,7 @@
   width: 100%;
   height: 46px;
   border: 1px solid var(--gray-stroke);
-  border-radius: 6px;
+  border-radius: 8px;
   background-color: var(--gray-input);
   outline: none;
 }
@@ -44,7 +44,7 @@
   background-color: var(--red-main);
   width: 342px;
   height: 46px;
-  border-radius: 6px;
+  border-radius: 28px;
   font-size: 16px;
   color: var(--gray-input);
   margin-top: 72px;
@@ -94,11 +94,16 @@
     gap: 1.6rem;
   }
 
+  .heroInput {
+    border-radius: 0.6rem;
+  }
+
   .heroFormBtn {
     padding: 1.2rem;
     width: 36.4rem;
     height: 4.8rem;
     margin: 5.6rem auto 0;
+    border-radius: 0.6rem;
   }
 }
 
@@ -108,10 +113,15 @@
     gap: 16px;
   }
 
+  .heroInput {
+    border-radius: 6px;
+  }
+
   .heroFormBtn {
     padding: 12px 135px;
     width: 364px;
     height: 48px;
     margin-top: 56px;
+    border-radius: 6px;
   }
 }

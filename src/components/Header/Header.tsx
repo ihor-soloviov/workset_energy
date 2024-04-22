@@ -11,12 +11,9 @@ import WorksetIcon from '/public/icons/workset.svg';
 import WorksetColorIcon from '/public/icons/workset-color.svg';
 import BurgerIcon from '/public/icons/burger.svg';
 import ArrowIcon from '/public/icons/small-arrow-btn.svg';
-import { useModalStore } from '@/store/hero-store';
 import { usePathname } from 'next/navigation';
 import { useGlobalStore } from '@/store/global-store';
-import { pathnames, jobPathRegex } from '@/utils/pathnames';
-
-const blackList = ['/karriere', '/thank-you'];
+import { pathnames, jobPathRegex, blackList } from '@/utils/pathnames';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);

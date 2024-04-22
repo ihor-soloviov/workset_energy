@@ -220,6 +220,9 @@
     height: 5.2rem;
     font-size: 1.6rem;
     border-radius: 0.6rem;
+    background: unset;
+    backdrop-filter: unset;
+    background-color: transparent;
   }
 }
 

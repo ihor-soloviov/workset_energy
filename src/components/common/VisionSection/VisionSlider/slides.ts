@@ -26,18 +26,18 @@ export const visionImages: VisionImageItem[] = [
     mobile: visionFirstImgMob,
     desktop: visionFirstImgDesc,
     className: 'first',
-    rangeSlides: [1],
+    rangeSlides: [0],
   },
   {
     mobile: visionSecondImgMob,
     desktop: visionSecondImgDesc,
     className: 'second',
-    rangeSlides: [1, 2],
+    rangeSlides: [0, 1],
   },
   {
     mobile: visionThirdImgMob,
     desktop: visionThirdImgDesc,
     className: 'third',
-    rangeSlides: [1, 2, 3],
+    rangeSlides: [0, 1, 2],
   },
 ];
