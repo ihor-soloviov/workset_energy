@@ -141,10 +141,7 @@ const AngebotForm = () => {
           className={styles.angebotInputFile}
           onChange={handleFileChange}
         />
-        <label
-          htmlFor="angebot"
-          className={`${styles.angebotUploadBtn} ${selectedFile ? styles.withFile : ''}`}
-        >
+        <label htmlFor="angebot" className={styles.angebotUploadBtn}>
           Upload
         </label>
       </label>

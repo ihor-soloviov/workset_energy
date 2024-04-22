@@ -74,7 +74,7 @@
   height: 46px;
   border-radius: 0px 8px 8px 0px;
   color: var(--white-main);
-  background-color: var(--red-second);
+  background-color: var(--red-main);
   padding: 14px 32px;
   font-size: 15px;
   font-weight: 500;
@@ -82,10 +82,6 @@
   right: 1px;
   top: 24px;
   cursor: pointer;
-}
-
-.angebotUploadBtn.withFile {
-  background-color: var(--red-main);
 }
 
 .angebotInput.error {
@@ -158,8 +154,6 @@
 }
 
 .angebotBtn:disabled {
-  border-color: var(--red-second);
-  background-color: var(--red-second);
   cursor: not-allowed;
 }
 

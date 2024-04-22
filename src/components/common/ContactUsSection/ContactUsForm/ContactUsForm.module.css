@@ -84,7 +84,6 @@
   background-color: var(--red-main);
   border: none;
   border-radius: 28px;
-
   transition:
     border-color 250ms var(--cubic),
     color 250ms var(--cubic),
@@ -92,8 +91,6 @@
 }
 
 .contactUsBtn:disabled {
-  border-color: var(--red-second);
-  background-color: var(--red-second);
   cursor: not-allowed;
 }
 
