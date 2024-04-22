@@ -14,3 +14,20 @@
 .sliderDot.active {
   background-color: var(--white-main);
 }
+
+.sliderDots.team {
+  margin: 0 auto;
+  width: 29px;
+  gap: 4px;
+}
+
+.sliderDot.team {
+  background-color: var(--gray-stroke);
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+}
+
+.sliderDot.active.team {
+  background-color: var(--black-main);
+}

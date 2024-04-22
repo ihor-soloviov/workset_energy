@@ -2,10 +2,14 @@
   width: 342px;
 }
 
+.sliderWrap {
+  margin-bottom: 20px;
+}
+
 .teamImgWrap {
   position: relative;
   width: 342px;
-  height: 428px;
+  height: 519px;
   border-radius: 12px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -26,15 +30,14 @@
 .teamTextWrap {
   display: flex;
   flex-direction: column;
-  gap: 3px;
   position: absolute;
-  bottom: 32px;
-  left: 20px;
+  bottom: 38px;
+  left: 24px;
 }
 
 .teamImgTitle {
   color: var(--white-main);
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 600;
   line-height: 130%;
   width: fit-content;
@@ -42,8 +45,52 @@
 
 .teamImgText {
   color: var(--white-main);
-  font-size: 15px;
+  font-size: 16px;
   width: fit-content;
+  margin-bottom: 24px;
+}
+
+.teamImgBtnWrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.teamImgLink {
+  display: flex;
+  padding: 12px 22px;
+  color: var(--gray-input);
+  justify-content: center;
+  align-items: center;
+  border-radius: 28px;
+  background-color: var(--red-main);
+  width: 144px;
+  height: 44px;
+  border: 1px solid var(--red-main);
+  font-size: 16px;
+  font-weight: 600;
+  transition:
+    border-color 250ms var(--cubic),
+    color 250ms var(--cubic),
+    background-color 250ms var(--cubic);
+}
+
+.teamImgLink:last-child {
+  background-color: var(--white-main);
+  border: 1px solid var(--white-main);
+  color: var(--red-main);
+}
+
+.teamImgLink:is(:hover, :focus) {
+  background-color: var(--white-main);
+  border-color: var(--white-main);
+  color: var(--red-main);
+}
+
+.teamImgLink:last-child:is(:hover, :focus) {
+  background-color: var(--red-main);
+  border-color: var(--red-main);
+  color: var(--white-main);
 }
 
 @media screen and (min-width: 1440px) {
@@ -82,6 +129,7 @@
   .teamTextWrap {
     bottom: 4.5rem;
     left: 2.9rem;
+    gap: 0.4rem;
     opacity: 0;
     transition: opacity 600ms var(--cubic);
   }
@@ -97,6 +145,10 @@
 
   .teamImgText {
     font-size: 2.2rem;
+    margin-bottom: unset;
+  }
+  .teamImgBtnWrap {
+    display: none;
   }
 }
 
@@ -119,6 +171,7 @@
   .teamTextWrap {
     bottom: 45px;
     left: 29px;
+    gap: 4px;
   }
 
   .teamImgTitle {
