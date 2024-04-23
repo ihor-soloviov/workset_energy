@@ -2,15 +2,16 @@
   position: absolute;
   top: 0;
   left: 0;
-  padding: 48px 0 304px;
-  z-index: 100;
+  z-index: 98;
   width: 100%;
-  height: 100%;
+  height: 100dvh;
+  overflow-y: hidden;
   background-color: var(--white-main);
 }
 
 .LeadModalContainer {
   padding: 0 24px;
+  padding-bottom: 248px;
   width: 100%;
   margin: 0 auto;
 }
@@ -20,7 +21,8 @@
   height: fit-content;
   background-color: transparent;
   border: none;
-  margin-bottom: 180px;
+  margin-bottom: 172px;
+  padding: 18px 24px;
   margin-left: auto;
 }
 
@@ -48,6 +50,10 @@
   margin-bottom: 16px;
 }
 
+.LeadModalTitle {
+  margin-bottom: 12px;
+}
+
 .LeadModalTitleDesc {
   display: none;
 }
@@ -62,6 +68,10 @@
   line-height: 160%;
   margin: 0 auto;
   margin-bottom: 32px;
+}
+
+.LeadModalText {
+  margin-bottom: 24px;
 }
 
 .LeadModalTextDesc {
@@ -85,6 +95,10 @@
     border-color 250ms var(--cubic),
     color 250ms var(--cubic),
     background-color 250ms var(--cubic);
+}
+
+.LeadModalBtn {
+  border-radius: 28px;
 }
 
 .LeadModalBtnDesc {
@@ -118,6 +132,7 @@
 
   .LeadModalContainer {
     width: 100%;
+    padding-bottom: unset;
     padding: unset;
   }
 

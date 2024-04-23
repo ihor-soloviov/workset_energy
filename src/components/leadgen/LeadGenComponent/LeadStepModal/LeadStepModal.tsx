@@ -11,14 +11,14 @@ type LeadStepModalProps = {
 const LeadStepModal = ({ handleModalClick }: LeadStepModalProps) => {
   return (
     <div className={styles.LeadModalMainWrap}>
+      <Button
+        handleClick={handleModalClick}
+        className={styles.LeadModalCloseBtn}
+        type="button"
+      >
+        <CrossIcon className={styles.LeadModalIcon} />
+      </Button>
       <div className={styles.LeadModalContainer}>
-        <Button
-          handleClick={handleModalClick}
-          className={styles.LeadModalCloseBtn}
-          type="button"
-        >
-          <CrossIcon className={styles.LeadModalIcon} />
-        </Button>
         <h2 className={styles.LeadModalTitle}>WorkSET Energy sagt Danke!</h2>
         <h2 className={styles.LeadModalTitleDesc}>
           Das Team der WorkSET dankt!

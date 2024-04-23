@@ -1,12 +1,13 @@
 .stepFourList {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px 20px;
+  gap: 18px 20px;
   height: 456px;
   justify-content: center;
   flex-direction: row;
-  margin-bottom: 48px;
+  margin-bottom: 36px;
 }
+
 .stepFourItem {
   border-radius: 9.431px;
   border: 0.802px solid var(--gray-stroke);

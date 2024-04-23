@@ -34,7 +34,7 @@ const LeadGenComponent = () => {
   const [formData, setFormData] = useState(formInitialValue);
   const [step, setStep] = useState(1);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(true);
 
   console.log(formData);
 
@@ -172,7 +172,7 @@ const LeadGenComponent = () => {
 
   return (
     <div
-      className={`${styles.leadMainWrap} ${step !== 1 ? styles.active : ''}`}
+      className={`${styles.leadMainWrap} ${step !== 1 ? styles.active : ''} ${isMenuOpen ? styles.modal : ''}`}
     >
       <div className={styles.leadContainer}>
         {step !== 1 && (

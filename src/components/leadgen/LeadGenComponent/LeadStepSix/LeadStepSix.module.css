@@ -1,5 +1,5 @@
 .stepSixMainWrap {
-  padding: 32px 0 0px;
+  padding: 24px 0 0px;
 }
 
 .stepSixMainTitle {
@@ -9,17 +9,17 @@
   line-height: 160%;
   width: fit-content;
   margin: 0 auto;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .stepSixText {
   color: var(--gray-text);
   font-size: 16px;
-  width: 308px;
+  width: 342px;
   line-height: 160%;
   text-align: center;
   margin: 0 auto;
-  margin-bottom: 48px;
+  margin-bottom: 24px;
   height: 58px;
 }
 

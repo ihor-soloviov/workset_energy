@@ -1,5 +1,5 @@
 .stepThreeMainWrap {
-  padding: 32px 0 0px;
+  padding: 24px 0 0px;
 }
 
 .stepThreeMainTitle {
@@ -9,13 +9,13 @@
   font-weight: 600;
   line-height: 160%;
   height: 68px;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .leadStepThreeBtn {
   font-size: 16px;
   font-weight: 500;
-  border-radius: 6px;
+  border-radius: 28px;
   border: 1px solid var(--red-main);
   background-color: var(--red-main);
   color: var(--white-main);
@@ -47,6 +47,7 @@
     font-size: 2.8rem;
     line-height: normal;
     height: auto;
+    margin-bottom: 3.2rem;
   }
 
   .leadStepThreeBtn {
@@ -109,6 +110,7 @@
 
   .stepThreeMainTitle {
     font-size: 28px;
+    margin-bottom: 32px;
   }
 
   .leadStepThreeBtnDesc {
