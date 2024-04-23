@@ -8,12 +8,12 @@ import { PlanT } from '@/types/infoTypes';
 
 export const plans: PlanT[] = [
   {
-    price: '15.116 EUR',
-    name: 'Huawei Starter',
+    price: '17.850 EUR',
+    name: 'Huawei Basic',
     article:
-      'Starte in die E-Mobilität mit dem "Huawei Starter”-Paket – die ideale Wallbox-Lösung für Einsteiger, die Wert auf Qualität und Effizienz legen.',
-    imageMob: huaweiStarterMob,
-    imageDesk: huaweiStarter,
+      'Das "Huawei Basic”-Paket bietet dir eine zuverlässige und benutzerfreundliche Ladeinfrastruktur, perfekt für den täglichen Gebrauch.',
+    imageMob: huaweiBasicMob,
+    imageDesk: huaweiBasic,
     benefits: [
       'Projektierung',
       'Wirtschaftlichkeitsanalyse',
@@ -23,12 +23,12 @@ export const plans: PlanT[] = [
     ],
   },
   {
-    price: '17.850 EUR',
-    name: 'Huawei Basic',
+    price: '15.116 EUR',
+    name: 'Huawei Starter',
     article:
-      'Das "Huawei Basic”-Paket bietet dir eine zuverlässige und benutzerfreundliche Ladeinfrastruktur, perfekt für den täglichen Gebrauch.',
-    imageMob: huaweiBasicMob,
-    imageDesk: huaweiBasic,
+      'Starte in die E-Mobilität mit dem "Huawei Starter”-Paket – die ideale Wallbox-Lösung für Einsteiger, die Wert auf Qualität und Effizienz legen.',
+    imageMob: huaweiStarterMob,
+    imageDesk: huaweiStarter,
     benefits: [
       'Projektierung',
       'Wirtschaftlichkeitsanalyse',

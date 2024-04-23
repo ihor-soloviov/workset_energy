@@ -18,12 +18,14 @@ const StepList = () => {
       {stepItems.map(({ text, title, imgDesc, imgMob }, index) => (
         <li className={`${styles.stepItem} ${getClass(index)}`} key={title}>
           <Image
+            quality={100}
             loading="lazy"
             className={styles.stepImgMob}
             alt="title"
             src={imgMob}
           />
           <Image
+            quality={100}
             loading="lazy"
             className={styles.stepImgDesc}
             alt="title"

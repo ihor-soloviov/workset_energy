@@ -66,6 +66,7 @@ const GoogleComSlider = () => {
                 </p>
                 <div className={styles.slideBottomWrap}>
                   <Image
+                    quality={100}
                     width={63}
                     height={63}
                     className={styles.slideImg}

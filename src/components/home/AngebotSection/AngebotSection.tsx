@@ -12,6 +12,7 @@ const AngebotSection = () => {
       <div className={styles.angebotImgMainWrap}>
         <div className={styles.angebotImgWrap}>
           <Image
+            quality={100}
             className={styles.angebotImgMob}
             src={angebotImgMob}
             fill
@@ -19,6 +20,7 @@ const AngebotSection = () => {
             alt="hero-img"
           />
           <Image
+            quality={100}
             className={styles.angebotImgDesc}
             src={angebotImgDesk}
             fill

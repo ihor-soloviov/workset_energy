@@ -12,8 +12,8 @@ export const items: RedHelp[] = [
     title: 'Per E-Mail',
     text: 'Unser freundliches Support-Team beantwortet gern deine Fragen!',
     href: {
-      linkTo: 'tel:+4973114613210',
-      title: '+49 73 114 613 210',
+      linkTo: 'mailto:office@work-set.eu',
+      title: 'office@work-set.eu',
     },
   },
   {
@@ -21,8 +21,8 @@ export const items: RedHelp[] = [
     title: 'Per Telefon',
     text: 'Auch telefonisch stehen wir dir Rede und Antwort für deine Fragen.',
     href: {
-      linkTo: 'mailto:office@work-set.eu',
-      title: 'office@work-set.eu',
+      linkTo: 'tel:+4973114613210',
+      title: '+49 73 114 613 210',
     },
   },
   {

@@ -53,12 +53,14 @@ const VisionSlider = () => {
                 <SwiperSlide className={styles.slideWrap} key={index}>
                   <React.Fragment key={index}>
                     <Image
+                      quality={100}
                       loading="lazy"
                       className={styles.visionImgMob}
                       src={mobile}
                       alt="img"
                     />
                     <Image
+                      quality={100}
                       loading="lazy"
                       className={styles.visionImgDesc}
                       alt="img"
@@ -74,12 +76,14 @@ const VisionSlider = () => {
                 ({ mobile, desktop, className, rangeSlides }, index) => (
                   <React.Fragment key={index}>
                     <Image
+                      quality={100}
                       loading="lazy"
                       className={`${styles.visionImgMob} ${styles[className]} ${addVisibleClass(activeIndex, rangeSlides)}`}
                       src={mobile}
                       alt="img"
                     />
                     <Image
+                      quality={100}
                       loading="lazy"
                       className={`${styles.visionImgDesc} ${styles[className]} ${addVisibleClass(activeIndex, rangeSlides)}`}
                       alt="img"

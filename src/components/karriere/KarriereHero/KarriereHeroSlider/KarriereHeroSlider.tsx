@@ -31,6 +31,7 @@ const KarriereHeroSlider = ({ swiperRef }: Props) => {
       {heroItems.map(({ title, mobile, desktop }, index) => (
         <SwiperSlide className={styles.slide} key={index}>
           <Image
+            quality={100}
             fill
             alt="hero-slide"
             priority
@@ -38,6 +39,7 @@ const KarriereHeroSlider = ({ swiperRef }: Props) => {
             className={styles.heroImgMob}
           />
           <Image
+            quality={100}
             fill
             alt="hero-slide"
             src={desktop}

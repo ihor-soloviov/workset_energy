@@ -18,6 +18,7 @@ const SliderWrap: React.FC<Props> = ({ sliderImages }) => {
     <div className={styles.vorteileImageWrap}>
       {sliderImages[prevIndex]?.mobile && (
         <Image
+          quality={100}
           className={`${styles.sliderImgMob} ${styles.prev} ${animateTo === 'toPrev' ? styles[animateTo] : ''}`}
           src={sliderImages[prevIndex].mobile}
           fill
@@ -26,6 +27,7 @@ const SliderWrap: React.FC<Props> = ({ sliderImages }) => {
         />
       )}
       <Image
+        quality={100}
         className={styles.sliderImgMob}
         src={sliderImages[currIndex].mobile}
         fill
@@ -33,6 +35,7 @@ const SliderWrap: React.FC<Props> = ({ sliderImages }) => {
         alt="slide"
       />
       <Image
+        quality={100}
         className={`${styles.sliderImgMob} ${styles.next} ${animateTo === 'toNext' ? styles[animateTo] : ''}`}
         src={sliderImages[nextIndex].mobile}
         fill
@@ -41,6 +44,7 @@ const SliderWrap: React.FC<Props> = ({ sliderImages }) => {
       />
       {sliderImages[prevIndex]?.desktop && (
         <Image
+          quality={100}
           className={`${styles.sliderImgDesk} ${styles.prev} ${animateTo === 'toPrev' ? styles[animateTo] : ''}`}
           src={sliderImages[prevIndex].desktop}
           fill
@@ -49,6 +53,7 @@ const SliderWrap: React.FC<Props> = ({ sliderImages }) => {
         />
       )}
       <Image
+        quality={100}
         className={styles.sliderImgDesk}
         src={sliderImages[currIndex].desktop}
         fill
@@ -56,6 +61,7 @@ const SliderWrap: React.FC<Props> = ({ sliderImages }) => {
         alt="slide"
       />
       <Image
+        quality={100}
         className={`${styles.sliderImgDesk} ${styles.next} ${animateTo === 'toNext' ? styles[animateTo] : ''}`}
         src={sliderImages[nextIndex].desktop}
         fill
