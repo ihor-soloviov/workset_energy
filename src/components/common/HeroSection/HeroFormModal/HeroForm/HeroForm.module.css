@@ -11,6 +11,7 @@
   flex-direction: column;
   gap: 6px;
   position: relative;
+  font-size: 14px;
 }
 
 .heroInput {
@@ -92,16 +93,26 @@
     gap: 1.6rem;
   }
 
+  .heroLabel {
+    font-size: 1.4rem;
+  }
+
   .heroInput {
     border-radius: 0.6rem;
+    font-size: 1.5rem;
   }
 
   .heroFormBtn {
     padding: 1.2rem;
     width: 36.4rem;
     height: 4.8rem;
+    font-size: 1.6rem;
     margin: 5.6rem auto 0;
     border-radius: 0.6rem;
+  }
+
+  .errorText {
+    font-size: 1rem;
   }
 }
 
@@ -111,8 +122,13 @@
     gap: 16px;
   }
 
+  .heroLabel {
+    font-size: 14px;
+  }
+
   .heroInput {
     border-radius: 6px;
+    font-size: 15px;
   }
 
   .heroFormBtn {
@@ -120,6 +136,11 @@
     width: 364px;
     height: 48px;
     margin-top: 56px;
+    font-size: 16px;
     border-radius: 6px;
+  }
+
+  .errorText {
+    font-size: 10px;
   }
 }

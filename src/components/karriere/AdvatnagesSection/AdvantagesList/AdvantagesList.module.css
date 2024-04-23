@@ -139,8 +139,7 @@
   .advantagesText {
     margin-bottom: 2.4rem;
     line-height: 150%;
-    font-size: 1.5rem;
-
+    font-size: 1.4rem;
     letter-spacing: unset;
     width: 32.8rem;
     height: 9.2rem;
@@ -156,7 +155,14 @@
 
   .advantagesLink {
     width: 13.8rem;
+    font-size: 1.5rem;
     height: 4.5rem;
+  }
+
+  .advantagesIconWrap {
+    padding: 1.2rem;
+
+    margin-bottom: 2.4rem;
   }
 }
 
@@ -194,5 +200,18 @@
   .advantagesLink {
     width: 136px;
     height: 44px;
+    font-size: 15px;
+  }
+
+  .advantagesIconWrap {
+    padding: 12px;
+    width: 56px;
+    height: 56px;
+    margin-bottom: 24px;
+  }
+
+  .advantagesIcon {
+    width: 32px;
+    height: 32px;
   }
 }

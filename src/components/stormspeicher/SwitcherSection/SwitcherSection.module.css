@@ -92,10 +92,11 @@
   }
 
   .switcherTitle {
-    font-size: 5rem;
+    font-size: 4.8rem;
   }
 
   .switcherArticle {
+    font-size: 1.5rem;
     max-width: 52.9rem;
   }
 
@@ -140,6 +141,7 @@
 
   .switcherArticle {
     max-width: 529px;
+    font-size: 16px;
   }
 
   .switcherAnim {

@@ -195,6 +195,11 @@
   .sliderDotsWrap {
     display: block;
   }
+
+  .sliderBtn {
+    width: 7.3rem;
+    height: 7.3rem;
+  }
 }
 
 @media screen and (min-width: 1728px) {
@@ -220,5 +225,10 @@
   .sliderText {
     font-size: 18px;
     max-width: 620px;
+  }
+
+  .sliderBtn {
+    width: 73px;
+    height: 73px;
   }
 }

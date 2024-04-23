@@ -151,6 +151,7 @@
     padding: 1.4rem 2rem;
     width: 15.4rem;
     height: 5.2rem;
+    font-size: 1.6rem;
     line-height: 2.4rem;
     transition:
       border-color 250ms var(--cubic),
@@ -185,6 +186,7 @@
   .LeadModalBtnDesc {
     padding: 14px 20px;
     width: 154px;
+    font-size: 16px;
     height: 52px;
     line-height: 24px;
   }

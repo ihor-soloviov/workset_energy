@@ -11,7 +11,6 @@ import { useEffect } from 'react';
 import { useGlobalStore } from '@/store/global-store';
 import useObserver from '@/hooks/useObserver';
 import { useModalStore } from '@/store/hero-store';
-
 import { handleHeader } from '@/utils/handleHeader';
 import { scrollToSection } from '@/utils/scroll';
 

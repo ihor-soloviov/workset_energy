@@ -8,6 +8,7 @@
   color: var(--gray-dark-text);
   font-weight: 500;
   line-height: 142.8%;
+  font-size: 14px;
   letter-spacing: -0.1px;
   display: flex;
   flex-direction: column;
@@ -81,6 +82,7 @@
 
   .stepSixLabel {
     width: 29rem;
+    font-size: 1.4rem;
   }
 
   .leadStepSixBtn {
@@ -91,14 +93,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: .6rem;
+    gap: 0.6rem;
     width: 11.6rem;
     height: 4.6rem;
     color: var(--black-main);
     font-size: 1.6rem;
     font-weight: 500;
     padding: 1.3rem 2.2rem;
-    border-radius: .6rem;
+    border-radius: 0.6rem;
     border: 1px solid var(--gray-stroke);
     background-color: var(--white-main);
     margin-left: auto;
@@ -112,6 +114,12 @@
   .leadStepSixBtnDesc:disabled {
     color: var(--gray-text);
     cursor: not-allowed;
+  }
+
+  .stepSixInput {
+    font-size: 1.5rem;
+    padding: 1.2rem 1.2rem;
+    height: 4.6rem;
   }
 
   .leadIcon {
@@ -144,6 +152,7 @@
 
   .stepSixLabel {
     width: 290px;
+    font-size: 14px;
   }
 
   .leadStepSixBtnDesc {
@@ -159,5 +168,11 @@
   .leadIcon {
     width: 20px;
     height: 21px;
+  }
+
+  .stepSixInput {
+    font-size: 15px;
+    padding: 12px 12px;
+    height: 46px;
   }
 }

@@ -20,7 +20,6 @@
   display: none;
 }
 
-
 .productItem {
   user-select: none;
 }
@@ -97,7 +96,6 @@
     width: fit-content;
   }
 
-  
   .productItem {
     height: fit-content;
     cursor: pointer;
@@ -106,7 +104,7 @@
     transform: translateY(50%);
     transition: all 0.3s ease-in-out;
   }
-  
+
   .productItemVisible {
     opacity: 1;
     filter: blur(0);
@@ -155,8 +153,13 @@
     width: 30.9rem;
     height: 7.8rem;
   }
+
   .productLink {
     border-radius: 0.6rem;
+    width: 13.7rem;
+    height: 4.6rem;
+    padding: 1.3rem 2rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -188,8 +191,16 @@
     width: 309px;
     height: 78px;
   }
+  .productIcon {
+    width: 20px;
+    height: 20px;
+  }
 
   .productLink {
     border-radius: 6px;
+    width: 137px;
+    height: 46px;
+    padding: 13px 20px;
+    font-size: 16px;
   }
 }
