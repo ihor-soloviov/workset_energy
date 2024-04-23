@@ -17,7 +17,7 @@
 
 .sliderDots.team {
   margin: 0 auto;
-  width: 29px;
+  width: fit-content;
   gap: 4px;
 }
 

@@ -28,6 +28,26 @@
   background-image: url('/images/common/team-3-mob.jpg');
 }
 
+.fourth {
+  background-image: url('/images/common/team-4-mob.jpg');
+}
+
+.fifth {
+  background-image: url('/images/common/team-5-mob.jpg');
+}
+
+.sixth {
+  background-image: url('/images/common/team-6-mob.jpg');
+}
+
+.seventh {
+  background-image: url('/images/common/team-7-mob.jpg');
+}
+
+.eighth {
+  background-image: url('/images/common/team-8-mob.jpg');
+}
+
 .teamTextWrap {
   display: flex;
   flex-direction: column;

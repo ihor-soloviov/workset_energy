@@ -64,30 +64,32 @@ const TeamSlider = () => {
           </Swiper>
           <SliderDots
             className={'team'}
-            count={3}
+            count={8}
             activeSlide={activeIndex}
             handleActiveSlide={handleActiveSlide}
           />
         </>
       ) : (
         <>
-          {teamItems.map(({ textDesk, title, className }, index) => (
-            <div
-              onMouseEnter={() => handleMouseEnter(index)}
-              onMouseLeave={() => handleMouseLeave(index)}
-              key={index}
-              className={cn(styles.teamImgWrap, styles[className], {
-                [styles.active]: activeIndex === index,
-              })}
-            >
-              <div className={styles.teamTextWrap}>
-                <h3 className={styles.teamImgTitle}>{title}</h3>
-                <p className={`${styles.teamImgText} ${inter.className}`}>
-                  {textDesk}
-                </p>
+          {teamItems
+            .slice(0, 3)
+            .map(({ textDesk, title, className }, index) => (
+              <div
+                onMouseEnter={() => handleMouseEnter(index)}
+                onMouseLeave={() => handleMouseLeave(index)}
+                key={index}
+                className={cn(styles.teamImgWrap, styles[className], {
+                  [styles.active]: activeIndex === index,
+                })}
+              >
+                <div className={styles.teamTextWrap}>
+                  <h3 className={styles.teamImgTitle}>{title}</h3>
+                  <p className={`${styles.teamImgText} ${inter.className}`}>
+                    {textDesk}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
         </>
       )}
     </div>
