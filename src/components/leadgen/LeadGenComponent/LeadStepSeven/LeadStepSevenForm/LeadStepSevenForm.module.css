@@ -9,6 +9,7 @@
   font-weight: 500;
   line-height: 142.8%;
   letter-spacing: -0.1px;
+  font-size: 14px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -87,6 +88,10 @@
     gap: 2.4rem;
   }
 
+  .stepSevenLabel {
+    font-size: 1.4rem;
+  }
+
   .stepSevenLabelWrap {
     flex-direction: row;
     gap: 2rem;
@@ -94,6 +99,16 @@
 
   .stepSevenLabelWrap .stepSevenInput {
     width: 29rem;
+  }
+
+  .stepSevenInput {
+    font-size: 1.5rem;
+    padding: 1.2rem 1.2rem;
+    height: 4.6rem;
+  }
+
+  .stepSevenInput::placeholder {
+    font-size: 1.5rem;
   }
 
   .leadStepSevenBtn {
@@ -157,9 +172,22 @@
   .stepSevenLabelWrap {
     gap: 20px;
   }
+  .stepSevenLabel {
+    font-size: 14px;
+  }
 
   .stepSevenLabelWrap .stepSevenInput {
     width: 290px;
+  }
+
+  .stepSevenInput::placeholder {
+    font-size: 15px;
+  }
+
+  .stepSevenInput {
+    font-size: 15px;
+    padding: 12px 12px;
+    height: 46px;
   }
 
   .leadStepSevenBtnDesc {

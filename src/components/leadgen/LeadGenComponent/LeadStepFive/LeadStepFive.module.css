@@ -49,6 +49,7 @@
     line-height: 130%;
     width: 51.8rem;
     height: 6.4rem;
+    margin-bottom: 3.2rem;
   }
 
   .leadStepFiveBtn {
@@ -113,6 +114,7 @@
     font-size: 28px;
     width: 518px;
     height: 64px;
+    margin-bottom: 32px;
   }
 
   .leadStepFiveBtnDesc {

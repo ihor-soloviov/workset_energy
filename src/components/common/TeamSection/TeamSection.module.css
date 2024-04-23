@@ -108,8 +108,15 @@
     width: 30.4rem;
     margin-bottom: 5rem;
   }
+
   .teamBtn {
     display: flex;
+    padding: 1.3rem 2rem;
+    font-size: 1.5rem;
+    width: 17rem;
+    height: 4.8rem;
+    border-radius: 0.6rem;
+    gap: 0.8rem;
   }
 }
 
@@ -132,5 +139,14 @@
     font-size: 18px;
     width: 304px;
     margin-bottom: 50px;
+  }
+
+  .teamBtn {
+    padding: 13px 20px;
+    font-size: 16px;
+    width: 170px;
+    height: 48px;
+    border-radius: 6px;
+    gap: 8px;
   }
 }

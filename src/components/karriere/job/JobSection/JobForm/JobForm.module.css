@@ -186,6 +186,7 @@
 
   .jobFormTitle {
     margin-bottom: 1.4rem;
+    font-size: 2.8rem;
     line-height: normal;
   }
 
@@ -223,7 +224,7 @@
 
   .jobFilePlaceholderDesc {
     display: block;
-    top: 3.6rem;
+    top: 4.3rem;
     left: 1.6rem;
     line-height: 110%;
   }
@@ -235,12 +236,26 @@
   .jobUploadBtn {
     padding: 1.4rem 3.2rem;
     width: 11.6rem;
-    top: 2.2rem;
+    top: 2.5rem;
   }
 
   .jobBtn {
     width: 100%;
     padding: 1.5rem 16.8rem;
+  }
+}
+
+@media screen and (min-width: 1510px) {
+  .jobUploadBtn {
+    top: 2.3rem;
+  }
+  .jobFilePlaceholderDesc {
+    top: 4rem;
+  }
+}
+@media screen and (min-width: 1615px) {
+  .jobUploadBtn {
+    top: 2.2rem;
   }
 }
 
@@ -257,6 +272,7 @@
 
   .jobFormTitle {
     margin-bottom: 14px;
+    font-size: 28px;
   }
 
   .jobFormText {

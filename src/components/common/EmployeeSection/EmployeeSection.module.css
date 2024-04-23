@@ -79,7 +79,9 @@
 
   .employeeMainText {
     width: 66.8rem;
+    font-size: 1.6rem;
   }
+
   .employeeBtn {
     display: none;
   }
@@ -97,5 +99,6 @@
 
   .employeeMainText {
     width: 668px;
+    font-size: 16px;
   }
 }

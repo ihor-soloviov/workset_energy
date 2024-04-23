@@ -80,11 +80,12 @@
 
   .employeeText {
     width: 45.9rem;
+    font-size: 1.6rem;
   }
 
   .employeeItemBtn {
     display: flex;
-    margin-top: 0.6rem;
+    margin-top: 1.8rem;
     justify-content: center;
     align-items: center;
     padding: 1.3rem 2rem;
@@ -130,10 +131,11 @@
 
   .employeeText {
     width: 459px;
+    font-size: 16px;
   }
 
   .employeeItemBtn {
-    margin-top: 6px;
+    margin-top: 18px;
     padding: 13px 20px;
     font-size: 16px;
     width: 170px;

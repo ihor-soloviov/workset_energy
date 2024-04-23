@@ -49,11 +49,8 @@
 }
 
 @media screen and (min-width: 1440px) {
-}
-
-@media screen and (min-width: 1728px) {
   .impressiumMainList {
-    gap: 48px;
+    gap: 4.8rem;
   }
 
   .impressiumMainItem {
@@ -63,13 +60,38 @@
   }
 
   .impressiumMainItem.contact {
-    gap: 85px;
+    gap: 8.5rem;
     justify-content: unset;
   }
 
   .impressiumTitle {
     font-weight: 600;
+    font-size: 2.2rem;
     margin-right: unset;
+  }
+
+  .impressiumTitle.contact {
+    width: 25.8rem;
+  }
+
+  .impressiumText {
+    line-height: 160%;
+    font-size: 1.6rem;
+    width: 101.1rem;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .impressiumMainList {
+    gap: 48px;
+  }
+
+  .impressiumMainItem.contact {
+    gap: 85px;
+  }
+
+  .impressiumTitle {
+    font-size: 22px;
   }
 
   .impressiumTitle.contact {
@@ -77,7 +99,7 @@
   }
 
   .impressiumText {
-    line-height: 160%;
     width: 1011px;
+    font-size: 16px;
   }
 }
