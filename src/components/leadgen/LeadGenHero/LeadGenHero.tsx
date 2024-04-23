@@ -12,6 +12,7 @@ const LeadGenHero = ({ isDesktop }: LeadGenHeroProps) => {
   return (
     <section className={styles.leadHeroSection}>
       <Image
+        quality={100}
         className={styles.leadHeroImgMob}
         src={leadHeroImgMob}
         fill
@@ -20,6 +21,7 @@ const LeadGenHero = ({ isDesktop }: LeadGenHeroProps) => {
         alt="hero-img"
       />
       <Image
+        quality={100}
         className={styles.leadHeroImgDesc}
         src={leadHeroImgDesk}
         fill

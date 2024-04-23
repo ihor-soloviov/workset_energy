@@ -22,6 +22,7 @@ const JobHero = ({ response }: JobHeroProps) => {
       {imgSrc && (
         <>
           <Image
+            quality={100}
             fill
             placeholder="blur"
             className={styles.JobHeroImgMob}
@@ -29,6 +30,7 @@ const JobHero = ({ response }: JobHeroProps) => {
             src={imgSrc.mobile}
           />
           <Image
+            quality={100}
             fill
             placeholder="blur"
             className={styles.JobHeroImgDesc}

@@ -10,6 +10,7 @@ const UberUnsHero = () => {
   return (
     <section className={styles.uberHeroSection}>
       <Image
+        quality={100}
         className={styles.uberHeroImgMob}
         src={uberHeroImgMob}
         fill
@@ -18,6 +19,7 @@ const UberUnsHero = () => {
         alt="hero-img"
       />
       <Image
+        quality={100}
         className={styles.uberHeroImgDesc}
         src={uberHeroImgDesk}
         fill

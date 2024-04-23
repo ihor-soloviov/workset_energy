@@ -73,6 +73,7 @@ const HeroSection = ({
       <section className={styles.heroSection}>
         <Image
           className={styles.heroImgMob}
+          quality={100}
           src={imgMob}
           fill
           placeholder="blur"
@@ -80,6 +81,7 @@ const HeroSection = ({
           alt="hero-img"
         />
         <Image
+          quality={100}
           className={styles.heroImgDesc}
           src={imgDesc}
           fill

@@ -17,12 +17,14 @@ const ProductList = () => {
         <li className={styles.productItem} key={title}>
           <div className={styles.productImgWrap}>
             <Image
+              quality={100}
               className={styles.productImgMob}
               src={imgMob}
               loading="lazy"
               alt={title}
             />
             <Image
+              quality={100}
               className={styles.productImgDesc}
               src={imgDesc}
               loading="lazy"

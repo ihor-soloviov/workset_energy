@@ -19,6 +19,7 @@ const OfferList = ({ showItems }: OfferListProps) => {
         ({ mainTitle, mainText, title, text, timeType, mobile, desktop }) => (
           <li className={styles.offerItem} key={mainTitle}>
             <Image
+              quality={100}
               className={styles.offerImgMob}
               loading="lazy"
               placeholder="blur"
@@ -26,6 +27,7 @@ const OfferList = ({ showItems }: OfferListProps) => {
               src={mobile}
             />
             <Image
+              quality={100}
               className={styles.offerImgDesk}
               loading="lazy"
               placeholder="blur"

@@ -1,7 +1,7 @@
 import { StaticImageData } from 'next/image';
-import product1Mob from '/public/images/home-page/product-1-mob.jpg';
-import product2Mob from '/public/images/home-page/product-2-mob.jpg';
-import product3Mob from '/public/images/home-page/product-3-mob.jpg';
+import product1Mob from '/public/images/home-page/product-1-mob.webp';
+import product2Mob from '/public/images/home-page/product-2-mob.webp';
+import product3Mob from '/public/images/home-page/product-3-mob.webp';
 import product1Desk from '/public/images/home-page/product-1-desk.jpg';
 import product2Desk from '/public/images/home-page/product-2-desk.jpg';
 import product3Desk from '/public/images/home-page/product-3-desk.jpg';

@@ -7,6 +7,7 @@ const ImpressumHero = () => {
   return (
     <section className={styles.impressiumSection}>
       <Image
+        quality={100}
         className={styles.impressiumHeroImgMob}
         src={impressiumHeroImgMob}
         fill
@@ -15,6 +16,7 @@ const ImpressumHero = () => {
         alt="hero-img"
       />
       <Image
+        quality={100}
         className={styles.impressiumHeroImgDesk}
         src={impressiumHeroImgDesk}
         fill

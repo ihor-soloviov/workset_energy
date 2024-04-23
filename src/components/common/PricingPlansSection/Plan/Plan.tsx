@@ -27,12 +27,14 @@ const Plan: React.FC<Props> = ({
   return (
     <li className={styles.pricingPlansItem}>
       <Image
+        quality={100}
         loading="lazy"
         className={styles.planImageMob}
         alt={`${name} plan collage`}
         src={imageMob}
       />
       <Image
+        quality={100}
         loading="lazy"
         className={styles.planImageDesk}
         alt={`${name} plan collage`}

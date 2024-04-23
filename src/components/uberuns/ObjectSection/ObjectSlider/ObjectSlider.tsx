@@ -46,8 +46,14 @@ const ObjectSlider = () => {
         {objectItems.map(({ standort, textList, mobile, desktop }, index) => (
           <SwiperSlide className={styles.slide} key={index}>
             <div className={styles.sliderMainItem}>
-              <Image className={styles.sliderImgMob} src={mobile} alt="slide" />
               <Image
+                quality={100}
+                className={styles.sliderImgMob}
+                src={mobile}
+                alt="slide"
+              />
+              <Image
+                quality={100}
                 className={styles.sliderImgDesk}
                 src={desktop}
                 alt="slide"

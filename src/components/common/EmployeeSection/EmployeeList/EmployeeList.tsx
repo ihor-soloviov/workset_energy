@@ -16,12 +16,14 @@ const EmployeeList = ({ pathname }: EmployeeListProps) => {
       {employeeItems.map(({ text, title, imgMob, imgDesc, btn }) => (
         <li className={styles.employeeItem} key={title}>
           <Image
+            quality={100}
             className={styles.employeeImgMob}
             loading="lazy"
             src={imgMob}
             alt={title}
           />
           <Image
+            quality={100}
             className={styles.employeeImgDesc}
             loading="lazy"
             src={imgDesc}
