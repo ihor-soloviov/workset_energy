@@ -15,6 +15,8 @@
   background-color: var(--white-main);
 }
 
+/* Team section */
+
 .sliderDots.team {
   margin: 0 auto;
   width: fit-content;
@@ -31,6 +33,27 @@
 .sliderDot.active.team {
   background-color: var(--black-main);
 }
+
+/* Pricing plans section */
+
+.sliderDots.plans {
+  margin: 0 auto;
+  width: fit-content;
+  gap: 4px;
+}
+
+.sliderDot.plans {
+  background-color: var(--gray-stroke);
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+}
+
+.sliderDot.active.plans {
+  background-color: var(--black-main);
+}
+
+/* Vision section */
 
 .sliderDots.vision {
   margin-right: auto;

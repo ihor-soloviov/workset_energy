@@ -25,7 +25,7 @@ export const teamItems: TeamItem[] = [
     className: 'third',
   },
   {
-    title: 'Damian Feluks',
+    title: 'Chafiq Soultana',
     textMob: 'Frankfurt',
     className: 'fourth',
   },
@@ -35,7 +35,7 @@ export const teamItems: TeamItem[] = [
     className: 'fifth',
   },
   {
-    title: 'Chafiq Soultana',
+    title: 'Damian Feluks',
     textMob: 'Frankfurt',
     className: 'sixth',
   },

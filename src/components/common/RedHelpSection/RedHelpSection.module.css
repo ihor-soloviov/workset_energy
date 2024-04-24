@@ -1,12 +1,12 @@
 .redHelpSection {
-  padding: 90px 24px;
+  padding: 60px 0px 64px;
   background-color: var(--red-main);
 }
 
 .redHelpWrap {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 32px;
 }
 
 .title {
@@ -15,8 +15,8 @@
   font-weight: 700;
   line-height: 130%;
   color: var(--white-main);
-  max-width: 300px;
-  margin: 0 auto 12px;
+  width: 300px;
+  margin: 0 auto 8px;
 }
 
 .text {
@@ -32,7 +32,7 @@
 .redHelpItems {
   display: flex;
   flex-direction: column;
-  gap: 34px;
+  gap: 24px;
   align-items: center;
 }
 
@@ -44,6 +44,7 @@
 
   .redHelpWrap {
     align-items: center;
+    gap: 4.8rem;
   }
 
   .redHelpHeader {
@@ -54,6 +55,7 @@
     font-size: 5rem;
     max-width: 100%;
     margin-bottom: 1.4rem;
+    width: 71.1rem;
   }
 
   .text {
@@ -73,8 +75,13 @@
     padding: 140px 0;
   }
 
+  .redHelpWrap {
+    gap: 48px;
+  }
+
   .title {
     font-size: 50px;
+    width: 711px;
     margin-bottom: 14px;
   }
 

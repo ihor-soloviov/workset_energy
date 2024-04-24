@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import styles from './RecycleTextWrap.module.css';
 import useObserver from '@/hooks/useObserver';
 
@@ -15,6 +15,7 @@ const RecycleTextWrap: React.FC<Props> = ({
   title,
   titleClass,
   text,
+
   textClass,
 }) => {
   useObserver(

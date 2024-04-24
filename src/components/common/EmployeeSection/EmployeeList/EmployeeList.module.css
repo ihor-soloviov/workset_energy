@@ -1,8 +1,8 @@
 .employeeList {
   display: flex;
   flex-direction: column;
-  gap: 64px;
-  margin-bottom: 28px;
+  gap: 36px;
+  margin-bottom: 24px;
 }
 
 .employeeItem {
@@ -11,8 +11,13 @@
   gap: 24px;
 }
 
+.employeeImgMob {
+  border-radius: 16px;
+}
+
 .employeeImgDesc {
   display: none;
+  border-radius: 16px;
 }
 
 .employeeTextWrap {
@@ -48,6 +53,7 @@
 @media screen and (min-width: 1440px) {
   .employeeList {
     gap: unset;
+    margin-bottom: unset;
   }
 
   .employeeItem {
@@ -66,6 +72,7 @@
   }
 
   .employeeImgDesc {
+    border-radius: unset;
     display: block;
     width: calc(100% / 2);
   }

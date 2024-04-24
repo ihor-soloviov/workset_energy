@@ -1,5 +1,5 @@
 .employeeSection {
-  padding: 64px 0;
+  padding: 32px 0;
 }
 
 .employeeMainTitle {
@@ -8,7 +8,7 @@
   font-weight: 600;
   line-height: 130%;
   margin: 0 auto;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   text-align: center;
 }
 
@@ -19,7 +19,7 @@
   line-height: 160%;
   text-align: center;
   margin: 0 auto;
-  margin-bottom: 72px;
+  margin-bottom: 32px;
 }
 
 .employeeBtn {
@@ -34,7 +34,7 @@
   height: 48px;
   background-color: var(--red-main);
   border: none;
-  border-radius: 6px;
+  border-radius: 28px;
   gap: 8px;
   transition:
     border-color 250ms var(--cubic),
@@ -68,11 +68,14 @@
     font-weight: 700;
     line-height: 130%;
     width: 67.6rem;
+    margin-bottom: 1.2rem;
   }
 
   .employeeMainText {
+    margin-bottom: 7.2rem;
     width: 668px;
   }
+
   .employeeBtn {
     display: none;
   }
@@ -100,5 +103,6 @@
   .employeeMainText {
     width: 668px;
     font-size: 16px;
+    margin-bottom: 72px;
   }
 }

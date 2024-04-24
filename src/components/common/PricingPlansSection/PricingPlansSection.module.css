@@ -1,13 +1,24 @@
 .pricingPlansSection {
-  padding: 90px 0;
+  padding: 60px 0;
   margin: 0 auto;
+}
+
+.sliderWrap {
+  height: 680px;
+  margin: 0 auto;
+  width: 342px;
+}
+
+.slideWrap {
+  height: fit-content;
+  margin-top: auto;
 }
 
 .pricingPlansWrap {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 194px;
+  gap: 18px;
   padding: 0 24px;
   margin: 0 auto;
   width: 100%;
@@ -27,12 +38,15 @@
   line-height: 130%;
   max-width: 320px;
   color: var(--gray-dark-text);
+  margin: 0 auto;
   margin-bottom: 12px;
 }
 
 .plansText {
   font-size: 16px;
   font-weight: 400;
+  width: 342px;
+  margin: 0 auto;
   line-height: 160%;
   color: var(--gray-text);
 }
@@ -45,7 +59,7 @@
 
 @media screen and (min-width: 1440px) {
   .pricingPlansSection {
-    padding-bottom: 13rem;
+    padding: 18rem 0 13rem;
   }
   .pricingPlansWrap {
     gap: 26.3rem;
@@ -63,7 +77,7 @@
 
   .plansText {
     font-size: 1.8rem;
-    max-width: 55rem;
+    width: 55rem;
     margin: 0 auto;
   }
 
@@ -75,7 +89,7 @@
 
 @media screen and (min-width: 1728px) {
   .pricingPlansSection {
-    padding-bottom: 130px;
+    padding: 180px 0 130px;
   }
   .pricingPlansWrap {
     gap: 263px;
@@ -91,7 +105,7 @@
 
   .plansText {
     font-size: 18px;
-    max-width: 550px;
+    width: 550px;
   }
 
   .pricingPlansItems {

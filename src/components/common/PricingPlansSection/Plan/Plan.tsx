@@ -46,7 +46,7 @@ const Plan: React.FC<Props> = ({
         </span>
         <h4 className={styles.planTitle}>{name}</h4>
         <article className={styles.planArticle}>{article}</article>
-        <ul className={styles.planBenefits}>
+        <ul className={`${styles.planBenefits} ${inter.className}`}>
           {benefits.map(benefit => (
             <li key={benefit} className={styles.planBenefit}>
               <CheckMarker />
