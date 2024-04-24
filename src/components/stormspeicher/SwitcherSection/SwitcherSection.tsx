@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import styles from './SwitcherSection.module.css';
 import ToggleButton from '../ToggleButton/ToggleButton';
 import Video from '@/components/stormspeicher/Video/Video';
+import { inter } from '@/utils/fonts';
 
 const SwitcherSection = () => {
   const [isDark, setIsDark] = useState(false);
@@ -21,7 +22,7 @@ const SwitcherSection = () => {
               Wie der Stromspeicher <br /> funktioniert
             </h4>
             <p
-              className={`${styles.switcherArticle} ${isDark ? styles.switcherArticleDark : ''}`}
+              className={`${styles.switcherArticle} ${isDark ? styles.switcherArticleDark : ''} ${inter.className}`}
             >
               Tagsüber erzeugen Ihre Solarpaneele Energie, die aber oft nicht
               direkt verbraucht wird, weil Sie z.B. nicht zu Hause sind. Diese

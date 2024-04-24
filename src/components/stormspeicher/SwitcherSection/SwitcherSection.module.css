@@ -1,5 +1,5 @@
 .switcherSection {
-  padding: 79px 0 89px;
+  padding: 36px 0;
   background-color: var(--gray-input);
   transition: all 0.4s var(--cubic);
 }
@@ -17,15 +17,14 @@
 .switcherWrap {
   display: flex;
   flex-direction: column;
-  gap: 37px;
+  gap: 24px;
 }
 
 .switcherTitle {
   font-size: 30px;
   font-weight: 500;
   line-height: 130%;
-
-  margin-bottom: 18px;
+  margin-bottom: 8px;
 }
 
 .switcherTitleDark {
@@ -36,7 +35,8 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 160%;
-
+  width: fit-content;
+  margin-right: auto;
   color: var(--gray-text);
 }
 
@@ -48,10 +48,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 32px;
-
+  gap: 15px;
   padding: 54px 14px 23px;
-
   border-radius: 12px;
   border: 0.391px solid var(--gray-stroke);
   background: var(--white-main);
@@ -69,6 +67,12 @@
 
 .switcherAnimDesk {
   display: none;
+}
+
+@media screen and (min-width: 390px) {
+  .switcherContainer {
+    width: 390px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -93,6 +97,7 @@
 
   .switcherTitle {
     font-size: 4.8rem;
+    margin-bottom: 1.8rem;
   }
 
   .switcherArticle {
@@ -137,6 +142,7 @@
 
   .switcherTitle {
     font-size: 50px;
+    margin-bottom: 18px;
   }
 
   .switcherArticle {
