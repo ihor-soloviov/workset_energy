@@ -117,7 +117,7 @@ const VorteileSlider = () => {
           <div className={styles.sliderDotsWrap}>
             <SliderDots
               handleActiveSlide={handleActiveSlide}
-              count={6}
+              count={pathname === '/stormspeicher' ? 5 : 6}
               className="vorteile"
               activeSlide={activeIndex}
             />
