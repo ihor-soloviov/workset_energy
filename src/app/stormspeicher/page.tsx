@@ -4,7 +4,7 @@ import VideoSection from '@/components/common/VideoSection/VideoSection';
 import VorteileSection from '@/components/common/VorteileSection/VorteileSection';
 import { stormspeicherHero } from '@/utils/hero';
 import { stormSteicherVideo } from '@/utils/video';
-import { sliderImages, vorteileItems } from '../../utils/stormSlides';
+
 import SwitcherSection from '@/components/stormspeicher/SwitcherSection/SwitcherSection';
 import PricingPlansSection from '@/components/common/PricingPlansSection/PricingPlansSection';
 import EmployeeSection from '@/components/common/EmployeeSection/EmployeeSection';
@@ -18,11 +18,7 @@ const Stormspeicher = () => {
     <>
       <HeroSection {...stormspeicherHero} />
       {/* <VideoSection {...stormSteicherVideo} /> */}
-      <VorteileSection
-        sliderText={vorteileItems}
-        sliderImages={sliderImages}
-        id="storm-vorteile"
-      />
+      <VorteileSection />
       <SwitcherSection />
       <PricingPlansSection />
       <EmployeeSection />

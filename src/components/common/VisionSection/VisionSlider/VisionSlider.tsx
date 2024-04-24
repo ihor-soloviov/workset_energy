@@ -1,5 +1,5 @@
 'use client';
-
+import 'swiper/css';
 import React, { useRef, useState } from 'react';
 import styles from './VisionSlider.module.css';
 import { inter } from '@/utils/fonts';

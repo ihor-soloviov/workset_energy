@@ -10,7 +10,6 @@ import TeamSection from '@/components/common/TeamSection/TeamSection';
 import { wallboxHero } from '@/utils/hero';
 import { wallboxVideo } from '@/utils/video';
 
-import { sliderImages, vorteileItems } from '../../utils/wallSlides';
 import ContactUsSection from '@/components/common/ContactUsSection/ContactUsSection';
 import RedHelpSection from '@/components/common/RedHelpSection/RedHelpSection';
 
@@ -19,11 +18,7 @@ const Wallbox = () => {
     <>
       <HeroSection {...wallboxHero} />
       <VideoSection {...wallboxVideo} />
-      <VorteileSection
-        sliderText={vorteileItems}
-        sliderImages={sliderImages}
-        id="wallbox-vorteile"
-      />
+      <VorteileSection />
       <PricingPlansSection />
       <EmployeeSection />
       <GoogleComSection />

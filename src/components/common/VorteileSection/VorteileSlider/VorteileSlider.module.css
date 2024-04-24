@@ -2,47 +2,38 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
+  justify-content: center;
+  gap: 24px;
+  padding-top: 60px;
 }
 
-.vorteileImageWrap {
+.sliderWrap {
+  width: 342px;
+  height: 348px;
+  border-radius: 12px;
+}
+
+.slideWrap {
   position: relative;
-  height: 446px;
-  width: 100%;
-  overflow: hidden;
+  width: 342px;
+  height: 348px;
+  border-radius: 12px;
 }
 
 .sliderImgMob {
   object-fit: cover;
+  border-radius: 12px;
 }
+
 .sliderImgDesk {
   display: none;
   object-fit: cover;
 }
 
-.prev {
-  transform: translateX(-100%);
-  z-index: 2;
-}
-
-.toPrev {
-  transition: transform 0.4s ease-in-out;
-  transform: translateX(0);
-}
-
-.next {
-  transform: translateX(100%);
-}
-
-.toNext {
-  transition: transform 0.4s ease-in-out;
-  transform: translateX(0);
-}
-
 .sliderInfoWrap {
-  height: 496px;
+  height: 343px;
   width: 100%;
-  padding: 32px 0 64px;
+  padding: 24px 0 36px;
   background-color: var(--red-main);
 }
 
@@ -50,10 +41,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0 24px;
+  padding: 24px 24px 0px;
   margin: 0 auto;
   width: 390px;
   height: 100%;
+  position: relative;
 }
 
 .sliderInfoCounter {
@@ -61,12 +53,26 @@
 }
 
 .sliderInfo {
-  width: 342px;
+  width: 0px;
   margin: 0 auto;
+  visibility: hidden;
+  height: 0px;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 1250ms var(--cubic);
+}
+
+.sliderInfo.active {
+  top: 24px;
+  left: 24px;
+  height: auto;
+  width: 342px;
+  visibility: visible;
+  opacity: 1;
 }
 
 .sliderTitle {
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 500;
   line-height: normal;
   margin-bottom: 12px;
@@ -77,15 +83,17 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 160%;
-  color: var(--white-main);
+  color: var(--white-second);
 }
 
 .sliderDotsWrap {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 24px;
 }
 
 .sliderButtonsWrap {
-  display: flex;
+  display: none;
   gap: 8px;
 }
 
@@ -129,14 +137,31 @@
 
 @media screen and (min-width: 1440px) {
   .vorteileSliderWrap {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    height: max-content;
+    padding-top: unset;
+    height: 83.7rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: unset;
   }
 
-  .vorteileImageWrap {
+  .sliderImgWrap {
+    width: calc(100% / 2);
+    height: 100%;
+  }
+
+  .sliderWrap {
+    border-radius: unset;
+    margin: unset;
+    width: 100%;
+    height: 100%;
+  }
+
+  .slideWrap {
+    border-radius: unset;
     width: 100%;
     height: 83.7rem;
+    position: unset;
   }
 
   .sliderImgMob {
@@ -148,21 +173,25 @@
   }
 
   .sliderInfoContainer {
-    width: 100%;
+    padding: unset;
+    width: 62rem;
+    margin: unset;
+    position: relative;
   }
 
   .sliderInfoWrap {
-    position: relative;
-    justify-content: space-between;
+    width: calc(100% / 2);
+    padding: 4.8rem 0rem 5.6rem 5.9rem;
     height: 83.7rem;
-    padding: 27.1rem 4.8rem 5.6rem 5.9rem;
   }
 
   .sliderInfoCounter {
+    top: 0;
+    left: 0;
+    height: fit-content;
+    font-size: 1.8rem;
     position: absolute;
     display: block;
-    top: 4.8rem;
-    font-size: 1.8rem;
     font-weight: 400;
     line-height: 160%;
     color: var(--white-main);
@@ -171,6 +200,12 @@
   .sliderInfo {
     width: auto;
     margin: 0;
+  }
+
+  .sliderInfo.active {
+    top: 22.3rem;
+    left: 0;
+    width: 62rem;
   }
 
   .sliderTitle {
@@ -193,33 +228,63 @@
   }
 
   .sliderDotsWrap {
-    display: block;
+    top: 72.8rem;
+    left: 0;
+    height: fit-content;
   }
 
   .sliderBtn {
     width: 7.3rem;
     height: 7.3rem;
   }
+
+  .sliderButtonsWrap {
+    display: flex;
+    gap: 0.8rem;
+    position: absolute;
+    bottom: -0.2rem;
+    right: -14.2rem;
+  }
 }
 
 @media screen and (min-width: 1728px) {
-  .vorteileImageWrap {
+  .vorteileSliderWrap {
+    height: 837px;
+  }
+
+  .slideWrap {
     height: 837px;
   }
 
   .sliderInfoWrap {
     height: 837px;
-    padding: 271px 48px 56px 59px;
+    padding: 48px 0px 56px 59px;
+  }
+
+  .sliderInfoContainer {
+    width: 620px;
   }
 
   .sliderInfoCounter {
-    top: 48px;
     font-size: 18px;
+  }
+
+  .sliderDotsWrap {
+    top: 728px;
+  }
+
+  .sliderInfo.active {
+    top: 223px;
+    width: 620px;
   }
 
   .sliderTitle {
     font-size: 64px;
     margin-bottom: 24px;
+  }
+
+  .sliderTitle.first {
+    width: 378px;
   }
 
   .sliderText {
@@ -230,5 +295,11 @@
   .sliderBtn {
     width: 73px;
     height: 73px;
+  }
+
+  .sliderButtonsWrap {
+    gap: 8px;
+    bottom: -2px;
+    right: -142px;
   }
 }

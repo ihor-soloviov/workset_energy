@@ -1,4 +1,5 @@
 'use client';
+import 'swiper/css';
 import { useRef } from 'react';
 import styles from './ObjectSlider.module.css';
 import Image from 'next/image';

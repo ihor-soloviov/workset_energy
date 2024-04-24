@@ -73,3 +73,26 @@
 .sliderDot.active.vision {
   background-color: var(--white-main);
 }
+
+/* Vorteile setion */
+
+@media screen and (max-width: 1439px) {
+  .sliderDots.vorteile {
+    margin-right: auto;
+    width: fit-content;
+    gap: 4px;
+  }
+
+  .sliderDot.vorteile {
+    border-color: var(--gray-stroke);
+    border: 1px solid var(--gray-stroke);
+    background-color: transparent;
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+  }
+
+  .sliderDot.active.vorteile {
+    background-color: var(--white-main);
+  }
+}

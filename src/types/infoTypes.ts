@@ -50,11 +50,6 @@ type HrefObject = {
 
 type NavLinkItem = HrefObject;
 
-type VorteileSliderT = {
-  sliderImages: ImportedImages[];
-  sliderText: VorteileSliderItems[];
-};
-
 type HeroItem = ImportedImages & {
   title: string;
 };
@@ -119,7 +114,6 @@ export type {
   PlanT,
   ObjectItem,
   RedHelp,
-  VorteileSliderT,
   NavLinkItem,
   HeroItem,
   KarrierJobItems,

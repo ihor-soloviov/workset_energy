@@ -11,34 +11,35 @@ import pvSlide5Mob from '/public/images/pv-anlagen-page/PVSlide5Mob.jpg';
 import pvSlide5Desk from '/public/images/pv-anlagen-page/pvSlide5Desk.jpg';
 import pvSlide6Mob from '/public/images/pv-anlagen-page/PVSlide6Mob.jpg';
 import pvSlide6Desk from '/public/images/pv-anlagen-page/pvSlide6Desk.jpg';
+
 export const vorteileItems: VorteileSliderItems[] = [
   {
     title: 'Vorteile einer PV-Anlage',
-    text: 'PV-Anlagen sind eine fortschrittliche und effiziente Technologie, die viele Vorteile bietet und weltweit immer beliebter wird. Hier sind einige Gründe, warum Investitionen in Photovoltaik schlau und einträglich sind.',
+    text: 'Unsere Vision ist es, einen positiven Einfluss auf die Umwelt zu haben und gleichzeitig unseren Kunden zu helfen, Geld zu sparen und ihre Energiekosten langfristig zu senken. Wir sind stolz darauf, an einer besseren Zukunft zu arbeiten, und sind bestrebt, unser Engagement für Nachhaltigkeit und erneuerbare Energiequellen fortzusetzen',
   },
   {
     title: 'Energiekosten sparen',
-    text: 'Strom aus Solarenergie ist mindestens dreimal günstiger als Netzstrom. In den letzten zwei Jahrzehnten hat sich der Strompreis nahezu verdreifacht und beträgt derzeit 40 Cent pro Kilowattstunde (unter Berücksichtigung der Strompreisbremse, Stand: Dezember 2023). Im Gegensatz dazu ist der Preis für eine Kilowattstunde selbst erzeugten Solarstrom erheblich gesunken.',
+    text: 'Strom aus Sonnenenergie ist mindestens dreimal günstiger als Netzstrom. In den letzten zwei Jahrzehnten hat sich der Strompreis nahezu verdreifacht und beträgt derzeit 40 Cent pro Kilowattstunde. Im Gegensatz dazu ist der Preis für eine Kilowattstunde selbst erzeugten Solarstroms erheblich gesunken',
   },
   {
     title: 'Autarkie',
-    text: 'Die Sonnenenergie ist praktisch unerschöpflich, und mit einer Photovoltaikanlage können Sie über einen Zeitraum von mindestens 20 Jahren Ihren eigenen Strom erzeugen. Während Großkonzerne ihre Preise möglicherweise anheben, können Sie kontinuierlich von Ihrer eigenen Solarstromerzeugung profitieren',
+    text: 'Photovoltaikanlagen ermöglichen es dir, über mindestens 20 Jahre deinen eigenen Strom zu erzeugen und dich vor Preiserhöhungen durch Großkonzerne zu schützen',
   },
   {
-    title: 'Vorzugstarif',
-    text: 'Zusätzlich zu den finanziellen Einsparungen profitieren Sie auch von der Einspeisevergütung. Dies bezeichnet die Vergütung, die Sie für den überschüssigen Strom erhalten, den Sie nicht selbst verbrauchen und stattdessen ins öffentliche Stromnetz einspeisen. Dadurch wird in der Regel die Amortisation einer PV-Anlage noch beschleunigt',
+    title: 'Vergütung durch Einspeisung',
+    text: 'Neben finanziellen Einsparungen profitierst du auch von der Einspeisevergütung für den Strom, den du ins öffentliche Netz einspeis',
   },
   {
     title: 'Immobilienwert steigern',
-    text: 'Häufig wird übersehen, dass eine eigene Photovoltaikanlage den Wert Ihrer Immobilie wesentlich erhöhen kann, womöglich sogar die initialen Anschaffungskosten übersteigend. Dies resultiert auch aus den langfristigen Ersparnissen und Einspeisevergütungen, die den Immobilieneigentümern zugutekommen',
+    text: 'Eine Photovoltaikanlage kann den Wert deiner Immobilie oft über die Anschaffungskosten hinaus steigern, auch dank langfristiger Ersparnisse und Einspeisevergütungen',
   },
   {
     title: 'Umwelt schützen',
-    text: 'Die Nutzung von Solarenergie durch Photovoltaikanlagen trägt wesentlich zur Umweltfreundlichkeit bei, da Solarenergie eine erneuerbare Energiequelle ist. Indem\n Sie die Energie der Sonne nutzen, leisten\n Sie somit einen Beitrag zum Erhalt unseres Planeten.',
+    text: 'Die Nutzung von Sonnenenergie durch Photovoltaikanlagen trägt wesentlich zum Schutz der Umwelt bei, da Sonnenenergie eine erneuerbare Energiequelle ist. Indem du die Energie der Sonne nutzt, leistest du somit einen Beitrag zum Erhalt unseres Planeten',
   },
 ];
 
-export const sliderImages: ImportedImages[] = [
+export const vorteileImages: ImportedImages[] = [
   {
     mobile: pvSlide1Mob,
     desktop: pvSlide1Desk,
