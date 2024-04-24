@@ -12,7 +12,7 @@ import pvSlide5Desk from '/public/images/pv-anlagen-page/pvSlide5Desk.jpg';
 import pvSlide6Mob from '/public/images/pv-anlagen-page/PVSlide6Mob.jpg';
 import pvSlide6Desk from '/public/images/pv-anlagen-page/pvSlide6Desk.jpg';
 
-export const vorteileItems: VorteileSliderItems[] = [
+export const pvItems: VorteileSliderItems[] = [
   {
     title: 'Vorteile einer PV-Anlage',
     text: 'Unsere Vision ist es, einen positiven Einfluss auf die Umwelt zu haben und gleichzeitig unseren Kunden zu helfen, Geld zu sparen und ihre Energiekosten langfristig zu senken. Wir sind stolz darauf, an einer besseren Zukunft zu arbeiten, und sind bestrebt, unser Engagement für Nachhaltigkeit und erneuerbare Energiequellen fortzusetzen',
@@ -39,7 +39,7 @@ export const vorteileItems: VorteileSliderItems[] = [
   },
 ];
 
-export const vorteileImages: ImportedImages[] = [
+export const pvImages: ImportedImages[] = [
   {
     mobile: pvSlide1Mob,
     desktop: pvSlide1Desk,

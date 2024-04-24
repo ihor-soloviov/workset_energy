@@ -110,6 +110,7 @@ export type {
   VisionLinkItem,
   VorteileSliderItems,
   ImportedImages,
+  TitleText,
   VisionImageItem,
   PlanT,
   ObjectItem,

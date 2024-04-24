@@ -11,34 +11,34 @@ import wbSlide5Mob from '/public/images/wallbox-page/WSlide5Mob.jpg';
 import wbSlide5Desk from '/public/images/wallbox-page/WSlide5Desk.jpg';
 import wbSlide6Mob from '/public/images/wallbox-page/WSlide6Mob.jpg';
 import wbSlide6Desk from '/public/images/wallbox-page/WSlide6Desk.jpg';
-export const vorteileItems: VorteileSliderItems[] = [
+export const wallItems: VorteileSliderItems[] = [
   {
     title: 'Wallbox-Vorteile',
-    text: 'Die Wallbox bietet eine bequeme und einfache Lösung zum Aufladen von Elektrofahrzeugen direkt in deinem Haus oder Büro. Mit modernster Technologie ermöglicht sie eine flexible und effiziente Ladung, die den Bedürfnissen der Nutzer gerecht wird. Das intelligente Design und die Benutzerfreundlichkeit der Wallbox ermöglichen eine reibungslose Integration in deine täglichen Abläufe.',
+    text: 'Die Wallbox ist eine bequeme und einfache Lösung zum Aufladen von Elektrofahrzeugen zu Hause oder im Büro. Sie bietet moderne Technologie für eine flexible und effiziente Ladung und ist durch ihr intelligentes Design leicht in den Alltag integrierbar',
   },
   {
     title: 'Intelligenz',
-    text: 'Unser Wallbox-System verfügt über intelligente Funktionen wie die Ladesteuerung über eine mobile App, Ladepläne und Energieüberwachung.',
+    text: 'Unser Wallbox-System verfügt über intelligente Funktionen wie die Ladesteuerung über eine mobile App, Ladepläne und Energieüberwachung',
   },
   {
     title: 'Effizienz',
-    text: 'Wallbox-Ladegeräte ermöglichen ein effizientes, zeit- und energiesparendes Aufladen. Ihre innovative Technologie und hohe Leistung garantieren ein schnelles und effizientes Aufladen des Elektrofahrzeugs und sorgen für Komfort und Optimierung des Energieverbrauchs.',
+    text: 'Wallbox-Ladegeräte ermöglichen ein effizientes, zeit- und energiesparendes Aufladen. Ihre innovative Technologie und hohe Leistung garantieren ein schnelles und effizientes Aufladen des Elektrofahrzeugs und sorgen für Komfort und Optimierung des Energieverbrauchs',
   },
   {
     title: 'Autonomie',
-    text: 'Zusätzlich zu den finanziellen Einsparungen profitieren Sie auch von der Einspeisevergütung.Das Wallbox-System in Kombination mit PV-Modulen bietet zusätzliche Unabhängigkeit vom systemweiten Stromnetz, insbesondere bei Stromausfällen oder in Notfällen.',
+    text: 'Das Wallbox-System in Kombination mit PV-Modulen bietet zusätzliche Unabhängigkeit vom systemweiten Stromnetz, insbesondere bei Stromausfällen oder in Notfällen',
   },
   {
     title: 'Ersparnisse',
-    text: 'Mit PV-Modulen kannst du deinen Strom kostenlos beziehen oder die Kosten für das Aufladen deines Elektrofahrzeugs senken, womit du langfristig viel Geld sparen kannst.',
+    text: 'Mit PV-Modulen kannst du deinen Strom kostenlos beziehen oder die Kosten für das Aufladen deines Elektrofahrzeugs senken, womit du langfristig viel Geld sparen kannst',
   },
   {
     title: 'Umweltfreundlichkeit',
-    text: 'Der Einsatz der Wallbox zum Aufladen eines Elektroautos außerhalb eines Hauses, das mit einer PV-Anlage betrieben wird, reduziert die Umweltbelastung erheblich, da die Energie aus einer erneuerbaren Quelle stammt.',
+    text: 'Der Einsatz der Wallbox zum Aufladen eines Elektroautos außerhalb eines Hauses, das mit einer PV-Anlage betrieben wird, reduziert die Umweltbelastung erheblich, da die Energie aus einer erneuerbaren Quelle stammt',
   },
 ];
 
-export const sliderImages: ImportedImages[] = [
+export const wallImages: ImportedImages[] = [
   {
     mobile: wbSlide1Mob,
     desktop: wbSlide1Desk,

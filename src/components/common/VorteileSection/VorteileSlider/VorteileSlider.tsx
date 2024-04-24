@@ -9,13 +9,39 @@ import SliderDots from '../../SliderDots/SliderDots';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import { Swiper as SwiperType } from 'swiper';
-import { useGlobalStore } from '@/store/global-store';
 import Image from 'next/image';
-import { vorteileImages, vorteileItems } from '@/utils/pvSlides';
+import { pvImages, pvItems } from '@/utils/pvSlides';
+import { stormImages, stormItems } from '@/utils/stormSlides';
+import { wallImages, wallItems } from '@/utils/wallSlides';
+import { usePathname } from 'next/navigation';
+import {
+  ImportedImages,
+  VorteileSliderItems,
+  TitleText,
+} from '@/types/infoTypes';
 
 const VorteileSlider = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const { isDesktop } = useGlobalStore();
+  const pathname = usePathname();
+
+  const getCurrentSlideData = (type: string, pathname: string) => {
+    let currentSlideData: any;
+    switch (pathname) {
+      case '/pv-anlagen':
+        currentSlideData = type === 'image' ? pvImages : pvItems;
+        return currentSlideData;
+      case '/stormspeicher':
+        currentSlideData = type === 'image' ? stormImages : stormItems;
+        return currentSlideData;
+      case '/wallbox':
+        currentSlideData = type === 'image' ? wallImages : wallItems;
+        return currentSlideData;
+
+      default:
+        currentSlideData = [];
+    }
+    return currentSlideData;
+  };
 
   const swiperRef = useRef<SwiperType>();
 
@@ -42,24 +68,26 @@ const VorteileSlider = () => {
             swiperRef.current = swiper;
           }}
         >
-          {vorteileImages.map(({ mobile, desktop }, index) => (
-            <SwiperSlide className={styles.slideWrap} key={index}>
-              <Image
-                className={styles.sliderImgMob}
-                fill
-                quality={100}
-                alt="slide"
-                src={mobile}
-              />
-              <Image
-                className={styles.sliderImgDesk}
-                fill
-                quality={100}
-                alt="slide"
-                src={desktop}
-              />
-            </SwiperSlide>
-          ))}
+          {getCurrentSlideData('image', pathname).map(
+            ({ mobile, desktop }: ImportedImages, index: number) => (
+              <SwiperSlide className={styles.slideWrap} key={index}>
+                <Image
+                  className={styles.sliderImgMob}
+                  fill
+                  quality={100}
+                  alt="slide"
+                  src={mobile}
+                />
+                <Image
+                  className={styles.sliderImgDesk}
+                  fill
+                  quality={100}
+                  alt="slide"
+                  src={desktop}
+                />
+              </SwiperSlide>
+            ),
+          )}
         </Swiper>
       </div>
 
@@ -69,21 +97,23 @@ const VorteileSlider = () => {
             0{activeIndex + 1}
           </p>
 
-          {vorteileItems.map(({ text, title }, index) => (
-            <div
-              key={title}
-              className={`${styles.sliderInfo} ${activeIndex === index ? styles.active : ''}`}
-            >
-              <h2
-                className={`${styles.sliderTitle}  ${activeIndex === 0 ? styles.first : ''}`}
+          {getCurrentSlideData('', pathname).map(
+            ({ text, title }: VorteileSliderItems, index: number) => (
+              <div
+                key={title}
+                className={`${styles.sliderInfo} ${activeIndex === index ? styles.active : ''}`}
               >
-                {title}
-              </h2>
-              <p className={`${styles.sliderText} ${inter.className}`}>
-                {text}
-              </p>
-            </div>
-          ))}
+                <h2
+                  className={`${styles.sliderTitle}  ${activeIndex === 0 ? styles.first : ''}`}
+                >
+                  {title}
+                </h2>
+                <p className={`${styles.sliderText} ${inter.className}`}>
+                  {text}
+                </p>
+              </div>
+            ),
+          )}
           <div className={styles.sliderDotsWrap}>
             <SliderDots
               handleActiveSlide={handleActiveSlide}
