@@ -61,9 +61,11 @@
   .pricingPlansSection {
     padding: 18rem 0 13rem;
   }
+
   .pricingPlansWrap {
     gap: 26.3rem;
   }
+
   .pricingPlansHeader {
     width: max-content;
     max-width: 72.9rem;
@@ -91,9 +93,11 @@
   .pricingPlansSection {
     padding: 180px 0 130px;
   }
+
   .pricingPlansWrap {
     gap: 263px;
   }
+
   .pricingPlansHeader {
     max-width: 729px;
   }

@@ -2,9 +2,7 @@
 import React from 'react';
 import { inter } from '@/utils/fonts';
 import styles from './VorteileSlider.module.css';
-
 import Button from '../../Button/Button';
-
 import ArrowIcon from '/public/icons/slide-arrow.svg';
 import SliderDots from '../../SliderDots/SliderDots';
 import { VorteileSliderT } from '@/types/infoTypes';
