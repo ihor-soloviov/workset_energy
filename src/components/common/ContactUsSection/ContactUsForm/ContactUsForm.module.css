@@ -14,7 +14,7 @@
   flex-direction: column;
   gap: 8px;
   color: var(--black-main);
-  font-weight: 600;
+  font-weight: 500;
   width: 100%;
   position: relative;
 }
@@ -45,83 +45,6 @@
 
 .contactUsInput::placeholder {
   color: var(--gray-text);
-}
-
-/* Select container */
-.contactSelect {
-  cursor: pointer;
-  height: 46px;
-  width: 100%;
-  border-radius: 8px;
-  background-color: var(--gray-input);
-  border: 1px solid var(--gray-stroke);
-  padding: 14px 12px;
-  position: relative;
-}
-
-/* Select control */
-
-.contactSelect > div {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-/* Select placeholder */
-
-.contactSelect > div > div:nth-of-type(1) {
-  color: var(--gray-text);
-  font-size: 15px;
-  font-weight: 400;
-  height: 18px;
-}
-
-/* Select menu */
-.contactSelect > div:nth-of-type(2) {
-  background-color: var(--white-main);
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  height: 130px;
-  overflow-y: auto;
-  top: 44px;
-  left: -1px;
-  width: 342px;
-  z-index: 2;
-  border: 1px solid #e5e5e7;
-  padding: 4px 0;
-  border-radius: 6px;
-  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.04);
-}
-
-/* Select option */
-
-.contactSelect > div:nth-of-type(2) > div {
-  color: var(--black-main);
-  line-height: 142.8%;
-  height: 40px;
-  letter-spacing: -0.1px;
-  padding: 10px 16px;
-  font-size: 14px;
-  margin-right: auto;
-  width: 100%;
-  font-weight: 400;
-  cursor: pointer;
-}
-
-.contactSelect > div:nth-of-type(2) > div:hover {
-  background-color: #ebebee;
-}
-
-.dropIconOpen {
-  stroke: var(--gray-text);
-  cursor: pointer;
-}
-
-.dropIconClose {
-  stroke: var(--gray-text);
-  transform: rotate(180deg);
-  cursor: pointer;
 }
 
 .contactUsTextArea {

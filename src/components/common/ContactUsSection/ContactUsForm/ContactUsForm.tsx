@@ -10,15 +10,10 @@ import { formDataPost } from '@/utils/api';
 import { ThreeDots } from 'react-loader-spinner';
 import { useState } from 'react';
 import { useGlobalStore } from '@/store/global-store';
-import ContactUsSelect from './ContactUsSelect/ContactUsSelect';
+import FormSelect from '../../FormSelect/FormSelect';
+import { questOptions } from '@/utils/questOptions';
 
 const ContactUsForm = () => {
-  const questOptions = [
-    { value: 'Persönliche Beratung', label: 'Persönliche Beratung' },
-    { value: 'Telefonberatung', label: 'Telefonberatung' },
-    { value: 'Vergleichsangebot', label: 'Vergleichsangebot' },
-  ];
-
   const [questValue, setQuestValue] = useState('');
 
   const { setPopupAction, isDesktop } = useGlobalStore();
@@ -135,7 +130,7 @@ const ContactUsForm = () => {
         </label>
       </div>
       {!isDesktop && (
-        <ContactUsSelect
+        <FormSelect
           label="Welche Art der Beratung wünschst du?"
           options={questOptions}
           value={questValue}

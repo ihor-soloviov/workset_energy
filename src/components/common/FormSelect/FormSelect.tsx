@@ -1,30 +1,34 @@
-import styles from '../ContactUsForm.module.css';
+import styles from './FormSelect.module.css';
 import Dropdown, { Option } from 'react-dropdown';
 import React from 'react';
 
-type ContactUsSelect = {
+type FormSelect = {
   label: string;
   options: Option[];
   value: string;
   placeholder: string;
+  className?: string;
   onChange: (e: Option) => void;
 };
 
-const ContactUsSelect = ({
+const FormSelect = ({
   label,
   options,
   value,
   onChange,
   placeholder,
-}: ContactUsSelect) => {
+  className,
+}: FormSelect) => {
   return (
-    <label className={styles.contactUsLabel}>
+    <label
+      className={`${styles.selectLabel} ${className ? styles[className] : ''}`}
+    >
       {label}
       <Dropdown
         onChange={onChange}
         arrowOpen={
           <svg
-            className={styles.dropIconOpen}
+            className={styles.selectIconOpen}
             xmlns="http://www.w3.org/2000/svg"
             width="20"
             height="20"
@@ -41,7 +45,7 @@ const ContactUsSelect = ({
         }
         arrowClosed={
           <svg
-            className={styles.dropIconClose}
+            className={styles.selectIconClose}
             xmlns="http://www.w3.org/2000/svg"
             width="20"
             height="20"
@@ -56,7 +60,7 @@ const ContactUsSelect = ({
             />
           </svg>
         }
-        className={styles.contactSelect}
+        className={`${styles.select} ${className ? styles[className] : ''}`}
         options={options}
         value={value}
         placeholder={placeholder}
@@ -65,4 +69,4 @@ const ContactUsSelect = ({
   );
 };
 
-export default ContactUsSelect;
+export default FormSelect;

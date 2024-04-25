@@ -10,6 +10,9 @@ import { formDataPost } from '@/utils/api';
 import { useState } from 'react';
 import { ThreeDots } from 'react-loader-spinner';
 import { useGlobalStore } from '@/store/global-store';
+import { questOptions } from '@/utils/questOptions';
+import FormSelect from '@/components/common/FormSelect/FormSelect';
+import { Option } from 'react-dropdown';
 
 type Props = {
   hideModal: () => void;
@@ -18,6 +21,8 @@ type Props = {
 const HeroForm: React.FC<Props> = ({ hideModal }) => {
   const { setPopupAction } = useGlobalStore();
   const [isLoading, setIsLoading] = useState(false);
+  const [questValue, setQuestValue] = useState('');
+
   const {
     handleSubmit,
     errors,
@@ -28,19 +33,33 @@ const HeroForm: React.FC<Props> = ({ hideModal }) => {
     resetForm,
   } = useFormik({
     initialValues: {
-      name: '',
-      tel: '',
+      userName: '',
+      userPhone: '',
+      userEmail: '',
+      userAddress: '',
     },
     validationSchema: Yup.object({
-      name: Yup.string().required('Required'),
-      tel: Yup.number().typeError('Invalid number').required('Required'),
+      userName: Yup.string().required('Required'),
+      userPhone: Yup.number().typeError('Invalid number').required('Required'),
+      userEmail: Yup.string()
+        .email('Invalid email address')
+        .required('Required'),
+      userAddress: Yup.string(),
     }),
-    onSubmit: async ({ tel, name }) => {
+    onSubmit: async ({ userName, userPhone, userEmail, userAddress }) => {
       setIsLoading(true);
       const formData = new FormData();
+      const formDataFields = {
+        userName,
+        userPhone,
+        userEmail,
+        userAddress,
+        userQuest: questValue,
+      };
 
-      formData.append('userPhone', tel);
-      formData.append('userName', name);
+      Object.entries(formDataFields).forEach(([key, value]) => {
+        formData.append(key, value);
+      });
 
       await formDataPost(formData, 'phone', setPopupAction);
       setIsLoading(false);
@@ -56,25 +75,55 @@ const HeroForm: React.FC<Props> = ({ hideModal }) => {
       <label className={styles.heroLabel}>
         Vorname*
         <input
-          className={`${styles.heroInput} ${touched.name && errors.name && styles.error}`}
+          className={`${styles.heroInput} ${touched.userName && errors.userName && styles.error}`}
           placeholder="Vorname"
-          {...getFieldProps('name')}
+          {...getFieldProps('userName')}
         />
-        {touched.name && errors.name && (
-          <p className={styles.errorText}>{errors.name}</p>
+        {touched.userName && errors.userName && (
+          <p className={styles.errorText}>{errors.userName}</p>
         )}
       </label>
       <label className={styles.heroLabel}>
         Telefon-Nr*
         <input
-          className={`${styles.heroInput} ${touched.tel && errors.tel && styles.error}`}
+          className={`${styles.heroInput} ${touched.userPhone && errors.userPhone && styles.error}`}
           placeholder="Telefon-Nr"
-          {...getFieldProps('tel')}
+          {...getFieldProps('userPhone')}
         />
-        {touched.tel && errors.tel && (
-          <p className={styles.errorText}>{errors.tel}</p>
+        {touched.userPhone && errors.userPhone && (
+          <p className={styles.errorText}>{errors.userPhone}</p>
         )}
       </label>
+      <label className={styles.heroLabel}>
+        E-Mail*
+        <input
+          placeholder="E-Mail"
+          className={`${styles.heroInput} ${touched.userEmail && errors.userEmail && styles.error}`}
+          {...getFieldProps('userEmail')}
+        />
+        {touched.userEmail && errors.userEmail && (
+          <p className={styles.errorText}>{errors.userEmail}</p>
+        )}
+      </label>
+      <label className={styles.heroLabel}>
+        Adresse des Projekts
+        <input
+          placeholder="Adresse des Projekts"
+          className={`${styles.heroInput} ${touched.userAddress && errors.userAddress && styles.error}`}
+          {...getFieldProps('userAddress')}
+        />
+        {touched.userAddress && errors.userAddress && (
+          <p className={styles.errorText}>{errors.userAddress}</p>
+        )}
+      </label>
+      <FormSelect
+        className="hero"
+        label="Welche Art der Beratung wünschst du?"
+        options={questOptions}
+        value={questValue}
+        onChange={(e: Option) => setQuestValue(e.value)}
+        placeholder={'Welche Art der Beratung wünschst du?'}
+      />
       <Button
         disabled={!(isValid && dirty)}
         className={`${styles.heroFormBtn} ${interTight.className}`}
