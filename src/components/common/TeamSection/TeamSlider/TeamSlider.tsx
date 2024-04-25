@@ -1,6 +1,6 @@
 'use client';
 import 'swiper/css';
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from './TeamSlider.module.css';
 import { inter } from '@/utils/fonts';
 import cn from 'classnames';
@@ -8,13 +8,17 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperType } from 'swiper';
 import { useGlobalStore } from '@/store/global-store';
 import { teamItems } from './teamItems';
-import Link from 'next/link';
 import SliderDots from '../../SliderDots/SliderDots';
+import TeamModal from './TeamModal/TeamModal';
+import Button from '../../Button/Button';
 
 const TeamSlider = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
   const { isDesktop } = useGlobalStore();
   const swiperRef = useRef<SwiperType>();
+
+  const toggleModal = () => setIsModalOpen(!isModalOpen);
 
   const handleMouseEnter = (index: number) => {
     setActiveIndex(index);
@@ -28,6 +32,15 @@ const TeamSlider = () => {
     setActiveIndex(index);
     swiperRef.current && swiperRef.current.slideTo(index);
   };
+
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = 'hidden';
+      return () => {
+        document.body.style.overflow = 'unset';
+      };
+    }
+  }, [isModalOpen]);
 
   return (
     <div className={styles.teamImgMainWrap}>
@@ -49,14 +62,14 @@ const TeamSlider = () => {
                   <div className={styles.teamTextWrap}>
                     <h3 className={styles.teamImgTitle}>{title}</h3>
                     <p className={styles.teamImgText}>{textMob}</p>
-                    <div className={styles.teamImgBtnWrap}>
-                      <Link className={styles.teamImgLink} href="">
-                        E-Mail
-                      </Link>
-                      <Link className={styles.teamImgLink} href="">
-                        Telefon
-                      </Link>
-                    </div>
+
+                    <Button
+                      handleClick={toggleModal}
+                      className={styles.teamImgBtn}
+                      type="button"
+                    >
+                      Kontakte
+                    </Button>
                   </div>
                 </div>
               </SwiperSlide>
@@ -67,6 +80,14 @@ const TeamSlider = () => {
             count={8}
             activeSlide={activeIndex}
             handleActiveSlide={handleActiveSlide}
+          />
+
+          <TeamModal
+            title={teamItems[activeIndex].title}
+            email={teamItems[activeIndex].email}
+            tel={teamItems[activeIndex].tel}
+            isModalOpen={isModalOpen}
+            toggleModal={toggleModal}
           />
         </>
       ) : (
