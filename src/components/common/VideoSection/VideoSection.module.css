@@ -5,12 +5,13 @@
 .videoMainWrap {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 32px;
 }
 
 .videoFrame {
   border: none;
-  width: 100%;
+  width: 340px;
   height: 210px;
   object-fit: cover;
 }
