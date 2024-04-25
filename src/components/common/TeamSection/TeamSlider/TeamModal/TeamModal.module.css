@@ -55,6 +55,11 @@
   width: 39.598px;
   height: 39.598px;
   stroke: var(--white-main);
+  transition: stroke 250ms var(--cubic);
+}
+
+.modalCloseBtn:hover .modalCrossIcon {
+  stroke: var(--gray-text);
 }
 
 .modalMainTitle {
