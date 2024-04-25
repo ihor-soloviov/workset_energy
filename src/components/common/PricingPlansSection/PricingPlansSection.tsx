@@ -1,4 +1,5 @@
 'use client';
+
 import 'swiper/css';
 import React, { useRef, useState } from 'react';
 import styles from './PricingPlansSection.module.css';

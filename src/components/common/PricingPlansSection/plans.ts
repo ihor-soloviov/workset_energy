@@ -1,19 +1,20 @@
-import huaweiStarterMob from '../../../../public/images/pv-anlagen-page/plans/HuaweiStarter-mob.png';
-import huaweiStarter from '/public/images/pv-anlagen-page/plans/HuaweiStarter.png';
-import huaweiBasicMob from '../../../../public/images/pv-anlagen-page/plans/HuaweiBasic-mob.png';
-import huaweiBasic from '/public/images/pv-anlagen-page/plans/HuaweiBasic.png';
-import enphaseProMob from '../../../../public/images/pv-anlagen-page/plans/Enphase-mob.png';
-import enphasePro from '/public/images/pv-anlagen-page/plans/Enphase.png';
+import plan1Mob from '/public/images/common/plans/plan-1-mob.png';
+import plan2Mob from '/public/images/common/plans/plan-2-mob.png';
+import plan3Mob from '/public/images/common/plans/plan-3-mob.png';
+import plan1Desk from '/public/images/common/plans/plan-1-desk.png';
+import plan2Desk from '/public/images/common/plans/plan-2-desk.png';
+import plan3Desk from '/public/images/common/plans/plan-3-desk.png';
+
 import { PlanT } from '@/types/infoTypes';
 
 export const plans: PlanT[] = [
   {
     price: '15.116 EUR',
-    name: 'Huawei Starter',
+    name: 'Huawei',
     article:
-      'Starte in die E-Mobilität mit dem "Huawei Starter”-Paket – die ideale Wallbox-Lösung für Einsteiger, die Wert auf Qualität und Effizienz legen',
-    imageMob: huaweiStarterMob,
-    imageDesk: huaweiStarter,
+      'Starte in die E-Mobilität mit dem "Huawei -Paket – die ideale Wallbox-Lösung für Einsteiger, die Wert auf Qualität und Effizienz legen',
+    imageMob: plan1Mob,
+    imageDesk: plan1Desk,
     benefits: [
       'Projektierung',
       'Wirtschaftlichkeitsanalyse',
@@ -23,12 +24,12 @@ export const plans: PlanT[] = [
     ],
   },
   {
-    price: '17.850 EUR',
-    name: 'Huawei Basic',
+    price: '16.090 EUR',
+    name: 'Sungrow',
     article:
-      'Das "Huawei Basic”-Paket bietet dir eine zuverlässige und benutzerfreundliche Ladeinfrastruktur, perfekt für den täglichen Gebrauch',
-    imageMob: huaweiBasicMob,
-    imageDesk: huaweiBasic,
+      'Das "Sungrow”-Paket bietet dir eine zuverlässige und benutzerfreundliche Ladeinfrastruktur, perfekt für den täglichen Gebrauch',
+    imageMob: plan2Mob,
+    imageDesk: plan2Desk,
     benefits: [
       'Projektierung',
       'Wirtschaftlichkeitsanalyse',
@@ -39,11 +40,11 @@ export const plans: PlanT[] = [
   },
   {
     price: '22.300 EUR',
-    name: 'Enphase Pro',
+    name: 'Enphase',
     article:
-      'Wähle “Enphase Pro” für höchste Ladeleistung und smarte Technologie, um dein Elektrofahrzeug schnell und intelligent zu laden',
-    imageMob: enphaseProMob,
-    imageDesk: enphasePro,
+      'Wähle “Enphase” für höchste Ladeleistung und smarte Technologie, um dein Elektrofahrzeug schnell und intelligent zu laden',
+    imageMob: plan3Mob,
+    imageDesk: plan3Desk,
     benefits: [
       'Projektierung',
       'Wirtschaftlichkeitsanalyse',
