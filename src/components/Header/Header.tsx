@@ -22,7 +22,7 @@ const Header = () => {
 
   const pathname = usePathname();
 
-  const { setIsDesktop } = useGlobalStore();
+  const { setIsDesktop, isDesktop } = useGlobalStore();
 
   const handleMenuClick = () => setIsMenuOpen(!isMenuOpen);
 
