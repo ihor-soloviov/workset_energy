@@ -72,10 +72,8 @@
   border-radius: 2px;
 }
 
-.leadLine::after {
-  content: '';
+.leadLineProgress {
   background-color: var(--red-main);
-  width: 68px;
   height: 2px;
   position: absolute;
   border-radius: 2px;

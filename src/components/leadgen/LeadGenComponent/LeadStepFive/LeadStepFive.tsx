@@ -30,6 +30,7 @@ const LeadStepFive = ({
         Wie viel Fläche steht für eine Solaranlage ca. zur Verfügung?
       </h3>
       <LeadStepFiveList
+        projectType={formData.propertyType}
         stepFiveValue={stepFiveValue}
         handleItemClick={handleItemClick}
       />

@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import styles from './LeadStepModal.module.css';
 import Button from '@/components/common/Button/Button';
 import CrossIcon from '/public/icons/cross.svg';

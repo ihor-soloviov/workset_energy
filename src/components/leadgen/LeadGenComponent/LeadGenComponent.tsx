@@ -36,8 +36,6 @@ const LeadGenComponent = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  console.log(formData);
-
   const currentStep = (step: number) => {
     switch (step) {
       case 1:
@@ -198,7 +196,12 @@ const LeadGenComponent = () => {
 
         {step !== 8 && (
           <div className={styles.leadCountWrap}>
-            <div className={styles.leadLine}></div>
+            <div className={styles.leadLine}>
+              <div
+                className={styles.leadLineProgress}
+                style={{ width: `${step * 48.8}px` }}
+              />
+            </div>
             <ul className={styles.leadLineList}>
               {[1, 2, 3].map((_, index) => (
                 <li className={styles.leadLineItem} key={index}></li>
