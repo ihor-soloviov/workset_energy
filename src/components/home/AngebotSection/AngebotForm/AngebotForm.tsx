@@ -38,27 +38,39 @@ const AngebotForm = () => {
     resetForm,
   } = useFormik({
     initialValues: {
-      name: '',
-      email: '',
-      tel: '',
-      message: '',
+      userName: '',
+      userEmail: '',
+      userPhone: '',
+      userAddress: '',
+      userComment: '',
     },
     validationSchema: Yup.object({
-      name: Yup.string().required('Required'),
-      email: Yup.string().email('Invalid email address').required('Required'),
-      tel: Yup.number().typeError('Invalid number').required('Required'),
+      userName: Yup.string().required('Required'),
+      userEmail: Yup.string()
+        .email('Invalid email address')
+        .required('Required'),
+      userPhone: Yup.number().typeError('Invalid number').required('Required'),
 
-      message: Yup.string(),
+      userAddress: Yup.string(),
+
+      userComment: Yup.string(),
     }),
-    onSubmit: async ({ name, email, tel, message }) => {
+    onSubmit: async ({
+      userName,
+      userEmail,
+      userPhone,
+      userAddress,
+      userComment,
+    }) => {
       if (selectedFile) {
         setIsLoading(true);
         const formData = new FormData();
         const formDataFields = {
-          userName: name,
-          userEmail: email,
-          userPhone: tel,
-          userComment: message,
+          userName,
+          userEmail,
+          userPhone,
+          userAddress,
+          userComment,
         };
 
         Object.entries(formDataFields).forEach(([key, value]) => {
@@ -81,42 +93,57 @@ const AngebotForm = () => {
       onSubmit={handleSubmit}
       className={`${styles.angebotForm} ${inter.className}`}
     >
-      <label className={styles.angebotLabel}>
-        Name, Nachname*
-        <input
-          placeholder="Name, Nachname"
-          className={`${styles.angebotInput} ${touched.name && errors.name && styles.error}`}
-          {...getFieldProps('name')}
-        />
-        {touched.name && errors.name && (
-          <p className={styles.errorText}>{errors.name}</p>
-        )}
-      </label>
       <div className={styles.angebotLabelWrap}>
+        <label className={styles.angebotLabel}>
+          Name, Nachname*
+          <input
+            placeholder="Name, Nachname"
+            className={`${styles.angebotInput} ${touched.userName && errors.userName && styles.error}`}
+            {...getFieldProps('userName')}
+          />
+          {touched.userName && errors.userName && (
+            <p className={styles.errorText}>{errors.userName}</p>
+          )}
+        </label>
+
         <label className={`${styles.angebotLabel} ${styles.email}`}>
           E-Mail*
           <input
             placeholder="E-Mail"
-            className={`${styles.angebotInput} ${touched.email && errors.email && styles.error}`}
-            {...getFieldProps('email')}
+            className={`${styles.angebotInput} ${touched.userEmail && errors.userEmail && styles.error}`}
+            {...getFieldProps('userEmail')}
           />
-          {touched.email && errors.email && (
-            <p className={styles.errorText}>{errors.email}</p>
+          {touched.userEmail && errors.userEmail && (
+            <p className={styles.errorText}>{errors.userEmail}</p>
           )}
         </label>
+      </div>
+      <div className={styles.angebotLabelWrap}>
         <label className={styles.angebotLabel}>
           Telefon-Nr.*
           <input
             placeholder="Telefon-Nr."
-            className={`${styles.angebotInput} ${touched.tel && errors.tel && styles.error}`}
-            {...getFieldProps('tel')}
+            className={`${styles.angebotInput} ${touched.userPhone && errors.userPhone && styles.error}`}
+            {...getFieldProps('userPhone')}
           />
-          {touched.tel && errors.tel && (
-            <p className={styles.errorText}>{errors.tel}</p>
+          {touched.userPhone && errors.userPhone && (
+            <p className={styles.errorText}>{errors.userPhone}</p>
+          )}
+        </label>
+
+        <label className={styles.angebotLabel}>
+          Adresse des Projekts
+          <input
+            placeholder="Adresse des Projekts"
+            className={`${styles.angebotInput} ${touched.userAddress && errors.userAddress && styles.error}`}
+            {...getFieldProps('userAddress')}
+          />
+          {touched.userAddress && errors.userAddress && (
+            <p className={styles.errorText}>{errors.userAddress}</p>
           )}
         </label>
       </div>
-      <label className={styles.angebotLabel}>
+      <label className={`${styles.angebotLabel} ${styles.file}`}>
         Wir prüfen dein PV-Angebot*
         <p
           className={`${styles.angebotFilePlaceholderMob} ${selectedFile ? styles.withFile : ''}`}
@@ -150,7 +177,7 @@ const AngebotForm = () => {
         <textarea
           placeholder="Schreib uns einfach"
           className={styles.angebotTextArea}
-          {...getFieldProps('message')}
+          {...getFieldProps('userComment')}
         />
       </label>
       <div className={styles.angebotBtnWrap}>

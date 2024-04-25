@@ -1,5 +1,5 @@
 'use client';
-
+import { Option } from 'react-dropdown';
 import { inter } from '@/utils/fonts';
 import { interTight } from '@/utils/fonts';
 import { useFormik } from 'formik';
@@ -10,9 +10,18 @@ import { formDataPost } from '@/utils/api';
 import { ThreeDots } from 'react-loader-spinner';
 import { useState } from 'react';
 import { useGlobalStore } from '@/store/global-store';
+import ContactUsSelect from './ContactUsSelect/ContactUsSelect';
 
 const ContactUsForm = () => {
-  const { setPopupAction } = useGlobalStore();
+  const questOptions = [
+    { value: 'Persönliche Beratung', label: 'Persönliche Beratung' },
+    { value: 'Telefonberatung', label: 'Telefonberatung' },
+    { value: 'Vergleichsangebot', label: 'Vergleichsangebot' },
+  ];
+
+  const [questValue, setQuestValue] = useState('');
+
+  const { setPopupAction, isDesktop } = useGlobalStore();
   const [isLoading, setIsLoading] = useState(false);
 
   const {
@@ -25,26 +34,38 @@ const ContactUsForm = () => {
     resetForm,
   } = useFormik({
     initialValues: {
-      name: '',
-      email: '',
-      tel: '',
-      message: '',
+      userName: '',
+      userEmail: '',
+      userPhone: '',
+      userAddress: '',
+      userComment: '',
     },
     validationSchema: Yup.object({
-      name: Yup.string().required('Required'),
-      email: Yup.string().email('Invalid email address').required('Required'),
-      tel: Yup.number().typeError('Invalid number').required('Required'),
-      message: Yup.string(),
+      userName: Yup.string().required('Required'),
+      userEmail: Yup.string()
+        .email('Invalid email address')
+        .required('Required'),
+      userPhone: Yup.number().typeError('Invalid number').required('Required'),
+      userAddress: Yup.string(),
+      userComment: Yup.string(),
     }),
-    onSubmit: async ({ name, email, tel, message }) => {
+    onSubmit: async ({
+      userName,
+      userEmail,
+      userPhone,
+      userComment,
+      userAddress,
+    }) => {
       setIsLoading(true);
       const formData = new FormData();
 
       const formDataFields = {
-        userName: name,
-        userEmail: email,
-        userPhone: tel,
-        userComment: message,
+        userName,
+        userEmail,
+        userPhone,
+        userAddress,
+        userQuest: questValue,
+        userComment,
       };
 
       Object.entries(formDataFields).forEach(([key, value]) => {
@@ -63,47 +84,71 @@ const ContactUsForm = () => {
       onSubmit={handleSubmit}
       className={`${styles.contactUsForm} ${inter.className}`}
     >
-      <label className={styles.contactUsLabel}>
-        Name, Nachname*
-        <input
-          placeholder="Name, Nachname"
-          className={`${styles.contactUsInput} ${touched.name && errors.name && styles.error}`}
-          {...getFieldProps('name')}
-        />
-        {touched.name && errors.name && (
-          <p className={styles.errorText}>{errors.name}</p>
-        )}
-      </label>
       <div className={styles.contactUsLabelWrap}>
+        <label className={styles.contactUsLabel}>
+          Name, Nachname*
+          <input
+            placeholder="Name, Nachname"
+            className={`${styles.contactUsInput} ${touched.userName && errors.userName && styles.error}`}
+            {...getFieldProps('userName')}
+          />
+          {touched.userName && errors.userName && (
+            <p className={styles.errorText}>{errors.userName}</p>
+          )}
+        </label>
+
         <label className={`${styles.contactUsLabel} ${styles.email}`}>
           E-Mail*
           <input
             placeholder="E-Mail"
-            className={`${styles.contactUsInput} ${touched.email && errors.email && styles.error}`}
-            {...getFieldProps('email')}
+            className={`${styles.contactUsInput} ${touched.userEmail && errors.userEmail && styles.error}`}
+            {...getFieldProps('userEmail')}
           />
-          {touched.email && errors.email && (
-            <p className={styles.errorText}>{errors.email}</p>
+          {touched.userEmail && errors.userEmail && (
+            <p className={styles.errorText}>{errors.userEmail}</p>
           )}
         </label>
+      </div>
+      <div className={styles.contactUsLabelWrap}>
         <label className={styles.contactUsLabel}>
           Telefon-Nr.*
           <input
             placeholder="Telefon-Nr."
-            className={`${styles.contactUsInput} ${touched.tel && errors.tel && styles.error}`}
-            {...getFieldProps('tel')}
+            className={`${styles.contactUsInput} ${touched.userPhone && errors.userPhone && styles.error}`}
+            {...getFieldProps('userPhone')}
           />
-          {touched.tel && errors.tel && (
-            <p className={styles.errorText}>{errors.tel}</p>
+          {touched.userPhone && errors.userPhone && (
+            <p className={styles.errorText}>{errors.userPhone}</p>
+          )}
+        </label>
+
+        <label className={styles.contactUsLabel}>
+          Adresse des Projekts
+          <input
+            placeholder="Adresse des Projekts"
+            className={`${styles.contactUsInput} ${touched.userAddress && errors.userAddress && styles.error}`}
+            {...getFieldProps('userAddress')}
+          />
+          {touched.userAddress && errors.userAddress && (
+            <p className={styles.errorText}>{errors.userAddress}</p>
           )}
         </label>
       </div>
+      {!isDesktop && (
+        <ContactUsSelect
+          label="Welche Art der Beratung wünschst du?"
+          options={questOptions}
+          value={questValue}
+          onChange={(e: Option) => setQuestValue(e.value)}
+          placeholder={'Welche Art der Beratung wünschst du?'}
+        />
+      )}
       <label className={styles.contactUsLabelTextArea}>
         Nachricht*
         <textarea
           placeholder="Nachricht"
           className={styles.contactUsTextArea}
-          {...getFieldProps('message')}
+          {...getFieldProps('userComment')}
         />
       </label>
       <Button

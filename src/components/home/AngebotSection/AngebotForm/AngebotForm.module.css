@@ -263,13 +263,22 @@
     border-radius: 0.6rem;
     font-size: 1.6rem;
   }
+
+  .angebotLabel:not(:last-child) {
+    margin-bottom: unset;
+  }
+
+  .angebotLabel.file {
+    margin-bottom: 1.8rem;
+  }
 }
 
 @media screen and (min-width: 1520px) {
   .angebotUploadBtn {
-    top: 2.3rem;
+    top: 2.2rem;
   }
 }
+
 @media screen and (min-width: 1670px) {
   .angebotUploadBtn {
     top: 2.2rem;
@@ -342,5 +351,9 @@
     padding: 14px 20px;
     border-radius: 6px;
     font-size: 16px;
+  }
+
+  .angebotLabel.file {
+    margin-bottom: 18px;
   }
 }
