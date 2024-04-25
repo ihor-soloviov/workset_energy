@@ -61,7 +61,7 @@ const HeroForm: React.FC<Props> = ({ hideModal }) => {
         formData.append(key, value);
       });
 
-      await formDataPost(formData, 'phone', setPopupAction);
+      await formDataPost(formData, 'contact-hero', setPopupAction);
       setIsLoading(false);
       hideModal();
       resetForm();
