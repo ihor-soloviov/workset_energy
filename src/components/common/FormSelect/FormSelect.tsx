@@ -21,6 +21,7 @@ const FormSelect = ({
 }: FormSelect) => {
   return (
     <label
+      id="dropSelect"
       className={`${styles.selectLabel} ${className ? styles[className] : ''}`}
     >
       {label}

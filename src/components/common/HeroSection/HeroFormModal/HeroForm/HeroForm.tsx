@@ -1,13 +1,14 @@
 'use client';
 
 import styles from './HeroForm.module.css';
+import styles2 from '../../../FormSelect/FormSelect.module.css';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { inter, interTight } from '@/utils/fonts';
 import ArrowIcon from '/public/icons/small-arrow-btn.svg';
 import Button from '../../../Button/Button';
 import { formDataPost } from '@/utils/api';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ThreeDots } from 'react-loader-spinner';
 import { useGlobalStore } from '@/store/global-store';
 import { questOptions } from '@/utils/questOptions';
@@ -22,6 +23,22 @@ const HeroForm: React.FC<Props> = ({ hideModal }) => {
   const { setPopupAction } = useGlobalStore();
   const [isLoading, setIsLoading] = useState(false);
   const [questValue, setQuestValue] = useState('');
+
+  useEffect(() => {
+    // Вибір елемента, який буде реагувати на клік
+    const clickableElement = document.getElementById('#dropSelect');
+
+    if (clickableElement) {
+      clickableElement.addEventListener('click', function () {
+        console.log('cli');
+        const heroForm = document.querySelector('.heroForm');
+
+        if (heroForm) {
+          heroForm.scrollTop = heroForm.scrollHeight - heroForm.clientHeight;
+        }
+      });
+    }
+  }, []);
 
   const {
     handleSubmit,

@@ -93,6 +93,23 @@
     gap: 1.6rem;
     height: 17rem;
     overflow-y: scroll;
+    padding-right: 8px;
+  }
+
+  .heroForm::-webkit-scrollbar {
+    height: 62px;
+    width: 2px;
+    background: #fff;
+  }
+
+  .heroForm::-webkit-scrollbar-thumb {
+    background: #e5e5e7;
+    border-radius: 1ex;
+    -webkit-border-radius: 1ex;
+  }
+
+  .heroForm::-webkit-scrollbar-corner {
+    background: #fff;
   }
 
   .heroLabel {
