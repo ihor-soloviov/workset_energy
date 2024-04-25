@@ -34,7 +34,7 @@ const LeadGenComponent = () => {
   const [formData, setFormData] = useState(formInitialValue);
   const [step, setStep] = useState(1);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const currentStep = (step: number) => {
     switch (step) {

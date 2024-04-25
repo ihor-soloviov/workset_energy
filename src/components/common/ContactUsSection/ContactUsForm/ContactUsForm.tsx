@@ -15,9 +15,8 @@ import { questOptions } from '@/utils/questOptions';
 
 const ContactUsForm = () => {
   const [questValue, setQuestValue] = useState('');
-
-  const { setPopupAction, isDesktop } = useGlobalStore();
   const [isLoading, setIsLoading] = useState(false);
+  const { setPopupAction, isDesktop } = useGlobalStore();
 
   const {
     handleSubmit,
