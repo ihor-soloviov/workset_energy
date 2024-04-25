@@ -2,12 +2,20 @@ import styles from './LeadStepModal.module.css';
 import Button from '@/components/common/Button/Button';
 import CrossIcon from '/public/icons/cross.svg';
 import { inter } from '@/utils/fonts';
+import { stopScroll } from '@/utils/stopScroll';
+import { useEffect } from 'react';
 
 type LeadStepModalProps = {
   handleModalClick: () => void;
 };
 
 const LeadStepModal = ({ handleModalClick }: LeadStepModalProps) => {
+  useEffect(() => {
+    stopScroll(true);
+
+    return () => stopScroll(false);
+  }, []);
+
   return (
     <div className={styles.LeadModalMainWrap}>
       <Button
