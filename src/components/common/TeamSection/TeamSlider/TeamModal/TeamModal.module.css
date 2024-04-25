@@ -1,0 +1,179 @@
+.modalBackdrop {
+  background: rgba(24, 24, 24, 0.29);
+  backdrop-filter: blur(0.25px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 0px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 250ms var(--cubic);
+}
+
+.modalMainWrap {
+  width: 390px;
+  height: 722px;
+  background-color: var(--red-main);
+  border-radius: 16px;
+  padding-bottom: 121px;
+}
+
+.modalBackdrop.open {
+  opacity: 1;
+  visibility: visible;
+  height: 100dvh;
+  transition: opacity 250ms var(--cubic);
+}
+
+.modalContainer {
+  width: 100%;
+  padding: 0 33px;
+}
+
+.modalTopWrap {
+  margin-bottom: 45px;
+}
+
+.modalCloseBtn {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  width: 87.5px;
+  height: 75.5px;
+  padding: 18px 24px;
+  justify-content: center;
+  margin-left: auto;
+}
+
+.modalCrossIcon {
+  width: 39.598px;
+  height: 39.598px;
+  stroke: var(--white-main);
+}
+
+.modalMainTitle {
+  width: 305px;
+  color: var(--white-main);
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 130%;
+  margin-bottom: 32px;
+}
+
+.modalTitleWrap {
+  border-bottom: 0.6px solid rgba(255, 255, 255, 0.7);
+  padding-bottom: 4px;
+  margin-bottom: 28px;
+}
+
+.modalTitle {
+  width: fit-content;
+  color: var(--white-main);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.modalList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 324px;
+  margin-bottom: 92px;
+}
+
+.modalItem {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.modalLabel {
+  color: var(--white-main);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.modalBottomWrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.modalLinkWrap {
+  display: flex;
+  padding: 12px 14px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  width: 268px;
+  height: 50px;
+  border-radius: 8px;
+}
+
+.modalLink {
+  color: var(--white-main);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 160%;
+  width: 240px;
+  height: 26px;
+}
+
+.modalCopyBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.15);
+  transition: background-color 250ms var(--cubic);
+}
+
+.modalCopyIcon {
+  fill: var(--white-main);
+  transition: fill 250ms var(--cubic);
+}
+
+.modalCopyBtn.emailCopied,
+.modalCopyBtn.telCopied {
+  background-color: var(--white-main);
+}
+
+.modalCopyBtn.emailCopied .modalCopyIcon,
+.modalCopyBtn.telCopied .modalCopyIcon {
+  fill: var(--red-main);
+}
+
+.modalBtn {
+  display: flex;
+  padding: 16px 138px;
+  color: var(--red-main);
+  justify-content: center;
+  align-items: center;
+  border-radius: 28px;
+  background-color: var(--white-main);
+  width: 324px;
+  height: 50px;
+  border: 1px solid var(--white-main);
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 auto;
+  transition:
+    border-color 250ms var(--cubic),
+    color 250ms var(--cubic),
+    background-color 250ms var(--cubic);
+}
+
+.modalBtn:is(:hover, :focus) {
+  background-color: var(--red-main);
+  border-color: var(--red-main);
+  color: var(--white-main);
+}
