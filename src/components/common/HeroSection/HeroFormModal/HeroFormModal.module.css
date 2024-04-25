@@ -11,13 +11,14 @@
 }
 
 .heroFormContainer {
-  padding: 76px 24px 0px;
+  padding: 0 24px;
+  padding-bottom: 60px;
   width: 100%;
   margin: 0 auto;
 }
 
 .heroTopWrap {
-  padding: 18px 24px 18px;
+  margin-bottom: 24px;
 }
 
 .heroCloseBtn {
@@ -26,6 +27,7 @@
   border: none;
   background-color: transparent;
   margin-left: auto;
+  padding: 18px 24px;
 }
 
 .heroCloseIcon {
@@ -48,7 +50,7 @@
   color: var(--gray-text);
   font-size: 16px;
   line-height: 150%;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   width: fit-content;
   letter-spacing: 0.8px;
 }
@@ -147,7 +149,7 @@
     padding: 4.8rem;
     background-color: var(--white-main);
     width: 46rem;
-    height: max-content;
+    height: 53rem;
     position: static;
     overflow-y: unset;
     border-radius: 1.2rem;
@@ -194,6 +196,7 @@
 
   .heroText {
     font-size: 1.5rem;
+    margin-bottom: 3.2rem;
   }
 
   .heroTopWrap {
@@ -280,6 +283,7 @@
 
   .heroText {
     font-size: 15px;
+    margin-bottom: 32px;
   }
 
   .heroThankYouWrap {

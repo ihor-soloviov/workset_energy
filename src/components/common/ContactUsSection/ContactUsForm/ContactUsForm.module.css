@@ -14,7 +14,7 @@
   flex-direction: column;
   gap: 8px;
   color: var(--black-main);
-  font-weight: 600;
+  font-weight: 500;
   width: 100%;
   position: relative;
 }
@@ -146,6 +146,9 @@
     height: 4.6rem;
     padding: 1.4rem 2rem;
     border-radius: 0.6rem;
+  }
+  .contactUsLabel:not(:last-child) {
+    margin-bottom: unset;
   }
 }
 
