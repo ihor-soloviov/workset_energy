@@ -16,8 +16,8 @@
 }
 
 .modalMainWrap {
-  width: 390px;
-  height: 722px;
+  width: 100%;
+  height: auto;
   background-color: var(--red-main);
   border-radius: 16px;
   padding-bottom: 121px;
@@ -32,7 +32,7 @@
 
 .modalContainer {
   width: 100%;
-  padding: 0 33px;
+  padding: 0 16px;
 }
 
 .modalTopWrap {
@@ -181,4 +181,26 @@
   background-color: var(--red-main);
   border-color: var(--red-main);
   color: var(--white-main);
+}
+
+@media screen and (min-width: 370px) {
+  .modalMainWrap {
+    width: 350px;
+    height: 650px;
+  }
+
+  .modalContainer {
+    padding: 0 12px;
+  }
+}
+
+@media screen and (min-width: 390px) {
+  .modalMainWrap {
+    width: 390px;
+    height: 722px;
+  }
+
+  .modalContainer {
+    padding: 0 33px;
+  }
 }
