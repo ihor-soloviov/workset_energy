@@ -19,19 +19,22 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isBlack, setIsBlack] = useState(false);
   const [position, setPosition] = useState(0);
-  const [isGradient, setIsGradient] = useState(false);
   const [visible, setVisible] = useState(true);
+  const pathname = usePathname();
 
   useEffect(() => {
-    setPosition(window.scrollY);
+    if (window) {
+      setPosition(window.scrollY);
+      setVisible(true);
+    }
+  }, [pathname]);
+
+  useEffect(() => {
     const handleScroll = () => {
       let moving = window.scrollY;
       if (moving > 84) {
         setVisible(position > moving);
         setPosition(moving);
-        setIsGradient(true);
-      } else {
-        setIsGradient(false);
       }
     };
     window.addEventListener('scroll', handleScroll);
@@ -39,8 +42,6 @@ const Header = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   });
-
-  const pathname = usePathname();
 
   const { setIsDesktop } = useGlobalStore();
 
@@ -72,7 +73,6 @@ const Header = () => {
           className={`
           ${styles.header} 
           ${isBlack ? styles.blackStyle : ''} 
-          ${isGradient ? styles.gradient : ''} 
           ${!visible ? styles.scrolled : ''}`}
         >
           <div className={styles.headerContainer}>
