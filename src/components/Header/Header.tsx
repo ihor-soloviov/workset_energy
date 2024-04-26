@@ -7,8 +7,8 @@ import styles from './Header.module.css';
 import MobileMenu from './MobileMenu/MobileMenu';
 import Button from '../common/Button/Button';
 import HeaderNavList from './HeaderNavList/HeaderNavList';
-import WorksetIcon from '/public/icons/workset.svg';
 import WorksetColorIcon from '/public/icons/workset-color.svg';
+import WorksetIcon from '/public/icons/workset.svg';
 import BurgerIcon from '/public/icons/burger.svg';
 import ArrowIcon from '/public/icons/small-arrow-btn.svg';
 import { usePathname } from 'next/navigation';
@@ -16,28 +16,34 @@ import { useGlobalStore } from '@/store/global-store';
 import { pathnames, jobPathRegex, blackList } from '@/utils/pathnames';
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isBlack, setIsBlack] = useState(false);
+  const [position, setPosition] = useState(window.scrollY);
+  const [isGradient, setIsGradient] = useState(false);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      let moving = window.scrollY;
+      if (moving > 84) {
+        setVisible(position > moving);
+        setPosition(moving);
+        setIsGradient(true);
+      } else {
+        setIsGradient(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  });
 
   const pathname = usePathname();
 
   const { setIsDesktop } = useGlobalStore();
 
   const handleMenuClick = () => setIsMenuOpen(!isMenuOpen);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const isHeaderScrolled = scrollTop > 0;
-      setIsScrolled(isHeaderScrolled);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   useEffect(() => {
     setIsDesktop(window.innerWidth >= 1440);
@@ -62,7 +68,11 @@ const Header = () => {
       {(pathnames.includes(pathname) || jobPathRegex.test(pathname)) && (
         <header
           id="header"
-          className={`${styles.header} ${isBlack ? styles.blackStyle : ''} ${isScrolled ? styles.scrolled : ''}`}
+          className={`
+          ${styles.header} 
+          ${isBlack ? styles.blackStyle : ''} 
+          ${isGradient ? styles.gradient : ''} 
+          ${!visible ? styles.scrolled : ''}`}
         >
           <div className={styles.headerContainer}>
             <nav className={styles.headerNav}>
@@ -78,9 +88,7 @@ const Header = () => {
                 className={styles.headerBurgerBtn}
                 type="button"
               >
-                <BurgerIcon
-                  className={`${styles.headerBurgerIcon} ${isBlack ? styles.blackStyle : ''}`}
-                />
+                <BurgerIcon className={styles.headerBurgerIcon} />
               </Button>
               <HeaderNavList />
             </nav>

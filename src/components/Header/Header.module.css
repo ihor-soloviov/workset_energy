@@ -1,26 +1,30 @@
 .header {
-  background-color: transparent;
-  padding: 18px 0px 0px;
+  background: unset;
+  padding: 18px 0px 24px 0px;
   width: 100%;
   position: fixed;
+  top: 0;
   z-index: 98;
-  transition: all 100ms var(--cubic);
+  transition: all 0.4s var(--cubic);
 }
 
-.header.scrolled {
-  backdrop-filter: blur(3px);
-  background-color: rgba(0, 0, 0, 0.15);
-  box-shadow:
-    rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
-    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-}
-
-.header.blackStyle.scrolled {
-  background-color: var(--white-main);
+.header.gradient {
+  background: linear-gradient(
+    180deg,
+    rgba(24, 24, 24, 0.6) -3.7%,
+    rgba(24, 24, 24, 0.4) 42.45%,
+    rgba(24, 24, 24, 0) 100%
+  );
+  transition: background 0.4s var(--cubic);
 }
 
 .header.blackStyle {
-  transition: unset;
+  background: var(--white-main);
+}
+
+.header.scrolled {
+  top: -84px;
+  transition: top 0.4s ease-out;
 }
 
 .headerContainer {
@@ -105,10 +109,9 @@
   .headerNav {
     height: 100%;
   }
-
   .headerLogo {
-    width: 7.3rem;
-    height: 4.3rem;
+    width: 73px;
+    height: 43px;
   }
 
   .headerLeadLink {
@@ -123,7 +126,7 @@
     margin-left: auto;
     font-size: 1.6rem;
     font-weight: 600;
-    border-radius: 6px;
+    border-radius: 28px;
     gap: 0.8rem;
     color: var(--white-main);
     transition:
