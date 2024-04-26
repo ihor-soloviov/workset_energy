@@ -1,5 +1,5 @@
 .JobHeroSection {
-  padding: 150px 0 98px;
+  padding: 142px 0 195px;
   position: relative;
   height: 670px;
 }
@@ -29,7 +29,7 @@
   align-items: center;
   gap: 5px;
   width: 192px;
-  margin-bottom: 90px;
+  margin-bottom: 82px;
   transition: color 250ms var(--cubic);
 }
 
@@ -55,7 +55,7 @@
   line-height: 130%;
   width: 330px;
   margin-right: auto;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .JobHeroTextMob {
@@ -77,7 +77,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 6px;
+  border-radius: 28px;
   border: 1px solid transparent;
   background-color: var(--red-main);
   margin-right: auto;
@@ -143,6 +143,7 @@
   .JobHeroTitle {
     font-size: 6.4rem;
     width: 67.4rem;
+    margin-bottom: 1.6rem;
   }
 
   .JobHeroTextMob {
@@ -156,6 +157,10 @@
     line-height: 160%;
     margin-bottom: 4.8rem;
     width: 47.8rem;
+  }
+
+  .JobHeroBtn {
+    border-radius: 0.6rem;
   }
 }
 
@@ -179,11 +184,16 @@
   .JobHeroTitle {
     font-size: 64px;
     width: 674px;
+    margin-bottom: 16px;
   }
 
   .JobHeroTextDesk {
     font-size: 20px;
     margin-bottom: 48px;
     width: 478px;
+  }
+
+  .JobHeroBtn {
+    border-radius: 6px;
   }
 }

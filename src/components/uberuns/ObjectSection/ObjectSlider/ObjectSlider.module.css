@@ -1,5 +1,5 @@
 .sliderButtonsWrap {
-  display: flex;
+  display: none;
   gap: 8px;
   margin-bottom: 32px;
   justify-content: center;
@@ -44,17 +44,17 @@
 }
 
 .sliderMainList {
-  height: 667px;
+  height: 594px;
 }
 
 .sliderMainItem {
-  height: 666px;
+  height: 594px;
 }
 
 .sliderImgMob {
-  border-radius: 12px 12px 0px 0px;
+  border-radius: 16px 16px 0px 0px;
   width: 342px;
-  height: 294px;
+  height: 280px;
 }
 
 .sliderImgDesk {
@@ -63,11 +63,11 @@
 }
 
 .sliderWrap {
-  padding: 32px 25px 48px 25px;
-  border-radius: 0px 0px 12px 12px;
+  padding: 32px 25px;
+  border-radius: 0px 0px 16px 16px;
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 12px;
   border: 1px solid var(--gray-stroke);
   border-top: unset;
   background-color: var(--white-main);
@@ -76,7 +76,7 @@
 .sliderTopWrap {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   border-bottom: 0.5px solid var(--gray-stroke);
   padding-bottom: 16px;
 }
@@ -105,7 +105,6 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  height: 84px;
   margin-bottom: 48px;
 }
 
@@ -124,10 +123,10 @@
   font-size: 16px;
   font-weight: 700;
   line-height: 150%;
-  border-radius: 6px;
+  border-radius: 28px;
   background-color: var(--red-main);
   width: 149px;
-  height: 56px;
+  height: 44px;
   transition:
     border-color 250ms var(--cubic),
     color 250ms var(--cubic),
@@ -146,6 +145,7 @@
   }
 
   .sliderWrap {
+    gap: 2.8rem;
     border-radius: 0rem 1.6rem 1.6rem 0rem;
   }
 
@@ -160,6 +160,7 @@
 
   .sliderButtonsWrap {
     position: absolute;
+    display: flex;
     right: 0;
     top: -10.5rem;
   }
@@ -185,11 +186,17 @@
 
   .sliderTopWrap {
     margin-bottom: 3.2rem;
+    gap: 1rem;
   }
 
   .sliderList {
     height: 8.1rem;
     margin-bottom: 9.2rem;
+  }
+
+  .sliderBtn {
+    border-radius: 0.6rem;
+    height: 5.6rem;
   }
 }
 
@@ -199,6 +206,7 @@
   }
 
   .sliderWrap {
+    gap: 28px;
     padding: 111px 136px 111px 90px;
     width: 618px;
     border-radius: 0px 16px 16px 0px;
@@ -210,6 +218,7 @@
 
   .sliderTopWrap {
     margin-bottom: 32px;
+    gap: 10px;
   }
 
   .sliderList {
@@ -219,5 +228,10 @@
   .sliderImgDesk {
     width: 737px;
     height: 560px;
+  }
+
+  .sliderBtn {
+    border-radius: 6px;
+    height: 56px;
   }
 }
