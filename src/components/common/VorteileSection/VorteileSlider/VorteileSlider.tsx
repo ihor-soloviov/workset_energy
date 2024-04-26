@@ -60,7 +60,6 @@ const VorteileSlider = () => {
         <Swiper
           className={styles.sliderWrap}
           modules={[Autoplay, Navigation]}
-          spaceBetween={25}
           onActiveIndexChange={e => setActiveIndex(e.realIndex)}
           loop={true}
           slidesPerView={1}

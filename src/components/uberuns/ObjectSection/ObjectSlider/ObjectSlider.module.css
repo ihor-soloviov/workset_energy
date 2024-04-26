@@ -145,6 +145,10 @@
     position: relative;
   }
 
+  .sliderWrap {
+    border-radius: 0rem 1.6rem 1.6rem 0rem;
+  }
+
   .sliderMainList {
     height: auto;
   }
@@ -197,7 +201,7 @@
   .sliderWrap {
     padding: 111px 136px 111px 90px;
     width: 618px;
-    border-radius: 0px 12px 12px 0px;
+    border-radius: 0px 16px 16px 0px;
   }
 
   .sliderMainItem {
