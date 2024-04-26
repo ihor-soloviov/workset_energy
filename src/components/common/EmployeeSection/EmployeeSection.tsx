@@ -16,10 +16,7 @@ const EmployeeSection = () => {
         <RecycleTextWrap
           title="Unsere wichtigste Ressource sind unsere Mitarbeiter"
           titleClass={styles.employeeMainTitle}
-          text="In diesem Video zeigen wir im Detail alle Etappen, die unsere Kunden
-          auf ihrem Weg zur Energie der Zukunft durchlaufen. Mr. Energy zeigt
-          dir eine detaillierte Schritt-für-Schritt-Anleitung und beantwortet
-          die am häufigsten gestellten Fragen."
+          text="Ein Team von Experten, das sich durch Fachkompetenz und Engagement auszeichnet. Gemeinsam setzen wir innovative Lösungen um und bringen die Energie der Zukunft in Ihr Zuhause"
           textClass={`${styles.employeeMainText} ${inter.className}`}
         />
         <EmployeeList pathname={pathname} />
