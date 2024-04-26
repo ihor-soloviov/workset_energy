@@ -5,20 +5,20 @@
   line-height: 130%;
   width: fit-content;
   margin-right: auto;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 .jobCategoryList {
   display: flex;
   flex-direction: column;
-  gap: 36px;
-  margin-bottom: 48px;
+  gap: 18px;
+  margin-bottom: 32px;
 }
 
 .jobCategoryItem {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 8px;
 }
 
 .jobCategoryItem.description {
@@ -50,11 +50,11 @@
 .jobSubCategoryItem {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 4px;
 }
 
 .jobSubCategoryTitle {
-  color: var(--gray-text);
+  color: var(--gray--dark-text);
   font-size: 20px;
   font-weight: 500;
   width: fit-content;
@@ -180,5 +180,4 @@
     font-size: 18px;
     width: 599px;
   }
-
 }

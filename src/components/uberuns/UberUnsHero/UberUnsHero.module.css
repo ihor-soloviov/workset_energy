@@ -1,5 +1,5 @@
 .uberHeroSection {
-  padding: 239px 0 125px;
+  padding: 239px 0 204px;
   height: auto;
 
   position: relative;
@@ -32,7 +32,7 @@
 
 .uberHeroText {
   margin: 0 auto;
-  margin-bottom: 32px;
+
   color: var(--gray-input);
   font-size: 16px;
   line-height: 160%;

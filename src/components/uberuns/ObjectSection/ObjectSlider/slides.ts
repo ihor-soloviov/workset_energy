@@ -18,7 +18,7 @@ export const objectItems: ObjectItem[] = [
     desktop: objectSlide1Desk,
   },
   {
-    standort: 'Deutschland, Illerrieden',
+    standort: 'Illerrieden',
     textList: [
       'PV-Anlage Gesamtleistung: 8,2 kWp',
       'Stückzahl der Module: 19',
@@ -28,7 +28,7 @@ export const objectItems: ObjectItem[] = [
     desktop: objectSlide2Desk,
   },
   {
-    standort: 'Deutschland, Freiburg',
+    standort: 'Freiburg',
     textList: [
       'PV-Anlage Gesamtleistung: 58,22 kWp',
       'Stückzahl der Module: 142',
@@ -37,13 +37,13 @@ export const objectItems: ObjectItem[] = [
     desktop: objectSlide3Desk,
   },
   {
-    standort: 'Deutschland, Bruchköbel',
+    standort: 'Bruchköbel',
     textList: ['PV-Anlage Gesamtleistung: 8,7 kWp', 'Stückzahl der Module: 20'],
     mobile: objectSlide4Mob,
     desktop: objectSlide4Desk,
   },
   {
-    standort: 'Deutschland, Rodgau',
+    standort: 'Rodgau',
     textList: ['Stückzahl der Module: 25', 'Speichersystem: 10 kWh'],
     mobile: objectSlide5Mob,
     desktop: objectSlide5Desk,

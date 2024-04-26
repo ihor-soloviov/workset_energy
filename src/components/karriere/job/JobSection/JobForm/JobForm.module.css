@@ -1,5 +1,5 @@
 .jobFormWrap {
-  padding: 90px 0 0px;
+  padding: 100px 0 0px;
   background-color: var(--white-main);
 }
 
@@ -10,7 +10,7 @@
   line-height: 130%;
   width: fit-content;
   margin: 0 auto;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .jobFormText {
@@ -19,7 +19,7 @@
   line-height: 160%;
   width: fit-content;
   margin: 0 auto;
-  margin-bottom: 36px;
+  margin-bottom: 32px;
 }
 
 .jobForm {
@@ -51,14 +51,14 @@
   width: 100%;
   height: 46px;
   border: 1px solid var(--gray-stroke);
-  border-radius: 6px;
+  border-radius: 8px;
   background-color: var(--gray-input);
   outline: none;
 }
 
 .jobInputFile {
   font-size: 0px;
-  border-radius: 6px 0px 0px 6px;
+  border-radius: 8px 0px 0px 8px;
   cursor: pointer;
   width: 226px;
   content-visibility: hidden;
@@ -94,7 +94,7 @@
   justify-content: center;
   width: 116px;
   height: 46px;
-  border-radius: 0px 6px 6px 0px;
+  border-radius: 0px 8px 8px 0px;
   color: var(--black-main);
   background-color: var(--white-main);
   border: 1px solid var(--gray-stroke);
@@ -143,7 +143,7 @@
   height: 48px;
   background-color: var(--red-main);
   border: none;
-  border-radius: 6px;
+  border-radius: 28px;
   transition:
     border-color 250ms var(--cubic),
     color 250ms var(--cubic),
@@ -212,6 +212,7 @@
   .jobInput {
     width: 100%;
     padding: 1.4rem 1.6rem;
+    border-radius: 0.6rem;
   }
 
   .jobInput::placeholder {
@@ -231,16 +232,19 @@
 
   .jobInputFile {
     width: 27.6rem;
+    border-radius: 0.6rem 0rem 0rem 0.6rem;
   }
 
   .jobUploadBtn {
     padding: 1.4rem 3.2rem;
     width: 11.6rem;
     top: 2.5rem;
+    border-radius: 0rem 0.6rem 0.6rem 0rem;
   }
 
   .jobBtn {
     width: 100%;
+    border-radius: 0.6rem;
     padding: 1.5rem 16.8rem;
   }
 }
@@ -293,6 +297,7 @@
   }
 
   .jobInput {
+    border-radius: 6px;
     padding: 14px 16px;
   }
 
@@ -302,6 +307,7 @@
   }
 
   .jobInputFile {
+    border-radius: 6px 0px 0px 6px;
     width: 276px;
   }
 
@@ -309,9 +315,11 @@
     padding: 14px 32px;
     width: 116px;
     top: 22px;
+    border-radius: 0px 6px 6px 0px;
   }
 
   .jobBtn {
     padding: 15px 168px;
+    border-radius: 6px;
   }
 }

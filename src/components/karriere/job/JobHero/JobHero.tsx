@@ -47,9 +47,7 @@ const JobHero = ({ response }: JobHeroProps) => {
         </Link>
         <h2 className={styles.JobHeroTitle}>{title}</h2>
         <p className={`${styles.JobHeroTextMob} ${inter.className}`}>
-          Entdecke einzigartige Entwicklungsmöglichkeiten in unserem
-          Unternehmen. Komm zu uns, um deine Ambitionen zu verwirklichen und
-          neue Höhen in deiner Karriere zu erreichen
+          Eine Chance, eine erfolgreiche Karriere im Vertrieb zu starten!
         </p>
         <p className={`${styles.JobHeroTextDesk} ${inter.className}`}>
           Eine Chance, eine erfolgreiche Karriere im Vertrieb zu starten!
