@@ -18,9 +18,16 @@ import { pathnames, jobPathRegex, blackList } from '@/utils/pathnames';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isBlack, setIsBlack] = useState(false);
-  const [position, setPosition] = useState(window.scrollY);
-  const [isGradient, setIsGradient] = useState(false);
+  const [position, setPosition] = useState(0);
   const [visible, setVisible] = useState(true);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    if (window) {
+      setPosition(window.scrollY);
+      setVisible(true);
+    }
+  }, [pathname]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,9 +35,6 @@ const Header = () => {
       if (moving > 84) {
         setVisible(position > moving);
         setPosition(moving);
-        setIsGradient(true);
-      } else {
-        setIsGradient(false);
       }
     };
     window.addEventListener('scroll', handleScroll);
@@ -38,8 +42,6 @@ const Header = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   });
-
-  const pathname = usePathname();
 
   const { setIsDesktop } = useGlobalStore();
 
@@ -71,7 +73,6 @@ const Header = () => {
           className={`
           ${styles.header} 
           ${isBlack ? styles.blackStyle : ''} 
-          ${isGradient ? styles.gradient : ''} 
           ${!visible ? styles.scrolled : ''}`}
         >
           <div className={styles.headerContainer}>
@@ -88,7 +89,9 @@ const Header = () => {
                 className={styles.headerBurgerBtn}
                 type="button"
               >
-                <BurgerIcon className={styles.headerBurgerIcon} />
+                <BurgerIcon
+                  className={`${styles.headerBurgerIcon} ${isBlack ? styles.blackStyle : ''}`}
+                />
               </Button>
               <HeaderNavList />
             </nav>

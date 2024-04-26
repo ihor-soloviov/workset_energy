@@ -1,8 +1,8 @@
 <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="Huge-icon/menu/outline/menu-line-horizontal">
 <g id="Group 1590">
-<path id="Line 80" d="M4 16H40" stroke="white" stroke-width="2" stroke-linecap="round"/>
-<path id="Line 81" d="M4 25.623H40" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<path id="Line 80" d="M4 16H40" stroke-width="2" stroke-linecap="round"/>
+<path id="Line 81" d="M4 25.623H40" stroke-width="2" stroke-linecap="round"/>
 </g>
 </g>
 </svg>

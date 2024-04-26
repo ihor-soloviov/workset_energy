@@ -7,16 +7,19 @@ const baseStrapiUrl = process.env.NEXT_PUBLIC_BASE_STRAPI_URL ?? '';
 const formDataPost = async (
   formData: FormData,
   url: string,
-  setPopupAction: (action: PopupAction) => void,
+  setPopupAction?: (action: PopupAction) => void,
 ) => {
   try {
     await axios.post(`${baseUrl}${url}`, formData);
-    setPopupAction({ visible: true, status: 'success' });
+    setPopupAction && setPopupAction({ visible: true, status: 'success' });
   } catch (error) {
     console.error('Error fetching data:', error);
-    setPopupAction({ visible: true, status: 'error' });
+    setPopupAction && setPopupAction({ visible: true, status: 'error' });
   } finally {
-    setTimeout(() => setPopupAction({ visible: false, status: '' }), 3000);
+    setTimeout(
+      () => setPopupAction && setPopupAction({ visible: false, status: '' }),
+      3000,
+    );
   }
 };
 

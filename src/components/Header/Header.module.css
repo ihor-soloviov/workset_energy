@@ -1,5 +1,10 @@
 .header {
-  background: unset;
+  background: linear-gradient(
+    180deg,
+    rgba(24, 24, 24, 0.6) -3.7%,
+    rgba(24, 24, 24, 0.4) 42.45%,
+    rgba(24, 24, 24, 0) 100%
+  );
   padding: 18px 0px 24px 0px;
   width: 100%;
   position: fixed;
@@ -8,22 +13,12 @@
   transition: all 0.4s var(--cubic);
 }
 
-.header.gradient {
-  background: linear-gradient(
-    180deg,
-    rgba(24, 24, 24, 0.6) -3.7%,
-    rgba(24, 24, 24, 0.4) 42.45%,
-    rgba(24, 24, 24, 0) 100%
-  );
-  transition: background 0.4s var(--cubic);
-}
-
 .header.blackStyle {
   background: var(--white-main);
 }
 
 .header.scrolled {
-  top: -84px;
+  top: -100%;
   transition: top 0.4s ease-out;
 }
 
