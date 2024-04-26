@@ -1,6 +1,6 @@
 'use client';
 import 'swiper/css';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import styles from './ObjectSlider.module.css';
 import Image from 'next/image';
 import Button from '@/components/common/Button/Button';
@@ -12,10 +12,18 @@ import { scrollToSection } from '@/utils/scroll';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import { Swiper as SwiperType } from 'swiper';
+import SliderDots from '@/components/common/SliderDots/SliderDots';
+import { useGlobalStore } from '@/store/global-store';
 
 const ObjectSlider = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const { isDesktop } = useGlobalStore();
   const swiperRef = useRef<SwiperType>();
 
+  const handleActiveSlide = (index: number) => {
+    setActiveIndex(index);
+    swiperRef.current && swiperRef.current.slideTo(index);
+  };
   return (
     <div className={styles.sliderMainWrap}>
       <div className={styles.sliderButtonsWrap}>
@@ -39,6 +47,7 @@ const ObjectSlider = () => {
         modules={[Navigation]}
         spaceBetween={25}
         loop={true}
+        onActiveIndexChange={e => setActiveIndex(e.realIndex)}
         slidesPerView={1}
         onBeforeInit={swiper => {
           swiperRef.current = swiper;
@@ -91,6 +100,14 @@ const ObjectSlider = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+      {!isDesktop && (
+        <SliderDots
+          className={'team'}
+          count={5}
+          activeSlide={activeIndex}
+          handleActiveSlide={handleActiveSlide}
+        />
+      )}
     </div>
   );
 };

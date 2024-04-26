@@ -45,6 +45,7 @@
 
 .sliderMainList {
   height: 594px;
+  margin-bottom: 20px;
 }
 
 .sliderMainItem {
@@ -66,6 +67,7 @@
   padding: 32px 25px;
   border-radius: 0px 0px 16px 16px;
   display: flex;
+  height: 314px;
   flex-direction: column;
   gap: 12px;
   border: 1px solid var(--gray-stroke);
@@ -146,10 +148,12 @@
 
   .sliderWrap {
     gap: 2.8rem;
+    height: auto;
     border-radius: 0rem 1.6rem 1.6rem 0rem;
   }
 
   .sliderMainList {
+    margin-bottom: unset;
     height: auto;
   }
 
