@@ -7,24 +7,30 @@ import styles from './Header.module.css';
 import MobileMenu from './MobileMenu/MobileMenu';
 import Button from '../common/Button/Button';
 import HeaderNavList from './HeaderNavList/HeaderNavList';
+import WorksetColorIcon from '/public/icons/workset-color.svg';
 import WorksetIcon from '/public/icons/workset.svg';
 import BurgerIcon from '/public/icons/burger.svg';
 import ArrowIcon from '/public/icons/small-arrow-btn.svg';
 import { usePathname } from 'next/navigation';
 import { useGlobalStore } from '@/store/global-store';
-import { pathnames, jobPathRegex } from '@/utils/pathnames';
+import { pathnames, jobPathRegex, blackList } from '@/utils/pathnames';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isBlack, setIsBlack] = useState(false);
   const [position, setPosition] = useState(window.scrollY);
+  const [isGradient, setIsGradient] = useState(false);
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
       let moving = window.scrollY;
-      if (moving > 80) {
+      if (moving > 84) {
         setVisible(position > moving);
         setPosition(moving);
+        setIsGradient(true);
+      } else {
+        setIsGradient(false);
       }
     };
     window.addEventListener('scroll', handleScroll);
@@ -53,17 +59,29 @@ const Header = () => {
     };
   }, [setIsDesktop]);
 
+  useEffect(() => {
+    setIsBlack(blackList.includes(pathname));
+  }, [pathname]);
+
   return (
     <>
       {(pathnames.includes(pathname) || jobPathRegex.test(pathname)) && (
         <header
           id="header"
-          className={`${styles.header} ${!visible ? styles.scrolled : ''}`}
+          className={`
+          ${styles.header} 
+          ${isBlack ? styles.blackStyle : ''} 
+          ${isGradient ? styles.gradient : ''} 
+          ${!visible ? styles.scrolled : ''}`}
         >
           <div className={styles.headerContainer}>
             <nav className={styles.headerNav}>
               <Link className={styles.headerLogoLink} href="/">
-                <WorksetIcon className={styles.headerLogo} />
+                {isBlack ? (
+                  <WorksetColorIcon className={styles.headerLogo} />
+                ) : (
+                  <WorksetIcon className={styles.headerLogo} />
+                )}
               </Link>
               <Button
                 handleClick={handleMenuClick}
