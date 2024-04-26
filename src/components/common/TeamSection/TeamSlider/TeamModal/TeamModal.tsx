@@ -3,7 +3,8 @@ import styles from './TeamModal.module.css';
 import CopyIcon from '/public/icons/copy.svg';
 import CrossIcon from '/public/icons/cross.svg';
 import { inter } from '@/utils/fonts';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 type TeamModalProps = {
   toggleModal: () => void;
@@ -23,14 +24,12 @@ const TeamModal = ({
   const [emailCopied, setEmailCopied] = useState(false);
   const [telCopied, setTelCopied] = useState(false);
 
-  const copyToClipboard = (text: string, index: number) => {
-    navigator.clipboard.writeText(text).then(() => {
-      index === 0 ? setEmailCopied(true) : setTelCopied(true);
-      setTimeout(() => {
-        index === 0 ? setEmailCopied(false) : setTelCopied(false);
-      }, 2000);
-    });
-  };
+  const copyToClipboard = useCallback((index: number) => {
+    index === 0 ? setEmailCopied(true) : setTelCopied(true);
+    setTimeout(() => {
+      index === 0 ? setEmailCopied(false) : setTelCopied(false);
+    }, 2000);
+  }, []);
 
   return (
     <div
@@ -72,23 +71,25 @@ const TeamModal = ({
                       {index === 0 ? email : tel}
                     </a>
                   </div>
-                  <Button
-                    handleClick={() =>
-                      copyToClipboard(index === 0 ? email : tel, index)
-                    }
-                    className={`${styles.modalCopyBtn} ${
-                      index === 0
-                        ? emailCopied
-                          ? styles.emailCopied
-                          : ''
-                        : telCopied
-                          ? styles.telCopied
-                          : ''
-                    }`}
-                    type="button"
+                  <CopyToClipboard
+                    text={index === 0 ? email : tel}
+                    onCopy={() => copyToClipboard(index)}
                   >
-                    <CopyIcon className={styles.modalCopyIcon} />
-                  </Button>
+                    <button
+                      className={`${styles.modalCopyBtn} ${
+                        index === 0
+                          ? emailCopied
+                            ? styles.emailCopied
+                            : ''
+                          : telCopied
+                            ? styles.telCopied
+                            : ''
+                      }`}
+                      type="button"
+                    >
+                      <CopyIcon className={styles.modalCopyIcon} />
+                    </button>
+                  </CopyToClipboard>
                 </div>
               </li>
             ))}

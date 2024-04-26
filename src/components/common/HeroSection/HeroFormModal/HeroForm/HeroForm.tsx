@@ -23,22 +23,6 @@ const HeroForm: React.FC<Props> = ({ hideModal }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [questValue, setQuestValue] = useState('');
 
-  useEffect(() => {
-    // Вибір елемента, який буде реагувати на клік
-    const clickableElement = document.getElementById('#dropSelect');
-
-    if (clickableElement) {
-      clickableElement.addEventListener('click', function () {
-        console.log('cli');
-        const heroForm = document.querySelector('.heroForm');
-
-        if (heroForm) {
-          heroForm.scrollTop = heroForm.scrollHeight - heroForm.clientHeight;
-        }
-      });
-    }
-  }, []);
-
   const {
     handleSubmit,
     errors,
@@ -75,7 +59,7 @@ const HeroForm: React.FC<Props> = ({ hideModal }) => {
         formData.append(key, value);
       });
 
-      await formDataPost(formData, 'contact-hero', setPopupAction);
+      await formDataPost(formData, 'contact-hero');
       setIsLoading(false);
       hideModal();
       resetForm();

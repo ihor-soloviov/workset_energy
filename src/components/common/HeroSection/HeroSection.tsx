@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 'use client';
 
 import styles from './HeroSection.module.css';
@@ -53,7 +54,7 @@ const HeroSection = ({
     } else {
       setIsModalOpen(false);
     }
-  }, [handleModal, isDesktop, setIsModalOpen]);
+  }, [isDesktop, setIsModalOpen]);
 
   useEffect(() => {
     if (isDesktop) {

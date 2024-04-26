@@ -18,11 +18,12 @@ import { pathnames, jobPathRegex, blackList } from '@/utils/pathnames';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isBlack, setIsBlack] = useState(false);
-  const [position, setPosition] = useState(window.scrollY);
+  const [position, setPosition] = useState(0);
   const [isGradient, setIsGradient] = useState(false);
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
+    setPosition(window.scrollY);
     const handleScroll = () => {
       let moving = window.scrollY;
       if (moving > 84) {
@@ -88,7 +89,9 @@ const Header = () => {
                 className={styles.headerBurgerBtn}
                 type="button"
               >
-                <BurgerIcon className={styles.headerBurgerIcon} />
+                <BurgerIcon
+                  className={`${styles.headerBurgerIcon} ${isBlack ? styles.blackStyle : ''}`}
+                />
               </Button>
               <HeaderNavList />
             </nav>
