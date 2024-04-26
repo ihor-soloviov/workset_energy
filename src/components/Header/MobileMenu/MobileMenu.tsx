@@ -9,6 +9,7 @@ import MenuBtnIcon from '/public/icons/small-arrow-btn.svg';
 import MenuCrossIcon from '/public/icons/cross.svg';
 import Link from 'next/link';
 import { useEffect } from 'react';
+import useObserver from '@/hooks/useObserver';
 
 type MobileMenuProps = {
   handleMenuClick: () => void;
@@ -23,7 +24,6 @@ const MobileMenu = ({ handleMenuClick }: MobileMenuProps) => {
       document.body.style.overflow = 'unset';
     };
   }, []);
-
   return (
     <div className={styles.menu}>
       <div className={styles.menuTopWrap}>
