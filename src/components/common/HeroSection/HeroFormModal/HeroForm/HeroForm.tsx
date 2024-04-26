@@ -1,7 +1,6 @@
 'use client';
 
 import styles from './HeroForm.module.css';
-import styles2 from '../../../FormSelect/FormSelect.module.css';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { inter, interTight } from '@/utils/fonts';
@@ -58,9 +57,7 @@ const HeroForm: React.FC<Props> = ({ hideModal }) => {
     validationSchema: Yup.object({
       userName: Yup.string().required('Required'),
       userPhone: Yup.number().typeError('Invalid number').required('Required'),
-      userEmail: Yup.string()
-        .email('Invalid email address')
-        .required('Required'),
+      userEmail: Yup.string().email('Invalid email address'),
       userAddress: Yup.string(),
     }),
     onSubmit: async ({ userName, userPhone, userEmail, userAddress }) => {
@@ -111,8 +108,16 @@ const HeroForm: React.FC<Props> = ({ hideModal }) => {
           <p className={styles.errorText}>{errors.userPhone}</p>
         )}
       </label>
+      <FormSelect
+        className="hero"
+        label="Welche Art der Beratung wünschst du?"
+        options={questOptions}
+        value={questValue}
+        onChange={(e: Option) => setQuestValue(e.value)}
+        placeholder={'Welche Art der Beratung wünschst du?'}
+      />
       <label className={styles.heroLabel}>
-        E-Mail*
+        E-Mail
         <input
           placeholder="E-Mail"
           className={`${styles.heroInput} ${touched.userEmail && errors.userEmail && styles.error}`}
@@ -133,14 +138,7 @@ const HeroForm: React.FC<Props> = ({ hideModal }) => {
           <p className={styles.errorText}>{errors.userAddress}</p>
         )}
       </label>
-      <FormSelect
-        className="hero"
-        label="Welche Art der Beratung wünschst du?"
-        options={questOptions}
-        value={questValue}
-        onChange={(e: Option) => setQuestValue(e.value)}
-        placeholder={'Welche Art der Beratung wünschst du?'}
-      />
+
       <Button
         disabled={!(isValid && dirty)}
         className={`${styles.heroFormBtn} ${interTight.className}`}

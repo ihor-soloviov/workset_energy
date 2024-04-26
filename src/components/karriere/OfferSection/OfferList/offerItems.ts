@@ -32,8 +32,7 @@ export const offerItems: OfferItem[] = [
   },
   {
     mainTitle: 'Junior Sales Manager',
-    mainText:
-      'Starten Sie mit uns! Junior Sales Manager in einem innovativen Unternehmen mit der Möglichkeit zur Weiterbildung',
+    mainText: 'Eine Chance, eine erfolgreiche Karriere im Vertrieb zu starten!',
     title: '2,1K+Gehalt',
     text: 'Lorem ipsum dolor sit amet consectetur',
     timeType: 'Full time',
@@ -43,7 +42,7 @@ export const offerItems: OfferItem[] = [
   {
     mainTitle: 'Elektroinstallateur',
     mainText:
-      'Stellenangebote für erfahrene Elektriker im Bereich der erneuerbaren Energien',
+      'Stellenangebote für erfahrene Elektriker im Bereich der erneuerbaren Energien!',
     title: '2,1K+Gehalt',
     text: 'Lorem ipsum dolor sit amet consectetur',
     timeType: 'Full time',
@@ -61,9 +60,8 @@ export const offerItems: OfferItem[] = [
   },
   {
     mainTitle: 'Middle Sales Maneger',
-    mainText:
-      'Möglichkeit zur beruflichen Weiterentwicklung in einem erfolgreichen Verkaufsteam',
-    title: '4,2K+Gehalt',
+    mainText: 'Eine Chance, eine erfolgreiche Karriere im Vertrieb zu starten!',
+    title: '2,1K+Gehalt',
     text: 'Lorem ipsum dolor sit amet consectetur',
     timeType: 'Full time',
     mobile: Offer5Mob,

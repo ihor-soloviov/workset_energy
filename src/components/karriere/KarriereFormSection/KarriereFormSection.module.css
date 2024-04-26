@@ -1,5 +1,5 @@
 .karriereFormSection {
-  padding: 90px 0;
+  padding: 64px 0;
 }
 
 .karriereFormContainer {
@@ -11,7 +11,7 @@
 .karriereFormTitle {
   color: var(--black--main);
   margin: 0 auto;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   font-size: 28px;
   width: 342px;
 
@@ -25,7 +25,7 @@
   line-height: 160%;
   text-align: left;
   margin: 0 auto;
-  margin-bottom: 36px;
+  margin-bottom: 32px;
 }
 
 @media screen and (min-width: 390px) {

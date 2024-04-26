@@ -1,13 +1,13 @@
 .advantagesList {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 24px;
   margin: 0 auto;
 }
 
 .advantagesItem {
   background-color: var(--white-main);
-  border-radius: 12px;
+  border-radius: 16px;
   user-select: none;
   padding: 24px 32px;
   height: 332px;
@@ -27,7 +27,7 @@
 
 .advantagesIconWrap {
   background-color: var(--red-main);
-  border-radius: 6px;
+  border-radius: 8px;
   padding: 12px;
   width: 56px;
   height: 56px;
@@ -51,7 +51,7 @@
   font-weight: 600;
   width: fit-content;
   margin-right: auto;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   line-height: 136.3%;
   transition: color 250ms var(--cubic);
 }
@@ -80,7 +80,7 @@
   width: 136px;
   height: 46px;
   align-items: center;
-  border-radius: 6px;
+  border-radius: 28px;
   border: 1px solid var(--gray-stroke);
   background-color: transparent;
   margin-right: auto;
@@ -130,6 +130,7 @@
     width: 39.2rem;
     height: 34.3rem;
     padding: 3.2rem;
+    border-radius: 1.2rem;
   }
 
   .advantagesTitle {
@@ -157,11 +158,12 @@
     width: 13.8rem;
     font-size: 1.5rem;
     height: 4.5rem;
+    border-radius: 0.6rem;
   }
 
   .advantagesIconWrap {
     padding: 1.2rem;
-
+    border-radius: 0.6rem;
     margin-bottom: 2.4rem;
   }
 }
@@ -176,6 +178,7 @@
     width: 392px;
     height: 343px;
     padding: 32px;
+    border-radius: 12px;
   }
 
   .advantagesTitle {
@@ -201,12 +204,14 @@
     width: 136px;
     height: 44px;
     font-size: 15px;
+    border-radius: 6px;
   }
 
   .advantagesIconWrap {
     padding: 12px;
     width: 56px;
     height: 56px;
+    border-radius: 6px;
     margin-bottom: 24px;
   }
 

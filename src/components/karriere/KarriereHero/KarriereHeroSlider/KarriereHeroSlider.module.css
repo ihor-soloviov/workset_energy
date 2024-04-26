@@ -2,11 +2,15 @@
   height: 100%;
   position: relative;
   cursor: pointer;
+  margin-bottom: 20px;
+  border-radius: 16px;
 }
 
 .heroImgMob {
   border-radius: 16px;
   object-fit: cover;
+  width: 342px;
+  height: 508px;
 }
 
 .heroImgDesk {
@@ -18,7 +22,7 @@
 .heroTextWrap {
   position: absolute;
   z-index: 2;
-  top: 246px;
+  top: 185px;
   left: 24px;
 }
 
@@ -29,7 +33,7 @@
   line-height: 130%;
   width: fit-content;
   margin: 0 auto;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .heroTextMob,
@@ -71,7 +75,8 @@
   margin: 0 auto;
   font-size: 16px;
   font-weight: 600;
-  border-radius: 6px;
+  border-radius: 28px;
+
   color: var(--gray-input);
   transition:
     border-color 250ms var(--cubic),
@@ -86,6 +91,11 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .sliderWrap {
+    margin-bottom: unset;
+    border-radius: 3.2rem;
+  }
+
   .heroImgMob {
     display: none;
   }
@@ -149,6 +159,7 @@
     height: 4.8rem;
     padding: 1.4rem 4.2rem;
     font-size: 1.6rem;
+    border-radius: 0.6rem;
   }
 }
 
@@ -183,5 +194,6 @@
     height: 48px;
     padding: 14px 42px;
     font-size: 16px;
+    border-radius: 6px;
   }
 }

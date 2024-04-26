@@ -1,5 +1,5 @@
 .advantagesSection {
-  padding: 90px 0;
+  padding: 36px 0 64px;
 }
 
 .advantagesContainer {
@@ -11,7 +11,7 @@
 .advantagesMainTitle {
   color: var(--black--main);
   margin: 0 auto;
-  margin-bottom: 18px;
+  margin-bottom: 8px;
   font-size: 30px;
   width: 320px;
   text-align: center;
@@ -25,7 +25,7 @@
   line-height: 160%;
   text-align: center;
   margin: 0 auto;
-  margin-bottom: 48px;
+  margin-bottom: 24px;
 }
 
 @media screen and (min-width: 390px) {

@@ -44,8 +44,8 @@ const JobsList = ({ response, selectValues, isLoading }: JobsListProps) => {
                 </div>
                 <div className={styles.jobsWrap}>
                   <p className={`${styles.jobsText} ${inter.className}`}>
-                    {job_message.length > 138
-                      ? `${job_message.slice(0, 199)}...`
+                    {job_message.length > 200
+                      ? `${job_message.slice(0, 200)}...`
                       : job_message}
                   </p>
                   <p className={`${styles.jobsLocation} ${inter.className}`}>

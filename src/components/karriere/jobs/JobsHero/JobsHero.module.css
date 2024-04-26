@@ -1,6 +1,6 @@
 .jobsHeroSection {
-  padding: 150px 0 180px;
-  height: 726px;
+  padding: 97px 0 156px;
+  height: 670px;
   background-color: var(--red-main);
 }
 
@@ -14,7 +14,7 @@
   color: var(--white-main);
   font-size: 15px;
   font-weight: 500;
-  margin-bottom: 124px;
+  margin-bottom: 148px;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -54,7 +54,7 @@
   line-height: 160%;
   width: fit-content;
   margin: 0 auto;
-  margin-bottom: 36px;
+  margin-bottom: 32px;
 }
 
 .jobsHeroBtn {
@@ -65,7 +65,7 @@
   padding: 14px 22px;
   justify-content: center;
   align-items: center;
-  border-radius: 6px;
+  border-radius: 28px;
   background-color: var(--white-main);
   border: 1px solid var(--white-main);
   width: 164px;
@@ -124,6 +124,7 @@
   }
 
   .jobsHeroBtn {
+    border-radius: 0.6rem;
     height: 5.2rem;
   }
 }
@@ -163,6 +164,7 @@
   }
 
   .jobsHeroBtn {
+    border-radius: 6px;
     height: 52px;
   }
 }

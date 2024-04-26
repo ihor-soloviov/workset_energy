@@ -4,6 +4,25 @@
   gap: 36px;
 }
 
+.sliderWrap {
+  margin-top: 24px;
+  margin-bottom: 20px;
+  height: 600px;
+  border-radius: 16px;
+}
+
+.slideWrap {
+  height: 600px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+.offerImgMob {
+  width: 342px;
+  height: 260px;
+  border-radius: 16px 16px 0px 0px;
+}
+
 .offerImgDesk {
   display: none;
 }
@@ -11,9 +30,9 @@
 .offerMainWrap {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  padding: 36px 25px 48px 25px;
-  border-radius: 0px 0px 12px 12px;
+  gap: 16px;
+  padding: 24px 25px;
+  border-radius: 0px 0px 16px 16px;
   border: 1px solid var(--gray-stroke);
   border-top: unset;
 }
@@ -25,7 +44,7 @@
   line-height: 130%;
   margin-right: auto;
   width: fit-content;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .offerTopText {
@@ -35,7 +54,7 @@
   line-height: 150%;
   width: 292px;
   margin-right: auto;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 
 .offerItem:nth-child(2) .offerTopText {
@@ -49,13 +68,13 @@
   background-color: var(--white-second);
   width: 98px;
   height: 36px;
-  border-radius: 4px;
+  border-radius: 28px;
   margin-right: auto;
   padding: 8px 16px;
 }
 
 .offerTime {
-  color: var(--gray-text);
+  color: var(--gray--dark-text);
   font-size: 16px;
   font-weight: 500;
 }
@@ -65,7 +84,7 @@
   font-size: 20px;
   font-weight: 600;
   margin-right: auto;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .offerBottomText {
@@ -73,15 +92,15 @@
   font-size: 16px;
   text-align: left;
   line-height: 160%;
-  width: 292px;
+  width: 252px;
   margin-right: auto;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .offerLink {
   margin-right: auto;
   width: 134px;
-  height: 48px;
+  height: 44px;
   display: flex;
   gap: 4px;
   align-items: center;
@@ -90,7 +109,8 @@
   padding: 15px 16px;
   font-size: 15px;
   font-weight: 600;
-  border-radius: 6px;
+  border-radius: 28px;
+
   background-color: var(--red-main);
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.04);
   transition:
@@ -119,6 +139,7 @@
 @media screen and (min-width: 1440px) {
   .offerList {
     gap: 5.4rem;
+    margin-top: 5.4rem;
   }
 
   .offerItem {
@@ -128,7 +149,6 @@
 
     justify-content: center;
   }
-
 
   .offerImgMob {
     display: none;
@@ -173,6 +193,7 @@
   }
 
   .offerTimeWrap {
+    border-radius: 0.4rem;
     padding: 0.3rem 1.1rem;
   }
 
@@ -208,11 +229,17 @@
     letter-spacing: -0.016rem;
     margin-bottom: 3.8rem;
   }
+
+  .offerLink {
+    height: 4.8rem;
+    border-radius: 0.6rem;
+  }
 }
 
 @media screen and (min-width: 1728px) {
   .offerList {
     gap: 54px;
+    margin-top: 54px;
   }
 
   .offerItem {
@@ -246,6 +273,7 @@
 
   .offerTimeWrap {
     padding: 3px 11px;
+    border-radius: 4px;
   }
 
   .offerTime {
@@ -272,7 +300,13 @@
     letter-spacing: -0.16px;
     margin-bottom: 38px;
   }
+
   .offerImgDesk {
     width: 386px;
+  }
+
+  .offerLink {
+    height: 48px;
+    border-radius: 6px;
   }
 }

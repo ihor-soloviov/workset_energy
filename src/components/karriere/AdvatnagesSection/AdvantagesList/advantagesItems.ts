@@ -15,7 +15,7 @@ type AdvantagesItem = {
 export const advantagesItems: AdvantagesItem[] = [
   {
     link: '',
-    text: 'Unsere Mitarbeiter entwickeln sich in der Branche der erneuerbaren Energien weiter und erwerben entsprechende Fähigkeiten und Kenntnisse',
+    text: 'Unsere Mitarbeiter entwickeln sich im Bereich der erneuerbaren Energien weiter und erwerben relevante Fähigkeiten und Kenntnisse',
     title: 'Berufliches Wachstum',
     icon: AdvantagesFirstIcon,
   },

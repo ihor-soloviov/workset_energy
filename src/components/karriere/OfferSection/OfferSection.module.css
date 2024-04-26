@@ -1,5 +1,5 @@
 .offerSection {
-  padding: 90px 0;
+  padding: 36px 0;
 }
 
 .offerContainer {
@@ -15,7 +15,7 @@
   line-height: 130%;
   text-align: center;
   margin: 0 auto;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .offerMainText {
@@ -24,14 +24,13 @@
   font-size: 16px;
   line-height: 160%;
   margin: 0 auto;
-  margin-bottom: 48px;
 }
 
 .offerMainBtn {
   margin: 0 auto;
   margin-top: 54px;
   width: 100%;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   color: var(--gray-input);
@@ -78,10 +77,11 @@
   }
   .offerMainText {
     font-size: 1.8rem;
-    margin-bottom: 5.4rem;
+
     width: 80rem;
   }
   .offerMainBtn {
+    display: flex;
     padding: 1.6rem 0;
     width: 13.4rem;
   }
@@ -102,7 +102,7 @@
   }
   .offerMainText {
     font-size: 18px;
-    margin-bottom: 54px;
+
     width: 800px;
   }
   .offerMainBtn {

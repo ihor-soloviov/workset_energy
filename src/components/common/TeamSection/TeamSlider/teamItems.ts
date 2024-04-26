@@ -43,8 +43,8 @@ export const teamItems: TeamItem[] = [
     title: 'Antonio Fiusco',
     textMob: 'Frankfurt',
     className: 'fifth',
-    email: '',
-    tel: '',
+    email: 'a.fiusco@work-set.eu',
+    tel: '+49 731 146 153 60',
   },
   {
     title: 'Damian Feluks',
