@@ -1,0 +1,47 @@
+@media screen and (min-width: 1440px) {
+  .carousel {
+    width: 89.1rem;
+    height: 62rem;
+    overflow: hidden;
+  }
+
+  .carouselWrapper {
+    display: flex;
+    gap: 4rem;
+    width: max-content;
+    height: 100%;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .carouselItem {
+    background-image: url('/images/common/team-1-desk.jpg');
+    background-size: cover;
+    background-position: 37% center;
+    border-radius: 12px;
+    width: 15.8rem;
+    transition: width 0.4s ease-in-out;
+  }
+
+  .active {
+    width: 49.5rem;
+  }
+}
+@media screen and (min-width: 1728px) {
+  .carousel {
+    width: 891px;
+    height: 620px;
+  }
+
+  .carouselWrapper {
+    gap: 40px;
+  }
+
+  .carouselItem {
+    border-radius: 12px;
+    width: 158px;
+  }
+
+  .active {
+    width: 495px;
+  }
+}

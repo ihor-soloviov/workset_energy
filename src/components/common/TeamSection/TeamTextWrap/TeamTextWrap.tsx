@@ -2,11 +2,13 @@
 import React from 'react';
 import styles from '../TeamSection.module.css';
 import { inter } from '@/utils/fonts';
-import Button from '../../Button/Button';
-import ArrowIcon from '/public/icons/small-arrow-btn.svg';
 import useObserver from '@/hooks/useObserver';
-import { scrollToSection } from '@/utils/scroll';
-const TeamTextWrap = () => {
+
+type Props = {
+  handleImage: (value: string) => void;
+};
+
+const TeamTextWrap: React.FC<Props> = ({ handleImage }) => {
   useObserver(`.${styles.teamTextWrap}`, `${styles.teamTextWrapVisible}`);
 
   return (
@@ -20,14 +22,20 @@ const TeamTextWrap = () => {
         kontaktieren dich
       </p>
       <div>
-        <Button
-          handleClick={() => scrollToSection('contact')}
-          className={styles.teamBtn}
-          type="button"
-        >
-          Zum Angebot
-          <ArrowIcon className={styles.teamIcon} />
-        </Button>
+        <div className={styles.carouselBtns}>
+          <button
+            onClick={() => handleImage('prev')}
+            className={styles.carouselBtn}
+          >
+            left
+          </button>
+          <button
+            onClick={() => handleImage('next')}
+            className={styles.carouselBtn}
+          >
+            right
+          </button>
+        </div>
       </div>
     </div>
   );

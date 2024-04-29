@@ -15,7 +15,6 @@ import Button from '../../Button/Button';
 const TeamSlider = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
-  const { isDesktop } = useGlobalStore();
   const swiperRef = useRef<SwiperType>();
 
   const toggleModal = () => setIsModalOpen(!isModalOpen);
@@ -44,77 +43,75 @@ const TeamSlider = () => {
 
   return (
     <div className={styles.teamImgMainWrap}>
-      {!isDesktop ? (
-        <>
-          <Swiper
-            className={styles.sliderWrap}
-            onActiveIndexChange={e => setActiveIndex(e.realIndex)}
-            spaceBetween={15}
-            loop={true}
-            slidesPerView={1}
-            onBeforeInit={swiper => {
-              swiperRef.current = swiper;
-            }}
-          >
-            {teamItems.map(({ textMob, title, className }, index) => (
-              <SwiperSlide key={index}>
-                <div className={`${styles.teamImgWrap} ${styles[className]}`}>
-                  <div className={styles.teamTextWrap}>
-                    <h3 className={styles.teamImgTitle}>{title}</h3>
-                    <p className={styles.teamImgText}>{textMob}</p>
+      <Swiper
+        className={styles.sliderWrap}
+        onActiveIndexChange={e => setActiveIndex(e.realIndex)}
+        spaceBetween={15}
+        loop={true}
+        slidesPerView={1}
+        onBeforeInit={swiper => {
+          swiperRef.current = swiper;
+        }}
+      >
+        {teamItems.map(({ textMob, title, className }, index) => (
+          <SwiperSlide key={index}>
+            <div className={`${styles.teamImgWrap} ${styles[className]}`}>
+              <div className={styles.teamTextWrap}>
+                <h3 className={styles.teamImgTitle}>{title}</h3>
+                <p className={styles.teamImgText}>{textMob}</p>
 
-                    <Button
-                      handleClick={toggleModal}
-                      className={styles.teamImgBtn}
-                      type="button"
-                    >
-                      Kontakte
-                    </Button>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          <SliderDots
-            className={'team'}
-            count={8}
-            activeSlide={activeIndex}
-            handleActiveSlide={handleActiveSlide}
-          />
-
-          <TeamModal
-            title={teamItems[activeIndex].title}
-            email={teamItems[activeIndex].email}
-            tel={teamItems[activeIndex].tel}
-            isModalOpen={isModalOpen}
-            toggleModal={toggleModal}
-          />
-        </>
-      ) : (
-        <>
-          {teamItems
-            .slice(0, 3)
-            .map(({ textDesk, title, className }, index) => (
-              <div
-                onMouseEnter={() => handleMouseEnter(index)}
-                onMouseLeave={() => handleMouseLeave(index)}
-                key={index}
-                className={cn(styles.teamImgWrap, styles[className], {
-                  [styles.active]: activeIndex === index,
-                })}
-              >
-                <div className={styles.teamTextWrap}>
-                  <h3 className={styles.teamImgTitle}>{title}</h3>
-                  <p className={`${styles.teamImgText} ${inter.className}`}>
-                    {textDesk}
-                  </p>
-                </div>
+                <Button
+                  handleClick={toggleModal}
+                  className={styles.teamImgBtn}
+                  type="button"
+                >
+                  Kontakte
+                </Button>
               </div>
-            ))}
-        </>
-      )}
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      <SliderDots
+        className={'team'}
+        count={8}
+        activeSlide={activeIndex}
+        handleActiveSlide={handleActiveSlide}
+      />
+
+      <TeamModal
+        title={teamItems[activeIndex].title}
+        email={teamItems[activeIndex].email}
+        tel={teamItems[activeIndex].tel}
+        isModalOpen={isModalOpen}
+        toggleModal={toggleModal}
+      />
     </div>
   );
 };
 
 export default TeamSlider;
+
+{
+  /* <>
+  {teamItems
+    .slice(0, 3)
+    .map(({ textDesk, title, className }, index) => (
+      <div
+        onMouseEnter={() => handleMouseEnter(index)}
+        onMouseLeave={() => handleMouseLeave(index)}
+        key={index}
+        className={cn(styles.teamImgWrap, styles[className], {
+          [styles.active]: activeIndex === index,
+        })}
+      >
+        <div className={styles.teamTextWrap}>
+          <h3 className={styles.teamImgTitle}>{title}</h3>
+          <p className={`${styles.teamImgText} ${inter.className}`}>
+            {textDesk}
+          </p>
+        </div>
+      </div>
+    ))}
+</> */
+}

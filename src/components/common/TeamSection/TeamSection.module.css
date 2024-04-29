@@ -80,11 +80,22 @@
     align-items: center;
   }
 
+  .carouselBtns {
+    display: flex;
+    gap: 40px;
+
+    .carouselBtn {
+      padding: 10px;
+      font-size: 30px;
+    }
+  }
+
   .teamTextWrap {
     opacity: 0;
     filter: blur(5px);
     transform: translateX(100%);
     transition: all 0.4s;
+    width: 324px;
   }
 
   .teamTextWrapVisible {
