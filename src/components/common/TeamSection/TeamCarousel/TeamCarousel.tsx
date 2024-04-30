@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './TeamCarousel.module.css';
+import { teamItems } from '../TeamSlider/teamItems';
 type Props = {
   activeItem: number;
 };
@@ -37,7 +38,7 @@ const TeamCarousel: React.FC<Props> = ({ activeItem }) => {
         }}
         className={styles.carouselWrapper}
       >
-        {[0, 1, 2, 3, 4, 5, 6].map((el, index) => (
+        {teamItems.map((_, index) => (
           <div
             key={index}
             className={`${styles.carouselItem} ${activeItem === index ? styles.active : ''}`}
