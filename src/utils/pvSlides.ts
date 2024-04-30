@@ -1,16 +1,16 @@
 import { ImportedImages, VorteileSliderItems } from '@/types/infoTypes';
 import pvSlide1Mob from '/public/images/pv-anlagen-page/PVSlide1Mob.jpg';
 import pvSlide1Desk from '/public/images/pv-anlagen-page/pvSlide1Desk.jpg';
-import pvSlide2Mob from '/public/images/pv-anlagen-page/PVSlide2Mob.jpg';
-import pvSlide2Desk from '/public/images/pv-anlagen-page/pvSlide2Desk.jpg';
-import pvSlide3Mob from '/public/images/pv-anlagen-page/PVSlide3Mob.jpg';
-import pvSlide3Desk from '/public/images/pv-anlagen-page/pvSlide3Desk.jpg';
-import pvSlide4Mob from '/public/images/pv-anlagen-page/PVSlide4Mob.jpg';
-import pvSlide4Desk from '/public/images/pv-anlagen-page/pvSlide4Desk.jpg';
-import pvSlide5Mob from '/public/images/pv-anlagen-page/PVSlide5Mob.jpg';
-import pvSlide5Desk from '/public/images/pv-anlagen-page/pvSlide5Desk.jpg';
-import pvSlide6Mob from '/public/images/pv-anlagen-page/PVSlide6Mob.jpg';
-import pvSlide6Desk from '/public/images/pv-anlagen-page/pvSlide6Desk.jpg';
+import pvSlide2Mob from '/public/images/pv-anlagen-page/PVSlide2Mob.webp';
+import pvSlide2Desk from '/public/images/pv-anlagen-page/pvSlide2Desk.webp';
+import pvSlide3Mob from '/public/images/pv-anlagen-page/PVSlide3Mob.webp';
+import pvSlide3Desk from '/public/images/pv-anlagen-page/pvSlide3Desk.webp';
+import pvSlide4Mob from '/public/images/pv-anlagen-page/PVSlide4Mob.webp';
+import pvSlide4Desk from '/public/images/pv-anlagen-page/pvSlide4Desk.webp';
+import pvSlide5Mob from '/public/images/pv-anlagen-page/PVSlide5Mob.webp';
+import pvSlide5Desk from '/public/images/pv-anlagen-page/pvSlide5Desk.webp';
+import pvSlide6Mob from '/public/images/pv-anlagen-page/PVSlide6Mob.webp';
+import pvSlide6Desk from '/public/images/pv-anlagen-page/pvSlide6Desk.webp';
 
 export const pvItems: VorteileSliderItems[] = [
   {

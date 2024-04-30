@@ -1,7 +1,7 @@
 import ProductList from './ProductList/ProductList';
-import styles from './ProductSection.module.css';
-import { inter } from '@/utils/fonts';
 import RecycleTextWrap from '@/components/common/RecycleTextWrap/RecycleTextWrap';
+import { inter } from '@/utils/fonts';
+import styles from './ProductSection.module.css';
 
 const ProductSection = () => {
   return (

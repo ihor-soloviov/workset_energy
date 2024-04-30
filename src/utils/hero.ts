@@ -9,12 +9,12 @@ export const homeHero = {
 };
 
 export const pvAnlagenHero = {
-  imgMob: '/images/pv-anlagen-page/pv-anlagen-hero-mob.jpg',
-  imgMobBlur: '/images/pv-anlagen-page/pv-anlagen-hero-mob-blur.jpg',
+  imgMob: '/images/pv-anlagen-page/pv-anlagen-hero-mob.webp',
+  imgMobBlur: '/images/pv-anlagen-page/pv-anlagen-hero-mob-blur.webp',
   title: 'PV-Anlagen',
   text: 'Sie wandelt Sonnenlicht in Strom um und ist daher eine nachhaltige und umweltfreundliche Energiequelle.',
-  imgDesc: '/images/pv-anlagen-page/pv-anlagen-hero-desc.jpg',
-  imgDescBlur: '/images/pv-anlagen-page/pv-anlagen-hero-desc-blur.jpg',
+  imgDesc: '/images/pv-anlagen-page/pv-anlagen-hero-desc.webp',
+  imgDescBlur: '/images/pv-anlagen-page/pv-anlagen-hero-desc-blur.webp',
   className: 'pvAnlagen',
 };
 

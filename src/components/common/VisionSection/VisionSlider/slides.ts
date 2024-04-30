@@ -1,9 +1,9 @@
-import visionFirstImgMob from '/public/images/common/vision-1-mob.jpg';
-import visionSecondImgMob from '/public/images/common/vision-2-mob.jpg';
-import visionThirdImgMob from '/public/images/common/vision-3-mob.jpg';
-import visionFirstImgDesc from '/public/images/common/vision-1-desc.jpg';
-import visionSecondImgDesc from '/public/images/common/vision-2-desc.jpg';
-import visionThirdImgDesc from '/public/images/common/vision-3-desc.jpg';
+import visionFirstImgMob from '/public/images/common/vision-1-mob.webp';
+import visionSecondImgMob from '/public/images/common/vision-2-mob.webp';
+import visionThirdImgMob from '/public/images/common/vision-3-mob.webp';
+import visionFirstImgDesc from '/public/images/common/vision-1-desc.webp';
+import visionSecondImgDesc from '/public/images/common/vision-2-desc.webp';
+import visionThirdImgDesc from '/public/images/common/vision-3-desc.webp';
 import { VisionImageItem, VisionLinkItem } from '@/types/infoTypes';
 
 export const visionItems: VisionLinkItem[] = [
