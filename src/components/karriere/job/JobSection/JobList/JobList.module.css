@@ -105,6 +105,7 @@
   .jobCategoryList {
     width: 59.9rem;
     margin-bottom: 5.4rem;
+    gap: 3.6rem;
   }
 
   .jobCategoryItem {
@@ -114,6 +115,14 @@
   .jobCategoryTitle {
     font-size: 2.8rem;
     line-height: normal;
+  }
+
+  .jobSubCategoryList {
+    gap: 2.8rem;
+  }
+
+  .jobSubCategoryItem {
+    gap: 1.6rem;
   }
 
   .jobDescription {
@@ -151,6 +160,7 @@
   .jobCategoryList {
     width: 599px;
     margin-bottom: 54px;
+    gap: 36px;
   }
 
   .jobCategoryItem {
@@ -165,9 +175,18 @@
     width: 599px;
   }
 
+  .jobSubCategoryList {
+    gap: 28px;
+  }
+
+  .jobSubCategoryItem {
+    gap: 16px;
+  }
+
   .jobSubCategoryTitle {
     font-size: 22px;
   }
+
   .jobPointList {
     margin-left: 28px;
   }
