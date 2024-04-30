@@ -1,6 +1,7 @@
 import Button from '@/components/common/Button/Button';
 import styles from './TeamModal.module.css';
 import CopyIcon from '/public/icons/copy.svg';
+import CopiedPopup from '/public/icons/copied.svg';
 import CrossIcon from '/public/icons/cross.svg';
 import { inter } from '@/utils/fonts';
 import { useCallback, useState } from 'react';
@@ -53,6 +54,12 @@ const TeamModal = ({
             <h3 className={styles.modalTitle}>{`Herr ${title}`}</h3>
           </div>
           <ul className={`${styles.modalList} ${inter.className}`}>
+            <CopiedPopup
+              className={`${styles.copiedPopup} ${emailCopied && styles.copiedEmailPopup}`}
+            />
+            <CopiedPopup
+              className={`${styles.copiedPopup} ${telCopied && styles.copiedTelPopup}`}
+            />
             {[0, 1].map((_, index) => (
               <li className={styles.modalItem} key={index}>
                 <p className={styles.modalLabel}>
