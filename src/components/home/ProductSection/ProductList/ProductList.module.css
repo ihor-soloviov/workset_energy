@@ -123,10 +123,6 @@
     transition-delay: 0.6s;
   }
 
-  .productImgWrap {
-    border-radius: 0 0 1.2rem 1.2rem;
-  }
-
   .productTextWrap {
     padding: 2.5rem;
     width: 100%;
@@ -139,6 +135,7 @@
 
   .productImgDesc {
     display: block;
+    border-radius: 1.2rem 1.2rem 0 0;
     width: 100%;
     height: 23.9rem;
   }

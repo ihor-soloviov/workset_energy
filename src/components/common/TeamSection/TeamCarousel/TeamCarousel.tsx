@@ -5,10 +5,18 @@ type Props = {
 };
 
 const TeamCarousel: React.FC<Props> = ({ activeItem }) => {
-  const [isSmall, setIsSmall] = useState(window.innerWidth < 1728);
+  const [unit, setUnit] = useState('rem');
+  const [translateValue, setTranslateValue] = useState(19.8);
+  // 198 - це сума ширини неактивного слайда 158px + gap 40px
 
   const checkWindowSize = () => {
-    setIsSmall(window.innerWidth < 1728);
+    const smallDesktop = window.innerWidth < 1728;
+    setUnit(smallDesktop ? 'rem' : 'px');
+    setTranslateValue(smallDesktop ? 19.8 : 198);
+
+    setTimeout(() => {
+      console.log(`translateX(-${activeItem * translateValue}${unit})`);
+    }, 1000);
   };
 
   useEffect(() => {
@@ -24,8 +32,8 @@ const TeamCarousel: React.FC<Props> = ({ activeItem }) => {
         style={{
           transform:
             activeItem < 5
-              ? `translateX(-${activeItem * 198}px)`
-              : `translateX(-${4 * 198}px)`,
+              ? `translateX(-${activeItem * translateValue}${unit})`
+              : `translateX(-${4 * translateValue}${unit})`,
         }}
         className={styles.carouselWrapper}
       >
