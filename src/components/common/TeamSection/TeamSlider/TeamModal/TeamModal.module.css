@@ -86,6 +86,7 @@
 }
 
 .modalList {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -157,6 +158,22 @@
   fill: var(--red-main);
 }
 
+.copiedPopup {
+  display: none;
+  position: absolute;
+  right: -15px;
+}
+
+.copiedEmailPopup {
+  display: block;
+  top: -24px;
+}
+
+.copiedTelPopup {
+  display: block;
+  top: 65px;
+}
+
 .modalBtn {
   display: flex;
   padding: 16px 138px;
@@ -185,7 +202,7 @@
 
 @media screen and (min-width: 370px) {
   .modalMainWrap {
-    width: 350px;
+    width: 375px;
     height: 650px;
   }
 
