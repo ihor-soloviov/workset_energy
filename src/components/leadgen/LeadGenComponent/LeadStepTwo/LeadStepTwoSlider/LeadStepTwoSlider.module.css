@@ -12,7 +12,17 @@
   top: -7px;
   border-radius: 20px;
   cursor: pointer;
+  position: relative;
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.04);
+}
+
+.stepTwoInputThumb::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  bottom: -20px;
+  left: -20px;
 }
 
 .stepTwoInputTrack {
