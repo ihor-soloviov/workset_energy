@@ -4,7 +4,6 @@ import PricingPlansSection from '@/components/common/PricingPlansSection/Pricing
 import VideoSection from '@/components/common/VideoSection/VideoSection';
 import { pvAnlagenVideo } from '@/utils/video';
 import { pvAnlagenHero } from '@/utils/hero';
-import React from 'react';
 import RedHelpSection from '@/components/common/RedHelpSection/RedHelpSection';
 import EmployeeSection from '@/components/common/EmployeeSection/EmployeeSection';
 import GoogleComSection from '@/components/common/GoogleComSection/GoogleComSection';

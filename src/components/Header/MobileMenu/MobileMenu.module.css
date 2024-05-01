@@ -3,10 +3,11 @@
   top: 0;
   left: 0;
   z-index: 99;
-  width: 100%;
+  width: 100vw;
   height: 100dvh;
   padding: 18px 0 90px;
   overflow-y: scroll;
+  overscroll-behavior-y: contain;
   background-color: var(--black-main);
 }
 

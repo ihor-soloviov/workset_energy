@@ -4,13 +4,14 @@
 
 .jobContainer {
   width: 100%;
-  padding: 0 24px;
+  padding: 0 13px;
   margin: 0 auto;
 }
 
 @media screen and (min-width: 390px) {
   .jobContainer {
     width: 390px;
+    padding: 0 24px;
   }
 }
 
