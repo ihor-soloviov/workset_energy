@@ -13,6 +13,10 @@
   width: 100%;
 }
 
+.carouselBtns {
+  display: none;
+}
+
 .teamTitle {
   color: var(--black-main);
   font-size: 24px;
