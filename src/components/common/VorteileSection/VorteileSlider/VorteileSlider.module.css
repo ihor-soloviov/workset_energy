@@ -42,9 +42,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 24px 24px 0px;
+  padding: 24px 16px 0px;
   margin: 0 auto;
-  width: 390px;
+  width: 100%;
   height: 100%;
   position: relative;
 }
@@ -75,6 +75,7 @@
 .sliderTitle {
   font-size: 30px;
   font-weight: 500;
+  width: max-content;
   line-height: normal;
   margin-bottom: 12px;
   color: var(--white-main);
@@ -82,6 +83,7 @@
 
 .sliderText {
   font-size: 16px;
+  width: 340px;
   font-weight: 400;
   line-height: 160%;
   color: var(--white-second);
@@ -136,6 +138,14 @@
   stroke: var(--red-main);
 }
 
+@media screen and (min-width: 390px) {
+  .sliderInfoContainer {
+    padding: 24px 24px 0px;
+    width: 390px;
+    height: 100%;
+    position: relative;
+  }
+}
 @media screen and (min-width: 1440px) {
   .vorteileSliderWrap {
     padding-top: unset;
