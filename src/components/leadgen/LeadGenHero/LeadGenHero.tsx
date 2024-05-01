@@ -1,8 +1,8 @@
 import LeadGenComponent from '../LeadGenComponent/LeadGenComponent';
 import styles from './LeadGenHero.module.css';
 import Image from 'next/image';
-import leadHeroImgMob from '/public/images/leadgen-page/lead-hero-mob.jpg';
-import leadHeroImgDesk from '/public/images/leadgen-page/lead-hero-desc.jpg';
+import leadHeroImgMob from '/public/images/leadgen-page/lead-hero-mob.webp';
+import leadHeroImgDesk from '/public/images/leadgen-page/lead-hero-desc.webp';
 
 type LeadGenHeroProps = {
   isDesktop: boolean;

@@ -204,7 +204,7 @@ const LeadGenComponent = () => {
             </div>
             <ul className={styles.leadLineList}>
               {[1, 2, 3].map((_, index) => (
-                <li className={styles.leadLineItem} key={index}></li>
+                <li className={styles.leadLineItem} key={index} />
               ))}
             </ul>
             <p className={styles.leadCount}>
