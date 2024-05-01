@@ -25,8 +25,28 @@
     background-image: url('/images/common/team-3-desk.jpg');
   }
 
+  .fourth {
+    background-image: url('/images/common/team-4-desk.jpg');
+  }
+
+  .fifth {
+    background-image: url('/images/common/team-5-desk.jpg');
+  }
+
+  .sixth {
+    background-image: url('/images/common/team-6-desk.jpg');
+  }
+
+  .seventh {
+    background-image: url('/images/common/team-7-desk.jpg');
+  }
+
+  .eighth {
+    background-image: url('/images/common/team-8-desk.jpg');
+  }
+
   .carouselItem {
-    background-image: url('/images/common/team-1-desk.jpg');
+    position: relative;
     background-size: cover;
     background-position: 45% center;
     border-radius: 1.2rem;
@@ -36,6 +56,62 @@
 
   .active {
     width: 49.5rem;
+  }
+
+  .teamTextWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    position: absolute;
+    bottom: 4.5rem;
+    left: 2.9rem;
+    opacity: 0;
+    transition: opacity 0.4s var(--cubic);
+  }
+
+  .active .teamTextWrap {
+    opacity: 1;
+  }
+
+  .teamImgTitle {
+    color: var(--white-main);
+    font-weight: 600;
+    line-height: 130%;
+    font-size: 3.5rem;
+    width: 27.2rem;
+    margin-bottom: unset;
+  }
+
+  .teamImgText {
+    color: var(--white-main);
+    width: fit-content;
+    font-size: 2.2rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .teamImgBtn {
+    display: flex;
+    padding: 15px 50px;
+    color: var(--gray-input);
+    justify-content: center;
+    align-items: center;
+    border-radius: 28px;
+    background-color: var(--red-main);
+    width: max-content;
+    height: 50px;
+    border: 1px solid var(--red-main);
+    font-size: 16px;
+    font-weight: 600;
+    transition:
+      border-color 250ms var(--cubic),
+      color 250ms var(--cubic),
+      background-color 250ms var(--cubic);
+  }
+
+  .teamImgBtn:is(:hover, :focus) {
+    background-color: var(--white-main);
+    border-color: var(--white-main);
+    color: var(--red-main);
   }
 }
 @media screen and (min-width: 1728px) {
@@ -55,5 +131,20 @@
 
   .active {
     width: 495px;
+  }
+
+  .teamTextWrap {
+    bottom: 45px;
+    left: 29px;
+    gap: 4px;
+  }
+
+  .teamImgTitle {
+    font-size: 35px;
+    width: 272px;
+  }
+
+  .teamImgText {
+    font-size: 22px;
   }
 }

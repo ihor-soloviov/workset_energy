@@ -2,11 +2,8 @@
 import 'swiper/css';
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './TeamSlider.module.css';
-import { inter } from '@/utils/fonts';
-import cn from 'classnames';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperType } from 'swiper';
-import { useGlobalStore } from '@/store/global-store';
 import { teamItems } from './teamItems';
 import SliderDots from '../../SliderDots/SliderDots';
 import TeamModal from './TeamModal/TeamModal';
@@ -53,12 +50,12 @@ const TeamSlider = () => {
           swiperRef.current = swiper;
         }}
       >
-        {teamItems.map(({ textMob, title, className }, index) => (
+        {teamItems.map(({ text, title, className }, index) => (
           <SwiperSlide key={index}>
             <div className={`${styles.teamImgWrap} ${styles[className]}`}>
               <div className={styles.teamTextWrap}>
                 <h3 className={styles.teamImgTitle}>{title}</h3>
-                <p className={styles.teamImgText}>{textMob}</p>
+                <p className={styles.teamImgText}>{text}</p>
 
                 <Button
                   handleClick={toggleModal}

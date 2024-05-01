@@ -221,3 +221,9 @@
     padding: 0 33px;
   }
 }
+
+@media screen and (min-width: 1440px) {
+  .modalBackdrop {
+    background: rgba(24, 24, 24, 0.50); 
+  }
+}
