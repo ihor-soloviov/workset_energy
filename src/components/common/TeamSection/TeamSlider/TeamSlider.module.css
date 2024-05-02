@@ -17,35 +17,35 @@
 }
 
 .first {
-  background-image: url('/images/common/team-1-mob.jpg');
+  background-image: url('/images/common/team-1-mob.webp');
 }
 
 .second {
-  background-image: url('/images/common/team-2-mob.jpg');
+  background-image: url('/images/common/team-2-mob.webp');
 }
 
 .third {
-  background-image: url('/images/common/team-3-mob.jpg');
+  background-image: url('/images/common/team-3-mob.webp');
 }
 
 .fourth {
-  background-image: url('/images/common/team-4-mob.jpg');
+  background-image: url('/images/common/team-4-mob.webp');
 }
 
 .fifth {
-  background-image: url('/images/common/team-5-mob.jpg');
+  background-image: url('/images/common/team-5-mob.webp');
 }
 
 .sixth {
-  background-image: url('/images/common/team-6-mob.jpg');
+  background-image: url('/images/common/team-6-mob.webp');
 }
 
 .seventh {
-  background-image: url('/images/common/team-7-mob.jpg');
+  background-image: url('/images/common/team-7-mob.webp');
 }
 
 .eighth {
-  background-image: url('/images/common/team-8-mob.jpg');
+  background-image: url('/images/common/team-8-mob.webp');
 }
 
 .teamTextWrap {
@@ -115,15 +115,15 @@
   }
 
   .first {
-    background-image: url('/images/common/team-1-desk.jpg');
+    background-image: url('/images/common/team-1-desk.webp');
   }
 
   .second {
-    background-image: url('/images/common/team-2-desk.jpg');
+    background-image: url('/images/common/team-2-desk.webp');
   }
 
   .third {
-    background-image: url('/images/common/team-3-desk.jpg');
+    background-image: url('/images/common/team-3-desk.webp');
   }
 
   .active {

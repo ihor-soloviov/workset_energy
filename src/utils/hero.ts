@@ -1,6 +1,6 @@
 export const homeHero = {
   imgMob: '/images/home-page/home-hero-mob.webp',
-  imgMobBlur: '/images/home-page/home-hero-mob-blur.jpg',
+  imgMobBlur: '/images/home-page/home-hero-mob-blur.webp',
   title: 'Dein Fachpartner WorkSET Energy',
   text: 'Gemeinsam machen wir die Welt etwas grüner und Sie unabhängiger',
   imgDesc: '/images/home-page/home-hero-desc.webp',
