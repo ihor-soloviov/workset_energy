@@ -47,15 +47,19 @@ const LeadStepSevenForm = ({
       console.log(values);
 
       setFormData({ ...formData, contactData: values });
+
       const leadGenData = new FormData();
 
-      Object.entries(formData).forEach(([key, value]) => {
-        if (typeof value === 'object' && !Array.isArray(value)) {
-          leadGenData.append(key, JSON.stringify(value));
-        } else {
-          leadGenData.append(key, value.toString());
-        }
-      });
+      Object.entries({ ...formData, contactData: values }).forEach(
+        ([key, value]) => {
+          if (typeof value === 'object' && !Array.isArray(value)) {
+            leadGenData.append(key, JSON.stringify(value));
+          } else {
+            leadGenData.append(key, value.toString());
+          }
+        },
+      );
+      console.log(leadGenData);
       await formDataPost(leadGenData, 'leadgen', setPopupAction);
 
       setIsLoading(false);
