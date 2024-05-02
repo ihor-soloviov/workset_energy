@@ -10,8 +10,10 @@ import { useState, ChangeEvent } from 'react';
 import { formDataPost } from '@/utils/api';
 import { ThreeDots } from 'react-loader-spinner';
 import { useGlobalStore } from '@/store/global-store';
+import { useNavigateToThankYou } from '@/hooks/useNavigationToThanks';
 
 const AngebotForm = () => {
+  const thankYou = useNavigateToThankYou();
   const { setPopupAction } = useGlobalStore();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -84,6 +86,7 @@ const AngebotForm = () => {
         setIsLoading(false);
         setSelectedFile(null);
         resetForm();
+        thankYou();
       }
     },
   });

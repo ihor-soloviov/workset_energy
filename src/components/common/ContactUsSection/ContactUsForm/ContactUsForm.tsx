@@ -12,8 +12,10 @@ import { useState } from 'react';
 import { useGlobalStore } from '@/store/global-store';
 import FormSelect from '../../FormSelect/FormSelect';
 import { questOptions } from '@/utils/questOptions';
+import { useNavigateToThankYou } from '@/hooks/useNavigationToThanks';
 
 const ContactUsForm = () => {
+  const thankYou = useNavigateToThankYou();
   const [questValue, setQuestValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const { setPopupAction, isDesktop } = useGlobalStore();
@@ -70,6 +72,7 @@ const ContactUsForm = () => {
 
       setIsLoading(false);
       resetForm();
+      thankYou();
     },
   });
 

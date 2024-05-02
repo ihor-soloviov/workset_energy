@@ -10,6 +10,7 @@ import { useState, ChangeEvent } from 'react';
 import { formDataPost } from '@/utils/api';
 import { ThreeDots } from 'react-loader-spinner';
 import { useGlobalStore } from '@/store/global-store';
+import { useNavigateToThankYou } from '@/hooks/useNavigationToThanks';
 
 const JobForm = () => {
   const { setPopupAction } = useGlobalStore();
@@ -19,6 +20,7 @@ const JobForm = () => {
   const truncateText = (text: string, maxLength: number) => {
     return text.length > maxLength ? `${text.slice(0, maxLength)}...` : text;
   };
+  const thankYou = useNavigateToThankYou();
 
   const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
@@ -68,6 +70,7 @@ const JobForm = () => {
         setIsLoading(false);
         setSelectedFile(null);
         resetForm();
+        thankYou();
       }
     },
   });

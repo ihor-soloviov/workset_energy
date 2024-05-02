@@ -8,6 +8,7 @@ import { teamItems } from './teamItems';
 import SliderDots from '../../SliderDots/SliderDots';
 import TeamModal from './TeamModal/TeamModal';
 import Button from '../../Button/Button';
+import { stopScroll } from '@/utils/stopScroll';
 
 const TeamSlider = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -31,9 +32,9 @@ const TeamSlider = () => {
 
   useEffect(() => {
     if (isModalOpen) {
-      document.body.style.overflow = 'hidden';
+      stopScroll(true);
       return () => {
-        document.body.style.overflow = 'unset';
+        stopScroll(false);
       };
     }
   }, [isModalOpen]);

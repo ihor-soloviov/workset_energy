@@ -27,7 +27,6 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
   @media screen and (min-width: 1440px) {
     font-size: calc(100vw / 1728 * 10);
   }
