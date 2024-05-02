@@ -1,13 +1,13 @@
-import JobHero1Mob from '/public/images/karriere-page/job-hero-1-mob.jpg';
-import JobHero2Mob from '/public/images/karriere-page/job-hero-2-mob.jpg';
-import JobHero3Mob from '/public/images/karriere-page/job-hero-3-mob.jpg';
-import JobHero4Mob from '/public/images/karriere-page/job-hero-4-mob.jpg';
-import JobHero5Mob from '/public/images/karriere-page/job-hero-5-mob.jpg';
-import JobHero1Desk from '/public/images/karriere-page/job-hero-1-desk.jpg';
-import JobHero2Desk from '/public/images/karriere-page/job-hero-2-desk.jpg';
-import JobHero3Desk from '/public/images/karriere-page/job-hero-3-desk.jpg';
-import JobHero4Desk from '/public/images/karriere-page/job-hero-4-desk.jpg';
-import JobHero5Desk from '/public/images/karriere-page/job-hero-5-desk.jpg';
+import JobHero1Mob from '/public/images/karriere-page/job-hero-1-mob.webp';
+import JobHero2Mob from '/public/images/karriere-page/job-hero-2-mob.webp';
+import JobHero3Mob from '/public/images/karriere-page/job-hero-3-mob.webp';
+import JobHero4Mob from '/public/images/karriere-page/job-hero-4-mob.webp';
+import JobHero5Mob from '/public/images/karriere-page/job-hero-5-mob.webp';
+import JobHero1Desk from '/public/images/karriere-page/job-hero-1-desk.webp';
+import JobHero2Desk from '/public/images/karriere-page/job-hero-2-desk.webp';
+import JobHero3Desk from '/public/images/karriere-page/job-hero-3-desk.webp';
+import JobHero4Desk from '/public/images/karriere-page/job-hero-4-desk.webp';
+import JobHero5Desk from '/public/images/karriere-page/job-hero-5-desk.webp';
 
 export const currentImg = (title: string) => {
   switch (title) {
