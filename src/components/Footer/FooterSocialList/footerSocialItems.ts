@@ -1,7 +1,6 @@
 import InstIcon from '/public/icons/instagram.svg';
 import FacebookIcon from '/public/icons/facebook.svg';
 import YoutubeIcon from '/public/icons/youtube.svg';
-import TikTokIcon from '/public/icons/tiktok.svg';
 
 type SocialLinkItem = {
   href: string;
@@ -24,10 +23,5 @@ export const socialLinkItems: SocialLinkItem[] = [
     href: 'https://www.youtube.com/@WorkSETEnergy',
     ariaLabel: 'youtube',
     icon: YoutubeIcon,
-  },
-  {
-    href: 'https://www.tiktok.com/@caplicon/video/6959087922247191810',
-    ariaLabel: 'tiktok',
-    icon: TikTokIcon,
   },
 ];

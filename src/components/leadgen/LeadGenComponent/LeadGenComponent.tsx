@@ -14,6 +14,7 @@ import LeadStepSeven from './LeadStepSeven/LeadStepSeven';
 import LeadStepModal from './LeadStepModal/LeadStepModal';
 import MobileMenu from '../../Header/MobileMenu/MobileMenu';
 import { FormInitialValue } from './types';
+import { useRouter } from 'next/navigation';
 
 const formInitialValue: FormInitialValue = {
   propertyType: '',
@@ -31,6 +32,7 @@ const formInitialValue: FormInitialValue = {
 };
 
 const LeadGenComponent = () => {
+  const router = useRouter();
   const [formData, setFormData] = useState(formInitialValue);
   const [step, setStep] = useState(1);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -158,7 +160,10 @@ const LeadGenComponent = () => {
   };
 
   const handleMenuClick = () => setIsMenuOpen(!isMenuOpen);
-  const handleModalClick = () => setIsModalOpen(!isModalOpen);
+  const handleModalClick = () => {
+    setIsModalOpen(!isModalOpen);
+    router.push('/');
+  };
 
   useEffect(() => {
     if (step === 8) {
