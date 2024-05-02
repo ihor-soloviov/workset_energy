@@ -3,8 +3,8 @@ export const homeHero = {
   imgMobBlur: '/images/home-page/home-hero-mob-blur.jpg',
   title: 'Dein Fachpartner WorkSET Energy',
   text: 'Gemeinsam machen wir die Welt etwas grüner und Sie unabhängiger',
-  imgDesc: '/images/home-page/home-hero-desc.jpg',
-  imgDescBlur: '/images/home-page/home-hero-desc-blur.jpg',
+  imgDesc: '/images/home-page/home-hero-desc.webp',
+  imgDescBlur: '/images/home-page/home-hero-desc-blur.webp',
   className: 'home',
 };
 
@@ -29,11 +29,11 @@ export const stormspeicherHero = {
 };
 
 export const wallboxHero = {
-  imgMob: '/images/wallbox-page/wallbox-hero-mob.jpg',
-  imgMobBlur: '/images/wallbox-page/wallbox-hero-mob-blur.jpg',
+  imgMob: '/images/wallbox-page/wallbox-hero-mob.webp',
+  imgMobBlur: '/images/wallbox-page/wallbox-hero-mob-blur.webp',
   title: 'Wallbox',
   text: 'Ein hochmodernes Ladesystem für Elektrofahrzeuge, das bequeme und effiziente Betankungsmöglichkeiten bietet.',
-  imgDesc: '/images/wallbox-page/wallbox-hero-desc.jpg',
-  imgDescBlur: '/images/wallbox-page/wallbox-hero-desc-blur.jpg',
+  imgDesc: '/images/wallbox-page/wallbox-hero-desc.webp',
+  imgDescBlur: '/images/wallbox-page/wallbox-hero-desc-blur.webp',
   className: 'wallbox',
 };

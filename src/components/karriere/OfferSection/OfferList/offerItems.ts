@@ -1,14 +1,14 @@
 import { StaticImageData } from 'next/image';
-import Offer1Mob from '/public/images/karriere-page/offer-1-mob.jpg';
-import Offer2Mob from '/public/images/karriere-page/offer-2-mob.jpg';
-import Offer3Mob from '/public/images/karriere-page/offer-3-mob.jpg';
-import Offer4Mob from '/public/images/karriere-page/offer-4-mob.jpg';
-import Offer5Mob from '/public/images/karriere-page/offer-5-mob.jpg';
-import Offer1Desc from '/public/images/karriere-page/offer-1-desk.jpg';
-import Offer2Desc from '/public/images/karriere-page/offer-2-desk.jpg';
-import Offer3Desc from '/public/images/karriere-page/offer-3-desk.jpg';
-import Offer4Desc from '/public/images/karriere-page/offer-4-desk.jpg';
-import Offer5Desc from '/public/images/karriere-page/offer-5-desk.jpg';
+import Offer1Mob from '/public/images/karriere-page/offer-1-mob.webp';
+import Offer2Mob from '/public/images/karriere-page/offer-2-mob.webp';
+import Offer3Mob from '/public/images/karriere-page/offer-3-mob.webp';
+import Offer4Mob from '/public/images/karriere-page/offer-4-mob.webp';
+import Offer5Mob from '/public/images/karriere-page/offer-5-mob.webp';
+import Offer1Desc from '/public/images/karriere-page/offer-1-desk.webp';
+import Offer2Desc from '/public/images/karriere-page/offer-2-desk.webp';
+import Offer3Desc from '/public/images/karriere-page/offer-3-desk.webp';
+import Offer4Desc from '/public/images/karriere-page/offer-4-desk.webp';
+import Offer5Desc from '/public/images/karriere-page/offer-5-desk.webp';
 
 export type OfferItem = {
   mainTitle: string;
