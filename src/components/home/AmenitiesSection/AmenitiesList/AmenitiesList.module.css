@@ -106,7 +106,7 @@
   .amenitiesItem {
     height: 34.2rem;
     padding: 2.7rem;
-    border-radius: 1.2rem;
+    border-radius: 1.6rem;
   }
 
   .amenitiesTitle {
@@ -130,7 +130,7 @@
   .amenitiesItem {
     height: 342px;
     padding: 28px;
-    border-radius: 12px;
+    border-radius: 16px;
   }
 
   .amenitiesText {

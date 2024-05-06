@@ -173,7 +173,7 @@
   .heroMainTitle {
     margin-top: 11.8rem;
     font-size: 9rem;
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.2rem;
   }
 
   .heroMainTitle.home {
@@ -214,7 +214,6 @@
     height: 5.2rem;
     padding: 1.4rem 1.7rem;
     font-size: 1.6rem;
-    border-radius: 0.6rem;
   }
 
   .heroBtn {
@@ -222,7 +221,6 @@
     width: 14rem;
     height: 5.2rem;
     font-size: 1.6rem;
-    border-radius: 0.6rem;
     background: unset;
     backdrop-filter: unset;
     background-color: transparent;
@@ -243,7 +241,7 @@
   .heroMainTitle {
     margin-top: 118px;
     font-size: 90px;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
 
   .heroMainTitle.home {
@@ -282,7 +280,6 @@
     height: 52px;
     padding: 14px 18px;
     font-size: 16px;
-    border-radius: 6px;
   }
 
   .heroBtn {
@@ -290,6 +287,5 @@
     width: 140px;
     height: 52px;
     font-size: 16px;
-    border-radius: 6px;
   }
 }

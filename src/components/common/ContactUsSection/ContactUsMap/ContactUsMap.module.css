@@ -115,6 +115,7 @@
     order: 1;
     width: 66.8rem;
     height: 49rem;
+    border-radius: 1.6rem;
   }
 
   .contactUsAddressMainWrap {
@@ -148,6 +149,7 @@
   .contactUsImgWrap {
     width: 668px;
     height: 490px;
+    border-radius: 16px;
   }
 
   .contactUsAddressMainWrap {

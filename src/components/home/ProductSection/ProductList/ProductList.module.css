@@ -126,7 +126,7 @@
   .productTextWrap {
     padding: 2.5rem;
     width: 100%;
-    border-radius: 0 0 1.2rem 1.2rem;
+    border-radius: 0 0 1.6rem 1.6rem;
   }
 
   .productImgMob {
@@ -135,7 +135,7 @@
 
   .productImgDesc {
     display: block;
-    border-radius: 1.2rem 1.2rem 0 0;
+    border-radius: 1.6rem 1.6rem 0 0;
     width: 100%;
     height: 23.9rem;
   }
@@ -152,7 +152,7 @@
   }
 
   .productLink {
-    border-radius: 0.6rem;
+    border-radius: 2.8rem;
     width: 13.7rem;
     height: 4.6rem;
     padding: 1.3rem 2rem;
@@ -167,15 +167,16 @@
 
   .productTextWrap {
     padding: 25px;
-    border-radius: 0px 0px 12px 12px;
+    border-radius: 0px 0px 16px 16px;
   }
 
   .productImgWrap {
-    border-radius: 12px 12px 0px 0px;
+    border-radius: 16px 16px 0px 0px;
   }
 
   .productImgDesc {
     height: 239px;
+    border-radius: 16px 16px 0px 0px;
   }
 
   .productTitle {
@@ -194,7 +195,7 @@
   }
 
   .productLink {
-    border-radius: 6px;
+    border-radius: 28px;
     width: 137px;
     height: 46px;
     padding: 13px 20px;

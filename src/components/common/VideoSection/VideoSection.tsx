@@ -19,7 +19,7 @@ const VideoSection = ({ title, text, link, className }: VideoSectionProps) => {
       <Container>
         <div className={styles.videoMainWrap}>
           <IFrame link={link} videoFrameClass={videoFrameClass} />
-          <TextWrap title={title} text={text} />
+          <TextWrap className={className} title={title} text={text} />
         </div>
       </Container>
     </section>

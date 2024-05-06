@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     gap: 3.2rem;
-    margin-left: 14.5rem;
+    margin-left: 16.3rem;
     height: 100%;
   }
 
@@ -41,7 +41,7 @@
     width: 0;
     height: 2px;
     left: 1rem;
-    top: 70%;
+    top: 4.4rem;
     transition: all 0.3s ease;
   }
 
@@ -63,7 +63,7 @@
 @media screen and (min-width: 1728px) {
   .headerList {
     gap: 32px;
-    margin-left: 145px;
+    margin-left: 163px;
   }
 
   .headerNavLink {
@@ -75,7 +75,7 @@
     background-color: var(--white-main);
     height: 3px;
     left: 10px;
-    bottom: 0;
+    top: 44px;
     transition: all 0.3s ease;
   }
 }

@@ -201,13 +201,13 @@
 
   .angebotTextArea {
     height: 10.2rem;
-    border-radius: 0.6rem;
+    border-radius: 0.8rem;
     width: 100%;
   }
 
   .angebotInput {
     width: 100%;
-    border-radius: 0.6rem;
+    border-radius: 0.8rem;
   }
 
   .angebotInput::placeholder {
@@ -226,9 +226,9 @@
 
   .angebotInputFile {
     width: 41.4rem;
-    border-radius: 0.6rem 0rem 0rem 0.6rem;
+    border-radius: 0.8rem 0rem 0rem 0.8rem;
     padding: 1.2rem;
-    border-radius: 0.6rem;
+
     height: 4.6rem;
   }
 
@@ -238,7 +238,7 @@
     width: 11.7rem;
     font-size: 1.5rem;
     padding: 1.4rem 3.2rem;
-    border-radius: 0rem 0.6rem 0.6rem 0rem;
+    border-radius: 0rem 0.8rem 0.8rem 0rem;
   }
 
   .angebotBtnWrap {
@@ -260,7 +260,7 @@
     width: 9.2rem;
     height: 4.6rem;
     padding: 1.4rem 2rem;
-    border-radius: 0.6rem;
+    border-radius: 2.8rem;
     font-size: 1.6rem;
   }
 
@@ -306,7 +306,7 @@
 
   .angebotTextArea {
     height: 102px;
-    border-radius: 6px;
+    border-radius: 8px;
   }
 
   .angebotInput::placeholder {
@@ -321,18 +321,18 @@
     width: 414px;
     padding: 12px;
     height: 46px;
-    border-radius: 6px 0px 0px 6px;
+    border-radius: 8px 0px 0px 8px;
   }
 
   .angebotInput {
-    border-radius: 6px;
+    border-radius: 8px;
   }
   .angebotUploadBtn {
     top: 22px;
     height: 46px;
     font-size: 15px;
     width: 117px;
-    border-radius: 0px 6px 6px 0px;
+    border-radius: 0px 8px 8px 0px;
     padding: 14px 32px;
   }
 
@@ -349,7 +349,7 @@
     width: 92px;
     height: 46px;
     padding: 14px 20px;
-    border-radius: 6px;
+    border-radius: 28px;
     font-size: 16px;
   }
 

@@ -7,9 +7,10 @@ import useObserver from '@/hooks/useObserver';
 type Props = {
   title: string;
   text: string;
+  className?: string;
 };
 
-const TextWrap: React.FC<Props> = ({ title, text }) => {
+const TextWrap: React.FC<Props> = ({ title, text, className }) => {
   useObserver(`.${styles.videoTextWrap}`, `${styles.videoTextWrapVisible}`);
   return (
     <div className={styles.videoTextWrap}>

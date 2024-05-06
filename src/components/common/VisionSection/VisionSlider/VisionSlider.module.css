@@ -237,19 +237,22 @@
   .first {
     width: 54.6rem;
     height: 63.6rem;
+    border-radius: 1.6rem;
   }
 
   .second {
-    top: 4rem;
+    top: 4.3rem;
     left: 7rem;
     width: 50rem;
     height: 60.8rem;
+    border-radius: 1.6rem;
   }
 
   .third {
     top: 1.5rem;
     width: 50rem;
     height: 60.8rem;
+    border-radius: 1.6rem;
   }
 
   .visionTitle {
@@ -320,19 +323,22 @@
   .first {
     width: 546px;
     height: 636px;
+    border-radius: 16px;
   }
 
   .second {
-    top: 40px;
+    top: 43px;
     left: 70px;
     width: 500px;
     height: 608px;
+    border-radius: 16px;
   }
 
   .third {
     top: 15px;
     width: 500px;
     height: 608px;
+    border-radius: 16px;
   }
 
   .visionTitle {

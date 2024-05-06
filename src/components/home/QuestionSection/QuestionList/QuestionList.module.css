@@ -114,7 +114,7 @@
   height: 20px;
   stroke: var(--gray-dark-text);
   transform: rotate(180deg);
-  transition: transform 0.7s var(--cubic);
+  transition: transform 0.5s var(--cubic);
 }
 
 .toggleIcon.visible {
@@ -189,8 +189,8 @@
 
   .questItem {
     width: 59.8rem;
-    padding: 1.6rem 2rem;
-    border-radius: 0.6rem;
+    padding: 1.8rem 2rem;
+    border-radius: 1.2rem;
   }
 
   .questTitle {
@@ -215,11 +215,11 @@
 
   .questConsultBtn {
     margin-top: 2rem;
-    border-radius: 0.6rem;
+    border-radius: 2.8rem;
     padding: 1.2rem 2rem;
     font-size: 1.5rem;
     width: 18.1rem;
-    height: 4.2rem;
+    height: 4.8rem;
   }
 }
 
@@ -234,8 +234,8 @@
 
   .questItem {
     width: 598px;
-    padding: 16px 20px;
-    border-radius: 6px;
+    padding: 18px 20px;
+    border-radius: 12px;
   }
 
   .questTitle {
@@ -253,11 +253,11 @@
   }
 
   .questConsultBtn {
-    border-radius: 6px;
+    border-radius: 28px;
     margin-top: 20px;
     padding: 12px 20px;
     font-size: 15px;
     width: 181px;
-    height: 42px;
+    height: 48px;
   }
 }

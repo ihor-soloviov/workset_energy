@@ -15,7 +15,7 @@
 
 @media screen and (min-width: 1440px) {
   .stepSection {
-    padding: 20rem 0 13rem;
+    padding: 15rem 0 13rem;
   }
 
   .stepMainTitle {
@@ -29,7 +29,7 @@
 
 @media screen and (min-width: 1728px) {
   .stepSection {
-    padding: 200px 0 130px;
+    padding: 150px 0 130px;
   }
 
   .stepMainTitle {
