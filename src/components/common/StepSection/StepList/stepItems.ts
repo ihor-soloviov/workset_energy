@@ -31,14 +31,14 @@ export const stepItems: StepItem[] = [
     imgDesc: stepTwoImgDesc,
     link: '',
     text: 'Du erhältst innerhalb von 72 Stunden nach deiner Anfrage ein individuelles Angebot, das nur für dich erstellt wird. Wir berechnen auch die Kosten des Projekts auf der Grundlage deines individuellen Energieverbrauchs und erörtern deine mögliche Unabhängigkeit von herkömmlichen Energiequellen.',
-    title: 'Projektierung',
+    title: 'Aufmaß',
   },
   {
     imgMob: stepThreeImgMob,
     imgDesc: stepThreeImgDesc,
     link: '',
     text: 'Du unterschreibst den Kaufvertrag und legst damit den Grundstein für die Realisierung deines individuellen PV-Projekts.',
-    title: 'Unterschrift',
+    title: 'Projektierung',
   },
   {
     imgMob: stepFourImgMob,
