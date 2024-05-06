@@ -1,16 +1,17 @@
 import { ImportedImages, VorteileSliderItems } from '@/types/infoTypes';
 import wbSlide1Mob from '/public/images/wallbox-page/WSlide1Mob.jpg';
 import wbSlide1Desk from '/public/images/wallbox-page/WSlide1Desk.jpg';
-import wbSlide2Mob from '/public/images/wallbox-page/WSlide2Mob.jpg';
-import wbSlide2Desk from '/public/images/wallbox-page/WSlide2Desk.jpg';
-import wbSlide3Mob from '/public/images/wallbox-page/WSlide3Mob.jpg';
-import wbSlide3Desk from '/public/images/wallbox-page/WSlide3Desk.jpg';
-import wbSlide4Mob from '/public/images/wallbox-page/WSlide4Mob.jpg';
-import wbSlide4Desk from '/public/images/wallbox-page/WSlide4Desk.jpg';
-import wbSlide5Mob from '/public/images/wallbox-page/WSlide5Mob.jpg';
-import wbSlide5Desk from '/public/images/wallbox-page/WSlide5Desk.jpg';
-import wbSlide6Mob from '/public/images/wallbox-page/WSlide6Mob.jpg';
-import wbSlide6Desk from '/public/images/wallbox-page/WSlide6Desk.jpg';
+import wbSlide2Mob from '/public/images/wallbox-page/WSlide2Mob.webp';
+import wbSlide2Desk from '/public/images/wallbox-page/WSlide2Desk.webp';
+import wbSlide3Mob from '/public/images/wallbox-page/WSlide3Mob.webp';
+import wbSlide3Desk from '/public/images/wallbox-page/WSlide3Desk.webp';
+import wbSlide4Mob from '/public/images/wallbox-page/WSlide4Mob.webp';
+import wbSlide4Desk from '/public/images/wallbox-page/WSlide4Desk.webp';
+import wbSlide5Mob from '/public/images/wallbox-page/WSlide5Mob.webp';
+import wbSlide5Desk from '/public/images/wallbox-page/WSlide5Desk.webp';
+import wbSlide6Mob from '/public/images/wallbox-page/WSlide6Mob.webp';
+import wbSlide6Desk from '/public/images/wallbox-page/WSlide6Desk.webp';
+
 export const wallItems: VorteileSliderItems[] = [
   {
     title: 'Wallbox-Vorteile',

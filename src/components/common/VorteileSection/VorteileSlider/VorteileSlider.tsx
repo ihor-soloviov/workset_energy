@@ -91,7 +91,9 @@ const VorteileSlider = () => {
       </div>
 
       <div className={styles.sliderInfoWrap}>
-        <div className={styles.sliderInfoContainer}>
+        <div
+          className={`${styles.sliderInfoContainer} ${pathname === '/stormspeicher' ? styles.storm : ''}`}
+        >
           <p className={`${styles.sliderInfoCounter} ${inter.className}`}>
             0{activeIndex + 1}
           </p>
@@ -103,7 +105,7 @@ const VorteileSlider = () => {
                 className={`${styles.sliderInfo} ${activeIndex === index ? styles.active : ''}`}
               >
                 <h2
-                  className={`${styles.sliderTitle}  ${activeIndex === 0 ? styles.first : ''}`}
+                  className={`${styles.sliderTitle}   ${pathname === '/pv-anlagen' && activeIndex === 0 ? styles.pvAnlagen : ''} ${pathname === '/stormspeicher' ? styles.storm : ''}`}
                 >
                   {title}
                 </h2>

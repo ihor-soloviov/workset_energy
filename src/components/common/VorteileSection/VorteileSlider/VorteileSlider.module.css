@@ -145,6 +145,7 @@
     position: relative;
   }
 }
+
 @media screen and (min-width: 1440px) {
   .vorteileSliderWrap {
     padding-top: unset;
@@ -225,6 +226,14 @@
     margin-bottom: 2.4rem;
   }
 
+  .sliderTitle.pvAnlagen {
+    width: 37.8rem;
+  }
+
+  .sliderTitle.storm {
+    width: 65rem;
+  }
+
   .sliderText {
     font-size: 1.8rem;
     max-width: 62rem;
@@ -276,6 +285,10 @@
     width: 620px;
   }
 
+  .sliderInfoContainer.storm {
+    width: 645px;
+  }
+
   .sliderInfoCounter {
     font-size: 18px;
   }
@@ -294,8 +307,12 @@
     margin-bottom: 24px;
   }
 
-  .sliderTitle.first {
+  .sliderTitle.pvAnlagen {
     width: 378px;
+  }
+
+  .sliderTitle.storm {
+    width: 650px;
   }
 
   .sliderText {
