@@ -70,7 +70,7 @@
   border: 1px solid var(--red-main);
   color: var(--white-main);
   font-size: 15px;
-  border-radius: 6px;
+  border-radius: 28px;
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.04);
   font-weight: 600;
   line-height: 146.6%;
@@ -171,6 +171,7 @@
     margin-bottom: 3.2rem;
     font-size: 1.6rem;
     font-weight: 600;
+    border-radius: 2.8rem;
     padding: 1.5rem 2rem;
     line-height: normal;
     width: 20.1rem;
@@ -239,6 +240,7 @@
     margin-bottom: 32px;
     font-size: 16px;
     font-weight: 600;
+    border-radius: 28px;
     padding: 15px 20px;
     width: 201px;
     height: 50px;

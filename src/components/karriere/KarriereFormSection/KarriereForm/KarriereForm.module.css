@@ -184,7 +184,7 @@
     border: 1px solid var(--gray-stroke);
     gap: 2.4rem;
     box-shadow: 0 0.1rem 0.2rem 0 rgba(16, 24, 40, 0.04);
-    border-radius: 1.2rem;
+    border-radius: 1.6rem;
   }
 
   .karriereLabelWrap {
@@ -213,13 +213,13 @@
     height: 12.4rem;
     width: 100%;
     padding: 1.2rem 1.6rem;
-    border-radius: 0.6rem;
+    border-radius: 0.8rem;
   }
 
   .karriereInput {
     width: 100%;
     padding: 1.4rem 1.6rem;
-    border-radius: 0.6rem;
+    border-radius: 0.8rem;
   }
 
   .karriereInput::placeholder {
@@ -242,13 +242,13 @@
   .karriereInputFile {
     width: 47.2rem;
     padding: 1.4rem 1.6rem;
-    border-radius: 0.6rem 0rem 0rem 0.6rem;
+    border-radius: 0.8rem 0rem 0rem 0.8rem;
   }
 
   .karriereUploadBtn {
     padding: 1.3rem 2rem;
     width: 9.2rem;
-    border-radius: 0rem 0.6rem 0.6rem 0rem;
+    border-radius: 0rem 0.8rem 0.8rem 0rem;
     border-left: 1px solid var(--gray-stroke);
     top: 22px;
   }
@@ -287,7 +287,7 @@
     height: 4.6rem;
     padding: 1.4rem 2rem;
     font-size: 1.6rem;
-    border-radius: 0.6rem;
+    border-radius: 2.8rem;
   }
 }
 
@@ -308,7 +308,7 @@
     padding: 32px;
     gap: 24px;
     box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.04);
-    border-radius: 12px;
+    border-radius: 16px;
   }
 
   .karriereLabelWrap {
@@ -322,12 +322,12 @@
   .karriereTextArea {
     height: 124px;
     padding: 12px 16px;
-    border-radius: 6px;
+    border-radius: 8px;
   }
 
   .karriereInput {
     padding: 14px 16px;
-    border-radius: 6px;
+    border-radius: 8px;
   }
 
   .karriereInput::placeholder {
@@ -344,14 +344,14 @@
   .karriereInputFile {
     width: 472px;
     padding: 14px 16px;
-    border-radius: 6px 0px 0px 6px;
+    border-radius: 8px 0px 0px 8px;
   }
 
   .karriereUploadBtn {
     padding: 13px 20px;
     width: 92px;
     top: 22px;
-    border-radius: 0px 6px 6px 0px;
+    border-radius: 0px 8px 8px 0px;
   }
 
   .karriereBtnWrap {
@@ -373,6 +373,6 @@
     height: 46px;
     padding: 14px 20px;
     font-size: 16px;
-    border-radius: 6px;
+    border-radius: 28px;
   }
 }

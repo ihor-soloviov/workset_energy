@@ -160,7 +160,7 @@
   }
 
   .JobHeroBtn {
-    border-radius: 0.6rem;
+    border-radius: 2.8rem;
   }
 }
 
@@ -194,6 +194,6 @@
   }
 
   .JobHeroBtn {
-    border-radius: 6px;
+    border-radius: 28px;
   }
 }

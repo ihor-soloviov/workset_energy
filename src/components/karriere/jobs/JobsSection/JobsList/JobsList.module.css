@@ -152,7 +152,7 @@
     height: 23rem;
     padding: 4.8rem 4.8rem 4.8rem 6.8rem;
     display: flex;
-    border-radius: 1.2rem;
+    border-radius: 1.6rem;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -169,7 +169,7 @@
   }
 
   .jobsTimeWrap {
-    border-radius: 0.6rem;
+    border-radius: 2.8rem;
   }
 
   .jobsTimeType {
@@ -200,7 +200,7 @@
   .jobsBtn {
     width: 18.8rem;
     font-size: 1.5rem;
-    border-radius: 0.6rem;
+    border-radius: 2.8rem;
   }
 
   .jobsLink {
@@ -230,7 +230,7 @@
     height: 230px;
     padding: 48px 48px 48px 68px;
     display: flex;
-    border-radius: 12px;
+    border-radius: 16px;
 
     flex-direction: row;
     justify-content: space-between;
@@ -248,7 +248,7 @@
   }
 
   .jobsTimeWrap {
-    border-radius: 6px;
+    border-radius: 28px;
   }
 
   .jobsTimeType {
@@ -278,7 +278,7 @@
   .jobsLink,
   .jobsBtn {
     width: 188px;
-    border-radius: 6px;
+    border-radius: 28px;
     font-size: 15px;
   }
 

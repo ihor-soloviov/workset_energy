@@ -102,7 +102,7 @@
 
 @media screen and (min-width: 1440px) {
   .jobsSelect {
-    border-radius: 0.6rem;
+    border-radius: 0.8rem;
   }
 
   .jobsSelectForm {
@@ -120,13 +120,13 @@
   /* Select menu */
   .jobsSelect > div:nth-of-type(2) {
     width: 36.8rem;
-    border-radius: 0.6rem;
+    border-radius: 0.8rem;
   }
 }
 
 @media screen and (min-width: 1728px) {
   .jobsSelect {
-    border-radius: 6px;
+    border-radius: 8px;
   }
 
   .jobsSelectForm {
@@ -141,6 +141,6 @@
   /* Select menu */
   .jobsSelect > div:nth-of-type(2) {
     width: 384px;
-    border-radius: 6px;
+    border-radius: 8px;
   }
 }

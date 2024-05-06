@@ -124,7 +124,7 @@
   }
 
   .jobsHeroBtn {
-    border-radius: 0.6rem;
+    border-radius: 2.8rem;
     height: 5.2rem;
   }
 }
@@ -164,7 +164,7 @@
   }
 
   .jobsHeroBtn {
-    border-radius: 6px;
+    border-radius: 28px;
     height: 52px;
   }
 }

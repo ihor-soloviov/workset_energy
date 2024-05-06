@@ -182,7 +182,7 @@
   .sliderWrap {
     padding: 11.1rem 13.6rem 11.1rem 9rem;
     width: 61.8rem;
-    border-radius: 0 1.2rem 1.2rem 0;
+    border-radius: 0 1.6rem 1.6rem 0;
     border-left: unset;
     gap: unset;
     border-top: 1px solid var(--gray-stroke);
@@ -199,7 +199,7 @@
   }
 
   .sliderBtn {
-    border-radius: 0.6rem;
+    border-radius: 2.8rem;
     height: 5.6rem;
   }
 }
@@ -235,7 +235,7 @@
   }
 
   .sliderBtn {
-    border-radius: 6px;
+    border-radius: 28px;
     height: 56px;
   }
 }

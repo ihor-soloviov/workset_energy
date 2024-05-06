@@ -92,7 +92,7 @@
 
   .employeeItemBtn {
     display: flex;
-    margin-top: 1.8rem;
+    margin-top: 0.6rem;
     justify-content: center;
     align-items: center;
     padding: 1.3rem 2rem;
@@ -103,7 +103,7 @@
     height: 4.8rem;
     background-color: var(--red-main);
     border: none;
-    border-radius: 6px;
+    border-radius: 2.8rem;
     gap: 0.8rem;
     transition:
       border-color 250ms var(--cubic),
@@ -142,8 +142,9 @@
   }
 
   .employeeItemBtn {
-    margin-top: 18px;
+    margin-top: 6px;
     padding: 13px 20px;
+    border-radius: 28px;
     font-size: 16px;
     width: 170px;
     height: 48px;

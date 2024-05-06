@@ -3,6 +3,7 @@
 import React from 'react';
 import styles from './RecycleTextWrap.module.css';
 import useObserver from '@/hooks/useObserver';
+import { inter } from '@/utils/fonts';
 
 type Props = {
   title: string;
@@ -26,7 +27,7 @@ const RecycleTextWrap: React.FC<Props> = ({
   return (
     <article className={`${styles.scrollArticleHidden}`}>
       <h2 className={titleClass}>{title}</h2>
-      {text && <p className={textClass}>{text}</p>}
+      {text && <p className={`${textClass} ${inter.className}`}>{text}</p>}
     </article>
   );
 };
