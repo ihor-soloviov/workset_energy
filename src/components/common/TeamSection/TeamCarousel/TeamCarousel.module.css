@@ -19,14 +19,17 @@
 
   .second {
     background-image: url('/images/common/team-2-desk.webp');
+    background-position-x: 55%;
   }
 
   .third {
     background-image: url('/images/common/team-3-desk.webp');
+    background-position-x: 50%;
   }
 
   .fourth {
     background-image: url('/images/common/team-4-desk.webp');
+    background-position-x: 63%;
   }
 
   .fifth {
@@ -35,20 +38,23 @@
 
   .sixth {
     background-image: url('/images/common/team-6-desk.webp');
+    background-position-x: 75%;
   }
 
   .seventh {
     background-image: url('/images/common/team-7-desk.webp');
+    background-position-x: 50%;
   }
 
   .eighth {
     background-image: url('/images/common/team-8-desk.webp');
+    background-position-x: 72%;
   }
 
   .carouselItem {
     position: relative;
     background-size: cover;
-    background-position: 45% center;
+
     border-radius: 1.2rem;
     width: 15.8rem;
     transition: width 0.4s ease-in-out;
