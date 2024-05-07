@@ -123,7 +123,7 @@ const ContactUsForm = () => {
           Adresse des Projekts
           <input
             placeholder="Adresse des Projekts"
-            className={`${styles.contactUsInput} ${touched.userAddress && errors.userAddress && styles.error}`}
+            className={`${styles.contactUsInput}`}
             {...getFieldProps('userAddress')}
           />
           {touched.userAddress && errors.userAddress && (

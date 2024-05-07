@@ -45,6 +45,7 @@
 
 .contactUsInput::placeholder {
   color: var(--gray-text);
+  font-size: 15px;
 }
 
 .contactUsTextArea {
@@ -60,6 +61,7 @@
 
 .contactUsTextArea::placeholder {
   color: var(--gray-text);
+  font-size: 15px;
 }
 
 .errorText {

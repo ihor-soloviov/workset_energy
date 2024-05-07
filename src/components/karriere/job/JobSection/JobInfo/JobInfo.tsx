@@ -1,7 +1,7 @@
 import styles from './JobInfo.module.css';
 import { jobInfoItems } from './jobInfoItems';
 import React from 'react';
-import { inter } from '@/utils/fonts';
+import { inter, interTight } from '@/utils/fonts';
 import { KarrierJobItem } from '@/types/infoTypes';
 
 type JobInfoProps = {
@@ -36,7 +36,9 @@ const JobInfo = ({ response }: JobInfoProps) => {
             )}
             <h3 className={styles.jobInfoTitle}>{title}</h3>
           </div>
-          <p className={styles.jobInfoText}>{currentData(title)}</p>
+          <p className={`${styles.jobInfoText} ${interTight.className}`}>
+            {currentData(title)}
+          </p>
         </li>
       ))}
     </ul>

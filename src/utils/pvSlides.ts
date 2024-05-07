@@ -1,5 +1,5 @@
 import { ImportedImages, VorteileSliderItems } from '@/types/infoTypes';
-import pvSlide1Mob from '/public/images/pv-anlagen-page/PVSlide1Mob.jpg';
+import pvSlide1Mob from '/public/images/pv-anlagen-page/PVSlide1Mob.webp';
 import pvSlide1Desk from '/public/images/pv-anlagen-page/pvSlide1Desk.jpg';
 import pvSlide2Mob from '/public/images/pv-anlagen-page/PVSlide2Mob.webp';
 import pvSlide2Desk from '/public/images/pv-anlagen-page/pvSlide2Desk.webp';

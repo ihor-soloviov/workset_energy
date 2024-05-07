@@ -65,7 +65,6 @@
   color: var(--gray-text);
   font-size: 16px;
   line-height: 160%;
-  letter-spacing: 0.7px;
 }
 
 .stepText.white {

@@ -39,7 +39,11 @@ const StepList = () => {
             <h3 className={`${styles.stepTitle} ${getClass(index)}`}>
               {title}
             </h3>
-            <p className={`${styles.stepText} ${getClass(index)}`}>{text}</p>
+            <p
+              className={`${styles.stepText} ${getClass(index)} ${inter.className}`}
+            >
+              {text}
+            </p>
           </div>
         </li>
       ))}

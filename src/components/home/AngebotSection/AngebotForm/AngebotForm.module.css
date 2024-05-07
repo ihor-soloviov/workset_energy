@@ -55,6 +55,7 @@
   z-index: 2;
   left: 12px;
   cursor: pointer;
+  font-size: 15px;
 }
 
 .angebotFilePlaceholderMob.withFile,
@@ -89,6 +90,7 @@
 }
 
 .angebotInput::placeholder {
+  font-size: 15px;
   color: var(--gray-text);
 }
 
@@ -109,6 +111,7 @@
 
 .angebotTextArea::placeholder {
   color: var(--gray-text);
+  font-size: 15px;
 }
 
 .errorText {

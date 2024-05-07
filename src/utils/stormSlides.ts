@@ -1,5 +1,5 @@
 import { ImportedImages, VorteileSliderItems } from '@/types/infoTypes';
-import StormSlide1Mob from '/public/images/stormspeicher-page/StormSlide1Mob.jpg';
+import StormSlide1Mob from '/public/images/stormspeicher-page/StormSlide1Mob.webp';
 import StormSlide1Desk from '/public/images/stormspeicher-page/StormSlide1Desk.jpg';
 import StormSlide2Mob from '/public/images/stormspeicher-page/StormSlide2Mob.jpg';
 import StormSlide2Desk from '/public/images/stormspeicher-page/StormSlide2Desk.jpg';

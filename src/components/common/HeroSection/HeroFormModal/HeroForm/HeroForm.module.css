@@ -31,6 +31,7 @@
 }
 
 .heroInput::placeholder {
+  font-size: 15px;
   color: var(--gray-text);
 }
 

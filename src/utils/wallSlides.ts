@@ -1,5 +1,5 @@
 import { ImportedImages, VorteileSliderItems } from '@/types/infoTypes';
-import wbSlide1Mob from '/public/images/wallbox-page/WSlide1Mob.jpg';
+import wbSlide1Mob from '/public/images/wallbox-page/WSlide1Mob.webp';
 import wbSlide1Desk from '/public/images/wallbox-page/WSlide1Desk.jpg';
 import wbSlide2Mob from '/public/images/wallbox-page/WSlide2Mob.webp';
 import wbSlide2Desk from '/public/images/wallbox-page/WSlide2Desk.webp';

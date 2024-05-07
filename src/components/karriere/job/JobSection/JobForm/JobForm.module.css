@@ -77,6 +77,7 @@
   cursor: pointer;
   font-weight: 400;
   line-height: 157%;
+  font-size: 15px;
 }
 
 .jobFilePlaceholderMob.withFile,
@@ -120,6 +121,7 @@
 
 .jobInput::placeholder {
   color: var(--gray-text);
+  font-size: 15px;
 }
 
 .errorText {
