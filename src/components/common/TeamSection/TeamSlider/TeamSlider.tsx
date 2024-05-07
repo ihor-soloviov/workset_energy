@@ -32,9 +32,9 @@ const TeamSlider = () => {
 
   useEffect(() => {
     if (isModalOpen) {
-      stopScroll(true);
+      document.body.style.overflow = 'hidden';
       return () => {
-        stopScroll(false);
+        document.body.style.overflow = 'unset';
       };
     }
   }, [isModalOpen]);
