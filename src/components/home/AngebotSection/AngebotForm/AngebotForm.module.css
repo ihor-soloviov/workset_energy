@@ -55,7 +55,7 @@
   z-index: 2;
   left: 12px;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .angebotFilePlaceholderMob.withFile,
@@ -225,6 +225,7 @@
     display: block;
     top: 3.8rem;
     line-height: 110%;
+    font-size: 1.5rem;
   }
 
   .angebotInputFile {
@@ -318,6 +319,7 @@
 
   .angebotFilePlaceholderDesc {
     top: 38px;
+    font-size: 15px;
   }
 
   .angebotInputFile {

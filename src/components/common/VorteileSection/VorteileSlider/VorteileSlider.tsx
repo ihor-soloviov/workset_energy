@@ -11,16 +11,14 @@ import { Navigation, Autoplay } from 'swiper/modules';
 import { Swiper as SwiperType } from 'swiper';
 import Image from 'next/image';
 import { pvImages, pvItems } from '@/utils/pvSlides';
+import { useGlobalStore } from '@/store/global-store';
 import { stormImages, stormItems } from '@/utils/stormSlides';
 import { wallImages, wallItems } from '@/utils/wallSlides';
 import { usePathname } from 'next/navigation';
-import {
-  ImportedImages,
-  VorteileSliderItems,
-  TitleText,
-} from '@/types/infoTypes';
+import { ImportedImages, VorteileSliderItems } from '@/types/infoTypes';
 
 const VorteileSlider = () => {
+  const { isDesktop } = useGlobalStore();
   const [activeIndex, setActiveIndex] = useState(0);
   const pathname = usePathname();
 
@@ -62,6 +60,7 @@ const VorteileSlider = () => {
           modules={[Autoplay, Navigation]}
           onActiveIndexChange={e => setActiveIndex(e.realIndex)}
           loop={true}
+          spaceBetween={!isDesktop ? 10 : 0}
           slidesPerView={1}
           onBeforeInit={swiper => {
             swiperRef.current = swiper;
