@@ -14,6 +14,7 @@ type StepItem = {
   title: string;
   text: string;
   className?: string;
+  btn?: boolean;
   imgMob: StaticImageData;
   imgDesc: StaticImageData;
 };
@@ -49,7 +50,7 @@ export const stepItems: StepItem[] = [
   {
     imgMob: stepFiveImgMob,
     imgDesc: stepFiveImgDesc,
-
+    btn: true,
     text: 'Nachdem du die Rechnung beglichen hast, wird deine PV-Anlage eingerichtet. Wir bleiben während des gesamten Prozesses in Kontakt, um sicherzustellen, dass deine Bedürfnisse erfüllt werden und du die Vorteile der sauberen Energie nutzen kannst',
     title: 'Abschluss',
   },

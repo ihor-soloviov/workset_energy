@@ -8,6 +8,7 @@ import EmployeeList from './EmployeeList/EmployeeList';
 import RecycleTextWrap from '../RecycleTextWrap/RecycleTextWrap';
 import { usePathname } from 'next/navigation';
 import { scrollToSection } from '@/utils/scroll';
+
 const EmployeeSection = () => {
   const pathname = usePathname();
   return (

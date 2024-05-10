@@ -84,8 +84,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 36px;
   border: none;
-  border-radius: 6px;
+  border-radius: 28px;
   width: 170px;
   height: 48px;
   gap: 8px;
@@ -95,20 +96,11 @@
     background-color 250ms var(--cubic);
 }
 
-.stepBtn.white {
-  color: var(--red-main);
-  background-color: var(--white-main);
-}
-
 .stepBtnIcon {
   stroke: var(--gray-input);
   width: 22px;
   height: 22px;
   transition: stroke 250ms var(--cubic);
-}
-
-.stepBtnIcon.white {
-  stroke: var(--red-main);
 }
 
 .stepBtn:hover {
@@ -119,16 +111,6 @@
 
 .stepBtn:hover .stepBtnIcon {
   stroke: var(--red-main);
-}
-
-.stepBtn.white:hover {
-  border-color: var(--red-main);
-  background-color: var(--red-main);
-  color: var(--gray-input);
-}
-
-.stepBtn.white:hover .stepBtnIcon.white {
-  stroke: var(--gray-input);
 }
 
 @media screen and (min-width: 1440px) {
@@ -184,11 +166,17 @@
   }
 
   .stepText {
+    font-size: 1.6rem;
     width: 67rem;
   }
 
   .stepText:last-child {
     margin-top: unset;
+  }
+
+  .stepBtn {
+    border-radius: 2.8rem;
+    margin-top: 4.8rem;
   }
 }
 
@@ -213,6 +201,7 @@
   }
 
   .stepText {
+    font-size: 16px;
     width: 667px;
   }
 
@@ -220,4 +209,8 @@
     width: 620px;
   }
 
+  .stepBtn {
+    border-radius: 28px;
+    margin-top: 48px;
+  }
 }
