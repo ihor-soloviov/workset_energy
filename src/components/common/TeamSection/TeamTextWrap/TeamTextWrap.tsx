@@ -16,12 +16,12 @@ const TeamTextWrap: React.FC<Props> = ({ handleImage }) => {
   return (
     <div className={styles.teamTextWrap}>
       <h2 className={styles.teamTitle}>
-        Unser Team
-        <br className={styles.teamBr} /> von Experten
+        Finde einen Experten in deiner Region!
       </h2>
       <p className={`${styles.teamText} ${inter.className}`}>
-        Werde Teil unseres Teams! Hinterlasse uns deine Daten und wir
-        kontaktieren dich
+        Blättere durch unser Experten-Team und finde einen Experten aus deiner
+        Region. Speichere dir seine Kontaktdaten und kontaktiere ihn, wann du
+        willst. Oder kontaktiere ihn gleich jetzt!
       </p>
       <div>
         <div className={styles.carouselBtns}>

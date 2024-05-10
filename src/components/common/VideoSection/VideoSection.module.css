@@ -35,6 +35,10 @@
   width: fit-content;
 }
 
+.videoText:not(:last-child) {
+  margin-bottom: 8px;
+}
+
 @media screen and (min-width: 390px) {
 }
 
@@ -74,6 +78,10 @@
   .videoText {
     width: 53rem;
     font-size: 1.6rem;
+  }
+
+  .videoText:not(:last-child) {
+    margin-bottom: unset;
   }
 }
 

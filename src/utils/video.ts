@@ -1,14 +1,16 @@
 export const firstVideo = {
   className: 'left',
-  title: 'Die Energie der Zukunft!',
+  title: 'PV-Anlagen in 3 Minuten erklärt!',
   link: 'https://www.youtube.com/embed/GDfqlrJ_c8U?modestbranding=1&showinfo=0',
-  text: 'PV-Anlagen sind der Schlüssel zum Geldsparen. In einem kurzen Video erzählt dir dein Helfer Mr. Energy genauer, wie PV-Anlagen funktionieren. Mr. Energy verrät dir, wie PV-Anlagen deinen Verbrauch senken und dir Gewinn verschaffen. Investiere eine Minute deiner Zeit und erlange den Schlüssel zu einer unabhängigen Zukunft mit WorkSET Energy',
+  text: 'Photovoltaik-Anlagen sind eine hervorragende Möglichkeit, Geld zu sparen. In diesem kurzen Video erzählt dir dein persönlicher Assistent Mr. Energy mehr darüber, wie Photovoltaik-Anlagen funktionieren.\nIn nur 3 Minuten erklärt Mr. Energy die Funktionsweise von Photovoltaikanlagen und deren wichtigster Bestandteile – PV-Module, Stromspeicher, Optimizer und Wechselrichter',
 };
 
 export const secondVideo = {
   className: 'right',
-  title: 'Bleibe in den schwarzen Zahlen',
-  text: 'Erfahre, wie das Kreditsystem Einsparungen bei Photovoltaikanlagen ermöglicht – ohne Geldeinlagen! Schau dir unser kurzes Video über die Schonung deiner Finanzen an und bleibe in den schwarzen Zahlen',
+  title: 'Wie lässt sich mit PV-Anlagen Geld sparen?',
+  text: 'Du hast schon oft gehört, dass du mit einer Photovoltaikanlage Geld sparen kannst, weißt aber noch nicht, wie das in der Praxis funktioniert? Dann schau dir dieses kurze Video an, in dem es darum geht, wie du mit Solarenergie Geld sparen kannst und noch Gewinn dabei machst.\nUnsere Experten Konstantin und Boris erzählen dir im Detail und berichten von der Praxis, wie zehntausende Menschen bereits mit erneuerbarer Energie Geld sparen',
+  textDesk:
+    'Du hast schon oft gehört, dass du mit einer Photovoltaikanlage Geld sparen kannst, weißt aber noch nicht, wie das in der Praxis funktioniert? Dann schau dir dieses kurze Video an, in dem es darum geht, wie du mit Solarenergie Geld sparen kannst und noch Gewinn dabei machst. Unsere Experten Konstantin und Boris erzählen dir im Detail und berichten von der Praxis, wie zehntausende Menschen bereits mit erneuerbarer Energie Geld sparen',
   link: 'https://www.youtube.com/embed/8CAVNVcMbkE?modestbranding=1&showinfo=0',
 };
 

@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { inter } from '@/utils/fonts';
 import { QuestItem, questItems } from './questionItems';
 import { scrollToSection } from '@/utils/scroll';
+import { renderText } from '@/utils/renderText';
 
 const QuestionList = () => {
   const [activeItems, setActiveItems] = useState<Array<string>>([]);
@@ -24,15 +25,6 @@ const QuestionList = () => {
   const handleBtnClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
     scrollToSection('contact');
-  };
-
-  const renderText = (text: string) => {
-    const lines = text.split('\n');
-    return lines.map((line, index) => (
-      <p className={`${styles.questText} ${inter.className}`} key={index}>
-        {line}
-      </p>
-    ));
   };
 
   const renderListItems = (items: QuestItem[]) =>
@@ -60,7 +52,7 @@ const QuestionList = () => {
         <div
           className={`${styles.questTextWrap} ${activeItems.includes(title) ? styles.visible : styles.hidden}`}
         >
-          {renderText(text)}
+          {renderText(text, styles.questText, true)}
           <Button
             handleClick={handleBtnClick}
             type="button"

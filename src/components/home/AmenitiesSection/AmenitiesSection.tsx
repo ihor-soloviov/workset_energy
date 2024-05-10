@@ -11,7 +11,7 @@ const AmenitiesSection = () => {
         <RecycleTextWrap
           title="Warum WorkSET Energy?"
           titleClass={styles.amenitiesMainTitle}
-          text="Entscheide dich für Zuverlässigkeit und Teamwork!"
+          text="Mit unserer Arbeit beweisen wir, dass Qualität und Geschwindigkeit zu demokratischen Preisen erhältlich sein können. Firmeneigene Monteure, hochwertige Komponenten und keine Vorauszahlung – das ist WorkSET Energy!"
           textClass={`${styles.amenitiesMainText} ${inter.className}`}
         />
         <ProductList />

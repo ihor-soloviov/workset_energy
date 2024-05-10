@@ -73,7 +73,7 @@
   .stepOneItem {
     width: 20rem;
     height: 20rem;
-    border-radius: 1rem;
+    border-radius: 1.6rem;
   }
 
   .stepOneWrap {
@@ -104,7 +104,7 @@
   .stepOneItem {
     width: 200px;
     height: 200px;
-    border-radius: 10px;
+    border-radius: 16px;
   }
 
   .stepOneWrap {

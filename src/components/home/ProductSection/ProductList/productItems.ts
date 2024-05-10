@@ -12,6 +12,7 @@ type ProductItem = {
   imgMob: StaticImageData;
   imgDesc: StaticImageData;
   href: string;
+  className?: string;
 };
 
 export const productsItems: ProductItem[] = [
@@ -19,21 +20,22 @@ export const productsItems: ProductItem[] = [
     imgMob: product1Mob,
     imgDesc: product1Desk,
     href: '/pv-anlagen',
-    text: 'Sie wandelt Sonnenlicht in Strom um und ist daher eine nachhaltige und umweltfreundliche Energiequelle',
+    text: 'Stell dir deine eigene Anlage zusammen oder verwende fertige Pakete für dein Zuhause',
     title: 'PV-Anlagen',
   },
   {
     imgMob: product2Mob,
     imgDesc: product2Desk,
     href: '/stormspeicher',
-    text: 'Eine zuverlässige Resrve, die überschüssigen Strom für den künftigen Verbrauch speichert',
+    text: 'Speichere Energie mit dem Stromspeicher. Nutze die gespeicherte Energie, wenn es sich für dich lohnt oder verkaufe den Überschuss!',
     title: 'Stormspeicher',
   },
   {
     imgMob: product3Mob,
     imgDesc: product3Desk,
     href: '/wallbox',
-    text: 'Ein modernes Ladesystem für Elektrofahrzeuge mit bequemen und effizienten Betankungsmöglichkeiten',
+    text: 'Lade dein Elektrofahrzeug bequem und schnell auf. Nutze die Wallbox für effizientes Laden zu jeder Zeit, indem du den Vorgang über dein Heimstromsystem steuerst',
     title: 'Wallbox',
+    className: 'third',
   },
 ];

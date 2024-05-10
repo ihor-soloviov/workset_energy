@@ -13,7 +13,7 @@ import stepFiveImgDesc from '/public/images/home-page/step-5-desc.webp';
 type StepItem = {
   title: string;
   text: string;
-  link: string;
+  className?: string;
   imgMob: StaticImageData;
   imgDesc: StaticImageData;
 };
@@ -22,36 +22,35 @@ export const stepItems: StepItem[] = [
   {
     imgMob: stepOneImgMob,
     imgDesc: stepOneImgDesc,
-    link: '',
-    text: 'Unser Fachberater unterstützt dich bei der Einrichtung von PV-Anlagen. Mit umfangreicher Erfahrung begleiten wir dich bei jedem Schritt, um sicherzustellen, dass deine Anlage optimal funktioniert und du von den Vorteilen sauberer Energie profitierst.',
-    title: 'Beratungsgespräch',
+    className: 'first',
+    text: 'Lass dich unverbindlich vom Experten-Team der WorkSET Energy GmbH beraten. Unsere Experten beantworten gerne alle deine Fragen.\nOb es um Preise, Fristen, Angebotsvergleiche oder einfach nur um Fragen zum Arbeitsablauf geht – unser Expertenteam ist bereit, dir die Informationen zu geben, die dich interessieren. Wir sind offen und transparent in unserer Zusammenarbeit',
+    title: 'Beratung',
   },
   {
     imgMob: stepTwoImgMob,
     imgDesc: stepTwoImgDesc,
-    link: '',
-    text: 'Du erhältst innerhalb von 72 Stunden nach deiner Anfrage ein individuelles Angebot, das nur für dich erstellt wird. Wir berechnen auch die Kosten des Projekts auf der Grundlage deines individuellen Energieverbrauchs und erörtern deine mögliche Unabhängigkeit von herkömmlichen Energiequellen.',
+
+    text: 'Nach einem vorab vereinbarten Termin kommt dein persönlicher Berater zu dir nach Hause, um alle notwendigen Messungen per Drohne vorzunehmen. Das ist notwendig, um die Planung so genau und effizient wie möglich zu gestalten.\nNOhne gründliche Messungen ist es nicht möglich, ein auf deine Bedürfnisse optimal zugeschnittenes Angebot zusammenzustellen. Das Team der WorkSET Energy GmbH weiß das besser als jeder andere',
     title: 'Aufmaß',
   },
   {
     imgMob: stepThreeImgMob,
     imgDesc: stepThreeImgDesc,
-    link: '',
-    text: 'Du unterschreibst den Kaufvertrag und legst damit den Grundstein für die Realisierung deines individuellen PV-Projekts.',
-    title: 'Projektierung',
+    text: 'Unser Team entwickelt eine maßgeschneiderte Finanzplanung für deine Anforderungen. Mithilfe von 3D-Modellen und einer speziellen Software, die von den Entwicklern der WorkSET Energy GmbH programmiert wurde, finden wir die beste PV-Anlage für dich.\nMöchtest du verschiedene Optionen vergleichen? Unsere Planungsabteilung erstellt gerne mehrere Varianten deines Projekts, damit du dir über die Effizienz deiner zukünftigen Anlage sicher sein kannst',
+    title: 'Planung',
   },
   {
     imgMob: stepFourImgMob,
     imgDesc: stepFourImgDesc,
-    link: '',
-    text: 'Wir richten innerhalb von 2 Monaten deine PV-Anlage ein, beginnend ab dem Zeitpunkt der Vertragsunterzeichnung. Die Einrichtung wird von uns sorgfältig geplant, um sicherzustellen, dass sie optimal auf deine Bedürfnisse und die Eigenschaften deiner Immobilie abgestimmt ist.',
+
+    text: 'Nachdem du den Vertrag unterschrieben hast, bekommst du einen Termin für die Montage (etwa 2 Wochen nach Vertragsabschluss) und einen Elektriker-Termin für den Anschluss der Anlage (weitere 2 Wochen später).\nSomit vergeht vom Vertragsabschluss bis zur funktionierenden PV-Anlage nur 1 Monat',
     title: 'Montage',
   },
   {
     imgMob: stepFiveImgMob,
     imgDesc: stepFiveImgDesc,
-    link: '',
-    text: 'Nachdem du die Rechnung beglichen hast, wird deine PV-Anlage eingerichtet. Wir bleiben während des gesamten Prozesses in Kontakt, um sicherzustellen, dass deine Bedürfnisse erfüllt werden und du die Vorteile der sauberen Energie nutzen kannst.',
+
+    text: 'Nachdem du die Rechnung beglichen hast, wird deine PV-Anlage eingerichtet. Wir bleiben während des gesamten Prozesses in Kontakt, um sicherzustellen, dass deine Bedürfnisse erfüllt werden und du die Vorteile der sauberen Energie nutzen kannst',
     title: 'Abschluss',
   },
 ];

@@ -101,7 +101,7 @@
     font-size: 1.6rem;
     font-weight: 500;
     padding: 1.3rem 2.2rem;
-    border-radius: 0.6rem;
+    border-radius: 2.8rem;
     border: 1px solid var(--gray-stroke);
     background-color: var(--white-main);
     margin-left: auto;
@@ -121,7 +121,7 @@
     font-size: 1.5rem;
     padding: 1.2rem 1.2rem;
     height: 4.6rem;
-    border-radius: 0.6rem;
+    border-radius: 0.8rem;
   }
 
   .leadIcon {
@@ -163,7 +163,7 @@
     height: 46px;
     font-size: 16px;
     padding: 13px 22px;
-    border-radius: 6px;
+    border-radius: 28px;
     margin-top: 130px;
   }
 
@@ -176,6 +176,6 @@
     font-size: 15px;
     padding: 12px 12px;
     height: 46px;
-    border-radius: 6px;
+    border-radius: 8px;
   }
 }

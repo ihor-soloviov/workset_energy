@@ -19,7 +19,7 @@
 
 .teamTitle {
   color: var(--black-main);
-  font-size: 24px;
+  font-size: 30px;
   width: fit-content;
   margin-right: auto;
   font-weight: 700;
@@ -27,9 +27,6 @@
   margin-bottom: 8px;
 }
 
-.teamBr {
-  display: none;
-}
 
 .teamText {
   color: var(--gray-text);
@@ -80,7 +77,7 @@
 
   .teamMainWrap {
     flex-direction: row;
-    gap: 13.9rem;
+    gap: 7.1rem;
     align-items: center;
   }
 
@@ -104,12 +101,12 @@
       background-color 250ms var(--cubic),
       border-color 250ms var(--cubic);
   }
-  
+
   .carouselBtn:hover {
     border-color: var(--red-main);
     background-color: var(--red-main);
   }
-  
+
   .nextArrow,
   .prevArrow {
     stroke: var(--gray-text);
@@ -117,11 +114,11 @@
     height: 2.4rem;
     transition: stroke 250ms var(--cubic);
   }
-  
+
   .nextArrow {
     transform: rotate(180deg);
   }
-  
+
   .carouselBtn:hover .nextArrow,
   .carouselBtn:hover .prevArrow {
     stroke: var(--white-main);
@@ -132,7 +129,7 @@
     filter: blur(5px);
     transform: translateX(100%);
     transition: all 0.4s;
-    width: 32.4rem;
+    width: 39.2rem;
   }
 
   .teamTextWrapVisible {
@@ -144,16 +141,12 @@
   .teamTitle {
     font-size: 5rem;
     margin-bottom: 1.6rem;
-    width: 32.4rem;
+    width: 33.2rem;
   }
 
-  .teamBr {
-    display: block;
-  }
 
   .teamText {
-    font-size: 1.8rem;
-    width: 30.4rem;
+    width: 39.2rem;
     margin-bottom: 3.2rem;
   }
 
@@ -174,7 +167,7 @@
   }
 
   .teamMainWrap {
-    gap: 139px;
+    gap: 71px;
   }
 
   .carouselBtn {
@@ -190,18 +183,17 @@
 
   .teamTitle {
     margin-bottom: 16px;
-    font-size: 50px;
-    width: 324px;
+    font-size: 34px;
+    width: 332px;
   }
 
   .teamTextWrap {
-    width: 324px;
+    width: 392px;
   }
 
   .teamText {
-    font-size: 18px;
-    width: 304px;
-    margin-bottom: 50px;
+    width: 392px;
+    margin-bottom: 32px;
   }
 
   .teamBtn {

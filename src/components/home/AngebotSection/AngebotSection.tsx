@@ -32,10 +32,10 @@ const AngebotSection = () => {
 
       <div className={styles.angebotFormWrap}>
         <RecycleTextWrap
-          title="Sichere dir dein individuelles Angebot"
+          title="Vergleiche dein Angebot!"
           titleClass={styles.angebotTitle}
-          text="Wir erstellen kostenlos eine unverbindliche und auf dich persönlich
-          zugeschnittene Witrschaftlichkeitsanalyse"
+          text="Das Team von WorkSET Energy ist jederzeit bereit, dein Angebot zu vergleichen und dir eine objektive Einschätzung zu geben! Lade dein bereits bestehendes Angebot hoch, trage deine Kontaktdaten ein und prüfe, 
+wie optimal dein PV-Anlagen-Projekt ist"
           textClass={`${styles.angebotMainText} ${inter.className}`}
         />
 

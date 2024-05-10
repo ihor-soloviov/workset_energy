@@ -91,6 +91,7 @@
 .leadStepTwoBtnDesc {
   display: none;
 }
+
 @media screen and (min-width: 1440px) {
   .stepTwoMainWrap {
     padding: 4.4rem 0 0;
@@ -118,6 +119,7 @@
     height: 22.1rem;
     margin: 0 auto;
     padding: 3.2rem;
+    border-radius: 1.6rem;
     margin-bottom: 9.7rem;
   }
 
@@ -127,6 +129,7 @@
 
   .stepTwoCountWrap {
     margin-right: auto;
+    border-radius: 0.8rem;
   }
 
   .stepTwoInputWrap {
@@ -148,7 +151,7 @@
     font-size: 1.6rem;
     font-weight: 500;
     padding: 1.3rem 2.2rem;
-    border-radius: 0.6rem;
+    border-radius: 2.8rem;
     border: 1px solid var(--gray-stroke);
     background-color: var(--white-main);
     margin-left: auto;
@@ -198,6 +201,7 @@
     width: 526px;
     height: 221px;
     padding: 32px;
+    border-radius: 16px;
     margin-bottom: 97px;
   }
 
@@ -209,13 +213,17 @@
     width: 462px;
   }
 
+  .stepTwoCountWrap {
+    border-radius: 8px;
+  }
+
   .leadStepTwoBtnDesc {
     gap: 6px;
     width: 116px;
     height: 46px;
     font-size: 16px;
     padding: 13px 22px;
-    border-radius: 6px;
+    border-radius: 28px;
   }
 
   .leadIcon {

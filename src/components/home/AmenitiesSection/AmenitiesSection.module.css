@@ -14,7 +14,7 @@
 
 .amenitiesMainText {
   color: var(--gray-text);
-  width: 285px;
+  width: 342px;
   font-size: 16px;
   line-height: 160%;
   text-align: center;
@@ -22,7 +22,7 @@
   margin-bottom: 36px;
 }
 
-@media screen and (min-width: 1728px) {
+@media screen and (min-width: 1440px) {
   .amenitiesSection {
     padding: 15rem 0;
   }
@@ -33,7 +33,7 @@
 
   .amenitiesMainText {
     font-size: 1.8rem;
-    width: fit-content;
+    width: 73rem;
     margin-bottom: 4.8rem;
   }
 }
@@ -50,5 +50,6 @@
   .amenitiesMainText {
     font-size: 18px;
     margin-bottom: 48px;
+    width: 730px;
   }
 }

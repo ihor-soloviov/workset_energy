@@ -10,7 +10,7 @@ import Link from 'next/link';
 const AmenitiesList = () => {
   return (
     <ul className={styles.amenitiesList}>
-      {amenitiesItems.map(({ text, title, link, icon }) => (
+      {amenitiesItems.map(({ text, title, icon }) => (
         <li className={styles.amenitiesItem} key={title}>
           <div className={styles.amenitiesIconWrap}>
             {React.createElement(

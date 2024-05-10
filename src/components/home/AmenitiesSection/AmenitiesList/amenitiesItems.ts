@@ -6,33 +6,28 @@ import AmenitiesFourthIcon from '/public/icons/amenities-4.svg';
 type AmenitiesItem = {
   title: string;
   text: string;
-  link: string;
   icon: React.ElementType;
 };
 
 export const amenitiesItems: AmenitiesItem[] = [
   {
-    link: '',
-    text: 'Mit Menschen für Menschen, dank Menschen! Wir schätzen unsere Kunden und setzen alles daran, ihre Bedürfnisse zu verstehen und zu erfüllen',
-    title: 'Kundenzentriertheit',
+    text: 'Wir möchten, dass Solarenergie für alle Bewohner Deutschlands zugänglich wird',
+    title: 'Erschwingliche Preise',
     icon: AmenitiesFirstIcon,
   },
   {
-    link: '',
-    text: 'Kundenwünsche sind unsere Verantwortung. Wir legen großen Wert darauf, die individuellen Bedürfnisse unserer Kunden genau zu verstehen',
-    title: 'Personalisierung',
+    text: 'Vom unterschriebenen Vertrag bis zum finalen Anschluss der Anlage vergeht nur 1 Monat!',
+    title: 'Wir sind schnell',
     icon: AmenitiesSecondIcon,
   },
   {
-    link: '',
-    text: 'Unternehmenskultur auf Augenhöhe. Wir schätzen jeden Mitarbeiter, unabhängig von seiner Position',
-    title: 'Fairness',
+    text: 'Wir verlangen von unseren Kunden keine Vorkasse. Du zahlst erst nach der Fertigstellung',
+    title: 'Keine Vorkasse',
     icon: AmenitiesThirdIcon,
   },
   {
-    link: '',
-    text: 'Maximale Qualitätskontrolle, durch ausschließlich firmeneigene Mitarbeiter, ist für uns nicht nur ein Grundsatz, sondern auch ein Versprechen',
-    title: 'Qualitätskontrolle',
+    text: 'Wir arbeiten nicht mit Subunternehmern zusammen. Monteure, Elektriker, Berater, Backoffice – wir sind alle ein großes Team',
+    title: 'Unser Team',
     icon: AmenitiesFourthIcon,
   },
 ];
