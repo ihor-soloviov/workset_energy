@@ -45,6 +45,9 @@
   width: 301px;
 }
 
+.heroMainText.stormspeicher {
+  width: 299px;
+}
 .heroMainText.wallbox {
   width: 342px;
 }
@@ -196,7 +199,7 @@
   }
 
   .heroMainText.stormspeicher {
-    width: 39rem;
+    width: 44.5rem;
   }
 
   .heroMainText.wallbox {
@@ -264,7 +267,7 @@
   }
 
   .heroMainText.stormspeicher {
-    width: 390px;
+    width: 445px;
   }
 
   .heroMainText.wallbox {
