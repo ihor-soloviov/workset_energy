@@ -47,6 +47,25 @@ const VorteileSlider = () => {
 
   const handleNextClick = () => swiperRef.current?.slideNext();
 
+  const getCurrentDots = () => {
+    let currentDots;
+    switch (pathname) {
+      case '/stormspeicher':
+        currentDots = 2;
+        return currentDots;
+      case '/pv-anlagen':
+        currentDots = 5;
+        return currentDots;
+      case '/wallbox':
+        currentDots = 6;
+        return currentDots;
+
+      default:
+        currentDots = 0;
+        return currentDots;
+    }
+  };
+
   const handleActiveSlide = (index: number) => {
     setActiveIndex(index);
     swiperRef.current && swiperRef.current.slideTo(index);
@@ -89,7 +108,9 @@ const VorteileSlider = () => {
         </Swiper>
       </div>
 
-      <div className={styles.sliderInfoWrap}>
+      <div
+        className={`${styles.sliderInfoWrap} ${pathname === '/pv-anlagen' ? styles.pvAnlagen : ''}`}
+      >
         <div
           className={`${styles.sliderInfoContainer} ${pathname === '/stormspeicher' ? styles.storm : ''}`}
         >
@@ -104,7 +125,7 @@ const VorteileSlider = () => {
                 className={`${styles.sliderInfo} ${activeIndex === index ? styles.active : ''}`}
               >
                 <h2
-                  className={`${styles.sliderTitle}   ${pathname === '/pv-anlagen' && activeIndex === 0 ? styles.pvAnlagen : ''} ${pathname === '/stormspeicher' ? styles.storm : ''}`}
+                  className={`${styles.sliderTitle} ${pathname === '/stormspeicher' ? styles.storm : ''}`}
                 >
                   {title}
                 </h2>
@@ -117,7 +138,7 @@ const VorteileSlider = () => {
           <div className={styles.sliderDotsWrap}>
             <SliderDots
               handleActiveSlide={handleActiveSlide}
-              count={pathname === '/stormspeicher' ? 5 : 6}
+              count={getCurrentDots()}
               className="vorteile"
               activeSlide={activeIndex}
             />

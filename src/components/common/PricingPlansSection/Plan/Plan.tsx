@@ -41,10 +41,8 @@ const Plan: React.FC<Props> = ({
         src={imageDesk}
       />
       <div className={styles.pricingPlanInfo}>
-        <span className={`${styles.planPrice} ${inter.className}`}>
-          ab {price}
-        </span>
-        <h4 className={styles.planTitle}>{name}</h4>
+        <span className={styles.planTitle}>{name}</span>
+        <h4 className={styles.planPrice}> ab {price}</h4>
         <article className={`${styles.planArticle} ${inter.className}`}>
           {article}
         </article>

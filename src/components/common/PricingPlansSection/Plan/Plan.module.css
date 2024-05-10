@@ -27,15 +27,15 @@
   display: none;
 }
 
-.planPrice {
+.planTitle {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 132px;
   height: 40px;
   border-radius: 28px;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
   line-height: normal;
   color: var(--white-main);
   background-color: var(--red-main);
@@ -43,13 +43,13 @@
   margin-bottom: 12px;
 }
 
-.planTitle {
+.planPrice {
   width: max-content;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 600;
   line-height: 130%;
   color: var(--gray-dark-text);
-  margin-bottom: 14px;
+  margin-bottom: 8px;
 }
 
 .planArticle {
@@ -156,23 +156,24 @@
     left: 6.4rem;
   }
 
-  .planPrice {
+  .planTitle {
+    font-weight: 500;
     font-size: 1.7rem;
     margin-bottom: 1.8rem;
     border-radius: 2.8rem;
     height: 3.4rem;
-    width: 13.8rem;
+    width: 14.6rem;
     padding: 0.6rem;
   }
 
-  .planTitle {
+  .planPrice {
     font-size: 3.4rem;
     margin-bottom: 1.2rem;
   }
 
   .planArticle {
     font-size: 1.5rem;
-    width: 30rem;
+    width: 31.4rem;
     padding-bottom: 2rem;
     margin-bottom: 2.4rem;
   }
@@ -213,23 +214,23 @@
     left: 64px;
   }
 
-  .planPrice {
-    font-size: 17px;
+  .planTitle {
+    font-size: 18px;
     border-radius: 28px;
     height: 34px;
-    width: 138px;
+    width: 146px;
     padding: 6px;
     margin-bottom: 18px;
   }
 
-  .planTitle {
+  .planPrice {
     font-size: 34px;
     margin-bottom: 12px;
   }
 
   .planArticle {
     font-size: 15px;
-    width: 300px;
+    width: 314px;
     padding-bottom: 20px;
     margin-bottom: 24px;
   }

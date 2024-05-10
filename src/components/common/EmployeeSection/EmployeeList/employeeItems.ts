@@ -16,20 +16,20 @@ type EmployeeItem = {
 
 export const employeeItems: EmployeeItem[] = [
   {
-    title: 'Unsere Handelsvertreter',
-    text: 'Unser Team von Personalmanagern ist ein Kollektiv, das aus engagierten Fachleuten besteht, die von den Vorteilen der Solarenergie überzeugt sind. Unsere Manager sind echte Experten für Solarenergie.',
+    title: 'Unsere Berater',
+    text: 'Unser Beraterteam besteht aus engagierten Fachleuten, die von der Effektivität von Solarenergie überzeugt sind. Sie beantworten gerne alle deine Fragen und erarbeiten gemeinsam mit dir die beste Option für die Einrichtung deiner Photovoltaikanlage. Jeder Kunde erhält einen persönlichen Betreuer, der ihn von Anfang bis Ende begleitet',
     imgMob: employeeFirstImgMob,
     imgDesc: employeeFirstImgDesc,
   },
   {
     title: 'Unsere Monteure',
-    text: 'Unsere Monteure sind Fachleute mit Erfahrung, die auch die kompliziertesten Photovoltaik-Projekte umsetzen können. Wir haben selbst ein Team zusammengestellt, das Projekte jeglicher Komplexität realisieren kann. Wir greifen nicht auf die Leistungen von Subunternehmen zurück.',
+    text: 'Unsere Monteure sind Fachleute mit Erfahrung, die auch die kompliziertesten Photovoltaik-Projekte umsetzen können. Wir haben selbst ein Team zusammengestellt, das Projekte jeglicher Komplexität realisieren kann. Wir greifen nicht auf die Leistungen von Subunternehmen zurück',
     imgMob: employeeSecondImgMob,
     imgDesc: employeeSecondImgDesc,
   },
   {
     title: 'Unser Backoffice',
-    text: 'Unsere Projektierungsingenieure sind Experten mit einem reichen Erfahrungsschatz, die hochwertige Lösungen für komplexe Projekte garantieren. Der Kunden-Support bietet ein hohes Serviceniveau mit einem scharfen Blick für Details und einer Garantie für die Haftung bei jeder Anwendung.',
+    text: 'Unsere Projektierungsingenieure sind Experten mit einem reichen Erfahrungsschatz, die hochwertige Lösungen für komplexe Projekte garantieren. Der Kunden-Support bietet ein hohes Serviceniveau mit einem scharfen Blick für Details und einer Garantie für die Haftung bei jeder Anwendung',
     imgMob: employeeThirdImgMob,
     imgDesc: employeeThirdImgDesc,
     btn: true,

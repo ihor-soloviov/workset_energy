@@ -9,33 +9,27 @@ import pvSlide4Mob from '/public/images/pv-anlagen-page/PVSlide4Mob.webp';
 import pvSlide4Desk from '/public/images/pv-anlagen-page/pvSlide4Desk.webp';
 import pvSlide5Mob from '/public/images/pv-anlagen-page/PVSlide5Mob.webp';
 import pvSlide5Desk from '/public/images/pv-anlagen-page/pvSlide5Desk.webp';
-import pvSlide6Mob from '/public/images/pv-anlagen-page/PVSlide6Mob.webp';
-import pvSlide6Desk from '/public/images/pv-anlagen-page/pvSlide6Desk.webp';
 
 export const pvItems: VorteileSliderItems[] = [
   {
-    title: 'Vorteile einer PV-Anlage',
-    text: 'Unsere Vision ist es, einen positiven Einfluss auf die Umwelt zu haben und gleichzeitig unseren Kunden zu helfen, Geld zu sparen und ihre Energiekosten langfristig zu senken. Wir sind stolz darauf, an einer besseren Zukunft zu arbeiten, und sind bestrebt, unser Engagement für Nachhaltigkeit und erneuerbare Energiequellen fortzusetzen',
+    title: 'PV-Anlage Vorteile',
+    text: 'Hast du genug von steigenden Stromrechnungen? Eine Photovoltaikanlage schützt dich vor steigenden Tarifen und steigert den Wert deines Hauses. Stell dir vor, du sparst jeden Monat Geld, tust etwas für die Umwelt und steigerst den Wert deines Hauses. Willst du damit loslegen? Dann scrolle nach unten und wähle ein Paket aus, das dich interessiert',
   },
   {
-    title: 'Energiekosten sparen',
-    text: 'Strom aus Sonnenenergie ist mindestens dreimal günstiger als Netzstrom. In den letzten zwei Jahrzehnten hat sich der Strompreis nahezu verdreifacht und beträgt derzeit 40 Cent pro Kilowattstunde. Im Gegensatz dazu ist der Preis für eine Kilowattstunde selbst erzeugten Solarstroms erheblich gesunken',
+    title: 'Selbstversorgung',
+    text: 'Mit Photovoltaikanlagen kannst du mindestens 20 Jahre lang deinen eigenen Strom erzeugen und dich vor den Preiserhöhungen der Großkonzerne schützen. Unser Planungsteam berechnet die effizienteste Option für dich. Dabei gehen unsere Experten immer von der Autarkie-Grad aus, so sich dein Projekt schon viel früher als in 20 Jahren rentiert',
   },
   {
-    title: 'Autarkie',
-    text: 'Photovoltaikanlagen ermöglichen es dir, über mindestens 20 Jahre deinen eigenen Strom zu erzeugen und dich vor Preiserhöhungen durch Großkonzerne zu schützen',
+    title: 'Kompensation durch Stromverkauf',
+    text: 'In Deutschland können die Besitzer von PV-Anlagen ihre Kosten decken, indem sie überschüssige Energie an das Stromnetz verkaufen. Staatliche Anreize und Subventionen tragen ebenfalls dazu bei, die Vorlaufkosten für die Installation dieser Systeme zu senken',
   },
   {
-    title: 'Vergütung durch Einspeisung',
-    text: 'Neben finanziellen Einsparungen profitierst du auch von der Einspeisevergütung für den Strom, den du ins öffentliche Netz einspeis',
+    title: 'Wertsteigerung der Immobilien',
+    text: 'Die Anbringung einer Photovoltaikanlage steigert den Wert deines Haus	es und macht es für Käufer attraktiver. Die Möglichkeit, überschüssige Energie in das Stromnetz einzuspeisen, macht dein Haus für potenzielle Käufer besonders interessant und erhöht seine Attraktivität als Investition in die Zukunft',
   },
   {
-    title: 'Immobilienwert steigern',
-    text: 'Eine Photovoltaikanlage kann den Wert deiner Immobilie oft über die Anschaffungskosten hinaus steigern, auch dank langfristiger Ersparnisse und Einspeisevergütungen',
-  },
-  {
-    title: 'Umwelt schützen',
-    text: 'Die Nutzung von Sonnenenergie durch Photovoltaikanlagen trägt wesentlich zum Schutz der Umwelt bei, da Sonnenenergie eine erneuerbare Energiequelle ist. Indem du die Energie der Sonne nutzt, leistest du somit einen Beitrag zum Erhalt unseres Planeten',
+    title: 'Umweltschutz',
+    text: 'Die Nutzung von Solarenergie durch Photovoltaikanlagen ist ein wichtiger Beitrag zum Umweltschutz, denn Solarenergie ist eine erneuerbare Energiequelle. Indem du dir die Energie der Sonne zunutze machst, trägst du zum Erhalt unseres Planeten bei',
   },
 ];
 
@@ -59,9 +53,5 @@ export const pvImages: ImportedImages[] = [
   {
     mobile: pvSlide5Mob,
     desktop: pvSlide5Desk,
-  },
-  {
-    mobile: pvSlide6Mob,
-    desktop: pvSlide6Desk,
   },
 ];

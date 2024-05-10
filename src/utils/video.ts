@@ -30,7 +30,7 @@ export const stormSteicherVideo = {
 
 export const wallboxVideo = {
   className: 'left',
-  title: '0 € pro Tankvorgang!',
-  text: 'Die Wallbox ist dein Held beim Energiesparen. Hör auf, für das Betanken deiner Elektroautos zu bezahlen. Wie das funktioniert und wie du Geld sparen kannst? Mr. Energy antwortet in diesem Video ausführlich darauf. Lass dich von den Details überzeugen! Nutze diese Gelegenheit, deine Sichtweise auf das Energiesparen zu ändern',
+  title: '0 Euro pro Tankfüllung',
+  text: 'Die Wallbox ist eine Ladestation, mit der du dein Elektroauto sicher, schnell und einfach aufladen kannst. Einfach ausgedrückt, ist sie eine Steckdose für dein Elektroauto. In diesem Video diskutieren Boris und Konstantin, ob die Wallbox wirklich so praktisch ist, wie man ihr nachsagt',
   link: 'https://www.youtube.com/embed/V0ga0HCjic0?modestbranding=1&showinfo=0',
 };

@@ -3,32 +3,15 @@ import StormSlide1Mob from '/public/images/stormspeicher-page/StormSlide1Mob.web
 import StormSlide1Desk from '/public/images/stormspeicher-page/StormSlide1Desk.jpg';
 import StormSlide2Mob from '/public/images/stormspeicher-page/StormSlide2Mob.jpg';
 import StormSlide2Desk from '/public/images/stormspeicher-page/StormSlide2Desk.jpg';
-import StormSlide3Mob from '/public/images/stormspeicher-page/StormSlide3Mob.jpg';
-import StormSlide3Desk from '/public/images/stormspeicher-page/StormSlide3Desk.jpg';
-import StormSlide4Mob from '/public/images/stormspeicher-page/StormSlide4Mob.jpg';
-import StormSlide4Desk from '/public/images/stormspeicher-page/StormSlide4Desk.jpg';
-import StormSlide5Mob from '/public/images/stormspeicher-page/StormSlide5Mob.jpg';
-import StormSlide5Desk from '/public/images/stormspeicher-page/StormSlide5Desk.jpg';
+
 export const stormItems: VorteileSliderItems[] = [
   {
     title: 'Stormspeicher Vorteile',
-    text: 'Der Sturmspeicher ist ein Energiespeichersystem, das zur Speicherung und Verwaltung der von Sonnenkollektoren erzeugten Elektrizität verwendet wird. Hier sind einige der Vorteile von Stormspeicher:',
+    text: 'Mit der Integration eines Batteriespeichers in deine Photovoltaikanlage sorgst du Tag und Nacht für solarbetriebene Beleuchtung. Du kannst dein Haus aogarmit Notstrom versorgen oder es bei Bedarf komplett vom Stromnetz trennen. Eine dezentrale Stromversorgung und die Speicherung von Strom sind die großen Themen von morgen',
   },
   {
-    title: 'Speicherung von Überschussenergie',
-    text: 'Solarmodule können mehr Energie produzieren, als Haushalte oder Unternehmen in bestimmten Zeiträumen verbrauchen. Mit dem Stormspeicher kann diese überschüssige Energie gespeichert und zu anderen Zeiten genutzt werden',
-  },
-  {
-    title: 'Autarkie',
-    text: 'Durch die flexible Nutzung von selbst erzeugtem Strom können Sie Ihren Eigenverbrauch deutlich erhöhen und sich von teurem Strom aus dem Netz unabhängig machen',
-  },
-  {
-    title: 'Senkung der Energiekosten',
-    text: 'Wenn Sie günstigen, selbst erzeugten Solarstrom aus einem Stromspeichersystem nutzen, brauchen Sie nur noch wenig teuren Strom aus dem Netz zu beziehen und können so Ihre Energiekosten senken',
-  },
-  {
-    title: 'CO2-Ausstoß verringern',
-    text: 'Solarenergie ist eine saubere Energiequelle, die bei der Stromerzeugung keine Emissionen erzeugt, so dass der Einsatz von Solarmodulen mit Stormspeicher dazu beiträgt, die gesamten CO2-Emissionen in die Atmosphäre zu verringern',
+    title: 'Speichern von überschüssigem Strom',
+    text: 'Mit Stromspeichern kannst du das Problem eines niedrigen Eigenverbrauchs lösen. Einfach ausgedrückt: Was du nicht verbrauchen kannst, kommt in deinen Speicher. Gerade an bewölkten Tagen und im Winter, wenn der Stromverbrauch steigt, ist das sehr hilfreich',
   },
 ];
 
@@ -40,17 +23,5 @@ export const stormImages: ImportedImages[] = [
   {
     mobile: StormSlide2Mob,
     desktop: StormSlide2Desk,
-  },
-  {
-    mobile: StormSlide3Mob,
-    desktop: StormSlide3Desk,
-  },
-  {
-    mobile: StormSlide4Mob,
-    desktop: StormSlide4Desk,
-  },
-  {
-    mobile: StormSlide5Mob,
-    desktop: StormSlide5Desk,
   },
 ];

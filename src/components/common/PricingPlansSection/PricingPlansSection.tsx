@@ -28,11 +28,10 @@ const PricingPlansSection = () => {
       <div className={styles.pricingPlansWrap}>
         <div className={styles.pricingPlansHeader}>
           <RecycleTextWrap
-            title="Günstige Preise für PV-Anlagen"
+            title="Erschwingliche Preise für Photovoltaik-Anlagen"
             titleClass={styles.plansTitle}
-            text="Entdecken Sie unser Angebot an hochwertigen Produkten zu
-          erschwinglichen Preisen und machen Sie den nächsten Schritt in
-          Richtung einer umweltfreundlichen Zukunft."
+            text="Jedes Projekt ist individuell, aber wir haben uns bemüht, Pakete zu erstellen, die deinen persönlichen Anforderungen an Preis, Leistung und Design entsprechen. Qualität muss nicht teuer sein – wähle 
+WorkSET Energy"
             textClass={`${styles.plansText} ${inter.className}`}
           />
         </div>

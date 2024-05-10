@@ -32,10 +32,14 @@
 }
 
 .sliderInfoWrap {
-  height: 343px;
+  height: 349px;
   width: 100%;
-  padding: 24px 0 36px;
+  padding: 24px 0 42px;
   background-color: var(--red-main);
+}
+
+.sliderInfoWrap.pvAnlagen {
+  height: 375px;
 }
 
 .sliderInfoContainer {
@@ -196,6 +200,10 @@
     height: 83.7rem;
   }
 
+  .sliderInfoWrap.pvAnlagen {
+    height: 83.7rem;
+  }
+
   .sliderInfoCounter {
     top: 0;
     left: 0;
@@ -226,12 +234,8 @@
     margin-bottom: 2.4rem;
   }
 
-  .sliderTitle.pvAnlagen {
-    width: 37.8rem;
-  }
-
   .sliderTitle.storm {
-    width: 65rem;
+    width: 65.4rem;
   }
 
   .sliderText {
@@ -307,12 +311,8 @@
     margin-bottom: 24px;
   }
 
-  .sliderTitle.pvAnlagen {
-    width: 378px;
-  }
-
   .sliderTitle.storm {
-    width: 650px;
+    width: 654px;
   }
 
   .sliderText {

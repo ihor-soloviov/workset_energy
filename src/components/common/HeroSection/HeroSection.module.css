@@ -42,7 +42,7 @@
   line-height: 160%;
   font-weight: 300;
   margin-bottom: 32px;
-  width: 305px;
+  width: 301px;
 }
 
 .heroMainText.wallbox {
@@ -192,7 +192,7 @@
   }
 
   .heroMainText.pvAnlagen {
-    width: 47rem;
+    width: 34.8rem;
   }
 
   .heroMainText.stormspeicher {
@@ -260,7 +260,7 @@
   }
 
   .heroMainText.pvAnlagen {
-    width: 470px;
+    width: 348px;
   }
 
   .heroMainText.stormspeicher {

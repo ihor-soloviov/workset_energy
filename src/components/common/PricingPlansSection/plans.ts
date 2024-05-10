@@ -9,7 +9,7 @@ import { PlanT } from '@/types/infoTypes';
 
 export const plans: PlanT[] = [
   {
-    price: '15.116 EUR',
+    price: '14.616 EUR',
     name: 'Huawei',
     article:
       'Starte in die E-Mobilität mit dem "Huawei -Paket – die ideale Wallbox-Lösung für Einsteiger, die Wert auf Qualität und Effizienz legen',
@@ -24,7 +24,7 @@ export const plans: PlanT[] = [
     ],
   },
   {
-    price: '16.090 EUR',
+    price: '15.590 EUR',
     name: 'Sungrow',
     article:
       'Das "Sungrow”-Paket bietet dir eine zuverlässige und benutzerfreundliche Ladeinfrastruktur, perfekt für den täglichen Gebrauch',

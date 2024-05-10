@@ -80,12 +80,12 @@
   .plansTitle {
     font-size: 5rem;
     max-width: max-content;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.6rem;
   }
 
   .plansText {
     font-size: 1.8rem;
-    width: 55rem;
+    width: 70.8rem;
     margin: 0 auto;
   }
 
@@ -110,12 +110,12 @@
 
   .plansTitle {
     font-size: 50px;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
   }
 
   .plansText {
     font-size: 18px;
-    width: 550px;
+    width: 708px;
   }
 
   .pricingPlansItems {

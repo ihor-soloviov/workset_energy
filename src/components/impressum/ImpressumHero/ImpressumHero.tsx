@@ -12,7 +12,6 @@ const ImpressumHero = () => {
         src={impressiumHeroImgMob}
         fill
         placeholder="blur"
-        blurDataURL={'/images/uberuns-page/uberuns-hero-mob-blur.jpg'}
         alt="hero-img"
       />
       <Image
@@ -21,7 +20,6 @@ const ImpressumHero = () => {
         src={impressiumHeroImgDesk}
         fill
         placeholder="blur"
-        blurDataURL={'/images/uberuns-page/uberuns-hero-desc-blur.jpg'}
         alt="hero-img"
       />
       <div className={styles.impressiumContainer}>
