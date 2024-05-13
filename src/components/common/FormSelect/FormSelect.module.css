@@ -38,7 +38,7 @@
 .select > div > div:nth-of-type(1) {
   color: var(--gray-text);
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 300;
   height: 18px;
 }
 
@@ -71,7 +71,7 @@
   font-size: 14px;
   margin-right: auto;
   width: 100%;
-  font-weight: 400;
+  font-weight: 300;
   cursor: pointer;
 }
 
