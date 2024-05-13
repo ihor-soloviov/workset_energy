@@ -21,11 +21,11 @@ export const pvAnlagenHero = {
 export const stormspeicherHero = {
   imgMob: '/images/stormspeicher-page/stormspeicher-hero-mob.webp',
   imgMobBlur: '/images/stormspeicher-page/stormspeicher-hero-mob-blur.webp',
-  title: 'Stormspeicher',
+  title: 'Stromspeicher',
   text: 'Eine zuverlässige Resrve, die überschüssigen Strom für den künftigen Verbrauch speichert',
   imgDesc: '/images/stormspeicher-page/stormspeicher-hero-desc.webp',
   imgDescBlur: '/images/stormspeicher-page/stormspeicher-hero-desc-blur.webp',
-  className: 'stormspeicher',
+  className: 'Stromspeicher',
 };
 
 export const wallboxHero = {

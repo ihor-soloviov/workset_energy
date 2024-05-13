@@ -3,7 +3,7 @@ const pathnames = [
   '/leadgen',
   '/pv-anlagen',
   '/karriere',
-  '/stormspeicher',
+  '/stromspeicher',
   '/karriere/jobs',
   '/uber-uns',
   '/wallbox',

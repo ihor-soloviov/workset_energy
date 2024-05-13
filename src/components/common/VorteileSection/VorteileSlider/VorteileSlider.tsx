@@ -28,7 +28,7 @@ const VorteileSlider = () => {
       case '/pv-anlagen':
         currentSlideData = type === 'image' ? pvImages : pvItems;
         return currentSlideData;
-      case '/stormspeicher':
+      case '/stromspeicher':
         currentSlideData = type === 'image' ? stormImages : stormItems;
         return currentSlideData;
       case '/wallbox':
@@ -50,7 +50,7 @@ const VorteileSlider = () => {
   const getCurrentDots = () => {
     let currentDots;
     switch (pathname) {
-      case '/stormspeicher':
+      case '/stromspeicher':
         currentDots = 2;
         return currentDots;
       case '/pv-anlagen':
@@ -112,7 +112,7 @@ const VorteileSlider = () => {
         className={`${styles.sliderInfoWrap} ${pathname === '/pv-anlagen' ? styles.pvAnlagen : ''}`}
       >
         <div
-          className={`${styles.sliderInfoContainer} ${pathname === '/stormspeicher' ? styles.storm : ''}`}
+          className={`${styles.sliderInfoContainer} ${pathname === '/stromspeicher' ? styles.storm : ''}`}
         >
           <p className={`${styles.sliderInfoCounter} ${inter.className}`}>
             0{activeIndex + 1}
@@ -125,7 +125,7 @@ const VorteileSlider = () => {
                 className={`${styles.sliderInfo} ${activeIndex === index ? styles.active : ''}`}
               >
                 <h2
-                  className={`${styles.sliderTitle} ${pathname === '/stormspeicher' ? styles.storm : ''}`}
+                  className={`${styles.sliderTitle} ${pathname === '/stromspeicher' ? styles.storm : ''}`}
                 >
                   {title}
                 </h2>

@@ -26,9 +26,9 @@ export const productsItems: ProductItem[] = [
   {
     imgMob: product2Mob,
     imgDesc: product2Desk,
-    href: '/stormspeicher',
-    text: 'Speichere Energie mit dem Stromspeicher. Nutze die gespeicherte Energie, wenn es sich für dich lohnt oder verkaufe den Überschuss!',
-    title: 'Stormspeicher',
+    href: '/stromspeicher',
+    text: 'Stromspeichergie mit dem Stromspeicher. Nutze die gespeicherte Energie, wenn es sich für dich lohnt oder verkaufe den Überschuss!',
+    title: 'Stromspeicher',
   },
   {
     imgMob: product3Mob,
