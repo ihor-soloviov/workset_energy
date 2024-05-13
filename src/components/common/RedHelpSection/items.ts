@@ -12,14 +12,14 @@ export const items: RedHelp[] = [
     title: 'Per E-Mail',
     text: 'Unser freundliches Support-Team beantwortet gern deine Fragen!',
     href: {
-      linkTo: 'mailto:office@work-set.eu',
-      title: 'office@work-set.eu',
+      linkTo: 'mailto:service@work-set.eu',
+      title: 'service@work-set.eu',
     },
   },
   {
     icon: Phone,
     title: 'Per Telefon',
-    text: 'Auch telefonisch stehen wir dir Rede und Antwort für deine Fragen.',
+    text: 'Auch telefonisch stehen wir dir mit Rede und Antwort zur Verfügung',
     href: {
       linkTo: 'tel:+4973114613210',
       title: '+49 73 114 613 210',

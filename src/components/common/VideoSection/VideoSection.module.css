@@ -28,11 +28,15 @@
   margin-bottom: 14px;
 }
 
+.videoTitle.pvAnlagen {
+  width: 305px;
+}
+
 .videoText {
   color: var(--gray-text);
   font-size: 16px;
   line-height: 160%;
-  width: fit-content;
+  width: 339px;
 }
 
 .videoText:not(:last-child) {
@@ -73,6 +77,10 @@
   .videoTitle {
     font-size: 3.4rem;
     margin-bottom: 1.2rem;
+  }
+
+  .videoTitle.pvAnlagen {
+    width: 43rem;
   }
 
   .videoText {
@@ -116,6 +124,10 @@
   .videoTitle {
     font-size: 34px;
     margin-bottom: 12px;
+  }
+
+  .videoTitle.pvAnlagen {
+    width: 430px;
   }
 
   .videoText {

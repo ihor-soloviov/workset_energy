@@ -31,20 +31,20 @@ export const stepItems: StepItem[] = [
     imgMob: stepTwoImgMob,
     imgDesc: stepTwoImgDesc,
 
-    text: 'Nach einem vorab vereinbarten Termin kommt dein persönlicher Berater zu dir nach Hause, um alle notwendigen Messungen per Drohne vorzunehmen. Das ist notwendig, um die Planung so genau und effizient wie möglich zu gestalten.\nNOhne gründliche Messungen ist es nicht möglich, ein auf deine Bedürfnisse optimal zugeschnittenes Angebot zusammenzustellen. Das Team der WorkSET Energy GmbH weiß das besser als jeder andere',
+    text: 'Nach einem vorab vereinbarten Termin kommt dein persönlicher Berater zu dir nach Hause, um alle notwendigen Messungen mit der Drohne vorzunehmen. Das ist notwendig, um die Planung so genau und effizient wie möglich zu gestalten.\nOhne gründliche Messungen ist es nicht möglich, ein auf deine Bedürfnisse optimal zugeschnittenes Angebot zusammenzustellen. Das Team der WorkSET Energy GmbH weiß das besser als jeder andere',
     title: 'Aufmaß',
   },
   {
     imgMob: stepThreeImgMob,
     imgDesc: stepThreeImgDesc,
-    text: 'Unser Team entwickelt eine maßgeschneiderte Finanzplanung für deine Anforderungen. Mithilfe von 3D-Modellen und einer speziellen Software, die von den Entwicklern der WorkSET Energy GmbH programmiert wurde, finden wir die beste PV-Anlage für dich.\nMöchtest du verschiedene Optionen vergleichen? Unsere Planungsabteilung erstellt gerne mehrere Varianten deines Projekts, damit du dir über die Effizienz deiner zukünftigen Anlage sicher sein kannst',
+    text: 'Unser Team entwickelt eine maßgeschneiderte Finanzplanung für deine Anforderungen. Mithilfe von 3D-Simulationen und einer speziellen Software, die von den Entwicklern der WorkSET Energy GmbH programmiert wurde, finden wir die beste PV-Anlage für dich.\nMöchtest du verschiedene Optionen vergleichen? Unsere Planungsabteilung erstellt gerne mehrere Varianten deines Projekts, damit du dir über die Effizienz deiner zukünftigen Anlage sicher sein kannst',
     title: 'Planung',
   },
   {
     imgMob: stepFourImgMob,
     imgDesc: stepFourImgDesc,
 
-    text: 'Nachdem du den Vertrag unterschrieben hast, bekommst du einen Termin für die Montage (etwa 2 Wochen nach Vertragsabschluss) und einen Elektriker-Termin für den Anschluss der Anlage (weitere 2 Wochen später).\nSomit vergeht vom Vertragsabschluss bis zur funktionierenden PV-Anlage nur 1 Monat',
+    text: 'Nachdem du den Auftrag unterschrieben hast, bekommst du einen Termin für die Montage (2-6 Wochen nach Auftragsbestätigung) und einen Elektriker-Termin für den Anschluss der Anlage (weitere 2 Wochen später).\nSomit vergeht vom vergeht nach Auftragsbestätigung bis zur funktionierenden PV-Anlage nur 1 Monat',
     title: 'Montage',
   },
   {

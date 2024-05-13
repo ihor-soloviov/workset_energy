@@ -51,10 +51,6 @@
   margin-bottom: 32px;
 }
 
-.productText.third {
-  width: 260px;
-}
-
 .productLink {
   width: 137px;
   height: 46px;
@@ -154,7 +150,7 @@
 
   .productText {
     margin-bottom: 2.4rem;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     width: 33.9rem;
     height: 10.4rem;
   }
@@ -193,7 +189,7 @@
 
   .productText {
     margin-bottom: 24px;
-    font-size: 16px;
+    font-size: 15px;
     width: 339px;
     height: 104px;
   }

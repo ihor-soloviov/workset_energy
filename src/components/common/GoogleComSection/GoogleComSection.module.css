@@ -5,7 +5,7 @@
 
 .googleComTitle {
   color: var(--black-main);
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 700;
   line-height: 130%;
   width: 309px;
@@ -20,7 +20,7 @@
   }
 
   .googleComTitle {
-    font-size: 3.4rem;
+    font-size: 5rem;
     width: 57.8rem;
     margin-bottom: 5rem;
   }
@@ -32,7 +32,7 @@
   }
 
   .googleComTitle {
-    font-size: 34px;
+    font-size: 50px;
     width: 578px;
     margin-bottom: 50px;
   }

@@ -7,6 +7,7 @@ import IFrame from './IFrame/IFrame';
 type VideoSectionProps = {
   className: string;
   title: string;
+  titleClassName: string;
   link: string;
   text: string;
   textDesk?: string;
@@ -14,6 +15,7 @@ type VideoSectionProps = {
 
 const VideoSection = ({
   title,
+  titleClassName,
   text,
   textDesk,
   link,
@@ -29,6 +31,7 @@ const VideoSection = ({
           <TextWrap
             className={className}
             title={title}
+            titleClassName={titleClassName}
             text={text}
             textDesk={textDesk}
           />

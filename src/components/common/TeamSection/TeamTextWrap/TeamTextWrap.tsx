@@ -15,13 +15,10 @@ const TeamTextWrap: React.FC<Props> = ({ handleImage }) => {
 
   return (
     <div className={styles.teamTextWrap}>
-      <h2 className={styles.teamTitle}>
-        Finde einen Experten in deiner Region!
-      </h2>
+      <h2 className={styles.teamTitle}>Unser Experten-Team</h2>
       <p className={`${styles.teamText} ${inter.className}`}>
-        Blättere durch unser Experten-Team und finde einen Experten aus deiner
-        Region. Speichere dir seine Kontaktdaten und kontaktiere ihn, wann du
-        willst. Oder kontaktiere ihn gleich jetzt!
+        Suche dir selbst deinen WorkSET-Experten in deiner Region aus. Wir
+        lieben kurze Wege - einfach anrufen!
       </p>
       <div>
         <div className={styles.carouselBtns}>

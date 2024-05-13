@@ -58,8 +58,7 @@
   display: none;
 }
 
-.LeadModalText,
-.LeadModalTextDesc {
+.LeadModalText {
   color: var(--gray-text);
   text-align: center;
   width: fit-content;
@@ -76,12 +75,7 @@
   width: 344px;
 }
 
-.LeadModalTextDesc {
-  display: none;
-}
-
-.LeadModalBtn,
-.LeadModalBtnDesc {
+.LeadModalBtn {
   font-size: 16px;
   font-weight: 500;
   border-radius: 6px;
@@ -103,12 +97,7 @@
   border-radius: 28px;
 }
 
-.LeadModalBtnDesc {
-  display: none;
-}
-
-.LeadModalBtn:hover,
-.LeadModalBtnDesc :hover {
+.LeadModalBtn:hover {
   border-color: var(--white-main);
   background-color: var(--white-main);
   color: var(--red-main);
@@ -152,11 +141,7 @@
   }
 
   .LeadModalText {
-    display: none;
-  }
-
-  .LeadModalTextDesc {
-    display: block;
+    width: fit-content;
     font-size: 1.8rem;
   }
 
@@ -164,7 +149,7 @@
     display: none;
   }
 
-  .LeadModalBtnDesc {
+  .LeadModalBtn {
     display: flex;
     padding: 1.4rem 2rem;
     width: 15.4rem;
@@ -178,7 +163,7 @@
       background-color 250ms var(--cubic);
   }
 
-  .LeadModalBtnDesc:hover {
+  .LeadModalBtn:hover {
     border-color: var(--white-main);
     background-color: var(--white-main);
     color: var(--red-main);
@@ -198,11 +183,11 @@
     margin-bottom: 14px;
   }
 
-  .LeadModalTextDesc {
+  .LeadModalText {
     font-size: 18px;
   }
 
-  .LeadModalBtnDesc {
+  .LeadModalBtn {
     padding: 14px 20px;
     width: 154px;
     font-size: 16px;

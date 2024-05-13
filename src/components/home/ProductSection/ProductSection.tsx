@@ -10,7 +10,7 @@ const ProductSection = () => {
         <RecycleTextWrap
           title="Unsere Produkte"
           titleClass={styles.productMainTitle}
-          text=" Wir bieten unseren Kunden die Chance, die Möglichkeiten der Spitzentechnologie zu nutzen. Füge deiner Finanzanalyse hinzu, was du für wichtig erachtest"
+          text=" Wir bieten unseren Kunden die Möglichkeit von Spitzentechnologie zu profitieren. Füge deiner Finanzanalyse hinzu, was du für wichtig erachtest"
           textClass={`${styles.productMainText} ${inter.className}`}
         />
         <ProductList />

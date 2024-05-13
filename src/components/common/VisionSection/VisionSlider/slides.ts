@@ -9,7 +9,7 @@ import { VisionImageItem, VisionLinkItem } from '@/types/infoTypes';
 export const visionItems: VisionLinkItem[] = [
   {
     title: 'Unsere Vision',
-    text: 'Unsere Vision ist es, einen positiven Einfluss auf die Umwelt zu haben und gleichzeitig unseren Kunden zu helfen, Geld zu sparen und ihre Energiekosten langfristig zu senken. Wir sind stolz darauf, an einer besseren Zukunft zu arbeiten, und sind bestrebt, unser Engagement für Nachhaltigkeit und erneuerbare Energiequellen fortzusetzen',
+    text: 'Unsere Vision ist es, einen positiven Einfluss auf die Umwelt zu nehmen und gleichzeitig unseren Kunden zu helfen, Geld zu sparen und ihre Energiekosten langfristig zu senken. Wir sind stolz darauf, an einer besseren Zukunft zu arbeiten, und sind bestrebt, unser Engagement für Nachhaltigkeit und erneuerbare Energiequellen fortzusetzen',
   },
   {
     title: 'Unsere Mission',

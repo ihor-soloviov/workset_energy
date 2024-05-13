@@ -3,7 +3,7 @@ import styles from './TeamCarousel.module.css';
 import { teamItems } from '../TeamSlider/teamItems';
 import Button from '../../Button/Button';
 import TeamModal from '../TeamSlider/TeamModal/TeamModal';
-
+import LocationIcon from '/public/icons/team-location.svg';
 type Props = {
   activeItem: number;
 };
@@ -47,15 +47,20 @@ const TeamCarousel: React.FC<Props> = ({ activeItem }) => {
             key={index}
             className={`${styles.carouselItem} ${styles[className]} ${activeItem === index ? styles.active : ''}`}
           >
+            <div
+              className={`${styles.teamTopWrap} ${activeItem === index ? styles.active : ''}`}
+            >
+              <LocationIcon className={styles.teamImgIcon} />
+              <p className={styles.teamImgText}>{text}</p>
+            </div>
             <div className={styles.teamTextWrap}>
               <h3 className={styles.teamImgTitle}>{title}</h3>
-              <p className={styles.teamImgText}>{text}</p>
               <Button
                 handleClick={toggleModal}
                 className={styles.teamImgBtn}
                 type="button"
               >
-                Kontakte
+                Jetzt Termin buchen
               </Button>
             </div>
           </div>

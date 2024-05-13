@@ -27,12 +27,11 @@
   margin-bottom: 8px;
 }
 
-
 .teamText {
   color: var(--gray-text);
   font-size: 16px;
   line-height: 160%;
-  width: fit-content;
+  width: 330px;
 }
 
 .teamBtn {
@@ -139,15 +138,14 @@
   }
 
   .teamTitle {
-    font-size: 5rem;
+    font-size: 3.4rem;
     margin-bottom: 1.6rem;
-    width: 33.2rem;
   }
-
 
   .teamText {
     width: 39.2rem;
     margin-bottom: 3.2rem;
+    font-size: 1.6rem;
   }
 
   .teamBtn {
@@ -184,7 +182,6 @@
   .teamTitle {
     margin-bottom: 16px;
     font-size: 34px;
-    width: 332px;
   }
 
   .teamTextWrap {
@@ -194,6 +191,7 @@
   .teamText {
     width: 392px;
     margin-bottom: 32px;
+    font-size: 16px;
   }
 
   .teamBtn {

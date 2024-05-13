@@ -20,7 +20,7 @@ export const productsItems: ProductItem[] = [
     imgMob: product1Mob,
     imgDesc: product1Desk,
     href: '/pv-anlagen',
-    text: 'Stell dir deine eigene Anlage zusammen oder verwende fertige Pakete für dein Zuhause',
+    text: 'Stell dir deine eigene Anlage zusammen oder verwende fertige Pakete für dein PV-Projekt',
     title: 'PV-Anlagen',
   },
   {
@@ -34,7 +34,7 @@ export const productsItems: ProductItem[] = [
     imgMob: product3Mob,
     imgDesc: product3Desk,
     href: '/wallbox',
-    text: 'Lade dein Elektrofahrzeug bequem und schnell auf. Nutze die Wallbox für effizientes Laden zu jeder Zeit, indem du den Vorgang über dein Heimstromsystem steuerst',
+    text: 'Lade dein Elektrofahrzeug bequem und schnell auf. Nutze die Wallbox für effizientes Laden zu jeder Zeit, indem du den Vorgang über dein Energiemanagementsystem steuerst',
     title: 'Wallbox',
     className: 'third',
   },

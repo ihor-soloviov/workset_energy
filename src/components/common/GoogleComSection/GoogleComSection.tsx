@@ -7,7 +7,7 @@ const GoogleComSection = () => {
   return (
     <section id="feedback" className={styles.googleComSection}>
       <RecycleTextWrap
-        title="Was sagen unsere Kunden über uns?"
+        title="Unsere Kunden"
         titleClass={styles.googleComTitle}
       />
       <GoogleComSlider />

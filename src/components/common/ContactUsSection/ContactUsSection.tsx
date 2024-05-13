@@ -13,10 +13,9 @@ const ContactUsSection = () => {
           <ContactUsMap />
           <div className={styles.contactUsFormWrap}>
             <RecycleTextWrap
-              title="Kontaktiere uns"
+              title="Jetzt Angebot erhalten"
               titleClass={styles.contactUsMainTitle}
-              text="Bitte fülle das untenstehende Formular aus und wir werden uns in
-              Kürze mit dir in Verbindung setzen"
+              text="Fülle die untenstehenden Felder aus und wir rufen dich an"
               textClass={`${styles.contactUsText} ${inter.className}`}
             />
             <ContactUsForm />

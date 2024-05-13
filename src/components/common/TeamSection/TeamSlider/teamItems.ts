@@ -51,7 +51,7 @@ export const teamItems: TeamItem[] = [
   },
   {
     title: 'Damir Dergic',
-    text: 'Region Mainz',
+    text: 'Mainz',
     className: 'seventh',
     email: 'd.dergic@work-set.eu',
     tel: '+49 731 146 153 63',

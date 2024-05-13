@@ -12,20 +12,14 @@
   margin-bottom: 8px;
 }
 
-.stepSevenText,
-.stepSevenTextDesc {
+.stepSevenText {
   color: var(--gray-text);
   font-size: 16px;
-  width: 275px;
   line-height: 160%;
   text-align: center;
   margin: 0 auto;
   margin-bottom: 24px;
   height: 82px;
-}
-
-.stepSevenTextDesc {
-  display: none;
 }
 
 @media screen and (min-width: 1440px) {
@@ -46,7 +40,7 @@
     display: none;
   }
 
-  .stepSevenTextDesc {
+  .stepSevenText {
     display: block;
     font-size: 1.8rem;
     margin-bottom: 3.6rem;
@@ -66,7 +60,7 @@
     margin-bottom: 8px;
   }
 
-  .stepSevenTextDesc {
+  .stepSevenText {
     font-size: 18px;
     margin-bottom: 36px;
     width: 484px;

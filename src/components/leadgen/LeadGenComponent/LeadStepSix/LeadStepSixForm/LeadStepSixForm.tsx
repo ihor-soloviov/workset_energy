@@ -72,9 +72,9 @@ const LeadStepSixForm = ({
         )}
       </label>
       <label className={styles.stepSixLabel}>
-        Housnummer*
+        Hausnummer*
         <input
-          placeholder="Housnummer"
+          placeholder="Hausnummer"
           className={`${styles.stepSixInput} ${touched.houseNumber && errors.houseNumber && styles.error}`}
           {...getFieldProps('houseNumber')}
         />
