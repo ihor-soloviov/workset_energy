@@ -7,8 +7,8 @@ type ContactLinkItem = {
 export const contactLinkItems: ContactLinkItem[] = [
   { text: 'Magirus-Deutz-Str, 1289077 Ulm', title: 'Address' },
   {
-    href: 'mailto:office@work-set.eu',
-    text: 'office@work-set.eu',
+    href: 'mailto:service@work-set.eu',
+    text: 'service@work-set.eu',
     title: 'E-mail',
   },
   {

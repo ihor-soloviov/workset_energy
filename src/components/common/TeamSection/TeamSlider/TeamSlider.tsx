@@ -75,7 +75,7 @@ const TeamSlider = () => {
       </Swiper>
       <SliderDots
         className={'team'}
-        count={8}
+        count={7}
         activeSlide={activeIndex}
         handleActiveSlide={handleActiveSlide}
       />

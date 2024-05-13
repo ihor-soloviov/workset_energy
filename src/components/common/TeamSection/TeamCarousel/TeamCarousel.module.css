@@ -93,7 +93,6 @@
   .teamTextWrap {
     display: flex;
     flex-direction: column;
-    gap: 0.4rem;
     position: absolute;
     bottom: 4.5rem;
     left: 2.9rem;
@@ -111,7 +110,7 @@
     line-height: 130%;
     font-size: 3.5rem;
     width: 27.2rem;
-    margin-bottom: 16px;
+    margin-bottom: 1.6rem;
   }
 
   .teamImgText {
@@ -183,11 +182,11 @@
   .teamTextWrap {
     bottom: 45px;
     left: 29px;
-    gap: 4px;
   }
 
   .teamImgTitle {
     font-size: 35px;
+    margin-bottom: 16px;
     width: 272px;
   }
 

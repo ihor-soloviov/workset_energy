@@ -13,7 +13,7 @@ export const ImpressumItems: ImpressumItem[] = [
   },
   {
     title: 'Kontaktaufnahme:',
-    textList: ['Telefon: +49 731 146 132 10', 'E-Mail: office@work-set.eu'],
+    textList: ['Telefon: +49 731 146 132 10', 'E-Mail: service@work-set.eu'],
 
     className: 'contact',
   },

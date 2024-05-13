@@ -7,8 +7,8 @@ type ContactUsItem = {
 export const contactUsItems: ContactUsItem[] = [
   {
     title: 'E-Mail',
-    text: 'office@work-set.eu',
-    href: 'mailto:office@work-set.eu',
+    text: 'service@work-set.eu',
+    href: 'mailto:service@work-set.eu',
   },
   {
     title: 'Telefon-Nr.',
