@@ -73,9 +73,9 @@ const LeadStepSevenForm = ({
       onSubmit={handleSubmit}
     >
       <label className={styles.stepSevenLabel}>
-        Ihr Name, Nachname*
+        Vor- und Nachname*
         <input
-          placeholder="Ihr Name, Nachname"
+          placeholder="Vor- und Nachname"
           className={`${styles.stepSevenInput} ${touched.userName && errors.userName && styles.error}`}
           {...getFieldProps('userName')}
         />

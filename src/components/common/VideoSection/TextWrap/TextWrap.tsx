@@ -8,19 +8,30 @@ import { inter } from '@/utils/fonts';
 
 type Props = {
   title: string;
+  titleClassName: string;
   text: string;
   textDesk?: string;
   className?: string;
 };
 
-const TextWrap: React.FC<Props> = ({ title, text, textDesk, className }) => {
+const TextWrap: React.FC<Props> = ({
+  title,
+  titleClassName,
+  text,
+  textDesk,
+  className,
+}) => {
   useObserver(`.${styles.videoTextWrap}`, `${styles.videoTextWrapVisible}`);
 
   const { isDesktop } = useGlobalStore();
 
   return (
     <div className={styles.videoTextWrap}>
-      <h2 className={styles.videoTitle}>{title}</h2>
+      <h2
+        className={`${styles.videoTitle} ${titleClassName ? styles[titleClassName] : ''}`}
+      >
+        {title}
+      </h2>
       {isDesktop && textDesk ? (
         <p className={`${styles.videoText} ${inter.className}`}>{textDesk}</p>
       ) : (

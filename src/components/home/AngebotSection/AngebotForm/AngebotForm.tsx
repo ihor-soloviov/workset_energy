@@ -98,9 +98,9 @@ const AngebotForm = () => {
     >
       <div className={styles.angebotLabelWrap}>
         <label className={styles.angebotLabel}>
-          Name, Nachname*
+          Vor- und Nachname*
           <input
-            placeholder="Name, Nachname"
+            placeholder="Vor- und Nachname"
             className={`${styles.angebotInput} ${touched.userName && errors.userName && styles.error}`}
             {...getFieldProps('userName')}
           />
@@ -135,9 +135,9 @@ const AngebotForm = () => {
         </label>
 
         <label className={styles.angebotLabel}>
-          Adresse des Projekts
+          Anschrift des PV-Projekts
           <input
-            placeholder="Adresse des Projekts"
+            placeholder="Anschrift des PV-Projekts"
             className={`${styles.angebotInput} ${touched.userAddress && errors.userAddress && styles.error}`}
             {...getFieldProps('userAddress')}
           />

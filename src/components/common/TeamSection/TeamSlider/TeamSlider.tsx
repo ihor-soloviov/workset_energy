@@ -8,7 +8,7 @@ import { teamItems } from './teamItems';
 import SliderDots from '../../SliderDots/SliderDots';
 import TeamModal from './TeamModal/TeamModal';
 import Button from '../../Button/Button';
-import { stopScroll } from '@/utils/stopScroll';
+import LocationIcon from '/public/icons/team-location.svg';
 
 const TeamSlider = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -54,16 +54,19 @@ const TeamSlider = () => {
         {teamItems.map(({ text, title, className }, index) => (
           <SwiperSlide key={index}>
             <div className={`${styles.teamImgWrap} ${styles[className]}`}>
+              <div className={styles.teamTopWrap}>
+                <LocationIcon className={styles.teamImgIcon} />
+                <p className={styles.teamImgText}>{text}</p>
+              </div>
               <div className={styles.teamTextWrap}>
                 <h3 className={styles.teamImgTitle}>{title}</h3>
-                <p className={styles.teamImgText}>{text}</p>
 
                 <Button
                   handleClick={toggleModal}
                   className={styles.teamImgBtn}
                   type="button"
                 >
-                  Kontakte
+                  Jetzt Termin buchen
                 </Button>
               </div>
             </div>

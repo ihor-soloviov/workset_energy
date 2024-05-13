@@ -13,19 +13,19 @@ import pvSlide5Desk from '/public/images/pv-anlagen-page/pvSlide5Desk.webp';
 export const pvItems: VorteileSliderItems[] = [
   {
     title: 'PV-Anlage Vorteile',
-    text: 'Hast du genug von steigenden Stromrechnungen? Eine Photovoltaikanlage schützt dich vor steigenden Tarifen und steigert den Wert deines Hauses. Stell dir vor, du sparst jeden Monat Geld, tust etwas für die Umwelt und steigerst den Wert deines Hauses. Willst du damit loslegen? Dann scrolle nach unten und wähle ein Paket aus, das dich interessiert',
+    text: 'Hast du genug von steigenden Stromrechnungen? Eine Photovoltaikanlage schützt dich vor steigenden Tarifen und steigert den Wert deiner Immobilie. Stell dir vor, du sparst jeden Monat Geld, tust etwas für die Umwelt und steigerst den Wert deines Eigentums. Willst du damit loslegen? Dann scrolle nach unten und wähle ein Paket aus, das dich interessiert',
   },
   {
     title: 'Selbstversorgung',
-    text: 'Mit Photovoltaikanlagen kannst du mindestens 20 Jahre lang deinen eigenen Strom erzeugen und dich vor den Preiserhöhungen der Großkonzerne schützen. Unser Planungsteam berechnet die effizienteste Option für dich. Dabei gehen unsere Experten immer von der Autarkie-Grad aus, so sich dein Projekt schon viel früher als in 20 Jahren rentiert',
+    text: 'Mit Photovoltaikanlagen kannst du mindestens 20 Jahre lang deinen eigenen Strom erzeugen und dich vor den Preiserhöhungen der Großkonzerne schützen. Unser Planungsteam berechnet die effizienteste Option für dich. Dabei gehen unsere Experten von deinen individuellen Bedürfnissen aus, sodass sich dein PV-Projekt meist schon unter 10 Jahren amortisiert',
   },
   {
     title: 'Kompensation durch Stromverkauf',
-    text: 'In Deutschland können die Besitzer von PV-Anlagen ihre Kosten decken, indem sie überschüssige Energie an das Stromnetz verkaufen. Staatliche Anreize und Subventionen tragen ebenfalls dazu bei, die Vorlaufkosten für die Installation dieser Systeme zu senken',
+    text: 'In Deutschland können die Besitzer von PV-Anlagen ihre Investitionen zu optimieren, indem sie überschüssige Energie an das Stromnetz verkaufen. Staatliche Anreize und Subventionen tragen ebenfalls dazu bei, die Anfangskosten für die Installation einer Photovoltaik Anlage zu senken',
   },
   {
     title: 'Wertsteigerung der Immobilien',
-    text: 'Die Anbringung einer Photovoltaikanlage steigert den Wert deines Haus	es und macht es für Käufer attraktiver. Die Möglichkeit, überschüssige Energie in das Stromnetz einzuspeisen, macht dein Haus für potenzielle Käufer besonders interessant und erhöht seine Attraktivität als Investition in die Zukunft',
+    text: 'Die Anbringung einer Photovoltaikanlage steigert den Wert deines Hauses und macht es für Käufer noch attraktiver. Die Möglichkeit, überschüssige Energie in das Stromnetz einzuspeisen, macht dein Haus für potenzielle Käufer besonders interessant und erhöht seine Attraktivität als Investition für die Zukunft',
   },
   {
     title: 'Umweltschutz',

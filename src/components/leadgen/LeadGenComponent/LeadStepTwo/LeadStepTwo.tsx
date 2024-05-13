@@ -28,8 +28,8 @@ const LeadStepTwo = ({
         Dein geschätzter Jahresstromverbrauch?
       </h3>
       <p className={`${styles.stepTwoText} ${inter.className}`}>
-        Sie finden Ihren Stromverbrauch auf Ihrer aktuellen Jahresabrechnung des
-        Energieversorgers
+        Du findest deinen Stromverbrauch auf deiner aktuellen Jahresabrechnung
+        des Energieversorgers
       </p>
       <div className={styles.stepTwoWrap}>
         <div className={styles.stepTwoLabelWrap}>

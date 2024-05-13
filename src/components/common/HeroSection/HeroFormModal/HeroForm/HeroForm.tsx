@@ -41,8 +41,10 @@ const HeroForm: React.FC<Props> = ({ hideModal }) => {
     validationSchema: Yup.object({
       userName: Yup.string().required('Required'),
       userPhone: Yup.number().typeError('Invalid number').required('Required'),
-      userEmail: Yup.string().email('Invalid email address'),
-      userAddress: Yup.string(),
+      userEmail: Yup.string()
+        .email('Invalid email address')
+        .required('Required'),
+      userAddress: Yup.string().required('Required'),
     }),
     onSubmit: async ({ userName, userPhone, userEmail, userAddress }) => {
       setIsLoading(true);
@@ -71,10 +73,10 @@ const HeroForm: React.FC<Props> = ({ hideModal }) => {
       className={`${styles.heroForm} ${inter.className}`}
     >
       <label className={styles.heroLabel}>
-        Vorname*
+        Vor- und Nachname*
         <input
           className={`${styles.heroInput} ${touched.userName && errors.userName && styles.error}`}
-          placeholder="Vorname"
+          placeholder="Vor- und Nachname"
           {...getFieldProps('userName')}
         />
         {touched.userName && errors.userName && (
@@ -101,7 +103,7 @@ const HeroForm: React.FC<Props> = ({ hideModal }) => {
         placeholder={'Welche Art der Beratung wünschst du?'}
       />
       <label className={styles.heroLabel}>
-        E-Mail
+        E-Mail*
         <input
           placeholder="E-Mail"
           className={`${styles.heroInput} ${touched.userEmail && errors.userEmail && styles.error}`}
@@ -112,9 +114,9 @@ const HeroForm: React.FC<Props> = ({ hideModal }) => {
         )}
       </label>
       <label className={styles.heroLabel}>
-        Adresse des Projekts
+        Anschrift der geplanten PV-Anlage*
         <input
-          placeholder="Adresse des Projekts"
+          placeholder="Anschrift der geplanten PV-Anlage"
           className={`${styles.heroInput} ${touched.userAddress && errors.userAddress && styles.error}`}
           {...getFieldProps('userAddress')}
         />

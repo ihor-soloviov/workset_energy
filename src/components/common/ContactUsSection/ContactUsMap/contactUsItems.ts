@@ -12,7 +12,7 @@ export const contactUsItems: ContactUsItem[] = [
   },
   {
     title: 'Telefon-Nr.',
-    text: '+49-73-114-613-210',
+    text: '+49 731 146 132 10',
     href: 'tel:+4973114613210',
   },
 ];

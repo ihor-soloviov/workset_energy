@@ -47,10 +47,10 @@ const HeroFormModal = () => {
       </div>
 
       <div className={`${styles.heroFormContainer}`}>
-        <h2 className={styles.heroTitle}>Kontaktiere uns</h2>
+        <h2 className={styles.heroTitle}>Jetzt Angebot erhalten</h2>
         <p className={styles.heroText}>
-          Bitte fülle das untenstehende Formular aus und wir werden uns in Kürze
-          mit dir in Verbindung setzen
+          Bitte fülle das Formular aus und unser Fachberater nimmt in Kürze
+          Kontakt zu dir auf
         </p>
         <HeroForm hideModal={sendModalForm} />
       </div>

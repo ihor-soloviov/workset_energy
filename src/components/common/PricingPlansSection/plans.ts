@@ -11,8 +11,7 @@ export const plans: PlanT[] = [
   {
     price: '14.616 EUR',
     name: 'Huawei',
-    article:
-      'Starte in die E-Mobilität mit dem "Huawei -Paket – die ideale Wallbox-Lösung für Einsteiger, die Wert auf Qualität und Effizienz legen',
+    article: `Das 'Huawei'-Paket bietet fortschrittliche, effiziente Technologie und Energieverwaltung für ein nachhaltiges Zuhause`,
     imageMob: plan1Mob,
     imageDesk: plan1Desk,
     benefits: [
@@ -41,8 +40,7 @@ export const plans: PlanT[] = [
   {
     price: '22.300 EUR',
     name: 'Enphase',
-    article:
-      'Wähle “Enphase” für höchste Ladeleistung und smarte Technologie, um dein Elektrofahrzeug schnell und intelligent zu laden',
+    article: `Mit dem 'Enphase'-Paket erzielst du höchste Leistung und smarte Steuerung, ideal für effizientes Energiemanagement`,
     imageMob: plan3Mob,
     imageDesk: plan3Desk,
     benefits: [

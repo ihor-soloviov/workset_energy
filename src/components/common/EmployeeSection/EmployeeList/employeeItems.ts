@@ -17,7 +17,7 @@ type EmployeeItem = {
 export const employeeItems: EmployeeItem[] = [
   {
     title: 'Unsere Berater',
-    text: 'Unser Beraterteam besteht aus engagierten Fachleuten, die von der Effektivität von Solarenergie überzeugt sind. Sie beantworten gerne alle deine Fragen und erarbeiten gemeinsam mit dir die beste Option für die Einrichtung deiner Photovoltaikanlage. Jeder Kunde erhält einen persönlichen Betreuer, der ihn von Anfang bis Ende begleitet',
+    text: 'Unser Berater Team besteht aus engagierten Fachleuten, die von der Effektivität von Solarenergie überzeugt sind. Sie beantworten gerne alle deine Fragen und erarbeiten gemeinsam mit dir die beste Option für die Einrichtung deiner Photovoltaikanlage. Jeder Kunde erhält einen persönlichen Betreuer, der ihn von Anfang bis zum Ende begleitet',
     imgMob: employeeFirstImgMob,
     imgDesc: employeeFirstImgDesc,
   },

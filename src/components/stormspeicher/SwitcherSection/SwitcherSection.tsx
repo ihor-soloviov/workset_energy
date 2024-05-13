@@ -24,14 +24,14 @@ const SwitcherSection = () => {
             <p
               className={`${styles.switcherArticle} ${isDark ? styles.switcherArticleDark : ''} ${inter.className}`}
             >
-              Die Abbildung rechts zeigt dir, wie das funktioniert. Tagsüber
+              Die folgende Abbildung zeigt dir, wie das funktioniert. Tagsüber
               produzieren deine Photovoltaikmodule Strom, der oft nicht sofort
-              verbraucht wird, z. B. wenn du nicht zu Hause bist. Dann wird die
-              gesamte Energie ins Netz zurückgespeist. Mit einem Stromspeicher
-              kannst du jedoch deine Energieunabhängigkeit um bis zu 60-80 %
-              erhöhen. Der Strom, den du sonst an das Stromnetz abgeben würdest,
-              wird im Stromspeicher gesammelt und steht dir dann am Abend zur
-              Verfügung
+              verbraucht wird, z. B. wenn du nicht zu Hause bist. Im Zweifel
+              wird die gesamte Energie ins Stromnetz eingespeist. Mit einem
+              Stromspeicher kannst du jedoch deine Energieunabhängigkeit um bis
+              zu 60-80 % erhöhen. Der Strom, den du sonst an das Stromnetz
+              abgeben würdest, wird im Stromspeicher gesammelt und steht dir
+              dann am Abend und in der Nacht zur Verfügung
             </p>
           </article>
 

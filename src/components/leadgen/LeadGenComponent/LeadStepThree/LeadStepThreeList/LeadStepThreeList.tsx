@@ -20,8 +20,8 @@ const LeadStepThreeList = ({
   stepThreeValue,
 }: LeadStepThreeListProps) => {
   const leadStepThreeItems: LeadStepThreeItem[] = [
-    { title: 'Vor dem Jahr 200', icon: LeadStepFirstIcon },
-    { title: 'Nach dem Jahr 200', icon: LeadStepSecondIcon },
+    { title: 'Vor dem Jahr 2000', icon: LeadStepFirstIcon },
+    { title: 'Nach dem Jahr 2000', icon: LeadStepSecondIcon },
     { title: 'Vor Kurzem', icon: LeadStepThirdIcon },
     { title: 'In Planung', icon: LeadStepFourthIcon },
   ];

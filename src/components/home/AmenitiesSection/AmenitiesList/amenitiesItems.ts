@@ -16,7 +16,7 @@ export const amenitiesItems: AmenitiesItem[] = [
     icon: AmenitiesFirstIcon,
   },
   {
-    text: 'Vom unterschriebenen Vertrag bis zum finalen Anschluss der Anlage vergeht nur 1 Monat!',
+    text: 'Vom unterschriebenen Auftrag bis zum finalen Anschluss der Anlage vergehen maximal 2 Monate!',
     title: 'Wir sind schnell',
     icon: AmenitiesSecondIcon,
   },

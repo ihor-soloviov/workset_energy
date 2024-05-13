@@ -12,15 +12,12 @@ const LeadStepSeven = ({
 }: LeadStepProps) => {
   return (
     <div className={styles.stepSevenMainWrap}>
-      <h3 className={styles.stepSevenMainTitle}>Glückwunsh!</h3>
+      <h3 className={styles.stepSevenMainTitle}>Glückwunsch!</h3>
       <p className={`${styles.stepSevenText} ${inter.className}`}>
-        Gerne erstellen wir eine kostenlose Wirtschaftlichkeitsanalyse für dein
-        PV-Projekt!
+        Du hast es fast geschafft und unser Team erstellt dir eine
+        Wirtschaftlichkeitsanalyse für dein PV-Projekt!
       </p>
-      <p className={`${styles.stepSevenTextDesc} ${inter.className}`}>
-        Wir künen dir eine kostenfreie Wirtschaftlichkeitsanalyse für dich
-        PV-Projekt erstellen!
-      </p>
+
       <LeadStepSevenForm
         formData={formData}
         setFormData={setFormData}

@@ -80,7 +80,10 @@ const ContactUsMap = () => {
             className={`${styles.contactUsLink} ${styles.address} ${inter.className}`}
           >
             Magirus-Deutz-Str. 12
-            <br className={styles.contactUsBr} />
+          </p>
+          <p
+            className={`${styles.contactUsLink} ${styles.address} ${inter.className}`}
+          >
             89077 Ulm
           </p>
         </div>

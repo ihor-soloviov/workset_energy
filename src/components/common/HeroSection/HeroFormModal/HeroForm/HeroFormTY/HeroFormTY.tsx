@@ -52,14 +52,14 @@ const HeroFormTY = () => {
         <h2 className={styles.heroThankTitle}>WorkSET Energy sagt Danke!</h2>
         <p className={`${styles.heroThankText} ${inter.className}`}>
           Wir haben deine Anfrage erhalten und freuen uns, dich auf deinem Weg
-          zu nachhaltiger Energie unterstützen zu dürfen
+          zu nachhaltiger Energie unterstützen zu dürfen.
         </p>
         <Button
           handleClick={hideThankYou}
           className={styles.heroThankBtn}
           type="button"
         >
-          Hauptseite
+          Home
         </Button>
       </div>
     </div>

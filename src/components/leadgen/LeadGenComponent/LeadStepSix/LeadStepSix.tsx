@@ -12,11 +12,10 @@ const LeadStepSix = ({
   return (
     <div className={styles.stepSixMainWrap}>
       <h3 className={styles.stepSixMainTitle}>
-        Wo ist das PV-Projekt geplant?
+        Wo ist dein PV-Projekt geplant?
       </h3>
       <p className={`${styles.stepSixText} ${inter.className}`}>
-        Geben Sie die folgenden Details an, damit wir ein genaueres Angebot
-        erstellen können
+        Gebe bitte die Adresse an, an der die PV-Anlage installiert werden soll
       </p>
       <LeadStepSixForm
         setFormData={setFormData}

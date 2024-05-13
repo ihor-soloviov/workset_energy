@@ -28,13 +28,13 @@ const LeadStepOne = ({
     <div className={styles.stepOneMainWrap}>
       <h2 className={styles.stepOneMainTitle}>
         Was kostet dich dein
-        <br className={styles.stepOneBr} /> PV-Project?
+        <br className={styles.stepOneBr} /> PV-Projekt?
       </h2>
       <p className={`${styles.stepOneText} ${inter.className}`}>
-        Füllen Sie das kurze Formular aus und erhalten Sie Ihr individuelles
-        Angebot!
+        Füllen Sie das kurze Formular aus und erhalten Sie erhalte dein
+        individuelles Angebot!
       </p>
-      <h3 className={styles.stepOneTitle}>Welcher  Immobilieentyp</h3>
+      <h3 className={styles.stepOneTitle}>Immobilientyp</h3>
 
       <LeadStepOneList
         stepOneValue={stepOneValue}

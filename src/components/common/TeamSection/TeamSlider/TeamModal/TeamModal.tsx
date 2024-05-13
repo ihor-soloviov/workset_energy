@@ -48,7 +48,7 @@ const TeamModal = ({
         </div>
         <div className={styles.modalContainer}>
           <h2 className={styles.modalMainTitle}>
-            Kontaktangaben des Vertriebsleiter:
+            Jetzt anrufen und Beratung vereinbaren:
           </h2>
           <div className={styles.modalTitleWrap}>
             <h3 className={styles.modalTitle}>{`Herr ${title}`}</h3>
@@ -63,7 +63,7 @@ const TeamModal = ({
             {[0, 1].map((_, index) => (
               <li className={styles.modalItem} key={index}>
                 <p className={styles.modalLabel}>
-                  {index === 0 ? 'Email:' : 'Telefon-Nr.:'}
+                  {index === 0 ? 'E-Mail:' : 'Telefon-Nr.:'}
                 </p>
                 <div className={styles.modalBottomWrap}>
                   <div className={styles.modalLinkWrap}>

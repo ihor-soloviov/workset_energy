@@ -1,5 +1,5 @@
 'use client';
-
+import { useRouter } from 'next/navigation';
 import Button from '@/components/common/Button/Button';
 import styles from './QuestionList.module.css';
 import DropArrowIcon from '/public/icons/drop-arrow.svg';
@@ -11,7 +11,7 @@ import { renderText } from '@/utils/renderText';
 
 const QuestionList = () => {
   const [activeItems, setActiveItems] = useState<Array<string>>([]);
-
+  const router = useRouter();
   const toggleActiveItem = (title: string) => {
     let result = [];
     if (activeItems?.includes(title)) {
@@ -22,13 +22,17 @@ const QuestionList = () => {
     setActiveItems(result);
   };
 
-  const handleBtnClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleBtnClick = (
+    e: React.MouseEvent<HTMLButtonElement>,
+    leadSrc?: boolean,
+  ) => {
     e.stopPropagation();
-    scrollToSection('contact');
+
+    leadSrc ? router.push('/leadgen') : scrollToSection('contact');
   };
 
   const renderListItems = (items: QuestItem[]) =>
-    items.map(({ text, title }) => (
+    items.map(({ text, title, leadSrc }) => (
       <li
         onClick={() => toggleActiveItem(title)}
         key={title}
@@ -54,7 +58,7 @@ const QuestionList = () => {
         >
           {renderText(text, styles.questText, true)}
           <Button
-            handleClick={handleBtnClick}
+            handleClick={e => handleBtnClick(e, leadSrc)}
             type="button"
             className={styles.questConsultBtn}
           >

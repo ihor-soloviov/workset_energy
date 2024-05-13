@@ -1,11 +1,9 @@
 'use client';
-import Button from '@/components/common/Button/Button';
 import styles from './UberUnsHero.module.css';
 import { inter } from '@/utils/fonts';
 import Image from 'next/image';
 import uberHeroImgMob from '/public/images/uberuns-page/uberuns-hero-mob.webp';
 import uberHeroImgDesk from '/public/images/uberuns-page/uberuns-hero-desc.webp';
-import { scrollToSection } from '@/utils/scroll';
 const UberUnsHero = () => {
   return (
     <section className={styles.uberHeroSection}>
@@ -31,12 +29,12 @@ const UberUnsHero = () => {
       <div className={styles.uberHeroContainer}>
         <>
           <h2 className={styles.uberHeroTitle}>
-            Ihr zuverlässiger Partner für
-            <br className={styles.uberBr} /> PV-Anlage
+            Dein zuverlässiger Partner für
+            <br className={styles.uberBr} /> PV-Anlagen
           </h2>
           <p className={`${styles.uberHeroText} ${inter.className}`}>
-            Wir erleichtern Ihnen den Übergang zu einer nachhaltigen Zukunft mit
-            Solarlösungen
+            Wir erleichtern dir den Übergang zu einer nachhaltigen Zukunft mit
+            Photovoltaik Lösungen
           </p>
         </>
       </div>

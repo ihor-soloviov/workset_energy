@@ -42,7 +42,7 @@ const ContactUsForm = () => {
         .email('Invalid email address')
         .required('Required'),
       userPhone: Yup.number().typeError('Invalid number').required('Required'),
-      userAddress: Yup.string(),
+      userAddress: Yup.string().required('Required'),
       userComment: Yup.string(),
     }),
     onSubmit: async ({
@@ -83,9 +83,9 @@ const ContactUsForm = () => {
     >
       <div className={styles.contactUsLabelWrap}>
         <label className={styles.contactUsLabel}>
-          Name, Nachname*
+          Vor- und Nachname*
           <input
-            placeholder="Name, Nachname"
+            placeholder="Vor- und Nachname"
             className={`${styles.contactUsInput} ${touched.userName && errors.userName && styles.error}`}
             {...getFieldProps('userName')}
           />
@@ -97,7 +97,7 @@ const ContactUsForm = () => {
         <label className={`${styles.contactUsLabel} ${styles.email}`}>
           E-Mail*
           <input
-            placeholder="E-Mail"
+            placeholder="E-Mail*"
             className={`${styles.contactUsInput} ${touched.userEmail && errors.userEmail && styles.error}`}
             {...getFieldProps('userEmail')}
           />
@@ -120,9 +120,9 @@ const ContactUsForm = () => {
         </label>
 
         <label className={styles.contactUsLabel}>
-          Adresse des Projekts
+          Anschrift der geplanten PV-Anlage*
           <input
-            placeholder="Adresse des Projekts"
+            placeholder="Anschrift der geplanten PV-Anlage"
             className={`${styles.contactUsInput}`}
             {...getFieldProps('userAddress')}
           />

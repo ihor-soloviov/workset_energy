@@ -7,7 +7,7 @@ import StormSlide2Desk from '/public/images/stormspeicher-page/StormSlide2Desk.j
 export const stormItems: VorteileSliderItems[] = [
   {
     title: 'Stromspeicher Vorteile',
-    text: 'Mit der Integration eines Batteriespeichers in deine Photovoltaikanlage sorgst du Tag und Nacht für solarbetriebene Beleuchtung. Du kannst dein Haus aogarmit Notstrom versorgen oder es bei Bedarf komplett vom Stromnetz trennen. Eine dezentrale Stromversorgung und die Speicherung von Strom sind die großen Themen von morgen',
+    text: 'Mit der Integration eines Batteriespeichers in deine Photovoltaikanlage sorgst du Tag und Nacht für solarbetriebene Beleuchtung. Du kannst dein Haus sogar mit Notstrom versorgen oder es bei Bedarf komplett vom Stromnetz trennen. Eine dezentrale Stromversorgung und die Speicherung von Strom sind die großen Themen von morgen',
   },
   {
     title: 'Speichern von überschüssigem Strom',
