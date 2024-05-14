@@ -25,7 +25,7 @@ export const stormspeicherHero = {
   text: 'Eine zuverlässige Resrve, die überschüssigen Strom für den künftigen Verbrauch speichert',
   imgDesc: '/images/stormspeicher-page/stormspeicher-hero-desc.webp',
   imgDescBlur: '/images/stormspeicher-page/stormspeicher-hero-desc-blur.webp',
-  className: 'Stromspeicher',
+  className: 'stromspeicher',
 };
 
 export const wallboxHero = {
