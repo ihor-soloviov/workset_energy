@@ -124,14 +124,14 @@
   .teamImgBtn {
     display: flex;
     padding: 15px 50px;
-    color: var(--gray-input);
+    color: var(--red-main);
     justify-content: center;
     align-items: center;
     border-radius: 28px;
-    background-color: var(--red-main);
+    background-color: var(--white-main);
     width: max-content;
     height: 50px;
-    border: 1px solid var(--red-main);
+    border: 1px solid var(--white-main);
     font-size: 16px;
     font-weight: 600;
     transition:
@@ -141,9 +141,9 @@
   }
 
   .teamImgBtn:is(:hover, :focus) {
-    background-color: var(--white-main);
-    border-color: var(--white-main);
-    color: var(--red-main);
+    background-color: var(--red-main);
+    border-color: var(--red-main);
+    color: var(--white-main);
   }
 }
 @media screen and (min-width: 1728px) {

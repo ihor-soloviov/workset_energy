@@ -2,10 +2,9 @@ import React from 'react';
 import HeroSection from '@/components/common/HeroSection/HeroSection';
 import VideoSection from '@/components/common/VideoSection/VideoSection';
 import VorteileSection from '@/components/common/VorteileSection/VorteileSection';
-import { stormspeicherHero } from '@/utils/hero';
-import { stormSteicherVideo } from '@/utils/video';
+import { stromspeicherHero } from '@/utils/hero';
 
-import SwitcherSection from '@/components/stormspeicher/SwitcherSection/SwitcherSection';
+import SwitcherSection from '@/components/stromspeicher/SwitcherSection/SwitcherSection';
 import PricingPlansSection from '@/components/common/PricingPlansSection/PricingPlansSection';
 import EmployeeSection from '@/components/common/EmployeeSection/EmployeeSection';
 import GoogleComSection from '@/components/common/GoogleComSection/GoogleComSection';
@@ -13,11 +12,10 @@ import TeamSection from '@/components/common/TeamSection/TeamSection';
 import ContactUsSection from '@/components/common/ContactUsSection/ContactUsSection';
 import RedHelpSection from '@/components/common/RedHelpSection/RedHelpSection';
 
-const Stormspeicher = () => {
+const Stromspeicher = () => {
   return (
     <>
-      <HeroSection {...stormspeicherHero} />
-      {/* <VideoSection {...stormSteicherVideo} /> */}
+      <HeroSection {...stromspeicherHero} />
       <VorteileSection />
       <SwitcherSection />
       <PricingPlansSection />
@@ -30,4 +28,4 @@ const Stormspeicher = () => {
   );
 };
 
-export default Stormspeicher;
+export default Stromspeicher;

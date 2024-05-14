@@ -1,8 +1,8 @@
 import { ImportedImages, VorteileSliderItems } from '@/types/infoTypes';
-import StormSlide1Mob from '/public/images/stormspeicher-page/StormSlide1Mob.webp';
-import StormSlide1Desk from '/public/images/stormspeicher-page/StormSlide1Desk.jpg';
-import StormSlide2Mob from '/public/images/stormspeicher-page/StormSlide2Mob.jpg';
-import StormSlide2Desk from '/public/images/stormspeicher-page/StormSlide2Desk.jpg';
+import StromSlide1Mob from '/public/images/stromspeicher-page/StromSlide1Mob.webp';
+import StromSlide1Desk from '/public/images/stromspeicher-page/StromSlide1Desk.jpg';
+import StromSlide2Mob from '/public/images/stromspeicher-page/StromSlide2Mob.jpg';
+import StromSlide2Desk from '/public/images/stromspeicher-page/StromSlide2Desk.jpg';
 
 export const stormItems: VorteileSliderItems[] = [
   {
@@ -17,11 +17,11 @@ export const stormItems: VorteileSliderItems[] = [
 
 export const stormImages: ImportedImages[] = [
   {
-    mobile: StormSlide1Mob,
-    desktop: StormSlide1Desk,
+    mobile: StromSlide1Mob,
+    desktop: StromSlide1Desk,
   },
   {
-    mobile: StormSlide2Mob,
-    desktop: StormSlide2Desk,
+    mobile: StromSlide2Mob,
+    desktop: StromSlide2Desk,
   },
 ];

@@ -21,13 +21,11 @@ const Job = ({ params: { id } }: Props) => {
   const [response, setResponse] = useState<KarrierJobItem | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
-  // //console.log(response);
 
   useEffect(() => {
     const fetchDataAndUpdateState = async () => {
       setIsLoading(true);
       const response = await fetchJobData(id);
-      //console.log(response);
 
       response ? setResponse(response) : setError(true);
       setIsLoading(false);
@@ -35,10 +33,6 @@ const Job = ({ params: { id } }: Props) => {
 
     fetchDataAndUpdateState();
   }, [id]);
-
-  // useEffect(() => {
-  //   error
-  // }, [error]);
 
   return (
     <>
