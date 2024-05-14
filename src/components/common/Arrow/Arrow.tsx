@@ -1,4 +1,3 @@
-import ArrowIcon from '/public/icons/small-arrow-btn.svg';
 import styles from './Arrow.module.css';
 import React from 'react';
 
