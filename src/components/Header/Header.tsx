@@ -10,10 +10,11 @@ import HeaderNavList from './HeaderNavList/HeaderNavList';
 import WorksetColorIcon from '/public/icons/workset-color.svg';
 import WorksetIcon from '/public/icons/workset.svg';
 import BurgerIcon from '/public/icons/burger.svg';
-import ArrowIcon from '/public/icons/small-arrow-btn.svg';
+
 import { usePathname } from 'next/navigation';
 import { useGlobalStore } from '@/store/global-store';
 import { pathnames, jobPathRegex, blackList } from '@/utils/pathnames';
+import Arrow from '../common/Arrow/Arrow';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,6 +22,10 @@ const Header = () => {
   const [position, setPosition] = useState(0);
   const [visible, setVisible] = useState(true);
   const pathname = usePathname();
+
+  const { setIsDesktop } = useGlobalStore();
+
+  const handleMenuClick = () => setIsMenuOpen(!isMenuOpen);
 
   useEffect(() => {
     if (window) {
@@ -42,10 +47,6 @@ const Header = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   });
-
-  const { setIsDesktop } = useGlobalStore();
-
-  const handleMenuClick = () => setIsMenuOpen(!isMenuOpen);
 
   useEffect(() => {
     setIsDesktop(window.innerWidth >= 1440);
@@ -100,7 +101,7 @@ const Header = () => {
               className={`${styles.headerLeadLink} ${pathname === '/karriere/jobs' ? styles.jobs : ''}`}
             >
               Jetzt Berechnen
-              <ArrowIcon className={styles.headerIcon} />
+              <Arrow className={styles.headerIcon} />
             </Link>
           </div>
 

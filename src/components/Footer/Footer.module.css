@@ -49,6 +49,7 @@
 .UpBtnIcon {
   stroke: var(--white-main);
   transition: stroke 250ms var(--cubic);
+  transform: rotate(-90deg);
 }
 
 .footerUpBtn:hover {

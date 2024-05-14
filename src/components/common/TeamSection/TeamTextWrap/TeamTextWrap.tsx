@@ -4,7 +4,8 @@ import styles from '../TeamSection.module.css';
 import { inter } from '@/utils/fonts';
 import useObserver from '@/hooks/useObserver';
 import Button from '../../Button/Button';
-import ArrowIcon from '/public/icons/slide-arrow.svg';
+
+import Arrow from '../../Arrow/Arrow';
 
 type Props = {
   handleImage: (value: string) => void;
@@ -28,14 +29,14 @@ const TeamTextWrap: React.FC<Props> = ({ handleImage }) => {
               type="button"
               className={styles.carouselBtn}
             >
-              <ArrowIcon className={styles.prevArrow} />
+              <Arrow className={styles.prevArrow} />
             </Button>
             <Button
               handleClick={() => handleImage('next')}
               type="button"
               className={styles.carouselBtn}
             >
-              <ArrowIcon className={styles.nextArrow} />
+              <Arrow className={styles.nextArrow} />
             </Button>
           </div>
         </div>

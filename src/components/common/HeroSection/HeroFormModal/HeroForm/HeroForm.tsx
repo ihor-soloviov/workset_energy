@@ -4,7 +4,7 @@ import styles from './HeroForm.module.css';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { inter, interTight } from '@/utils/fonts';
-import ArrowIcon from '/public/icons/small-arrow-btn.svg';
+
 import Button from '../../../Button/Button';
 import { formDataPost } from '@/utils/api';
 import { useEffect, useState } from 'react';
@@ -13,6 +13,7 @@ import { useGlobalStore } from '@/store/global-store';
 import { questOptions } from '@/utils/questOptions';
 import FormSelect from '@/components/common/FormSelect/FormSelect';
 import { Option } from 'react-dropdown';
+import Arrow from '@/components/common/Arrow/Arrow';
 
 type Props = {
   hideModal: () => void;
@@ -144,7 +145,7 @@ const HeroForm: React.FC<Props> = ({ hideModal }) => {
         ) : (
           <>
             Senden
-            <ArrowIcon className={styles.heroIcon} />
+            <Arrow className={styles.heroIcon} />
           </>
         )}
       </Button>

@@ -4,7 +4,7 @@ import React, { useRef, useState } from 'react';
 import styles from './VisionSlider.module.css';
 import { inter } from '@/utils/fonts';
 import Button from '../../Button/Button';
-import ArrowIcon from '/public/icons/slide-arrow.svg';
+
 import Image from 'next/image';
 import { visionImages, visionItems } from './slides';
 import SliderDots from '../../SliderDots/SliderDots';
@@ -12,6 +12,7 @@ import { useGlobalStore } from '@/store/global-store';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import { Swiper as SwiperType } from 'swiper';
+import Arrow from '../../Arrow/Arrow';
 
 const VisionSlider = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -102,14 +103,14 @@ const VisionSlider = () => {
           type="button"
           className={styles.visionBtn}
         >
-          <ArrowIcon className={styles.prevArrow} />
+          <Arrow className={styles.prevArrow} />
         </Button>
         <Button
           handleClick={handleNextClick}
           type="button"
           className={styles.visionBtn}
         >
-          <ArrowIcon className={styles.nextArrow} />
+          <Arrow className={styles.nextArrow} />
         </Button>
       </div>
       <div className={styles.visionTextWrap}>

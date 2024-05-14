@@ -9,10 +9,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import { Swiper as SwiperType } from 'swiper';
 import commentsData from '../../../../comments.json';
-import ArrowIcon from '/public/icons/slide-arrow.svg';
+
 import StarIcon from '/public/icons/star.svg';
 import Button from '../../Button/Button';
 import { useGlobalStore } from '@/store/global-store';
+import Arrow from '../../Arrow/Arrow';
 
 const GoogleComSlider = () => {
   const comments = commentsData.result.reviews;
@@ -35,7 +36,7 @@ const GoogleComSlider = () => {
         handleClick={() => swiperRef.current?.slidePrev()}
         className={styles.sliderBtnWrap}
       >
-        <ArrowIcon className={styles.prevArrow} />
+        <Arrow className={styles.prevArrow} />
       </Button>
       <Swiper
         className={styles.sliderWrap}
@@ -93,7 +94,7 @@ const GoogleComSlider = () => {
         handleClick={() => swiperRef.current?.slideNext()}
         className={styles.sliderBtnWrap}
       >
-        <ArrowIcon className={styles.nextArrow} />
+        <Arrow className={styles.nextArrow} />
       </Button>
     </div>
   );

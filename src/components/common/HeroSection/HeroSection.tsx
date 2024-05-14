@@ -6,7 +6,7 @@ import { inter } from '@/utils/fonts';
 import Button from '../Button/Button';
 import Image from 'next/image';
 import Link from 'next/link';
-import ArrowIcon from '/public/icons/small-arrow-btn.svg';
+
 import HeroFormModal from './HeroFormModal/HeroFormModal';
 import { useEffect } from 'react';
 import { useGlobalStore } from '@/store/global-store';
@@ -14,6 +14,7 @@ import useObserver from '@/hooks/useObserver';
 import { useModalStore } from '@/store/hero-store';
 import { handleHeader } from '@/utils/handleHeader';
 import { scrollToSection } from '@/utils/scroll';
+import Arrow from '../Arrow/Arrow';
 
 type HeroProps = {
   imgMob: string;
@@ -105,7 +106,7 @@ const HeroSection = ({
             <div className={`${styles.heroBtnWrap} ${styles.heroAnim}`}>
               <Link className={styles.heroLink} href="/leadgen">
                 Jetzt Berechnen
-                <ArrowIcon className={styles.heroIcon} />
+                <Arrow className={styles.heroIcon} />
               </Link>
               <Button
                 handleClick={scrollToTeamSection}

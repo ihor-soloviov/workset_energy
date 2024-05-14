@@ -5,10 +5,10 @@ import MobileNavList from './MobileNavList/MobileNavList';
 import Button from '../../common/Button/Button';
 import MobileContactList from './MobileContactList/MobileContactList';
 import MobileSocialList from './MobileSocialList/MobileSocialList';
-import MenuBtnIcon from '/public/icons/small-arrow-btn.svg';
 import MenuCrossIcon from '/public/icons/cross.svg';
 import Link from 'next/link';
 import { useEffect } from 'react';
+import Arrow from '@/components/common/Arrow/Arrow';
 
 type MobileMenuProps = {
   handleMenuClick: () => void;
@@ -45,7 +45,7 @@ const MobileMenu = ({ handleMenuClick }: MobileMenuProps) => {
           className={styles.menuBtn}
         >
           Jetzt Berechnen
-          <MenuBtnIcon className={styles.menuBtnIcon} />
+          <Arrow className={styles.menuBtnIcon} />
         </Link>
         <MobileContactList />
         <MobileSocialList />

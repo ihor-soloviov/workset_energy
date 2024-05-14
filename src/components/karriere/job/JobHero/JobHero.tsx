@@ -8,6 +8,7 @@ import Image from 'next/image';
 import { currentImg } from './jobHeroItems';
 import type { KarrierJobItem } from '@/types/infoTypes';
 import { scrollToSection } from '@/utils/scroll';
+import Arrow from '@/components/common/Arrow/Arrow';
 
 type JobHeroProps = {
   response: KarrierJobItem | null;
@@ -58,7 +59,7 @@ const JobHero = ({ response }: JobHeroProps) => {
           type="button"
         >
           Mehr Info
-          <BtnArrowIcon className={styles.JobHeroIcon} />
+          <Arrow className={styles.JobHeroIcon} />
         </Button>
       </div>
     </section>

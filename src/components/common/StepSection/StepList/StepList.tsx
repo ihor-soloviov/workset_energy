@@ -7,8 +7,9 @@ import useObserver from '@/hooks/useObserver';
 import { renderText } from '@/utils/renderText';
 import { useGlobalStore } from '@/store/global-store';
 import Button from '../../Button/Button';
-import ArrowIcon from '/public/icons/small-arrow-btn.svg';
+
 import { scrollToSection } from '@/utils/scroll';
+import Arrow from '../../Arrow/Arrow';
 
 const getClass = (index: number) => {
   return (index + 1) % 2 === 0 ? styles.white : '';
@@ -63,7 +64,7 @@ const StepList = () => {
                   type="button"
                 >
                   Zum Angebot
-                  <ArrowIcon className={styles.stepBtnIcon} />
+                  <Arrow className={styles.stepBtnIcon} />
                 </Button>
               )}
             </div>

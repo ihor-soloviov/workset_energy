@@ -2,9 +2,10 @@ import React, { useState, MouseEvent } from 'react';
 import styles from './LeadStepFour.module.css';
 
 import { LeadStepProps } from '../types';
-import LeadIcon from '/public/icons/lead-btn-arrow.svg';
+
 import Button from '@/components/common/Button/Button';
 import LeadStepFourList from './LeadStepFourList/LeadStepFourList';
+import ArrowLead from '@/components/common/ArrowLead/ArrowLead';
 
 const LeadStepFour = ({
   formData,
@@ -49,7 +50,7 @@ const LeadStepFour = ({
         handleClick={handleNextStepClick}
       >
         Weiter
-        <LeadIcon className={styles.leadIcon} />
+        <ArrowLead className={styles.leadIcon} />
       </Button>
     </div>
   );

@@ -1,10 +1,11 @@
 import styles from './EmployeeList.module.css';
 import Image from 'next/image';
 import { inter } from '@/utils/fonts';
-import ArrowIcon from '/public/icons/small-arrow-btn.svg';
+
 import Button from '../../Button/Button';
 import { employeeItems } from './employeeItems';
 import { scrollToSection } from '@/utils/scroll';
+import Arrow from '../../Arrow/Arrow';
 
 type EmployeeListProps = {
   pathname: string;
@@ -41,7 +42,7 @@ const EmployeeList = ({ pathname }: EmployeeListProps) => {
                 type="button"
               >
                 Zum Angebot
-                <ArrowIcon className={styles.employeeIcon} />
+                <Arrow className={styles.employeeIcon} />
               </Button>
             )}
           </div>

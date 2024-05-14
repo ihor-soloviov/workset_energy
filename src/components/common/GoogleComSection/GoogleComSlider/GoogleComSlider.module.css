@@ -161,9 +161,9 @@
 
   .prevArrow {
     transition: stroke 250ms var(--cubic);
+    transform: rotate(180deg);
   }
   .nextArrow {
-    transform: rotate(180deg);
     transition: stroke 250ms var(--cubic);
   }
 

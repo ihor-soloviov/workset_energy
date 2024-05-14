@@ -6,6 +6,7 @@ import { inter } from '@/utils/fonts';
 import { amenitiesItems } from './amenitiesItems';
 import BtnArrowIcon from '/public/icons/small-product-arrow.svg';
 import Link from 'next/link';
+import Arrow from '@/components/common/Arrow/Arrow';
 
 const AmenitiesList = () => {
   return (
@@ -25,7 +26,7 @@ const AmenitiesList = () => {
           <p className={`${styles.amenitiesText} ${inter.className}`}>{text}</p>
           <Link href="/uber-uns" className={styles.amenitiesLink} type="button">
             Mehr Info
-            <BtnArrowIcon className={styles.amenitiesLinkIcon} />
+            <Arrow className={styles.amenitiesLinkIcon} />
           </Link>
         </li>
       ))}

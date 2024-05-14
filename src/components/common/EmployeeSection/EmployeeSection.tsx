@@ -1,13 +1,14 @@
 'use client';
 import styles from './EmployeeSection.module.css';
 import { inter } from '@/utils/fonts';
-import ArrowIcon from '/public/icons/small-arrow-btn.svg';
+
 import Container from '../Container/Container';
 import Button from '../Button/Button';
 import EmployeeList from './EmployeeList/EmployeeList';
 import RecycleTextWrap from '../RecycleTextWrap/RecycleTextWrap';
 import { usePathname } from 'next/navigation';
 import { scrollToSection } from '@/utils/scroll';
+import Arrow from '../Arrow/Arrow';
 
 const EmployeeSection = () => {
   const pathname = usePathname();
@@ -28,7 +29,7 @@ const EmployeeSection = () => {
             type="button"
           >
             Zum Angebot
-            <ArrowIcon className={styles.employeeIcon} />
+            <Arrow className={styles.employeeIcon} />
           </Button>
         )}
       </Container>

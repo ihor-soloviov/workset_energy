@@ -29,7 +29,7 @@
   transition: stroke 250ms var(--cubic);
 }
 
-.nextArrow {
+.prevArrow {
   transform: rotate(180deg);
 }
 

@@ -4,7 +4,7 @@ import React, { useRef, useState } from 'react';
 import { inter } from '@/utils/fonts';
 import styles from './VorteileSlider.module.css';
 import Button from '../../Button/Button';
-import ArrowIcon from '/public/icons/slide-arrow.svg';
+
 import SliderDots from '../../SliderDots/SliderDots';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
@@ -16,6 +16,7 @@ import { stormImages, stormItems } from '@/utils/stormSlides';
 import { wallImages, wallItems } from '@/utils/wallSlides';
 import { usePathname } from 'next/navigation';
 import { ImportedImages, VorteileSliderItems } from '@/types/infoTypes';
+import Arrow from '../../Arrow/Arrow';
 
 const VorteileSlider = () => {
   const { isDesktop } = useGlobalStore();
@@ -168,14 +169,14 @@ const VorteileSlider = () => {
               type="button"
               className={styles.sliderBtn}
             >
-              <ArrowIcon className={styles.prevArrow} />
+              <Arrow className={styles.prevArrow} />
             </Button>
             <Button
               handleClick={handleNextClick}
               type="button"
               className={styles.sliderBtn}
             >
-              <ArrowIcon className={styles.nextArrow} />
+              <Arrow className={styles.nextArrow} />
             </Button>
           </div>
         </div>

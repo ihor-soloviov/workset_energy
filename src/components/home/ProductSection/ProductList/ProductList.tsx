@@ -7,6 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { productsItems } from './productItems';
 import useObserver from '@/hooks/useObserver';
+import Arrow from '@/components/common/Arrow/Arrow';
 
 const ProductList = () => {
   useObserver(`.${styles.productItem}`, `${styles.productItemVisible}`);
@@ -41,7 +42,7 @@ const ProductList = () => {
               </p>
               <Link href={href} className={styles.productLink}>
                 Mehr Info
-                <BtnArrowIcon className={styles.productIcon} />
+                <Arrow className={styles.productIcon} />
               </Link>
             </div>
           </li>

@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Button from '@/components/common/Button/Button';
 import { objectItems } from './slides';
 import LocationIcon from '/public/icons/location.svg';
-import ArrowIcon from '/public/icons/slide-arrow.svg';
+
 import { inter } from '@/utils/fonts';
 import { scrollToSection } from '@/utils/scroll';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -14,6 +14,7 @@ import { Navigation } from 'swiper/modules';
 import { Swiper as SwiperType } from 'swiper';
 import SliderDots from '@/components/common/SliderDots/SliderDots';
 import { useGlobalStore } from '@/store/global-store';
+import Arrow from '@/components/common/Arrow/Arrow';
 
 const ObjectSlider = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -32,14 +33,14 @@ const ObjectSlider = () => {
           type="button"
           className={styles.sliderNavBtn}
         >
-          <ArrowIcon className={styles.prevArrow} />
+          <Arrow className={styles.prevArrow} />
         </Button>
         <Button
           handleClick={() => swiperRef.current?.slideNext()}
           type="button"
           className={styles.sliderNavBtn}
         >
-          <ArrowIcon className={styles.nextArrow} />
+          <Arrow className={styles.nextArrow} />
         </Button>
       </div>
       <Swiper
