@@ -18,13 +18,13 @@ export const pvAnlagenHero = {
   className: 'pvAnlagen',
 };
 
-export const stormspeicherHero = {
-  imgMob: '/images/stormspeicher-page/stormspeicher-hero-mob.webp',
-  imgMobBlur: '/images/stormspeicher-page/stormspeicher-hero-mob-blur.webp',
+export const stromspeicherHero = {
+  imgMob: '/images/stromspeicher-page/stromspeicher-hero-mob.webp',
+  imgMobBlur: '/images/stromspeicher-page/stromspeicher-hero-mob-blur.webp',
   title: 'Stromspeicher',
   text: 'Eine zuverlässige Resrve, die überschüssigen Strom für den künftigen Verbrauch speichert',
-  imgDesc: '/images/stormspeicher-page/stormspeicher-hero-desc.webp',
-  imgDescBlur: '/images/stormspeicher-page/stormspeicher-hero-desc-blur.webp',
+  imgDesc: '/images/stromspeicher-page/stromspeicher-hero-desc.webp',
+  imgDescBlur: '/images/stromspeicher-page/stromspeicher-hero-desc-blur.webp',
   className: 'stromspeicher',
 };
 

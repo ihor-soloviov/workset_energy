@@ -28,8 +28,6 @@ const AngebotForm = () => {
     }
   };
 
-  console.log(selectedFile);
-
   const {
     handleSubmit,
     errors,

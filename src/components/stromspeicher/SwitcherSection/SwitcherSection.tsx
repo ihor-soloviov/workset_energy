@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import styles from './SwitcherSection.module.css';
 import ToggleButton from '../ToggleButton/ToggleButton';
-import Video from '@/components/stormspeicher/Video/Video';
+import Video from '@/components/stromspeicher/Video/Video';
 import { inter } from '@/utils/fonts';
 
 const SwitcherSection = () => {

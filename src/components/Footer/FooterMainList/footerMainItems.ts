@@ -22,12 +22,12 @@ export const navLinkItems: NavLinkItem[] = [
     href: '/stromspeicher',
     text: 'Stromspeicher',
     links: [
-      { text: 'Stromspeicher Vorteile', href: '/stormspeicher#storm-vorteile' },
-      { text: 'Verfügbare Tarifpläne', href: '/stormspeicher#tarifpläne' },
-      { text: 'Unsere Mitarbeiter', href: '/stormspeicher#mitarbeiter' },
-      { text: 'Feedback', href: '/stormspeicher#feedback' },
-      { text: 'Unsere Team', href: '/stormspeicher#team-section' },
-      { text: 'Kontakt', href: '/stormspeicher#contact' },
+      { text: 'Stromspeicher Vorteile', href: '/stromspeicher#strom-vorteile' },
+      { text: 'Verfügbare Tarifpläne', href: '/stromspeicher#tarifpläne' },
+      { text: 'Unsere Mitarbeiter', href: '/stromspeicher#mitarbeiter' },
+      { text: 'Feedback', href: '/stromspeicher#feedback' },
+      { text: 'Unsere Team', href: '/stromspeicher#team-section' },
+      { text: 'Kontakt', href: '/stromspeicher#contact' },
     ],
   },
   {

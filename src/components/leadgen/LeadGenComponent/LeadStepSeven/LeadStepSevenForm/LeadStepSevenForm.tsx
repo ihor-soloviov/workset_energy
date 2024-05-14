@@ -59,7 +59,7 @@ const LeadStepSevenForm = ({
           }
         },
       );
-      console.log(leadGenData);
+
       await formDataPost(leadGenData, 'leadgen', setPopupAction);
 
       setIsLoading(false);

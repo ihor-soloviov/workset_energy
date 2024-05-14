@@ -22,6 +22,25 @@ const VorteileSlider = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const pathname = usePathname();
 
+  const getCurrentId = () => {
+    let id;
+    switch (pathname) {
+      case '/pv-anlagen':
+        id = 'pv-vorteile';
+        return id;
+      case '/stromspeicher':
+        id = 'strom-vorteile';
+        return id;
+      case '/wallbox':
+        id = 'wallbox-vorteile';
+        return id;
+
+      default:
+        id = '';
+        return id;
+    }
+  };
+
   const getCurrentSlideData = (type: string, pathname: string) => {
     let currentSlideData: any;
     switch (pathname) {
@@ -72,7 +91,7 @@ const VorteileSlider = () => {
   };
 
   return (
-    <div className={styles.vorteileSliderWrap}>
+    <div id={getCurrentId()} className={styles.vorteileSliderWrap}>
       <div className={styles.sliderImgWrap}>
         <Swiper
           className={styles.sliderWrap}

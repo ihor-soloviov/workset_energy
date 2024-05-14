@@ -27,7 +27,6 @@ const LeadStepSixForm = ({
         houseNumber: Yup.string().required('Required'),
       }),
       onSubmit: values => {
-        console.log(values);
         setFormData({ ...formData, pvPlanForm: values });
         setStep(step + 1);
       },
