@@ -18,6 +18,14 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="en">
+      <head>
+        <script
+          id="usercentrics-cmp"
+          src="https://app.usercentrics.eu/browser-ui/latest/loader.js"
+          data-settings-id="2X8W5o7KVs-vfO"
+          async
+        ></script>
+      </head>
       <body className={interTight.className}>
         <Header />
         <main>{children}</main>

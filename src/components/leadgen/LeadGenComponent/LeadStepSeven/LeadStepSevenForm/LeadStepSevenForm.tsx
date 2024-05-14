@@ -44,7 +44,7 @@ const LeadStepSevenForm = ({
     }),
     onSubmit: async values => {
       setIsLoading(true);
-      console.log(values);
+      //console.log(values);
 
       setFormData({ ...formData, contactData: values });
 
@@ -59,7 +59,7 @@ const LeadStepSevenForm = ({
           }
         },
       );
-      console.log(leadGenData);
+      //console.log(leadGenData);
       await formDataPost(leadGenData, 'leadgen', setPopupAction);
 
       setIsLoading(false);

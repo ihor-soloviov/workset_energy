@@ -6,7 +6,7 @@ import { useGlobalStore } from '@/store/global-store';
 
 const Popup = () => {
   const { popupAction } = useGlobalStore();
-  console.log('popupAction', popupAction);
+  //console.log('popupAction', popupAction);
 
   return (
     <>

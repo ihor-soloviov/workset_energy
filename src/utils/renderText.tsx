@@ -6,7 +6,7 @@ export const renderText = (
   interFont: boolean,
 ) => {
   const lines = text.split('\n');
-  console.log('lines', lines);
+  //console.log('lines', lines);
   return lines.map((line, index) => (
     <p
       className={`${className ? className : ''} ${interFont ? inter.className : ''}`}
