@@ -24,6 +24,7 @@ const RootLayout = ({
           id="usercentrics-cmp"
           src="https://app.usercentrics.eu/browser-ui/latest/loader.js"
           data-settings-id="2X8W5o7KVs-vfO"
+          data-language="de"
           async
         ></script>
       </head>

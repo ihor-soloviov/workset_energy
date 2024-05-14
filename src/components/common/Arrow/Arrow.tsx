@@ -21,17 +21,17 @@ const Arrow: React.FC<Props> = ({ className }) => {
           className="gtmArrowSvgPath"
           d="M5 11H17.8333"
           stroke=""
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           className="gtmArrowSvgPath"
           d="M11.4167 4L17.8334 11L11.4167 18"
           stroke=""
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
     </div>
