@@ -1,21 +1,30 @@
+'use client';
+
 import styles from './ContactUsSection.module.css';
 import { inter } from '@/utils/fonts';
 import Container from '../Container/Container';
 import ContactUsForm from './ContactUsForm/ContactUsForm';
 import ContactUsMap from './ContactUsMap/ContactUsMap';
 import RecycleTextWrap from '../RecycleTextWrap/RecycleTextWrap';
-
+import { useGlobalStore } from '@/store/global-store';
 const ContactUsSection = () => {
+  const { isDesktop } = useGlobalStore();
   return (
-    <section id="contact" className={styles.contactUsSection}>
+    <section
+      id={isDesktop ? 'contact' : ''}
+      className={styles.contactUsSection}
+    >
       <Container>
         <div className={styles.contactUsMainWrap}>
           <ContactUsMap />
-          <div className={styles.contactUsFormWrap}>
+          <div
+            id={!isDesktop ? 'contact' : ''}
+            className={styles.contactUsFormWrap}
+          >
             <RecycleTextWrap
               title="Jetzt Angebot erhalten"
               titleClass={styles.contactUsMainTitle}
-              text="Fülle die untenstehenden Felder aus und wir rufen dich an"
+              text="Fülle die untenstehenden Felder aus und wir rufen dich an."
               textClass={`${styles.contactUsText} ${inter.className}`}
             />
             <ContactUsForm />

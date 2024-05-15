@@ -7,7 +7,7 @@ export type QuestItem = {
 export const questItems: QuestItem[] = [
   {
     title: 'Wie viel kWp sind für eine vollständige Autonomie erforderlich?',
-    text: 'Die Anzahl der Module, die für eine autonome Stromversorgung nur durch Sonnenenergie nötig sind, hängt in erster Linie von deinem persönlichen Verbrauch ab. Des Weiteren ist auch die zur Verfügung stehende Größe deines Daches ein zu berücksichtigender Faktor.\nMöchtest du erfahren, wie viele Module für deinen konkreten Fall nötig sind, um autonom Strom zu erzeugen? Kontaktiere uns – wir erstellen dir gern einen auf deine Bedürfnisse zugeschnittenen Plan',
+    text: 'Die Anzahl der Module, die für eine autonome Stromversorgung nur durch Sonnenenergie nötig sind, hängt in erster Linie von deinem persönlichen Verbrauch ab. Des Weiteren ist auch die zur Verfügung stehende Größe deines Daches ein zu berücksichtigender Faktor.\nMöchtest du erfahren, wie viele Module für deinen konkreten Fall nötig sind, um autonom Strom zu erzeugen? Kontaktiere uns – wir erstellen dir gern einen auf deine Bedürfnisse zugeschnittenen Plan.',
     leadSrc: true,
   },
   {
@@ -17,7 +17,7 @@ export const questItems: QuestItem[] = [
   {
     title:
       'Gibt es Folgekosten wie etwa für Wartung und Reparatur der PV-Anlage?',
-    text: 'Bei uns gibt es keine versteckten Kosten. Alle Kosten, die auf dich zukommen, erfährst du in unserem Kostenplan, den du unverbindlich vor der Auftragserteilung erhältst. Zudem sind unsere Anlagen so konzipiert, dass sie ohne Wartung auskommen. Einmal positioniert, produziert die Anlage ein Leben lang Strom',
+    text: 'Bei uns gibt es keine versteckten Kosten. Alle Kosten, die auf dich zukommen, erfährst du in unserem Kostenplan, den du unverbindlich vor der Auftragserteilung erhältst. Zudem sind unsere Anlagen so konzipiert, dass sie ohne Wartung auskommen. Einmal positioniert, produziert die Anlage ein Leben lang Strom.',
   },
 
   {
@@ -31,6 +31,6 @@ export const questItems: QuestItem[] = [
   {
     title:
       'Woher weiß ich, welche Art von PV-Modulen für mich am besten geeignet ist?',
-    text: 'Bei dieser Frage können dir unsere Spezialisten weiterhelfen. Die Technologie schreitet shächnell voran, daher ist es umso wichtiger bestens beraten zu werden',
+    text: 'Bei dieser Frage können dir unsere Spezialisten weiterhelfen. Die Technologie schreitet schnell voran, daher ist es umso wichtiger bestens beraten zu werden.',
   },
 ];

@@ -10,7 +10,7 @@ const QuestionSection = () => {
         <RecycleTextWrap
           title="Ist deine Frage hier dabei?"
           titleClass={styles.questMainTitle}
-          text="Häufig gestellte Fragen"
+          text="Häufig gestellte Fragen."
           textClass={`${styles.questMainText} ${inter.className}`}
         />
         <QuestionList />

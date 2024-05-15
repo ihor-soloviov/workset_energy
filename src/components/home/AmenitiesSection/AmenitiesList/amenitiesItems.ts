@@ -11,7 +11,7 @@ type AmenitiesItem = {
 
 export const amenitiesItems: AmenitiesItem[] = [
   {
-    text: 'Wir möchten, dass Solarenergie für alle Bewohner Deutschlands zugänglich wird',
+    text: 'Wir möchten, dass Solarenergie für alle Bewohner Deutschlands zugänglich wird.',
     title: 'Erschwingliche Preise',
     icon: AmenitiesFirstIcon,
   },
@@ -21,12 +21,12 @@ export const amenitiesItems: AmenitiesItem[] = [
     icon: AmenitiesSecondIcon,
   },
   {
-    text: 'Wir verlangen von unseren Kunden keine Vorkasse. Du zahlst erst nach der Fertigstellung',
+    text: 'Wir verlangen von unseren Kunden keine Vorkasse. Du zahlst erst nach der Fertigstellung.',
     title: 'Keine Vorkasse',
     icon: AmenitiesThirdIcon,
   },
   {
-    text: 'Wir arbeiten nicht mit Subunternehmern zusammen. Monteure, Elektriker, Berater, Backoffice – wir sind alle ein großes Team',
+    text: 'Wir arbeiten nicht mit Subunternehmern zusammen. Monteure, Elektriker, Berater, Backoffice – wir sind alle ein großes Team.',
     title: 'Unser Team',
     icon: AmenitiesFourthIcon,
   },

@@ -247,13 +247,13 @@
 
   .angebotBtnWrap {
     flex-direction: row;
-    gap: 2rem;
+    gap: 8rem;
     align-items: center;
   }
 
   .angebotText {
-    font-size: 1.4rem;
-    width: 41.7rem;
+    font-size: 1.2rem;
+    width: 35.8rem;
   }
 
   .angebotBr {
@@ -342,12 +342,12 @@
   }
 
   .angebotBtnWrap {
-    gap: 20px;
+    gap: 80px;
   }
 
   .angebotText {
-    font-size: 14px;
-    width: 417px;
+    font-size: 12px;
+    width: 358px;
   }
 
   .angebotBtn {

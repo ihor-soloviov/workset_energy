@@ -8,6 +8,7 @@ type VideoSectionProps = {
   className: string;
   title: string;
   titleClassName: string;
+  sectionClassName: string;
   link: string;
   text: string;
   textDesk?: string;
@@ -16,6 +17,7 @@ type VideoSectionProps = {
 const VideoSection = ({
   title,
   titleClassName,
+  sectionClassName,
   text,
   textDesk,
   link,
@@ -24,7 +26,9 @@ const VideoSection = ({
   const videoFrameClass = cn(styles.videoFrame, styles[className]);
 
   return (
-    <section className={styles.videoSection}>
+    <section
+      className={`${styles.videoSection} ${sectionClassName ? styles[sectionClassName] : ''}`}
+    >
       <Container>
         <div className={styles.videoMainWrap}>
           <IFrame link={link} videoFrameClass={videoFrameClass} />

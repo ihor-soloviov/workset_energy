@@ -18,7 +18,7 @@ const EmployeeSection = () => {
         <RecycleTextWrap
           title="Unsere wichtigste Ressource sind unsere Mitarbeiter"
           titleClass={styles.employeeMainTitle}
-          text="Ein Team von Experten, das sich durch Fachkompetenz und Engagement auszeichnet. Gemeinsam setzen wir innovative Lösungen um und bringen die Energie der Zukunft in dein Zuhause"
+          text="Ein Team von Experten, das sich durch Fachkompetenz und Engagement auszeichnet. Gemeinsam setzen wir innovative Lösungen um und bringen die Energie der Zukunft in dein Zuhause."
           textClass={`${styles.employeeMainText} ${inter.className}`}
         />
         <EmployeeList pathname={pathname} />

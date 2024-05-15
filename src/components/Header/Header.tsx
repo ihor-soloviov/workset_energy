@@ -100,7 +100,7 @@ const Header = () => {
               href="/leadgen"
               className={`${styles.headerLeadLink} ${pathname === '/karriere/jobs' ? styles.jobs : ''}`}
             >
-              Jetzt Berechnen
+              Jetzt berechnen
               <Arrow className={styles.headerIcon} />
             </Link>
           </div>

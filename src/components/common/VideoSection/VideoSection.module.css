@@ -51,6 +51,10 @@
     padding: 15rem 0 10rem;
   }
 
+  .videoSection.padding {
+    padding: 5rem 0 10rem;
+  }
+
   .videoMainWrap {
     flex-direction: row;
     gap: 16rem;
@@ -97,6 +101,10 @@
   .videoSection {
     padding: 150px 0 100px;
     overflow: hidden;
+  }
+
+  .videoSection.padding {
+    padding: 50px 0 100px;
   }
 
   .videoMainWrap {
