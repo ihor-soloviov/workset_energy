@@ -7,7 +7,7 @@ import { inter, interTight } from '@/utils/fonts';
 
 import Button from '../../../Button/Button';
 import { formDataPost } from '@/utils/api';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { ThreeDots } from 'react-loader-spinner';
 import { useGlobalStore } from '@/store/global-store';
 import { questOptions } from '@/utils/questOptions';

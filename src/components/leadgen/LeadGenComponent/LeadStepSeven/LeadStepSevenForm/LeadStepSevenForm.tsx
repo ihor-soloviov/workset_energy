@@ -6,9 +6,12 @@ import * as Yup from 'yup';
 import { interTight, inter } from '@/utils/fonts';
 import { LeadStepProps } from '../../types';
 import { formDataPost } from '@/utils/api';
+import { questOptions } from '@/utils/questOptions';
 import { ThreeDots } from 'react-loader-spinner';
 import { useState } from 'react';
 import { useGlobalStore } from '@/store/global-store';
+import FormSelect from '@/components/common/FormSelect/FormSelect';
+import { Option } from 'react-dropdown';
 
 const LeadStepSevenForm = ({
   formData,
@@ -18,6 +21,7 @@ const LeadStepSevenForm = ({
 }: LeadStepProps) => {
   const { setPopupAction } = useGlobalStore();
   const [isLoading, setIsLoading] = useState(false);
+  const [questValue, setQuestValue] = useState('');
 
   const {
     handleSubmit,
@@ -44,13 +48,13 @@ const LeadStepSevenForm = ({
     }),
     onSubmit: async values => {
       setIsLoading(true);
-      //console.log(values);
 
       setFormData({ ...formData, contactData: values });
 
       const leadGenData = new FormData();
+      const stepSevenData = { ...values, userQuest: questValue };
 
-      Object.entries({ ...formData, contactData: values }).forEach(
+      Object.entries({ ...formData, contactData: stepSevenData }).forEach(
         ([key, value]) => {
           if (typeof value === 'object' && !Array.isArray(value)) {
             leadGenData.append(key, JSON.stringify(value));
@@ -71,18 +75,19 @@ const LeadStepSevenForm = ({
       className={`${styles.stepSevenForm} ${inter.className}`}
       onSubmit={handleSubmit}
     >
-      <label className={styles.stepSevenLabel}>
-        Vor- und Nachname*
-        <input
-          placeholder="Vor- und Nachname"
-          className={`${styles.stepSevenInput} ${touched.userName && errors.userName && styles.error}`}
-          {...getFieldProps('userName')}
-        />
-        {touched.userName && errors.userName && (
-          <p className={styles.errorText}>{errors.userName}</p>
-        )}
-      </label>
       <div className={styles.stepSevenLabelWrap}>
+        <label className={styles.stepSevenLabel}>
+          Vor- und Nachname*
+          <input
+            placeholder="Vor- und Nachname"
+            className={`${styles.stepSevenInput} ${touched.userName && errors.userName && styles.error}`}
+            {...getFieldProps('userName')}
+          />
+          {touched.userName && errors.userName && (
+            <p className={styles.errorText}>{errors.userName}</p>
+          )}
+        </label>
+
         <label className={styles.stepSevenLabel}>
           E-mail*
           <input
@@ -94,6 +99,8 @@ const LeadStepSevenForm = ({
             <p className={styles.errorText}>{errors.userEmail}</p>
           )}
         </label>
+      </div>
+      <div className={styles.stepSevenLabelWrap}>
         <label className={styles.stepSevenLabel}>
           Telefonnummer*
           <input
@@ -105,6 +112,16 @@ const LeadStepSevenForm = ({
             <p className={styles.errorText}>{errors.userPhone}</p>
           )}
         </label>
+
+        <FormSelect
+          placeholderClassName="leadgen"
+          className="hero"
+          label="Welche Art der Beratung wünschst du?"
+          options={questOptions}
+          value={questValue}
+          onChange={(e: Option) => setQuestValue(e.value)}
+          placeholder={'Welche Art der Beratung wünschst du?'}
+        />
       </div>
       <label className={styles.stepSevenLabel}>
         Wann kann man dich am Besten erreichen?

@@ -1,6 +1,7 @@
 import styles from './FormSelect.module.css';
 import Dropdown, { Option } from 'react-dropdown';
 import React from 'react';
+import { usePathname } from 'next/navigation';
 
 type FormSelect = {
   label: string;
@@ -8,6 +9,7 @@ type FormSelect = {
   value: string;
   placeholder: string;
   className?: string;
+  placeholderClassName?: string;
   onChange: (e: Option) => void;
 };
 
@@ -17,6 +19,7 @@ const FormSelect = ({
   value,
   onChange,
   placeholder,
+  placeholderClassName,
   className,
 }: FormSelect) => {
   return (
@@ -61,7 +64,7 @@ const FormSelect = ({
             />
           </svg>
         }
-        className={`${styles.select} ${className ? styles[className] : ''}`}
+        className={`${styles.select} ${className ? styles[className] : ''} ${placeholderClassName ? styles[placeholderClassName] : ''}`}
         options={options}
         value={value}
         placeholder={placeholder}
