@@ -228,9 +228,10 @@
     width: 14rem;
     height: 5.2rem;
     font-size: 1.6rem;
-    background: unset;
-    backdrop-filter: unset;
-    background-color: transparent;
+  }
+
+  .heroBtn.home {
+    width: 19.4rem;
   }
 }
 
@@ -298,5 +299,9 @@
     width: 140px;
     height: 52px;
     font-size: 16px;
+  }
+
+  .heroBtn.home {
+    width: 194px;
   }
 }

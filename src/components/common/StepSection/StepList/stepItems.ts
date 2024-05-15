@@ -44,7 +44,7 @@ export const stepItems: StepItem[] = [
     imgMob: stepFourImgMob,
     imgDesc: stepFourImgDesc,
 
-    text: 'Nachdem du den Auftrag unterschrieben hast, bekommst du einen Termin für die Montage (2-6 Wochen nach Auftragsbestätigung) und einen Elektriker-Termin für den Anschluss der Anlage (weitere 2 Wochen später).\nSomit vergeht nach Auftragsbestätigung bis zur funktionierenden PV-Anlage 2-6 Wochen nach Auftragsbestätigung.',
+    text: 'Nachdem du den Auftrag unterschrieben hast, bekommst du einen Termin für die Montage (2-6 Wochen nach Auftragsbestätigung) und einen Elektriker-Termin für den Anschluss der Anlage (weitere 2 Wochen später). \nSomit vergeht nach Auftragsbestätigung bis zur funktionierenden PV-Anlage 2-6 Wochen nach Auftragsbestätigung.',
     title: 'Montage',
   },
   {

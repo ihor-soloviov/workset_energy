@@ -105,22 +105,27 @@ const HeroSection = ({
               {text}
             </p>
             <div className={`${styles.heroBtnWrap} ${styles.heroAnim}`}>
-              <Link
-                className={`${styles.heroLink} ${isDesktop && pathname === '/' ? styles.home : ''}`}
-                href={isDesktop && pathname === '/' ? '/#angebot' : '/leadgen'}
-              >
-                {isDesktop && pathname === '/'
-                  ? 'Angebot Vergleichen'
-                  : 'Jetzt berechnen'}
+              <Link className={styles.heroLink} href="/leadgen">
+                Jetzt berechnen
                 <Arrow className={styles.heroIcon} />
               </Link>
-              <Button
-                handleClick={scrollToTeamSection}
-                type="button"
-                className={styles.heroBtn}
-              >
-                {!isDesktop ? 'Zum Angebot' : 'Unser Team'}
-              </Button>
+              {isDesktop && pathname === '/' ? (
+                <Link
+                  className={`${styles.heroBtn} ${isDesktop && pathname === '/' ? styles.home : ''}`}
+                  href="/#angebot"
+                >
+                  Angebot Vergleichen
+                </Link>
+              ) : (
+                <Button
+                  handleClick={scrollToTeamSection}
+                  type="button"
+                  className={styles.heroBtn}
+                >
+                  {!isDesktop ? 'Zum Angebot' : 'Unser Team'}
+                </Button>
+              )}
+              ;
             </div>
           </div>
           {isModalOpen && <HeroFormModal />}
