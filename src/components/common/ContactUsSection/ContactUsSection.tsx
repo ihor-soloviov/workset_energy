@@ -7,8 +7,10 @@ import ContactUsForm from './ContactUsForm/ContactUsForm';
 import ContactUsMap from './ContactUsMap/ContactUsMap';
 import RecycleTextWrap from '../RecycleTextWrap/RecycleTextWrap';
 import { useGlobalStore } from '@/store/global-store';
+
 const ContactUsSection = () => {
   const { isDesktop } = useGlobalStore();
+
   return (
     <section
       id={isDesktop ? 'kontact' : ''}
