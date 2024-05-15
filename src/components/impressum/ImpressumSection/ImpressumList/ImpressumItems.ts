@@ -20,7 +20,7 @@ export const ImpressumItems: ImpressumItem[] = [
   {
     title: 'Geschäftsführer:',
     textList: [
-      'Herr Boris Jung',
+      'Boris Jung',
       'Registergericht:',
       'Amtsgericht Ulm',
       'HRB 746124',

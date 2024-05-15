@@ -14,6 +14,7 @@ import useObserver from '@/hooks/useObserver';
 import { useModalStore } from '@/store/hero-store';
 import { handleHeader } from '@/utils/handleHeader';
 import { scrollToSection } from '@/utils/scroll';
+import { usePathname } from 'next/navigation';
 
 type HeroProps = {
   imgMob: string;
@@ -36,7 +37,7 @@ const HeroSection = ({
 }: HeroProps) => {
   const { isDesktop } = useGlobalStore();
   const { handleModal, setIsModalOpen, isModalOpen } = useModalStore();
-
+  const pathname = usePathname();
   useObserver(`.${styles.heroAnim}`, `${styles.heroAnimVisible}`);
 
   const scrollToTeamSection = () => {
@@ -103,8 +104,13 @@ const HeroSection = ({
               {text}
             </p>
             <div className={`${styles.heroBtnWrap} ${styles.heroAnim}`}>
-              <Link className={styles.heroLink} href="/leadgen">
-                Jetzt Berechnen
+              <Link
+                className={`${styles.heroLink} ${isDesktop && pathname === '/' ? styles.home : ''}`}
+                href={isDesktop && pathname === '/' ? '/#angebot' : '/leadgen'}
+              >
+                {isDesktop && pathname === '/'
+                  ? 'Angebot Vergleichen'
+                  : 'Jetzt berechnen'}
                 <ArrowIcon className={styles.heroIcon} />
               </Link>
               <Button
@@ -112,7 +118,7 @@ const HeroSection = ({
                 type="button"
                 className={styles.heroBtn}
               >
-                {!isDesktop ? 'Zum Angebot' : 'Unsere Team'}
+                {!isDesktop ? 'Zum Angebot' : 'Unser Team'}
               </Button>
             </div>
           </div>

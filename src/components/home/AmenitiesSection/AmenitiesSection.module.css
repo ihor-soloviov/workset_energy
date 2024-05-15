@@ -24,7 +24,7 @@
 
 @media screen and (min-width: 1440px) {
   .amenitiesSection {
-    padding: 15rem 0;
+    padding: 5rem 0 10rem;
   }
 
   .amenitiesMainTitle {
@@ -40,7 +40,7 @@
 
 @media screen and (min-width: 1728px) {
   .amenitiesSection {
-    padding: 150px 0;
+    padding: 50px 0 100px;
   }
 
   .amenitiesMainTitle {

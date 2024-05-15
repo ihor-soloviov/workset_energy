@@ -19,7 +19,7 @@ const NotFound = () => {
           Die Seite, die du suchst, kann nicht gefunden werden (Fehler 404).
           Aber keine Sorge, unser Team von digitalen Entdeckern ist unermüdlich
           auf der Suche nach den fehlenden Inhalten. Nimm dir doch in der
-          Zwischenzeit einen Moment Zeit, um unsere Website zu erkunden
+          Zwischenzeit einen Moment Zeit, um unsere Website zu erkunden.
         </p>
         <Link className={styles.errorBtn} href="/">
           Zurück zur Homepage

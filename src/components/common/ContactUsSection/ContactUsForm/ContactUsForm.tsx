@@ -1,4 +1,3 @@
-'use client';
 import { Option } from 'react-dropdown';
 import { inter } from '@/utils/fonts';
 import { interTight } from '@/utils/fonts';
@@ -81,33 +80,19 @@ const ContactUsForm = () => {
       onSubmit={handleSubmit}
       className={`${styles.contactUsForm} ${inter.className}`}
     >
+      <label className={styles.contactUsLabel}>
+        Vor- und Nachname*
+        <input
+          placeholder="Vor- und Nachname"
+          className={`${styles.contactUsInput} ${touched.userName && errors.userName && styles.error}`}
+          {...getFieldProps('userName')}
+        />
+        {touched.userName && errors.userName && (
+          <p className={styles.errorText}>{errors.userName}</p>
+        )}
+      </label>
       <div className={styles.contactUsLabelWrap}>
-        <label className={styles.contactUsLabel}>
-          Vor- und Nachname*
-          <input
-            placeholder="Vor- und Nachname"
-            className={`${styles.contactUsInput} ${touched.userName && errors.userName && styles.error}`}
-            {...getFieldProps('userName')}
-          />
-          {touched.userName && errors.userName && (
-            <p className={styles.errorText}>{errors.userName}</p>
-          )}
-        </label>
-
-        <label className={`${styles.contactUsLabel} ${styles.email}`}>
-          E-Mail*
-          <input
-            placeholder="E-Mail*"
-            className={`${styles.contactUsInput} ${touched.userEmail && errors.userEmail && styles.error}`}
-            {...getFieldProps('userEmail')}
-          />
-          {touched.userEmail && errors.userEmail && (
-            <p className={styles.errorText}>{errors.userEmail}</p>
-          )}
-        </label>
-      </div>
-      <div className={styles.contactUsLabelWrap}>
-        <label className={styles.contactUsLabel}>
+        <label className={`${styles.contactUsLabel} ${styles.phone}`}>
           Telefon-Nr.*
           <input
             placeholder="Telefon-Nr."
@@ -119,18 +104,30 @@ const ContactUsForm = () => {
           )}
         </label>
 
-        <label className={styles.contactUsLabel}>
-          Anschrift der geplanten PV-Anlage*
+        <label className={`${styles.contactUsLabel} ${styles.email}`}>
+          E-Mail*
           <input
-            placeholder="Anschrift der geplanten PV-Anlage"
-            className={`${styles.contactUsInput}`}
-            {...getFieldProps('userAddress')}
+            placeholder="E-Mail"
+            className={`${styles.contactUsInput} ${touched.userEmail && errors.userEmail && styles.error}`}
+            {...getFieldProps('userEmail')}
           />
-          {touched.userAddress && errors.userAddress && (
-            <p className={styles.errorText}>{errors.userAddress}</p>
+          {touched.userEmail && errors.userEmail && (
+            <p className={styles.errorText}>{errors.userEmail}</p>
           )}
         </label>
       </div>
+      <label className={styles.contactUsLabel}>
+        Anschrift der geplanten PV-Anlage*
+        <input
+          placeholder="Anschrift der geplanten PV-Anlage"
+          className={`${styles.contactUsInput}`}
+          {...getFieldProps('userAddress')}
+        />
+        {touched.userAddress && errors.userAddress && (
+          <p className={styles.errorText}>{errors.userAddress}</p>
+        )}
+      </label>
+
       {!isDesktop && (
         <FormSelect
           label="Welche Art der Beratung wünschst du?"

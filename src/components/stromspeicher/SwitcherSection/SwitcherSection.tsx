@@ -31,7 +31,7 @@ const SwitcherSection = () => {
               Stromspeicher kannst du jedoch deine Energieunabhängigkeit um bis
               zu 60-80 % erhöhen. Der Strom, den du sonst an das Stromnetz
               abgeben würdest, wird im Stromspeicher gesammelt und steht dir
-              dann am Abend und in der Nacht zur Verfügung
+              dann am Abend und in der Nacht zur Verfügung.
             </p>
           </article>
 

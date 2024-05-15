@@ -51,7 +51,7 @@ const TeamModal = ({
             Jetzt anrufen und Beratung vereinbaren:
           </h2>
           <div className={styles.modalTitleWrap}>
-            <h3 className={styles.modalTitle}>{`Herr ${title}`}</h3>
+            <h3 className={styles.modalTitle}>{`${title}`}</h3>
           </div>
           <ul className={`${styles.modalList} ${inter.className}`}>
             <CopiedPopup

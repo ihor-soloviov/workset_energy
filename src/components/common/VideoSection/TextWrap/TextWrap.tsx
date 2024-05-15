@@ -19,7 +19,6 @@ const TextWrap: React.FC<Props> = ({
   titleClassName,
   text,
   textDesk,
-  className,
 }) => {
   useObserver(`.${styles.videoTextWrap}`, `${styles.videoTextWrapVisible}`);
 

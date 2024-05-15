@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 const AngebotSection = () => {
   return (
-    <section className={styles.angebotSection}>
+    <section id="angebot" className={styles.angebotSection}>
       <div className={styles.angebotImgMainWrap}>
         <div className={styles.angebotImgWrap}>
           <Image
@@ -35,7 +35,7 @@ const AngebotSection = () => {
           title="Vergleiche dein Angebot"
           titleClass={styles.angebotTitle}
           text="Das Team von WorkSET Energy ist jederzeit bereit, dein Angebot zu vergleichen und dir eine objektive Einschätzung zu geben! Lade dein bereits bestehendes Angebot hoch, trage deine Kontaktdaten ein und prüfe, 
-wie optimal deine PV-Anlage projektiert ist"
+wie optimal deine PV-Anlage projektiert ist."
           textClass={`${styles.angebotMainText} ${inter.className}`}
         />
 

@@ -19,7 +19,7 @@ export const items: RedHelp[] = [
   {
     icon: Phone,
     title: 'Per Telefon',
-    text: 'Auch telefonisch stehen wir dir mit Rede und Antwort zur Verfügung',
+    text: 'Auch telefonisch stehen wir dir mit Rede und Antwort zur Verfügung.',
     href: {
       linkTo: 'tel:+4973114613210',
       title: '+49 73 114 613 210',

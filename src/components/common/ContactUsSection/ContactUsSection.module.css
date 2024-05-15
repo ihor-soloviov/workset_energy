@@ -30,7 +30,7 @@
 
 @media screen and (min-width: 1440px) {
   .contactUsSection {
-    padding: 18.4rem 0;
+    padding: 5rem 0 15rem;
   }
 
   .contactUsMainWrap {
@@ -79,7 +79,7 @@
 
 @media screen and (min-width: 1728px) {
   .contactUsSection {
-    padding: 184px 0;
+    padding: 50px 0 150px;
   }
 
   .contactUsMainWrap {

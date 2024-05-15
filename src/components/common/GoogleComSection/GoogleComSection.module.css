@@ -16,7 +16,7 @@
 
 @media screen and (min-width: 1440px) {
   .googleComSection {
-    padding: 10rem 15.7rem 20rem;
+    padding: 5rem 15.7rem 10rem;
   }
 
   .googleComTitle {
@@ -28,7 +28,7 @@
 
 @media screen and (min-width: 1728px) {
   .googleComSection {
-    padding: 100px 157px 200px;
+    padding: 50px 157px 150px;
   }
 
   .googleComTitle {

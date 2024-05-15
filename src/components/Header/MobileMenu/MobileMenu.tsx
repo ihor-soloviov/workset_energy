@@ -44,7 +44,7 @@ const MobileMenu = ({ handleMenuClick }: MobileMenuProps) => {
           href="/leadgen"
           className={styles.menuBtn}
         >
-          Jetzt Berechnen
+          Jetzt berechnen
           <MenuBtnIcon className={styles.menuBtnIcon} />
         </Link>
         <MobileContactList />

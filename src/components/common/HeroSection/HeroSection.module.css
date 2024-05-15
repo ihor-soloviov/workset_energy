@@ -61,10 +61,9 @@
 }
 
 .heroLink {
-  width: 100%;
-  max-width: 342px;
+  width: 342px;
   height: 46px;
-  padding: 12px 0;
+  padding: 12px 95px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -216,8 +215,12 @@
   .heroLink {
     width: 19.7rem;
     height: 5.2rem;
-    padding: 1.4rem 1.7rem;
+    padding: 1.4rem 1.2rem;
     font-size: 1.6rem;
+  }
+
+  .heroLink.home {
+    width: 22.4rem;
   }
 
   .heroBtn {
@@ -284,6 +287,10 @@
     height: 52px;
     padding: 14px 18px;
     font-size: 16px;
+  }
+
+  .heroLink.home {
+    width: 224px;
   }
 
   .heroBtn {

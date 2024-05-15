@@ -31,7 +31,7 @@ const PricingPlansSection = () => {
             title="Erschwingliche Preise für Photovoltaik-Anlagen"
             titleClass={styles.plansTitle}
             text="Jedes Projekt ist individuell, aber wir haben uns bemüht, Pakete zu erstellen, die deinen persönlichen Anforderungen an Preis, Leistung und Design entsprechen. Qualität muss nicht teuer sein – wähle 
-WorkSET Energy"
+WorkSET Energy."
             textClass={`${styles.plansText} ${inter.className}`}
           />
         </div>
