@@ -52,7 +52,7 @@ WorkSET Energy."
                   <Plan
                     plan={plan}
                     index={index}
-                    handleBtnClick={() => scrollToSection('contact')}
+                    handleBtnClick={() => scrollToSection('kontact')}
                   />
                 </SwiperSlide>
               ))}
@@ -68,7 +68,7 @@ WorkSET Energy."
           <ul className={styles.pricingPlansItems}>
             {plans.map((plan, index) => (
               <Plan
-                handleBtnClick={() => scrollToSection('contact')}
+                handleBtnClick={() => scrollToSection('kontact')}
                 key={plan.name}
                 plan={plan}
                 index={index}

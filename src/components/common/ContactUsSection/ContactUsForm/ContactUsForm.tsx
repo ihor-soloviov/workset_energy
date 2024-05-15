@@ -138,7 +138,7 @@ const ContactUsForm = () => {
         />
       )}
       <label className={styles.contactUsLabelTextArea}>
-        Nachricht*
+        Nachricht
         <textarea
           placeholder="Nachricht"
           className={styles.contactUsTextArea}

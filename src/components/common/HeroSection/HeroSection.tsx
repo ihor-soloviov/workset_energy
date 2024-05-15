@@ -6,7 +6,6 @@ import { inter } from '@/utils/fonts';
 import Button from '../Button/Button';
 import Image from 'next/image';
 import Link from 'next/link';
-
 import HeroFormModal from './HeroFormModal/HeroFormModal';
 import { useEffect } from 'react';
 import { useGlobalStore } from '@/store/global-store';
@@ -14,7 +13,6 @@ import useObserver from '@/hooks/useObserver';
 import { useModalStore } from '@/store/hero-store';
 import { handleHeader } from '@/utils/handleHeader';
 import { scrollToSection } from '@/utils/scroll';
-import Arrow from '../Arrow/Arrow';
 import { usePathname } from 'next/navigation';
 
 type HeroProps = {
@@ -47,7 +45,7 @@ const HeroSection = ({
       handleModal();
       return;
     }
-    scrollToSection('team-section');
+    scrollToSection('team');
   };
 
   useEffect(() => {
@@ -107,12 +105,11 @@ const HeroSection = ({
             <div className={`${styles.heroBtnWrap} ${styles.heroAnim}`}>
               <Link className={styles.heroLink} href="/leadgen">
                 Jetzt berechnen
-                <Arrow className={styles.heroIcon} />
               </Link>
               {isDesktop && pathname === '/' ? (
                 <Link
                   className={`${styles.heroBtn} ${isDesktop && pathname === '/' ? styles.home : ''}`}
-                  href="/#angebot"
+                  href="/#angebot-vergleichen"
                 >
                   Angebot Vergleichen
                 </Link>

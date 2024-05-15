@@ -37,7 +37,7 @@ const EmployeeList = ({ pathname }: EmployeeListProps) => {
             </p>
             {btn && pathname !== '/karriere' && (
               <Button
-                handleClick={() => scrollToSection('contact')}
+                handleClick={() => scrollToSection('kontact')}
                 className={styles.employeeItemBtn}
                 type="button"
               >

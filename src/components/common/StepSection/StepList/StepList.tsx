@@ -59,7 +59,7 @@ const StepList = () => {
               )}
               {btn && (
                 <Button
-                  handleClick={() => scrollToSection('contact')}
+                  handleClick={() => scrollToSection('kontact')}
                   className={styles.stepBtn}
                   type="button"
                 >

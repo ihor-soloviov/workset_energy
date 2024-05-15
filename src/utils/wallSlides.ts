@@ -15,7 +15,7 @@ import wbSlide6Desk from '/public/images/wallbox-page/WSlide6Desk.webp';
 export const wallItems: VorteileSliderItems[] = [
   {
     title: 'Wallbox-Vorteile',
-    text: 'Die Wallbox ist eine bequeme und einfache Lösung zum Aufladen von Elektrofahrzeugen zu Hause oder im Büro. Sie bietet eine moderne Technologie für eine flexible und effiziente Ladung und ist durch ihr durch ihre smarte Software leicht in den Alltag integrierbar.',
+    text: 'Die Wallbox ist eine bequeme und einfache Lösung zum Aufladen von Elektrofahrzeugen zu Hause oder im Büro. Sie bietet eine moderne Technologie für eine flexible und effiziente Ladung und ist durch ihre smarte Software leicht in den Alltag integrierbar.',
   },
   {
     title: 'Intelligenz',

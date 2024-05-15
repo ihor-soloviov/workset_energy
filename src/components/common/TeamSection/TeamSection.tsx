@@ -26,7 +26,7 @@ const TeamSection = () => {
   };
 
   return (
-    <section id="team-section" className={styles.teamSection}>
+    <section id="team" className={styles.teamSection}>
       <Container>
         <div className={styles.teamMainWrap}>
           <TeamTextWrap handleImage={handleImage} />

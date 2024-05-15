@@ -89,7 +89,7 @@ const ObjectSlider = () => {
                     ))}
                   </ul>
                   <Button
-                    handleClick={() => scrollToSection('contact')}
+                    handleClick={() => scrollToSection('kontact')}
                     className={styles.sliderBtn}
                     type="button"
                   >

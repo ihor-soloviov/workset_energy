@@ -14,8 +14,8 @@ export const navLinkItems: NavLinkItem[] = [
       { text: 'Verfügbare Tarifpläne', href: '/pv-anlagen#tarifpläne' },
       { text: 'Unsere Mitarbeiter', href: '/pv-anlagen#mitarbeiter' },
       { text: 'Feedback', href: '/pv-anlagen#feedback' },
-      { text: 'Unsere Team', href: '/pv-anlagen#team-section' },
-      { text: 'Kontakt', href: '/pv-anlagen#contact' },
+      { text: 'Unser Team', href: '/pv-anlagen#team' },
+      { text: 'Kontakt', href: '/pv-anlagen#kontact' },
     ],
   },
   {
@@ -26,8 +26,8 @@ export const navLinkItems: NavLinkItem[] = [
       { text: 'Verfügbare Tarifpläne', href: '/stromspeicher#tarifpläne' },
       { text: 'Unsere Mitarbeiter', href: '/stromspeicher#mitarbeiter' },
       { text: 'Feedback', href: '/stromspeicher#feedback' },
-      { text: 'Unsere Team', href: '/stromspeicher#team-section' },
-      { text: 'Kontakt', href: '/stromspeicher#contact' },
+      { text: 'Unser Team', href: '/stromspeicher#team' },
+      { text: 'Kontakt', href: '/stromspeicher#kontact' },
     ],
   },
   {
@@ -38,8 +38,8 @@ export const navLinkItems: NavLinkItem[] = [
       { text: 'Verfügbare Tarifpläne', href: '/wallbox#tarifpläne' },
       { text: 'Unsere Mitarbeiter', href: '/wallbox#mitarbeiter' },
       { text: 'Feedback', href: '/wallbox#feedback' },
-      { text: 'Unsere Team', href: '/wallbox#team-section' },
-      { text: 'Kontakt', href: '/wallbox#contact' },
+      { text: 'Unser Team', href: '/wallbox#team' },
+      { text: 'Kontakt', href: '/wallbox#kontact' },
     ],
   },
   {
@@ -48,7 +48,7 @@ export const navLinkItems: NavLinkItem[] = [
     links: [
       { text: 'Über uns', href: '/uber-uns' },
       // { text: 'Karrier', href: '/karriere' },
-      { text: 'Contact', href: '/uber-uns#contact' },
+      { text: 'Kontakt', href: '/uber-uns#kontact' },
     ],
   },
 ];

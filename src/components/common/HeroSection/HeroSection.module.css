@@ -80,18 +80,10 @@
     background-color 250ms var(--cubic);
 }
 
-.heroIcon {
-  stroke: var(--gray-input);
-  transition: stroke 250ms var(--cubic);
-}
-
 .heroLink:hover {
   border-color: var(--white-main);
   background-color: var(--white-main);
   color: var(--red-main);
-}
-.heroLink:hover .heroIcon {
-  stroke: var(--red-main);
 }
 
 .heroBtn {
@@ -219,10 +211,6 @@
     font-size: 1.6rem;
   }
 
-  .heroLink.home {
-    width: 22.4rem;
-  }
-
   .heroBtn {
     padding: 1.6rem 1.9rem;
     width: 14rem;
@@ -284,14 +272,10 @@
   }
 
   .heroLink {
-    width: 192px;
+    width: 160px;
     height: 52px;
     padding: 14px 18px;
     font-size: 16px;
-  }
-
-  .heroLink.home {
-    width: 224px;
   }
 
   .heroBtn {

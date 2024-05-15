@@ -11,14 +11,14 @@ const ContactUsSection = () => {
   const { isDesktop } = useGlobalStore();
   return (
     <section
-      id={isDesktop ? 'contact' : ''}
+      id={isDesktop ? 'kontact' : ''}
       className={styles.contactUsSection}
     >
       <Container>
         <div className={styles.contactUsMainWrap}>
           <ContactUsMap />
           <div
-            id={!isDesktop ? 'contact' : ''}
+            id={!isDesktop ? 'kontact' : ''}
             className={styles.contactUsFormWrap}
           >
             <RecycleTextWrap

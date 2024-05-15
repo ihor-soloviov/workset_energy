@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 const AngebotSection = () => {
   return (
-    <section id="angebot" className={styles.angebotSection}>
+    <section id="angebot-vergleichen" className={styles.angebotSection}>
       <div className={styles.angebotImgMainWrap}>
         <div className={styles.angebotImgWrap}>
           <Image

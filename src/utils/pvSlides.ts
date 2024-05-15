@@ -21,7 +21,7 @@ export const pvItems: VorteileSliderItems[] = [
   },
   {
     title: 'Kompensation durch Stromverkauf',
-    text: 'In Deutschland können die Besitzer von PV-Anlagen ihre Investitionen zu optimieren, indem sie überschüssige Energie an das Stromnetz verkaufen. Staatliche Anreize und Subventionen tragen ebenfalls dazu bei, die Anfangskosten für die Installation einer Photovoltaik Anlage zu senken.',
+    text: 'In Deutschland können die Besitzer von PV-Anlagen ihre Investitionen optimieren, indem sie überschüssige Energie an das Stromnetz verkaufen. Staatliche Anreize und Subventionen tragen ebenfalls dazu bei, die Anfangskosten für die Installation einer Photovoltaik Anlage zu senken.',
   },
   {
     title: 'Wertsteigerung der Immobilien',
