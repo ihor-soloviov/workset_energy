@@ -15,7 +15,7 @@ const LeadStepSix = ({
         Wo ist dein PV-Projekt geplant?
       </h3>
       <p className={`${styles.stepSixText} ${inter.className}`}>
-        Gebe bitte die Adresse an, an der die PV-Anlage installiert werden soll
+        Gebe bitte die Adresse an, an der die PV-Anlage installiert werden soll.
       </p>
       <LeadStepSixForm
         setFormData={setFormData}

@@ -12,7 +12,7 @@ const ObjectSection = () => {
         </h2>
         <p className={`${styles.objectMainText} ${inter.className}`}>
           Mehr als 300+ Kunden in ganz Deutschland haben bereits die Möglichkeit
-          genutzt, mit unserer Hilfe Geld zu sparen
+          genutzt, mit unserer Hilfe Geld zu sparen.
         </p>
         <ObjectSlider />
       </Container>

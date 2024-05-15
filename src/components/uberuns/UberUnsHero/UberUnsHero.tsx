@@ -34,7 +34,7 @@ const UberUnsHero = () => {
           </h2>
           <p className={`${styles.uberHeroText} ${inter.className}`}>
             Wir erleichtern dir den Übergang zu einer nachhaltigen Zukunft mit
-            Photovoltaik Lösungen
+            Photovoltaik Lösungen.
           </p>
         </>
       </div>
