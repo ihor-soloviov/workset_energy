@@ -47,7 +47,7 @@ export const navLinkItems: NavLinkItem[] = [
     text: 'Company',
     links: [
       { text: 'Über uns', href: '/uber-uns' },
-      { text: 'Karrier', href: '/karriere' },
+      // { text: 'Karrier', href: '/karriere' },
       { text: 'Kontakt', href: '/uber-uns#kontact' },
     ],
   },
