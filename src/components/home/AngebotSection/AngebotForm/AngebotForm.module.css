@@ -131,10 +131,10 @@
 
 .angebotText {
   color: var(--white-main);
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 500;
-  line-height: 150%;
-  letter-spacing: -0.16px;
+  line-height: 200%;
+  letter-spacing: -0.12px;
 }
 
 .angebotBtn {
@@ -254,10 +254,7 @@
   .angebotText {
     font-size: 1.2rem;
     width: 35.8rem;
-  }
-
-  .angebotBr {
-    display: none;
+    line-height: 160%;
   }
 
   .angebotBtn {

@@ -183,8 +183,7 @@ const AngebotForm = () => {
       </label>
       <div className={styles.angebotBtnWrap}>
         <p className={styles.angebotText}>
-          SSL Verschüsselte Nachricht.
-          <br className={styles.angebotBr} /> Vielen Dank für deine Nachricht!
+          SSL Verschüsselte Nachricht. Vielen Dank für deine Nachricht!
         </p>
         <Button
           disabled={!(isValid && dirty && selectedFile)}
