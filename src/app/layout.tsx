@@ -9,7 +9,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import 'normalize.css';
 export const metadata: Metadata = {
-  title: 'WorkSET Energy',
+  title: 'WorkSET Energy GmbH',
 };
 
 const RootLayout = ({
