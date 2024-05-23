@@ -31,7 +31,8 @@ const TeamCarousel: React.FC<Props> = ({ activeItem }) => {
   const toggleModal = () => setIsModalOpen(!isModalOpen);
 
   const getTransformValue = () => {
-    const maxItems = 4;
+    const itemsPerView = 3;
+    const maxItems = teamItems.length - itemsPerView;
     const translateIndex = activeItem < maxItems ? activeItem : maxItems;
     return `translateX(-${translateIndex * translateValue}${unit})`;
   };

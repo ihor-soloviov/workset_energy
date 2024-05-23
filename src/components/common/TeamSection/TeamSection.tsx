@@ -17,7 +17,7 @@ const TeamSection = () => {
         return prev - 1;
       }
 
-      if (value === 'next' && prev < 6) {
+      if (value === 'next' && prev < 5) {
         return prev + 1;
       }
 

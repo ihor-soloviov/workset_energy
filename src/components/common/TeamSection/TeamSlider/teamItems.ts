@@ -49,13 +49,7 @@ export const teamItems: TeamItem[] = [
     email: 'd.feluks@work-set.eu',
     tel: '+49 731 146 132 15',
   },
-  {
-    title: 'Damir Dergic',
-    text: 'Mainz',
-    className: 'seventh',
-    email: 'd.dergic@work-set.eu',
-    tel: '+49 731 146 153 63',
-  },
+
   {
     title: 'Norbert Opp',
     text: 'Mannheim',
