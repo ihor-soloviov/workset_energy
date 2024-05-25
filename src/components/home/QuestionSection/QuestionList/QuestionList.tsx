@@ -8,19 +8,19 @@ import { inter } from '@/utils/fonts';
 import { QuestItem, questItems } from './questionItems';
 import { scrollToSection } from '@/utils/scroll';
 import { renderText } from '@/utils/renderText';
+import BtnArrowIcon from '/public/icons/small-product-arrow.svg';
 
 const QuestionList = () => {
-  const [activeItems, setActiveItems] = useState<Array<string>>([]);
-  const router = useRouter();
-  const toggleActiveItem = (title: string) => {
-    let result = [];
-    if (activeItems?.includes(title)) {
-      result = activeItems.filter(el => el !== title);
-    } else {
-      result = [...activeItems, title];
-    }
-    setActiveItems(result);
+  const [visibleItems, setVisibleItems] = useState<Record<string, boolean>>({});
+
+  const toggleVisibility = (title: string) => {
+    setVisibleItems(prevState => ({
+      ...prevState,
+      [title]: !prevState[title],
+    }));
   };
+
+  const router = useRouter();
 
   const handleBtnClick = (
     e: React.MouseEvent<HTMLButtonElement>,
@@ -34,27 +34,27 @@ const QuestionList = () => {
   const renderListItems = (items: QuestItem[]) =>
     items.map(({ text, title, leadSrc }) => (
       <li
-        onClick={() => toggleActiveItem(title)}
+        onClick={() => toggleVisibility(title)}
         key={title}
-        className={`${styles.questItem} ${activeItems.includes(title) ? styles.open : ''}`}
+        className={`${styles.questItem} ${visibleItems[title] ? styles.active : ''}`}
       >
         <div className={styles.questTitleWrap}>
           <h3 className={`${styles.questTitle} ${inter.className}`}>{title}</h3>
           <Button
             handleClick={e => {
               e.stopPropagation();
-              toggleActiveItem(title);
+              toggleVisibility(title);
             }}
             type="button"
             className={styles.questToggleBtn}
           >
-            <DropArrowIcon
-              className={`${styles.toggleIcon} ${activeItems.includes(title) ? styles.visible : ''}`}
+            <BtnArrowIcon
+              className={`${styles.toggleIcon} ${visibleItems[title] ? styles.active : ''}`}
             />
           </Button>
         </div>
         <div
-          className={`${styles.questTextWrap} ${activeItems.includes(title) ? styles.visible : styles.hidden}`}
+          className={`${styles.questTextWrap} ${visibleItems[title] ? styles.active : ''}`}
         >
           {renderText(text, styles.questText, true)}
           <Button
@@ -74,7 +74,9 @@ const QuestionList = () => {
   return (
     <div className={styles.questListWrap}>
       <ul className={styles.questList}>{renderListItems(firstListItems)}</ul>
-      <ul className={styles.questList}>{renderListItems(secondListItems)}</ul>
+      <ul className={`${styles.questList} ${styles.second}`}>
+        {renderListItems(secondListItems)}
+      </ul>
     </div>
   );
 };

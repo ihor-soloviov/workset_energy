@@ -1,92 +1,36 @@
-@keyframes fadeToggleOpen {
-  0% {
-    opacity: 0;
-    max-height: 0;
-  }
-
-  60% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 1;
-    max-height: 1000px;
-  }
-}
-
-@keyframes fadeToggleCloseMob {
-  0% {
-    opacity: 1;
-    max-height: 1000px;
-    margin-top: 18px;
-  }
-
-  70% {
-    margin-top: 18px;
-  }
-
-  90% {
-    opacity: 1;
-  }
-
-  100% {
-    margin-top: 0px;
-    opacity: 0;
-    max-height: 0;
-  }
-}
-
-@keyframes fadeToggleCloseDesc {
-  0% {
-    opacity: 1;
-    max-height: 1000px;
-    margin-top: 8px;
-  }
-
-  70% {
-    margin-top: 8px;
-  }
-
-  90% {
-    opacity: 1;
-  }
-
-  100% {
-    margin-top: 0px;
-    opacity: 0;
-    max-height: 0;
-  }
-}
-
 .questListWrap {
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 
 .questList {
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
+
 .questItem {
-  border-radius: 12px;
-  border: 1px solid var(--gray-stroke);
+  max-height: 138px;
+  border-top: 1px solid var(--gray-stroke);
   background-color: var(--white-main);
-  padding: 24px 19px;
+  padding: 24px 0;
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  width: 100%;
-  transition: border-color 250ms var(--cubic);
+  width: 342px;
+  overflow: hidden;
+  transition: all 250ms var(--cubic);
 }
 
-.questItem:hover {
-  border-color: var(--black-main);
+.questItem:last-child {
+  border-bottom: 1px solid var(--gray-stroke);
 }
 
-.questItem.open:hover {
-  border-color: var(--gray-stroke);
+.questList.second .questItem:first-child {
+  border-top: unset;
+}
+
+.questItem.active {
+  max-height: 1000px;
 }
 
 .questTitleWrap {
@@ -97,49 +41,50 @@
 
 .questTitle {
   color: var(--gray-dark-text);
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 160%;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 150%;
   width: fit-content;
-  max-width: 272px;
+  height: 90px;
+  width: 271px;
   user-select: none;
 }
+
 .questToggleBtn {
-  border: none;
-  background-color: transparent;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--red-main);
+  outline: none;
 }
 
 .toggleIcon {
   width: 20px;
   height: 20px;
-  stroke: var(--gray-dark-text);
-  transform: rotate(180deg);
-  transition: transform 0.5s var(--cubic);
+  stroke: var(--white-main);
+  transform: rotate(90deg);
+  transition: all 0.3s ease-in-out;
 }
 
-.toggleIcon.visible {
-  transform: unset;
+.toggleIcon.active {
+  transform: rotate(-90deg);
 }
 
 .questTextWrap {
-  overflow: hidden;
-  max-height: 0;
   opacity: 0;
+  transition: all 0.3s ease-in-out;
 }
 
-.questTextWrap.visible {
+.questTextWrap.active {
   display: flex;
   flex-direction: column;
   margin-top: 18px;
-  max-height: 1000px;
   user-select: none;
-
-  animation: fadeToggleOpen 0.7s var(--cubic);
   opacity: 1;
-}
-
-.questTextWrap.hidden {
-  animation: fadeToggleCloseMob 0.4s var(--cubic);
 }
 
 .questText {
