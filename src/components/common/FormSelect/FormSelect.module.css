@@ -17,12 +17,12 @@
 /* Select container */
 .select {
   cursor: pointer;
-  height: 46px;
+  height: 54px;
   width: 100%;
   border-radius: 8px;
-  background-color: var(--gray-input);
+  /* background-color: var(--gray-input); */
   border: 1px solid var(--gray-stroke);
-  padding: 14px 12px;
+  padding: 18px 12px;
   position: relative;
 }
 
@@ -51,7 +51,7 @@
   position: absolute;
   height: 130px;
   overflow-y: auto;
-  top: 44px;
+  top: 52px;
   left: -1px;
   width: 100%;
   z-index: 2;

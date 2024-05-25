@@ -17,17 +17,17 @@ const HomePage = () => {
   return (
     <>
       <HeroSection {...homeHero} />
-      <VideoSection {...firstVideo} />
-      <ProductSection />
-      <VideoSection {...secondVideo} />
+      <AmenitiesSection />
+      {/* <VideoSection {...firstVideo} /> */}
+      {/* <ProductSection /> */}
+      {/* <VideoSection {...secondVideo} /> */}
       <RegionSection />
       <TeamSection />
-      <AmenitiesSection />
-      <QuestionSection />
-      <GoogleComSection />
       <AngebotSection />
-      <VisionSection />
+      <GoogleComSection />
+      <QuestionSection />
       <StepSection />
+      <VisionSection />
       <ContactUsSection />
     </>
   );

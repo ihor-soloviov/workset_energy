@@ -56,10 +56,6 @@
   .angebotFormWrap {
     width: 390px;
   }
-
-  .angebotImgMainWrap {
-    padding: 68px 24px 24px 24px;
-  }
 }
 
 @media screen and (min-width: 1440px) {

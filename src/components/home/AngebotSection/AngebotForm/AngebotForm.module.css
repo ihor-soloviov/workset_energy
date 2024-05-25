@@ -29,7 +29,7 @@
   font-size: 15px;
   padding: 12px;
   width: 100%;
-  height: 46px;
+  height: 52px;
   border: 1px solid var(--gray-stroke);
   border-radius: 8px;
   background-color: var(--gray-input);
@@ -51,7 +51,7 @@
   position: absolute;
   color: var(--gray-text);
   line-height: 157%;
-  top: 36px;
+  top: 40px;
   z-index: 2;
   left: 12px;
   cursor: pointer;
@@ -72,7 +72,7 @@
   align-items: center;
   justify-content: center;
   width: 116px;
-  height: 46px;
+  height: 52px;
   border-radius: 0px 8px 8px 0px;
   color: var(--white-main);
   background-color: var(--red-main);
@@ -141,12 +141,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 14px 143px;
   color: var(--gray-input);
   font-size: 16px;
   font-weight: 600;
   width: 100%;
-  height: 48px;
+  height: 58px;
   background-color: var(--red-main);
   border: none;
   border-radius: 28px;
@@ -175,6 +174,9 @@
   .angebotTextArea,
   .angebotBtn {
     width: 342px;
+  }
+  .angebotUploadBtn {
+    top: 25px;
   }
 }
 

@@ -9,6 +9,7 @@
 .amenitiesItem {
   cursor: pointer;
   display: flex;
+
   justify-content: space-between;
   height: 234px;
   width: 342px;
@@ -32,7 +33,7 @@
 }
 
 .amenitiesItem:first-child.active {
-  height: 330px;
+  height: 306px;
 }
 
 .amenitiesMainWrap {
