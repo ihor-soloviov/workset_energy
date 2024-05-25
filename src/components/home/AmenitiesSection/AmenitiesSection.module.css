@@ -1,15 +1,16 @@
 .amenitiesSection {
-  padding: 60px 0 64px;
+  padding: 36px 0;
 }
 
 .amenitiesMainTitle {
   color: var(--black-main);
-  font-size: 24px;
+  text-align: center;
   font-weight: 700;
   line-height: 130%;
   width: fit-content;
   margin: 0 auto;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
+  font-size: 36px;
 }
 
 .amenitiesMainText {
@@ -20,6 +21,31 @@
   text-align: center;
   margin: 0 auto;
   margin-bottom: 36px;
+}
+
+.amenitiesMainBtn {
+  width: 342px;
+  height: 58px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border-radius: 28px;
+  padding: 20px 111px;
+  color: var(--white-main);
+  background-color: var(--red-main);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 110%;
+  border: 1px solid var(--red-main);
+  transition: all 250ms var(--cubic);
+}
+
+.amenitiesMainBtn:is(:hover, :focus) {
+  background-color: var(--white-main);
+  color: var(--red-main);
+  border-color: var(--white-main);
 }
 
 @media screen and (min-width: 1440px) {

@@ -11,6 +11,7 @@ import AmenitiesSection from '@/components/home/AmenitiesSection/AmenitiesSectio
 import StepSection from '@/components/common/StepSection/StepSection';
 import VisionSection from '@/components/common/VisionSection/VisionSection';
 import HeroSection from '@/components/common/HeroSection/HeroSection';
+import RegionSection from '@/components/home/RegionSection/RegionSection';
 
 const HomePage = () => {
   return (
@@ -19,6 +20,7 @@ const HomePage = () => {
       <VideoSection {...firstVideo} />
       <ProductSection />
       <VideoSection {...secondVideo} />
+      <RegionSection />
       <TeamSection />
       <AmenitiesSection />
       <QuestionSection />

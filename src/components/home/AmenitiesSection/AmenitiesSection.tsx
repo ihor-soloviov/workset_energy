@@ -1,20 +1,25 @@
+'use client';
+
 import Container from '@/components/common/Container/Container';
-import ProductList from './AmenitiesList/AmenitiesList';
+import AmenitiesList from './AmenitiesList/AmenitiesList';
 import styles from './AmenitiesSection.module.css';
-import RecycleTextWrap from '@/components/common/RecycleTextWrap/RecycleTextWrap';
-import { inter } from '@/utils/fonts';
+import Button from '@/components/common/Button/Button';
+import { scrollToSection } from '@/utils/scroll';
 
 const AmenitiesSection = () => {
   return (
     <section className={styles.amenitiesSection}>
       <Container>
-        <RecycleTextWrap
-          title="Warum WorkSET Energy?"
-          titleClass={styles.amenitiesMainTitle}
-          text="Mit unserer Arbeit beweisen wir, dass Qualität und Geschwindigkeit zu erschwinglichen Preisen erhältlich sein kann. Ausschließlich angestellte Mitarbeiter, hochwertige Komponenten und keine Vorauszahlung – das ist WorkSET Energy!"
-          textClass={`${styles.amenitiesMainText} ${inter.className}`}
-        />
-        <ProductList />
+        <h2 className={styles.amenitiesMainTitle}>Warum WorkSET Energy?</h2>
+
+        <AmenitiesList />
+        <Button
+          type="button"
+          handleClick={() => scrollToSection('kontact')}
+          className={styles.amenitiesMainBtn}
+        >
+          Zum Angebot
+        </Button>
       </Container>
     </section>
   );

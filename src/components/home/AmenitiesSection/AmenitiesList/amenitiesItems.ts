@@ -1,33 +1,33 @@
-import AmenitiesFirstIcon from '/public/icons/amenities-1.svg';
-import AmenitiesSecondIcon from '/public/icons/amenities-2.svg';
-import AmenitiesThirdIcon from '/public/icons/amenities-3.svg';
-import AmenitiesFourthIcon from '/public/icons/amenities-4.svg';
-
 type AmenitiesItem = {
+  mainTitle: string;
   title: string;
-  text: string;
-  icon: React.ElementType;
+  mainText: string;
+  extraText: string;
 };
 
 export const amenitiesItems: AmenitiesItem[] = [
   {
-    text: 'Wir möchten, dass Solarenergie für alle Bewohner Deutschlands zugänglich wird.',
-    title: 'Erschwingliche Preise',
-    icon: AmenitiesFirstIcon,
+    mainTitle: '0 €',
+    title: 'Anzahlung',
+    mainText:
+      'Zahlung erfolgt erst nach Installation der PV-Anlage: 90% nach Montage, 10% nach Netzanschluss.',
+    extraText:
+      'Bei einer 50%-Vorauszahlung erhältst du einen Rabatt von 500 Euro.',
   },
   {
-    text: 'Vom unterschriebenen Auftrag bis zum finalen Anschluss der Anlage vergehen maximal 2 Monate!',
-    title: 'Wir sind schnell',
-    icon: AmenitiesSecondIcon,
+    mainTitle: '30%',
+    title: 'Günstiger',
+    mainText:
+      'Wir sind 30 % günstiger als die Konkurrenz. Unser Ziel ist es, dir einen hochwertigen Übergang zu erneuerbaren Energien zu ',
+    extraText:
+      'ermöglichen, damit du unabhängig von fossilen Ressourcen und politischen Krisen wirst.',
   },
   {
-    text: 'Wir verlangen von unseren Kunden keine Vorkasse. Du zahlst erst nach der Fertigstellung.',
-    title: 'Keine Vorkasse',
-    icon: AmenitiesThirdIcon,
-  },
-  {
-    text: 'Wir arbeiten nicht mit Subunternehmern zusammen. Monteure, Elektriker, Berater, Backoffice – wir sind alle ein großes Team.',
-    title: 'Unser Team',
-    icon: AmenitiesFourthIcon,
+    mainTitle: '10.000+',
+    title: 'Befriedigte Kunden',
+    mainText:
+      'Über 10.000 zufriedene Kunden. Diese Zahl spricht für die Qualität und Zuverlässigkeit unserer Dienstleistungen. Unsere Kunden',
+    extraText:
+      'schätzen unseren Service und den Professionalismus unserer Team. Das macht uns zu einem vertrauenswürdigen Partner.',
   },
 ];
