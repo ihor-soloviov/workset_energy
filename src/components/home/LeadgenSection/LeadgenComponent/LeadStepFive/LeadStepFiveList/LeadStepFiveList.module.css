@@ -1,0 +1,50 @@
+.stepFiveList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.stepFiveItem {
+  width: 292px;
+  height: 72px;
+  padding: 16px 20px;
+  border-radius: 8px;
+  background-color: var(--white-main);
+  box-shadow: 4px 12px 19px 0px rgba(24, 24, 24, 0.08);
+}
+
+.stepFiveWrap {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.stepFiveIcon {
+  width: 40px;
+  height: 40px;
+  stroke: #3b3c4a;
+  fill: #3b3c4a;
+}
+
+.stepFiveItem:last-child .stepFiveIcon {
+  fill: var(--white-main);
+  stroke: #3b3c4a;
+}
+
+.stepFiveTitle {
+  color: #3b3c4a;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 390px) {
+}
+
+@media screen and (min-width: 1440px) {
+}
+
+@media screen and (min-width: 1728px) {
+}

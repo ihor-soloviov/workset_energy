@@ -1,8 +1,8 @@
 'use client';
+
 import { useRouter } from 'next/navigation';
 import Button from '@/components/common/Button/Button';
 import styles from './QuestionList.module.css';
-import DropArrowIcon from '/public/icons/drop-arrow.svg';
 import { useState } from 'react';
 import { inter } from '@/utils/fonts';
 import { QuestItem, questItems } from './questionItems';
@@ -32,14 +32,18 @@ const QuestionList = () => {
   };
 
   const renderListItems = (items: QuestItem[]) =>
-    items.map(({ text, title, leadSrc }) => (
+    items.map(({ text, title, leadSrc, className }) => (
       <li
         onClick={() => toggleVisibility(title)}
         key={title}
-        className={`${styles.questItem} ${visibleItems[title] ? styles.active : ''}`}
+        className={`${styles.questItem} ${visibleItems[title] ? styles.active : ''} ${className ? styles[className] : ''}`}
       >
         <div className={styles.questTitleWrap}>
-          <h3 className={`${styles.questTitle} ${inter.className}`}>{title}</h3>
+          <h3
+            className={`${styles.questTitle} ${inter.className} ${className ? styles[className] : ''}`}
+          >
+            {title}
+          </h3>
           <Button
             handleClick={e => {
               e.stopPropagation();

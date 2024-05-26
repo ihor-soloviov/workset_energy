@@ -65,7 +65,7 @@
 .errorText {
   position: absolute;
   right: 10px;
-  top: 77px;
+  top: 82px;
   width: fit-content;
   color: var(--red-main);
   font-size: 10px;
@@ -148,6 +148,10 @@
     height: 4.6rem;
     padding: 1.4rem 2rem;
     border-radius: 2.8rem;
+  }
+
+  .errorText {
+    top: 79px;
   }
 }
 

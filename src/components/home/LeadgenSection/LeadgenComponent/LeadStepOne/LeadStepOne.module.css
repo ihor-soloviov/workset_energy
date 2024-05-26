@@ -1,0 +1,53 @@
+.stepOneWrap {
+}
+.stepOneTitle {
+  color: var(--black--main);
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 130%;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 12px;
+}
+
+.stepOneText {
+  color: var(--gray-text);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 140%;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 48px;
+}
+
+.stepOneBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 32px;
+  border: 1px solid var(--gray-stroke);
+  width: 168px;
+  height: 56px;
+  margin: 0 auto;
+  background-color: var(--white-main);
+  outline: none;
+  color: var(--black-main);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 390px) {
+  .stepOneWrap {
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .stepOneWrap {
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .stepOneWrap {
+  }
+}

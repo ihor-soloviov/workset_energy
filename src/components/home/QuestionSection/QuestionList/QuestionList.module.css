@@ -21,6 +21,10 @@
   transition: all 250ms var(--cubic);
 }
 
+.questItem.small {
+  max-height: 108px;
+}
+
 .questItem:last-child {
   border-bottom: 1px solid var(--gray-stroke);
 }
@@ -50,6 +54,10 @@
   user-select: none;
 }
 
+.questTitle.small {
+  height: 60px;
+}
+
 .questToggleBtn {
   cursor: pointer;
   width: 40px;
@@ -76,7 +84,7 @@
 
 .questTextWrap {
   opacity: 0;
-  transition: all 0.3s ease-in-out;
+  transition: all 150ms ease-in-out;
 }
 
 .questTextWrap.active {
@@ -90,7 +98,7 @@
 .questText {
   font-size: 14px;
   color: var(--gray-text);
-  width: 302px;
+  width: 342px;
   line-height: 160%;
 }
 

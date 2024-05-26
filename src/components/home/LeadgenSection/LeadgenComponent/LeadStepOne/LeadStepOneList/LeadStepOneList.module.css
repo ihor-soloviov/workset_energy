@@ -1,0 +1,55 @@
+.stepOneList {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+.stepOneItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 116px;
+  height: 116px;
+  border-radius: 10px;
+  background-color: var(--white-main);
+  padding-top: 34px;
+  padding-bottom: 6px;
+  box-shadow: 4px 12px 19px 0px rgba(24, 24, 24, 0.12);
+}
+
+.stepOneWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+}
+
+.stepOneIcon {
+  width: 34px;
+  height: 34px;
+  fill: var(--red-main);
+}
+
+.stepOneItem:first-child .stepOneIcon {
+  fill: var(--gray-dark-text);
+}
+
+.stepOneTitle {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 160%;
+}
+
+.stepOneItem:last-child .stepOneTitle {
+  color: var(--red-main);
+}
+
+@media screen and (min-width: 390px) {
+}
+
+@media screen and (min-width: 1440px) {
+}
+
+@media screen and (min-width: 1728px) {
+}

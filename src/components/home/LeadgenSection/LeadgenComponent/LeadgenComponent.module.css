@@ -1,0 +1,43 @@
+.leadMainWrap {
+  background-color: var(--gray-input);
+  padding: 24px 0 36px;
+}
+
+.leadWrap {
+  width: 342px;
+  min-height: 499px;
+  max-height: 910px;
+  border-radius: 24px;
+  padding: 30px 25px;
+  margin: 0 auto;
+  border: 1px solid var(--gray-stroke);
+  background-color: var(--white-main);
+}
+
+.leadProgressWrap {
+}
+
+.leadProgressLine {
+  width: 252px;
+  height: 8px;
+  border-radius: 8px;
+  background-color: #f4f4f4;
+  margin: 0 auto;
+  margin-top: 53px;
+  margin-bottom: 36px;
+}
+
+@media screen and (min-width: 390px) {
+  .leadMainWrap {
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .leadMainWrap {
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .leadMainWrap {
+  }
+}

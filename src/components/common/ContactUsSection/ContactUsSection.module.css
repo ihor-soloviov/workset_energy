@@ -36,6 +36,7 @@
   .contactUsMainWrap {
     flex-direction: row;
     gap: 16rem;
+    align-items: center;
     justify-content: space-between;
   }
 

@@ -12,12 +12,14 @@ import StepSection from '@/components/common/StepSection/StepSection';
 import VisionSection from '@/components/common/VisionSection/VisionSection';
 import HeroSection from '@/components/common/HeroSection/HeroSection';
 import RegionSection from '@/components/home/RegionSection/RegionSection';
+import LeadgenSection from '@/components/home/LeadgenSection/LeadgenSection';
 
 const HomePage = () => {
   return (
     <>
       <HeroSection {...homeHero} />
       <AmenitiesSection />
+      <LeadgenSection />
       {/* <VideoSection {...firstVideo} /> */}
       {/* <ProductSection /> */}
       {/* <VideoSection {...secondVideo} /> */}
