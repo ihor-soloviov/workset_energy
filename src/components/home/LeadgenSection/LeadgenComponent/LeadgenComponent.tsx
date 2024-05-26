@@ -28,7 +28,7 @@ const formInitialValue: FormInitialValue = {
 };
 
 const LeadgenComponent = () => {
-  const router = useRouter();
+  //   const router = useRouter();
   const [formData, setFormData] = useState(formInitialValue);
   const [step, setStep] = useState(1);
 
