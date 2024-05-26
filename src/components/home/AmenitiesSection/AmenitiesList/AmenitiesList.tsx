@@ -19,7 +19,7 @@ const AmenitiesList = () => {
   const currentTitle = (title: string) => {
     switch (title) {
       case '0':
-        return <CountUp duration={1} start={99} end={0} />;
+        return title;
       case '30':
         return <CountUp duration={2} start={1} end={30} />;
       case '10.000':

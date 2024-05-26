@@ -9,7 +9,7 @@ type AmenitiesItem = {
 export const amenitiesItems: AmenitiesItem[] = [
   {
     mainTitle: '0',
-    mainSymbol: '€',
+    mainSymbol: ' €',
     title: 'Anzahlung',
     mainText:
       'Zahlung erfolgt erst nach Installation der PV-Anlage: 90% nach Montage, 10% nach Netzanschluss.',
