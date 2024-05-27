@@ -8,7 +8,6 @@ import LeadStepFour from './LeadStepFour/LeadStepFour';
 import LeadStepFive from './LeadStepFive/LeadStepFive';
 import LeadStepSix from './LeadStepSix/LeadStepSix';
 import { FormInitialValue } from '../types';
-import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
 const formInitialValue: FormInitialValue = {
@@ -28,11 +27,8 @@ const formInitialValue: FormInitialValue = {
 };
 
 const LeadgenComponent = () => {
-  //   const router = useRouter();
   const [formData, setFormData] = useState(formInitialValue);
   const [step, setStep] = useState(1);
-
-  console.log('formData', formData);
 
   const handlePrevStepClick = () => {
     clearStepValue(step - 1);
