@@ -14,8 +14,6 @@
   transition: all 150ms ease-in-out;
 }
 
-
-
 .leadWrap.small {
   height: 589px;
 }
@@ -39,6 +37,38 @@
   margin: 0 auto;
   margin-top: 53px;
   margin-bottom: 36px;
+}
+
+.leadProgressLineInner {
+  height: 100%;
+  border-radius: 8px;
+  background-color: var(--red-main);
+  width: 0;
+  position: relative;
+  transition: width 0.5s ease-in-out;
+}
+
+.leadProggressPrecentWrap {
+  position: absolute;
+  bottom: -5px;
+  right: -33px;
+  width: 73px;
+  height: 71px;
+}
+
+.leadProgressPercentage {
+  color: var(--white-main);
+  font-size: 16px;
+  font-weight: 600;
+  z-index: 2;
+  position: absolute;
+  top: 24px;
+  left: 23px;
+}
+
+.leadProgressIcon {
+  width: 73px;
+  height: 71px;
 }
 
 @media screen and (min-width: 390px) {

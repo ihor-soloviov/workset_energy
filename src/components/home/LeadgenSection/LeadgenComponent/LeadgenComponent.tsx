@@ -9,6 +9,8 @@ import LeadStepFive from './LeadStepFive/LeadStepFive';
 import LeadStepSix from './LeadStepSix/LeadStepSix';
 import { FormInitialValue } from '../types';
 import { useEffect, useState } from 'react';
+import { inter } from '@/utils/fonts';
+import ProgressWrapIcon from '/public/icons/address-wrap.svg';
 
 const formInitialValue: FormInitialValue = {
   propertyType: '',
@@ -145,6 +147,25 @@ const LeadgenComponent = () => {
     }
   };
 
+  const calculateProgress = () => {
+    switch (step) {
+      case 1:
+        return 0;
+      case 2:
+        return 22;
+      case 3:
+        return 44;
+      case 4:
+        return 65;
+      case 5:
+        return 80;
+      case 6:
+        return 99;
+      default:
+        return 0;
+    }
+  };
+
   useEffect(() => {
     if (step === 7) {
       setStep(1);
@@ -156,7 +177,21 @@ const LeadgenComponent = () => {
     <div className={styles.leadMainWrap}>
       <div className={`${styles.leadWrap} ${styles[currentClassName()]} `}>
         <div className={styles.leadProgressWrap}>
-          <div className={styles.leadProgressLine}></div>
+          <div className={styles.leadProgressLine}>
+            <div
+              className={styles.leadProgressLineInner}
+              style={{ width: `${calculateProgress()}%` }}
+            >
+              <div className={styles.leadProggressPrecentWrap}>
+                <ProgressWrapIcon className={styles.leadProgressIcon} />
+                <p
+                  className={`${styles.leadProgressPercentage} ${inter.className}`}
+                >
+                  {calculateProgress()}%
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
         {currentStep(step)}
       </div>
