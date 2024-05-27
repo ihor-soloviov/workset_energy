@@ -32,72 +32,77 @@ const LeadgenComponent = () => {
   const [formData, setFormData] = useState(formInitialValue);
   const [step, setStep] = useState(1);
 
+  console.log('formData', formData);
+
   const handlePrevStepClick = () => {
     clearStepValue(step - 1);
     setStep(step - 1);
   };
 
+  const handleNextStepClick = (stepValue: string | null, key: string) => {
+    stepValue && setFormData({ ...formData, [key]: stepValue });
+    setStep(step + 1);
+  };
+
+  const currentClassName = () => {
+    switch (step) {
+      case 2:
+        return 'small';
+      case 3:
+        return 'small';
+      case 4:
+        return 'medium';
+      case 5:
+        return 'medium';
+      case 6:
+        return 'large';
+      default:
+        return '';
+    }
+  };
+
   const currentStep = (step: number) => {
     switch (step) {
       case 1:
+        return <LeadStepOne handleNextStepClick={handleNextStepClick} />;
+      case 2:
         return (
-          <LeadStepOne
+          <LeadStepTwo
+            handlePrevStepClick={handlePrevStepClick}
+            handleNextStepClick={handleNextStepClick}
+          />
+        );
+      case 3:
+        return (
+          <LeadStepThree
+            handlePrevStepClick={handlePrevStepClick}
+            handleNextStepClick={handleNextStepClick}
+          />
+        );
+      case 4:
+        return (
+          <LeadStepFour
+            handlePrevStepClick={handlePrevStepClick}
+            handleNextStepClick={handleNextStepClick}
+          />
+        );
+      case 5:
+        return (
+          <LeadStepFive
+            handlePrevStepClick={handlePrevStepClick}
+            handleNextStepClick={handleNextStepClick}
+          />
+        );
+      case 6:
+        return (
+          <LeadStepSix
             step={step}
             setStep={setStep}
             formData={formData}
             setFormData={setFormData}
+            handlePrevStepClick={handlePrevStepClick}
           />
         );
-      // case 2:
-      //   return (
-      //     <LeadStepTwo
-      //       step={step}
-      //       setStep={setStep}
-      //       formData={formData}
-      //       setFormData={setFormData}
-      //       handlePrevStepClick={handlePrevStepClick}
-      //     />
-      //   );
-      // case 3:
-      //   return (
-      //     <LeadStepThree
-      //       step={step}
-      //       setStep={setStep}
-      //       formData={formData}
-      //       setFormData={setFormData}
-      //       handlePrevStepClick={handlePrevStepClick}
-      //     />
-      //   );
-      // case 4:
-      //   return (
-      //     <LeadStepFour
-      //       step={step}
-      //       setStep={setStep}
-      //       formData={formData}
-      //       setFormData={setFormData}
-      //       handlePrevStepClick={handlePrevStepClick}
-      //     />
-      //   );
-      // case 5:
-      //   return (
-      //     <LeadStepFive
-      //       step={step}
-      //       setStep={setStep}
-      //       formData={formData}
-      //       setFormData={setFormData}
-      //       handlePrevStepClick={handlePrevStepClick}
-      //     />
-      //   );
-      // case 6:
-      //   return (
-      //     <LeadStepSix
-      //       step={step}
-      //       setStep={setStep}
-      //       formData={formData}
-      //       setFormData={setFormData}
-      //       handlePrevStepClick={handlePrevStepClick}
-      //     />
-      //   );
 
       default:
         return;
@@ -153,7 +158,7 @@ const LeadgenComponent = () => {
 
   return (
     <div className={styles.leadMainWrap}>
-      <div className={styles.leadWrap}>
+      <div className={`${styles.leadWrap} ${styles[currentClassName()]} `}>
         <div className={styles.leadProgressWrap}>
           <div className={styles.leadProgressLine}></div>
         </div>

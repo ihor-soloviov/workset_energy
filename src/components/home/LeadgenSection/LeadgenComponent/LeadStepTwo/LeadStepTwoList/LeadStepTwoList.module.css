@@ -8,12 +8,18 @@
 }
 
 .stepTwoItem {
+  cursor: pointer;
   width: 292px;
   height: 72px;
   padding: 16px 20px;
   border-radius: 8px;
   background-color: var(--white-main);
   box-shadow: 4px 12px 19px 0px rgba(24, 24, 24, 0.08);
+  transition: all 0.3s ease-in-out;
+}
+
+.stepTwoItem.active {
+  background-color: var(--red-main);
 }
 
 .stepTwoWrap {
@@ -26,12 +32,22 @@
   width: 40px;
   height: 40px;
   fill: #3b3c4a;
+  transition: all 0.3s ease-in-out;
+}
+
+.stepTwoIcon.active {
+  fill: var(--white-main);
 }
 
 .stepTwoTitle {
   color: #3b3c4a;
   font-size: 18px;
   font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+.stepTwoTitle.active {
+  color: var(--white-main);
 }
 
 @media screen and (min-width: 390px) {

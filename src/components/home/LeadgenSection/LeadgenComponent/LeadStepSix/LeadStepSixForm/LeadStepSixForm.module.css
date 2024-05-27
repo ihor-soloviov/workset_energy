@@ -64,4 +64,22 @@
   color: var(--black-main);
   font-size: 16px;
   font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.stepSixBtn:last-child {
+  color: var(--white-main);
+  border: 1px solid var(--red-main);
+  background-color: var(--red-main);
+}
+
+.stepSixBtn:last-child:disabled {
+  background-color: var(--white-main);
+  border: 1px solid var(--gray-stroke);
+  color: var(--black-main);
+  cursor: not-allowed;
+}
+
+.loader > svg {
+  fill: var(--white-main);
 }

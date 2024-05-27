@@ -1,5 +1,6 @@
 .stepOneWrap {
 }
+
 .stepOneTitle {
   color: var(--black--main);
   text-align: center;
@@ -26,15 +27,23 @@
   justify-content: center;
   align-items: center;
   border-radius: 32px;
-  border: 1px solid var(--gray-stroke);
+  border: 1px solid var(--red-stroke);
   width: 168px;
   height: 56px;
   margin: 0 auto;
-  background-color: var(--white-main);
+  background-color: var(--red-main);
   outline: none;
-  color: var(--black-main);
+  color: var(--white-main);
   font-size: 18px;
   font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.stepOneBtn:disabled {
+  background-color: var(--white-main);
+  border: 1px solid var(--gray-stroke);
+  color: var(--black-main);
+  cursor: not-allowed;
 }
 
 @media screen and (min-width: 390px) {

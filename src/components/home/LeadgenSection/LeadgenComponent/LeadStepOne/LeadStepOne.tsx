@@ -4,20 +4,11 @@ import LeadStepOneList from './LeadStepOneList/LeadStepOneList';
 import { LeadStepProps } from '../../types';
 import React, { useState, MouseEvent } from 'react';
 
-const LeadStepOne = ({
-  formData,
-  setFormData,
-  step,
-  setStep,
-}: LeadStepProps) => {
+const LeadStepOne = ({ handleNextStepClick }: LeadStepProps) => {
   const [stepOneValue, setStepOneValue] = useState<null | string>(null);
 
   const [isDisabled, setIsDisabled] = useState(true);
 
-  const handleNextStepClick = () => {
-    stepOneValue && setFormData({ ...formData, propertyType: stepOneValue });
-    setStep(step + 1);
-  };
   const handleItemClick = (e: MouseEvent<HTMLLIElement>, itemValue: string) => {
     setStepOneValue(itemValue);
     setIsDisabled(false);
@@ -30,12 +21,15 @@ const LeadStepOne = ({
       </h2>
       <p className={styles.stepOneText}>für die du die PV-Anlage planst?</p>
       <LeadStepOneList
-        stepOneValue={stepOneValue}
+        stepValue={stepOneValue}
         handleItemClick={handleItemClick}
       />
       <Button
         disabled={isDisabled}
-        handleClick={handleNextStepClick}
+        handleClick={() =>
+          handleNextStepClick &&
+          handleNextStepClick(stepOneValue, 'propertyType')
+        }
         type="button"
         className={styles.stepOneBtn}
       >

@@ -1,3 +1,5 @@
+import { MouseEvent } from 'react';
+
 export type StepItem = {
   title: string;
   icon?: React.ElementType;
@@ -21,6 +23,16 @@ export type FormInitialValue = {
 };
 
 export type LeadStepProps = {
+  handlePrevStepClick?: () => void;
+  handleNextStepClick?: (stepValue: string | null, key: string) => void;
+};
+
+export type LeadStepListProps = {
+  handleItemClick: (e: MouseEvent<HTMLLIElement>, itemValue: string) => void;
+  stepValue: null | string;
+};
+
+export type LeadFormProps = {
   formData: FormInitialValue;
   setFormData: (value: FormInitialValue) => void;
   step: number;
