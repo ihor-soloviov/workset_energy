@@ -4,7 +4,12 @@
   align-items: center;
   gap: 12px;
   justify-content: center;
-  margin-bottom: 32px;
+  width: 340px;
+  height: 372px;
+  background-color: var(--gray-input);
+  margin-bottom: 36px;
+  border-radius: 16px;
+  padding: 24px;
 }
 
 .stepFourItem {

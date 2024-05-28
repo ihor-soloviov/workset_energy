@@ -1,32 +1,8 @@
 .leadMainWrap {
-  background-color: var(--gray-input);
-  padding: 24px 0 36px;
-}
-
-.leadWrap {
-  width: 342px;
-  height: 499px;
-  border-radius: 24px;
-  padding: 30px 25px;
-  margin: 0 auto;
-  border: 1px solid var(--gray-stroke);
-  background-color: var(--white-main);
-  transition: all 150ms ease-in-out;
-}
-
-.leadWrap.small {
-  height: 589px;
-}
-
-.leadWrap.medium {
-  height: 637px;
-}
-
-.leadWrap.large {
-  height: 863px;
 }
 
 .leadProgressWrap {
+  margin-bottom: 36px;
 }
 
 .leadProgressLine {
@@ -35,8 +11,6 @@
   border-radius: 8px;
   background-color: #f4f4f4;
   margin: 0 auto;
-  margin-top: 53px;
-  margin-bottom: 36px;
 }
 
 .leadProgressLineInner {
@@ -48,12 +22,27 @@
   transition: width 0.5s ease-in-out;
 }
 
+.leadProgressLineInner::before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  bottom: 0;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: var(--red-main);
+}
+
 .leadProggressPrecentWrap {
   position: absolute;
-  bottom: -5px;
-  right: -33px;
-  width: 73px;
-  height: 71px;
+  bottom: 13px;
+  right: -32px;
+  width: 53px;
+  height: 49px;
+}
+
+.leadProggressPrecentWrap.active {
+  right: -23px;
 }
 
 .leadProgressPercentage {
@@ -62,13 +51,20 @@
   font-weight: 600;
   z-index: 2;
   position: absolute;
-  top: 24px;
-  left: 23px;
+  top: 13px;
+  left: 15px;
 }
 
 .leadProgressIcon {
-  width: 73px;
-  height: 71px;
+  width: 53px;
+  height: 49px;
+  fill: var(--red-main);
+  transition: width 0.1s ease-in-out;
+}
+
+.leadProgressIcon.active {
+  width: 62px;
+  height: 49px;
 }
 
 @media screen and (min-width: 390px) {

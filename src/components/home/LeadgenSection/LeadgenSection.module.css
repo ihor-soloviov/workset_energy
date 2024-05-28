@@ -1,5 +1,5 @@
 .leadSection {
-  padding-top: 36px;
+  padding: 36px 0 48px;
 }
 
 .leadContainer {
@@ -16,7 +16,7 @@
   line-height: 130%;
   width: fit-content;
   margin: 0 auto;
-  margin-bottom: 24px;
+  margin-bottom: 89px;
 }
 
 @media screen and (min-width: 390px) {

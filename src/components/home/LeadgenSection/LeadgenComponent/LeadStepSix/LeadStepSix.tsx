@@ -1,29 +1,53 @@
 import Button from '@/components/common/Button/Button';
 import styles from './LeadStepSix.module.css';
-import LeadStepSixForm from './LeadStepSixForm/LeadStepSixForm';
-import React, { useState, MouseEvent } from 'react';
-import { LeadFormProps } from '../../types';
+
+import React, { useState } from 'react';
+import { LeadStepProps } from '../../types';
+import { inter } from '@/utils/fonts';
 
 const LeadStepSix = ({
-  formData,
-  setFormData,
-  step,
-  setStep,
+  handleNextStepClick,
   handlePrevStepClick,
-}: LeadFormProps) => {
+}: LeadStepProps) => {
+  const [stepSixValue, setStepSixValue] = useState('');
+  console.log(stepSixValue);
+
   return (
     <div className={styles.stepSixWrap}>
-      <h2 className={styles.stepSixTitle}>Kontaktdaten</h2>
-      <h2 className={styles.stepSixText}>
-        Bitte alle Felder ausfüllen, damit wir dich erreichen können.
-      </h2>
-      <LeadStepSixForm
-        formData={formData}
-        setFormData={setFormData}
-        step={step}
-        setStep={setStep}
-        handlePrevStepClick={handlePrevStepClick}
+      <h2
+        className={styles.stepSixTitle}
+      >{`Schreibe uns eine kurze Nachricht :)`}</h2>
+      <p className={styles.stepSixText}>
+        Willst du uns noch etwas Wichtiges zu deinem geplanten PV-Projekt
+        mitteilen?
+      </p>
+
+      <input
+        type="text"
+        placeholder="Text"
+        value={stepSixValue}
+        onChange={e => setStepSixValue(e.target.value)}
+        className={`${styles.stepSixInput} ${inter.className}`}
       />
+      <div className={styles.stepSixBtnWrap}>
+        <Button
+          handleClick={handlePrevStepClick}
+          type="button"
+          className={styles.stepSixBtn}
+        >
+          Züruck
+        </Button>
+        <Button
+          handleClick={() =>
+            handleNextStepClick &&
+            handleNextStepClick(stepSixValue, 'projectMessage')
+          }
+          type="submit"
+          className={styles.stepSixBtn}
+        >
+          Weiter
+        </Button>
+      </div>
     </div>
   );
 };

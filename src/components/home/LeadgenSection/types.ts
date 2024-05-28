@@ -12,6 +12,7 @@ export type FormInitialValue = {
   timePeriod: string;
   communicationType: string;
   kwpType: string;
+  projectMessage: string;
   contactData: {
     userFirstName: string;
     userLastName: string;
@@ -24,7 +25,7 @@ export type FormInitialValue = {
 
 export type LeadStepProps = {
   handlePrevStepClick?: () => void;
-  handleNextStepClick?: (stepValue: string | null, key: string) => void;
+  handleNextStepClick: (stepValue: string | null, key: string) => void;
 };
 
 export type LeadStepListProps = {

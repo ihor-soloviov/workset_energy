@@ -7,10 +7,10 @@ const LeadgenSection = () => {
     <section className={styles.leadSection}>
       <div className={styles.leadContainer}>
         <h2 className={styles.leadTitle}>
-          Test in 30 Sekunden -deine PV-Anlage wartet!
+          Investiere 30 Sekunden für dein PV-Projekt!
         </h2>
+        <LeadgenComponent />
       </div>
-      <LeadgenComponent />
     </section>
   );
 };

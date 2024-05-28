@@ -7,6 +7,7 @@ import LeadStepThree from './LeadStepThree/LeadStepThree';
 import LeadStepFour from './LeadStepFour/LeadStepFour';
 import LeadStepFive from './LeadStepFive/LeadStepFive';
 import LeadStepSix from './LeadStepSix/LeadStepSix';
+import LeadStepSeven from './LeadStepSeven/LeadStepSeven';
 import { FormInitialValue } from '../types';
 import { useEffect, useState } from 'react';
 import { inter } from '@/utils/fonts';
@@ -18,6 +19,7 @@ const formInitialValue: FormInitialValue = {
   timePeriod: '',
   communicationType: '',
   kwpType: '',
+  projectMessage: '',
   contactData: {
     userFirstName: '',
     userLastName: '',
@@ -31,7 +33,7 @@ const formInitialValue: FormInitialValue = {
 const LeadgenComponent = () => {
   const [formData, setFormData] = useState(formInitialValue);
   const [step, setStep] = useState(1);
-
+  console.log(formData);
   const handlePrevStepClick = () => {
     clearStepValue(step - 1);
     setStep(step - 1);
@@ -40,23 +42,6 @@ const LeadgenComponent = () => {
   const handleNextStepClick = (stepValue: string | null, key: string) => {
     stepValue && setFormData({ ...formData, [key]: stepValue });
     setStep(step + 1);
-  };
-
-  const currentClassName = () => {
-    switch (step) {
-      case 2:
-        return 'small';
-      case 3:
-        return 'small';
-      case 4:
-        return 'medium';
-      case 5:
-        return 'medium';
-      case 6:
-        return 'large';
-      default:
-        return '';
-    }
   };
 
   const currentStep = (step: number) => {
@@ -94,6 +79,13 @@ const LeadgenComponent = () => {
       case 6:
         return (
           <LeadStepSix
+            handlePrevStepClick={handlePrevStepClick}
+            handleNextStepClick={handleNextStepClick}
+          />
+        );
+      case 7:
+        return (
+          <LeadStepSeven
             step={step}
             setStep={setStep}
             formData={formData}
@@ -139,6 +131,11 @@ const LeadgenComponent = () => {
       case 6:
         return setFormData({
           ...formData,
+          projectMessage: formInitialValue.projectMessage,
+        });
+      case 7:
+        return setFormData({
+          ...formData,
           contactData: formInitialValue.contactData,
         });
 
@@ -160,6 +157,8 @@ const LeadgenComponent = () => {
       case 5:
         return 80;
       case 6:
+        return 87;
+      case 7:
         return 99;
       default:
         return 0;
@@ -167,7 +166,7 @@ const LeadgenComponent = () => {
   };
 
   useEffect(() => {
-    if (step === 7) {
+    if (step === 8) {
       setStep(1);
       setFormData(formInitialValue);
     }
@@ -175,26 +174,28 @@ const LeadgenComponent = () => {
 
   return (
     <div className={styles.leadMainWrap}>
-      <div className={`${styles.leadWrap} ${styles[currentClassName()]} `}>
-        <div className={styles.leadProgressWrap}>
-          <div className={styles.leadProgressLine}>
+      <div className={styles.leadProgressWrap}>
+        <div className={styles.leadProgressLine}>
+          <div
+            className={styles.leadProgressLineInner}
+            style={{ width: `${calculateProgress()}%` }}
+          >
             <div
-              className={styles.leadProgressLineInner}
-              style={{ width: `${calculateProgress()}%` }}
+              className={`${styles.leadProggressPrecentWrap} ${step !== 1 ? styles.active : ''}`}
             >
-              <div className={styles.leadProggressPrecentWrap}>
-                <ProgressWrapIcon className={styles.leadProgressIcon} />
-                <p
-                  className={`${styles.leadProgressPercentage} ${inter.className}`}
-                >
-                  {calculateProgress()}%
-                </p>
-              </div>
+              <ProgressWrapIcon
+                className={`${styles.leadProgressIcon} ${step !== 1 ? styles.active : ''}`}
+              />
+              <p
+                className={`${styles.leadProgressPercentage} ${inter.className}`}
+              >
+                {calculateProgress()}%
+              </p>
             </div>
           </div>
         </div>
-        {currentStep(step)}
       </div>
+      {currentStep(step)}
     </div>
   );
 };

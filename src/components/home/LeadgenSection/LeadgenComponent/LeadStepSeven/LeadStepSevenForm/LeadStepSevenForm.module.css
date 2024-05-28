@@ -1,10 +1,10 @@
-.stepSixForm {
+.stepSevenForm {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
 
-.stepSixLabel {
+.stepSevenLabel {
   color: var(--black-main);
   font-weight: 500;
   font-size: 13px;
@@ -14,7 +14,7 @@
   gap: 4px;
 }
 
-.stepSixInput {
+.stepSevenInput {
   color: var(--black-main);
   font-size: 15px;
   padding: 17px 12px;
@@ -25,11 +25,11 @@
   outline: none;
 }
 
-.stepSixInput.error {
+.stepSevenInput.error {
   border: 1px solid var(--red-main);
 }
 
-.stepSixInput::placeholder {
+.stepSevenInput::placeholder {
   font-size: 15px;
   font-weight: 400;
   color: var(--gray-text);
@@ -44,14 +44,14 @@
   font-size: 10px;
 }
 
-.stepSixBtnWrap {
+.stepSevenBtnWrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 14px;
 }
 
-.stepSixBtn {
+.stepSevenBtn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,13 +67,13 @@
   transition: all 0.3s ease-in-out;
 }
 
-.stepSixBtn:last-child {
+.stepSevenBtn:last-child {
   color: var(--white-main);
   border: 1px solid var(--red-main);
   background-color: var(--red-main);
 }
 
-.stepSixBtn:last-child:disabled {
+.stepSevenBtn:last-child:disabled {
   background-color: var(--white-main);
   border: 1px solid var(--gray-stroke);
   color: var(--black-main);

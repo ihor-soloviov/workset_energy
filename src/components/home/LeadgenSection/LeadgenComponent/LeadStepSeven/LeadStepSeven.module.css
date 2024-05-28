@@ -1,0 +1,39 @@
+.stepSevenWrap {
+}
+
+.stepSevenTitle {
+  color: var(--black--main);
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 130%;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 12px;
+}
+
+.stepSevenText {
+  color: var(--gray-text);
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 140%;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: 390px) {
+  .stepSevenWrap {
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .stepSevenWrap {
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .stepSevenWrap {
+  }
+}

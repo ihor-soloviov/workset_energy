@@ -3,7 +3,13 @@
   align-items: center;
   gap: 20px;
   justify-content: center;
-  margin-bottom: 32px;
+  width: 300px;
+  height: 164px;
+  margin: 0 auto;
+  background-color: var(--gray-input);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 36px;
 }
 
 .stepOneItem {
@@ -35,38 +41,23 @@
 .stepOneIcon {
   width: 34px;
   height: 34px;
-  fill: var(--red-main);
-  transition: all 0.3s ease-in-out;
-}
-
-.stepOneItem:first-child .stepOneIcon {
   fill: var(--gray-dark-text);
+  transition: all 0.3s ease-in-out;
 }
 
 .stepOneIcon.active {
   fill: var(--white-main);
 }
 
-.stepOneItem:first-child .stepOneIcon.active {
-  fill: var(--white-main);
-}
-
 .stepOneTitle {
   font-size: 15px;
   font-weight: 600;
+  color: var(--gray-dark-text);
   line-height: 160%;
   transition: all 0.3s ease-in-out;
 }
 
-.stepOneItem:last-child .stepOneTitle {
-  color: var(--red-main);
-}
-
 .stepOneTitle.active {
-  color: var(--white-main);
-}
-
-.stepOneItem:last-child .stepOneTitle.active {
   color: var(--white-main);
 }
 

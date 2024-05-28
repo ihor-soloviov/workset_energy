@@ -1,6 +1,6 @@
 'use client';
 
-import styles from './LeadStepSixForm.module.css';
+import styles from './LeadStepSevenForm.module.css';
 import Button from '@/components/common/Button/Button';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
@@ -11,7 +11,7 @@ import { formDataPost } from '@/utils/api';
 import { useGlobalStore } from '@/store/global-store';
 import { ThreeDots } from 'react-loader-spinner';
 
-const LeadStepSixForm = ({
+const LeadStepSevenForm = ({
   formData,
   setFormData,
   step,
@@ -76,14 +76,14 @@ const LeadStepSixForm = ({
 
   return (
     <form
-      className={`${styles.stepSixForm} ${inter.className}`}
+      className={`${styles.stepSevenForm} ${inter.className}`}
       onSubmit={handleSubmit}
     >
-      <label className={styles.stepSixLabel}>
+      <label className={styles.stepSevenLabel}>
         Vorname*
         <input
           placeholder="Vorname"
-          className={`${styles.stepSixInput} ${touched.userFirstName && errors.userFirstName && styles.error}`}
+          className={`${styles.stepSevenInput} ${touched.userFirstName && errors.userFirstName && styles.error}`}
           {...getFieldProps('userFirstName')}
         />
         {touched.userFirstName && errors.userFirstName && (
@@ -91,11 +91,11 @@ const LeadStepSixForm = ({
         )}
       </label>
 
-      <label className={styles.stepSixLabel}>
+      <label className={styles.stepSevenLabel}>
         Nachname*
         <input
           placeholder="Nachname"
-          className={`${styles.stepSixInput} ${touched.userLastName && errors.userLastName && styles.error}`}
+          className={`${styles.stepSevenInput} ${touched.userLastName && errors.userLastName && styles.error}`}
           {...getFieldProps('userLastName')}
         />
         {touched.userLastName && errors.userLastName && (
@@ -103,11 +103,11 @@ const LeadStepSixForm = ({
         )}
       </label>
 
-      <label className={styles.stepSixLabel}>
+      <label className={styles.stepSevenLabel}>
         E-Mail*
         <input
           placeholder="E-Mail"
-          className={`${styles.stepSixInput} ${touched.userEmail && errors.userEmail && styles.error}`}
+          className={`${styles.stepSevenInput} ${touched.userEmail && errors.userEmail && styles.error}`}
           {...getFieldProps('userEmail')}
         />
         {touched.userEmail && errors.userEmail && (
@@ -115,33 +115,33 @@ const LeadStepSixForm = ({
         )}
       </label>
 
-      <label className={styles.stepSixLabel}>
+      <label className={styles.stepSevenLabel}>
         Telefon-Nr.*
         <input
           placeholder="Telefon-Nr."
-          className={`${styles.stepSixInput} ${touched.userPhone && errors.userPhone && styles.error}`}
+          className={`${styles.stepSevenInput} ${touched.userPhone && errors.userPhone && styles.error}`}
           {...getFieldProps('userPhone')}
         />
         {touched.userPhone && errors.userPhone && (
           <p className={styles.errorText}>{errors.userPhone}</p>
         )}
       </label>
-      <label className={styles.stepSixLabel}>
+      <label className={styles.stepSevenLabel}>
         Straße der Projektadresse*
         <input
           placeholder="Straße der Projektadresse"
-          className={`${styles.stepSixInput} ${touched.userStreet && errors.userStreet && styles.error}`}
+          className={`${styles.stepSevenInput} ${touched.userStreet && errors.userStreet && styles.error}`}
           {...getFieldProps('userStreet')}
         />
         {touched.userStreet && errors.userStreet && (
           <p className={styles.errorText}>{errors.userStreet}</p>
         )}
       </label>
-      <label className={styles.stepSixLabel}>
+      <label className={styles.stepSevenLabel}>
         PLZ und Stadt der Projektadresse*
         <input
           placeholder="PLZ und Stadt der Projektadresse"
-          className={`${styles.stepSixInput} ${touched.userPostcode && errors.userPostcode && styles.error}`}
+          className={`${styles.stepSevenInput} ${touched.userPostcode && errors.userPostcode && styles.error}`}
           {...getFieldProps('userPostcode')}
         />
         {touched.userPostcode && errors.userPostcode && (
@@ -149,18 +149,18 @@ const LeadStepSixForm = ({
         )}
       </label>
 
-      <div className={`${styles.stepSixBtnWrap} ${interTight.className}`}>
+      <div className={`${styles.stepSevenBtnWrap} ${interTight.className}`}>
         <Button
           handleClick={handlePrevStepClick}
           type="button"
-          className={styles.stepSixBtn}
+          className={styles.stepSevenBtn}
         >
           Züruck
         </Button>
         <Button
           disabled={!(isValid && dirty)}
           type="submit"
-          className={styles.stepSixBtn}
+          className={styles.stepSevenBtn}
         >
           {isLoading ? (
             <ThreeDots
@@ -182,4 +182,4 @@ const LeadStepSixForm = ({
   );
 };
 
-export default LeadStepSixForm;
+export default LeadStepSevenForm;

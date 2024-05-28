@@ -4,7 +4,12 @@
   align-items: center;
   gap: 12px;
   justify-content: center;
-  margin-bottom: 32px;
+  width: 340px;
+  height: 288px;
+  background-color: var(--gray-input);
+  margin-bottom: 36px;
+  border-radius: 16px;
+  padding: 24px;
 }
 
 .stepThreeItem {
@@ -34,7 +39,6 @@
   font-size: 28px;
   font-weight: 500;
   width: 46px;
-  fill: #3b3c4a;
   transition: all 0.3s ease-in-out;
 }
 
@@ -45,6 +49,7 @@
 .stepThreeText {
   color: #3b3c4a;
   font-size: 18px;
+  height: 19px;
   font-weight: 500;
   fill: #3b3c4a;
   transition: all 0.3s ease-in-out;
