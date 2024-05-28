@@ -24,12 +24,34 @@
 }
 
 .stepTextWrap {
+  position: relative;
   border-radius: 12px;
-  padding: 32px 25px;
-  cursor: pointer;
+  padding: 24px 26px;
   border: 1px solid var(--gray-stroke);
   background-color: var(--white-main);
-  transition: border-color 250ms var(--cubic);
+  height: 206px;
+  overflow: hidden;
+  transition: all 250ms ease-in-out;
+}
+
+.stepTextWrap.active.first {
+  height: 454px;
+}
+
+.stepTextWrap.active.second {
+  height: 500px;
+}
+
+.stepTextWrap.active.third {
+  height: 524px;
+}
+
+.stepTextWrap.active.four {
+  height: 454px;
+}
+
+.stepTextWrap.active.five {
+  height: 428px;
 }
 
 .stepTextWrap.white {
@@ -41,7 +63,7 @@
   color: var(--gray-text);
   font-size: 18px;
   line-height: 160%;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .stepCount.white {
@@ -54,25 +76,39 @@
   font-weight: 600;
   line-height: 130%;
   width: 292px;
-  margin-bottom: 8px;
+  margin-bottom: 18px;
 }
 
 .stepTitle.white {
   color: var(--white-main);
 }
 
-.stepText {
-  width: 288px;
+.stepText,
+.stepExtraText {
+  width: 242px;
   color: var(--gray-text);
-  font-size: 16px;
+  font-size: 15px;
   line-height: 160%;
+}
+
+.stepText.five {
+  width: 213px;
+}
+
+.stepExtraText {
+  opacity: 0;
+  transition: all 150ms ease-in-out;
+}
+
+.stepExtraText.active {
+  opacity: 1;
 }
 
 .stepText:last-child {
   margin-top: 8px;
 }
 
-.stepText.white {
+.white {
   color: var(--gray-input);
 }
 
@@ -85,11 +121,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 36px;
+  margin-top: 18px;
   border: none;
-  border-radius: 28px;
+  border-radius: 32px;
   width: 170px;
-  height: 48px;
+  height: 58px;
   gap: 8px;
   transition:
     border-color 250ms var(--cubic),
@@ -112,6 +148,41 @@
 
 .stepBtn:hover .stepBtnIcon {
   stroke: var(--red-main);
+}
+
+.stepToggleBtn {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--red-main);
+  outline: none;
+  position: absolute;
+  bottom: 25px;
+  right: 24px;
+}
+
+.stepToggleBtn.white {
+  background-color: var(--white-main);
+}
+
+.stepToggleIcon {
+  width: 20px;
+  height: 20px;
+  stroke: var(--white-main);
+  transform: rotate(90deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.stepToggleIcon.white {
+  stroke: var(--red-main);
+}
+
+.stepToggleIcon.active {
+  transform: rotate(-90deg);
 }
 
 @media screen and (min-width: 1440px) {
@@ -144,6 +215,7 @@
   }
 
   .stepTextWrap {
+    height: unset;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -171,6 +243,10 @@
     width: 67rem;
   }
 
+  .stepText.five {
+    width: unset;
+  }
+
   .stepText:last-child {
     margin-top: unset;
   }
@@ -178,6 +254,9 @@
   .stepBtn {
     border-radius: 2.8rem;
     margin-top: 4.8rem;
+  }
+  .stepToggleBtn {
+    display: none;
   }
 }
 

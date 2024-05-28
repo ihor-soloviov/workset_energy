@@ -7,9 +7,10 @@ import useObserver from '@/hooks/useObserver';
 import { renderText } from '@/utils/renderText';
 import { useGlobalStore } from '@/store/global-store';
 import Button from '../../Button/Button';
-
+import BtnArrowIcon from '/public/icons/small-product-arrow.svg';
 import { scrollToSection } from '@/utils/scroll';
 import Arrow from '../../Arrow/Arrow';
+import { useState } from 'react';
 
 const getClass = (index: number) => {
   return (index + 1) % 2 === 0 ? styles.white : '';
@@ -19,10 +20,23 @@ const StepList = () => {
   useObserver(`.${styles.stepItem}`, `${styles.stepItemVisible}`);
   const { isDesktop } = useGlobalStore();
 
+  const [visibleItems, setVisibleItems] = useState<Record<string, boolean>>({});
+
+  const toggleVisibility = (title: string) => {
+    !isDesktop &&
+      setVisibleItems(prevState => ({
+        ...prevState,
+        [title]: !prevState[title],
+      }));
+  };
+
   return (
     <ul className={styles.stepList}>
       {stepItems.map(
-        ({ text, title, imgDesc, imgMob, className, btn }, index) => (
+        (
+          { text, extraText, textDesk, title, imgDesc, imgMob, className, btn },
+          index,
+        ) => (
           <li className={`${styles.stepItem} ${getClass(index)}`} key={title}>
             <Image
               quality={100}
@@ -38,7 +52,10 @@ const StepList = () => {
               alt="title"
               src={imgDesc}
             />
-            <div className={`${styles.stepTextWrap} ${getClass(index)}`}>
+            <div
+              onClick={() => toggleVisibility(title)}
+              className={`${styles.stepTextWrap} ${getClass(index)} ${visibleItems[title] ? styles.active : ''} ${className ? styles[className] : ''}`}
+            >
               <p
                 className={`${styles.stepCount} ${getClass(index)} ${inter.className}`}
               >
@@ -49,12 +66,23 @@ const StepList = () => {
               </h3>
 
               {!isDesktop ? (
-                renderText(text, `${styles.stepText} ${getClass(index)}`, true)
+                <>
+                  {renderText(
+                    text,
+                    `${styles.stepText} ${className ? styles[className] : ''} ${getClass(index)}`,
+                    true,
+                  )}
+                  {renderText(
+                    extraText,
+                    `${styles.stepExtraText} ${visibleItems[title] ? styles.active : ''} ${getClass(index)}`,
+                    true,
+                  )}
+                </>
               ) : (
                 <p
                   className={`${styles.stepText} ${inter.className} ${className ? styles[className] : ''} ${getClass(index)}`}
                 >
-                  {text.replace(/\n/g, '')}
+                  {textDesk.replace(/\n/g, '')}
                 </p>
               )}
               {btn && (
@@ -67,6 +95,18 @@ const StepList = () => {
                   <Arrow className={styles.stepBtnIcon} />
                 </Button>
               )}
+              <Button
+                handleClick={e => {
+                  e.stopPropagation();
+                  toggleVisibility(title);
+                }}
+                type="button"
+                className={`${styles.stepToggleBtn} ${getClass(index)}`}
+              >
+                <BtnArrowIcon
+                  className={`${styles.stepToggleIcon} ${visibleItems[title] ? styles.active : ''} ${getClass(index)}`}
+                />
+              </Button>
             </div>
           </li>
         ),

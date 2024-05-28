@@ -33,6 +33,7 @@
 .amenitiesItem:first-child.active {
   height: 293px;
 }
+
 .amenitiesItem:last-child.active {
   height: 317px;
 }

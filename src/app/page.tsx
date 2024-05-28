@@ -12,7 +12,7 @@ import StepSection from '@/components/common/StepSection/StepSection';
 import VisionSection from '@/components/common/VisionSection/VisionSection';
 import HeroSection from '@/components/common/HeroSection/HeroSection';
 import RegionSection from '@/components/home/RegionSection/RegionSection';
-import LeadgenSection from '@/components/home/LeadgenSection/LeadgenSection';
+import LeadgenSection from '@/components/common/LeadgenSection/LeadgenSection';
 
 const HomePage = () => {
   return (
@@ -30,7 +30,6 @@ const HomePage = () => {
       <QuestionSection />
       <VisionSection />
       <StepSection />
-
       <ContactUsSection />
     </>
   );
