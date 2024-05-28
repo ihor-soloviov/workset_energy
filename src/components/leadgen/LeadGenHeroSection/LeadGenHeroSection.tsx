@@ -1,5 +1,5 @@
 import LeadGenComponent from '../LeadGenComponent/LeadGenComponent';
-import styles from './LeadGenHero.module.css';
+import styles from './LeadGenHeroSection.module.css';
 import Image from 'next/image';
 import leadHeroImgMob from '/public/images/leadgen-page/lead-hero-mob.webp';
 import leadHeroImgDesk from '/public/images/leadgen-page/lead-hero-desc.webp';
@@ -8,7 +8,7 @@ type LeadGenHeroProps = {
   isDesktop: boolean;
 };
 
-const LeadGenHero = ({ isDesktop }: LeadGenHeroProps) => {
+const LeadGenHeroSection = ({ isDesktop }: LeadGenHeroProps) => {
   return (
     <section className={styles.leadHeroSection}>
       <Image
@@ -36,4 +36,4 @@ const LeadGenHero = ({ isDesktop }: LeadGenHeroProps) => {
   );
 };
 
-export default LeadGenHero;
+export default LeadGenHeroSection;

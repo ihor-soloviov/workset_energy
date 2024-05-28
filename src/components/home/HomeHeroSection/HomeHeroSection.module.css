@@ -1,0 +1,133 @@
+.heroSection {
+  position: relative;
+  padding: 110px 0 36px;
+}
+
+.heroBgImg {
+  object-fit: cover;
+}
+
+.heroContainer {
+  width: 375px;
+  padding: 0 16px;
+  margin: 0 auto;
+  z-index: 2;
+  position: relative;
+}
+
+.heroTitle {
+  color: var(--white-main);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 130%;
+  width: 342px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 57px;
+}
+
+.heroImgWrap {
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  width: 182px;
+  height: 182px;
+  border-radius: 50%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0.22%,
+    rgba(255, 255, 255, 0.49) 52.34%,
+    rgba(255, 255, 255, 0.11) 106.08%
+  );
+  backdrop-filter: blur(5.706818580627441px);
+}
+
+.heroImg {
+  position: absolute;
+  bottom: 79px;
+  left: 14px;
+  width: 153px;
+  height: 153px;
+}
+
+.heroPriceMainWrap {
+  position: absolute;
+  top: 100px;
+  left: 27px;
+}
+
+.heroPriceWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 128px;
+  height: 30px;
+  border-radius: 28px;
+  background-color: var(--red-main);
+  margin-bottom: 6px;
+}
+
+.heroPrice {
+  color: var(--white-main);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.heroPriceText {
+  color: var(--white-main);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 130%;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.heroLink {
+  width: 342px;
+  height: 60px;
+  border-radius: 32px;
+  background-color: var(--red-main);
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white-main);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 110%;
+  margin: 0 auto;
+  cursor: pointer;
+  margin-bottom: 32px;
+  transition: all 250ms var(--cubic);
+}
+
+.heroLink:hover {
+  background-color: var(--white-main);
+  color: var(--red-main);
+}
+
+@media screen and (min-width: 390px) {
+  .container {
+    width: 390px;
+    padding: 0 24px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .heroSection {
+  }
+  .container {
+    width: 172.8rem;
+    padding: 0 18.6rem;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .heroSection {
+  }
+  .container {
+    width: 1728px;
+    padding: 0 186px;
+  }
+}

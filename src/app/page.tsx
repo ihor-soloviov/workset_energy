@@ -13,11 +13,13 @@ import VisionSection from '@/components/common/VisionSection/VisionSection';
 import HeroSection from '@/components/common/HeroSection/HeroSection';
 import RegionSection from '@/components/home/RegionSection/RegionSection';
 import LeadgenSection from '@/components/common/LeadgenSection/LeadgenSection';
+import HomeHeroSection from '@/components/home/HomeHeroSection/HomeHeroSection';
 
 const HomePage = () => {
   return (
     <>
-      <HeroSection {...homeHero} />
+      <HomeHeroSection />
+      {/* <HeroSection {...homeHero} /> */}
       <AmenitiesSection />
       <LeadgenSection />
       {/* <VideoSection {...firstVideo} /> */}
