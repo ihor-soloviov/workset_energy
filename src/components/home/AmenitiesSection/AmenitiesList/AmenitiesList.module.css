@@ -118,7 +118,7 @@
 
 .amenitiesItem:first-child .amenitiesBtn {
   background-color: transparent;
-  border: 1.481px solid var(--white-main);
+  border: 2px solid var(--white-main);
 }
 
 .amenitiesItem:first-child .amenitiesIcon {

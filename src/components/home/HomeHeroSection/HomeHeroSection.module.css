@@ -29,6 +29,7 @@
 .heroImgWrap {
   position: relative;
   margin: 0 auto;
+  z-index: 2;
   margin-bottom: 24px;
   width: 182px;
   height: 182px;

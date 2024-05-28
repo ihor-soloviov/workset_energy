@@ -1,6 +1,6 @@
 .contactUsSection {
   background-color: var(--white-main);
-  padding: 32px 0 64px;
+  padding: 64px 0;
 }
 
 .contactUsMainWrap {
@@ -42,7 +42,7 @@
 
   .contactUsFormWrap {
     width: 53rem;
-    height: 52.2rem;
+    height: 59.5rem;
   }
 
   .contactUsTitle {
@@ -89,7 +89,7 @@
 
   .contactUsFormWrap {
     width: 530px;
-    height: 522px;
+    height: 595px;
   }
 
   .contactUsTitle {
