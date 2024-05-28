@@ -4,7 +4,7 @@
 
 .sliderWrap {
   padding-left: 15px;
-  height: 318px;
+  height: 344px;
 }
 
 .slideWrap {
@@ -17,7 +17,7 @@
   height: 318px;
   width: 315px;
   border-radius: 12px;
-  border: 0.9px solid var(--gray-stroke);
+  box-shadow: 4px 12px 19px 0px rgba(24, 24, 24, 0.08);
   background-color: var(--white-main);
   transition: border-color 250ms var(--cubic);
 }
@@ -25,7 +25,7 @@
 .slideTitle {
   color: var(--gray-light-text);
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 160%;
   margin-bottom: 18px;
 }

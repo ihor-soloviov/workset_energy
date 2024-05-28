@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import styles from './AmenitiesList.module.css';
 import { inter } from '@/utils/fonts';
 import { amenitiesItems } from './amenitiesItems';
-import BtnArrowIcon from '/public/icons/small-product-arrow.svg';
+import BtnPlusIcon from '/public/icons/plus.svg';
+import BtnMinusIcon from '/public/icons/minus.svg';
 import CountUp from 'react-countup';
 import Button from '@/components/common/Button/Button';
 
@@ -65,7 +66,10 @@ const AmenitiesList = () => {
               type="button"
               className={styles.amenitiesBtn}
             >
-              <BtnArrowIcon
+              <BtnPlusIcon
+                className={`${styles.amenitiesIcon} ${visibleItems[title] ? styles.active : ''}`}
+              />
+              <BtnMinusIcon
                 className={`${styles.amenitiesIcon} ${visibleItems[title] ? styles.active : ''}`}
               />
             </Button>

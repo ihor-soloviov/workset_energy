@@ -1,8 +1,5 @@
 .stepTwoWrap {
-
 }
-
-
 
 .stepTwoTitle {
   color: var(--black--main);
@@ -25,14 +22,9 @@
   margin-bottom: 24px;
 }
 
-.stepTwoBtnWrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .stepTwoBtn {
   display: flex;
+  margin-right: auto;
   justify-content: center;
   align-items: center;
   border-radius: 32px;
@@ -47,7 +39,7 @@
   transition: all 0.3s ease-in-out;
 }
 
-.stepTwoBtn:last-child {
+.stepTwoBtn:hover {
   color: var(--white-main);
   border: 1px solid var(--red-main);
   background-color: var(--red-main);

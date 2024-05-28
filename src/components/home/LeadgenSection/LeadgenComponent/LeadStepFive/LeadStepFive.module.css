@@ -12,12 +12,6 @@
   margin-bottom: 24px;
 }
 
-.stepFiveBtnWrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .stepFiveBtn {
   display: flex;
   justify-content: center;
@@ -31,20 +25,14 @@
   color: var(--black-main);
   font-size: 16px;
   font-weight: 600;
+  margin-right: auto;
   transition: all 0.3s ease-in-out;
 }
 
-.stepFiveBtn:last-child {
+.stepFiveBtn:hover {
   color: var(--white-main);
   border: 1px solid var(--red-main);
   background-color: var(--red-main);
-}
-
-.stepFiveBtn:last-child:disabled {
-  background-color: var(--white-main);
-  border: 1px solid var(--gray-stroke);
-  color: var(--black-main);
-  cursor: not-allowed;
 }
 
 @media screen and (min-width: 390px) {

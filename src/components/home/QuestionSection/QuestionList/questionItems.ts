@@ -14,6 +14,7 @@ export const questItems: QuestItem[] = [
   {
     title: 'Wird der Einbau von PV-Anlagen staatlich gefördert?',
     text: 'Ja! Mit den Solarpaketen der letzten Jahre I will die Bundesregierung den Ausbau von Photovoltaik-/Solaranlagen weiter beschleunigen. Deshalb hat sie die jährlichen Zubauziele noch einmal angehoben: Ab 2026 soll mehr als dreimal so viel Solarenergie zugebaut werden wie bisher. Bis 2030 sollen in Deutschland Solaranlagen mit einer elektrischen Gesamtleistung von 215.000 MW auf Dächern installiert und auf Freiflächen aufgestellt sein.\nWenn du mehr über die konkreten Fördermöglichkeiten deiner Region erfahren willst, kontaktiere uns!',
+    className: 'smallTitle',
   },
   {
     title:

@@ -11,10 +11,10 @@ const RegionSection = () => {
   return (
     <section className={styles.regionSection}>
       <div className={styles.regionContainer}>
-        <h2 className={styles.regionTitle}>Die Regionen, in denen wir sind</h2>
+        <h2 className={styles.regionTitle}>Wo findest du uns?</h2>
         <p className={`${styles.regionText} ${inter.className}`}>
-          Wir arbeiten nur mit Kunden aus den angegebenen Regionen, um die
-          höchste Qualität unserer Dienstleistungen zu gewährleisten.
+          Wir installieren PV-Anlagen nur in den angegebenen Regionen, um den
+          höchsten Ansprüchen unserer Kunden im Service gerecht zu werden!
         </p>
 
         <Button

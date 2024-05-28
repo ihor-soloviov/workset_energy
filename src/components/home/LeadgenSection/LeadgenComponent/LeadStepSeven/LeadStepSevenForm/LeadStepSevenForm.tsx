@@ -16,7 +16,6 @@ const LeadStepSevenForm = ({
   setFormData,
   step,
   setStep,
-  handlePrevStepClick,
 }: LeadFormProps) => {
   const [isLoading, setIsLoading] = useState(false);
   const { setPopupAction } = useGlobalStore();
@@ -149,35 +148,26 @@ const LeadStepSevenForm = ({
         )}
       </label>
 
-      <div className={`${styles.stepSevenBtnWrap} ${interTight.className}`}>
-        <Button
-          handleClick={handlePrevStepClick}
-          type="button"
-          className={styles.stepSevenBtn}
-        >
-          Züruck
-        </Button>
-        <Button
-          disabled={!(isValid && dirty)}
-          type="submit"
-          className={styles.stepSevenBtn}
-        >
-          {isLoading ? (
-            <ThreeDots
-              visible={true}
-              height="50"
-              width="50"
-              color="#fff"
-              radius="9"
-              ariaLabel="three-dots-loading"
-              wrapperStyle={{}}
-              wrapperClass={styles.loader}
-            />
-          ) : (
-            'Weiter'
-          )}
-        </Button>
-      </div>
+      <Button
+        disabled={!(isValid && dirty)}
+        type="submit"
+        className={`${styles.stepSevenBtn} ${interTight.className}`}
+      >
+        {isLoading ? (
+          <ThreeDots
+            visible={true}
+            height="50"
+            width="50"
+            color="#fff"
+            radius="9"
+            ariaLabel="three-dots-loading"
+            wrapperStyle={{}}
+            wrapperClass={styles.loader}
+          />
+        ) : (
+          'Weiter'
+        )}
+      </Button>
     </form>
   );
 };

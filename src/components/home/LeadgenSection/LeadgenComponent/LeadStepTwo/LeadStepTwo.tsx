@@ -2,19 +2,27 @@ import Button from '@/components/common/Button/Button';
 import styles from './LeadStepTwo.module.css';
 import LeadStepTwoList from './LeadStepTwoList/LeadStepTwoList';
 import { LeadStepProps } from '../../types';
-import React, { useState, MouseEvent } from 'react';
+import React, { useState, MouseEvent, useEffect } from 'react';
 
 const LeadStepTwo = ({
   handleNextStepClick,
   handlePrevStepClick,
 }: LeadStepProps) => {
   const [stepTwoValue, setStepTwoValue] = useState<null | string>(null);
-  const [isDisabled, setIsDisabled] = useState(true);
+  console.log(stepTwoValue);
 
   const handleItemClick = (e: MouseEvent<HTMLLIElement>, itemValue: string) => {
     setStepTwoValue(itemValue);
-    setIsDisabled(false);
   };
+
+  useEffect(() => {
+    if (stepTwoValue) {
+      const timer = setTimeout(() => {
+        handleNextStepClick(stepTwoValue, 'consultType');
+      }, 350);
+      return () => clearTimeout(timer);
+    }
+  }, [stepTwoValue, handleNextStepClick]);
 
   return (
     <div className={styles.stepTwoWrap}>
@@ -26,26 +34,14 @@ const LeadStepTwo = ({
         stepValue={stepTwoValue}
         handleItemClick={handleItemClick}
       />
-      <div className={styles.stepTwoBtnWrap}>
-        <Button
-          handleClick={handlePrevStepClick}
-          type="button"
-          className={styles.stepTwoBtn}
-        >
-          Züruck
-        </Button>
-        <Button
-          disabled={isDisabled}
-          handleClick={() =>
-            handleNextStepClick &&
-            handleNextStepClick(stepTwoValue, 'consultType')
-          }
-          type="button"
-          className={styles.stepTwoBtn}
-        >
-          Weiter
-        </Button>
-      </div>
+
+      <Button
+        handleClick={handlePrevStepClick}
+        type="button"
+        className={styles.stepTwoBtn}
+      >
+        Züruck
+      </Button>
     </div>
   );
 };

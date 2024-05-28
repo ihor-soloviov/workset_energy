@@ -57,6 +57,9 @@
 .questTitle.small {
   height: 60px;
 }
+.questTitle.smallTitle {
+  width: 232px;
+}
 
 .questToggleBtn {
   cursor: pointer;

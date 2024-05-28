@@ -45,8 +45,10 @@
 
 .stepSixBtnWrap {
   display: flex;
-  justify-content: space-between;
+  width: 292px;
+  gap: 72px;
   align-items: center;
+  margin: 0 auto;
   margin-bottom: 200px;
 }
 

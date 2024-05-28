@@ -9,21 +9,19 @@
 .amenitiesItem {
   cursor: pointer;
   display: flex;
-
   justify-content: space-between;
-  height: 234px;
+  height: 197px;
   width: 342px;
   padding: 24px 26px;
   overflow: hidden;
   border-radius: 11.819px;
   border: 1px solid var(--gray-stroke);
   background-color: var(--white-main);
-  box-shadow: 4px 12px 19px 0px rgba(24, 24, 24, 0.12);
   transition: all 0.3s ease-in-out;
 }
 
 .amenitiesItem.active {
-  height: 330px;
+  height: 269px;
 }
 
 .amenitiesItem:first-child {
@@ -33,7 +31,10 @@
 }
 
 .amenitiesItem:first-child.active {
-  height: 306px;
+  height: 293px;
+}
+.amenitiesItem:last-child.active {
+  height: 317px;
 }
 
 .amenitiesMainWrap {
@@ -50,7 +51,7 @@
   font-weight: 600;
   width: fit-content;
   margin-right: auto;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   line-height: 130%;
 }
 
@@ -65,17 +66,21 @@
   line-height: 130%;
   width: fit-content;
   margin-right: auto;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .amenitiesItem:first-child .amenitiesTitle {
   color: var(--white-main);
 }
 
+.amenitiesText {
+  width: 242px;
+}
+
 .amenitiesText,
 .amenitiesExtraText {
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 160%;
   color: var(--gray-text);
 }
@@ -103,6 +108,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1.481px solid var(--white-main);
   border-radius: 50%;
   background-color: var(--red-main);
   outline: none;
@@ -110,21 +116,42 @@
 }
 
 .amenitiesItem:first-child .amenitiesBtn {
-  background-color: var(--white-main);
+  background-color: transparent;
+  border: 1.481px solid var(--white-main);
 }
 
 .amenitiesItem:first-child .amenitiesIcon {
-  stroke: var(--red-main);
+  stroke: var(--white-main);
 }
 
 .amenitiesIcon {
+  width: 16px;
+  height: 16px;
   stroke: var(--white-main);
   transform: rotate(90deg);
   transition: all 0.3s ease-in-out;
 }
 
+.amenitiesIcon:last-child {
+  opacity: 0;
+  visibility: hidden;
+  transform: unset;
+  width: 0px;
+  height: 0px;
+}
+
 .amenitiesIcon.active {
-  transform: rotate(-90deg);
+  opacity: 0;
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+}
+
+.amenitiesIcon:last-child.active {
+  opacity: 1;
+  visibility: visible;
+  width: 16px;
+  height: 16px;
 }
 
 @media screen and (min-width: 1440px) {

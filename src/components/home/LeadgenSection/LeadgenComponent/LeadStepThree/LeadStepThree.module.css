@@ -23,12 +23,6 @@
   margin-bottom: 24px;
 }
 
-.stepThreeBtnWrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .stepThreeBtn {
   display: flex;
   justify-content: center;
@@ -41,21 +35,15 @@
   outline: none;
   color: var(--black-main);
   font-size: 16px;
+  margin-right: auto;
   font-weight: 600;
   transition: all 0.3s ease-in-out;
 }
 
-.stepThreeBtn:last-child {
+.stepThreeBtn:hover {
   color: var(--white-main);
   border: 1px solid var(--red-main);
   background-color: var(--red-main);
-}
-
-.stepThreeBtn:last-child:disabled {
-  background-color: var(--white-main);
-  border: 1px solid var(--gray-stroke);
-  color: var(--black-main);
-  cursor: not-allowed;
 }
 
 @media screen and (min-width: 390px) {

@@ -98,7 +98,7 @@ const AngebotForm = () => {
         <label className={styles.angebotLabel}>
           Vor- und Nachname*
           <input
-            placeholder="Vor- und Nachname"
+            placeholder="Name, Nachname"
             className={`${styles.angebotInput} ${touched.userName && errors.userName && styles.error}`}
             {...getFieldProps('userName')}
           />
@@ -123,7 +123,7 @@ const AngebotForm = () => {
         <label className={styles.angebotLabel}>
           Telefon-Nr.*
           <input
-            placeholder="Telefon-Nr."
+            placeholder="Telefon-Nr"
             className={`${styles.angebotInput} ${touched.userPhone && errors.userPhone && styles.error}`}
             {...getFieldProps('userPhone')}
           />
