@@ -6,9 +6,10 @@ import BtnPlusIcon from '/public/icons/plus.svg';
 import BtnMinusIcon from '/public/icons/minus.svg';
 import CountUp from 'react-countup';
 import Button from '@/components/common/Button/Button';
-
+import { useGlobalStore } from '@/store/global-store';
 const AmenitiesList = () => {
   const [visibleItems, setVisibleItems] = useState<Record<string, boolean>>({});
+  const { isDesktop } = useGlobalStore();
 
   const toggleVisibility = (title: string) => {
     setVisibleItems(prevState => ({
@@ -33,7 +34,15 @@ const AmenitiesList = () => {
   return (
     <ul className={styles.amenitiesList}>
       {amenitiesItems.map(
-        ({ mainSymbol, mainTitle, title, mainText, extraText }) => (
+        ({
+          mainSymbol,
+          mainTitle,
+          title,
+          mainText,
+          extraText,
+          mainTextDesk,
+          extraTextDesk,
+        }) => (
           <li
             className={`${styles.amenitiesItem} ${visibleItems[title] ? styles.active : ''}`}
             key={title}
@@ -48,13 +57,19 @@ const AmenitiesList = () => {
                 {title}
               </h4>
 
-              <div className={`${styles.amenitiesTextWrap} ${inter.className}`}>
-                <p className={styles.amenitiesText}>{mainText}</p>
+              <div
+                className={`${styles.amenitiesTextWrap} ${
+                  !isDesktop ? inter.className : ''
+                }`}
+              >
+                <p className={styles.amenitiesText}>
+                  {!isDesktop ? mainText : mainTextDesk}
+                </p>
 
                 <p
                   className={`${styles.amenitiesExtraText} ${visibleItems[title] ? styles.active : ''}`}
                 >
-                  {extraText}
+                  {!isDesktop ? extraText : extraTextDesk}
                 </p>
               </div>
             </div>

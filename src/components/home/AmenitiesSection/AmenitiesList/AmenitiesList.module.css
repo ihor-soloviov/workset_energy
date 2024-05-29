@@ -7,6 +7,7 @@
 }
 
 .amenitiesItem {
+  user-select: none;
   position: relative;
   cursor: pointer;
   display: flex;
@@ -117,6 +118,7 @@
   outline: none;
   bottom: 19px;
   right: 26px;
+  transition: all 0.3s ease-in-out;
 }
 
 .amenitiesItem:first-child .amenitiesBtn {
@@ -160,42 +162,118 @@
 
 @media screen and (min-width: 1440px) {
   .amenitiesList {
+    flex-direction: row;
+    gap: 2.4rem;
+    align-items: flex-start;
+    width: fit-content;
+    margin: 0 auto;
   }
 
   .amenitiesItem {
+    width: 46.2rem;
+    height: 23rem;
+    padding: 3.6rem;
+    border-radius: 1.6rem;
+  }
+
+  .amenitiesItem.active {
+    height: 30.8rem;
+  }
+
+  .amenitiesItem:first-child.active {
+    height: 30.8rem;
+  }
+
+  .amenitiesItem:last-child.active {
+    height: 36rem;
   }
 
   .amenitiesMainTitle {
+    font-size: 4.6rem;
+    margin-bottom: 1rem;
   }
+
   .amenitiesTitle {
+    font-size: 2rem;
+    margin-bottom: 1rem;
   }
 
   .amenitiesText {
+    font-size: 1.6rem;
+    width: 32.4rem;
+  }
+
+  .amenitiesExtraText {
+    font-size: 1.6rem;
+    width: 32.4rem;
   }
 
   .amenitiesBtn {
+    width: 5.4rem;
+    height: 5.4rem;
+    bottom: 3.6rem;
+    right: 3.6rem;
   }
+
   .amenitiesIcon {
+    width: 1.7rem;
+    height: 1.8rem;
   }
 }
 
 @media screen and (min-width: 1728px) {
   .amenitiesList {
+    gap: 24px;
   }
 
   .amenitiesItem {
+    width: 462px;
+    height: 230px;
+    padding: 36px;
+    border-radius: 16px;
+  }
+
+  .amenitiesItem.active {
+    height: 308px;
+  }
+
+  .amenitiesItem:first-child.active {
+    height: 308px;
+  }
+
+  .amenitiesItem:last-child.active {
+    height: 360px;
   }
 
   .amenitiesMainTitle {
+    font-size: 46px;
+    margin-bottom: 10px;
   }
+
   .amenitiesTitle {
+    font-size: 20px;
+    margin-bottom: 10px;
   }
 
   .amenitiesText {
+    font-size: 16px;
+    width: 324px;
+  }
+
+  .amenitiesExtraText {
+    font-size: 16px;
+    width: 324px;
   }
 
   .amenitiesBtn {
+    width: 54px;
+    height: 54px;
+    bottom: 36px;
+    right: 36px;
   }
+
   .amenitiesIcon {
+    width: 17px;
+    height: 18px;
   }
 }

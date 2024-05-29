@@ -9,7 +9,7 @@ import { scrollToSection } from '@/utils/scroll';
 const AmenitiesSection = () => {
   return (
     <section className={styles.amenitiesSection}>
-      <Container>
+      <div className={styles.amenitiesContainer}>
         <h2 className={styles.amenitiesMainTitle}>Warum WorkSET Energy?</h2>
 
         <AmenitiesList />
@@ -20,7 +20,7 @@ const AmenitiesSection = () => {
         >
           Zum Angebot
         </Button>
-      </Container>
+      </div>
     </section>
   );
 };
