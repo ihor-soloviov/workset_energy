@@ -23,6 +23,7 @@
   width: 16px;
   height: 16px;
 }
+
 .heroText {
   color: var(--white-main);
   font-size: 16px;
@@ -31,7 +32,40 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .heroList {
+    width: 54.7rem;
+    height: 4.8rem;
+    gap: 3.2rem;
+    flex-direction: row;
+    border-radius: 2.8rem;
+    padding: 1rem 1.6rem;
+  }
+
+  .heroIcon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .heroText {
+    font-size: 1.8rem;
+  }
 }
 
 @media screen and (min-width: 1728px) {
+  .heroList {
+    width: 547px;
+    height: 48px;
+    gap: 32px;
+    border-radius: 28px;
+    padding: 10px 16px;
+  }
+
+  .heroIcon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .heroText {
+    font-size: 18px;
+  }
 }

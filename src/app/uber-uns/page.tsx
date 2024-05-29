@@ -4,7 +4,7 @@ import GoogleComSection from '@/components/common/GoogleComSection/GoogleComSect
 import StepSection from '@/components/common/StepSection/StepSection';
 import TeamSection from '@/components/common/TeamSection/TeamSection';
 import VisionSection from '@/components/common/VisionSection/VisionSection';
-import ObjectSection from '@/components/uberuns/ObjectSection/ObjectSection';
+import ObjectSection from '@/components/common/ObjectSection/ObjectSection';
 import UberUnsHero from '@/components/uberuns/UberUnsHero/UberUnsHero';
 import React from 'react';
 

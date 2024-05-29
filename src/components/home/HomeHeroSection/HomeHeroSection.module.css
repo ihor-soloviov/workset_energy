@@ -1,10 +1,29 @@
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 5rem rgba(90, 153, 212, 0);
+  }
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(90, 153, 212, 0);
+  }
+}
+
 .heroSection {
   position: relative;
   padding: 110px 0 36px;
 }
 
-.heroBgImg {
+.heroBgImgMob {
   object-fit: cover;
+}
+
+.heroBgImgDesk {
+  object-fit: cover;
+  display: none;
 }
 
 .heroContainer {
@@ -27,6 +46,7 @@
 }
 
 .heroImgWrap {
+  cursor: pointer;
   position: relative;
   margin: 0 auto;
   z-index: 2;
@@ -41,9 +61,12 @@
     rgba(255, 255, 255, 0.11) 106.08%
   );
   backdrop-filter: blur(5.706818580627441px);
+  -webkit-backdrop-filter: blur(5.706818580627441px);
+  animation: pulse 1.5s infinite;
 }
 
 .heroImg {
+  cursor: pointer;
   position: absolute;
   bottom: 79px;
   left: 14px;
@@ -84,6 +107,10 @@
   margin: 0 auto;
 }
 
+.heroLinkWrap {
+  margin-bottom: 32px;
+}
+
 .heroLink {
   width: 342px;
   height: 60px;
@@ -99,13 +126,17 @@
   line-height: 110%;
   margin: 0 auto;
   cursor: pointer;
-  margin-bottom: 32px;
+
   transition: all 250ms var(--cubic);
 }
 
 .heroLink:hover {
   background-color: var(--white-main);
   color: var(--red-main);
+}
+
+.heroAngebotLink {
+  display: none;
 }
 
 @media screen and (min-width: 390px) {
@@ -117,18 +148,174 @@
 
 @media screen and (min-width: 1440px) {
   .heroSection {
+    padding: 32.4rem 0 7.6rem;
   }
-  .container {
+
+  .heroContainer {
     width: 172.8rem;
-    padding: 0 18.6rem;
+    padding: 0 16.7rem 0 11.8rem;
+    position: relative;
+  }
+
+  .heroBgImgMob {
+    display: none;
+  }
+
+  .heroBgImgDesk {
+    display: block;
+  }
+
+  .heroTitle {
+    font-size: 7.2rem;
+    line-height: 120%;
+    width: 57.6rem;
+    height: 17.2rem;
+    margin: unset;
+    margin-right: auto;
+    margin-bottom: 2.4rem;
+  }
+
+  .heroImgWrap {
+    width: 27.5rem;
+    height: 27.5rem;
+    position: absolute;
+    bottom: 29.6rem;
+    right: 16.7rem;
+  }
+
+  .heroImg {
+    width: 23.2rem;
+    height: 23.2rem;
+    bottom: 13.3rem;
+    left: 2.2rem;
+  }
+
+  .heroPriceMainWrap {
+    top: 13.8rem;
+    left: 4.1rem;
+  }
+
+  .heroPriceWrap {
+    width: 19.3rem;
+    height: 5.5rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .heroPrice {
+    font-size: 2.2rem;
+  }
+
+  .heroPriceText {
+    font-size: 1.8rem;
+  }
+
+  .heroLinkWrap {
+    width: 42.6rem;
+    display: flex;
+    gap: 1.8rem;
+    align-items: center;
+    margin-bottom: 23.4rem;
+  }
+
+  .heroLink {
+    width: 18.6rem;
+    height: 6rem;
+    font-size: 1.8rem;
+  }
+
+  .heroAngebotLink {
+    border-radius: 3.2rem;
+    width: 22.2rem;
+    height: 6rem;
+    padding: 1.2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--white-main);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(2.799999952316284px);
+    -webkit-backdrop-filter: blur(2.799999952316284px);
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--white-main);
+    transition:
+      border-color 250ms var(--cubic),
+      background-color 250ms var(--cubic);
+  }
+
+  .heroAngebotLink:hover {
+    border-color: var(--red-main);
+    background-color: var(--red-main);
   }
 }
 
 @media screen and (min-width: 1728px) {
   .heroSection {
+    padding: 358px 0 76px;
   }
-  .container {
+
+  .heroContainer {
     width: 1728px;
-    padding: 0 186px;
+    padding: 0 167px 0 118px;
+  }
+
+  .heroTitle {
+    font-size: 72px;
+    width: 576px;
+    height: 172px;
+    margin-bottom: 24px;
+  }
+
+  .heroImgWrap {
+    width: 275px;
+    height: 275px;
+    bottom: 296px;
+    right: 167px;
+  }
+
+  .heroImg {
+    width: 232px;
+    height: 232px;
+    bottom: 133px;
+    left: 22px;
+  }
+
+  .heroPriceMainWrap {
+    top: 138px;
+    left: 41px;
+  }
+
+  .heroPriceWrap {
+    width: 193px;
+    height: 55px;
+    margin-bottom: 9px;
+  }
+
+  .heroPrice {
+    font-size: 22px;
+  }
+
+  .heroPriceText {
+    font-size: 18px;
+  }
+
+  .heroLinkWrap {
+    width: 426px;
+    gap: 18px;
+    margin-bottom: 234px;
+  }
+
+  .heroLink {
+    width: 186px;
+    height: 60px;
+    font-size: 18px;
+  }
+
+  .heroAngebotLink {
+    border-radius: 32px;
+    width: 222px;
+    height: 60px;
+    padding: 12px 0;
+    font-size: 18px;
   }
 }
