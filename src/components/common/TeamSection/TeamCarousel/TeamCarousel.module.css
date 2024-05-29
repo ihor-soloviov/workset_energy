@@ -77,7 +77,7 @@
     top: 3.2rem;
     right: 3.3rem;
     opacity: 0;
-    transition: opacity 700ms var(--cubic);
+    transition: opacity 0.3s var(--cubic);
   }
 
   .teamTopWrap.active {
@@ -157,7 +157,7 @@
   }
 
   .carouselItem {
-    border-radius: 12px;
+    border-radius: 28px;
     width: 158px;
   }
 

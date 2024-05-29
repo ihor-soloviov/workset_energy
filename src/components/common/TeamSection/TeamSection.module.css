@@ -138,8 +138,9 @@
   }
 
   .teamTitle {
-    font-size: 3.4rem;
-    margin-bottom: 1.6rem;
+    font-size: 5rem;
+    width: 37.5rem;
+    margin-bottom: 2.4rem;
   }
 
   .teamText {
@@ -180,8 +181,9 @@
   }
 
   .teamTitle {
-    margin-bottom: 16px;
-    font-size: 34px;
+    margin-bottom: 24px;
+    font-size: 54px;
+    width: fit-content;
   }
 
   .teamTextWrap {

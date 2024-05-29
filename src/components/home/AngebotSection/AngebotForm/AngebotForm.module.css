@@ -211,6 +211,7 @@
 
   .angebotInput {
     width: 100%;
+    height: 5.2rem;
     border-radius: 0.8rem;
   }
 
@@ -224,7 +225,7 @@
 
   .angebotFilePlaceholderDesc {
     display: block;
-    top: 3.8rem;
+    top: 3.9rem;
     line-height: 110%;
     font-size: 1.5rem;
   }
@@ -234,12 +235,12 @@
     border-radius: 0.8rem 0rem 0rem 0.8rem;
     padding: 1.2rem;
 
-    height: 4.6rem;
+    height: 5.2rem;
   }
 
   .angebotUploadBtn {
-    top: 2.5rem;
-    height: 4.6rem;
+    top: 2.2rem;
+    height: 5.2rem;
     width: 11.7rem;
     font-size: 1.5rem;
     padding: 1.4rem 3.2rem;
@@ -248,7 +249,7 @@
 
   .angebotBtnWrap {
     flex-direction: row;
-    gap: 8rem;
+    gap: 4.8rem;
     align-items: center;
   }
 
@@ -259,11 +260,11 @@
   }
 
   .angebotBtn {
-    width: 9.2rem;
-    height: 4.6rem;
-    padding: 1.4rem 2rem;
+    width: 12.4rem;
+    height: 5.2rem;
+
     border-radius: 2.8rem;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
   .angebotLabel:not(:last-child) {
@@ -272,26 +273,6 @@
 
   .angebotLabel.file {
     margin-bottom: 1.8rem;
-  }
-
-  .errorText {
-    top: 8.7rem;
-  }
-}
-
-@media screen and (min-width: 1520px) {
-  .angebotUploadBtn {
-    top: 2.2rem;
-  }
-
-  .errorText {
-    top: 8.2rem;
-  }
-}
-
-@media screen and (min-width: 1670px) {
-  .angebotUploadBtn {
-    top: 2.2rem;
   }
 
   .errorText {
@@ -328,23 +309,24 @@
   }
 
   .angebotFilePlaceholderDesc {
-    top: 38px;
+    top: 40px;
     font-size: 15px;
   }
 
   .angebotInputFile {
     width: 414px;
     padding: 12px;
-    height: 46px;
+    height: 52px;
     border-radius: 8px 0px 0px 8px;
   }
 
   .angebotInput {
     border-radius: 8px;
+    height: 52px;
   }
   .angebotUploadBtn {
     top: 22px;
-    height: 46px;
+    height: 52px;
     font-size: 15px;
     width: 117px;
     border-radius: 0px 8px 8px 0px;
@@ -352,7 +334,7 @@
   }
 
   .angebotBtnWrap {
-    gap: 80px;
+    gap: 48px;
   }
 
   .angebotText {
@@ -361,11 +343,10 @@
   }
 
   .angebotBtn {
-    width: 92px;
-    height: 46px;
-    padding: 14px 20px;
+    width: 124px;
+    height: 52px;
     border-radius: 28px;
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .angebotLabel.file {

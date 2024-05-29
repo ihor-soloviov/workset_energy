@@ -134,24 +134,25 @@
 
   .contactUsInput {
     width: 100%;
+    height: 5.2rem;
     border-radius: 0.8rem;
   }
 
   .contactUsTextArea {
     width: 100%;
-    height: 100px;
+    height: 12.8rem;
     border-radius: 0.8rem;
   }
 
   .contactUsBtn {
-    width: 9.2rem;
-    height: 4.6rem;
-    padding: 1.4rem 2rem;
+    width: 12.4rem;
+    font-size: 1.5rem;
+    height: 5.2rem;
     border-radius: 2.8rem;
   }
 
   .errorText {
-    top: 79px;
+    top: 7.9rem;
   }
 }
 
@@ -166,10 +167,12 @@
 
   .contactUsInput {
     border-radius: 8px;
+    height: 52px;
   }
 
   .contactUsTextArea {
     border-radius: 8px;
+    height: 128px;
   }
 
   .contactUsLabelTextArea {
@@ -177,9 +180,13 @@
   }
 
   .contactUsBtn {
-    width: 92px;
-    height: 46px;
-    padding: 14px 20px;
+    font-size: 15px;
+    width: 124px;
+    height: 52px;
     border-radius: 28px;
+  }
+
+  .errorText {
+    top: 79px;
   }
 }

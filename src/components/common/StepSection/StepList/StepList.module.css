@@ -253,8 +253,9 @@
 
   .stepBtn {
     border-radius: 2.8rem;
-    margin-top: 4.8rem;
+    margin-top: 2.4rem;
   }
+
   .stepToggleBtn {
     display: none;
   }
@@ -291,6 +292,6 @@
 
   .stepBtn {
     border-radius: 28px;
-    margin-top: 48px;
+    margin-top: 24px;
   }
 }

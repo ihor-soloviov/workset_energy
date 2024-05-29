@@ -63,7 +63,7 @@ const GoogleComSlider = () => {
                   {relative_time_description}
                 </h3>
                 <p className={styles.slideText}>
-                  {text.length > 255 ? `${text.slice(0, 255)}...` : text}
+                  {text.length > 220 ? `${text.slice(0, 220)}...` : text}
                 </p>
                 <div className={styles.slideBottomWrap}>
                   <Image
