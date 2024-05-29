@@ -9,9 +9,11 @@ import { QuestItem, questItems } from './questionItems';
 import { scrollToSection } from '@/utils/scroll';
 import { renderText } from '@/utils/renderText';
 import BtnArrowIcon from '/public/icons/card-arrow.svg';
-
+import { useGlobalStore } from '@/store/global-store';
 const QuestionList = () => {
   const [visibleItems, setVisibleItems] = useState<Record<string, boolean>>({});
+
+  const { isDesktop } = useGlobalStore();
 
   const toggleVisibility = (title: string) => {
     setVisibleItems(prevState => ({
@@ -32,15 +34,16 @@ const QuestionList = () => {
   };
 
   const renderListItems = (items: QuestItem[]) =>
-    items.map(({ text, title, leadSrc, className }) => (
+    items.map(({ text, title, leadSrc, className }, index) => (
       <li
         onClick={() => toggleVisibility(title)}
         key={title}
         className={`${styles.questItem} ${visibleItems[title] ? styles.active : ''} ${className ? styles[className] : ''}`}
       >
         <div className={styles.questTitleWrap}>
+          <p className={styles.questCount}>{`0${index + 1}`}</p>
           <h3
-            className={`${styles.questTitle} ${inter.className} ${className ? styles[className] : ''}`}
+            className={`${styles.questTitle} ${!isDesktop ? inter.className : ''} ${className ? styles[className] : ''}`}
           >
             {title}
           </h3>
@@ -77,10 +80,19 @@ const QuestionList = () => {
 
   return (
     <div className={styles.questListWrap}>
-      <ul className={styles.questList}>{renderListItems(firstListItems)}</ul>
-      <ul className={`${styles.questList} ${styles.second}`}>
-        {renderListItems(secondListItems)}
-      </ul>
+      {!isDesktop ? (
+        <>
+          {' '}
+          <ul className={styles.questList}>
+            {renderListItems(firstListItems)}
+          </ul>
+          <ul className={`${styles.questList} ${styles.second}`}>
+            {renderListItems(secondListItems)}
+          </ul>
+        </>
+      ) : (
+        <ul className={styles.questList}>{renderListItems(questItems)}</ul>
+      )}
     </div>
   );
 };

@@ -27,32 +27,37 @@
 
 @media screen and (min-width: 1440px) {
   .questSection {
-    padding: 5rem 0 10rem;
+    padding: 5rem 0;
   }
 
   .questContainer {
     width: 172.8rem;
-    padding: 0 25.6rem;
+    padding: 0 18.6rem;
   }
 
   .questMainTitle {
-    font-size: 3.4rem;
-    margin-bottom: 1.6rem;
+    font-weight: 600;
+    font-size: 5rem;
+    margin: unset;
+    margin-right: auto;
+    margin-bottom: 3.6rem;
+    width: 58.6rem;
   }
 }
 
 @media screen and (min-width: 1728px) {
   .questSection {
-    padding: 50px 0 100px;
+    padding: 50px 0;
   }
 
   .questContainer {
     width: 1728px;
-    padding: 0 256px;
+    padding: 0 186px;
   }
 
   .questMainTitle {
-    font-size: 34px;
-    margin-bottom: 16px;
+    width: 586px;
+    font-size: 50px;
+    margin-bottom: 36px;
   }
 }
