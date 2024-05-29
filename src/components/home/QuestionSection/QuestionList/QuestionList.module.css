@@ -75,15 +75,15 @@
 }
 
 .toggleIcon {
-  width: 20px;
-  height: 20px;
-  stroke: var(--white-main);
-  transform: rotate(90deg);
+  width: 14px;
+  height: 17px;
+  fill: var(--white-main);
+  transform: rotate(180deg);
   transition: all 0.3s ease-in-out;
 }
 
 .toggleIcon.active {
-  transform: rotate(-90deg);
+  transform: unset;
 }
 
 .questTextWrap {

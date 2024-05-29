@@ -7,7 +7,7 @@ import useObserver from '@/hooks/useObserver';
 import { renderText } from '@/utils/renderText';
 import { useGlobalStore } from '@/store/global-store';
 import Button from '../../Button/Button';
-import BtnArrowIcon from '/public/icons/small-product-arrow.svg';
+import BtnArrowIcon from '/public/icons/card-arrow.svg';
 import { scrollToSection } from '@/utils/scroll';
 import Arrow from '../../Arrow/Arrow';
 import { useState } from 'react';

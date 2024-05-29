@@ -170,19 +170,19 @@
 }
 
 .stepToggleIcon {
-  width: 20px;
-  height: 20px;
-  stroke: var(--white-main);
-  transform: rotate(90deg);
+  width: 14px;
+  height: 17px;
+  fill: var(--white-main);
+  transform: rotate(180deg);
   transition: all 0.3s ease-in-out;
 }
 
 .stepToggleIcon.white {
-  stroke: var(--red-main);
+  fill: var(--red-main);
 }
 
 .stepToggleIcon.active {
-  transform: rotate(-90deg);
+  transform: unset;
 }
 
 @media screen and (min-width: 1440px) {

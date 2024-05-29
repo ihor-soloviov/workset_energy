@@ -8,7 +8,7 @@ import { inter } from '@/utils/fonts';
 import { QuestItem, questItems } from './questionItems';
 import { scrollToSection } from '@/utils/scroll';
 import { renderText } from '@/utils/renderText';
-import BtnArrowIcon from '/public/icons/small-product-arrow.svg';
+import BtnArrowIcon from '/public/icons/card-arrow.svg';
 
 const QuestionList = () => {
   const [visibleItems, setVisibleItems] = useState<Record<string, boolean>>({});
