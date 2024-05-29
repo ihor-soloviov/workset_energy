@@ -21,7 +21,7 @@
   transition: all 250ms var(--cubic);
 }
 
-.questItem.small {
+.questItem.smallHeight {
   max-height: 108px;
 }
 
@@ -54,11 +54,11 @@
   user-select: none;
 }
 
-.questTitle.small {
+.questTitle.smallHeight {
   height: 60px;
 }
 
-.questTitle.smallTitle {
+.questTitle.smallWidth {
   width: 232px;
 }
 

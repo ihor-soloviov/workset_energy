@@ -14,7 +14,7 @@ export const questItems: QuestItem[] = [
   {
     title: 'Wird der Einbau von PV-Anlagen staatlich gefördert?',
     text: 'Ja! Mit den Solarpaketen der letzten Jahre I will die Bundesregierung den Ausbau von Photovoltaik-/Solaranlagen weiter beschleunigen. Deshalb hat sie die jährlichen Zubauziele noch einmal angehoben: Ab 2026 soll mehr als dreimal so viel Solarenergie zugebaut werden wie bisher. Bis 2030 sollen in Deutschland Solaranlagen mit einer elektrischen Gesamtleistung von 215.000 MW auf Dächern installiert und auf Freiflächen aufgestellt sein.\nWenn du mehr über die konkreten Fördermöglichkeiten deiner Region erfahren willst, kontaktiere uns!',
-    className: 'smallTitle',
+    className: 'smallWidth',
   },
   {
     title:
@@ -29,7 +29,7 @@ export const questItems: QuestItem[] = [
   {
     title: 'Worauf sollte ich beim Kauf von PV-Modulen achten?',
     text: 'Wichtig sind vor allem qualitativ hochwertige Produkte und ein Team aus Spezialisten, die diese Produkte sicher positionieren. Des Weiteren ist die Amortisationszeit, die Anzahl der PV-Module und die Entscheidung für oder gegen einen Stromspeicher wichtig.\nKontaktiere uns noch heute und unser Spezialisten-Team berät dich unverbindlich in allen Fragen, die du zu deiner künftigen PV-Anlage hast. Stelle auch gerne Vergleiche zu anderen PV-Anbietern an und entscheide dich nur für die WorkSET Energy GmbH, wenn du überzeugt davon bist, dass wir die beste Wahl für dich sind!',
-    className: 'small',
+    className: 'smallHeight',
   },
   {
     title:
