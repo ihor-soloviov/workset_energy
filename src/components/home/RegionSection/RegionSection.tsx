@@ -4,7 +4,8 @@ import { inter } from '@/utils/fonts';
 import styles from './RegionSection.module.css';
 import Button from '@/components/common/Button/Button';
 import Image from 'next/image';
-import regionImg from '/public/images/home-page/region.png';
+import regionImgMob from '/public/images/home-page/region-mob.png';
+import regionImgDesk from '/public/images/home-page/region-desk.png';
 import { scrollToSection } from '@/utils/scroll';
 
 const RegionSection = () => {
@@ -24,9 +25,18 @@ const RegionSection = () => {
         >
           Zum Angebot
         </Button>
+        <Image
+          className={styles.regionImgDesk}
+          src={regionImgDesk}
+          alt="region"
+        />
       </div>
       <div className={styles.regionImgWrap}>
-        <Image className={styles.regionImg} src={regionImg} alt="region" />
+        <Image
+          className={styles.regionImgMob}
+          src={regionImgMob}
+          alt="region"
+        />
       </div>
     </section>
   );
