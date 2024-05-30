@@ -23,17 +23,33 @@
   margin-bottom: 24px;
 }
 
-@media screen and (min-width: 390px) {
-  .stepSevenWrap {
-  }
-}
-
 @media screen and (min-width: 1440px) {
   .stepSevenWrap {
+  }
+
+  .stepSevenTitle {
+    font-size: 3.6rem;
+    line-height: 140%;
+    margin-bottom: 0.8rem;
+  }
+
+  .stepSevenText {
+    font-size: 2rem;
+    margin-bottom: 3.6rem;
   }
 }
 
 @media screen and (min-width: 1728px) {
   .stepSevenWrap {
+  }
+
+  .stepSevenTitle {
+    font-size: 36px;
+    margin-bottom: 8px;
+  }
+
+  .stepSevenText {
+    font-size: 20px;
+    margin-bottom: 36px;
   }
 }

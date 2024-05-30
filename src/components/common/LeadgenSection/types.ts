@@ -5,6 +5,10 @@ export type StepItem = {
   icon?: React.ElementType;
   text?: string;
 };
+export type LeadgenComponentProps = {
+  step: number;
+  setStep: (step: number) => void;
+};
 
 export type FormInitialValue = {
   propertyType: string;

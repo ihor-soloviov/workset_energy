@@ -78,53 +78,55 @@ const LeadStepSevenForm = ({
       className={`${styles.stepSevenForm} ${inter.className}`}
       onSubmit={handleSubmit}
     >
-      <label className={styles.stepSevenLabel}>
-        Vorname*
-        <input
-          placeholder="Vorname"
-          className={`${styles.stepSevenInput} ${touched.userFirstName && errors.userFirstName && styles.error}`}
-          {...getFieldProps('userFirstName')}
-        />
-        {touched.userFirstName && errors.userFirstName && (
-          <p className={styles.errorText}>{errors.userFirstName}</p>
-        )}
-      </label>
+      <div className={styles.stepSevenLabelWrap}>
+        <label className={styles.stepSevenLabel}>
+          Vorname*
+          <input
+            placeholder="Vorname"
+            className={`${styles.stepSevenInput} ${touched.userFirstName && errors.userFirstName && styles.error}`}
+            {...getFieldProps('userFirstName')}
+          />
+          {touched.userFirstName && errors.userFirstName && (
+            <p className={styles.errorText}>{errors.userFirstName}</p>
+          )}
+        </label>
+        <label className={styles.stepSevenLabel}>
+          Nachname*
+          <input
+            placeholder="Nachname"
+            className={`${styles.stepSevenInput} ${touched.userLastName && errors.userLastName && styles.error}`}
+            {...getFieldProps('userLastName')}
+          />
+          {touched.userLastName && errors.userLastName && (
+            <p className={styles.errorText}>{errors.userLastName}</p>
+          )}
+        </label>
+      </div>
+      <div className={styles.stepSevenLabelWrap}>
+        <label className={styles.stepSevenLabel}>
+          E-Mail*
+          <input
+            placeholder="E-Mail"
+            className={`${styles.stepSevenInput} ${touched.userEmail && errors.userEmail && styles.error}`}
+            {...getFieldProps('userEmail')}
+          />
+          {touched.userEmail && errors.userEmail && (
+            <p className={styles.errorText}>{errors.userEmail}</p>
+          )}
+        </label>
+        <label className={styles.stepSevenLabel}>
+          Telefon-Nr.*
+          <input
+            placeholder="Telefon-Nr."
+            className={`${styles.stepSevenInput} ${touched.userPhone && errors.userPhone && styles.error}`}
+            {...getFieldProps('userPhone')}
+          />
+          {touched.userPhone && errors.userPhone && (
+            <p className={styles.errorText}>{errors.userPhone}</p>
+          )}
+        </label>
+      </div>
 
-      <label className={styles.stepSevenLabel}>
-        Nachname*
-        <input
-          placeholder="Nachname"
-          className={`${styles.stepSevenInput} ${touched.userLastName && errors.userLastName && styles.error}`}
-          {...getFieldProps('userLastName')}
-        />
-        {touched.userLastName && errors.userLastName && (
-          <p className={styles.errorText}>{errors.userLastName}</p>
-        )}
-      </label>
-
-      <label className={styles.stepSevenLabel}>
-        E-Mail*
-        <input
-          placeholder="E-Mail"
-          className={`${styles.stepSevenInput} ${touched.userEmail && errors.userEmail && styles.error}`}
-          {...getFieldProps('userEmail')}
-        />
-        {touched.userEmail && errors.userEmail && (
-          <p className={styles.errorText}>{errors.userEmail}</p>
-        )}
-      </label>
-
-      <label className={styles.stepSevenLabel}>
-        Telefon-Nr.*
-        <input
-          placeholder="Telefon-Nr."
-          className={`${styles.stepSevenInput} ${touched.userPhone && errors.userPhone && styles.error}`}
-          {...getFieldProps('userPhone')}
-        />
-        {touched.userPhone && errors.userPhone && (
-          <p className={styles.errorText}>{errors.userPhone}</p>
-        )}
-      </label>
       <label className={styles.stepSevenLabel}>
         Straße der Projektadresse*
         <input

@@ -9,8 +9,10 @@ import plan1Mob from '/public/images/common/plans/plan-1-mob.png';
 import Image from 'next/image';
 import Button from '@/components/common/Button/Button';
 import { useRouter } from 'next/navigation';
+import useObserver from '@/hooks/useObserver';
 
 const HomeHeroSection = () => {
+  useObserver(`.${styles.heroAnim}`, `${styles.heroAnimVisible}`);
   const router = useRouter();
 
   const handleImgWrapClick = () => {
@@ -36,7 +38,9 @@ const HomeHeroSection = () => {
         src={homeHeroDesk}
       />
       <div className={styles.heroContainer}>
-        <h2 className={styles.heroTitle}>WorkSET Energy Dein Fachpartner</h2>
+        <h2 className={`${styles.heroTitle} ${styles.heroAnim}`}>
+          WorkSET Energy Dein Fachpartner
+        </h2>
         <div onClick={handleImgWrapClick} className={styles.heroImgWrap}>
           <Image
             quality={100}
@@ -51,7 +55,7 @@ const HomeHeroSection = () => {
             <p className={styles.heroPriceText}>Komplettpaket</p>
           </div>
         </div>
-        <div className={styles.heroLinkWrap}>
+        <div className={`${styles.heroLinkWrap} ${styles.heroAnim}`}>
           <Link className={styles.heroLink} href="/leadgen">
             Jetzt berechnen
           </Link>

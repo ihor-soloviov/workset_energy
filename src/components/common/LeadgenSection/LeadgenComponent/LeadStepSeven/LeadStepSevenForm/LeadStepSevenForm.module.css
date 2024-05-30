@@ -4,12 +4,19 @@
   gap: 18px;
 }
 
+.stepSevenLabelWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
 .stepSevenLabel {
   color: var(--black-main);
   font-weight: 500;
   font-size: 13px;
   display: flex;
   flex-direction: column;
+  width: 100%;
   position: relative;
   gap: 4px;
 }
@@ -44,13 +51,6 @@
   font-size: 10px;
 }
 
-.stepSevenBtnWrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 14px;
-}
-
 .stepSevenBtn {
   display: flex;
   justify-content: center;
@@ -70,12 +70,12 @@
 }
 
 .stepSevenBtn:not(:disabled):hover {
-  color: var(--black-main);
-  border: 1px solid var(--gray-stroke);
+  color: var(--red-main);
+  border: 1px solid var(--white-stroke);
   background-color: var(--white-main);
 }
 
-.stepSevenBtn:last-child:disabled {
+.stepSevenBtn:disabled {
   background-color: var(--white-main);
   border: 1px solid var(--gray-stroke);
   color: var(--black-main);
@@ -84,4 +84,66 @@
 
 .loader > svg {
   fill: var(--white-main);
+}
+
+@media screen and (min-width: 1440px) {
+  .stepSevenForm {
+    width: 66.8rem;
+    margin: 0 auto;
+  }
+
+  .stepSevenLabelWrap {
+    flex-direction: row;
+    gap: 2rem;
+    margin-bottom: unset;
+  }
+
+  .stepSevenLabel {
+    gap: 0.6rem;
+    font-size: 1.4rem;
+    line-height: 160%;
+  }
+
+  .stepSevenInput {
+    height: 5.6rem;
+  }
+
+  .errorText {
+    top: 8.3rem;
+  }
+
+  .stepSevenBtn {
+    width: 16.2rem;
+    font-size: 1.8rem;
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .stepSevenForm {
+    width: 668px;
+  }
+
+  .stepSevenLabelWrap {
+    gap: 20px;
+  }
+
+  .stepSevenLabel {
+    gap: 6px;
+    font-size: 14px;
+  }
+
+  .stepSevenInput {
+    height: 56px;
+  }
+
+  .errorText {
+    top: 83px;
+  }
+
+  .stepSevenBtn {
+    width: 162px;
+    font-size: 18px;
+    margin-top: 30px;
+  }
 }

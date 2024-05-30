@@ -91,14 +91,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 142rem;
+    width: 162rem;
     margin: 0 auto;
+    height: 30.4rem;
   }
 
   .sliderWrap {
     padding-left: unset;
-    height: 30.4rem;
-    width: 142rem;
+    height: 34.4rem;
+    width: 152rem;
     display: flex;
     margin: 0 2.4rem;
   }
@@ -180,12 +181,12 @@
 
 @media screen and (min-width: 1728px) {
   .sliderMainWrap {
-    width: 1420px;
+    width: 1620px;
+    height: 304px;
   }
 
   .sliderWrap {
-    height: 304px;
-    width: 1420px;
+    width: 1520px;
     margin: 0 24px;
   }
 

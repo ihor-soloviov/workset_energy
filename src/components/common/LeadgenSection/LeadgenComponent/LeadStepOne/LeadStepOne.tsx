@@ -2,17 +2,23 @@ import Button from '@/components/common/Button/Button';
 import styles from './LeadStepOne.module.css';
 import LeadStepOneList from './LeadStepOneList/LeadStepOneList';
 import { LeadStepProps } from '../../types';
-import React, { useState, MouseEvent } from 'react';
+import React, { useState, MouseEvent, useEffect } from 'react';
 
 const LeadStepOne = ({ handleNextStepClick }: LeadStepProps) => {
   const [stepOneValue, setStepOneValue] = useState<null | string>(null);
 
-  const [isDisabled, setIsDisabled] = useState(true);
-
   const handleItemClick = (e: MouseEvent<HTMLLIElement>, itemValue: string) => {
     setStepOneValue(itemValue);
-    setIsDisabled(false);
   };
+
+  useEffect(() => {
+    if (stepOneValue) {
+      const timer = setTimeout(() => {
+        handleNextStepClick(stepOneValue, 'propertyType');
+      }, 350);
+      return () => clearTimeout(timer);
+    }
+  }, [stepOneValue, handleNextStepClick]);
 
   return (
     <div className={styles.stepOneWrap}>
@@ -24,17 +30,6 @@ const LeadStepOne = ({ handleNextStepClick }: LeadStepProps) => {
         stepValue={stepOneValue}
         handleItemClick={handleItemClick}
       />
-      <Button
-        disabled={isDisabled}
-        handleClick={() =>
-          handleNextStepClick &&
-          handleNextStepClick(stepOneValue, 'propertyType')
-        }
-        type="button"
-        className={styles.stepOneBtn}
-      >
-        Weiter
-      </Button>
     </div>
   );
 };

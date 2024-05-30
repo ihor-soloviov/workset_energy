@@ -60,11 +60,71 @@
   color: var(--white-main);
 }
 
-@media screen and (min-width: 390px) {
-}
-
 @media screen and (min-width: 1440px) {
+  .stepFiveList {
+    width: 90rem;
+    height: 28.2rem;
+    padding: 4.8rem;
+    flex-direction: row;
+    border-radius: 1.6rem;
+    gap: 2rem;
+    margin: 0 auto;
+    margin-bottom: 4.8rem;
+  }
+
+  .stepFiveItem {
+    width: 18.6rem;
+    height: 18.6rem;
+    border-radius: 1.6rem;
+    padding: unset;
+    padding-top: 5rem;
+  }
+
+  .stepFiveWrap {
+    flex-direction: column;
+    gap: 3.8rem;
+  }
+
+  .stepFiveIcon {
+    width: 5.4rem;
+    height: 5.4rem;
+  }
+
+  .stepFiveTitle {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 110%;
+  }
 }
 
 @media screen and (min-width: 1728px) {
+  .stepFiveList {
+    width: 900px;
+    height: 282px;
+    padding: 48px;
+    border-radius: 16px;
+    gap: 20px;
+    margin-bottom: 48px;
+  }
+
+  .stepFiveItem {
+    width: 186px;
+    height: 186px;
+    padding-top: 60px;
+    border-radius: 16px;
+    padding-top: 50px;
+  }
+
+  .stepFiveWrap {
+    gap: 38px;
+  }
+
+  .stepFiveIcon {
+    width: 54px;
+    height: 54px;
+  }
+
+  .stepFiveTitle {
+    font-size: 18px;
+  }
 }

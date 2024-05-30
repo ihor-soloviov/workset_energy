@@ -5,12 +5,16 @@ import AmenitiesList from './AmenitiesList/AmenitiesList';
 import styles from './AmenitiesSection.module.css';
 import Button from '@/components/common/Button/Button';
 import { scrollToSection } from '@/utils/scroll';
+import RecycleTextWrap from '@/components/common/RecycleTextWrap/RecycleTextWrap';
 
 const AmenitiesSection = () => {
   return (
     <section className={styles.amenitiesSection}>
       <div className={styles.amenitiesContainer}>
-        <h2 className={styles.amenitiesMainTitle}>Warum WorkSET Energy?</h2>
+        <RecycleTextWrap
+          title="Warum WorkSET Energy?"
+          titleClass={styles.amenitiesMainTitle}
+        />
 
         <AmenitiesList />
         <Button

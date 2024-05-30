@@ -1,5 +1,3 @@
-'use client';
-
 import styles from './LeadgenComponent.module.css';
 import LeadStepOne from './LeadStepOne/LeadStepOne';
 import LeadStepTwo from './LeadStepTwo/LeadStepTwo';
@@ -8,7 +6,7 @@ import LeadStepFour from './LeadStepFour/LeadStepFour';
 import LeadStepFive from './LeadStepFive/LeadStepFive';
 import LeadStepSix from './LeadStepSix/LeadStepSix';
 import LeadStepSeven from './LeadStepSeven/LeadStepSeven';
-import { FormInitialValue } from '../types';
+import { FormInitialValue, LeadgenComponentProps } from '../types';
 import { useEffect, useState } from 'react';
 import { inter } from '@/utils/fonts';
 import ProgressWrapIcon from '/public/icons/address-wrap.svg';
@@ -30,9 +28,8 @@ const formInitialValue: FormInitialValue = {
   },
 };
 
-const LeadgenComponent = () => {
+const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
   const [formData, setFormData] = useState(formInitialValue);
-  const [step, setStep] = useState(1);
   console.log(formData);
   const handlePrevStepClick = () => {
     clearStepValue(step - 1);
@@ -187,7 +184,7 @@ const LeadgenComponent = () => {
                 className={`${styles.leadProgressIcon} ${step !== 1 ? styles.active : ''}`}
               />
               <p
-                className={`${styles.leadProgressPercentage} ${inter.className}`}
+                className={`${styles.leadProgressPercentage} ${step !== 1 ? styles.active : ''} ${inter.className}`}
               >
                 {calculateProgress()}%
               </p>

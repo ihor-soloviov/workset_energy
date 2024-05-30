@@ -76,6 +76,11 @@
   border-radius: 50%;
   background-color: var(--red-main);
   outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.questToggleBtn:hover {
+  background-color: var(--white-main);
 }
 
 .toggleIcon {
@@ -84,6 +89,10 @@
   fill: var(--white-main);
   transform: rotate(180deg);
   transition: all 0.3s ease-in-out;
+}
+
+.questToggleBtn:hover .toggleIcon {
+  fill: var(--red-main);
 }
 
 .toggleIcon.active {

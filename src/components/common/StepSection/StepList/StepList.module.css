@@ -163,10 +163,19 @@
   position: absolute;
   bottom: 25px;
   right: 24px;
+  transition: all 0.3s ease-in-out;
 }
 
 .stepToggleBtn.white {
   background-color: var(--white-main);
+}
+
+.stepToggleBtn:hover {
+  background-color: var(--white-main);
+}
+
+.stepToggleBtn.white:hover {
+  background-color: var(--red-main);
 }
 
 .stepToggleIcon {
@@ -181,6 +190,14 @@
   fill: var(--red-main);
 }
 
+.stepToggleBtn:hover .stepToggleIcon {
+  fill: var(--red-main);
+}
+
+.stepToggleBtn.white:hover .stepToggleIcon {
+  fill: var(--white-main);
+}
+
 .stepToggleIcon.active {
   transform: unset;
 }
@@ -189,6 +206,7 @@
   .stepList {
     width: 100%;
   }
+
   .stepItem {
     flex-direction: row;
     opacity: 0;
@@ -228,6 +246,7 @@
   .stepTextWrap.white {
     order: -1;
   }
+
   .stepCount {
     display: none;
   }

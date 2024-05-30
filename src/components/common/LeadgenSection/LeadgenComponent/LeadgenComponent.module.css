@@ -67,17 +67,89 @@
   height: 49px;
 }
 
-@media screen and (min-width: 390px) {
-  .leadMainWrap {
-  }
-}
-
 @media screen and (min-width: 1440px) {
   .leadMainWrap {
+  }
+
+  .leadProgressWrap {
+    margin-bottom: 6.4rem;
+  }
+
+  .leadProggressPrecentWrap.active {
+    right: -1.6rem;
+  }
+
+  .leadProgressLine {
+    width: 80.6rem;
+    height: 0.6rem;
+  }
+
+  .leadProgressLineInner::before {
+    height: 0.6rem;
+    width: 0.6rem;
+  }
+
+  .leadProgressPercentage {
+    font-size: 1.84rem;
+    top: 1.2rem;
+    left: 1.8rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .leadProgressPercentage.active {
+    left: 1.6rem;
+  }
+
+  .leadProgressIcon {
+    width: 6rem;
+    height: 4.7rem;
+  }
+
+  .leadProgressIcon.active {
+    width: 7.1rem;
+    height: 4.7rem;
   }
 }
 
 @media screen and (min-width: 1728px) {
   .leadMainWrap {
+  }
+
+  .leadProggressPrecentWrap.active {
+    right: -16px;
+  }
+
+  .leadProgressWrap {
+    margin-bottom: 64px;
+  }
+
+  .leadProgressLine {
+    width: 806px;
+    height: 6px;
+  }
+
+  .leadProgressLineInner::before {
+    height: 6px;
+    width: 6px;
+  }
+
+  .leadProgressPercentage {
+    font-size: 18.415px;
+    top: 12px;
+    left: 18px;
+  }
+
+  .leadProgressPercentage.active {
+    left: 16px;
+  }
+
+  .leadProgressIcon {
+    width: 60px;
+    height: 47px;
+  }
+
+  .leadProgressIcon.active {
+    width: 71px;
+    height: 47px;
   }
 }

@@ -61,11 +61,61 @@
   color: var(--white-main);
 }
 
-@media screen and (min-width: 390px) {
-}
-
 @media screen and (min-width: 1440px) {
+  .stepOneList {
+    width: 48.8rem;
+    height: 28.2rem;
+    padding: 4.8rem;
+    margin-bottom: 4.8rem;
+  }
+
+  .stepOneItem {
+    width: 18.6rem;
+    padding-top: 3.8rem;
+    height: 18.6rem;
+    border-radius: 1.6rem;
+  }
+
+  .stepOneWrap {
+    gap: 3.8rem;
+  }
+
+  .stepOneIcon {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .stepOneTitle {
+    font-size: 1.8rem;
+    line-height: 110%;
+  }
 }
 
 @media screen and (min-width: 1728px) {
+  .stepOneList {
+    width: 488px;
+    height: 282px;
+    padding: 48px;
+    margin-bottom: 48px;
+  }
+
+  .stepOneItem {
+    width: 186px;
+    padding-top: 38px;
+    height: 186px;
+    border-radius: 16px;
+  }
+
+  .stepOneWrap {
+    gap: 38px;
+  }
+
+  .stepOneIcon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .stepOneTitle {
+    font-size: 18px;
+  }
 }

@@ -121,13 +121,31 @@
   transition: all 0.3s ease-in-out;
 }
 
+.amenitiesBtn:hover {
+  background-color: var(--white-main);
+  border-color: var(--red-main);
+}
+
+.amenitiesBtn:hover .amenitiesIcon {
+  stroke: var(--red-main);
+}
+
 .amenitiesItem:first-child .amenitiesBtn {
   background-color: transparent;
   border: 2px solid var(--white-main);
 }
 
+.amenitiesItem:first-child .amenitiesBtn:hover {
+  background-color: var(--white-main);
+  border-color: var(--white-main);
+}
+
 .amenitiesItem:first-child .amenitiesIcon {
   stroke: var(--white-main);
+}
+
+.amenitiesItem:first-child .amenitiesBtn:hover .amenitiesIcon {
+  stroke: var(--red-main);
 }
 
 .amenitiesIcon {

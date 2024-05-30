@@ -16,15 +16,15 @@
 
 @media screen and (min-width: 1440px) {
   .googleComSection {
-    padding: 5rem 15.7rem 10rem;
+    padding: 16.2rem 8.9rem 19.6rem;
   }
 
   .googleComTitle {
     font-size: 5rem;
     width: 57.8rem;
     margin: unset;
-    margin-bottom: 1.6rem;
-    margin-left: 2.4rem;
+    margin-bottom: 5rem;
+    margin-left: 1.4rem;
     margin-right: auto;
     font-weight: 600;
   }
@@ -32,13 +32,13 @@
 
 @media screen and (min-width: 1728px) {
   .googleComSection {
-    padding: 162px 123px 196px;
+    padding: 162px 89px 196px;
   }
 
   .googleComTitle {
     font-size: 50px;
     width: 578px;
-    margin-bottom: 16px;
-    margin-left: 24px;
+    margin-bottom: 50px;
+    margin-left: 74px;
   }
 }
