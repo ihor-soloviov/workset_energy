@@ -4,9 +4,10 @@ import { inter } from '@/utils/fonts';
 import { amenitiesItems } from './amenitiesItems';
 import BtnPlusIcon from '/public/icons/plus.svg';
 import BtnMinusIcon from '/public/icons/minus.svg';
-import CountUp from 'react-countup';
+import Counter from './Counter/Counter';
 import Button from '@/components/common/Button/Button';
 import { useGlobalStore } from '@/store/global-store';
+
 const AmenitiesList = () => {
   const [visibleItems, setVisibleItems] = useState<Record<string, boolean>>({});
   const { isDesktop } = useGlobalStore();
@@ -18,16 +19,16 @@ const AmenitiesList = () => {
     }));
   };
 
-  const currentTitle = (title: string) => {
-    switch (title) {
+  const currentTitle = (title: string, mainTitle: string) => {
+    switch (mainTitle) {
       case '0':
-        return title;
+        return mainTitle;
       case '30':
-        return <CountUp duration={2} start={1} end={30} />;
+        return <Counter target={30} duration={2} title={title} />;
       case '10.000':
-        return <CountUp duration={2} start={1} end={10000} />;
+        return <Counter target={10000} duration={2} title={title} />;
       default:
-        return;
+        return mainTitle;
     }
   };
 
@@ -49,10 +50,11 @@ const AmenitiesList = () => {
             onClick={() => toggleVisibility(title)}
           >
             <div className={styles.amenitiesMainWrap}>
-              <h3 className={styles.amenitiesMainTitle}>
-                {currentTitle(mainTitle)}
+              <div className={styles.amenitiesMainTitle}>
+                {currentTitle(title, mainTitle)}
                 <span>{mainSymbol}</span>
-              </h3>
+              </div>
+
               <h4 className={`${styles.amenitiesTitle} ${inter.className}`}>
                 {title}
               </h4>

@@ -55,6 +55,7 @@
   width: fit-content;
   margin-right: auto;
   margin-bottom: 6px;
+  display: flex;
   line-height: 130%;
 }
 
