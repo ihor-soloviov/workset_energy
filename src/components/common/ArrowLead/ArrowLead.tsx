@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './ArrowLead.module.css';
-import LeadIcon from '/public/icons/lead-btn-arrow.svg';
+
 type Props = {
   className: string;
 };
