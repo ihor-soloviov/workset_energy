@@ -30,7 +30,7 @@ const QuestionList = () => {
   ) => {
     e.stopPropagation();
 
-    leadSrc ? router.push('/leadgen') : scrollToSection('kontact');
+    leadSrc ? router.push('/#leadgen') : scrollToSection('kontact');
   };
 
   const renderListItems = (items: QuestItem[]) =>

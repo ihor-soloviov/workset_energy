@@ -1,11 +1,7 @@
-'use client';
-
-import Container from '@/components/common/Container/Container';
 import AmenitiesList from './AmenitiesList/AmenitiesList';
 import styles from './AmenitiesSection.module.css';
-import Button from '@/components/common/Button/Button';
-import { scrollToSection } from '@/utils/scroll';
 import RecycleTextWrap from '@/components/common/RecycleTextWrap/RecycleTextWrap';
+import Link from 'next/link';
 
 const AmenitiesSection = () => {
   return (
@@ -17,13 +13,9 @@ const AmenitiesSection = () => {
         />
 
         <AmenitiesList />
-        <Button
-          type="button"
-          handleClick={() => scrollToSection('kontact')}
-          className={styles.amenitiesMainBtn}
-        >
+        <Link href="/#kontact" className={styles.amenitiesMainLink}>
           Zum Angebot
-        </Button>
+        </Link>
       </div>
     </section>
   );

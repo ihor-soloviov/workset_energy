@@ -9,7 +9,6 @@
   background-color: var(--gray-input);
   border-radius: 16px;
   padding: 24px;
-  margin-bottom: 36px;
 }
 
 .stepOneItem {
@@ -66,7 +65,6 @@
     width: 48.8rem;
     height: 28.2rem;
     padding: 4.8rem;
-    margin-bottom: 4.8rem;
   }
 
   .stepOneItem {
@@ -96,7 +94,6 @@
     width: 488px;
     height: 282px;
     padding: 48px;
-    margin-bottom: 48px;
   }
 
   .stepOneItem {

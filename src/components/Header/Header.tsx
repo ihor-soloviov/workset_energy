@@ -97,7 +97,7 @@ const Header = () => {
               <HeaderNavList />
             </nav>
             <Link
-              href="/leadgen"
+              href="/#leadgen"
               className={`${styles.headerLeadLink} ${pathname === '/karriere/jobs' ? styles.jobs : ''}`}
             >
               Jetzt berechnen

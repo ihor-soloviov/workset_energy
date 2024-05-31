@@ -33,7 +33,7 @@
 
 .angebotFormWrap {
   width: 100%;
-  padding: 36px 24px 64px;
+  padding: 36px 24px 42px;
   margin: 0 auto;
 }
 
@@ -106,10 +106,6 @@
 }
 
 @media screen and (min-width: 1728px) {
-  .angebotImgMainWrap {
-    height: 983.5px;
-  }
-
   .angebotTitle {
     font-size: 36px;
     margin-bottom: 12px;

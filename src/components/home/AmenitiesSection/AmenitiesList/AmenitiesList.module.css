@@ -1,29 +1,30 @@
 .amenitiesList {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 24px;
   align-items: center;
-  margin-bottom: 54px;
+  margin: 0 auto;
+  width: fit-content;
+  margin-bottom: 48px;
 }
 
 .amenitiesItem {
   user-select: none;
-  position: relative;
   cursor: pointer;
   display: flex;
-  justify-content: space-between;
-  height: 197px;
+
+  flex-direction: column;
+  height: 178px;
   width: 342px;
-  padding: 24px 26px;
-  overflow: hidden;
-  border-radius: 11.819px;
+  padding: 26px;
+  border-radius: 16px;
   border: 1px solid var(--gray-stroke);
   background-color: var(--white-main);
   transition: all 0.3s ease-in-out;
 }
 
-.amenitiesItem.active {
-  height: 269px;
+.amenitiesItem:hover {
+  background-color: var(--red-main);
 }
 
 .amenitiesItem:first-child {
@@ -32,267 +33,140 @@
   box-shadow: unset;
 }
 
-.amenitiesItem:first-child.active {
-  height: 293px;
-}
-
-.amenitiesItem:last-child.active {
-  height: 317px;
-}
-
-.amenitiesMainWrap {
-  width: 242px;
-}
-
-.amenitiesItem:nth-child(2) .amenitiesMainWrap {
-  width: 238px;
-}
-
-.amenitiesMainTitle {
-  color: var(--black-main);
-  font-size: 36px;
-  font-weight: 600;
-  width: fit-content;
-  margin-right: auto;
-  margin-bottom: 6px;
-  display: flex;
-  line-height: 130%;
-}
-
-.amenitiesItem:first-child .amenitiesMainTitle {
-  color: var(--white-main);
+.amenitiesItem:first-child:hover {
+  background-color: var(--white-main);
+  border-color: var(--gray-stroke);
 }
 
 .amenitiesTitle {
   color: var(--black-main);
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 600;
-  line-height: 130%;
   width: fit-content;
   margin-right: auto;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 4px;
+  line-height: 130%;
+  transition: 0.3s ease-in-out;
 }
 
 .amenitiesItem:first-child .amenitiesTitle {
   color: var(--white-main);
 }
 
-.amenitiesText {
-  width: 242px;
+.amenitiesItem:hover .amenitiesTitle {
+  color: var(--white-main);
 }
 
-.amenitiesText,
-.amenitiesExtraText {
-  font-size: 15px;
+.amenitiesItem:first-child:hover .amenitiesTitle {
+  color: var(--black-main);
+}
+
+.amenitiesTextList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.amenitiesTextItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.amenitiesText {
+  font-size: 16px;
   font-weight: 400;
   line-height: 160%;
   color: var(--gray-text);
+  transition: 0.3s ease-in-out;
 }
 
-.amenitiesItem:first-child .amenitiesText,
-.amenitiesItem:first-child .amenitiesExtraText {
-  color: rgba(255, 255, 255, 0.85);
+.amenitiesItem:first-child .amenitiesText {
+  color: var(--white-main);
 }
 
-.amenitiesExtraText {
-  opacity: 0;
-  height: 0px;
-  transition: all 0.2s ease-in-out;
+.amenitiesItem:hover .amenitiesText {
+  color: var(--white-main);
 }
 
-.amenitiesExtraText.active {
-  height: auto;
-  opacity: 1;
-}
-
-.amenitiesBtn {
-  position: absolute;
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1.481px solid var(--white-main);
-  border-radius: 50%;
-  background-color: var(--red-main);
-  outline: none;
-  bottom: 19px;
-  right: 26px;
-  transition: all 0.3s ease-in-out;
-}
-
-.amenitiesBtn:hover {
-  background-color: var(--white-main);
-  border-color: var(--red-main);
-}
-
-.amenitiesBtn:hover .amenitiesIcon {
-  stroke: var(--red-main);
-}
-
-.amenitiesItem:first-child .amenitiesBtn {
-  background-color: transparent;
-  border: 2px solid var(--white-main);
-}
-
-.amenitiesItem:first-child .amenitiesBtn:hover {
-  background-color: var(--white-main);
-  border-color: var(--white-main);
-}
-
-.amenitiesItem:first-child .amenitiesIcon {
-  stroke: var(--white-main);
-}
-
-.amenitiesItem:first-child .amenitiesBtn:hover .amenitiesIcon {
-  stroke: var(--red-main);
+.amenitiesItem:first-child:hover .amenitiesText {
+  color: var(--gray-text);
 }
 
 .amenitiesIcon {
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
+  stroke: var(--gray-text);
+  transition: 0.3s ease-in-out;
+}
+
+.amenitiesItem:first-child .amenitiesIcon {
+  stroke: var(--gray-input);
+}
+
+.amenitiesItem:hover .amenitiesIcon {
   stroke: var(--white-main);
-  transform: rotate(90deg);
-  transition: all 0.3s ease-in-out;
 }
 
-.amenitiesIcon:last-child {
-  opacity: 0;
-  visibility: hidden;
-  transform: unset;
-  width: 0px;
-  height: 0px;
-}
-
-.amenitiesIcon.active {
-  opacity: 0;
-  visibility: hidden;
-  width: 0px;
-  height: 0px;
-}
-
-.amenitiesIcon:last-child.active {
-  opacity: 1;
-  visibility: visible;
-  width: 16px;
-  height: 16px;
+.amenitiesItem:first-child:hover .amenitiesIcon {
+  stroke: var(--gray-text);
 }
 
 @media screen and (min-width: 1440px) {
   .amenitiesList {
     flex-direction: row;
-    gap: 2.4rem;
-    align-items: flex-start;
-    width: fit-content;
-    margin: 0 auto;
+    margin-bottom: unset;
   }
 
   .amenitiesItem {
     width: 46.2rem;
-    height: 23rem;
+    height: 22.7rem;
     padding: 3.6rem;
-    border-radius: 1.6rem;
-  }
-
-  .amenitiesItem.active {
-    height: 30.8rem;
-  }
-
-  .amenitiesItem:first-child.active {
-    height: 30.8rem;
-  }
-
-  .amenitiesItem:last-child.active {
-    height: 36rem;
-  }
-
-  .amenitiesMainTitle {
-    font-size: 4.6rem;
-    margin-bottom: 1rem;
   }
 
   .amenitiesTitle {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 3.2rem;
+    gap: 0.7rem;
+  }
+
+  .amenitiesTextList {
+    gap: 0.6rem;
   }
 
   .amenitiesText {
-    font-size: 1.6rem;
-    width: 32.4rem;
-  }
-
-  .amenitiesExtraText {
-    font-size: 1.6rem;
-    width: 32.4rem;
-  }
-
-  .amenitiesBtn {
-    width: 5.4rem;
-    height: 5.4rem;
-    bottom: 3.6rem;
-    right: 3.6rem;
+    font-size: 1.8rem;
   }
 
   .amenitiesIcon {
-    width: 1.7rem;
-    height: 1.8rem;
+    width: 1.6rem;
+    height: 1.6rem;
   }
 }
 
 @media screen and (min-width: 1728px) {
-  .amenitiesList {
-    gap: 24px;
-  }
-
   .amenitiesItem {
     width: 462px;
-    height: 230px;
+    height: 227px;
     padding: 36px;
-    border-radius: 16px;
-  }
-
-  .amenitiesItem.active {
-    height: 308px;
-  }
-
-  .amenitiesItem:first-child.active {
-    height: 308px;
-  }
-
-  .amenitiesItem:last-child.active {
-    height: 360px;
-  }
-
-  .amenitiesMainTitle {
-    font-size: 46px;
-    margin-bottom: 10px;
   }
 
   .amenitiesTitle {
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 32px;
+    gap: 7px;
+  }
+
+  .amenitiesTextList {
+    gap: 6px;
   }
 
   .amenitiesText {
-    font-size: 16px;
-    width: 324px;
-  }
-
-  .amenitiesExtraText {
-    font-size: 16px;
-    width: 324px;
-  }
-
-  .amenitiesBtn {
-    width: 54px;
-    height: 54px;
-    bottom: 36px;
-    right: 36px;
+    font-size: 18px;
   }
 
   .amenitiesIcon {
-    width: 17px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
   }
 }

@@ -50,6 +50,7 @@
 
 .sliderMainItem {
   height: 594px;
+  cursor: pointer;
 }
 
 .sliderImgMob {
@@ -69,7 +70,7 @@
   display: flex;
   height: 314px;
   flex-direction: column;
-  gap: 12px;
+  gap: 24px;
   border: 1px solid var(--gray-stroke);
   border-top: unset;
   background-color: var(--white-main);
@@ -118,17 +119,16 @@
 
 .sliderBtn {
   color: var(--gray-input);
-  padding: 16px 24px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 150%;
   border-radius: 28px;
   background-color: var(--red-main);
   width: 149px;
-  height: 44px;
+  height: 56px;
   transition:
     border-color 250ms var(--cubic),
     color 250ms var(--cubic),
@@ -147,7 +147,7 @@
   }
 
   .sliderWrap {
-    gap: 2.8rem;
+    gap: 3.2rem;
     height: auto;
     border-radius: 0rem 1.6rem 1.6rem 0rem;
   }
@@ -184,18 +184,17 @@
     width: 61.8rem;
     border-radius: 0 1.6rem 1.6rem 0;
     border-left: unset;
-    gap: unset;
+
     border-top: 1px solid var(--gray-stroke);
   }
 
   .sliderTopWrap {
-    margin-bottom: 3.2rem;
     gap: 1rem;
   }
 
   .sliderList {
     height: 8.1rem;
-    margin-bottom: 9.2rem;
+    margin-bottom: 8.8rem;
   }
 
   .sliderBtn {
@@ -210,7 +209,7 @@
   }
 
   .sliderWrap {
-    gap: 28px;
+    gap: 32px;
     padding: 111px 136px 111px 90px;
     width: 618px;
     border-radius: 0px 16px 16px 0px;
@@ -221,12 +220,11 @@
   }
 
   .sliderTopWrap {
-    margin-bottom: 32px;
     gap: 10px;
   }
 
   .sliderList {
-    margin-bottom: 92px;
+    margin-bottom: 88px;
   }
 
   .sliderImgDesk {

@@ -21,7 +21,7 @@ const Counter: React.FC<CounterProps> = ({ target, duration, title }) => {
           }
         });
       },
-      { threshold: 0.6 },
+      { threshold: 0.4 },
     );
 
     if (ref.current) {
@@ -46,6 +46,7 @@ const Counter: React.FC<CounterProps> = ({ target, duration, title }) => {
       >
         {({ countUpRef }) => <span ref={countUpRef} />}
       </CountUp>
+      +
     </div>
   );
 };

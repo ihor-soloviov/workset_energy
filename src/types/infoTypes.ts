@@ -21,7 +21,7 @@ type VorteileSliderItems = TitleText;
 type PlanT = {
   price: string;
   name: string;
-  article: string;
+
   imageMob: StaticImageData;
   imageDesk: StaticImageData;
   benefits: string[];

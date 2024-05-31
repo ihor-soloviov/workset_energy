@@ -7,7 +7,6 @@ import homeHeroMob from '/public/images/home-page/home-hero-mob-new.webp';
 import homeHeroDesk from '/public/images/home-page/home-hero-desk-new.webp';
 import plan1Mob from '/public/images/common/plans/plan-1-mob.png';
 import Image from 'next/image';
-import Button from '@/components/common/Button/Button';
 import { useRouter } from 'next/navigation';
 import useObserver from '@/hooks/useObserver';
 
@@ -56,7 +55,7 @@ const HomeHeroSection = () => {
           </div>
         </div>
         <div className={`${styles.heroLinkWrap} ${styles.heroAnim}`}>
-          <Link className={styles.heroLink} href="/leadgen">
+          <Link className={styles.heroLink} href="/#leadgen">
             Jetzt berechnen
           </Link>
           <Link className={styles.heroAngebotLink} href="/#angebot-vergleichen">

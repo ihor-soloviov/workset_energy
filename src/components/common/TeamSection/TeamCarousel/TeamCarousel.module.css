@@ -193,4 +193,8 @@
   .teamImgText {
     font-size: 22px;
   }
+
+  .teamImgBtn {
+    height: 56px;
+  }
 }

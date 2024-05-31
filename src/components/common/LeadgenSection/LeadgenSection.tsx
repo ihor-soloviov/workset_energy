@@ -32,7 +32,10 @@ const LeadgenSection = () => {
   };
 
   return (
-    <section className={`${styles.leadSection} ${styles[getCurrentClass()]}`}>
+    <section
+      id="leadgen"
+      className={`${styles.leadSection} ${styles[getCurrentClass()]}`}
+    >
       <div className={styles.leadContainer}>
         <h2 className={styles.leadTitle}>
           Investiere 30 Sekunden für dein PV-Projekt!

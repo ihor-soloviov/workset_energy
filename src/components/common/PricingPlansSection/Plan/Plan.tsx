@@ -5,7 +5,7 @@ import CheckMarker from '/public/icons/check-circle.svg';
 import { PlanT } from '@/types/infoTypes';
 import styles from './Plan.module.css';
 import { inter } from '@/utils/fonts';
-
+import bestImg from '/public/images/common/bestseller.png';
 import Button from '../../Button/Button';
 import useObserver from '@/hooks/useObserver';
 
@@ -16,7 +16,7 @@ type Props = {
 };
 
 const Plan: React.FC<Props> = ({
-  plan: { name, imageMob, imageDesk, price, article, benefits },
+  plan: { name, imageMob, imageDesk, price, benefits },
   index,
   handleBtnClick,
 }) => {
@@ -26,6 +26,14 @@ const Plan: React.FC<Props> = ({
   );
   return (
     <li className={styles.pricingPlansItem}>
+      {index === 0 && (
+        <Image
+          quality={100}
+          className={styles.planBestImg}
+          alt={`bestseller`}
+          src={bestImg}
+        />
+      )}
       <Image
         quality={100}
         loading="lazy"
@@ -43,9 +51,7 @@ const Plan: React.FC<Props> = ({
       <div className={styles.pricingPlanInfo}>
         <span className={styles.planTitle}>{name}</span>
         <h4 className={styles.planPrice}> ab {price}</h4>
-        <article className={`${styles.planArticle} ${inter.className}`}>
-          {article}
-        </article>
+
         <ul className={`${styles.planBenefits} ${inter.className}`}>
           {benefits.map(benefit => (
             <li key={benefit} className={styles.planBenefit}>

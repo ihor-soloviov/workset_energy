@@ -1,52 +1,34 @@
 type AmenitiesItem = {
-  mainTitle: string;
-  mainSymbol: string;
   title: string;
-  mainText: string;
-  extraText: string;
-  mainTextDesk: string;
-  extraTextDesk: string;
+  subTitle?: string;
+  textList: string[];
 };
 
 export const amenitiesItems: AmenitiesItem[] = [
   {
-    mainTitle: '0',
-    mainSymbol: ' €',
-    title: 'Anzahlung',
-    mainText:
-      'Zahlung erfolgt erst nach Installation der PV-Anlage: 90% nach Montage, 10% nach',
-    extraText:
-      'Inbetriebnahme unseres Elektrikers. Bei einer 50% Anzahlung erhältst du einen Preisnachlass von 500,- EUR.',
-    mainTextDesk:
-      'Zahlung erfolgt erst nach Installation der PV-Anlage: 90% nach Montage, 10% nach',
-    extraTextDesk:
-      'Inbetriebnahme unseres Elektrikers. Bei einer 50% Anzahlung erhältst du einen Preisnachlass von 500,- EUR.',
+    title: 'Kostenfreies EMS',
+    textList: [
+      'Spare dank dynamischen Tarifen',
+      'Optimiere dein Smart Home',
+      'Alles mit nur einer App',
+    ],
   },
 
   {
-    mainTitle: '30',
-    mainSymbol: '%',
-    title: 'Günstiger',
-    mainText:
-      'Wir sind 30% günstiger als der Durchschnittspreis. Bestes Preis-Leistungsverhältnis! Unser Ziel ist',
-    extraText:
-      'es, dir einen hochwertigen Übergang zu erneuerbaren Energien zu ermöglichen.',
-    mainTextDesk:
-      'Wir sind 30% günstiger als der Durchschnittspreis. Bestes Preis-',
-    extraTextDesk:
-      'Leistungsverhältnis! Unser Ziel ist es, dir einen hochwertigen Übergang zu erneuerbaren Energien zu ermöglichen.',
+    title: '0€ Anzahlung',
+    textList: [
+      'Kein Risiko',
+      '⁠Rechnung nach Installation',
+      '500 EUR Preisnachlass',
+    ],
   },
   {
-    mainTitle: '10.000',
-    mainSymbol: '+',
-    title: 'Zufriedene Kunden',
-    mainText:
-      'Über 10.000 zufriedene Kunden. Diese Zahl spricht für die Qualität und Zuverlässigkeit unserer',
-    extraText:
-      'Dienstleistungen. Unsere Kunden schätzen unseren Service und die Professionalität unseres Teams. Das macht uns zu deinem idealen Partner in Sachen Photovoltaik.',
-    mainTextDesk:
-      'Über 10.000 zufriedene Kunden. Diese Zahl spricht für die Qualität und Zuverlässigkeit',
-    extraTextDesk:
-      'unserer Dienstleistungen. Unsere Kunden schätzen unseren Service und die Professionalität unseres Teams. Das macht uns zu deinem idealen Partner in Sachen Photovoltaik.',
+    title: 'Kunden',
+    subTitle: '10.000',
+    textList: [
+      'Rundum Sorglos Paket',
+      '⁠⁠Kontakt mit Kundenservice',
+      'Keine Subunternehmen',
+    ],
   },
 ];

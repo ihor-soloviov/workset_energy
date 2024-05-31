@@ -14,9 +14,10 @@ const PvAnlagen = () => {
   return (
     <>
       <HeroSection {...pvAnlagenHero} />
+      <PricingPlansSection />
       <VideoSection {...pvAnlagenVideo} />
       <VorteileSection />
-      <PricingPlansSection />
+
       <EmployeeSection />
       <GoogleComSection />
       <TeamSection />

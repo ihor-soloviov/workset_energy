@@ -171,7 +171,7 @@
     height: 53rem;
     position: static;
     overflow-y: unset;
-    border-radius: 1.6rem;
+    border-radius: 2.4rem;
   }
 
   .heroThankYouWrap {
@@ -242,7 +242,7 @@
     height: 530px;
     position: static;
     overflow-y: unset;
-    border-radius: 16px;
+    border-radius: 24px;
   }
 
   .heroFormWrap.active {

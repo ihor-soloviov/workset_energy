@@ -126,30 +126,30 @@ const LeadStepSevenForm = ({
           )}
         </label>
       </div>
-
-      <label className={styles.stepSevenLabel}>
-        Straße der Projektadresse*
-        <input
-          placeholder="Straße der Projektadresse"
-          className={`${styles.stepSevenInput} ${touched.userStreet && errors.userStreet && styles.error}`}
-          {...getFieldProps('userStreet')}
-        />
-        {touched.userStreet && errors.userStreet && (
-          <p className={styles.errorText}>{errors.userStreet}</p>
-        )}
-      </label>
-      <label className={styles.stepSevenLabel}>
-        PLZ und Stadt der Projektadresse*
-        <input
-          placeholder="PLZ und Stadt der Projektadresse"
-          className={`${styles.stepSevenInput} ${touched.userPostcode && errors.userPostcode && styles.error}`}
-          {...getFieldProps('userPostcode')}
-        />
-        {touched.userPostcode && errors.userPostcode && (
-          <p className={styles.errorText}>{errors.userPostcode}</p>
-        )}
-      </label>
-
+      <div className={styles.stepSevenLabelWrap}>
+        <label className={styles.stepSevenLabel}>
+          Straße der Projektadresse*
+          <input
+            placeholder="Straße der Projektadresse"
+            className={`${styles.stepSevenInput} ${touched.userStreet && errors.userStreet && styles.error}`}
+            {...getFieldProps('userStreet')}
+          />
+          {touched.userStreet && errors.userStreet && (
+            <p className={styles.errorText}>{errors.userStreet}</p>
+          )}
+        </label>
+        <label className={styles.stepSevenLabel}>
+          PLZ und Stadt der Projektadresse*
+          <input
+            placeholder="PLZ und Stadt der Projektadresse"
+            className={`${styles.stepSevenInput} ${touched.userPostcode && errors.userPostcode && styles.error}`}
+            {...getFieldProps('userPostcode')}
+          />
+          {touched.userPostcode && errors.userPostcode && (
+            <p className={styles.errorText}>{errors.userPostcode}</p>
+          )}
+        </label>
+      </div>
       <Button
         disabled={!(isValid && dirty)}
         type="submit"

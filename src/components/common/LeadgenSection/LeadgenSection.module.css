@@ -1,21 +1,21 @@
 .leadSection {
-  padding: 36px 0 48px;
+  padding: 36px 0 64px;
   transition: all 0.2s ease-in-out;
 }
 
 .extraSmall {
-  height: 613px;
+  height: 580px;
 }
 
 .small {
-  height: 781px;
+  height: 779px;
 }
 
 .medium {
-  height: 829px;
+  height: 827px;
 }
 .large {
-  height: 1101px;
+  height: 1030px;
 }
 
 .leadContainer {
@@ -32,7 +32,7 @@
   line-height: 130%;
   width: fit-content;
   margin: 0 auto;
-  margin-bottom: 89px;
+  margin-bottom: 44px;
 }
 
 @media screen and (min-width: 390px) {
@@ -44,7 +44,7 @@
 
 @media screen and (min-width: 1440px) {
   .leadSection {
-    padding: 10rem 0 5.9rem;
+    padding: 7rem 0 10rem;
   }
 
   .extraSmall {
@@ -52,19 +52,19 @@
   }
 
   .small {
-    height: 89.5rem;
+    height: 87rem;
   }
 
   .extraMedium {
-    height: 85.9rem;
+    height: 83.3rem;
   }
 
   .medium {
-    height: 90.9rem;
+    height: 88.2rem;
   }
 
   .large {
-    height: 101.8rem;
+    height: 98.8rem;
   }
 
   .leadContainer {
@@ -75,13 +75,13 @@
   .leadTitle {
     font-size: 5rem;
     line-height: 120%;
-    margin-bottom: 10.6rem;
+    margin-bottom: 6.4rem;
   }
 }
 
 @media screen and (min-width: 1728px) {
   .leadSection {
-    padding: 100px 0 59px;
+    padding: 70px 0 100px;
   }
 
   .extraSmall {
@@ -89,19 +89,19 @@
   }
 
   .small {
-    height: 895px;
+    height: 870px;
   }
 
   .extraMedium {
-    height: 859px;
+    height: 833px;
   }
 
   .medium {
-    height: 909px;
+    height: 882px;
   }
 
   .large {
-    height: 1018px;
+    height: 988px;
   }
 
   .leadContainer {
@@ -112,6 +112,6 @@
   .leadTitle {
     font-size: 50px;
 
-    margin-bottom: 106px;
+    margin-bottom: 64px;
   }
 }

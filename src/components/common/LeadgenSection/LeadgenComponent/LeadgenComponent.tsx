@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import styles from './LeadgenComponent.module.css';
 import LeadStepOne from './LeadStepOne/LeadStepOne';
 import LeadStepTwo from './LeadStepTwo/LeadStepTwo';
@@ -9,7 +10,6 @@ import LeadStepSeven from './LeadStepSeven/LeadStepSeven';
 import { FormInitialValue, LeadgenComponentProps } from '../types';
 import { useEffect, useState } from 'react';
 import { inter } from '@/utils/fonts';
-import ProgressWrapIcon from '/public/icons/address-wrap.svg';
 
 const formInitialValue: FormInitialValue = {
   propertyType: '',
@@ -141,27 +141,6 @@ const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
     }
   };
 
-  const calculateProgress = () => {
-    switch (step) {
-      case 1:
-        return 0;
-      case 2:
-        return 22;
-      case 3:
-        return 44;
-      case 4:
-        return 65;
-      case 5:
-        return 80;
-      case 6:
-        return 87;
-      case 7:
-        return 99;
-      default:
-        return 0;
-    }
-  };
-
   useEffect(() => {
     if (step === 8) {
       setStep(1);
@@ -172,25 +151,17 @@ const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
   return (
     <div className={styles.leadMainWrap}>
       <div className={styles.leadProgressWrap}>
-        <div className={styles.leadProgressLine}>
-          <div
-            className={styles.leadProgressLineInner}
-            style={{ width: `${calculateProgress()}%` }}
-          >
-            <div
-              className={`${styles.leadProggressPrecentWrap} ${step !== 1 ? styles.active : ''}`}
-            >
-              <ProgressWrapIcon
-                className={`${styles.leadProgressIcon} ${step !== 1 ? styles.active : ''}`}
-              />
-              <p
-                className={`${styles.leadProgressPercentage} ${step !== 1 ? styles.active : ''} ${inter.className}`}
-              >
-                {calculateProgress()}%
-              </p>
-            </div>
-          </div>
-        </div>
+        <ul className={styles.leadProgressList}>
+          {[1, 2, 3, 4, 5, 6, 7].map(item => (
+            <li
+              className={`${styles.leadProgressItem} ${step === item || item < step ? styles.active : ''}`}
+              key={item}
+            ></li>
+          ))}
+        </ul>
+        <p className={`${styles.leadProgressText} ${inter.className}`}>
+          <span>{`${step} `}</span>von 7
+        </p>
       </div>
       {currentStep(step)}
     </div>

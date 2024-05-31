@@ -14,6 +14,7 @@ import HeroSection from '@/components/common/HeroSection/HeroSection';
 import RegionSection from '@/components/home/RegionSection/RegionSection';
 import LeadgenSection from '@/components/common/LeadgenSection/LeadgenSection';
 import HomeHeroSection from '@/components/home/HomeHeroSection/HomeHeroSection';
+import ObjectSection from '@/components/common/ObjectSection/ObjectSection';
 
 const HomePage = () => {
   return (
@@ -29,6 +30,7 @@ const HomePage = () => {
       <TeamSection />
       <AngebotSection />
       <GoogleComSection />
+      <ObjectSection />
       <QuestionSection />
       <VisionSection />
       <StepSection />

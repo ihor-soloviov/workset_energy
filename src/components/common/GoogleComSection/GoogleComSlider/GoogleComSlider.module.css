@@ -91,15 +91,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 162rem;
     margin: 0 auto;
-    height: 30.4rem;
+    width: fit-content;
+    height: auto;
+    position: relative;
   }
 
   .sliderWrap {
     padding-left: unset;
-    height: 34.4rem;
-    width: 152rem;
+    height: 34rem;
+    width: 144.7rem;
     display: flex;
     margin: 0 2.4rem;
   }
@@ -142,35 +143,36 @@
   .sliderBtnWrap {
     cursor: pointer;
     display: flex;
-    width: 7.3rem;
-    height: 7.3rem;
+    width: 5.4rem;
+    height: 5.4rem;
+
+    position: absolute;
+    right: 0;
+    top: 12.5rem;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background-color: transparent;
-    border: 1px solid var(--gray-stroke);
+    background-color: var(--red-main);
+    border: 1px solid var(--red-main);
     flex-shrink: 0;
-    transition:
-      background-color 250ms var(--cubic),
-      border-color 250ms var(--cubic);
+    z-index: 2;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nextArrow {
+    stroke: var(--white-main);
   }
 
   .sliderBtnWrap:hover {
-    border-color: var(--red-main);
-    background-color: var(--red-main);
+    background-color: var(--white-main);
   }
 
-  .prevArrow {
-    transition: stroke 250ms var(--cubic);
-    transform: rotate(180deg);
-  }
-  .nextArrow {
-    transition: stroke 250ms var(--cubic);
+  .sliderBtnWrap:hover .nextArrow {
+    stroke: var(--red-main);
   }
 
-  .sliderBtnWrap:hover .nextArrow,
-  .sliderBtnWrap:hover .prevArrow {
-    stroke: var(--white-main);
+  .sliderBtnWrap:first-child {
+    display: none;
   }
 
   .slideStarIcon {
@@ -180,14 +182,10 @@
 }
 
 @media screen and (min-width: 1728px) {
-  .sliderMainWrap {
-    width: 1620px;
-    height: 304px;
-  }
-
   .sliderWrap {
-    width: 1520px;
+    width: 1447px;
     margin: 0 24px;
+    height: 340px;
   }
 
   .slideWrap {
@@ -222,8 +220,30 @@
   }
 
   .sliderBtnWrap {
-    width: 73px;
-    height: 73px;
+    width: 54px;
+    height: 54px;
+    background-color: var(--red-main);
+    position: absolute;
+    right: 0;
+    top: 125px;
+    z-index: 2;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nextArrow {
+    stroke: var(--white-main);
+  }
+
+  .sliderBtnWrap:hover {
+    background-color: var(--white-main);
+  }
+
+  .sliderBtnWrap:hover .nextArrow {
+    stroke: var(--red-main);
+  }
+
+  .sliderBtnWrap:first-child {
+    display: none;
   }
 
   .slideStarIcon {

@@ -1,26 +1,34 @@
 .pricingPlansItem {
   position: relative;
-  width: 342px;
+  width: 296px;
   display: flex;
   flex-direction: column;
-  padding: 64px 24px 36px;
+  padding: 54px 21px 32px;
   border-radius: 16px;
   border: 1px solid var(--gray-stroke);
+}
+
+.planBestImg {
+  width: 134px;
+  height: 134px;
+  position: absolute;
+  top: -52px;
+  right: -26px;
 }
 
 .pricingPlanInfo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 294px;
+  width: fit-content;
 }
 
 .planImageMob {
   width: 190px;
   height: 190px;
   position: absolute;
-  top: -136px;
-  left: 76px;
+  top: -154px;
+  left: 48px;
 }
 
 .planImageDesk {
@@ -31,16 +39,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 132px;
-  height: 40px;
+  width: 112px;
+  height: 42px;
+  padding: 12px 23px;
   border-radius: 28px;
   font-size: 16px;
   font-weight: 600;
   line-height: normal;
-  color: var(--white-main);
-  background-color: var(--red-main);
+  color: var(--red-main);
+  background-color: transparent;
+  border: 1px solid var(--red-main);
   padding: 8px 11px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .planPrice {
@@ -49,27 +59,17 @@
   font-weight: 600;
   line-height: 130%;
   color: var(--gray-dark-text);
-  margin-bottom: 8px;
-}
-
-.planArticle {
-  color: var(--gray-text);
-  text-align: center;
-  width: 294px;
-  letter-spacing: 0.04px;
-  line-height: 160%;
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--gray-stroke);
-  margin-bottom: 12px;
-  font-weight: 300;
+  margin-bottom: 22px;
 }
 
 .planBenefits {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  width: 251px;
-  margin-bottom: 24px;
+  width: 196px;
+  margin-bottom: 20px;
+  border-top: 1px solid var(--gray-stroke);
+  padding-top: 16px;
 }
 
 .planBenefit {
@@ -79,7 +79,7 @@
 }
 
 .benefit {
-  font-size: 15px;
+  font-size: 14px;
   font-style: normal;
   line-height: 160%;
   color: var(--gray-text);
@@ -91,9 +91,9 @@
   justify-content: center;
   align-items: center;
   border: 1px solid var(--red-main);
-  border-radius: 28px;
-  height: 48px;
-  width: 292px;
+  border-radius: 32px;
+  height: 56px;
+  width: 254px;
   background-color: var(--red-main);
   color: var(--gray-input);
   font-size: 16px;
@@ -113,8 +113,8 @@
 @media screen and (min-width: 1440px) {
   .pricingPlansItem {
     width: 39.4rem;
-    height: 76.4rem;
-    padding: 16rem 2.7rem 4.8rem;
+    height: 62.4rem;
+    padding: 12rem 2.7rem 4.8rem;
     opacity: 0;
     border-radius: 1.6rem;
     filter: blur(5px);
@@ -152,7 +152,7 @@
     display: block;
     width: 26.5rem;
     position: absolute;
-    top: -16.9rem;
+    top: -20rem;
     left: 6.4rem;
   }
 
@@ -161,34 +161,28 @@
     font-size: 1.7rem;
     margin-bottom: 1.8rem;
     border-radius: 2.8rem;
-    height: 3.4rem;
-    width: 14.6rem;
+    height: 4rem;
+    width: 12.4rem;
     padding: 0.6rem;
   }
 
   .planPrice {
     font-size: 3.4rem;
-    margin-bottom: 1.2rem;
-  }
-
-  .planArticle {
-    font-size: 1.5rem;
-    width: 31.4rem;
-    height: 11.7rem;
-    padding-bottom: 2rem;
-    margin-bottom: 2.4rem;
+    margin-bottom: 2rem;
   }
 
   .planBenefits {
     gap: 1.8rem;
-    margin-bottom: 6.4rem;
+    padding-top: 2.4rem;
+    width: fit-content;
+    margin-bottom: 4.8rem;
   }
 
   .planBtn {
     width: 32.4rem;
     padding: 1.4rem 0;
     font-size: 1.6rem;
-    height: 4.8rem;
+    height: 6rem;
     border-radius: 2.8rem;
   }
 
@@ -200,8 +194,8 @@
 @media screen and (min-width: 1728px) {
   .pricingPlansItem {
     width: 394px;
-    height: 764px;
-    padding: 160px 27px 48px;
+    height: 624px;
+    padding: 120px 27px 48px;
     border-radius: 16px;
   }
 
@@ -211,35 +205,28 @@
 
   .planImageDesk {
     width: 265px;
-    top: -169px;
+    top: -200px;
     left: 64px;
   }
 
   .planTitle {
     font-size: 18px;
     border-radius: 28px;
-    height: 34px;
-    width: 146px;
+    height: 40px;
+    width: 124px;
     padding: 6px;
     margin-bottom: 18px;
   }
 
   .planPrice {
     font-size: 34px;
-    margin-bottom: 12px;
-  }
-
-  .planArticle {
-    font-size: 15px;
-    width: 314px;
-    height: 117px;
-    padding-bottom: 20px;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 
   .planBenefits {
+    padding-top: 24px;
     gap: 18px;
-    margin-bottom: 64px;
+    margin-bottom: 48px;
   }
 
   .benefit {
@@ -249,7 +236,7 @@
   .planBtn {
     width: 324px;
     font-size: 16px;
-    height: 48px;
+    height: 60px;
     border-radius: 28px;
     padding: 14px 111px;
   }

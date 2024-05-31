@@ -19,11 +19,7 @@ export const objectItems: ObjectItem[] = [
   },
   {
     standort: 'Illerrieden',
-    textList: [
-      'PV-Anlage Gesamtleistung: 8,2 kWp',
-      'Stückzahl der Module: 19',
-      'Speichersystem: 10 kWh',
-    ],
+    textList: ['PV-Anlage Gesamtleistung: 8,2 kWp', 'Stückzahl der Module: 19'],
     mobile: objectSlide2Mob,
     desktop: objectSlide2Desk,
   },

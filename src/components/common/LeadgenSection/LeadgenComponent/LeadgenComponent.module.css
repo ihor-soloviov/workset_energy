@@ -2,69 +2,35 @@
 }
 
 .leadProgressWrap {
-  margin-bottom: 36px;
-}
-
-.leadProgressLine {
-  width: 252px;
-  height: 8px;
-  border-radius: 8px;
-  background-color: #f4f4f4;
   margin: 0 auto;
+  width: fit-content;
+  margin-bottom: 32px;
 }
 
-.leadProgressLineInner {
-  height: 100%;
-  border-radius: 8px;
+.leadProgressList {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto;
+  width: fit-content;
+  margin-bottom: 14px;
+}
+
+.leadProgressItem {
+  width: 36px;
+  height: 6px;
+  border-radius: 26px;
+  background-color: var(--gray-stroke);
+}
+
+.leadProgressItem.active {
   background-color: var(--red-main);
-  width: 0;
-  position: relative;
-  transition: width 0.5s ease-in-out;
 }
 
-.leadProgressLineInner::before {
-  content: '';
-  position: absolute;
-  left: 0px;
-  bottom: 0;
-  height: 8px;
-  width: 8px;
-  border-radius: 50%;
-  background-color: var(--red-main);
-}
-
-.leadProggressPrecentWrap {
-  position: absolute;
-  bottom: 13px;
-  right: -32px;
-  width: 53px;
-  height: 49px;
-}
-
-.leadProggressPrecentWrap.active {
-  right: -23px;
-}
-
-.leadProgressPercentage {
-  color: var(--white-main);
+.leadProgressText {
+  color: var(--black-main);
   font-size: 16px;
   font-weight: 600;
-  z-index: 2;
-  position: absolute;
-  top: 13px;
-  left: 15px;
-}
-
-.leadProgressIcon {
-  width: 53px;
-  height: 49px;
-  fill: var(--red-main);
-  transition: width 0.1s ease-in-out;
-}
-
-.leadProgressIcon.active {
-  width: 62px;
-  height: 49px;
 }
 
 @media screen and (min-width: 1440px) {
@@ -72,42 +38,16 @@
   }
 
   .leadProgressWrap {
-    margin-bottom: 6.4rem;
+    margin-bottom: 3.2rem;
   }
 
-  .leadProggressPrecentWrap.active {
-    right: -1.6rem;
+  .leadProgressList {
   }
 
-  .leadProgressLine {
-    width: 80.6rem;
-    height: 0.6rem;
+  .leadProgressItem {
   }
 
-  .leadProgressLineInner::before {
-    height: 0.6rem;
-    width: 0.6rem;
-  }
-
-  .leadProgressPercentage {
-    font-size: 1.84rem;
-    top: 1.2rem;
-    left: 1.8rem;
-    transition: all 0.2s ease-in-out;
-  }
-
-  .leadProgressPercentage.active {
-    left: 1.6rem;
-  }
-
-  .leadProgressIcon {
-    width: 6rem;
-    height: 4.7rem;
-  }
-
-  .leadProgressIcon.active {
-    width: 7.1rem;
-    height: 4.7rem;
+  .leadProgressText {
   }
 }
 
@@ -115,41 +55,19 @@
   .leadMainWrap {
   }
 
-  .leadProggressPrecentWrap.active {
-    right: -16px;
-  }
-
   .leadProgressWrap {
-    margin-bottom: 64px;
+    margin-bottom: 32px;
   }
 
-  .leadProgressLine {
-    width: 806px;
-    height: 6px;
+  .leadProgressList {
+    gap: 14px;
   }
 
-  .leadProgressLineInner::before {
-    height: 6px;
-    width: 6px;
+  .leadProgressItem {
+    width: 40px;
   }
 
-  .leadProgressPercentage {
-    font-size: 18.415px;
-    top: 12px;
-    left: 18px;
-  }
-
-  .leadProgressPercentage.active {
-    left: 16px;
-  }
-
-  .leadProgressIcon {
-    width: 60px;
-    height: 47px;
-  }
-
-  .leadProgressIcon.active {
-    width: 71px;
-    height: 47px;
+  .leadProgressText {
+    font-size: 18px;
   }
 }
