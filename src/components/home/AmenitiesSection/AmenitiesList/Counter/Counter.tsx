@@ -12,6 +12,7 @@ const Counter: React.FC<CounterProps> = ({ target, duration, title }) => {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const currentRef = ref.current;
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
@@ -24,13 +25,13 @@ const Counter: React.FC<CounterProps> = ({ target, duration, title }) => {
       { threshold: 0.4 },
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
