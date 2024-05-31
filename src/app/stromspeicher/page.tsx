@@ -16,9 +16,10 @@ const Stromspeicher = () => {
   return (
     <>
       <HeroSection {...stromspeicherHero} />
+      <PricingPlansSection />
       <VorteileSection />
       <SwitcherSection />
-      <PricingPlansSection />
+
       <EmployeeSection />
       <GoogleComSection />
       <TeamSection />

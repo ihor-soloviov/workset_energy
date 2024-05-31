@@ -123,14 +123,13 @@
 
   .teamImgBtn {
     display: flex;
-    padding: 15px 50px;
     color: var(--red-main);
     justify-content: center;
     align-items: center;
     border-radius: 28px;
     background-color: var(--white-main);
-    width: max-content;
-    height: 50px;
+    width: 21.2rem;
+    height: 5.6rem;
     border: 1px solid var(--white-main);
     font-size: 16px;
     font-weight: 600;
@@ -196,5 +195,6 @@
 
   .teamImgBtn {
     height: 56px;
+    width: 212px;
   }
 }

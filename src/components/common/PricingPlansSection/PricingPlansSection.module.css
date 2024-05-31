@@ -65,7 +65,7 @@
 
 @media screen and (min-width: 1440px) {
   .pricingPlansSection {
-    padding: 18rem 0 13rem;
+    padding: 10rem 0;
   }
 
   .pricingPlansWrap {
@@ -97,7 +97,7 @@
 
 @media screen and (min-width: 1728px) {
   .pricingPlansSection {
-    padding: 180px 0 130px;
+    padding: 100px 0;
   }
 
   .pricingPlansWrap {

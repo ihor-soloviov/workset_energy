@@ -14,9 +14,10 @@ const Wallbox = () => {
   return (
     <>
       <HeroSection {...wallboxHero} />
+      <PricingPlansSection />
       <VideoSection {...wallboxVideo} />
       <VorteileSection />
-      <PricingPlansSection />
+
       <EmployeeSection />
       <GoogleComSection />
       <TeamSection />
