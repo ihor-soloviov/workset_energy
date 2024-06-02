@@ -10,6 +10,7 @@ import LeadStepSeven from './LeadStepSeven/LeadStepSeven';
 import { FormInitialValue, LeadgenComponentProps } from '../types';
 import { useEffect, useState } from 'react';
 import { inter } from '@/utils/fonts';
+import { useGlobalStore } from '@/store/global-store';
 
 const formInitialValue: FormInitialValue = {
   propertyType: '',
@@ -29,6 +30,7 @@ const formInitialValue: FormInitialValue = {
 };
 
 const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
+  const { isDesktop } = useGlobalStore();
   const [formData, setFormData] = useState(formInitialValue);
   console.log(formData);
   const handlePrevStepClick = () => {
@@ -149,7 +151,7 @@ const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
   }, [step]);
 
   return (
-    <div className={styles.leadMainWrap}>
+    <div id={!isDesktop ? 'leadgen' : ''} className={styles.leadMainWrap}>
       <div className={styles.leadProgressWrap}>
         <ul className={styles.leadProgressList}>
           {[1, 2, 3, 4, 5, 6, 7].map(item => (

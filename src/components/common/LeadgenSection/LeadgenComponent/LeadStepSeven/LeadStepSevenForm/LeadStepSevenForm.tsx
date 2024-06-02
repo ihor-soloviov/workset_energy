@@ -10,6 +10,7 @@ import { useState } from 'react';
 import { formDataPost } from '@/utils/api';
 import { useGlobalStore } from '@/store/global-store';
 import { ThreeDots } from 'react-loader-spinner';
+import { useNavigateToThankYou } from '@/hooks/useNavigationToThanks';
 
 const LeadStepSevenForm = ({
   formData,
@@ -17,6 +18,7 @@ const LeadStepSevenForm = ({
   step,
   setStep,
 }: LeadFormProps) => {
+  const thankYou = useNavigateToThankYou();
   const [isLoading, setIsLoading] = useState(false);
   const { setPopupAction } = useGlobalStore();
   const {
@@ -70,6 +72,7 @@ const LeadStepSevenForm = ({
       setIsLoading(false);
       resetForm();
       setStep(step + 1);
+      thankYou();
     },
   });
 

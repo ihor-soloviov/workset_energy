@@ -1,4 +1,3 @@
-import LeadGenComponent from '../LeadGenComponent/LeadGenComponent';
 import styles from './LeadGenHeroSection.module.css';
 import Image from 'next/image';
 import leadHeroImgMob from '/public/images/leadgen-page/lead-hero-mob.webp';
@@ -29,9 +28,6 @@ const LeadGenHeroSection = ({ isDesktop }: LeadGenHeroProps) => {
         blurDataURL={'/images/leadgen-page/lead-hero-desc-blur.jpg'}
         alt="hero-img"
       />
-      <div className={styles.leadHeroContainer}>
-        {isDesktop && <LeadGenComponent />}
-      </div>
     </section>
   );
 };

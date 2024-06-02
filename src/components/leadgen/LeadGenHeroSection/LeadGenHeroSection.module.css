@@ -27,7 +27,7 @@
 
 @media screen and (min-width: 1440px) {
   .leadHeroSection {
-    height: 100dvh;
+    height: 64.9rem;
     padding: 15.9rem 0 8.7rem;
   }
 
@@ -49,6 +49,7 @@
 
 @media screen and (min-width: 1728px) {
   .leadHeroSection {
+    height: 649px;
     padding: 159px 0 87px;
   }
 

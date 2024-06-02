@@ -49,7 +49,7 @@ const HomeHeroSection = () => {
           />
           <div className={styles.heroPriceMainWrap}>
             <div className={styles.heroPriceWrap}>
-              <p className={styles.heroPrice}>ab 11.200 EUR</p>
+              <p className={styles.heroPrice}>ab 12.456 EUR</p>
             </div>
             <p className={styles.heroPriceText}>Komplettpaket</p>
           </div>

@@ -80,7 +80,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 97;
+  z-index: 98;
   background-color: var(--white-main);
   overflow: hidden;
 }
@@ -113,15 +113,15 @@
 }
 
 .heroThankBtn {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
-  border-radius: 28px;
+  border-radius: 32px;
   border: 1px solid var(--red-main);
   background-color: var(--red-main);
   color: var(--white-main);
-  padding: 14px 44px;
+
   width: 168px;
-  height: 48px;
+  height: 60px;
   justify-content: center;
   margin: 0 auto;
   transition:
@@ -177,6 +177,7 @@
   .heroThankYouWrap {
     padding: 35rem 0 28.8rem;
     height: 97.2rem;
+    z-index: 97;
   }
 
   .heroThankYouContainer {
