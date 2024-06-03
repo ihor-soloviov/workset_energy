@@ -1,34 +1,7 @@
-@keyframes blink {
-  0%,
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  60% {
-    opacity: 0;
-    transform: scale(1.1);
-  }
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(0.9) rotate(12.158deg);
-    box-shadow: 0 0 0 0 rgba(243, 44, 64, 0.4);
-  }
-  50% {
-    transform: scale(1) rotate(12.158deg);
-    box-shadow: 0 0 0 3rem rgba(243, 44, 64, 0);
-  }
-  100% {
-    transform: scale(0.9) rotate(12.158deg);
-    box-shadow: 0 0 0 0 rgba(243, 44, 64, 0);
-  }
-}
-
 @keyframes pulseAnimate {
   100% {
     opacity: 0;
-    transform: scale(2);
+    transform: scale(1.5);
   }
 }
 
@@ -51,7 +24,6 @@
   opacity: 1;
   height: 104px;
   background: var(--red-main);
-
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transform: rotate(12.158deg);
 }
@@ -75,8 +47,6 @@
   font-weight: 800;
   line-height: 130%;
   position: absolute;
-  animation: blink 1s infinite ease-in-out;
-
   top: 39px;
   left: 5px;
 }
