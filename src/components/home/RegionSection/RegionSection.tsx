@@ -7,10 +7,8 @@ import LocationIcon from '/public/icons/location-region.svg';
 import RegionImgMob from '/public/icons/region-mob.svg';
 import RegionImgDesk from '/public/icons/region-desk.svg';
 import { scrollToSection } from '@/utils/scroll';
-import { useGlobalStore } from '@/store/global-store';
 
 const RegionSection = () => {
-  const { isDesktop } = useGlobalStore();
   return (
     <section className={styles.regionSection}>
       <div className={styles.regionContainer}>
@@ -34,11 +32,10 @@ const RegionSection = () => {
               <p className={styles.regionLocationText}>{text}</p>
             </div>
           ))}
-          {!isDesktop ? (
-            <RegionImgMob className={styles.regionImgMob} />
-          ) : (
-            <RegionImgDesk className={styles.regionImgDesk} />
-          )}
+
+          <RegionImgMob className={styles.regionImgMob} />
+
+          <RegionImgDesk className={styles.regionImgDesk} />
         </div>
       </div>
     </section>

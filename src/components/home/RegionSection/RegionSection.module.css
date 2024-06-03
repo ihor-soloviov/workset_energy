@@ -172,6 +172,12 @@
   }
 }
 
+@media screen and (min-width: 480px) {
+  .regionImgWrap {
+    left: 20px;
+  }
+}
+
 @media screen and (min-width: 1440px) {
   .regionSection {
     padding: 29.3rem 0;
