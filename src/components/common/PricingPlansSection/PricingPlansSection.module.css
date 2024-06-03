@@ -6,12 +6,13 @@
 .sliderWrap {
   height: 585px;
   margin: 0 auto;
-  width: 320px;
+  width: 342px;
 }
 
 .slideWrap {
   height: fit-content;
   margin-top: auto;
+  width: 296px;
 }
 
 .pricingPlansWrap {

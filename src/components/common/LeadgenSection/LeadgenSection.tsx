@@ -33,7 +33,7 @@ const LeadgenSection = () => {
 
   return (
     <section
-      id={!isDesktop ? 'leadgen' : ''}
+      id="leadgen"
       className={`${styles.leadSection} ${styles[getCurrentClass()]}`}
     >
       <div className={styles.leadContainer}>

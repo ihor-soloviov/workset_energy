@@ -42,7 +42,7 @@ WorkSET Energy."
               onActiveIndexChange={e => setActiveIndex(e.realIndex)}
               spaceBetween={20}
               loop={true}
-              slidesPerView={1}
+              slidesPerView={'auto'}
               onBeforeInit={swiper => {
                 swiperRef.current = swiper;
               }}
