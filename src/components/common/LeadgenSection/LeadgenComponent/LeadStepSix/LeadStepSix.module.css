@@ -24,9 +24,10 @@
 }
 
 .stepSixInput {
-  height: 60px;
+  resize: none;
+  height: 80px;
   width: 100%;
-  padding: 21px;
+  padding: 12px;
   border-radius: 8px;
   border: 1px solid var(--gray-stroke);
   outline: none;
@@ -40,8 +41,8 @@
   font-size: 15px;
   font-weight: 400;
   position: absolute;
-  right: 155px;
-  top: 21px;
+  left: 12px;
+  top: 12px;
 }
 
 .stepSixBtnWrap {
@@ -158,11 +159,6 @@
     border-radius: 8px;
     width: 394px;
     margin-bottom: 48px;
-  }
-
-  .stepSixInput::placeholder {
-    top: 21px;
-    left: 181px;
   }
 
   .stepSixBtnWrap {

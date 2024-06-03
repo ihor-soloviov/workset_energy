@@ -22,8 +22,7 @@ const LeadStepSix = ({
         mitteilen?
       </p>
 
-      <input
-        type="text"
+      <textarea
         placeholder="Text"
         value={stepSixValue}
         onChange={e => setStepSixValue(e.target.value)}
