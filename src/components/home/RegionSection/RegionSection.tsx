@@ -3,12 +3,14 @@
 import { inter } from '@/utils/fonts';
 import styles from './RegionSection.module.css';
 import Button from '@/components/common/Button/Button';
-import Image from 'next/image';
-import regionImgMob from '/public/images/home-page/region-mob.png';
-import regionImgDesk from '/public/images/home-page/region-desk.png';
+import LocationIcon from '/public/icons/location-region.svg';
+import RegionImgMob from '/public/icons/region-mob.svg';
+import RegionImgDesk from '/public/icons/region-desk.svg';
 import { scrollToSection } from '@/utils/scroll';
+import { useGlobalStore } from '@/store/global-store';
 
 const RegionSection = () => {
+  const { isDesktop } = useGlobalStore();
   return (
     <section className={styles.regionSection}>
       <div className={styles.regionContainer}>
@@ -25,18 +27,19 @@ const RegionSection = () => {
         >
           Zum Angebot
         </Button>
-        <Image
-          className={styles.regionImgDesk}
-          src={regionImgDesk}
-          alt="region"
-        />
-      </div>
-      <div className={styles.regionImgWrap}>
-        <Image
-          className={styles.regionImgMob}
-          src={regionImgMob}
-          alt="region"
-        />
+        <div className={styles.regionImgWrap}>
+          {['Frankfurt', 'Mannheim', 'Ulm'].map(text => (
+            <div className={styles.regionLocationWrap} key={text}>
+              <LocationIcon className={styles.regionLocationIcon} />
+              <p className={styles.regionLocationText}>{text}</p>
+            </div>
+          ))}
+          {!isDesktop ? (
+            <RegionImgMob className={styles.regionImgMob} />
+          ) : (
+            <RegionImgDesk className={styles.regionImgDesk} />
+          )}
+        </div>
       </div>
     </section>
   );
