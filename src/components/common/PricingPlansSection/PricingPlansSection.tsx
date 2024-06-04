@@ -12,7 +12,6 @@ import { useGlobalStore } from '@/store/global-store';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperType } from 'swiper';
 import SliderDots from '../SliderDots/SliderDots';
-
 const PricingPlansSection = () => {
   const { isDesktop } = useGlobalStore();
   const [activeIndex, setActiveIndex] = useState(0);
@@ -49,11 +48,7 @@ WorkSET Energy."
             >
               {plans.map((plan, index) => (
                 <SwiperSlide className={styles.slideWrap} key={index}>
-                  <Plan
-                    plan={plan}
-                    index={index}
-                    handleBtnClick={() => scrollToSection('kontact')}
-                  />
+                  <Plan plan={plan} index={index} />
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -67,12 +62,7 @@ WorkSET Energy."
         ) : (
           <ul className={styles.pricingPlansItems}>
             {plans.map((plan, index) => (
-              <Plan
-                handleBtnClick={() => scrollToSection('kontact')}
-                key={plan.name}
-                plan={plan}
-                index={index}
-              />
+              <Plan key={plan.name} plan={plan} index={index} />
             ))}
           </ul>
         )}

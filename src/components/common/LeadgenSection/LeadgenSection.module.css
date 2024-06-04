@@ -8,14 +8,15 @@
 }
 
 .small {
-  height: 779px;
+  height: 771px;
 }
 
 .medium {
-  height: 827px;
+  height: 817px;
 }
+
 .large {
-  height: 1030px;
+  height: 949px;
 }
 
 .leadContainer {
@@ -75,7 +76,7 @@
   .leadTitle {
     font-size: 5rem;
     line-height: 120%;
-    margin-bottom: 6.4rem;
+    margin-bottom: 5.4rem;
   }
 }
 
@@ -101,7 +102,7 @@
   }
 
   .large {
-    height: 988px;
+    height: 885px;
   }
 
   .leadContainer {
@@ -111,7 +112,6 @@
 
   .leadTitle {
     font-size: 50px;
-
-    margin-bottom: 64px;
+    margin-bottom: 54px;
   }
 }

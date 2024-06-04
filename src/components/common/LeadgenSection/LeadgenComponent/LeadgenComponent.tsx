@@ -6,31 +6,34 @@ import LeadStepThree from './LeadStepThree/LeadStepThree';
 import LeadStepFour from './LeadStepFour/LeadStepFour';
 import LeadStepFive from './LeadStepFive/LeadStepFive';
 import LeadStepSix from './LeadStepSix/LeadStepSix';
-import LeadStepSeven from './LeadStepSeven/LeadStepSeven';
 import { FormInitialValue, LeadgenComponentProps } from '../types';
 import { useEffect, useState } from 'react';
 import { inter } from '@/utils/fonts';
+import { formDataPost } from '@/utils/api';
+import { useGlobalStore } from '@/store/global-store';
 
+import { useNavigateToThankYouTwo } from '@/hooks/useNavigationToThanksTwo';
 const formInitialValue: FormInitialValue = {
   propertyType: '',
   consultType: '',
   timePeriod: '',
   communicationType: '',
-  kwpType: '',
-  projectMessage: '',
   contactData: {
     userFirstName: '',
     userLastName: '',
     userEmail: '',
     userPhone: '',
-    userStreet: '',
     userPostcode: '',
   },
+  projectMessage: '',
 };
 
 const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
   const [formData, setFormData] = useState(formInitialValue);
-  console.log(formData);
+  const [isLoading, setIsLoading] = useState(false);
+  const { setPopupAction } = useGlobalStore();
+  const thankYouTwo = useNavigateToThankYouTwo();
+
   const handlePrevStepClick = () => {
     clearStepValue(step - 1);
     setStep(step - 1);
@@ -69,25 +72,18 @@ const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
       case 5:
         return (
           <LeadStepFive
-            handlePrevStepClick={handlePrevStepClick}
-            handleNextStepClick={handleNextStepClick}
-          />
-        );
-      case 6:
-        return (
-          <LeadStepSix
-            handlePrevStepClick={handlePrevStepClick}
-            handleNextStepClick={handleNextStepClick}
-          />
-        );
-      case 7:
-        return (
-          <LeadStepSeven
             step={step}
             setStep={setStep}
             formData={formData}
             setFormData={setFormData}
             handlePrevStepClick={handlePrevStepClick}
+          />
+        );
+      case 6:
+        return (
+          <LeadStepSix
+            isLoading={isLoading}
+            handleNextStepClick={handleNextStepClick}
           />
         );
 
@@ -123,17 +119,12 @@ const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
       case 5:
         return setFormData({
           ...formData,
-          kwpType: formInitialValue.kwpType,
+          contactData: formInitialValue.contactData,
         });
       case 6:
         return setFormData({
           ...formData,
           projectMessage: formInitialValue.projectMessage,
-        });
-      case 7:
-        return setFormData({
-          ...formData,
-          contactData: formInitialValue.contactData,
         });
 
       default:
@@ -142,27 +133,43 @@ const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
   };
 
   useEffect(() => {
-    if (step === 8) {
+    const postLeadgenData = async () => {
+      setIsLoading(true);
+      const leadGenData = new FormData();
+
+      Object.entries(formData).forEach(([key, value]) => {
+        leadGenData.append(key, value.toString());
+      });
+
+      await formDataPost(leadGenData, 'leadgen', setPopupAction);
+      setIsLoading(false);
+
       setStep(1);
       setFormData(formInitialValue);
+      thankYouTwo();
+    };
+    if (step === 7) {
+      postLeadgenData();
     }
   }, [step]);
 
   return (
     <div className={styles.leadMainWrap}>
-      <div className={styles.leadProgressWrap}>
-        <ul className={styles.leadProgressList}>
-          {[1, 2, 3, 4, 5, 6, 7].map(item => (
-            <li
-              className={`${styles.leadProgressItem} ${step === item || item < step ? styles.active : ''}`}
-              key={item}
-            ></li>
-          ))}
-        </ul>
-        <p className={`${styles.leadProgressText} ${inter.className}`}>
-          <span>{`${step} `}</span>von 7
-        </p>
-      </div>
+      {step < 6 && (
+        <div className={styles.leadProgressWrap}>
+          <ul className={styles.leadProgressList}>
+            {[1, 2, 3, 4, 5].map(item => (
+              <li
+                className={`${styles.leadProgressItem} ${step === item || item < step ? styles.active : ''}`}
+                key={item}
+              ></li>
+            ))}
+          </ul>
+          <p className={`${styles.leadProgressText} ${inter.className}`}>
+            <span>{`${step !== 6 && step !== 7 ? step : 5} `}</span>von 5
+          </p>
+        </div>
+      )}
       {currentStep(step)}
     </div>
   );

@@ -26,9 +26,9 @@ export const amenitiesItems: AmenitiesItem[] = [
     title: 'Kunden',
     subTitle: '10.000',
     textList: [
-      'Rundum Sorglos Paket',
-      '⁠⁠Kontakt mit Kundenservice',
       'Keine Subunternehmen',
+      '⁠⁠Kontakt mit Kundenservice',
+      'Rundum Sorglos Paket',
     ],
   },
 ];

@@ -11,8 +11,8 @@ const ObjectSection = () => {
           Sehen Sie sich unsere Projekte an:
         </h2>
         <p className={`${styles.objectMainText} ${inter.className}`}>
-          Mehr als 300+ Kunden in ganz Deutschland haben bereits die Möglichkeit
-          genutzt, mit unserer Hilfe Geld zu sparen.
+          Mehr als 10 000+ Kunden in ganz Deutschland haben bereits die
+          Möglichkeit genutzt, mit unserer Hilfe Geld zu sparen.
         </p>
         <ObjectSlider />
       </Container>

@@ -32,7 +32,7 @@ const ContactUsForm = () => {
       userName: '',
       userEmail: '',
       userPhone: '',
-      userAddress: '',
+      userPostcode: '',
       userComment: '',
     },
     validationSchema: Yup.object({
@@ -41,7 +41,7 @@ const ContactUsForm = () => {
         .email('Invalid email address')
         .required('Required'),
       userPhone: Yup.number().typeError('Invalid number').required('Required'),
-      userAddress: Yup.string().required('Required'),
+      userPostcode: Yup.string().required('Required'),
       userComment: Yup.string(),
     }),
     onSubmit: async ({
@@ -49,7 +49,7 @@ const ContactUsForm = () => {
       userEmail,
       userPhone,
       userComment,
-      userAddress,
+      userPostcode,
     }) => {
       setIsLoading(true);
       const formData = new FormData();
@@ -58,7 +58,7 @@ const ContactUsForm = () => {
         userName,
         userEmail,
         userPhone,
-        userAddress,
+        userPostcode,
         userQuest: questValue,
         userComment,
       };
@@ -117,14 +117,14 @@ const ContactUsForm = () => {
         </label>
       </div>
       <label className={styles.contactUsLabel}>
-        Anschrift der geplanten PV-Anlage*
+        PLZ und Stadt der Projektadresse*
         <input
-          placeholder="Anschrift der geplanten PV-Anlage"
+          placeholder="PLZ und Stadt der Projektadresse"
           className={`${styles.contactUsInput}`}
-          {...getFieldProps('userAddress')}
+          {...getFieldProps('userPostcode')}
         />
-        {touched.userAddress && errors.userAddress && (
-          <p className={styles.errorText}>{errors.userAddress}</p>
+        {touched.userPostcode && errors.userPostcode && (
+          <p className={styles.errorText}>{errors.userPostcode}</p>
         )}
       </label>
 

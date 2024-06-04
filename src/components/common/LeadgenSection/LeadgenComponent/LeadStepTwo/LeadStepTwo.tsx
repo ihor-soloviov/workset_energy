@@ -9,7 +9,6 @@ const LeadStepTwo = ({
   handlePrevStepClick,
 }: LeadStepProps) => {
   const [stepTwoValue, setStepTwoValue] = useState<null | string>(null);
-  console.log(stepTwoValue);
 
   const handleItemClick = (e: MouseEvent<HTMLLIElement>, itemValue: string) => {
     setStepTwoValue(itemValue);

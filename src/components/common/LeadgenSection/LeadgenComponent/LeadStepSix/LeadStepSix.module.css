@@ -4,34 +4,48 @@
 .stepSixTitle {
   color: var(--black--main);
   text-align: center;
-  font-size: 20px;
+  font-size: 32px;
   font-weight: 600;
   line-height: 130%;
-  width: 220px;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 8px;
+}
+
+.stepSixText {
+  color: var(--gray-dark-text);
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 160%;
+  width: fit-content;
   margin: 0 auto;
   margin-bottom: 12px;
 }
 
-.stepSixText {
+.stepSixBottomText {
+  margin-bottom: 24px;
+  font-size: 15px;
   color: var(--gray-text);
-  font-size: 16px;
-  font-weight: 400;
   text-align: center;
-  line-height: 140%;
-  width: fit-content;
-  margin: 0 auto;
-  margin-bottom: 32px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+.stepSixBottomText span {
+  font-weight: 500;
 }
 
 .stepSixInput {
   resize: none;
-  height: 80px;
+  height: 100px;
   width: 100%;
   padding: 12px;
   border-radius: 8px;
   border: 1px solid var(--gray-stroke);
   outline: none;
-  margin-bottom: 36px;
+  margin-bottom: 48px;
   font-size: 16px;
   position: relative;
 }
@@ -59,40 +73,30 @@
   justify-content: center;
   align-items: center;
   border-radius: 32px;
-  border: 1px solid var(--gray-stroke);
-  width: 110px;
-  height: 44px;
-  background-color: var(--white-main);
+  border: 1px solid var(--red-main);
+  width: 168px;
+  height: 60px;
+  margin: 0 auto;
+  background-color: var(--red-main);
   outline: none;
-  color: var(--black-main);
-  font-size: 16px;
+  color: var(--white-main);
+  font-size: 18px;
   font-weight: 600;
   transition: all 0.3s ease-in-out;
 }
 
-.stepSixBtn:first-child:hover {
-  color: var(--white-main);
-  border: 1px solid var(--red-main);
-  background-color: var(--red-main);
-}
-
-.stepSixBtn:last-child {
-  color: var(--white-main);
-  border: 1px solid var(--red-main);
-  background-color: var(--red-main);
-}
-
-.stepSixBtn:last-child:hover {
+.stepSixBtn:hover {
   color: var(--red-main);
-  border: 1px solid var(--white-main);
+  border-color: var(--white-main);
   background-color: var(--white-main);
 }
 
-.stepSixBtn:last-child:disabled {
-  background-color: var(--white-main);
-  border: 1px solid var(--gray-stroke);
-  color: var(--black-main);
-  cursor: not-allowed;
+.loader > svg {
+  fill: var(--white-main);
+}
+
+.stepSixBtn:not(:disabled):hover .loader > svg {
+  fill: var(--red-main);
 }
 
 @media screen and (min-width: 1440px) {
@@ -100,22 +104,35 @@
   }
 
   .stepSixTitle {
-    font-size: 3.6rem;
+    font-size: 4.4rem;
     margin-bottom: 0.8rem;
     width: fit-content;
     line-height: 140%;
   }
 
   .stepSixText {
-    width: 50rem;
+    font-weight: 600;
     font-size: 2rem;
-    margin-bottom: 3.6rem;
+    margin-bottom: 1.2rem;
+    width: 54.8rem;
+  }
+
+  .stepSixBottomText {
+    font-size: 1.6rem;
+    margin: 0 auto;
+    margin-bottom: 2.4rem;
+    font-weight: 300;
+    width: 42.7rem;
+  }
+
+  .stepSixBottomText span {
+    font-weight: 600;
   }
 
   .stepSixInput {
     border-radius: 0.8rem;
     display: block;
-    width: 39.4rem;
+    width: 53rem;
     margin: 0 auto;
     margin-bottom: 4.8rem;
   }
@@ -145,19 +162,25 @@
   }
 
   .stepSixTitle {
-    font-size: 36px;
+    font-size: 44px;
     margin-bottom: 8px;
   }
 
   .stepSixText {
     font-size: 20px;
-    width: 500px;
-    margin-bottom: 36px;
+    margin-bottom: 12px;
+    width: 548px;
+  }
+
+  .stepSixBottomText {
+    font-size: 16px;
+    margin-bottom: 24px;
+    width: 427px;
   }
 
   .stepSixInput {
     border-radius: 8px;
-    width: 394px;
+    width: 530px;
     margin-bottom: 48px;
   }
 

@@ -4,20 +4,20 @@
 .leadProgressWrap {
   margin: 0 auto;
   width: fit-content;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .leadProgressList {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 9px;
   margin: 0 auto;
   width: fit-content;
   margin-bottom: 14px;
 }
 
 .leadProgressItem {
-  width: 36px;
+  width: 48px;
   height: 6px;
   border-radius: 26px;
   background-color: var(--gray-stroke);
@@ -28,8 +28,8 @@
 }
 
 .leadProgressText {
-  color: var(--black-main);
-  font-size: 16px;
+  color: var(--gray-text);
+  font-size: 15px;
   font-weight: 600;
 }
 
@@ -42,12 +42,16 @@
   }
 
   .leadProgressList {
+    gap: 1.4rem;
   }
 
   .leadProgressItem {
+    width: 6rem;
+    height: 0.5rem;
   }
 
   .leadProgressText {
+    font-size: 1.6rem;
   }
 }
 
@@ -64,10 +68,11 @@
   }
 
   .leadProgressItem {
-    width: 40px;
+    width: 60px;
+    height: 5px;
   }
 
   .leadProgressText {
-    font-size: 18px;
+    font-size: 16px;
   }
 }

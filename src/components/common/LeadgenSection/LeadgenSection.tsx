@@ -20,7 +20,7 @@ const LeadgenSection = () => {
       case 4:
         return !isDesktop ? 'medium' : 'extraMedium';
       case 5:
-        return 'medium';
+        return 'large';
       case 6:
         return 'medium';
       case 7:
@@ -37,9 +37,11 @@ const LeadgenSection = () => {
       className={`${styles.leadSection} ${styles[getCurrentClass()]}`}
     >
       <div className={styles.leadContainer}>
-        <h2 className={styles.leadTitle}>
-          Investiere 30 Sekunden für dein PV-Projekt!
-        </h2>
+        {step < 6 && (
+          <h2 className={styles.leadTitle}>
+            Investiere 30 Sekunden für dein PV-Projekt!
+          </h2>
+        )}
         <LeadgenComponent step={step} setStep={setStep} />
       </div>
     </section>

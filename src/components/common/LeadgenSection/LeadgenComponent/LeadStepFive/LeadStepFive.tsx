@@ -1,45 +1,32 @@
-import Button from '@/components/common/Button/Button';
 import styles from './LeadStepFive.module.css';
-import LeadStepFiveList from './LeadStepFiveList/LeadStepFiveList';
-import React, { useState, MouseEvent, useEffect } from 'react';
-import { LeadStepProps } from '../../types';
+import LeadStepFiveForm from './LeadStepFiveForm/LeadStepFiveForm';
+import React from 'react';
+import { LeadFormProps } from '../../types';
+import useHashObserver from '@/hooks/useHashObserver';
+import { useEffect } from 'react';
 
 const LeadStepFive = ({
-  handleNextStepClick,
+  formData,
+  setFormData,
+  step,
+  setStep,
   handlePrevStepClick,
-}: LeadStepProps) => {
-  const [stepFiveValue, setStepFiveValue] = useState<null | string>(null);
-
-  const handleItemClick = (e: MouseEvent<HTMLLIElement>, itemValue: string) => {
-    setStepFiveValue(itemValue);
-  };
-
-  useEffect(() => {
-    if (stepFiveValue) {
-      const timer = setTimeout(() => {
-        handleNextStepClick(stepFiveValue, 'kwpType');
-      }, 350);
-      return () => clearTimeout(timer);
-    }
-  }, [stepFiveValue, handleNextStepClick]);
+}: LeadFormProps) => {
+  useHashObserver('optionalstep');
 
   return (
-    <div className={styles.stepFiveWrap}>
-      <h2 className={styles.stepFiveTitle}>
-        Wie groß planst du deine PV-Anlage?
+    <div id="optionalstep" className={styles.stepFiveWrap}>
+      <h2 className={styles.stepFiveTitle}>Kontaktdaten</h2>
+      <h2 className={styles.stepFiveText}>
+        Bitte alle Felder ausfüllen, damit wir dich erreichen können.
       </h2>
-      <LeadStepFiveList
-        stepValue={stepFiveValue}
-        handleItemClick={handleItemClick}
+      <LeadStepFiveForm
+        formData={formData}
+        setFormData={setFormData}
+        step={step}
+        setStep={setStep}
+        handlePrevStepClick={handlePrevStepClick}
       />
-
-      <Button
-        handleClick={handlePrevStepClick}
-        type="button"
-        className={styles.stepFiveBtn}
-      >
-        Züruck
-      </Button>
     </div>
   );
 };

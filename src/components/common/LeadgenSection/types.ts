@@ -15,19 +15,18 @@ export type FormInitialValue = {
   consultType: string;
   timePeriod: string;
   communicationType: string;
-  kwpType: string;
-  projectMessage: string;
   contactData: {
     userFirstName: string;
     userLastName: string;
     userEmail: string;
     userPhone: string;
-    userStreet: string;
     userPostcode: string;
   };
+  projectMessage: string;
 };
 
 export type LeadStepProps = {
+  isLoading?: boolean;
   handlePrevStepClick?: () => void;
   handleNextStepClick: (stepValue: string | null, key: string) => void;
 };
