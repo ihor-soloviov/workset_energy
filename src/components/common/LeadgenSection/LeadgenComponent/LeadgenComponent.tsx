@@ -12,7 +12,8 @@ import { inter } from '@/utils/fonts';
 import { formDataPost } from '@/utils/api';
 import { useGlobalStore } from '@/store/global-store';
 
-import { useNavigateToThankYouTwo } from '@/hooks/useNavigationToThanksTwo';
+import { useNavigateToThankYou } from '@/hooks/useNavigationToThanks';
+import { log } from 'console';
 const formInitialValue: FormInitialValue = {
   propertyType: '',
   consultType: '',
@@ -32,7 +33,7 @@ const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
   const [formData, setFormData] = useState(formInitialValue);
   const [isLoading, setIsLoading] = useState(false);
   const { setPopupAction } = useGlobalStore();
-  const thankYouTwo = useNavigateToThankYouTwo();
+  const thankYou = useNavigateToThankYou();
 
   const handlePrevStepClick = () => {
     clearStepValue(step - 1);
@@ -132,24 +133,32 @@ const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
     }
   };
 
-  useEffect(() => {
-    const postLeadgenData = async () => {
-      setIsLoading(true);
-      const leadGenData = new FormData();
+  const postLeadgenData = async () => {
+    setIsLoading(true);
+    const leadGenData = new FormData();
 
-      Object.entries(formData).forEach(([key, value]) => {
+    Object.entries(formData).forEach(([key, value]) => {
+      if (typeof value === 'object' && !Array.isArray(value)) {
+        leadGenData.append(key, JSON.stringify(value));
+      } else {
         leadGenData.append(key, value.toString());
-      });
+      }
+    });
 
-      await formDataPost(leadGenData, 'leadgen', setPopupAction);
-      setIsLoading(false);
+    await formDataPost(leadGenData, 'leadgen', setPopupAction);
 
-      setStep(1);
-      setFormData(formInitialValue);
-      thankYouTwo();
-    };
+    setIsLoading(false);
+
+    setStep(1);
+    setFormData(formInitialValue);
+    thankYou();
+  };
+
+  useEffect(() => {
     if (step === 7) {
-      postLeadgenData();
+      (async function () {
+        await postLeadgenData();
+      })();
     }
   }, [step]);
 
