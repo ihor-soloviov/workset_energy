@@ -144,7 +144,7 @@ const HeroForm: React.FC<Props> = ({ hideModal }) => {
           />
         ) : (
           <>
-            Senden
+            Absenden
             <Arrow className={styles.heroIcon} />
           </>
         )}

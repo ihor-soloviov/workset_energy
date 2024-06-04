@@ -1,6 +1,6 @@
 .contactUsSection {
   background-color: var(--white-main);
-  padding: 32px 0 64px;
+  padding: 64px 0;
 }
 
 .contactUsMainWrap {
@@ -30,18 +30,19 @@
 
 @media screen and (min-width: 1440px) {
   .contactUsSection {
-    padding: 5rem 0 15rem;
+    padding: 10rem 0 10rem;
   }
 
   .contactUsMainWrap {
     flex-direction: row;
     gap: 16rem;
+    align-items: flex-start;
     justify-content: space-between;
   }
 
   .contactUsFormWrap {
     width: 53rem;
-    height: 52.2rem;
+    height: 59.5rem;
   }
 
   .contactUsTitle {
@@ -68,9 +69,12 @@
   }
 
   .contactUsMainTitle {
-    font-size: 3.4rem;
+    font-size: 5rem;
+    margin-bottom: 3.2rem;
   }
+
   .contactUsText {
+    display: none;
     width: 53rem;
     margin-bottom: 3.2rem;
     font-size: 1.6rem;
@@ -79,7 +83,7 @@
 
 @media screen and (min-width: 1728px) {
   .contactUsSection {
-    padding: 50px 0 150px;
+    padding: 100px 0 100px;
   }
 
   .contactUsMainWrap {
@@ -88,7 +92,7 @@
 
   .contactUsFormWrap {
     width: 530px;
-    height: 522px;
+    height: 595px;
   }
 
   .contactUsTitle {
@@ -101,7 +105,8 @@
   }
 
   .contactUsMainTitle {
-    font-size: 34px;
+    font-size: 50px;
+    margin-bottom: 32px;
   }
 
   .contactUsText {

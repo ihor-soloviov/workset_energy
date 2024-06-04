@@ -6,11 +6,13 @@ import RecycleTextWrap from '../RecycleTextWrap/RecycleTextWrap';
 const GoogleComSection = () => {
   return (
     <section id="feedback" className={styles.googleComSection}>
-      <RecycleTextWrap
-        title="Unsere Kunden"
-        titleClass={styles.googleComTitle}
-      />
-      <GoogleComSlider />
+      <div className={styles.googleComContainer}>
+        <RecycleTextWrap
+          title="Unsere Kunden"
+          titleClass={styles.googleComTitle}
+        />
+        <GoogleComSlider />
+      </div>
     </section>
   );
 };

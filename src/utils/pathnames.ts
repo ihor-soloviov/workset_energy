@@ -11,5 +11,5 @@ const pathnames = [
   '/thank-you',
 ];
 const jobPathRegex = /^\/karriere\/jobs\/\d+$/;
-const blackList = ['/karriere', '/thank-you'];
+const blackList = ['/karriere', '/leadgen', '/thank-you'];
 export { pathnames, jobPathRegex, blackList };

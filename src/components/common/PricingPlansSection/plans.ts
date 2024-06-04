@@ -9,9 +9,9 @@ import { PlanT } from '@/types/infoTypes';
 
 export const plans: PlanT[] = [
   {
-    price: '14.616 EUR',
+    price: '12.456 EUR',
     name: 'Huawei',
-    article: `Das 'Huawei'-Paket bietet fortschrittliche, effiziente Technologie und Energieverwaltung für ein nachhaltiges Zuhause.`,
+
     imageMob: plan1Mob,
     imageDesk: plan1Desk,
     benefits: [
@@ -25,8 +25,7 @@ export const plans: PlanT[] = [
   {
     price: '15.590 EUR',
     name: 'Sungrow',
-    article:
-      'Das "Sungrow”-Paket bietet dir eine zuverlässige und benutzerfreundliche Ladeinfrastruktur, perfekt für den täglichen Gebrauch.',
+
     imageMob: plan2Mob,
     imageDesk: plan2Desk,
     benefits: [
@@ -40,7 +39,7 @@ export const plans: PlanT[] = [
   {
     price: '22.300 EUR',
     name: 'Enphase',
-    article: `Mit dem 'Enphase'-Paket erzielst du höchste Leistung und smarte Steuerung, ideal für effizientes Energiemanagement.`,
+
     imageMob: plan3Mob,
     imageDesk: plan3Desk,
     benefits: [

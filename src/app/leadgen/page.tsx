@@ -1,16 +1,11 @@
-'use client';
-
 import React from 'react';
-import LeadGenHero from '@/components/leadgen/LeadGenHero/LeadGenHero';
-import LeadGenComponent from '@/components/leadgen/LeadGenComponent/LeadGenComponent';
-import { useGlobalStore } from '@/store/global-store';
+import LeadgenSection from '@/components/common/LeadgenSection/LeadgenSection';
+import styles from './page.module.css';
 const LeadGen = () => {
-  const { isDesktop } = useGlobalStore();
   return (
-    <>
-      <LeadGenHero isDesktop={isDesktop} />
-      {!isDesktop && <LeadGenComponent />}
-    </>
+    <div className={styles.leadgenWrap}>
+      <LeadgenSection />
+    </div>
   );
 };
 

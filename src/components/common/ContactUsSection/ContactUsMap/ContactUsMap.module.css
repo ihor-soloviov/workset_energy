@@ -30,6 +30,24 @@
   -webkit-box-shadow: none !important;
 }
 
+/*Delete cross button from google info  */
+.contactUsImgWrap
+  > div
+  > div
+  > div
+  > div
+  > div
+  > div
+  > div
+  > div
+  > div
+  > div
+  > div
+  > div:nth-of-type(1)
+  > button {
+  visibility: hidden !important;
+}
+
 .contactUsAddressMainWrap {
   display: flex;
   gap: 18px;
@@ -50,7 +68,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 36px;
 }
 
 .contactUsLocationText {

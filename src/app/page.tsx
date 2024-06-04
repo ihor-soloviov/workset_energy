@@ -11,19 +11,27 @@ import AmenitiesSection from '@/components/home/AmenitiesSection/AmenitiesSectio
 import StepSection from '@/components/common/StepSection/StepSection';
 import VisionSection from '@/components/common/VisionSection/VisionSection';
 import HeroSection from '@/components/common/HeroSection/HeroSection';
+import RegionSection from '@/components/home/RegionSection/RegionSection';
+import LeadgenSection from '@/components/common/LeadgenSection/LeadgenSection';
+import HomeHeroSection from '@/components/home/HomeHeroSection/HomeHeroSection';
+import ObjectSection from '@/components/common/ObjectSection/ObjectSection';
 
 const HomePage = () => {
   return (
     <>
-      <HeroSection {...homeHero} />
-      <VideoSection {...firstVideo} />
-      <ProductSection />
-      <VideoSection {...secondVideo} />
-      <TeamSection />
+      <HomeHeroSection />
+      {/* <HeroSection {...homeHero} /> */}
       <AmenitiesSection />
-      <QuestionSection />
-      <GoogleComSection />
+      <LeadgenSection />
+      {/* <VideoSection {...firstVideo} /> */}
+      {/* <ProductSection /> */}
+      {/* <VideoSection {...secondVideo} /> */}
+      <RegionSection />
+      <TeamSection />
       <AngebotSection />
+      <GoogleComSection />
+      <ObjectSection />
+      <QuestionSection />
       <VisionSection />
       <StepSection />
       <ContactUsSection />

@@ -26,10 +26,10 @@
 .angebotInput,
 .angebotInputFile {
   color: var(--black-main);
-  font-size: 15px;
+  font-size: 16px;
   padding: 12px;
   width: 100%;
-  height: 46px;
+  height: 60px;
   border: 1px solid var(--gray-stroke);
   border-radius: 8px;
   background-color: var(--gray-input);
@@ -51,7 +51,7 @@
   position: absolute;
   color: var(--gray-text);
   line-height: 157%;
-  top: 36px;
+  top: 44px;
   z-index: 2;
   left: 12px;
   cursor: pointer;
@@ -72,7 +72,8 @@
   align-items: center;
   justify-content: center;
   width: 116px;
-  height: 46px;
+  height: 60px;
+  border: 1px solid var(--red-main);
   border-radius: 0px 8px 8px 0px;
   color: var(--white-main);
   background-color: var(--red-main);
@@ -117,7 +118,8 @@
 .errorText {
   position: absolute;
   right: 10px;
-  top: 73px;
+  top: 90px;
+  font-weight: 500;
   width: fit-content;
   color: var(--red-main);
   font-size: 10px;
@@ -141,12 +143,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 14px 143px;
   color: var(--gray-input);
   font-size: 16px;
   font-weight: 600;
   width: 100%;
-  height: 48px;
+  height: 60px;
   background-color: var(--red-main);
   border: none;
   border-radius: 28px;
@@ -210,6 +211,7 @@
 
   .angebotInput {
     width: 100%;
+    height: 5.2rem;
     border-radius: 0.8rem;
   }
 
@@ -223,7 +225,7 @@
 
   .angebotFilePlaceholderDesc {
     display: block;
-    top: 3.8rem;
+    top: 3.9rem;
     line-height: 110%;
     font-size: 1.5rem;
   }
@@ -233,12 +235,12 @@
     border-radius: 0.8rem 0rem 0rem 0.8rem;
     padding: 1.2rem;
 
-    height: 4.6rem;
+    height: 5.2rem;
   }
 
   .angebotUploadBtn {
-    top: 2.5rem;
-    height: 4.6rem;
+    top: 2.2rem;
+    height: 5.2rem;
     width: 11.7rem;
     font-size: 1.5rem;
     padding: 1.4rem 3.2rem;
@@ -247,7 +249,7 @@
 
   .angebotBtnWrap {
     flex-direction: row;
-    gap: 8rem;
+    gap: 4.8rem;
     align-items: center;
   }
 
@@ -258,11 +260,11 @@
   }
 
   .angebotBtn {
-    width: 9.2rem;
-    height: 4.6rem;
-    padding: 1.4rem 2rem;
+    width: 12.4rem;
+    height: 5.2rem;
+
     border-radius: 2.8rem;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
   .angebotLabel:not(:last-child) {
@@ -272,17 +274,9 @@
   .angebotLabel.file {
     margin-bottom: 1.8rem;
   }
-}
 
-@media screen and (min-width: 1520px) {
-  .angebotUploadBtn {
-    top: 2.2rem;
-  }
-}
-
-@media screen and (min-width: 1670px) {
-  .angebotUploadBtn {
-    top: 2.2rem;
+  .errorText {
+    top: 7.8rem;
   }
 }
 
@@ -315,23 +309,24 @@
   }
 
   .angebotFilePlaceholderDesc {
-    top: 38px;
+    top: 40px;
     font-size: 15px;
   }
 
   .angebotInputFile {
     width: 414px;
     padding: 12px;
-    height: 46px;
+    height: 52px;
     border-radius: 8px 0px 0px 8px;
   }
 
   .angebotInput {
     border-radius: 8px;
+    height: 52px;
   }
   .angebotUploadBtn {
     top: 22px;
-    height: 46px;
+    height: 52px;
     font-size: 15px;
     width: 117px;
     border-radius: 0px 8px 8px 0px;
@@ -339,7 +334,7 @@
   }
 
   .angebotBtnWrap {
-    gap: 80px;
+    gap: 48px;
   }
 
   .angebotText {
@@ -348,14 +343,17 @@
   }
 
   .angebotBtn {
-    width: 92px;
-    height: 46px;
-    padding: 14px 20px;
+    width: 124px;
+    height: 52px;
     border-radius: 28px;
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .angebotLabel.file {
     margin-bottom: 18px;
+  }
+
+  .errorText {
+    top: 78px;
   }
 }

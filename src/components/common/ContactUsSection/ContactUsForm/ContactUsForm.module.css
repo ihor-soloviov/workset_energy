@@ -29,13 +29,12 @@
 
 .contactUsInput {
   color: var(--black-main);
-  font-size: 15px;
+  font-size: 16px;
   padding: 14px 12px;
   width: 100%;
-  height: 46px;
+  height: 60px;
   border: 1px solid var(--gray-stroke);
   border-radius: 8px;
-  background-color: var(--gray-input);
   outline: none;
 }
 
@@ -50,7 +49,6 @@
 
 .contactUsTextArea {
   border: 1px solid var(--gray-stroke);
-  background-color: var(--gray-input);
   width: 100%;
   height: 112px;
   padding: 14px 12px;
@@ -67,7 +65,7 @@
 .errorText {
   position: absolute;
   right: 10px;
-  top: 77px;
+  top: 87px;
   width: fit-content;
   color: var(--red-main);
   font-size: 10px;
@@ -77,12 +75,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 14px 142px;
   color: var(--gray-input);
   font-size: 16px;
   font-weight: 600;
   width: 342px;
-  height: 48px;
+  height: 60px;
   background-color: var(--red-main);
   border: none;
   border-radius: 28px;
@@ -137,20 +134,25 @@
 
   .contactUsInput {
     width: 100%;
+    height: 5.2rem;
     border-radius: 0.8rem;
   }
 
   .contactUsTextArea {
     width: 100%;
-    height: 100px;
+    height: 12.8rem;
     border-radius: 0.8rem;
   }
 
   .contactUsBtn {
-    width: 9.2rem;
-    height: 4.6rem;
-    padding: 1.4rem 2rem;
+    width: 12.4rem;
+    font-size: 1.5rem;
+    height: 5.2rem;
     border-radius: 2.8rem;
+  }
+
+  .errorText {
+    top: 7.9rem;
   }
 }
 
@@ -165,10 +167,12 @@
 
   .contactUsInput {
     border-radius: 8px;
+    height: 52px;
   }
 
   .contactUsTextArea {
     border-radius: 8px;
+    height: 128px;
   }
 
   .contactUsLabelTextArea {
@@ -176,9 +180,13 @@
   }
 
   .contactUsBtn {
-    width: 92px;
-    height: 46px;
-    padding: 14px 20px;
+    font-size: 15px;
+    width: 124px;
+    height: 52px;
     border-radius: 28px;
+  }
+
+  .errorText {
+    top: 79px;
   }
 }

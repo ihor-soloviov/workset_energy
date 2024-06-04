@@ -1,92 +1,44 @@
-@keyframes fadeToggleOpen {
-  0% {
-    opacity: 0;
-    max-height: 0;
-  }
-
-  60% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 1;
-    max-height: 1000px;
-  }
-}
-
-@keyframes fadeToggleCloseMob {
-  0% {
-    opacity: 1;
-    max-height: 1000px;
-    margin-top: 18px;
-  }
-
-  70% {
-    margin-top: 18px;
-  }
-
-  90% {
-    opacity: 1;
-  }
-
-  100% {
-    margin-top: 0px;
-    opacity: 0;
-    max-height: 0;
-  }
-}
-
-@keyframes fadeToggleCloseDesc {
-  0% {
-    opacity: 1;
-    max-height: 1000px;
-    margin-top: 8px;
-  }
-
-  70% {
-    margin-top: 8px;
-  }
-
-  90% {
-    opacity: 1;
-  }
-
-  100% {
-    margin-top: 0px;
-    opacity: 0;
-    max-height: 0;
-  }
-}
-
 .questListWrap {
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 
 .questList {
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
+
 .questItem {
-  border-radius: 12px;
-  border: 1px solid var(--gray-stroke);
+  max-height: 138px;
+  border-top: 1px solid var(--gray-stroke);
   background-color: var(--white-main);
-  padding: 24px 19px;
+  padding: 24px 0;
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  width: 100%;
-  transition: border-color 250ms var(--cubic);
+  width: 342px;
+  overflow: hidden;
+  transition: all 250ms var(--cubic);
 }
 
-.questItem:hover {
-  border-color: var(--black-main);
+.questItem.five {
+  max-height: 108px;
 }
 
-.questItem.open:hover {
-  border-color: var(--gray-stroke);
+.questItem:last-child {
+  border-bottom: 1px solid var(--gray-stroke);
+}
+
+.questList.second .questItem:first-child {
+  border-top: unset;
+}
+
+.questItem.active {
+  max-height: 1000px;
+}
+
+.questCount {
+  display: none;
 }
 
 .questTitleWrap {
@@ -97,55 +49,73 @@
 
 .questTitle {
   color: var(--gray-dark-text);
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 160%;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 150%;
   width: fit-content;
-  max-width: 272px;
+  height: 90px;
+  width: 271px;
   user-select: none;
 }
+
+.questTitle.five {
+  height: 60px;
+}
+
+.questTitle.second {
+  width: 232px;
+}
+
 .questToggleBtn {
-  border: none;
-  background-color: transparent;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--red-main);
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.questToggleBtn:hover {
+  background-color: var(--white-main);
 }
 
 .toggleIcon {
-  width: 20px;
-  height: 20px;
-  stroke: var(--gray-dark-text);
+  width: 14px;
+  height: 17px;
+  fill: var(--white-main);
   transform: rotate(180deg);
-  transition: transform 0.5s var(--cubic);
+  transition: all 0.3s ease-in-out;
 }
 
-.toggleIcon.visible {
+.questToggleBtn:hover .toggleIcon {
+  fill: var(--red-main);
+}
+
+.toggleIcon.active {
   transform: unset;
 }
 
 .questTextWrap {
-  overflow: hidden;
-  max-height: 0;
   opacity: 0;
+  transition: all 150ms ease-in-out;
 }
 
-.questTextWrap.visible {
+.questTextWrap.active {
   display: flex;
   flex-direction: column;
   margin-top: 18px;
-  max-height: 1000px;
   user-select: none;
-
-  animation: fadeToggleOpen 0.7s var(--cubic);
   opacity: 1;
-}
-
-.questTextWrap.hidden {
-  animation: fadeToggleCloseMob 0.4s var(--cubic);
 }
 
 .questText {
   font-size: 14px;
   color: var(--gray-text);
-  width: 302px;
+  width: 342px;
   line-height: 160%;
 }
 
@@ -154,12 +124,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 12px 20px;
   color: var(--white-main);
   font-size: 15px;
   font-weight: 600;
   width: 181px;
-  height: 42px;
+  height: 56px;
   background-color: var(--red-main);
   border: none;
   border-radius: 28px;
@@ -176,88 +145,148 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .questListWrap {
-    gap: 2rem;
-    flex-direction: row;
-  }
-
-  .questList {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    gap: 2rem;
-  }
-
   .questItem {
-    width: 59.8rem;
-    padding: 1.8rem 2rem;
-    border-radius: 1.2rem;
+    width: 100%;
+    padding: 3.2rem 0;
+    max-height: 11.8rem;
+    position: relative;
+  }
+
+  .questItem.five {
+    max-height: 12.8rem;
+  }
+
+  .questItem.six {
+    max-height: 13.6rem;
+  }
+
+  .questItem.five.active,
+  .questItem.six.active {
+    max-height: 100rem;
+  }
+
+  .questCount {
+    display: block;
+    color: var(--black-main);
+    font-size: 2.8rem;
+    font-weight: 500;
+    line-height: 130%;
+  }
+
+  .questTitleWrap {
+    justify-content: unset;
+    gap: 17.2rem;
   }
 
   .questTitle {
+    width: 67.9rem;
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 130%;
+    color: var(--black-main);
+    height: fit-content;
+  }
+
+  .questTitle.five {
+    height: unset;
+  }
+
+  .questTitle.second {
+    width: 67.9rem;
+  }
+
+  .questTextWrap {
     width: fit-content;
-    max-width: 52.3rem;
-    font-size: 1.6rem;
-  }
-
-  .questTextWrap.visible {
-    margin-top: 0.8rem;
-  }
-
-  .questTextWrap.hidden {
-    animation: fadeToggleCloseDesc 0.4s var(--cubic);
+    margin-left: 20.3rem;
   }
 
   .questText {
-    width: unset;
-    font-size: 1.4rem;
-    max-width: 53.3rem;
+    width: 87.5rem;
+    font-size: 1.6rem;
   }
 
   .questConsultBtn {
-    margin-top: 2rem;
-    border-radius: 2.8rem;
-    padding: 1.2rem 2rem;
+    width: 18.9rem;
+    height: 6rem;
+    border-radius: 3.2rem;
     font-size: 1.5rem;
-    width: 18.1rem;
-    height: 4.8rem;
+  }
+
+  .questToggleBtn {
+    width: 5.4rem;
+    height: 5.4rem;
+    position: absolute;
+    right: 4.9rem;
+    top: 3.2rem;
+  }
+
+  .questToggleIcon {
+    width: 1.7rem;
+    height: 1.8rem;
   }
 }
 
 @media screen and (min-width: 1728px) {
-  .questListWrap {
-    gap: 20px;
-  }
-
-  .questList {
-    gap: 20px;
-  }
-
   .questItem {
-    width: 598px;
-    padding: 18px 20px;
-    border-radius: 12px;
+    padding: 32px 0;
+    max-height: 118px;
+  }
+
+  .questItem.five {
+    max-height: 128px;
+  }
+
+  .questItem.six {
+    max-height: 136px;
+  }
+
+  .questItem.five.active,
+  .questItem.six.active {
+    max-height: 1000px;
+  }
+
+  .questCount {
+    font-size: 28px;
+  }
+
+  .questTitleWrap {
+    gap: 172px;
   }
 
   .questTitle {
-    max-width: 523px;
-    font-size: 16px;
+    width: 679px;
+    font-size: 24px;
   }
 
-  .questTextWrap.visible {
-    margin-top: 8px;
+  .questTitle.second {
+    width: 679px;
+  }
+
+  .questTextWrap {
+    margin-left: 203px;
   }
 
   .questText {
-    max-width: 533px;
-    font-size: 14px;
+    width: 875px;
+    font-size: 16px;
   }
 
   .questConsultBtn {
-    border-radius: 28px;
-    margin-top: 20px;
-    padding: 12px 20px;
+    width: 189px;
+    height: 60px;
     font-size: 15px;
-    width: 181px;
-    height: 48px;
+    border-radius: 32px;
+  }
+
+  .questToggleBtn {
+    width: 54px;
+    height: 54px;
+    right: 49px;
+    top: 32px;
+  }
+
+  .questToggleIcon {
+    width: 17px;
+    height: 18px;
   }
 }

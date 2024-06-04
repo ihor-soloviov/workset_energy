@@ -1,0 +1,78 @@
+.leadMainWrap {
+}
+
+.leadProgressWrap {
+  margin: 0 auto;
+  width: fit-content;
+  margin-bottom: 24px;
+}
+
+.leadProgressList {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 auto;
+  width: fit-content;
+  margin-bottom: 14px;
+}
+
+.leadProgressItem {
+  width: 48px;
+  height: 6px;
+  border-radius: 26px;
+  background-color: var(--gray-stroke);
+}
+
+.leadProgressItem.active {
+  background-color: var(--red-main);
+}
+
+.leadProgressText {
+  color: var(--gray-text);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 1440px) {
+  .leadMainWrap {
+  }
+
+  .leadProgressWrap {
+    margin-bottom: 3.2rem;
+  }
+
+  .leadProgressList {
+    gap: 1.4rem;
+  }
+
+  .leadProgressItem {
+    width: 6rem;
+    height: 0.5rem;
+  }
+
+  .leadProgressText {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .leadMainWrap {
+  }
+
+  .leadProgressWrap {
+    margin-bottom: 32px;
+  }
+
+  .leadProgressList {
+    gap: 14px;
+  }
+
+  .leadProgressItem {
+    width: 60px;
+    height: 5px;
+  }
+
+  .leadProgressText {
+    font-size: 16px;
+  }
+}

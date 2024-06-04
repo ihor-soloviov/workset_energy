@@ -1,16 +1,42 @@
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 5rem rgba(90, 153, 212, 0);
+  }
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(90, 153, 212, 0);
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .uberHeroSection {
   padding: 239px 0 204px;
   height: auto;
+  overflow: hidden;
 
   position: relative;
 }
 
 .uberHeroImgMob {
+  animation: scaleIn 3.5s forwards;
   object-fit: cover;
 }
 
 .uberHeroImgDesc {
   display: none;
+  animation: scaleIn 4s forwards;
   object-fit: cover;
 }
 

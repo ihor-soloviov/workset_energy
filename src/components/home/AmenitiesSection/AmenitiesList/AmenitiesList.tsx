@@ -2,32 +2,29 @@
 
 import React from 'react';
 import styles from './AmenitiesList.module.css';
-import { inter } from '@/utils/fonts';
+import Counter from './Counter/Counter';
 import { amenitiesItems } from './amenitiesItems';
-import BtnArrowIcon from '/public/icons/small-product-arrow.svg';
-import Link from 'next/link';
-import Arrow from '@/components/common/Arrow/Arrow';
+import CheckIcon from '/public/icons/check.svg';
 
 const AmenitiesList = () => {
   return (
     <ul className={styles.amenitiesList}>
-      {amenitiesItems.map(({ text, title, icon }) => (
+      {amenitiesItems.map(({ title, textList, subTitle }) => (
         <li className={styles.amenitiesItem} key={title}>
-          <div className={styles.amenitiesIconWrap}>
-            {React.createElement(
-              icon,
-              {
-                className: styles.amenitiesIcon,
-              },
-              null,
+          <h3 className={styles.amenitiesTitle}>
+            {subTitle && (
+              <Counter target={10000} duration={2} title={subTitle} />
             )}
-          </div>
-          <h3 className={styles.amenitiesTitle}>{title}</h3>
-          <p className={`${styles.amenitiesText} ${inter.className}`}>{text}</p>
-          <Link href="/uber-uns" className={styles.amenitiesLink} type="button">
-            Mehr Info
-            <Arrow className={styles.amenitiesLinkIcon} />
-          </Link>
+            {title}
+          </h3>
+          <ul className={styles.amenitiesTextList}>
+            {textList.map((text, index) => (
+              <li className={styles.amenitiesTextItem} key={index}>
+                <CheckIcon className={styles.amenitiesIcon} />
+                <p className={styles.amenitiesText}>{text}</p>
+              </li>
+            ))}
+          </ul>
         </li>
       ))}
     </ul>

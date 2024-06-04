@@ -1,0 +1,53 @@
+.objectSection {
+  padding: 36px 0;
+}
+
+.objectMainTitle {
+  color: var(--black-main);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 130%;
+  margin-bottom: 12px;
+}
+
+.objectMainText {
+  color: var(--gray-text);
+  font-size: 16px;
+  line-height: 160%;
+  margin-bottom: 32px;
+}
+
+@media screen and (min-width: 1440px) {
+  .objectSection {
+    padding: 5rem 0 10rem;
+  }
+
+  .objectMainTitle {
+    font-size: 3.4rem;
+    width: fit-content;
+    margin-bottom: 1.6rem;
+  }
+
+  .objectMainText {
+    font-size: 1.8rem;
+    width: 52.8rem;
+    margin-bottom: 3.2rem;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .objectSection {
+    padding: 50px 0 100px;
+  }
+
+  .objectMainTitle {
+    font-size: 34px;
+    margin-bottom: 16px;
+  }
+
+  .objectMainText {
+    font-size: 18px;
+    width: 528px;
+    margin-bottom: 32px;
+  }
+}

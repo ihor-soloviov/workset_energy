@@ -1,3 +1,26 @@
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 5rem rgba(90, 153, 212, 0);
+  }
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(90, 153, 212, 0);
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .heroSection {
   width: 100%;
   height: 610px;
@@ -9,11 +32,13 @@
 
 .heroImgMob {
   object-fit: cover;
+  animation: scaleIn 3.5s forwards;
 }
 
 .heroImgDesc {
   display: none;
   object-fit: cover;
+  animation: scaleIn 4s forwards;
 }
 
 .heroContainer {
@@ -62,8 +87,8 @@
 
 .heroLink {
   width: 342px;
-  height: 46px;
-  padding: 12px 95px;
+  height: 60px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -90,8 +115,8 @@
   border-radius: 28px;
   width: 100%;
   max-width: 342px;
-  height: 46px;
-  padding: 12px 0;
+  height: 60px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -205,17 +230,17 @@
   }
 
   .heroLink {
-    width: 19.7rem;
-    height: 5.2rem;
+    width: 18.6rem;
+    height: 6rem;
     padding: 1.4rem 1.2rem;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   .heroBtn {
     padding: 1.6rem 1.9rem;
-    width: 14rem;
-    height: 5.2rem;
-    font-size: 1.6rem;
+    width: 15.6rem;
+    height: 6rem;
+    font-size: 1.8rem;
   }
 
   .heroBtn.home {
@@ -272,17 +297,17 @@
   }
 
   .heroLink {
-    width: 160px;
-    height: 52px;
+    width: 186px;
+    height: 60px;
     padding: 14px 18px;
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .heroBtn {
     padding: 16px 19px;
-    width: 140px;
-    height: 52px;
-    font-size: 16px;
+    width: 156px;
+    height: 60px;
+    font-size: 18px;
   }
 
   .heroBtn.home {

@@ -4,7 +4,7 @@
 
 .sliderWrap {
   padding-left: 15px;
-  height: 318px;
+  height: 344px;
 }
 
 .slideWrap {
@@ -17,7 +17,7 @@
   height: 318px;
   width: 315px;
   border-radius: 12px;
-  border: 0.9px solid var(--gray-stroke);
+  box-shadow: 4px 12px 19px 0px rgba(24, 24, 24, 0.08);
   background-color: var(--white-main);
   transition: border-color 250ms var(--cubic);
 }
@@ -25,7 +25,7 @@
 .slideTitle {
   color: var(--gray-light-text);
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 160%;
   margin-bottom: 18px;
 }
@@ -91,38 +91,40 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 144.1rem;
     margin: 0 auto;
+    width: fit-content;
+    height: auto;
+    position: relative;
   }
 
   .sliderWrap {
     padding-left: unset;
-    height: 36rem;
-    width: 122.2rem;
+    height: 34rem;
+    width: 144.7rem;
     display: flex;
     margin: 0 2.4rem;
   }
 
   .slideWrap {
-    width: 39.4rem;
+    width: 46rem;
   }
 
   .slide {
-    padding: 2.8rem;
-    height: 36rem;
-    width: 39.4rem;
+    padding: 2.4rem 4.8rem;
+    height: 30.4rem;
+    width: 46rem;
     border-radius: 1.6rem;
   }
 
   .slideTitle {
-    margin-bottom: 2rem;
+    margin-bottom: 1.2rem;
   }
 
   .slideText {
     font-size: 1.6rem;
-    width: 32.4rem;
+    width: 36.4rem;
     height: 13rem;
-    margin-bottom: 6.4rem;
+    margin-bottom: 2.4rem;
   }
 
   .slideBottomWrap {
@@ -141,35 +143,36 @@
   .sliderBtnWrap {
     cursor: pointer;
     display: flex;
-    width: 7.3rem;
-    height: 7.3rem;
+    width: 5.4rem;
+    height: 5.4rem;
+
+    position: absolute;
+    right: 0;
+    top: 12.5rem;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background-color: transparent;
-    border: 1px solid var(--gray-stroke);
+    background-color: var(--red-main);
+    border: 1px solid var(--red-main);
     flex-shrink: 0;
-    transition:
-      background-color 250ms var(--cubic),
-      border-color 250ms var(--cubic);
+    z-index: 2;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nextArrow {
+    stroke: var(--white-main);
   }
 
   .sliderBtnWrap:hover {
-    border-color: var(--red-main);
-    background-color: var(--red-main);
+    background-color: var(--white-main);
   }
 
-  .prevArrow {
-    transition: stroke 250ms var(--cubic);
-    transform: rotate(180deg);
-  }
-  .nextArrow {
-    transition: stroke 250ms var(--cubic);
+  .sliderBtnWrap:hover .nextArrow {
+    stroke: var(--red-main);
   }
 
-  .sliderBtnWrap:hover .nextArrow,
-  .sliderBtnWrap:hover .prevArrow {
-    stroke: var(--white-main);
+  .sliderBtnWrap:first-child {
+    display: none;
   }
 
   .slideStarIcon {
@@ -179,35 +182,32 @@
 }
 
 @media screen and (min-width: 1728px) {
-  .sliderMainWrap {
-    width: 1414px;
-  }
   .sliderWrap {
-    height: 360px;
-    width: 1222px;
+    width: 1447px;
     margin: 0 24px;
+    height: 340px;
   }
 
   .slideWrap {
-    width: 394px;
+    width: 460px;
   }
 
   .slide {
-    padding: 28px;
-    height: 360px;
-    width: 394px;
+    padding: 24px 48px;
+    height: 304px;
+    width: 460px;
     border-radius: 16px;
   }
 
   .slideTitle {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
   }
 
   .slideText {
     font-size: 16px;
-    width: 324px;
+    width: 364px;
     height: 130px;
-    margin-bottom: 64px;
+    margin-bottom: 24px;
   }
 
   .slideBottomWrap {
@@ -220,8 +220,30 @@
   }
 
   .sliderBtnWrap {
-    width: 73px;
-    height: 73px;
+    width: 54px;
+    height: 54px;
+    background-color: var(--red-main);
+    position: absolute;
+    right: 0;
+    top: 125px;
+    z-index: 2;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nextArrow {
+    stroke: var(--white-main);
+  }
+
+  .sliderBtnWrap:hover {
+    background-color: var(--white-main);
+  }
+
+  .sliderBtnWrap:hover .nextArrow {
+    stroke: var(--red-main);
+  }
+
+  .sliderBtnWrap:first-child {
+    display: none;
   }
 
   .slideStarIcon {

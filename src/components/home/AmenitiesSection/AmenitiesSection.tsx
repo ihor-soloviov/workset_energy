@@ -1,21 +1,22 @@
-import Container from '@/components/common/Container/Container';
-import ProductList from './AmenitiesList/AmenitiesList';
+import AmenitiesList from './AmenitiesList/AmenitiesList';
 import styles from './AmenitiesSection.module.css';
 import RecycleTextWrap from '@/components/common/RecycleTextWrap/RecycleTextWrap';
-import { inter } from '@/utils/fonts';
+import Link from 'next/link';
 
 const AmenitiesSection = () => {
   return (
     <section className={styles.amenitiesSection}>
-      <Container>
+      <div className={styles.amenitiesContainer}>
         <RecycleTextWrap
           title="Warum WorkSET Energy?"
           titleClass={styles.amenitiesMainTitle}
-          text="Mit unserer Arbeit beweisen wir, dass Qualität und Geschwindigkeit zu erschwinglichen Preisen erhältlich sein kann. Ausschließlich angestellte Mitarbeiter, hochwertige Komponenten und keine Vorauszahlung – das ist WorkSET Energy!"
-          textClass={`${styles.amenitiesMainText} ${inter.className}`}
         />
-        <ProductList />
-      </Container>
+
+        <AmenitiesList />
+        <Link href="/#kontact" className={styles.amenitiesMainLink}>
+          Zum Angebot
+        </Link>
+      </div>
     </section>
   );
 };

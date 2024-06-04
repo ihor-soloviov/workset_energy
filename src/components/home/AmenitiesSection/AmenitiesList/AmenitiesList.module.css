@@ -1,143 +1,172 @@
 .amenitiesList {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 24px;
+  align-items: center;
   margin: 0 auto;
+  width: fit-content;
+  margin-bottom: 48px;
 }
 
 .amenitiesItem {
-  background-color: var(--white-main);
-  border-radius: 16px;
   user-select: none;
-  padding: 32px 36px;
-  height: 348px;
-  border: 1px solid var(--gray-stroke);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
-  transition: background-color 250ms var(--cubic);
+  display: flex;
+
+  flex-direction: column;
+  height: 178px;
+  width: 342px;
+  padding: 26px;
+  border-radius: 16px;
+  border: 1px solid var(--gray-stroke);
+  background-color: var(--white-main);
+  transition: all 0.3s ease-in-out;
 }
 
 .amenitiesItem:hover {
   background-color: var(--red-main);
 }
 
-.amenitiesIconWrap {
-  background-color: var(--white-main);
-  border-radius: 8px;
-  padding: 12px;
-  width: 56px;
-  height: 56px;
-  border: 1px solid var(--gray-stroke);
-  margin: 0 auto;
-  margin-bottom: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.04);
+.amenitiesItem:first-child {
+  border: 1px solid var(--red-main);
+  background-color: var(--red-main);
+  box-shadow: unset;
 }
 
-.amenitiesIcon {
-  width: 32px;
-  height: 32px;
+.amenitiesItem:first-child:hover {
+  background-color: var(--white-main);
+  border-color: var(--gray-stroke);
 }
 
 .amenitiesTitle {
-  color: var(--gray-dark-text);
-  font-size: 22px;
+  color: var(--black-main);
+  font-size: 24px;
   font-weight: 600;
   width: fit-content;
-  margin: 0 auto;
-  margin-bottom: 12px;
-  line-height: 160%;
-  transition: color 250ms var(--cubic);
-}
-
-.amenitiesText {
-  color: var(--gray-text);
-  font-size: 16px;
-  width: 269px;
-  height: 130px;
-  line-height: 160%;
-  text-align: center;
-  margin: 0 auto;
-  margin-bottom: 18px;
-  transition: color 250ms var(--cubic);
-}
-
-.amenitiesLink {
+  margin-right: auto;
+  margin-bottom: 10px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 6px;
-  border: none;
-  background-color: transparent;
-  margin: 0 auto;
-  margin-top: auto;
-  color: var(--red-main);
-  font-size: 16px;
-  gap: 6px;
-  font-weight: 600;
-  transition: color 250ms var(--cubic);
+  gap: 4px;
+  line-height: 130%;
+  transition: 0.3s ease-in-out;
 }
 
-.amenitiesItem:hover .amenitiesTitle,
-.amenitiesItem:hover .amenitiesText,
-.amenitiesItem:hover .amenitiesLink {
+.amenitiesItem:first-child .amenitiesTitle {
   color: var(--white-main);
 }
 
-.amenitiesLinkIcon {
-  stroke: var(--red-main);
-  transition: stroke 250ms var(--cubic);
+.amenitiesItem:hover .amenitiesTitle {
+  color: var(--white-main);
 }
 
-.amenitiesItem:hover .amenitiesLinkIcon {
+.amenitiesItem:first-child:hover .amenitiesTitle {
+  color: var(--black-main);
+}
+
+.amenitiesTextList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.amenitiesTextItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.amenitiesText {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
+  color: var(--gray-text);
+  transition: 0.3s ease-in-out;
+}
+
+.amenitiesItem:first-child .amenitiesText {
+  color: var(--white-main);
+}
+
+.amenitiesItem:hover .amenitiesText {
+  color: var(--white-main);
+}
+
+.amenitiesItem:first-child:hover .amenitiesText {
+  color: var(--gray-text);
+}
+
+.amenitiesIcon {
+  width: 14px;
+  height: 14px;
+  stroke: var(--gray-text);
+  transition: 0.3s ease-in-out;
+}
+
+.amenitiesItem:first-child .amenitiesIcon {
+  stroke: var(--gray-input);
+}
+
+.amenitiesItem:hover .amenitiesIcon {
   stroke: var(--white-main);
+}
+
+.amenitiesItem:first-child:hover .amenitiesIcon {
+  stroke: var(--gray-text);
 }
 
 @media screen and (min-width: 1440px) {
   .amenitiesList {
-    gap: 2rem;
     flex-direction: row;
-    width: fit-content;
+    margin-bottom: unset;
   }
+
   .amenitiesItem {
-    height: 34.2rem;
-    padding: 2.7rem;
-    border-radius: 1.6rem;
+    width: 46.2rem;
+    height: 22.7rem;
+    padding: 3.6rem;
   }
 
   .amenitiesTitle {
-    line-height: normal;
+    font-size: 3.2rem;
+    gap: 0.7rem;
   }
+
+  .amenitiesTextList {
+    gap: 0.6rem;
+  }
+
   .amenitiesText {
-    margin-bottom: 1.7rem;
-    font-size: 1.6rem;
-    width: 26.8rem;
-    height: 13rem;
+    font-size: 1.8rem;
   }
-  .amenitiesLink {
-    margin-top: unset;
+
+  .amenitiesIcon {
+    width: 1.6rem;
+    height: 1.6rem;
   }
 }
 
 @media screen and (min-width: 1728px) {
-  .amenitiesList {
-    gap: 20px;
-  }
   .amenitiesItem {
-    height: 342px;
-    padding: 28px;
-    border-radius: 16px;
+    width: 462px;
+    height: 227px;
+    padding: 36px;
+  }
+
+  .amenitiesTitle {
+    font-size: 32px;
+    gap: 7px;
+  }
+
+  .amenitiesTextList {
+    gap: 6px;
   }
 
   .amenitiesText {
-    margin-bottom: 17px;
-    font-size: 16px;
-    width: 268px;
-    height: 130px;
+    font-size: 18px;
+  }
+
+  .amenitiesIcon {
+    width: 16px;
+    height: 16px;
   }
 }

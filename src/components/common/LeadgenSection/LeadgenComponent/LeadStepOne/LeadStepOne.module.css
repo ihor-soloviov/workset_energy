@@ -1,0 +1,56 @@
+.stepOneWrap {
+}
+
+.stepOneTitle {
+  color: var(--black--main);
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 130%;
+  width: 292px;
+  margin: 0 auto;
+  margin-bottom: 12px;
+}
+
+.stepOneText {
+  color: var(--gray-text);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 140%;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: 1440px) {
+  .stepOneWrap {
+  }
+
+  .stepOneTitle {
+    font-size: 3.6rem;
+    line-height: 140%;
+    width: 61.1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .stepOneText {
+    margin-bottom: 2.4rem;
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .stepOneWrap {
+  }
+
+  .stepOneTitle {
+    width: 611px;
+    font-size: 36px;
+    margin-bottom: 8px;
+  }
+
+  .stepOneText {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+}
