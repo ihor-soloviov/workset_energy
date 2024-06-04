@@ -1,16 +1,17 @@
 import Button from '@/components/common/Button/Button';
 import styles from './LeadStepSix.module.css';
-
+import useHashObserver from '@/hooks/useHashObserver';
 import React, { useState } from 'react';
 import { LeadStepProps } from '../../types';
 import { inter } from '@/utils/fonts';
 import { ThreeDots } from 'react-loader-spinner';
 
 const LeadStepSix = ({ handleNextStepClick, isLoading }: LeadStepProps) => {
+  useHashObserver('optionalstep');
   const [stepSixValue, setstepSixValue] = useState('');
 
   return (
-    <div className={styles.stepSixWrap}>
+    <div id="optionalstep" className={styles.stepSixWrap}>
       <h2 className={styles.stepSixTitle}>Schreibe uns eine kurze Nachricht</h2>
       <p className={styles.stepSixText}>
         Willst du uns noch etwas Wichtiges zu deinem geplanten PV-Projekt
@@ -49,7 +50,7 @@ const LeadStepSix = ({ handleNextStepClick, isLoading }: LeadStepProps) => {
             wrapperClass={styles.loader}
           />
         ) : (
-          'Senden'
+          'Absenden'
         )}
       </Button>
     </div>

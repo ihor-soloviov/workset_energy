@@ -161,7 +161,7 @@ const JobForm = () => {
               wrapperClass={styles.loader}
             />
           ) : (
-            'Senden'
+            'Absenden'
           )}
         </Button>
       </form>

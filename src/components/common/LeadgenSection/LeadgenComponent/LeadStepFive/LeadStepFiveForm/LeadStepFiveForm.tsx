@@ -128,7 +128,7 @@ const LeadStepFiveForm = ({
           type="submit"
           className={styles.stepFiveBtn}
         >
-          Weiter
+          Absenden
         </Button>
       </div>
     </form>

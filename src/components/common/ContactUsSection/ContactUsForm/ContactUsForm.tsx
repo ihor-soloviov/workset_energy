@@ -162,7 +162,7 @@ const ContactUsForm = () => {
             wrapperClass={styles.loader}
           />
         ) : (
-          'Senden'
+          'Absenden'
         )}
       </Button>
     </form>

@@ -202,7 +202,7 @@ const AngebotForm = () => {
               wrapperClass={styles.loader}
             />
           ) : (
-            'Senden'
+            'Absenden'
           )}
         </Button>
       </div>
