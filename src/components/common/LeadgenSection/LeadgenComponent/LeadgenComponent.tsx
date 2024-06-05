@@ -8,12 +8,9 @@ import LeadStepFive from './LeadStepFive/LeadStepFive';
 import LeadStepSix from './LeadStepSix/LeadStepSix';
 import { FormInitialValue, LeadgenComponentProps } from '../types';
 import { useEffect, useState } from 'react';
-import { inter } from '@/utils/fonts';
-import { formDataPost } from '@/utils/api';
-import { useGlobalStore } from '@/store/global-store';
-
 import { useNavigateToThankYou } from '@/hooks/useNavigationToThanks';
-import { log } from 'console';
+import { inter } from '@/utils/fonts';
+
 const formInitialValue: FormInitialValue = {
   propertyType: '',
   consultType: '',
@@ -31,9 +28,8 @@ const formInitialValue: FormInitialValue = {
 
 const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
   const [formData, setFormData] = useState(formInitialValue);
-  const [isLoading, setIsLoading] = useState(false);
-  const { setPopupAction } = useGlobalStore();
   const thankYou = useNavigateToThankYou();
+  console.log('formData', formData);
 
   const handlePrevStepClick = () => {
     clearStepValue(step - 1);
@@ -83,8 +79,10 @@ const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
       case 6:
         return (
           <LeadStepSix
-            isLoading={isLoading}
-            handleNextStepClick={handleNextStepClick}
+            step={step}
+            setStep={setStep}
+            formData={formData}
+            setFormData={setFormData}
           />
         );
 
@@ -133,32 +131,11 @@ const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
     }
   };
 
-  const postLeadgenData = async () => {
-    setIsLoading(true);
-    const leadGenData = new FormData();
-
-    Object.entries(formData).forEach(([key, value]) => {
-      if (typeof value === 'object' && !Array.isArray(value)) {
-        leadGenData.append(key, JSON.stringify(value));
-      } else {
-        leadGenData.append(key, value.toString());
-      }
-    });
-
-    await formDataPost(leadGenData, 'leadgen', setPopupAction);
-
-    setIsLoading(false);
-
-    setStep(1);
-    setFormData(formInitialValue);
-    thankYou();
-  };
-
   useEffect(() => {
     if (step === 7) {
-      (async function () {
-        await postLeadgenData();
-      })();
+      thankYou();
+      setStep(1);
+      setFormData(formInitialValue);
     }
   }, [step]);
 

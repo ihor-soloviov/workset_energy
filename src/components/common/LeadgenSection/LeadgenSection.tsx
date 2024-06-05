@@ -22,7 +22,7 @@ const LeadgenSection = () => {
       case 5:
         return 'large';
       case 6:
-        return 'medium';
+        return 'smallMedium';
       case 7:
         return 'large';
 
