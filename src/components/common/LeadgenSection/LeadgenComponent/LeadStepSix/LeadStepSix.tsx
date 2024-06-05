@@ -2,13 +2,44 @@ import Button from '@/components/common/Button/Button';
 import styles from './LeadStepSix.module.css';
 import useHashObserver from '@/hooks/useHashObserver';
 import React, { useState } from 'react';
-import { LeadStepProps } from '../../types';
+import { LeadFormProps } from '../../types';
 import { inter } from '@/utils/fonts';
 import { ThreeDots } from 'react-loader-spinner';
+import { useGlobalStore } from '@/store/global-store';
 
-const LeadStepSix = ({ handleNextStepClick, isLoading }: LeadStepProps) => {
+import { formDataPost } from '@/utils/api';
+
+const LeadStepSix = ({
+  formData,
+  setFormData,
+  step,
+  setStep,
+}: LeadFormProps) => {
   useHashObserver('optionalstep');
   const [stepSixValue, setstepSixValue] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const { setPopupAction } = useGlobalStore();
+
+  const postLeadgenData = async () => {
+    setIsLoading(true);
+
+    const leadGenData = new FormData();
+    const leadGenFinalData = { ...formData, projectMessage: stepSixValue };
+    Object.entries(leadGenFinalData).forEach(([key, value]) => {
+      if (typeof value === 'object' && !Array.isArray(value)) {
+        leadGenData.append(key, JSON.stringify(value));
+      } else {
+        leadGenData.append(key, value.toString());
+      }
+    });
+
+    console.log('leadGenFinalData', leadGenFinalData);
+
+    await formDataPost(leadGenData, 'leadgen', setPopupAction);
+
+    setIsLoading(false);
+    setStep(step + 1);
+  };
 
   return (
     <div id="optionalstep" className={styles.stepSixWrap}>
@@ -31,10 +62,7 @@ const LeadStepSix = ({ handleNextStepClick, isLoading }: LeadStepProps) => {
       />
 
       <Button
-        handleClick={() =>
-          handleNextStepClick &&
-          handleNextStepClick(stepSixValue, 'projectMessage')
-        }
+        handleClick={postLeadgenData}
         type="submit"
         className={styles.stepSixBtn}
       >

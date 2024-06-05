@@ -15,6 +15,10 @@
   height: 817px;
 }
 
+.smallMedium {
+  height: 606px;
+}
+
 .large {
   height: 949px;
 }
@@ -60,6 +64,10 @@
     height: 83.3rem;
   }
 
+  .smallMedium {
+    height: 62.5rem;
+  }
+
   .medium {
     height: 88.2rem;
   }
@@ -95,6 +103,10 @@
 
   .extraMedium {
     height: 833px;
+  }
+
+  .smallMedium {
+    height: 625px;
   }
 
   .medium {
