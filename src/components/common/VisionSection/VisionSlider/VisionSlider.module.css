@@ -8,7 +8,8 @@
 
 .visionImgWrap {
   padding: 60px 0 24px;
-  background-color: var(--white-main);
+
+  background: linear-gradient(to bottom, #ffff 430px, #f32c40 400px);
 }
 
 .visionImgContainer {
@@ -52,27 +53,19 @@
   z-index: 1;
 }
 
-.visionTextWrap {
-  background-color: var(--red-main);
-  padding: 24px 0px 36px;
+.visionTextWrap,
+.visionTextWrapDesk {
   height: 351px;
+  padding-top: 50px;
+}
+
+.visionTextWrapDesk {
+  display: none;
 }
 
 .visionTextContainer {
   width: 100%;
   margin: 0 auto;
-  padding: 0 24px;
-  visibility: hidden;
-  height: 0px;
-  opacity: 0;
-
-  transition: opacity 1250ms var(--cubic);
-}
-
-.visionTextContainer.active {
-  height: auto;
-  visibility: visible;
-  opacity: 1;
 }
 
 .visionTitle {
@@ -88,7 +81,7 @@
   color: var(--white-second);
   font-size: 16px;
   width: 341px;
-  margin: 0 auto;
+
   line-height: 160%;
   transition: opacity 250ms var(--cubic);
 }
@@ -199,6 +192,7 @@
     height: 83.7rem;
     position: static;
     padding: 7rem 0px 6.2rem;
+    background: unset;
   }
 
   .visionImgMob {
@@ -216,11 +210,17 @@
     opacity: 1;
   }
 
-  .visionTextWrap {
+  .visionTextWrapDesk {
     width: calc(100% / 2);
+    display: block;
     height: 83.7rem;
     padding: 27.1rem 4.6rem 5.6rem 5.9rem;
+    background-color: var(--red-main);
     position: relative;
+  }
+
+  .visionTextWrap {
+    display: none;
   }
 
   .visionTextContainer {
@@ -228,6 +228,16 @@
     width: 55.1rem;
     position: relative;
     padding: unset;
+    visibility: hidden;
+    opacity: 0;
+    height: 0px;
+    transition: opacity 0.6s ease-in-out;
+  }
+
+  .visionTextContainer.active {
+    height: auto;
+    visibility: visible;
+    opacity: 1;
   }
 
   .visionImgContainer {
@@ -307,7 +317,7 @@
     padding: 70px 0px 62px;
   }
 
-  .visionTextWrap {
+  .visionTextWrapDesk {
     height: 837px;
     padding: 271px 46px 56px 59px;
   }
