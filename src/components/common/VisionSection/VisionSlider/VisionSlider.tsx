@@ -42,7 +42,7 @@ const VisionSlider = () => {
             <Swiper
               className={styles.sliderWrap}
               modules={[Autoplay, Navigation]}
-              spaceBetween={25}
+              spaceBetween={100}
               onActiveIndexChange={e => setActiveIndex(e.realIndex)}
               loop={true}
               slidesPerView={1}
@@ -67,6 +67,36 @@ const VisionSlider = () => {
                       alt="img"
                       src={desktop}
                     />
+
+                    <div className={styles.visionTextWrap}>
+                      <div className={styles.visionDotsWrapMob}>
+                        <SliderDots
+                          handleActiveSlide={handleActiveSlide}
+                          count={3}
+                          activeSlide={activeIndex}
+                          className="vision"
+                        />
+                      </div>
+                      <p className={styles.visionCount}>
+                        0
+                        <span className={styles.visionCountSpan}>
+                          {activeIndex + 1}
+                        </span>
+                      </p>
+
+                      <div
+                        className={`${styles.visionTextContainer} ${activeIndex === index ? styles.active : ''}`}
+                      >
+                        <h2 className={styles.visionTitle}>
+                          {visionItems[activeIndex].title}
+                        </h2>
+                        <p
+                          className={`${styles.visionText} ${inter.className}`}
+                        >
+                          {visionItems[activeIndex].text}
+                        </p>
+                      </div>
+                    </div>
                   </React.Fragment>
                 </SwiperSlide>
               ))}
@@ -113,15 +143,7 @@ const VisionSlider = () => {
           <Arrow className={styles.nextArrow} />
         </Button>
       </div>
-      <div className={styles.visionTextWrap}>
-        <div className={styles.visionDotsWrapMob}>
-          <SliderDots
-            handleActiveSlide={handleActiveSlide}
-            count={3}
-            activeSlide={activeIndex}
-            className="vision"
-          />
-        </div>
+      <div className={styles.visionTextWrapDesk}>
         <p className={styles.visionCount}>
           0<span className={styles.visionCountSpan}>{activeIndex + 1}</span>
         </p>
