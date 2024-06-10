@@ -10,11 +10,11 @@ import HeaderNavList from './HeaderNavList/HeaderNavList';
 import WorksetColorIcon from '/public/icons/workset-color.svg';
 import WorksetIcon from '/public/icons/workset.svg';
 import BurgerIcon from '/public/icons/burger.svg';
-
 import { usePathname } from 'next/navigation';
 import { useGlobalStore } from '@/store/global-store';
 import { pathnames, jobPathRegex, blackList } from '@/utils/pathnames';
 import Arrow from '../common/Arrow/Arrow';
+import ReactPixel from 'react-facebook-pixel';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,8 +22,11 @@ const Header = () => {
   const [position, setPosition] = useState(0);
   const [visible, setVisible] = useState(true);
   const pathname = usePathname();
-
   const { setIsDesktop } = useGlobalStore();
+
+  const pixelId = process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID
+    ? process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID
+    : '';
 
   const handleMenuClick = () => setIsMenuOpen(!isMenuOpen);
 
@@ -65,6 +68,11 @@ const Header = () => {
   useEffect(() => {
     setIsBlack(blackList.includes(pathname));
   }, [pathname]);
+
+  useEffect(() => {
+    ReactPixel.init(pixelId);
+    ReactPixel.pageView();
+  }, []);
 
   return (
     <>
