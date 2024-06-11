@@ -104,7 +104,7 @@ const ObjectSlider = () => {
       {!isDesktop && (
         <SliderDots
           className={'team'}
-          count={13}
+          count={27}
           activeSlide={activeIndex}
           handleActiveSlide={handleActiveSlide}
         />
