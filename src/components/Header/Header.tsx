@@ -70,8 +70,10 @@ const Header = () => {
   }, [pathname]);
 
   useEffect(() => {
-    ReactPixel.init(pixelId);
-    ReactPixel.pageView();
+    if (typeof window !== 'undefined') {
+      ReactPixel.init(pixelId);
+      ReactPixel.pageView();
+    }
   }, []);
 
   return (
