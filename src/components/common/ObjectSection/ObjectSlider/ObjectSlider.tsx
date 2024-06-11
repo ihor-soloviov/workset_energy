@@ -62,12 +62,14 @@ const ObjectSlider = () => {
                 className={styles.sliderImgMob}
                 src={mobile}
                 alt="slide"
+                placeholder="blur"
               />
               <Image
                 quality={100}
                 className={styles.sliderImgDesk}
                 src={desktop}
                 alt="slide"
+                placeholder="blur"
               />
 
               <div className={styles.sliderWrap}>
@@ -104,7 +106,7 @@ const ObjectSlider = () => {
       {!isDesktop && (
         <SliderDots
           className={'team'}
-          count={13}
+          count={27}
           activeSlide={activeIndex}
           handleActiveSlide={handleActiveSlide}
         />
