@@ -62,12 +62,14 @@ const ObjectSlider = () => {
                 className={styles.sliderImgMob}
                 src={mobile}
                 alt="slide"
+                priority
               />
               <Image
                 quality={100}
                 className={styles.sliderImgDesk}
                 src={desktop}
                 alt="slide"
+                priority
               />
 
               <div className={styles.sliderWrap}>
