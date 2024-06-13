@@ -2,6 +2,7 @@
 'use client';
 
 import Link from 'next/link';
+import Router from 'next/router';
 import React, { useEffect, useState } from 'react';
 import styles from './Header.module.css';
 import MobileMenu from './MobileMenu/MobileMenu';
@@ -14,7 +15,6 @@ import { usePathname } from 'next/navigation';
 import { useGlobalStore } from '@/store/global-store';
 import { pathnames, jobPathRegex, blackList } from '@/utils/pathnames';
 import Arrow from '../common/Arrow/Arrow';
-import ReactPixel from 'react-facebook-pixel';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -70,11 +70,17 @@ const Header = () => {
   }, [pathname]);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      ReactPixel.init(pixelId);
-      ReactPixel.pageView();
-    }
-  }, []);
+    import('react-facebook-pixel')
+      .then(x => x.default)
+      .then(ReactPixel => {
+        ReactPixel.init(pixelId);
+        ReactPixel.pageView();
+
+        Router.events.on('routeChangeComplete', () => {
+          ReactPixel.pageView();
+        });
+      });
+  });
 
   return (
     <>
