@@ -23,6 +23,7 @@ const HomePage = () => {
       {/* <HeroSection {...homeHero} /> */}
       <AmenitiesSection />
       <LeadgenSection />
+      <ObjectSection />
       {/* <VideoSection {...firstVideo} /> */}
       {/* <ProductSection /> */}
       {/* <VideoSection {...secondVideo} /> */}
@@ -30,7 +31,7 @@ const HomePage = () => {
       <TeamSection />
       <AngebotSection />
       <GoogleComSection />
-      <ObjectSection />
+
       <QuestionSection />
       <VisionSection />
       <StepSection />
