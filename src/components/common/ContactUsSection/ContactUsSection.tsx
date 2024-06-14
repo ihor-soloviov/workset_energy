@@ -1,11 +1,24 @@
 'use client';
 
+import dynamic from 'next/dynamic';
+
+const RecycleTextWrap = dynamic(
+  () => import('../RecycleTextWrap/RecycleTextWrap'),
+  {
+    ssr: false,
+  },
+);
+const ContactUsForm = dynamic(() => import('./ContactUsForm/ContactUsForm'), {
+  ssr: false,
+});
+
+const ContactUsMap = dynamic(() => import('./ContactUsMap/ContactUsMap'), {
+  ssr: false,
+});
+
 import styles from './ContactUsSection.module.css';
 import { inter } from '@/utils/fonts';
 import Container from '../Container/Container';
-import ContactUsForm from './ContactUsForm/ContactUsForm';
-import ContactUsMap from './ContactUsMap/ContactUsMap';
-import RecycleTextWrap from '../RecycleTextWrap/RecycleTextWrap';
 import { useGlobalStore } from '@/store/global-store';
 
 const ContactUsSection = () => {

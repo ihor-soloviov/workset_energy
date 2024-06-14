@@ -1,7 +1,11 @@
 import React from 'react';
-import styles from './VisionSection.module.css';
+import dynamic from 'next/dynamic';
 
-import VisionSlider from './VisionSlider/VisionSlider';
+const VisionSlider = dynamic(() => import('./VisionSlider/VisionSlider'), {
+  ssr: false,
+});
+
+import styles from './VisionSection.module.css';
 
 const VisionSection = () => {
   return (

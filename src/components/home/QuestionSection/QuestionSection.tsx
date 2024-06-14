@@ -1,5 +1,16 @@
-import RecycleTextWrap from '@/components/common/RecycleTextWrap/RecycleTextWrap';
-import QuestionList from './QuestionList/QuestionList';
+import dynamic from 'next/dynamic';
+
+const QuestionList = dynamic(() => import('./QuestionList/QuestionList'), {
+  ssr: false,
+});
+
+const RecycleTextWrap = dynamic(
+  () => import('@/components/common/RecycleTextWrap/RecycleTextWrap'),
+  {
+    ssr: false,
+  },
+);
+
 import styles from './QuestionSection.module.css';
 
 const QuestionSection = () => {

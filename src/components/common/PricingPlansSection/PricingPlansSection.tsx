@@ -1,17 +1,25 @@
 'use client';
+import dynamic from 'next/dynamic';
 
-import 'swiper/css';
 import React, { useRef, useState } from 'react';
-import styles from './PricingPlansSection.module.css';
 import { inter } from '@/utils/fonts';
 import { plans } from './plans';
-import Plan from './Plan/Plan';
-import RecycleTextWrap from '../RecycleTextWrap/RecycleTextWrap';
-import { scrollToSection } from '@/utils/scroll';
+const Plan = dynamic(() => import('./Plan/Plan'), {
+  ssr: false,
+});
+const RecycleTextWrap = dynamic(
+  () => import('../RecycleTextWrap/RecycleTextWrap'),
+  {
+    ssr: false,
+  },
+);
 import { useGlobalStore } from '@/store/global-store';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperType } from 'swiper';
 import SliderDots from '../SliderDots/SliderDots';
+import styles from './PricingPlansSection.module.css';
+import 'swiper/css';
+
 const PricingPlansSection = () => {
   const { isDesktop } = useGlobalStore();
   const [activeIndex, setActiveIndex] = useState(0);

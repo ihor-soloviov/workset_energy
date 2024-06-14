@@ -1,7 +1,20 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
+
+const GoogleComSlider = dynamic(
+  () => import('./GoogleComSlider/GoogleComSlider'),
+  {
+    ssr: false,
+  },
+);
+
+const RecycleTextWrap = dynamic(
+  () => import('@/components/common/RecycleTextWrap/RecycleTextWrap'),
+  {
+    ssr: false,
+  },
+);
 import styles from './GoogleComSection.module.css';
-import GoogleComSlider from './GoogleComSlider/GoogleComSlider';
-import RecycleTextWrap from '../RecycleTextWrap/RecycleTextWrap';
 
 const GoogleComSection = () => {
   return (
