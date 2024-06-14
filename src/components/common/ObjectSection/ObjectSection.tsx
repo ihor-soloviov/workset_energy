@@ -1,7 +1,10 @@
-import Container from '@/components/common/Container/Container';
-import styles from './ObjectSection.module.css';
-import ObjectSlider from './ObjectSlider/ObjectSlider';
+import dynamic from 'next/dynamic';
 import { inter } from '@/utils/fonts';
+import Container from '@/components/common/Container/Container';
+const ObjectSlider = dynamic(() => import('./ObjectSlider/ObjectSlider'), {
+  ssr: false,
+});
+import styles from './ObjectSection.module.css';
 
 const ObjectSection = () => {
   return (

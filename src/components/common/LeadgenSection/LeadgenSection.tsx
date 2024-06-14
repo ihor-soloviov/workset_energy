@@ -1,9 +1,17 @@
 'use client';
 
 import React, { useState } from 'react';
-import styles from './LeadgenSection.module.css';
-import LeadgenComponent from './LeadgenComponent/LeadgenComponent';
+import dynamic from 'next/dynamic';
+
+const LeadgenComponent = dynamic(
+  () => import('./LeadgenComponent/LeadgenComponent'),
+  {
+    ssr: false,
+  },
+);
+
 import { useGlobalStore } from '@/store/global-store';
+import styles from './LeadgenSection.module.css';
 
 const LeadgenSection = () => {
   const [step, setStep] = useState(1);

@@ -1,10 +1,15 @@
 'use client';
 
 import React from 'react';
-import styles from './AmenitiesList.module.css';
-import Counter from './Counter/Counter';
+import dynamic from 'next/dynamic';
+
+const Counter = dynamic(() => import('./Counter/Counter'), {
+  ssr: false,
+});
+
 import { amenitiesItems } from './amenitiesItems';
 import CheckIcon from '/public/icons/check.svg';
+import styles from './AmenitiesList.module.css';
 
 const AmenitiesList = () => {
   return (

@@ -1,8 +1,7 @@
-import Button from '@/components/common/Button/Button';
-import styles from './LeadStepOne.module.css';
+import React, { useState, MouseEvent, useEffect } from 'react';
 import LeadStepOneList from './LeadStepOneList/LeadStepOneList';
 import { LeadStepProps } from '../../types';
-import React, { useState, MouseEvent, useEffect } from 'react';
+import styles from './LeadStepOne.module.css';
 
 const LeadStepOne = ({ handleNextStepClick }: LeadStepProps) => {
   const [stepOneValue, setStepOneValue] = useState<null | string>(null);

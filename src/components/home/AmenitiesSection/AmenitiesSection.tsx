@@ -1,7 +1,17 @@
-import AmenitiesList from './AmenitiesList/AmenitiesList';
-import styles from './AmenitiesSection.module.css';
-import RecycleTextWrap from '@/components/common/RecycleTextWrap/RecycleTextWrap';
+import dynamic from 'next/dynamic';
+
+const AmenitiesList = dynamic(() => import('./AmenitiesList/AmenitiesList'), {
+  ssr: false,
+});
+
+const RecycleTextWrap = dynamic(
+  () => import('@/components/common/RecycleTextWrap/RecycleTextWrap'),
+  {
+    ssr: false,
+  },
+);
 import Link from 'next/link';
+import styles from './AmenitiesSection.module.css';
 
 const AmenitiesSection = () => {
   return (

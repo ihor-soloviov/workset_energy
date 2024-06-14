@@ -1,8 +1,8 @@
-import styles from './LeadStepOneList.module.css';
-import { stepOneItems } from './leadStepOneItems';
-import React, { MouseEvent } from 'react';
+import React from 'react';
 import { inter } from '@/utils/fonts';
+import { stepOneItems } from './leadStepOneItems';
 import { LeadStepListProps } from '../../../types';
+import styles from './LeadStepOneList.module.css';
 const LeadStepOneList = ({ handleItemClick, stepValue }: LeadStepListProps) => {
   return (
     <ul className={styles.stepOneList}>
