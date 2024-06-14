@@ -1,10 +1,7 @@
 'use client';
-import 'swiper/css';
 import React, { useRef, useState } from 'react';
 import { inter } from '@/utils/fonts';
-import styles from './VorteileSlider.module.css';
 import Button from '../../Button/Button';
-
 import SliderDots from '../../SliderDots/SliderDots';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
@@ -17,6 +14,8 @@ import { wallImages, wallItems } from '@/utils/wallSlides';
 import { usePathname } from 'next/navigation';
 import { ImportedImages, VorteileSliderItems } from '@/types/infoTypes';
 import Arrow from '../../Arrow/Arrow';
+import styles from './VorteileSlider.module.css';
+import 'swiper/css';
 
 const VorteileSlider = () => {
   const { isDesktop } = useGlobalStore();

@@ -1,6 +1,5 @@
 import React from 'react';
 import HeroSection from '@/components/common/HeroSection/HeroSection';
-import VideoSection from '@/components/common/VideoSection/VideoSection';
 import VorteileSection from '@/components/common/VorteileSection/VorteileSection';
 import { stromspeicherHero } from '@/utils/hero';
 
@@ -19,7 +18,6 @@ const Stromspeicher = () => {
       <PricingPlansSection />
       <VorteileSection />
       <SwitcherSection />
-
       <EmployeeSection />
       <GoogleComSection />
       <TeamSection />

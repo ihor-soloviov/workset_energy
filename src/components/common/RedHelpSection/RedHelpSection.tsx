@@ -1,8 +1,17 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import styles from './RedHelpSection.module.css';
 import { items } from './items';
-import RedHelpItem from './RedHelpItem/RedHelpItem';
-import RecycleTextWrap from '../RecycleTextWrap/RecycleTextWrap';
+const RedHelpItem = dynamic(() => import('./RedHelpItem/RedHelpItem'), {
+  ssr: false,
+});
+
+const RecycleTextWrap = dynamic(
+  () => import('../RecycleTextWrap/RecycleTextWrap'),
+  {
+    ssr: false,
+  },
+);
 
 const RedHelpSection = () => (
   <section className={styles.redHelpSection}>

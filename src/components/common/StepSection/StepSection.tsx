@@ -1,5 +1,9 @@
 import Container from '@/components/common/Container/Container';
-import StepList from './StepList/StepList';
+import dynamic from 'next/dynamic';
+
+const StepList = dynamic(() => import('./StepList/StepList'), {
+  ssr: false,
+});
 import styles from './StepSection.module.css';
 
 const StepSection = () => (

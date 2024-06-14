@@ -1,9 +1,18 @@
 'use client';
 
+import dynamic from 'next/dynamic';
+
 import styles from './AngebotSection.module.css';
 import { inter } from '@/utils/fonts';
-import AngebotForm from './AngebotForm/AngebotForm';
-import RecycleTextWrap from '@/components/common/RecycleTextWrap/RecycleTextWrap';
+const AngebotForm = dynamic(() => import('./AngebotForm/AngebotForm'), {
+  ssr: false,
+});
+const RecycleTextWrap = dynamic(
+  () => import('@/components/common/RecycleTextWrap/RecycleTextWrap'),
+  {
+    ssr: false,
+  },
+);
 import angebotImgMob from '/public/images/home-page/angebot-mob.jpg';
 import angebotImgDesk from '/public/images/home-page/angebot-desk.jpg';
 import Image from 'next/image';

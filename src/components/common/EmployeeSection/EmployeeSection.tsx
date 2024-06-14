@@ -1,11 +1,18 @@
 'use client';
+import dynamic from 'next/dynamic';
 import styles from './EmployeeSection.module.css';
 import { inter } from '@/utils/fonts';
-
+const EmployeeList = dynamic(() => import('./EmployeeList/EmployeeList'), {
+  ssr: false,
+});
+const RecycleTextWrap = dynamic(
+  () => import('../RecycleTextWrap/RecycleTextWrap'),
+  {
+    ssr: false,
+  },
+);
 import Container from '../Container/Container';
 import Button from '../Button/Button';
-import EmployeeList from './EmployeeList/EmployeeList';
-import RecycleTextWrap from '../RecycleTextWrap/RecycleTextWrap';
 import { usePathname } from 'next/navigation';
 import { scrollToSection } from '@/utils/scroll';
 import Arrow from '../Arrow/Arrow';

@@ -17,7 +17,6 @@ const PvAnlagen = () => {
       <PricingPlansSection />
       <VideoSection {...pvAnlagenVideo} />
       <VorteileSection />
-
       <EmployeeSection />
       <GoogleComSection />
       <TeamSection />
