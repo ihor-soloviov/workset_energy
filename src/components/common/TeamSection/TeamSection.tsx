@@ -1,11 +1,18 @@
 'use client';
-import styles from './TeamSection.module.css';
-import Container from '../Container/Container';
-import TeamSlider from './TeamSlider/TeamSlider';
-import TeamTextWrap from './TeamTextWrap/TeamTextWrap';
-import TeamCarousel from './TeamCarousel/TeamCarousel';
-import { useGlobalStore } from '@/store/global-store';
+import dynamic from 'next/dynamic';
 import { useState } from 'react';
+import Container from '../Container/Container';
+const TeamSlider = dynamic(() => import('./TeamSlider/TeamSlider'), {
+  ssr: false,
+});
+const TeamTextWrap = dynamic(() => import('./TeamTextWrap/TeamTextWrap'), {
+  ssr: false,
+});
+const TeamCarousel = dynamic(() => import('./TeamCarousel/TeamCarousel'), {
+  ssr: false,
+});
+import { useGlobalStore } from '@/store/global-store';
+import styles from './TeamSection.module.css';
 
 const TeamSection = () => {
   const { isDesktop } = useGlobalStore();

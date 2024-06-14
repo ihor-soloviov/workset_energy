@@ -1,15 +1,33 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import styles from './LeadgenComponent.module.css';
-import LeadStepOne from './LeadStepOne/LeadStepOne';
-import LeadStepTwo from './LeadStepTwo/LeadStepTwo';
-import LeadStepThree from './LeadStepThree/LeadStepThree';
-import LeadStepFour from './LeadStepFour/LeadStepFour';
-import LeadStepFive from './LeadStepFive/LeadStepFive';
-import LeadStepSix from './LeadStepSix/LeadStepSix';
-import { FormInitialValue, LeadgenComponentProps } from '../types';
-import { useEffect, useState } from 'react';
-import { useNavigateToThankYou } from '@/hooks/useNavigationToThanks';
+import dynamic from 'next/dynamic';
 import { inter } from '@/utils/fonts';
+import { useEffect, useState } from 'react';
+
+const LeadStepOne = dynamic(() => import('./LeadStepOne/LeadStepOne'), {
+  ssr: false,
+});
+const LeadStepTwo = dynamic(() => import('./LeadStepTwo/LeadStepTwo'), {
+  ssr: false,
+});
+
+const LeadStepThree = dynamic(() => import('./LeadStepThree/LeadStepThree'), {
+  ssr: false,
+});
+
+const LeadStepFour = dynamic(() => import('./LeadStepFour/LeadStepFour'), {
+  ssr: false,
+});
+
+const LeadStepFive = dynamic(() => import('./LeadStepFive/LeadStepFive'), {
+  ssr: false,
+});
+
+const LeadStepSix = dynamic(() => import('./LeadStepSix/LeadStepSix'), {
+  ssr: false,
+});
+import { FormInitialValue, LeadgenComponentProps } from '../types';
+import { useNavigateToThankYou } from '@/hooks/useNavigationToThanks';
+import styles from './LeadgenComponent.module.css';
 
 const formInitialValue: FormInitialValue = {
   propertyType: '',
@@ -29,7 +47,7 @@ const formInitialValue: FormInitialValue = {
 const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
   const [formData, setFormData] = useState(formInitialValue);
   const thankYou = useNavigateToThankYou();
-  console.log('formData', formData);
+  // console.log('formData', formData);
 
   const handlePrevStepClick = () => {
     clearStepValue(step - 1);

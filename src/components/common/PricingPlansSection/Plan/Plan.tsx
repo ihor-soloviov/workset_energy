@@ -33,7 +33,7 @@ const Plan: React.FC<Props> = ({
   );
 
   const pathname = usePathname();
-  console.log(pathname);
+  // console.log(pathname);
 
   return (
     <li className={styles.pricingPlansItem}>

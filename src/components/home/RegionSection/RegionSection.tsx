@@ -1,12 +1,12 @@
 'use client';
 
 import { inter } from '@/utils/fonts';
-import styles from './RegionSection.module.css';
 import Button from '@/components/common/Button/Button';
 import LocationIcon from '/public/icons/location-region.svg';
 import RegionImgMob from '/public/icons/region-mob.svg';
 import RegionImgDesk from '/public/icons/region-desk.svg';
 import { scrollToSection } from '@/utils/scroll';
+import styles from './RegionSection.module.css';
 
 const RegionSection = () => {
   return (
