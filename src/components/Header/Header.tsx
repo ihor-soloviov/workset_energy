@@ -80,7 +80,7 @@ const Header = () => {
           ReactPixel.pageView();
         });
       });
-  });
+  }, []);
 
   return (
     <>
