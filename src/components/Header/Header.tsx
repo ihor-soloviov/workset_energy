@@ -31,42 +31,38 @@ const Header = () => {
   const handleMenuClick = () => setIsMenuOpen(!isMenuOpen);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (window) {
       setPosition(window.scrollY);
       setVisible(true);
     }
   }, [pathname]);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const handleScroll = () => {
-        let moving = window.scrollY;
-        if (moving > 84) {
-          setVisible(position > moving);
-          setPosition(moving);
-        }
-      };
-      window.addEventListener('scroll', handleScroll);
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-      };
-    }
+    const handleScroll = () => {
+      let moving = window.scrollY;
+      if (moving > 84) {
+        setVisible(position > moving);
+        setPosition(moving);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   });
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    setIsDesktop(window.innerWidth >= 1440);
+
+    const handleResize = () => {
       setIsDesktop(window.innerWidth >= 1440);
+    };
 
-      const handleResize = () => {
-        setIsDesktop(window.innerWidth >= 1440);
-      };
+    window.addEventListener('resize', handleResize);
 
-      window.addEventListener('resize', handleResize);
-
-      return () => {
-        window.removeEventListener('resize', handleResize);
-      };
-    }
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, [setIsDesktop]);
 
   useEffect(() => {
@@ -74,18 +70,16 @@ const Header = () => {
   }, [pathname]);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      import('react-facebook-pixel')
-        .then(x => x.default)
-        .then(ReactPixel => {
-          ReactPixel.init(pixelId);
-          ReactPixel.pageView();
+    import('react-facebook-pixel')
+      .then(x => x.default)
+      .then(ReactPixel => {
+        ReactPixel.init(pixelId);
+        ReactPixel.pageView();
 
-          Router.events.on('routeChangeComplete', () => {
-            ReactPixel.pageView();
-          });
+        Router.events.on('routeChangeComplete', () => {
+          ReactPixel.pageView();
         });
-    }
+      });
   }, []);
 
   return (
