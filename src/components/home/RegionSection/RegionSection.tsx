@@ -7,8 +7,13 @@ import RegionImgMob from '/public/icons/region-mob.svg';
 import RegionImgDesk from '/public/icons/region-desk.svg';
 import { scrollToSection } from '@/utils/scroll';
 import styles from './RegionSection.module.css';
+import useObserver from '@/hooks/useObserver';
 
 const RegionSection = () => {
+  useObserver(
+    `.${styles.regionLocationWrap}`,
+    `${styles.regionLocationWrapVisible}`,
+  );
   return (
     <section className={styles.regionSection}>
       <div className={styles.regionContainer}>

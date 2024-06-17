@@ -63,6 +63,9 @@
   border: 1px solid var(--red-main);
   background-color: rgba(243, 44, 64, 0.4);
   position: absolute;
+}
+
+.regionLocationWrapVisible {
   animation: pulse 1.5s infinite;
 }
 
