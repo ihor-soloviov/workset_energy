@@ -9,14 +9,14 @@ import plan1Mob from '/public/images/common/plans/plan-1-mob.png';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import useObserver from '@/hooks/useObserver';
+import { useNavigateTo } from '@/hooks/useNavigationToThanks';
+import { Navigate } from '@/types/navigate';
 
 const HomeHeroSection = () => {
   useObserver(`.${styles.heroAnim}`, `${styles.heroAnimVisible}`);
-  const router = useRouter();
-
-  const handleImgWrapClick = () => {
-    router.push('/pv-anlagen#tarifpläne');
-  };
+  useObserver(`.${styles.heroImgWrap}`, `${styles.heroImgWrapVisible}`);
+  useObserver(`.${styles.heroBgImgMob}`, `${styles.heroBgImgScaled}`);
+  useObserver(`.${styles.heroBgImgDesk}`, `${styles.heroBgImgScaled}`);
 
   return (
     <section className={styles.heroSection}>
@@ -40,7 +40,7 @@ const HomeHeroSection = () => {
         <h2 className={`${styles.heroTitle} ${styles.heroAnim}`}>
           WorkSET Energy Dein Fachpartner
         </h2>
-        <div onClick={handleImgWrapClick} className={styles.heroImgWrap}>
+        <Link href={Navigate.plans} className={styles.heroImgWrap}>
           <Image
             quality={100}
             className={styles.heroImg}
@@ -53,7 +53,7 @@ const HomeHeroSection = () => {
             </div>
             <p className={styles.heroPriceText}>Komplettpaket</p>
           </div>
-        </div>
+        </Link>
         <div className={`${styles.heroLinkWrap} ${styles.heroAnim}`}>
           <Link className={styles.heroLink} href="/#leadgen">
             Jetzt berechnen

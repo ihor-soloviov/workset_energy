@@ -11,10 +11,11 @@ import { useState } from 'react';
 import { useGlobalStore } from '@/store/global-store';
 import FormSelect from '../../FormSelect/FormSelect';
 import { questOptions } from '@/utils/questOptions';
-import { useNavigateToThankYou } from '@/hooks/useNavigationToThanks';
+import { useNavigateTo } from '@/hooks/useNavigationToThanks';
+import { Navigate } from '@/types/navigate';
 
 const ContactUsForm = () => {
-  const thankYou = useNavigateToThankYou();
+  const thankYou = useNavigateTo(Navigate.thanks);
   const [questValue, setQuestValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const { setPopupAction, isDesktop } = useGlobalStore();

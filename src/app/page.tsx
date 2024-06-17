@@ -15,13 +15,9 @@ const HomePage = () => {
   return (
     <>
       <HomeHeroSection />
-      {/* <HeroSection {...homeHero} /> */}
       <AmenitiesSection />
       <LeadgenSection />
       <ObjectSection />
-      {/* <VideoSection {...firstVideo} /> */}
-      {/* <ProductSection /> */}
-      {/* <VideoSection {...secondVideo} /> */}
       <RegionSection />
       <TeamSection />
       <AngebotSection />

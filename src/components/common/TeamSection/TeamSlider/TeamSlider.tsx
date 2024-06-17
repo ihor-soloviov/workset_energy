@@ -52,7 +52,7 @@ const TeamSlider = () => {
         }}
       >
         {teamItems.map(({ text, title, className }, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} lazy={true}>
             <div className={`${styles.teamImgWrap} ${styles[className]}`}>
               <div className={styles.teamTopWrap}>
                 <LocationIcon className={styles.teamImgIcon} />
