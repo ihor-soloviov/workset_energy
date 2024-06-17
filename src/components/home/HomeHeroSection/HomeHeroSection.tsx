@@ -7,9 +7,7 @@ import homeHeroMob from '/public/images/home-page/home-hero-mob-new.webp';
 import homeHeroDesk from '/public/images/home-page/home-hero-desk-new.webp';
 import plan1Mob from '/public/images/common/plans/plan-1-mob.png';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
 import useObserver from '@/hooks/useObserver';
-import { useNavigateTo } from '@/hooks/useNavigationToThanks';
 import { Navigate } from '@/types/navigate';
 
 const HomeHeroSection = () => {

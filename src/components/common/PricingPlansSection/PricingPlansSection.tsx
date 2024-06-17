@@ -4,9 +4,7 @@ import dynamic from 'next/dynamic';
 import React, { useRef, useState } from 'react';
 import { inter } from '@/utils/fonts';
 import { plans } from './plans';
-const Plan = dynamic(() => import('./Plan/Plan'), {
-  ssr: false,
-});
+import Plan from './Plan/Plan';
 const RecycleTextWrap = dynamic(
   () => import('../RecycleTextWrap/RecycleTextWrap'),
   {
@@ -19,6 +17,11 @@ import { Swiper as SwiperType } from 'swiper';
 import SliderDots from '../SliderDots/SliderDots';
 import styles from './PricingPlansSection.module.css';
 import 'swiper/css';
+
+const article = {
+  title: 'Erschwingliche Preise für Photovoltaik-Anlagen',
+  text: 'Jedes Projekt ist individuell, aber wir haben uns bemüht, Pakete zu erstellen, die deinen persönlichen Anforderungen an Preis, Leistung und Design entsprechen. Qualität muss nicht teuer sein – wähle WorkSET Energy.',
+};
 
 const PricingPlansSection = () => {
   const { isDesktop } = useGlobalStore();
@@ -35,10 +38,9 @@ const PricingPlansSection = () => {
       <div className={styles.pricingPlansWrap}>
         <div className={styles.pricingPlansHeader}>
           <RecycleTextWrap
-            title="Erschwingliche Preise für Photovoltaik-Anlagen"
+            title={article.title}
             titleClass={styles.plansTitle}
-            text="Jedes Projekt ist individuell, aber wir haben uns bemüht, Pakete zu erstellen, die deinen persönlichen Anforderungen an Preis, Leistung und Design entsprechen. Qualität muss nicht teuer sein – wähle 
-WorkSET Energy."
+            text={article.text}
             textClass={`${styles.plansText} ${inter.className}`}
           />
         </div>
