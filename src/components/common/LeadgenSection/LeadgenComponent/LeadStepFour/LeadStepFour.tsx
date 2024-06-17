@@ -38,7 +38,7 @@ const LeadStepFour = ({
         type="button"
         className={styles.stepFourBtn}
       >
-        Züruck
+        Zurück
       </Button>
     </div>
   );

@@ -121,7 +121,7 @@ const LeadStepFiveForm = ({
           handleClick={handlePrevStepClick}
           type="button"
         >
-          Züruck
+          Zurück
         </Button>
         <Button
           disabled={!(isValid && dirty)}
