@@ -35,26 +35,12 @@ export const teamItems: TeamItem[] = [
     email: 'c.soultana@work-set.eu',
     tel: '+49 731 146 132 19',
   },
-  // {
-  //   title: 'Antonio Fiusco',
-  //   text: 'Frankfurt',
-  //   className: 'fifth',
-  //   email: 'a.fiusco@work-set.eu',
-  //   tel: '+49 731 146 153 60',
-  // },
+
   {
     title: 'Damian Feluks',
     text: 'Frankfurt',
     className: 'sixth',
     email: 'd.feluks@work-set.eu',
     tel: '+49 731 146 132 15',
-  },
-
-  {
-    title: 'Norbert Opp',
-    text: 'Mannheim',
-    className: 'eighth',
-    email: 'n.opp@work-set.eu	',
-    tel: '+49 731 146 153 61',
   },
 ];
