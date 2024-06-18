@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
 
-import withVideos from 'next-videos';
+const withVideos = require('next-videos');
+
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+});
+
 const nextConfig = {
   images: {
     remotePatterns: [
@@ -22,4 +27,4 @@ const nextConfig = {
   },
 };
 
-export default withVideos(nextConfig);
+module.exports = withBundleAnalyzer(withVideos(nextConfig));
