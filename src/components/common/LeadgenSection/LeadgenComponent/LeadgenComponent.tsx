@@ -3,28 +3,16 @@ import dynamic from 'next/dynamic';
 import { inter } from '@/utils/fonts';
 import { useEffect, useState } from 'react';
 
-const LeadStepOne = dynamic(() => import('./LeadStepOne/LeadStepOne'), {
-  ssr: false,
-});
-const LeadStepTwo = dynamic(() => import('./LeadStepTwo/LeadStepTwo'), {
-  ssr: false,
-});
+const LeadStepOne = dynamic(() => import('./LeadStepOne/LeadStepOne'));
+const LeadStepTwo = dynamic(() => import('./LeadStepTwo/LeadStepTwo'));
 
-const LeadStepThree = dynamic(() => import('./LeadStepThree/LeadStepThree'), {
-  ssr: false,
-});
+const LeadStepThree = dynamic(() => import('./LeadStepThree/LeadStepThree'));
 
-const LeadStepFour = dynamic(() => import('./LeadStepFour/LeadStepFour'), {
-  ssr: false,
-});
+const LeadStepFour = dynamic(() => import('./LeadStepFour/LeadStepFour'));
 
-const LeadStepFive = dynamic(() => import('./LeadStepFive/LeadStepFive'), {
-  ssr: false,
-});
+const LeadStepFive = dynamic(() => import('./LeadStepFive/LeadStepFive'));
 
-const LeadStepSix = dynamic(() => import('./LeadStepSix/LeadStepSix'), {
-  ssr: false,
-});
+const LeadStepSix = dynamic(() => import('./LeadStepSix/LeadStepSix'));
 import { FormInitialValue, LeadgenComponentProps } from '../types';
 import { useNavigateTo } from '@/hooks/useNavigationToThanks';
 import styles from './LeadgenComponent.module.css';

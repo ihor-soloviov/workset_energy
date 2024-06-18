@@ -1,11 +1,7 @@
-'use client';
-
 import React from 'react';
 import dynamic from 'next/dynamic';
 
-const Counter = dynamic(() => import('./Counter/Counter'), {
-  ssr: false,
-});
+const Counter = dynamic(() => import('./Counter/Counter'));
 
 import { amenitiesItems } from './amenitiesItems';
 import CheckIcon from '/public/icons/check.svg';
