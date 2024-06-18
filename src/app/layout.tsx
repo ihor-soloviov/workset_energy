@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 import Popup from '@/components/common/Popup/Popup';
@@ -7,6 +7,8 @@ import { interTight } from '@/utils/fonts';
 import type { Metadata } from 'next';
 import './globals.css';
 import 'normalize.css';
+import Loading from './loading';
+import Coockies from '@/utils/coockies';
 
 export const metadata: Metadata = {
   title: 'WorkSET Energy GmbH',
@@ -20,17 +22,13 @@ const RootLayout = ({
   return (
     <html lang="en">
       <head>
-        <script
-          id="usercentrics-cmp"
-          src="https://app.usercentrics.eu/browser-ui/latest/loader.js"
-          data-settings-id="2X8W5o7KVs-vfO"
-          data-language="de"
-          async
-        ></script>
+        <Coockies />
       </head>
       <body className={interTight.className}>
         <Header />
-        <main>{children}</main>
+        <Suspense fallback={<Loading />}>
+          <main>{children}</main>
+        </Suspense>
         <Footer />
         <Popup />
       </body>

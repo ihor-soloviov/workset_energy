@@ -1,15 +1,12 @@
 @keyframes pulse {
   0% {
     transform: scale(0.9);
-
   }
   70% {
     transform: scale(1);
-
   }
   100% {
     transform: scale(0.9);
-
   }
 }
 
@@ -63,6 +60,9 @@
   border: 1px solid var(--red-main);
   background-color: rgba(243, 44, 64, 0.4);
   position: absolute;
+}
+
+.regionLocationWrapVisible {
   animation: pulse 1.5s infinite;
 }
 

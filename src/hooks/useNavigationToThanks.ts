@@ -1,9 +1,10 @@
+import { Navigate } from '@/types/navigate';
 import { useRouter } from 'next/navigation';
 
-export function useNavigateToThankYou() {
+export function useNavigateTo(route: Navigate) {
   const router = useRouter();
 
   return () => {
-    router.push('/thank-you');
+    router.push(route);
   };
 }

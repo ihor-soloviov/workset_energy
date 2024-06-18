@@ -35,7 +35,6 @@ export const teamItems: TeamItem[] = [
     email: 'c.soultana@work-set.eu',
     tel: '+49 731 146 132 19',
   },
-
   {
     title: 'Damian Feluks',
     text: 'Frankfurt',

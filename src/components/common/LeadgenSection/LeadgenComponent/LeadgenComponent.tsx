@@ -26,8 +26,9 @@ const LeadStepSix = dynamic(() => import('./LeadStepSix/LeadStepSix'), {
   ssr: false,
 });
 import { FormInitialValue, LeadgenComponentProps } from '../types';
-import { useNavigateToThankYou } from '@/hooks/useNavigationToThanks';
+import { useNavigateTo } from '@/hooks/useNavigationToThanks';
 import styles from './LeadgenComponent.module.css';
+import { Navigate } from '@/types/navigate';
 
 const formInitialValue: FormInitialValue = {
   propertyType: '',
@@ -46,7 +47,7 @@ const formInitialValue: FormInitialValue = {
 
 const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
   const [formData, setFormData] = useState(formInitialValue);
-  const thankYou = useNavigateToThankYou();
+  const thankYou = useNavigateTo(Navigate.thanks);
   // console.log('formData', formData);
 
   const handlePrevStepClick = () => {
