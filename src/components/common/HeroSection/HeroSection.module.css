@@ -184,6 +184,10 @@
     display: block;
   }
 
+  .heroBgImgScaled {
+    transform: scale(1);
+  }
+  
   .heroContainer {
     display: flex;
     justify-content: space-between;
