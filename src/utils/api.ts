@@ -18,7 +18,7 @@ const formDataPost = async (
   } finally {
     setTimeout(
       () => setPopupAction && setPopupAction({ visible: false, status: '' }),
-      3000,
+      1000,
     );
   }
 };

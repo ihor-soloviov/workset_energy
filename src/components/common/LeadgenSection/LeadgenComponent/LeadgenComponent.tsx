@@ -1,18 +1,13 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import dynamic from 'next/dynamic';
 import { inter } from '@/utils/fonts';
 import { useEffect, useState } from 'react';
+import LeadStepOne from './LeadStepOne/LeadStepOne';
+import LeadStepTwo from './LeadStepTwo/LeadStepTwo';
+import LeadStepThree from './LeadStepThree/LeadStepThree';
+import LeadStepFour from './LeadStepFour/LeadStepFour';
+import LeadStepFive from './LeadStepFive/LeadStepFive';
+import LeadStepSix from './LeadStepSix/LeadStepSix';
 
-const LeadStepOne = dynamic(() => import('./LeadStepOne/LeadStepOne'));
-const LeadStepTwo = dynamic(() => import('./LeadStepTwo/LeadStepTwo'));
-
-const LeadStepThree = dynamic(() => import('./LeadStepThree/LeadStepThree'));
-
-const LeadStepFour = dynamic(() => import('./LeadStepFour/LeadStepFour'));
-
-const LeadStepFive = dynamic(() => import('./LeadStepFive/LeadStepFive'));
-
-const LeadStepSix = dynamic(() => import('./LeadStepSix/LeadStepSix'));
 import { FormInitialValue, LeadgenComponentProps } from '../types';
 import { useNavigateTo } from '@/hooks/useNavigationToThanks';
 import styles from './LeadgenComponent.module.css';

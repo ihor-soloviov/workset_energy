@@ -14,7 +14,7 @@ const LeadStepOne = ({ handleNextStepClick }: LeadStepProps) => {
     if (stepOneValue) {
       const timer = setTimeout(() => {
         handleNextStepClick(stepOneValue, 'propertyType');
-      }, 350);
+      }, 100);
       return () => clearTimeout(timer);
     }
   }, [stepOneValue, handleNextStepClick]);

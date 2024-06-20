@@ -18,7 +18,7 @@ const LeadStepThree = ({
     if (stepThreeValue) {
       const timer = setTimeout(() => {
         handleNextStepClick(`${stepThreeValue} monate`, 'timePeriod');
-      }, 350);
+      }, 100);
       return () => clearTimeout(timer);
     }
   }, [stepThreeValue, handleNextStepClick]);
