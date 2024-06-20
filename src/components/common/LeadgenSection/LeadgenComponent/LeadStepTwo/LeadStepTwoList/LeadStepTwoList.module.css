@@ -20,7 +20,7 @@
   border-radius: 8px;
   background-color: var(--white-main);
   box-shadow: 4px 12px 19px 0px rgba(24, 24, 24, 0.08);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 
 .stepTwoItem.active {
@@ -37,7 +37,7 @@
   width: 40px;
   height: 40px;
   fill: #3b3c4a;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 
 .stepTwoIcon.active {
@@ -48,7 +48,7 @@
   color: #3b3c4a;
   font-size: 18px;
   font-weight: 500;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 
 .stepTwoTitle.active {
