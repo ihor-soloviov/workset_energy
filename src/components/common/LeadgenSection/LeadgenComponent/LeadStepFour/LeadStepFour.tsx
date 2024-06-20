@@ -18,7 +18,7 @@ const LeadStepFour = ({
     if (stepFourValue) {
       const timer = setTimeout(() => {
         handleNextStepClick(stepFourValue, 'communicationType');
-      }, 350);
+      }, 100);
       return () => clearTimeout(timer);
     }
   }, [stepFourValue, handleNextStepClick]);

@@ -18,7 +18,7 @@ const LeadStepTwo = ({
     if (stepTwoValue) {
       const timer = setTimeout(() => {
         handleNextStepClick(stepTwoValue, 'consultType');
-      }, 350);
+      }, 100);
       return () => clearTimeout(timer);
     }
   }, [stepTwoValue, handleNextStepClick]);

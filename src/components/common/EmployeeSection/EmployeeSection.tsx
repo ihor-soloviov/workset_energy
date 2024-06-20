@@ -2,9 +2,7 @@
 import dynamic from 'next/dynamic';
 import styles from './EmployeeSection.module.css';
 import { inter } from '@/utils/fonts';
-const EmployeeList = dynamic(() => import('./EmployeeList/EmployeeList'), {
-  ssr: false,
-});
+const EmployeeList = dynamic(() => import('./EmployeeList/EmployeeList'));
 const RecycleTextWrap = dynamic(
   () => import('../RecycleTextWrap/RecycleTextWrap'),
   {

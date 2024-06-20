@@ -8,13 +8,9 @@ const RecycleTextWrap = dynamic(
     ssr: false,
   },
 );
-const ContactUsForm = dynamic(() => import('./ContactUsForm/ContactUsForm'), {
-  ssr: false,
-});
+const ContactUsForm = dynamic(() => import('./ContactUsForm/ContactUsForm'));
 
-const ContactUsMap = dynamic(() => import('./ContactUsMap/ContactUsMap'), {
-  ssr: false,
-});
+const ContactUsMap = dynamic(() => import('./ContactUsMap/ContactUsMap'));
 
 import styles from './ContactUsSection.module.css';
 import { inter } from '@/utils/fonts';

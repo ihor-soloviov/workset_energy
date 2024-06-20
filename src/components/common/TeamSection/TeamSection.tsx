@@ -8,9 +8,7 @@ const TeamSlider = dynamic(() => import('./TeamSlider/TeamSlider'), {
 const TeamTextWrap = dynamic(() => import('./TeamTextWrap/TeamTextWrap'), {
   ssr: false,
 });
-const TeamCarousel = dynamic(() => import('./TeamCarousel/TeamCarousel'), {
-  ssr: false,
-});
+const TeamCarousel = dynamic(() => import('./TeamCarousel/TeamCarousel'));
 import { useGlobalStore } from '@/store/global-store';
 import styles from './TeamSection.module.css';
 

@@ -5,9 +5,6 @@ import dynamic from 'next/dynamic';
 
 const LeadgenComponent = dynamic(
   () => import('./LeadgenComponent/LeadgenComponent'),
-  {
-    ssr: false,
-  },
 );
 
 import { useGlobalStore } from '@/store/global-store';
