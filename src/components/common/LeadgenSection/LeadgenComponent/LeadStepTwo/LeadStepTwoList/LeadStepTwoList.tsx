@@ -2,13 +2,11 @@ import { LeadStepListProps } from '../../../types';
 import styles from './LeadStepTwoList.module.css';
 import { stepTwoItems } from './leadStepTwoItems';
 import React from 'react';
-import { useGlobalStore } from '@/store/global-store';
-import { inter } from '@/utils/fonts';
+
 const LeadStepTwoList = ({ handleItemClick, stepValue }: LeadStepListProps) => {
-  const { isDesktop } = useGlobalStore();
   return (
     <ul className={styles.stepTwoList}>
-      {stepTwoItems.map(({ title, icon }) => (
+      {stepTwoItems.map(({ title, icon, className }) => (
         <li
           onClick={e => handleItemClick(e, title)}
           className={`${styles.stepTwoItem} ${stepValue === title ? styles.active : ''}`}
@@ -19,12 +17,12 @@ const LeadStepTwoList = ({ handleItemClick, stepValue }: LeadStepListProps) => {
               React.createElement(
                 icon,
                 {
-                  className: `${styles.stepTwoIcon} ${stepValue === title ? styles.active : ''}`,
+                  className: `${styles.stepTwoIcon} ${className ? styles[className] : ''} ${stepValue === title ? styles.active : ''}`,
                 },
                 null,
               )}
             <h4
-              className={`${styles.stepTwoTitle} ${isDesktop ? inter.className : ''} ${stepValue === title ? styles.active : ''}`}
+              className={`${styles.stepTwoTitle}  ${stepValue === title ? styles.active : ''}`}
             >
               {title}
             </h4>

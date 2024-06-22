@@ -1,104 +1,113 @@
-.stepThreeList {
+.stepOneList {
+  width: 340px;
+  height: 288px;
+  padding: 24px;
+  background-color: var(--gray-input);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
   justify-content: center;
-  width: 340px;
-  height: 288px;
-  background-color: var(--gray-input);
   margin-bottom: 36px;
   border-radius: 16px;
-  padding: 24px;
 }
 
-.stepThreeItem {
+.stepOneItem {
   cursor: pointer;
   width: 292px;
   height: 72px;
-  padding: 19px 20px;
+  padding: 16px 20px;
   border-radius: 8px;
   background-color: var(--white-main);
   box-shadow: 4px 12px 19px 0px rgba(24, 24, 24, 0.08);
-  fill: #3b3c4a;
   transition: all 0.15s ease-in-out;
 }
 
-.stepThreeItem.active {
+.stepOneItem.active {
   background-color: var(--red-main);
 }
 
-.stepThreeWrap {
+.stepOneWrap {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 18px;
 }
 
-.stepThreeTitle {
-  color: #3b3c4a;
-  font-size: 28px;
-  font-weight: 500;
-  width: 46px;
+.stepOneIcon {
+  width: 56px;
+  height: 56px;
+  stroke: #3b3c4a;
   transition: all 0.15s ease-in-out;
 }
 
-.stepThreeTitle.active {
-  color: var(--white-main);
+.stepOneIcon.active {
+  stroke: var(--white-main);
 }
 
-.stepThreeText {
+.stepOneTitle {
   color: #3b3c4a;
   font-size: 18px;
-  height: 19px;
   font-weight: 500;
-  fill: #3b3c4a;
   transition: all 0.15s ease-in-out;
 }
 
-.stepThreeText.active {
+.stepOneTitle.active {
   color: var(--white-main);
 }
 
 @media screen and (min-width: 1440px) {
-  .stepThreeList {
+  .stepOneList {
     width: 69.4rem;
     height: 28.2rem;
     padding: 4.8rem;
     border-radius: 1.6rem;
-    flex-direction: row;
     gap: 2rem;
+    flex-direction: row;
     margin: 0 auto;
     margin-bottom: 4.8rem;
   }
 
-  .stepThreeItem {
+  .stepOneItem {
     width: 18.6rem;
     height: 18.6rem;
     padding: unset;
-    padding-top: 6.5rem;
+    padding-top: 4.8rem;
     border-radius: 1.6rem;
   }
 
-  .stepThreeWrap {
+  .stepOneWrap {
     flex-direction: column;
     gap: 3.8rem;
   }
 
-  .stepThreeTitle {
-    font-weight: 600;
-    width: fit-content;
-    font-size: 3.2rem;
+  .stepOneItem:first-child .stepOneWrap {
+    gap: 3rem;
   }
 
-  .stepThreeText {
+  .stepOneIcon {
+    width: 5.6rem;
+    height: 5.6rem;
+  }
+
+  .stepOneItem:first-child .stepOneIcon {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .stepOneTitle {
+    line-height: 110%;
+    text-align: center;
     font-weight: 600;
     font-size: 1.8rem;
-    line-height: 110%;
+  }
+
+  .stepOneItem:first-child .stepOneTitle {
+    width: 10.6rem;
   }
 }
 
 @media screen and (min-width: 1728px) {
-  .stepThreeList {
+  .stepOneList {
     width: 694px;
     height: 282px;
     padding: 48px;
@@ -107,24 +116,36 @@
     margin-bottom: 48px;
   }
 
-  .stepThreeItem {
+  .stepOneItem {
     width: 186px;
     height: 186px;
-    padding-top: 65px;
+    padding-top: 48px;
     border-radius: 16px;
   }
 
-  .stepThreeWrap {
+  .stepOneWrap {
     gap: 38px;
   }
 
-  .stepThreeTitle {
-    font-size: 32px;
+  .stepOneItem:first-child .stepOneWrap {
+    gap: 30px;
   }
 
-  .stepThreeText {
-    font-weight: 600;
-    line-height: 110%;
+  .stepOneIcon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .stepOneItem:first-child .stepOneIcon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .stepOneTitle {
     font-size: 18px;
+  }
+
+  .stepOneItem:first-child .stepOneTitle {
+    width: 106px;
   }
 }

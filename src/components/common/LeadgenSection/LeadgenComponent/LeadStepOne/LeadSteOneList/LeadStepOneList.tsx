@@ -1,9 +1,11 @@
-import React from 'react';
-import { inter } from '@/utils/fonts';
-import { stepOneItems } from './leadStepOneItems';
 import { LeadStepListProps } from '../../../types';
 import styles from './LeadStepOneList.module.css';
+import { stepOneItems } from './leadStepOneItems';
+import React from 'react';
+import { useGlobalStore } from '@/store/global-store';
+import { inter } from '@/utils/fonts';
 const LeadStepOneList = ({ handleItemClick, stepValue }: LeadStepListProps) => {
+  const { isDesktop } = useGlobalStore();
   return (
     <ul className={styles.stepOneList}>
       {stepOneItems.map(({ title, icon }) => (
@@ -22,7 +24,7 @@ const LeadStepOneList = ({ handleItemClick, stepValue }: LeadStepListProps) => {
                 null,
               )}
             <h4
-              className={`${styles.stepOneTitle} ${inter.className} ${stepValue === title ? styles.active : ''}`}
+              className={`${styles.stepOneTitle} ${isDesktop ? inter.className : ''} ${stepValue === title ? styles.active : ''}`}
             >
               {title}
             </h4>

@@ -3,7 +3,7 @@ import { MouseEvent } from 'react';
 export type StepItem = {
   title: string;
   icon?: React.ElementType;
-  text?: string;
+  className?: string;
 };
 export type LeadgenComponentProps = {
   step: number;
@@ -11,18 +11,18 @@ export type LeadgenComponentProps = {
 };
 
 export type FormInitialValue = {
-  propertyType: string;
-  consultType: string;
-  timePeriod: string;
-  communicationType: string;
+  kWp: string;
+  componentsList: string;
+
   contactData: {
-    userFirstName: string;
-    userLastName: string;
-    userEmail: string;
+    userName: string;
     userPhone: string;
-    userPostcode: string;
   };
-  projectMessage: string;
+  extraContactData: {
+    userPostcode: string;
+    userEmail: string;
+    userMessage: string;
+  };
 };
 
 export type LeadStepProps = {

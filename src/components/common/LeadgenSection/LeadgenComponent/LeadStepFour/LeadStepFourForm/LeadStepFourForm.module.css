@@ -1,0 +1,186 @@
+.stepFourForm {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.stepFourLabelWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.stepFourLabel {
+  color: var(--black-main);
+  font-weight: 500;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  gap: 4px;
+}
+
+.stepFourInput {
+  color: var(--black-main);
+  font-size: 16px;
+  padding: 17px 12px;
+  width: 100%;
+  height: 60px;
+  border: 1px solid var(--gray-stroke);
+  border-radius: 8px;
+  outline: none;
+}
+
+.stepFourInput.error {
+  border: 1px solid var(--red-main);
+}
+
+.stepFourInput::placeholder {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--gray-text);
+}
+
+.errorText {
+  position: absolute;
+  right: 10px;
+  top: 77px;
+  width: fit-content;
+  color: var(--red-main);
+  font-size: 10px;
+}
+
+.stepFourBtnWrap {
+  display: flex;
+  align-items: center;
+  gap: 72px;
+  width: 292px;
+
+  margin: 0 auto;
+  margin-top: 18px;
+}
+
+.stepFourBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 32px;
+  border: 1px solid var(--gray-stroke);
+  width: 110px;
+  height: 44px;
+  background-color: var(--red-main);
+  outline: none;
+  color: var(--white-main);
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.15s ease-in-out;
+}
+
+.stepFourBtn:not(:disabled):hover {
+  color: var(--red-main);
+  border: 1px solid var(--white-stroke);
+  background-color: var(--white-main);
+}
+
+.stepFourBtn:disabled {
+  background-color: var(--white-main);
+  border: 1px solid var(--gray-stroke);
+  color: var(--black-main);
+  cursor: not-allowed;
+}
+
+.stepFourBtn:first-child {
+  background-color: var(--white-main);
+  border-color: var(--gray-stroke);
+  color: var(--black-main);
+}
+
+.stepFourBtn:first-child:hover {
+  background-color: var(--red-main);
+  border-color: var(--red-stroke);
+  color: var(--white-main);
+}
+
+@media screen and (min-width: 1440px) {
+  .stepFourForm {
+    width: 66.8rem;
+    margin: 0 auto;
+  }
+
+  .stepFourLabelWrap {
+    flex-direction: row;
+    gap: 2rem;
+    margin-bottom: unset;
+  }
+
+  .stepFourLabel {
+    gap: 0.6rem;
+    font-size: 1.4rem;
+    line-height: 160%;
+  }
+
+  .stepFourInput {
+    height: 5.6rem;
+  }
+
+  .errorText {
+    top: 8.3rem;
+  }
+
+  .stepFourBtnWrap {
+    gap: 2rem;
+    width: 31.8rem;
+    margin-top: 3.2rem;
+  }
+
+  .stepFourBtn {
+    width: 16.2rem;
+    font-size: 1.8rem;
+    height: 6rem;
+  }
+
+  .stepFourBtn:first-child {
+    width: 13.6rem;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .stepFourForm {
+    width: 668px;
+  }
+
+  .stepFourLabelWrap {
+    gap: 20px;
+  }
+
+  .stepFourLabel {
+    gap: 6px;
+    font-size: 14px;
+  }
+
+  .stepFourInput {
+    height: 56px;
+  }
+
+  .errorText {
+    top: 83px;
+  }
+
+  .stepFourBtnWrap {
+    gap: 20px;
+    width: 318px;
+
+    margin-top: 32px;
+  }
+
+  .stepFourBtn {
+    height: 60px;
+    width: 162px;
+    font-size: 18px;
+  }
+
+  .stepFourBtn:first-child {
+    width: 136px;
+  }
+}

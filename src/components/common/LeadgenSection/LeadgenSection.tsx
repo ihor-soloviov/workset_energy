@@ -15,38 +15,12 @@ const LeadgenSection = () => {
   const { isDesktop } = useGlobalStore();
 
   const getCurrentClass = () => {
-    switch (step) {
-      case 1:
-        return 'extraSmall';
-      case 2:
-        return 'small';
-      case 3:
-        return 'small';
-      case 4:
-        return !isDesktop ? 'medium' : 'extraMedium';
-      case 5:
-        return 'large';
-      case 6:
-        return 'smallMedium';
-      case 7:
-        return 'large';
-
-      default:
-        return '';
-    }
+    return;
   };
 
   return (
-    <section
-      id="leadgen"
-      className={`${styles.leadSection} ${styles[getCurrentClass()]}`}
-    >
+    <section id="leadgen" className={`${styles.leadSection}`}>
       <div className={styles.leadContainer}>
-        {step < 6 && (
-          <h2 className={styles.leadTitle}>
-            Investiere 30 Sekunden für dein PV-Projekt!
-          </h2>
-        )}
         <LeadgenComponent step={step} setStep={setStep} />
       </div>
     </section>

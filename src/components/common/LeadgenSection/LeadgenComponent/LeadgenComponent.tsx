@@ -5,8 +5,6 @@ import LeadStepOne from './LeadStepOne/LeadStepOne';
 import LeadStepTwo from './LeadStepTwo/LeadStepTwo';
 import LeadStepThree from './LeadStepThree/LeadStepThree';
 import LeadStepFour from './LeadStepFour/LeadStepFour';
-import LeadStepFive from './LeadStepFive/LeadStepFive';
-import LeadStepSix from './LeadStepSix/LeadStepSix';
 
 import { FormInitialValue, LeadgenComponentProps } from '../types';
 import { useNavigateTo } from '@/hooks/useNavigationToThanks';
@@ -14,24 +12,24 @@ import styles from './LeadgenComponent.module.css';
 import { Navigate } from '@/types/navigate';
 
 const formInitialValue: FormInitialValue = {
-  propertyType: '',
-  consultType: '',
-  timePeriod: '',
-  communicationType: '',
+  kWp: '',
+  componentsList: '',
   contactData: {
-    userFirstName: '',
-    userLastName: '',
-    userEmail: '',
+    userName: '',
     userPhone: '',
-    userPostcode: '',
   },
-  projectMessage: '',
+
+  extraContactData: {
+    userPostcode: '',
+    userEmail: '',
+    userMessage: '',
+  },
 };
 
 const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
   const [formData, setFormData] = useState(formInitialValue);
   const thankYou = useNavigateTo(Navigate.thanks);
-  // console.log('formData', formData);
+  console.log('formData', formData);
 
   const handlePrevStepClick = () => {
     clearStepValue(step - 1);
@@ -46,7 +44,12 @@ const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
   const currentStep = (step: number) => {
     switch (step) {
       case 1:
-        return <LeadStepOne handleNextStepClick={handleNextStepClick} />;
+        return (
+          <LeadStepOne
+            handlePrevStepClick={handlePrevStepClick}
+            handleNextStepClick={handleNextStepClick}
+          />
+        );
       case 2:
         return (
           <LeadStepTwo
@@ -57,34 +60,21 @@ const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
       case 3:
         return (
           <LeadStepThree
+            step={step}
+            setStep={setStep}
+            formData={formData}
+            setFormData={setFormData}
             handlePrevStepClick={handlePrevStepClick}
-            handleNextStepClick={handleNextStepClick}
           />
         );
       case 4:
         return (
           <LeadStepFour
-            handlePrevStepClick={handlePrevStepClick}
-            handleNextStepClick={handleNextStepClick}
-          />
-        );
-      case 5:
-        return (
-          <LeadStepFive
             step={step}
             setStep={setStep}
             formData={formData}
             setFormData={setFormData}
             handlePrevStepClick={handlePrevStepClick}
-          />
-        );
-      case 6:
-        return (
-          <LeadStepSix
-            step={step}
-            setStep={setStep}
-            formData={formData}
-            setFormData={setFormData}
           />
         );
 
@@ -98,34 +88,24 @@ const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
       case 1:
         return setFormData({
           ...formData,
-          propertyType: formInitialValue.propertyType,
+          kWp: formInitialValue.kWp,
         });
 
       case 2:
         return setFormData({
           ...formData,
-          consultType: formInitialValue.consultType,
+          componentsList: formInitialValue.componentsList,
         });
 
       case 3:
         return setFormData({
           ...formData,
-          timePeriod: formInitialValue.timePeriod,
+          contactData: formInitialValue.contactData,
         });
       case 4:
         return setFormData({
           ...formData,
-          communicationType: formInitialValue.communicationType,
-        });
-      case 5:
-        return setFormData({
-          ...formData,
-          contactData: formInitialValue.contactData,
-        });
-      case 6:
-        return setFormData({
-          ...formData,
-          projectMessage: formInitialValue.projectMessage,
+          extraContactData: formInitialValue.extraContactData,
         });
 
       default:
@@ -134,7 +114,7 @@ const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
   };
 
   useEffect(() => {
-    if (step === 7) {
+    if (step === 5) {
       thankYou();
       setStep(1);
       setFormData(formInitialValue);
@@ -143,7 +123,7 @@ const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
 
   return (
     <div className={styles.leadMainWrap}>
-      {step < 6 && (
+      {/* {step < 6 && (
         <div className={styles.leadProgressWrap}>
           <ul className={styles.leadProgressList}>
             {[1, 2, 3, 4, 5].map(item => (
@@ -157,7 +137,7 @@ const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
             <span>{`${step !== 6 && step !== 7 ? step : 5} `}</span>von 5
           </p>
         </div>
-      )}
+      )} */}
       {currentStep(step)}
     </div>
   );

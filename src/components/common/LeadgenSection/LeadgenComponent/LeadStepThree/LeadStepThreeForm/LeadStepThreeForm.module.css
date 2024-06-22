@@ -1,16 +1,16 @@
-.stepFiveForm {
+.stepThreeForm {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
 
-.stepFiveLabelWrap {
+.stepThreeLabelWrap {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
 
-.stepFiveLabel {
+.stepThreeLabel {
   color: var(--black-main);
   font-weight: 500;
   font-size: 13px;
@@ -21,7 +21,7 @@
   gap: 4px;
 }
 
-.stepFiveInput {
+.stepThreeInput {
   color: var(--black-main);
   font-size: 16px;
   padding: 17px 12px;
@@ -32,11 +32,11 @@
   outline: none;
 }
 
-.stepFiveInput.error {
+.stepThreeInput.error {
   border: 1px solid var(--red-main);
 }
 
-.stepFiveInput::placeholder {
+.stepThreeInput::placeholder {
   font-size: 15px;
   font-weight: 400;
   color: var(--gray-text);
@@ -51,7 +51,7 @@
   font-size: 10px;
 }
 
-.stepFiveBtnWrap {
+.stepThreeBtnWrap {
   display: flex;
   align-items: center;
   gap: 72px;
@@ -61,7 +61,7 @@
   margin-top: 18px;
 }
 
-.stepFiveBtn {
+.stepThreeBtn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,50 +77,50 @@
   transition: all 0.15s ease-in-out;
 }
 
-.stepFiveBtn:not(:disabled):hover {
+.stepThreeBtn:not(:disabled):hover {
   color: var(--red-main);
   border: 1px solid var(--white-stroke);
   background-color: var(--white-main);
 }
 
-.stepFiveBtn:disabled {
+.stepThreeBtn:disabled {
   background-color: var(--white-main);
   border: 1px solid var(--gray-stroke);
   color: var(--black-main);
   cursor: not-allowed;
 }
 
-.stepFiveBtn:first-child {
+.stepThreeBtn:first-child {
   background-color: var(--white-main);
   border-color: var(--gray-stroke);
   color: var(--black-main);
 }
 
-.stepFiveBtn:first-child:hover {
+.stepThreeBtn:first-child:hover {
   background-color: var(--red-main);
   border-color: var(--red-stroke);
   color: var(--white-main);
 }
 
 @media screen and (min-width: 1440px) {
-  .stepFiveForm {
+  .stepThreeForm {
     width: 66.8rem;
     margin: 0 auto;
   }
 
-  .stepFiveLabelWrap {
+  .stepThreeLabelWrap {
     flex-direction: row;
     gap: 2rem;
     margin-bottom: unset;
   }
 
-  .stepFiveLabel {
+  .stepThreeLabel {
     gap: 0.6rem;
     font-size: 1.4rem;
     line-height: 160%;
   }
 
-  .stepFiveInput {
+  .stepThreeInput {
     height: 5.6rem;
   }
 
@@ -128,38 +128,38 @@
     top: 8.3rem;
   }
 
-  .stepFiveBtnWrap {
+  .stepThreeBtnWrap {
     gap: 2rem;
     width: 31.8rem;
     margin-top: 3.2rem;
   }
 
-  .stepFiveBtn {
+  .stepThreeBtn {
     width: 16.2rem;
     font-size: 1.8rem;
     height: 6rem;
   }
 
-  .stepFiveBtn:first-child {
+  .stepThreeBtn:first-child {
     width: 13.6rem;
   }
 }
 
 @media screen and (min-width: 1728px) {
-  .stepFiveForm {
+  .stepThreeForm {
     width: 668px;
   }
 
-  .stepFiveLabelWrap {
+  .stepThreeLabelWrap {
     gap: 20px;
   }
 
-  .stepFiveLabel {
+  .stepThreeLabel {
     gap: 6px;
     font-size: 14px;
   }
 
-  .stepFiveInput {
+  .stepThreeInput {
     height: 56px;
   }
 
@@ -167,20 +167,20 @@
     top: 83px;
   }
 
-  .stepFiveBtnWrap {
+  .stepThreeBtnWrap {
     gap: 20px;
     width: 318px;
 
     margin-top: 32px;
   }
 
-  .stepFiveBtn {
+  .stepThreeBtn {
     height: 60px;
     width: 162px;
     font-size: 18px;
   }
 
-  .stepFiveBtn:first-child {
+  .stepThreeBtn:first-child {
     width: 136px;
   }
 }

@@ -39,7 +39,7 @@ const HeroSection = ({
   const pathname = usePathname();
   useObserver(`.${styles.heroAnim}`, `${styles.heroAnimVisible}`);
   useObserver(`.${styles.heroImgMob}`, `${styles.heroBgImgScaled}`);
-  useObserver(`.${styles.heroImgDesk}`, `${styles.heroBgImgScaled}`);
+  useObserver(`.${styles.heroImgDesc}`, `${styles.heroBgImgScaled}`);
 
   const scrollToTeamSection = () => {
     if (!isDesktop) {
