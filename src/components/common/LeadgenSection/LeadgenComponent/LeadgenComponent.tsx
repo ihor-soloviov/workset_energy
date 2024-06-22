@@ -1,15 +1,16 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { inter } from '@/utils/fonts';
 import { useEffect, useState } from 'react';
+import CheckIcon from '/public/icons/check.svg';
 import LeadStepOne from './LeadStepOne/LeadStepOne';
 import LeadStepTwo from './LeadStepTwo/LeadStepTwo';
 import LeadStepThree from './LeadStepThree/LeadStepThree';
 import LeadStepFour from './LeadStepFour/LeadStepFour';
-
 import { FormInitialValue, LeadgenComponentProps } from '../types';
 import { useNavigateTo } from '@/hooks/useNavigationToThanks';
 import styles from './LeadgenComponent.module.css';
 import { Navigate } from '@/types/navigate';
+import { useGlobalStore } from '@/store/global-store';
 
 const formInitialValue: FormInitialValue = {
   kWp: '',
@@ -25,6 +26,8 @@ const formInitialValue: FormInitialValue = {
     userMessage: '',
   },
 };
+
+const leadProgressList = ['Stromverbrauch', 'Komponenten', 'Kontaktdaten'];
 
 const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
   const [formData, setFormData] = useState(formInitialValue);
@@ -123,21 +126,40 @@ const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
 
   return (
     <div className={styles.leadMainWrap}>
-      {/* {step < 6 && (
+      {step < 4 && (
         <div className={styles.leadProgressWrap}>
           <ul className={styles.leadProgressList}>
-            {[1, 2, 3, 4, 5].map(item => (
+            {leadProgressList.map((text, index) => (
               <li
-                className={`${styles.leadProgressItem} ${step === item || item < step ? styles.active : ''}`}
-                key={item}
-              ></li>
+                className={`${styles.leadProgressItem} ${step === index + 1 || index + 1 < step ? styles.active : ''}`}
+                key={text}
+              >
+                {step > index + 1 ? (
+                  <CheckIcon className={styles.leadProgressIcon} />
+                ) : (
+                  <p
+                    className={`${styles.leadProgressCount} ${step === index + 1 || index + 1 < step ? styles.active : ''} ${inter.className}`}
+                  >
+                    {index + 1}
+                  </p>
+                )}
+                <p className={styles.leadProgressText}>{text}</p>
+                {index + 1 !== 3 && (
+                  <ul className={styles.leadProgressLinesList}>
+                    {[1, 2, 3, 4, 5, 6].map(num => (
+                      <li
+                        className={`${styles.leadProgressLine} ${index + 1 < step ? styles.active : ''}`}
+                        key={num}
+                      ></li>
+                    ))}
+                  </ul>
+                )}
+              </li>
             ))}
           </ul>
-          <p className={`${styles.leadProgressText} ${inter.className}`}>
-            <span>{`${step !== 6 && step !== 7 ? step : 5} `}</span>von 5
-          </p>
         </div>
-      )} */}
+      )}
+
       {currentStep(step)}
     </div>
   );

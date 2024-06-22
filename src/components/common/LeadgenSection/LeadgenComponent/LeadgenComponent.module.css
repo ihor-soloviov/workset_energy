@@ -3,34 +3,92 @@
 
 .leadProgressWrap {
   margin: 0 auto;
-  width: fit-content;
+  width: 100%;
   margin-bottom: 24px;
 }
 
 .leadProgressList {
   display: flex;
   align-items: center;
-  gap: 9px;
+  justify-content: space-between;
   margin: 0 auto;
-  width: fit-content;
+  width: 100%;
   margin-bottom: 14px;
 }
 
 .leadProgressItem {
-  width: 48px;
-  height: 6px;
-  border-radius: 26px;
-  background-color: var(--gray-stroke);
+  position: relative;
+  display: flex;
+  width: 36px;
+  height: 36px;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--gray-stroke);
+  align-items: center;
+  background-color: transparent;
+  transition: all 0.2s ease-in-out;
 }
 
 .leadProgressItem.active {
-  background-color: var(--red-main);
+  background-color: var(--red-second);
+}
+
+.leadProgressCount {
+  color: var(--gray-text);
+  font-size: 18.5px;
+  font-weight: 500;
+  line-height: 150%;
+  height: 25px;
+  letter-spacing: -0.185px;
+  transition: all 0.2s ease-in-out;
+}
+
+.leadProgressCount.active {
+  color: var(--white-main);
 }
 
 .leadProgressText {
-  color: var(--gray-text);
-  font-size: 15px;
-  font-weight: 600;
+  display: none;
+}
+
+.leadProgressIcon {
+  width: 18px;
+  height: 18px;
+  stroke: var(--white-main);
+  transition: all 0.2s ease-in-out;
+}
+
+.leadProgressLinesList {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100px;
+  bottom: 16px;
+  height: 2px;
+  right: -110px;
+}
+
+.leadProgressLine {
+  height: 2px;
+  width: 12px;
+  border-radius: 32px;
+  background-color: var(--gray-text);
+  transition: all 0.2s ease-in-out;
+  opacity: 0.2;
+}
+
+.leadProgressLine:first-child {
+  width: 8px;
+}
+.leadProgressLine:last-child {
+  width: 8px;
+}
+
+.leadProgressLine.active {
+  opacity: 1;
+  background-color: var(--red-second);
 }
 
 @media screen and (min-width: 1440px) {
