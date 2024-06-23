@@ -2,6 +2,7 @@ import { MouseEvent } from 'react';
 
 export type StepItem = {
   title: string;
+  text?: string;
   icon?: React.ElementType;
   className?: string;
 };
@@ -12,7 +13,7 @@ export type LeadgenComponentProps = {
 
 export type FormInitialValue = {
   kWp: string;
-  componentsList: string;
+  componentsList: string[];
 
   contactData: {
     userName: string;
@@ -28,12 +29,15 @@ export type FormInitialValue = {
 export type LeadStepProps = {
   isLoading?: boolean;
   handlePrevStepClick?: () => void;
-  handleNextStepClick: (stepValue: string | null, key: string) => void;
+  handleNextStepClick: (
+    stepValue: string | string[] | null,
+    key: string,
+  ) => void;
 };
 
 export type LeadStepListProps = {
   handleItemClick: (e: MouseEvent<HTMLLIElement>, itemValue: string) => void;
-  stepValue: null | string;
+  stepValue: null | string | string[];
 };
 
 export type LeadFormProps = {

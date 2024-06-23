@@ -2,6 +2,7 @@ import styles from './LeadStepFour.module.css';
 import LeadStepFourForm from './LeadStepFourForm/LeadStepFourForm';
 import React from 'react';
 import { LeadFormProps } from '../../types';
+import { inter } from '@/utils/fonts';
 
 const LeadStepFour = ({
   formData,
@@ -11,9 +12,9 @@ const LeadStepFour = ({
   handlePrevStepClick,
 }: LeadFormProps) => {
   return (
-    <div className={styles.stepThreeWrap}>
-      <h2 className={styles.stepThreeTitle}>WorkSET Energy sagt Danke!</h2>
-      <p className={styles.stepThreeText}>
+    <div className={styles.stepFourWrap}>
+      <h2 className={styles.stepFourTitle}>WorkSET Energy sagt Danke!</h2>
+      <p className={`${styles.stepFourText} ${inter.className}`}>
         Wir haben deine Anfrage erhalten. Schreibe uns eine Nachricht, damit wir
         deine Anfrage schneller bearbeiten können.
       </p>

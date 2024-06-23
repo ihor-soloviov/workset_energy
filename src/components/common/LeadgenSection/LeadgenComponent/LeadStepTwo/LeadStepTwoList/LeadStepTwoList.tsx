@@ -9,7 +9,7 @@ const LeadStepTwoList = ({ handleItemClick, stepValue }: LeadStepListProps) => {
       {stepTwoItems.map(({ title, icon, className }) => (
         <li
           onClick={e => handleItemClick(e, title)}
-          className={`${styles.stepTwoItem} ${stepValue === title ? styles.active : ''}`}
+          className={`${styles.stepTwoItem} ${stepValue?.includes(title) ? styles.active : ''}`}
           key={title}
         >
           <div className={styles.stepTwoWrap}>
@@ -17,12 +17,12 @@ const LeadStepTwoList = ({ handleItemClick, stepValue }: LeadStepListProps) => {
               React.createElement(
                 icon,
                 {
-                  className: `${styles.stepTwoIcon} ${className ? styles[className] : ''} ${stepValue === title ? styles.active : ''}`,
+                  className: `${styles.stepTwoIcon} ${className ? styles[className] : ''} ${stepValue?.includes(title) ? styles.active : ''}`,
                 },
                 null,
               )}
             <h4
-              className={`${styles.stepTwoTitle}  ${stepValue === title ? styles.active : ''}`}
+              className={`${styles.stepTwoTitle}  ${stepValue?.includes(title) ? styles.active : ''}`}
             >
               {title}
             </h4>

@@ -83,7 +83,7 @@ const LeadStepThreeForm = ({
           type="submit"
           className={styles.stepThreeBtn}
         >
-          Absenden
+          Weiter
         </Button>
       </div>
     </form>

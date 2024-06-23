@@ -19,8 +19,7 @@ const LeadStepFourForm = ({
     errors,
     touched,
     getFieldProps,
-    isValid,
-    dirty,
+
     resetForm,
   } = useFormik({
     initialValues: {
@@ -30,10 +29,8 @@ const LeadStepFourForm = ({
       userMessage: '',
     },
     validationSchema: Yup.object({
-      userPostcode: Yup.string().required('Required'),
-      userEmail: Yup.string()
-        .email('Invalid email address')
-        .required('Required'),
+      userPostcode: Yup.string(),
+      userEmail: Yup.string().email('Invalid email address'),
 
       userMessage: Yup.string(),
     }),
@@ -52,52 +49,35 @@ const LeadStepFourForm = ({
     >
       <div className={styles.stepFourLabelWrap}>
         <label className={styles.stepFourLabel}>
-          PLZ und Stadt der Projektadresse*
+          PLZ
           <input
-            placeholder="PLZ und Stadt der Projektadresse"
-            className={`${styles.stepFourInput} ${touched.userPostcode && errors.userPostcode && styles.error}`}
+            placeholder="PLZ"
+            className={styles.stepFourInput}
             {...getFieldProps('userPostcode')}
           />
-          {touched.userPostcode && errors.userPostcode && (
-            <p className={styles.errorText}>{errors.userPostcode}</p>
-          )}
         </label>
 
         <label className={styles.stepFourLabel}>
-          E-Mail*
+          E-Mail
           <input
             placeholder="E-Mail"
-            className={`${styles.stepFourInput} ${touched.userEmail && errors.userEmail && styles.error}`}
+            className={styles.stepFourInput}
             {...getFieldProps('userEmail')}
           />
-          {touched.userEmail && errors.userEmail && (
-            <p className={styles.errorText}>{errors.userEmail}</p>
-          )}
         </label>
       </div>
       <label className={styles.stepFourLabel}>
+        Nachricht
         <textarea
           placeholder="Nachricht"
           className={styles.stepFourTextArea}
           {...getFieldProps('userMessage')}
         ></textarea>
       </label>
-      <div className={`${styles.stepFourBtnWrap} ${interTight.className}`}>
-        <Button
-          className={styles.stepFourBtn}
-          handleClick={handlePrevStepClick}
-          type="button"
-        >
-          Zurück
-        </Button>
-        <Button
-          disabled={!(isValid && dirty)}
-          type="submit"
-          className={styles.stepFourBtn}
-        >
-          Absenden
-        </Button>
-      </div>
+
+      <Button type="submit" className={styles.stepFourBtn}>
+        Absenden
+      </Button>
     </form>
   );
 };

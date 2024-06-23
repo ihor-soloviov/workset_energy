@@ -94,22 +94,41 @@
   height: 94px;
   text-align: center;
   color: var(--black-main);
-  font-size: 36px;
-  font-weight: 700;
+  font-size: 28px;
+  font-weight: 600;
   line-height: 130%;
   margin: 0 auto;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .heroThankText {
   color: var(--gray-text);
   text-align: center;
   width: 342px;
-  height: 78px;
-  font-size: 16px;
+  font-size: 18px;
+  width: 313px;
   line-height: 160%;
   margin: 0 auto;
-  margin-bottom: 32px;
+  margin-bottom: 36px;
+}
+
+.heroThankIconWrap {
+  margin: 0 auto;
+  margin-bottom: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 50%;
+  width: 148px;
+  height: 148px;
+  filter: drop-shadow(0px 4.485px 34.982px rgba(218, 218, 218, 0.7));
+}
+
+.heroThankIcon {
+  width: 64px;
+  display: block;
+  height: 64px;
 }
 
 .heroThankBtn {
@@ -120,8 +139,8 @@
   background-color: var(--red-main);
   color: var(--white-main);
 
-  width: 168px;
-  height: 60px;
+  width: 148px;
+  height: 48px;
   justify-content: center;
   margin: 0 auto;
   transition:
@@ -142,7 +161,7 @@
   }
 
   .heroThankYouContainer {
-    padding: 162px 25px 0;
+    padding: 48px 25px 0;
   }
 
   .heroTopWrap {

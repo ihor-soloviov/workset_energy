@@ -8,37 +8,51 @@ const LeadStepTwo = ({
   handleNextStepClick,
   handlePrevStepClick,
 }: LeadStepProps) => {
-  const [stepTwoValue, setstepTwoValue] = useState<null | string>(null);
+  const [stepTwoValues, setStepTwoValues] = useState<string[]>([]);
+  const [isDisabled, setIsDisabled] = useState(true);
+
+  console.log(stepTwoValues);
 
   const handleItemClick = (e: MouseEvent<HTMLLIElement>, itemValue: string) => {
-    setstepTwoValue(itemValue);
+    setStepTwoValues(prevValues =>
+      prevValues.includes(itemValue)
+        ? prevValues.filter(value => value !== itemValue)
+        : [...prevValues, itemValue],
+    );
   };
 
   useEffect(() => {
-    if (stepTwoValue) {
-      const timer = setTimeout(() => {
-        handleNextStepClick(stepTwoValue, 'componentsList');
-      }, 100);
-      return () => clearTimeout(timer);
-    }
-  }, [stepTwoValue, handleNextStepClick]);
+    stepTwoValues.length !== 0 ? setIsDisabled(false) : setIsDisabled(true);
+  }, [stepTwoValues]);
 
   return (
     <div className={styles.stepTwoWrap}>
       <h2 className={styles.stepTwoTitle}>Welche Komponenten benötigen Sie?</h2>
 
       <LeadStepTwoList
-        stepValue={stepTwoValue}
+        stepValue={stepTwoValues}
         handleItemClick={handleItemClick}
       />
 
-      <Button
-        handleClick={handlePrevStepClick}
-        type="button"
-        className={styles.stepTwoBtn}
-      >
-        Zurück
-      </Button>
+      <div className={styles.stepTwoBtnWrap}>
+        <Button
+          handleClick={handlePrevStepClick}
+          type="button"
+          className={styles.stepTwoBtn}
+        >
+          Zurück
+        </Button>
+        <Button
+          handleClick={() =>
+            handleNextStepClick(stepTwoValues, 'componentsList')
+          }
+          disabled={isDisabled}
+          type="button"
+          className={styles.stepTwoBtn}
+        >
+          Weiter
+        </Button>
+      </div>
     </div>
   );
 };

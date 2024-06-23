@@ -2,6 +2,7 @@ import styles from './LeadStepThree.module.css';
 import LeadStepThreeForm from './LeadStepThreeForm/LeadStepThreeForm';
 import React from 'react';
 import { LeadFormProps } from '../../types';
+import { inter } from '@/utils/fonts';
 
 const LeadStepThree = ({
   formData,
@@ -13,9 +14,9 @@ const LeadStepThree = ({
   return (
     <div className={styles.stepThreeWrap}>
       <h2 className={styles.stepThreeTitle}>Kontaktdaten</h2>
-      <h2 className={styles.stepThreeText}>
+      <p className={`${styles.stepThreeText} ${inter.className}`}>
         Bitte alle Felder ausfüllen, damit wir dich erreichen können.
-      </h2>
+      </p>
       <LeadStepThreeForm
         formData={formData}
         setFormData={setFormData}

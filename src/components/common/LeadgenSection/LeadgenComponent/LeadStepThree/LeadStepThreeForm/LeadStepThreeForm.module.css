@@ -1,13 +1,7 @@
 .stepThreeForm {
   display: flex;
   flex-direction: column;
-  gap: 18px;
-}
-
-.stepThreeLabelWrap {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
+  gap: 20px;
 }
 
 .stepThreeLabel {
@@ -24,7 +18,7 @@
 .stepThreeInput {
   color: var(--black-main);
   font-size: 16px;
-  padding: 17px 12px;
+  padding: 21px 12px;
   width: 100%;
   height: 60px;
   border: 1px solid var(--gray-stroke);
@@ -45,7 +39,7 @@
 .errorText {
   position: absolute;
   right: 10px;
-  top: 77px;
+  top: 82px;
   width: fit-content;
   color: var(--red-main);
   font-size: 10px;
@@ -54,11 +48,9 @@
 .stepThreeBtnWrap {
   display: flex;
   align-items: center;
-  gap: 72px;
-  width: 292px;
+  justify-content: space-between;
 
-  margin: 0 auto;
-  margin-top: 18px;
+  margin-top: 16px;
 }
 
 .stepThreeBtn {
@@ -67,12 +59,12 @@
   align-items: center;
   border-radius: 32px;
   border: 1px solid var(--gray-stroke);
-  width: 110px;
+  width: 132px;
   height: 44px;
   background-color: var(--red-main);
   outline: none;
   color: var(--white-main);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   transition: all 0.15s ease-in-out;
 }
@@ -97,21 +89,15 @@
 }
 
 .stepThreeBtn:first-child:hover {
-  background-color: var(--red-main);
-  border-color: var(--red-stroke);
-  color: var(--white-main);
+  background-color: var(--white-main);
+  border-color: var(--white-main);
+  color: var(--red-main);
 }
 
 @media screen and (min-width: 1440px) {
   .stepThreeForm {
     width: 66.8rem;
     margin: 0 auto;
-  }
-
-  .stepThreeLabelWrap {
-    flex-direction: row;
-    gap: 2rem;
-    margin-bottom: unset;
   }
 
   .stepThreeLabel {
@@ -148,10 +134,6 @@
 @media screen and (min-width: 1728px) {
   .stepThreeForm {
     width: 668px;
-  }
-
-  .stepThreeLabelWrap {
-    gap: 20px;
   }
 
   .stepThreeLabel {

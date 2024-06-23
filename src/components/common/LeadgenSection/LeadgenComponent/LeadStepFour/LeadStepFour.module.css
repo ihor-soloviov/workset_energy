@@ -4,7 +4,7 @@
 .stepFourTitle {
   color: var(--black--main);
   text-align: center;
-  font-size: 20px;
+  font-size: 28px;
   font-weight: 600;
   line-height: 130%;
   width: fit-content;
@@ -15,10 +15,10 @@
 .stepFourText {
   color: var(--gray-text);
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 300;
   text-align: center;
-  line-height: 140%;
-  width: 269px;
+  line-height: 160%;
+  width: fit-content;
   margin: 0 auto;
   margin-bottom: 24px;
 }

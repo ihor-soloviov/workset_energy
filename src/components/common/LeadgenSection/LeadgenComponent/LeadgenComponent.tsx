@@ -11,10 +11,11 @@ import { useNavigateTo } from '@/hooks/useNavigationToThanks';
 import styles from './LeadgenComponent.module.css';
 import { Navigate } from '@/types/navigate';
 import { useGlobalStore } from '@/store/global-store';
+import LeadAmenitiesList from './LeadAmenitiesList/LeadAmenitiesList';
 
 const formInitialValue: FormInitialValue = {
   kWp: '',
-  componentsList: '',
+  componentsList: [],
   contactData: {
     userName: '',
     userPhone: '',
@@ -27,11 +28,12 @@ const formInitialValue: FormInitialValue = {
   },
 };
 
-const leadProgressList = ['Stromverbrauch', 'Komponenten', 'Kontaktdaten'];
-
 const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
   const [formData, setFormData] = useState(formInitialValue);
   const thankYou = useNavigateTo(Navigate.thanks);
+  const { isDesktop } = useGlobalStore();
+  const leadProgressList = ['Stromverbrauch', 'Komponenten', 'Kontaktdaten'];
+  const leadProgressLinesList = !isDesktop ? [1, 2, 3, 4, 5, 6] : [1, 2, 3, 4];
   console.log('formData', formData);
 
   const handlePrevStepClick = () => {
@@ -39,7 +41,10 @@ const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
     setStep(step - 1);
   };
 
-  const handleNextStepClick = (stepValue: string | null, key: string) => {
+  const handleNextStepClick = (
+    stepValue: string | string[] | null,
+    key: string,
+  ) => {
     stepValue && setFormData({ ...formData, [key]: stepValue });
     setStep(step + 1);
   };
@@ -47,12 +52,7 @@ const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
   const currentStep = (step: number) => {
     switch (step) {
       case 1:
-        return (
-          <LeadStepOne
-            handlePrevStepClick={handlePrevStepClick}
-            handleNextStepClick={handleNextStepClick}
-          />
-        );
+        return <LeadStepOne handleNextStepClick={handleNextStepClick} />;
       case 2:
         return (
           <LeadStepTwo
@@ -143,10 +143,14 @@ const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
                     {index + 1}
                   </p>
                 )}
-                <p className={styles.leadProgressText}>{text}</p>
+                <p
+                  className={`${styles.leadProgressText} ${step === index + 1 || index + 1 < step ? styles.active : ''}`}
+                >
+                  {text}
+                </p>
                 {index + 1 !== 3 && (
                   <ul className={styles.leadProgressLinesList}>
-                    {[1, 2, 3, 4, 5, 6].map(num => (
+                    {leadProgressLinesList.map(num => (
                       <li
                         className={`${styles.leadProgressLine} ${index + 1 < step ? styles.active : ''}`}
                         key={num}
@@ -161,6 +165,14 @@ const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
       )}
 
       {currentStep(step)}
+      {step > 1 && step < 4 && (
+        <div className={styles.leadAmentitesWrap}>
+          <h3 className={`${styles.leadAmentitesTitle} ${inter.className}`}>
+            Unser Vorteile
+          </h3>
+          <LeadAmenitiesList />
+        </div>
+      )}
     </div>
   );
 };
