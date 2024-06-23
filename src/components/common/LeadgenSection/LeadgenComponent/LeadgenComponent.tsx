@@ -1,4 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+'use client';
+
 import { inter } from '@/utils/fonts';
 import { useEffect, useState } from 'react';
 import CheckIcon from '/public/icons/check.svg';
