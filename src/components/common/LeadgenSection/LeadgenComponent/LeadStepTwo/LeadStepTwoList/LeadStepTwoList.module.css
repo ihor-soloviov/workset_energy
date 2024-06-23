@@ -17,6 +17,7 @@
   width: 292px;
   height: 72px;
   padding: 8px 65px 8px 28px;
+  border: 2px solid transparent;
   border-radius: 8px;
   background-color: var(--white-main);
   box-shadow: 4px 12px 19px 0px rgba(24, 24, 24, 0.08);
@@ -94,6 +95,10 @@
     border-radius: 2.4rem;
   }
 
+  .stepTwoItem:hover {
+    border: 0.2rem solid var(--red-main);
+  }
+
   .stepTwoWrap {
     flex-direction: column;
     gap: 2.2rem;
@@ -146,6 +151,10 @@
     height: 256px;
     padding: 48px 61px 26px;
     border-radius: 24px;
+  }
+
+  .stepTwoItem:hover {
+    border: 2px solid var(--red-main);
   }
 
   .stepTwoWrap {

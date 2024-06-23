@@ -6,7 +6,7 @@ import LeadStepOne from './LeadStepOne/LeadStepOne';
 import LeadStepTwo from './LeadStepTwo/LeadStepTwo';
 import LeadStepThree from './LeadStepThree/LeadStepThree';
 import LeadStepFour from './LeadStepFour/LeadStepFour';
-import { FormInitialValue, LeadgenComponentProps } from '../types';
+import { FormInitialValue } from '../types';
 import { useNavigateTo } from '@/hooks/useNavigationToThanks';
 import styles from './LeadgenComponent.module.css';
 import { Navigate } from '@/types/navigate';
@@ -28,7 +28,8 @@ const formInitialValue: FormInitialValue = {
   },
 };
 
-const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
+const LeadgenComponent = () => {
+  const [step, setStep] = useState(1);
   const [formData, setFormData] = useState(formInitialValue);
   const thankYou = useNavigateTo(Navigate.thanks);
   const { isDesktop } = useGlobalStore();

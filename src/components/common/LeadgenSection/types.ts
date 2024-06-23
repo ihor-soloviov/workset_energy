@@ -9,10 +9,6 @@ export type StepItem = {
   iconDeskWhite?: React.ElementType;
   className?: string;
 };
-export type LeadgenComponentProps = {
-  step: number;
-  setStep: (step: number) => void;
-};
 
 export type FormInitialValue = {
   kWp: string;
