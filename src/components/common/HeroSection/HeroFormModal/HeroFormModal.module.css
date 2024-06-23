@@ -194,7 +194,7 @@
   }
 
   .heroThankYouWrap {
-    padding: 35rem 0 28.8rem;
+    padding: 25.4rem 0 28.8rem;
     height: 97.2rem;
     z-index: 97;
   }
@@ -235,21 +235,27 @@
 
   .heroThankTitle {
     margin-top: unset;
-    font-size: 6.4rem;
-    width: 58.4rem;
-    height: 16.6rem;
+    font-size: 4.4rem;
+    width: 57.8rem;
+    height: fit-content;
+    margin-bottom: 1.2rem;
   }
 
   .heroThankText {
     font-size: 1.8rem;
     height: auto;
-    margin-bottom: 4rem;
-    width: 58.6rem;
+    margin-bottom: 8.2rem;
+    width: 57.6rem;
+  }
+
+  .heroThankIconWrap {
+    margin-bottom: 8.2rem;
   }
 
   .heroThankBtn {
     border-radius: 3.2rem;
     height: 6rem;
+    width: 20.6rem;
     font-size: 1.8rem;
   }
 }
@@ -308,27 +314,31 @@
   }
 
   .heroThankYouWrap {
-    padding: 350px 0 288px;
+    padding: 254px 0 288px;
     height: 972px;
   }
 
   .heroThankTitle {
-    margin-top: unset;
-    font-size: 64px;
-    width: 584px;
-    height: 166px;
+    font-size: 44px;
+    width: 578px;
+    margin-bottom: 12px;
   }
 
   .heroThankText {
     font-size: 18px;
     height: auto;
-    width: 586px;
-    margin-bottom: 40px;
+    width: 576px;
+    margin-bottom: 82px;
+  }
+
+  .heroThankIconWrap {
+    margin-bottom: 82px;
   }
 
   .heroThankBtn {
     height: 60px;
     border-radius: 32px;
     font-size: 18px;
+    width: 206px;
   }
 }

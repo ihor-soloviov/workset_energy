@@ -96,7 +96,7 @@
 
 @media screen and (min-width: 1440px) {
   .stepThreeForm {
-    width: 66.8rem;
+    width: 39.4rem;
     margin: 0 auto;
   }
 
@@ -107,7 +107,7 @@
   }
 
   .stepThreeInput {
-    height: 5.6rem;
+    height: 5.8rem;
   }
 
   .errorText {
@@ -116,8 +116,9 @@
 
   .stepThreeBtnWrap {
     gap: 2rem;
-    width: 31.8rem;
-    margin-top: 3.2rem;
+    width: 34.4rem;
+    margin: 0 auto;
+    margin-top: 3.8rem;
   }
 
   .stepThreeBtn {
@@ -125,15 +126,11 @@
     font-size: 1.8rem;
     height: 6rem;
   }
-
-  .stepThreeBtn:first-child {
-    width: 13.6rem;
-  }
 }
 
 @media screen and (min-width: 1728px) {
   .stepThreeForm {
-    width: 668px;
+    width: 394px;
   }
 
   .stepThreeLabel {
@@ -142,7 +139,7 @@
   }
 
   .stepThreeInput {
-    height: 56px;
+    height: 58px;
   }
 
   .errorText {
@@ -151,18 +148,13 @@
 
   .stepThreeBtnWrap {
     gap: 20px;
-    width: 318px;
-
-    margin-top: 32px;
+    width: 344px;
+    margin-top: 38px;
   }
 
   .stepThreeBtn {
     height: 60px;
     width: 162px;
     font-size: 18px;
-  }
-
-  .stepThreeBtn:first-child {
-    width: 136px;
   }
 }

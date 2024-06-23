@@ -17,18 +17,21 @@
 
 .leadProgressItem {
   position: relative;
-  display: flex;
-  width: 36px;
-  height: 36px;
-  justify-content: center;
-  border-radius: 50%;
-  border: 1px solid var(--gray-stroke);
-  align-items: center;
-  background-color: transparent;
-  transition: all 0.2s ease-in-out;
 }
 
-.leadProgressItem.active {
+.leadProgressCountWrap {
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  border: 1px solid var(--gray-stroke);
+  align-items: center;
+
+  justify-content: center;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+}
+
+.leadProgressCountWrap.active {
   background-color: var(--red-second);
 }
 
@@ -52,7 +55,7 @@
 
 .leadProgressIcon {
   width: 18px;
-  height: 18px;
+  height: 25px;
   stroke: var(--white-main);
   transition: all 0.2s ease-in-out;
 }
@@ -110,22 +113,56 @@
   }
 
   .leadProgressWrap {
-    margin-bottom: 3.2rem;
+    margin-bottom: 4.8rem;
+    width: 59.9rem;
   }
 
   .leadProgressList {
-    gap: 1.4rem;
+    width: 100%;
+
+    justify-content: unset;
+    gap: 7rem;
+  }
+
+  .leadProgressLinesList {
+    width: 5.4rem;
+    right: -6.2rem;
+    bottom: 1.8rem;
   }
 
   .leadProgressItem {
-    width: 6rem;
-    height: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
   }
 
   .leadProgressText {
-    font-size: 1.6rem;
+    display: block;
+    font-size: 1.5rem;
+    color: var(--gray-text);
+    font-weight: 600;
+    line-height: 133%;
+    letter-spacing: -0.1px;
   }
 
+  .leadProgressText.active {
+    color: var(--red-main);
+  }
+
+  .leadProgressCountWrap {
+    width: 3.6rem;
+    height: 3.6rem;
+  }
+
+  .leadProgressCount {
+    font-size: 2rem;
+    height: 3rem;
+  }
+
+  .leadProgressIcon {
+    width: 2rem;
+    height: 3rem;
+  }
   .leadAmentitesWrap {
     display: none;
   }
@@ -141,48 +178,36 @@
   }
 
   .leadProgressList {
-    width: 100%;
-    justify-content: center;
-    gap: unset;
+    gap: 70px;
   }
 
   .leadProgressLinesList {
     width: 54px;
-    right: -185px;
-    bottom: 18px;
+    right: -62px;
+    bottom: 16px;
   }
 
   .leadProgressItem {
-    height: 40px;
-    width: 40px;
-  }
-
-  .leadProgressItem:first-child {
-    margin-right: 195px;
-  }
-  .leadProgressItem:last-child {
-    margin-left: 195px;
+    gap: 8px;
   }
 
   .leadProgressText {
-    display: block;
     font-size: 15px;
-    color: var(--gray-text);
-
-    font-weight: 600;
-    line-height: 133%;
     letter-spacing: -0.1px;
-    position: absolute;
-    bottom: 10px;
-    left: 48px;
   }
 
-  .leadProgressText.active {
-    color: var(--red-main);
+  .leadProgressCountWrap {
+    width: 36px;
+    height: 36px;
   }
 
   .leadProgressCount {
     font-size: 20px;
+    height: 30px;
+  }
+
+  .leadProgressIcon {
+    width: 20px;
     height: 30px;
   }
 }

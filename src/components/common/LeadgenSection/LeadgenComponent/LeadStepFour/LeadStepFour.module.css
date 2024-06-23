@@ -28,15 +28,15 @@
   }
 
   .stepFourTitle {
-    font-size: 3.6rem;
-    line-height: 140%;
-    margin-bottom: 0.8rem;
+    font-size: 4.4rem;
+    line-height: 120%;
+    margin-bottom: 1.2rem;
   }
 
   .stepFourText {
-    width: fit-content;
-    font-size: 2rem;
-    margin-bottom: 3.6rem;
+    width: 59.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 2.4rem;
   }
 }
 
@@ -45,12 +45,13 @@
   }
 
   .stepFourTitle {
-    font-size: 36px;
-    margin-bottom: 8px;
+    font-size: 44px;
+    margin-bottom: 12px;
   }
 
   .stepFourText {
-    font-size: 20px;
-    margin-bottom: 36px;
+    width: 595px;
+    font-size: 18px;
+    margin-bottom: 24px;
   }
 }

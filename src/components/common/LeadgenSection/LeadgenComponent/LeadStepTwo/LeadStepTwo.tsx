@@ -3,6 +3,7 @@ import styles from './LeadStepTwo.module.css';
 import LeadStepTwoList from './LeadStepTwoList/LeadStepTwoList';
 import React, { useState, MouseEvent, useEffect } from 'react';
 import { LeadStepProps } from '../../types';
+import { inter } from '@/utils/fonts';
 
 const LeadStepTwo = ({
   handleNextStepClick,
@@ -28,7 +29,9 @@ const LeadStepTwo = ({
   return (
     <div className={styles.stepTwoWrap}>
       <h2 className={styles.stepTwoTitle}>Welche Komponenten benötigen Sie?</h2>
-
+      <p className={`${styles.stepTwoText} ${inter.className}`}>
+        Wählen Sie ein paar geeignete Optionen.
+      </p>
       <LeadStepTwoList
         stepValue={stepTwoValues}
         handleItemClick={handleItemClick}

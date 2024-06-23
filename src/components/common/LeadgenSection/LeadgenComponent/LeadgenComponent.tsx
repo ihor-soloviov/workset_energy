@@ -134,15 +134,20 @@ const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
                 className={`${styles.leadProgressItem} ${step === index + 1 || index + 1 < step ? styles.active : ''}`}
                 key={text}
               >
-                {step > index + 1 ? (
-                  <CheckIcon className={styles.leadProgressIcon} />
-                ) : (
+                <div
+                  className={`${styles.leadProgressCountWrap} ${step === index + 1 || index + 1 < step ? styles.active : ''}`}
+                >
                   <p
                     className={`${styles.leadProgressCount} ${step === index + 1 || index + 1 < step ? styles.active : ''} ${inter.className}`}
                   >
-                    {index + 1}
+                    {step > index + 1 ? (
+                      <CheckIcon className={styles.leadProgressIcon} />
+                    ) : (
+                      index + 1
+                    )}
                   </p>
-                )}
+                </div>
+
                 <p
                   className={`${styles.leadProgressText} ${step === index + 1 || index + 1 < step ? styles.active : ''}`}
                 >

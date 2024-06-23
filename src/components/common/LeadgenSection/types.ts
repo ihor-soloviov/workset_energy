@@ -4,6 +4,9 @@ export type StepItem = {
   title: string;
   text?: string;
   icon?: React.ElementType;
+  iconMob?: React.ElementType;
+  iconDesk?: React.ElementType;
+  iconDeskWhite?: React.ElementType;
   className?: string;
 };
 export type LeadgenComponentProps = {
