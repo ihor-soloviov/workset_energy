@@ -83,16 +83,12 @@
   cursor: not-allowed;
 }
 
-.stepFourBtn:first-child {
-  background-color: var(--white-main);
-  border-color: var(--gray-stroke);
-  color: var(--black-main);
+.loader > svg {
+  fill: var(--white-main);
 }
 
-.stepFourBtn:first-child:hover {
-  background-color: var(--red-main);
-  border-color: var(--red-stroke);
-  color: var(--white-main);
+.stepFourBtn:not(:disabled):hover .loader > svg {
+  fill: var(--red-main);
 }
 
 @media screen and (min-width: 1440px) {

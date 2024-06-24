@@ -34,7 +34,7 @@ const LeadStepOneList = ({ handleItemClick, stepValue }: LeadStepListProps) => {
                 null,
               )}
             <h4
-              className={`${styles.stepOneTitle} ${isDesktop ? inter.className : ''} ${stepValue === title ? styles.active : ''}`}
+              className={`${styles.stepOneTitle}  ${stepValue === title ? styles.active : ''}`}
             >
               {title}
             </h4>

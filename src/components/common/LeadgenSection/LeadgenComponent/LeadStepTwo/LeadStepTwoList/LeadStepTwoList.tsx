@@ -3,7 +3,6 @@ import { LeadStepListProps } from '../../../types';
 import styles from './LeadStepTwoList.module.css';
 import { stepTwoItems } from './leadStepTwoItems';
 import React from 'react';
-import { inter } from '@/utils/fonts';
 
 const LeadStepTwoList = ({ handleItemClick, stepValue }: LeadStepListProps) => {
   const { isDesktop } = useGlobalStore();

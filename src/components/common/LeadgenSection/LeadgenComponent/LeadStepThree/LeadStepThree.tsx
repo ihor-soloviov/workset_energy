@@ -1,6 +1,6 @@
 import styles from './LeadStepThree.module.css';
 import LeadStepThreeForm from './LeadStepThreeForm/LeadStepThreeForm';
-import React from 'react';
+import React, { useState } from 'react';
 import { LeadFormProps } from '../../types';
 import { inter } from '@/utils/fonts';
 
@@ -10,6 +10,7 @@ const LeadStepThree = ({
   step,
   setStep,
   handlePrevStepClick,
+  setUserToken,
 }: LeadFormProps) => {
   return (
     <div className={styles.stepThreeWrap}>
@@ -23,6 +24,7 @@ const LeadStepThree = ({
         step={step}
         setStep={setStep}
         handlePrevStepClick={handlePrevStepClick}
+        setUserToken={setUserToken}
       />
     </div>
   );

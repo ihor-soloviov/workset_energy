@@ -6,18 +6,22 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { interTight, inter } from '@/utils/fonts';
 import { LeadFormProps } from '../../../types';
+import { useState } from 'react';
+import { ThreeDots } from 'react-loader-spinner';
+import { useGlobalStore } from '@/store/global-store';
+import { leadgenExtraFormDataPost, leadgenFormDataPost } from '@/utils/api';
 
 const LeadStepFourForm = ({
   formData,
   setFormData,
   step,
   setStep,
-  handlePrevStepClick,
+  userToken,
 }: LeadFormProps) => {
+  const [isLoading, setIsLoading] = useState(false);
+  const { setPopupAction } = useGlobalStore();
   const {
     handleSubmit,
-    errors,
-    touched,
     getFieldProps,
 
     resetForm,
@@ -35,8 +39,24 @@ const LeadStepFourForm = ({
       userMessage: Yup.string(),
     }),
     onSubmit: async values => {
-      setFormData({ ...formData, extraContactData: values });
+      setIsLoading(true);
 
+      const leadGenData = new FormData();
+      const leadGenExtraData = { extraContactData: values };
+      Object.entries(leadGenExtraData).forEach(([key, value]) => {
+        leadGenData.append(key, JSON.stringify(value));
+      });
+
+      console.log('leadGenExtraData', leadGenExtraData);
+      userToken &&
+        (await leadgenExtraFormDataPost(
+          leadGenData,
+          userToken,
+          'leadgenExtra',
+          setPopupAction,
+        ));
+
+      setIsLoading(false);
       resetForm();
       setStep(step + 1);
     },
@@ -76,7 +96,20 @@ const LeadStepFourForm = ({
       </label>
 
       <Button type="submit" className={styles.stepFourBtn}>
-        Absenden
+        {isLoading ? (
+          <ThreeDots
+            visible={true}
+            height="50"
+            width="50"
+            color="#fff"
+            radius="9"
+            ariaLabel="three-dots-loading"
+            wrapperStyle={{}}
+            wrapperClass={styles.loader}
+          />
+        ) : (
+          'Absenden'
+        )}
       </Button>
     </form>
   );

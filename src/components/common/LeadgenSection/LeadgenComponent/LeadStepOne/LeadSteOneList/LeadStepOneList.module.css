@@ -15,7 +15,7 @@
   cursor: pointer;
   width: 292px;
   height: 72px;
-  padding: 8px 97px 8px 28px;
+  padding: 8px 93px 8px 28px;
   border-radius: 8px;
   border: 2px solid transparent;
   display: flex;
@@ -83,7 +83,11 @@
   }
 
   .stepOneItem:hover {
-    border: 0.2rem solid var(--red-main);
+    border: 0.2rem solid #ff8a97;
+  }
+
+  .stepOneItem.active:hover {
+    border-color: var(--red-main);
   }
 
   .stepOneWrap {
@@ -133,7 +137,11 @@
   }
 
   .stepOneItem:hover {
-    border: 2px solid var(--red-main);
+    border: 2px solid #ff8a97;
+  }
+
+  .stepOneItem.active:hover {
+    border-color: var(--red-main);
   }
 
   .stepOneWrap {

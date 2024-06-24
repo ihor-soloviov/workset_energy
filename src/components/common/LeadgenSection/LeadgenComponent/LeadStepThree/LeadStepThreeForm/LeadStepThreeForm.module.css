@@ -94,6 +94,14 @@
   color: var(--red-main);
 }
 
+.loader > svg {
+  fill: var(--white-main);
+}
+
+.stepThreeBtn:not(:disabled):hover .loader > svg {
+  fill: var(--red-main);
+}
+
 @media screen and (min-width: 1440px) {
   .stepThreeForm {
     width: 39.4rem;

@@ -6,14 +6,20 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { interTight, inter } from '@/utils/fonts';
 import { LeadFormProps } from '../../../types';
+import { useState } from 'react';
+import { leadgenFormDataPost } from '@/utils/api';
+import { useGlobalStore } from '@/store/global-store';
+import { ThreeDots } from 'react-loader-spinner';
 
 const LeadStepThreeForm = ({
   formData,
-  setFormData,
   step,
   setStep,
   handlePrevStepClick,
+  setUserToken,
 }: LeadFormProps) => {
+  const [isLoading, setIsLoading] = useState(false);
+  const { setPopupAction } = useGlobalStore();
   const {
     handleSubmit,
     errors,
@@ -34,8 +40,30 @@ const LeadStepThreeForm = ({
       userPhone: Yup.number().typeError('Invalid number').required('Required'),
     }),
     onSubmit: async values => {
-      setFormData({ ...formData, contactData: values });
+      setIsLoading(true);
 
+      const leadGenData = new FormData();
+      const leadGenFinalData = { ...formData, contactData: values };
+      Object.entries(leadGenFinalData).forEach(([key, value]) => {
+        if (typeof value === 'object' && !Array.isArray(value)) {
+          leadGenData.append(key, JSON.stringify(value));
+        }
+        if (Array.isArray(value)) {
+          leadGenData.append(key, value.join(','));
+        } else {
+          leadGenData.append(key, value.toString());
+        }
+      });
+
+      console.log('leadGenFinalData', leadGenFinalData);
+
+      const response = await leadgenFormDataPost(
+        leadGenData,
+        'leadgen',
+        setPopupAction,
+      );
+      setUserToken && response?.data.token && setUserToken(response.data.token);
+      setIsLoading(false);
       resetForm();
       setStep(step + 1);
     },
@@ -83,7 +111,20 @@ const LeadStepThreeForm = ({
           type="submit"
           className={styles.stepThreeBtn}
         >
-          Weiter
+          {isLoading ? (
+            <ThreeDots
+              visible={true}
+              height="50"
+              width="50"
+              color="#fff"
+              radius="9"
+              ariaLabel="three-dots-loading"
+              wrapperStyle={{}}
+              wrapperClass={styles.loader}
+            />
+          ) : (
+            'Weiter'
+          )}
         </Button>
       </div>
     </form>

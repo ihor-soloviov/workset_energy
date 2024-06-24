@@ -39,7 +39,7 @@
   color: #3b3c4a;
   font-size: 18px;
   font-weight: 500;
-  width: 46px;
+
   transition: all 0.15s ease-in-out;
 }
 
@@ -96,7 +96,11 @@
   }
 
   .stepTwoItem:hover {
-    border: 0.2rem solid var(--red-main);
+    border: 0.2rem solid #ff8a97;
+  }
+
+  .stepTwoItem.active:hover {
+    border-color: var(--red-main);
   }
 
   .stepTwoWrap {
@@ -154,7 +158,11 @@
   }
 
   .stepTwoItem:hover {
-    border: 2px solid var(--red-main);
+    border: 2px solid #ff8a97;
+  }
+
+  .stepTwoItem.active:hover {
+    border-color: var(--red-main);
   }
 
   .stepTwoWrap {

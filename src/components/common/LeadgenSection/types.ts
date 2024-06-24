@@ -1,4 +1,4 @@
-import { MouseEvent } from 'react';
+import { Dispatch, MouseEvent, SetStateAction } from 'react';
 
 export type StepItem = {
   title: string;
@@ -45,4 +45,6 @@ export type LeadFormProps = {
   step: number;
   setStep: (step: number) => void;
   handlePrevStepClick?: () => void;
+  userToken?: string | null;
+  setUserToken?: Dispatch<SetStateAction<string | null>>;
 };
