@@ -1,3 +1,14 @@
 .leadgenWrap {
-  padding: 100px 0;
+  padding: 64px 0;
+}
+
+@media screen and (min-width: 1440px) {
+  .leadgenWrap {
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .leadgenWrap {
+    padding: 24px 0;
+  }
 }

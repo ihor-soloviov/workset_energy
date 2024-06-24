@@ -18,11 +18,6 @@ export type FormInitialValue = {
     userName: string;
     userPhone: string;
   };
-  extraContactData: {
-    userPostcode: string;
-    userEmail: string;
-    userMessage: string;
-  };
 };
 
 export type LeadStepProps = {
@@ -45,6 +40,6 @@ export type LeadFormProps = {
   step: number;
   setStep: (step: number) => void;
   handlePrevStepClick?: () => void;
-  userToken?: number | null;
-  setUserToken?: Dispatch<SetStateAction<number | null>>;
+  leadId?: number | null;
+  setLeadId?: Dispatch<SetStateAction<number | null>>;
 };

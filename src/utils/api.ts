@@ -26,12 +26,13 @@ const formDataPost = async (
 
 const leadgenExtraFormDataPost = async (
   formData: FormData,
-  token: number | null,
+  leadId: number | null,
   url: string,
   setPopupAction?: (action: PopupAction) => void,
 ) => {
   try {
-    await axios.post(`${baseUrl}${url}${token}`, formData);
+    await axios.put(`${baseUrl}${url}/${leadId}`, formData);
+
     setPopupAction && setPopupAction({ visible: true, status: 'success' });
   } catch (error) {
     console.error('Error fetching data:', error);

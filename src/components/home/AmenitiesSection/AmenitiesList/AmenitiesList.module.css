@@ -10,9 +10,7 @@
 
 .amenitiesItem {
   user-select: none;
-  cursor: pointer;
   display: flex;
-
   flex-direction: column;
   height: 178px;
   width: 342px;

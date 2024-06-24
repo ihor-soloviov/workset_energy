@@ -10,7 +10,7 @@ const LeadStepFour = ({
   setFormData,
   step,
   setStep,
-  userToken,
+  leadId,
 }: LeadFormProps) => {
   useHashObserver('optionalstep');
   return (
@@ -25,7 +25,7 @@ const LeadStepFour = ({
         setFormData={setFormData}
         step={step}
         setStep={setStep}
-        userToken={userToken}
+        leadId={leadId}
       />
     </div>
   );

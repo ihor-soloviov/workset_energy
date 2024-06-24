@@ -14,6 +14,7 @@ import styles from './LeadgenComponent.module.css';
 import { Navigate } from '@/types/navigate';
 import { useGlobalStore } from '@/store/global-store';
 import LeadAmenitiesList from './LeadAmenitiesList/LeadAmenitiesList';
+import { usePathname } from 'next/navigation';
 
 const formInitialValue: FormInitialValue = {
   kWp: '',
@@ -22,25 +23,19 @@ const formInitialValue: FormInitialValue = {
     userName: '',
     userPhone: '',
   },
-
-  extraContactData: {
-    userPostcode: '',
-    userEmail: '',
-    userMessage: '',
-  },
 };
 
 const LeadgenComponent = () => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState(formInitialValue);
-  const [userToken, setUserToken] = useState<number | null>(null);
+  const [leadId, setLeadId] = useState<number | null>(null);
 
   const thankYou = useNavigateTo(Navigate.thanks);
   const { isDesktop } = useGlobalStore();
+  const pathname = usePathname();
   const leadProgressList = ['Stromverbrauch', 'Komponenten', 'Kontaktdaten'];
   const leadProgressLinesList = !isDesktop ? [1, 2, 3, 4, 5, 6] : [1, 2, 3, 4];
-  console.log('formData', formData);
-  console.log('userToken', userToken);
+
   const handlePrevStepClick = () => {
     clearStepValue(step - 1);
     setStep(step - 1);
@@ -53,6 +48,9 @@ const LeadgenComponent = () => {
     stepValue && setFormData({ ...formData, [key]: stepValue });
     setStep(step + 1);
   };
+
+  const getCurrentClass = (step: number, index: number) =>
+    step === index + 1 || index + 1 < step;
 
   const currentStep = (step: number) => {
     switch (step) {
@@ -73,7 +71,7 @@ const LeadgenComponent = () => {
             formData={formData}
             setFormData={setFormData}
             handlePrevStepClick={handlePrevStepClick}
-            setUserToken={setUserToken}
+            setLeadId={setLeadId}
           />
         );
       case 4:
@@ -83,7 +81,7 @@ const LeadgenComponent = () => {
             setStep={setStep}
             formData={formData}
             setFormData={setFormData}
-            userToken={userToken}
+            leadId={leadId}
           />
         );
 
@@ -111,11 +109,6 @@ const LeadgenComponent = () => {
           ...formData,
           contactData: formInitialValue.contactData,
         });
-      case 4:
-        return setFormData({
-          ...formData,
-          extraContactData: formInitialValue.extraContactData,
-        });
 
       default:
         return;
@@ -127,7 +120,7 @@ const LeadgenComponent = () => {
       thankYou();
       setStep(1);
       setFormData(formInitialValue);
-      setUserToken(null);
+      setLeadId(null);
     }
   }, [step]);
 
@@ -138,14 +131,14 @@ const LeadgenComponent = () => {
           <ul className={styles.leadProgressList}>
             {leadProgressList.map((text, index) => (
               <li
-                className={`${styles.leadProgressItem} ${step === index + 1 || index + 1 < step ? styles.active : ''}`}
+                className={`${styles.leadProgressItem} ${getCurrentClass(step, index) ? styles.active : ''}`}
                 key={text}
               >
                 <div
-                  className={`${styles.leadProgressCountWrap} ${step === index + 1 || index + 1 < step ? styles.active : ''}`}
+                  className={`${styles.leadProgressCountWrap} ${getCurrentClass(step, index) ? styles.active : ''}`}
                 >
                   <p
-                    className={`${styles.leadProgressCount} ${step === index + 1 || index + 1 < step ? styles.active : ''} ${inter.className}`}
+                    className={`${styles.leadProgressCount} ${getCurrentClass(step, index) ? styles.active : ''} ${inter.className}`}
                   >
                     {step > index + 1 ? (
                       <CheckIcon className={styles.leadProgressIcon} />
@@ -156,7 +149,7 @@ const LeadgenComponent = () => {
                 </div>
 
                 <p
-                  className={`${styles.leadProgressText} ${step === index + 1 || index + 1 < step ? styles.active : ''}`}
+                  className={`${styles.leadProgressText} ${getCurrentClass(step, index) ? styles.active : ''}`}
                 >
                   {text}
                 </p>
@@ -175,9 +168,9 @@ const LeadgenComponent = () => {
           </ul>
         </div>
       )}
-
       {currentStep(step)}
-      {step > 1 && step < 4 && (
+
+      {pathname !== '/' && step < 4 && (
         <div className={styles.leadAmentitesWrap}>
           <h3 className={`${styles.leadAmentitesTitle} ${inter.className}`}>
             Unser Vorteile

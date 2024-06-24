@@ -9,7 +9,7 @@ import { ThreeDots } from 'react-loader-spinner';
 import { useGlobalStore } from '@/store/global-store';
 import { leadgenExtraFormDataPost } from '@/utils/api';
 
-const LeadStepFourForm = ({ step, setStep, userToken }: LeadFormProps) => {
+const LeadStepFourForm = ({ step, setStep, leadId }: LeadFormProps) => {
   const [isLoading, setIsLoading] = useState(false);
   const { setPopupAction } = useGlobalStore();
   const {
@@ -21,7 +21,6 @@ const LeadStepFourForm = ({ step, setStep, userToken }: LeadFormProps) => {
     initialValues: {
       userPostcode: '',
       userEmail: '',
-
       userMessage: '',
     },
     validationSchema: Yup.object({
@@ -35,16 +34,16 @@ const LeadStepFourForm = ({ step, setStep, userToken }: LeadFormProps) => {
 
       const leadGenData = new FormData();
       const leadGenExtraData = { extraContactData: values };
+
       Object.entries(leadGenExtraData).forEach(([key, value]) => {
         leadGenData.append(key, JSON.stringify(value));
       });
 
-      console.log('leadGenExtraData', leadGenExtraData);
-      userToken &&
+      leadId &&
         (await leadgenExtraFormDataPost(
           leadGenData,
-          userToken,
-          'leadgenExtra',
+          leadId,
+          'leadgen',
           setPopupAction,
         ));
 

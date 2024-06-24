@@ -10,7 +10,7 @@ const LeadStepThree = ({
   step,
   setStep,
   handlePrevStepClick,
-  setUserToken,
+  setLeadId,
 }: LeadFormProps) => {
   return (
     <div className={styles.stepThreeWrap}>
@@ -24,7 +24,7 @@ const LeadStepThree = ({
         step={step}
         setStep={setStep}
         handlePrevStepClick={handlePrevStepClick}
-        setUserToken={setUserToken}
+        setLeadId={setLeadId}
       />
     </div>
   );

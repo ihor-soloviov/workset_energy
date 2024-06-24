@@ -14,7 +14,7 @@ const LeadStepThreeForm = ({
   step,
   setStep,
   handlePrevStepClick,
-  setUserToken,
+  setLeadId,
 }: LeadFormProps) => {
   const [isLoading, setIsLoading] = useState(false);
   const { setPopupAction } = useGlobalStore();
@@ -29,7 +29,6 @@ const LeadStepThreeForm = ({
   } = useFormik({
     initialValues: {
       userName: '',
-
       userPhone: '',
     },
     validationSchema: Yup.object({
@@ -52,16 +51,13 @@ const LeadStepThreeForm = ({
         }
       });
 
-      console.log('leadGenFinalData', leadGenFinalData);
-
       const response = await formDataPost(
         leadGenData,
         'leadgen',
         setPopupAction,
       );
-      console.log('response', response);
 
-      setUserToken && response?.userToken && setUserToken(response.userToken);
+      setLeadId && response?.leadId && setLeadId(response.leadId);
       setIsLoading(false);
       resetForm();
       setStep(step + 1);
