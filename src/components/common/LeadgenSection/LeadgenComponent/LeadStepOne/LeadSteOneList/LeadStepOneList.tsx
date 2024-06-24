@@ -3,7 +3,7 @@ import styles from './LeadStepOneList.module.css';
 import { stepOneItems } from './leadStepOneItems';
 import React from 'react';
 import { useGlobalStore } from '@/store/global-store';
-import { inter } from '@/utils/fonts';
+
 const LeadStepOneList = ({ handleItemClick, stepValue }: LeadStepListProps) => {
   const { isDesktop } = useGlobalStore();
   return (

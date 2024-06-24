@@ -12,8 +12,6 @@ const LeadStepTwo = ({
   const [stepTwoValues, setStepTwoValues] = useState<string[]>([]);
   const [isDisabled, setIsDisabled] = useState(true);
 
-  console.log(stepTwoValues);
-
   const handleItemClick = (e: MouseEvent<HTMLLIElement>, itemValue: string) => {
     setStepTwoValues(prevValues =>
       prevValues.includes(itemValue)

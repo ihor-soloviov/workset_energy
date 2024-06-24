@@ -10,28 +10,9 @@ const formDataPost = async (
   setPopupAction?: (action: PopupAction) => void,
 ) => {
   try {
-    await axios.post(`${baseUrl}${url}`, formData);
+    const { data } = await axios.post(`${baseUrl}${url}`, formData);
     setPopupAction && setPopupAction({ visible: true, status: 'success' });
-  } catch (error) {
-    console.error('Error fetching data:', error);
-    setPopupAction && setPopupAction({ visible: true, status: 'error' });
-  } finally {
-    setTimeout(
-      () => setPopupAction && setPopupAction({ visible: false, status: '' }),
-      1000,
-    );
-  }
-};
-
-const leadgenFormDataPost = async (
-  formData: FormData,
-  url: string,
-  setPopupAction?: (action: PopupAction) => void,
-) => {
-  try {
-    const response = await axios.post(`${baseUrl}${url}`, formData);
-    setPopupAction && setPopupAction({ visible: true, status: 'success' });
-    return response;
+    return data;
   } catch (error) {
     console.error('Error fetching data:', error);
     setPopupAction && setPopupAction({ visible: true, status: 'error' });
@@ -45,7 +26,7 @@ const leadgenFormDataPost = async (
 
 const leadgenExtraFormDataPost = async (
   formData: FormData,
-  token: string | null,
+  token: number | null,
   url: string,
   setPopupAction?: (action: PopupAction) => void,
 ) => {
@@ -83,10 +64,4 @@ const fetchJobData = async (id: string) => {
   }
 };
 
-export {
-  formDataPost,
-  leadgenFormDataPost,
-  leadgenExtraFormDataPost,
-  fetchJobsData,
-  fetchJobData,
-};
+export { formDataPost, leadgenExtraFormDataPost, fetchJobsData, fetchJobData };

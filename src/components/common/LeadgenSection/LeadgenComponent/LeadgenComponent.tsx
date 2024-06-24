@@ -33,13 +33,14 @@ const formInitialValue: FormInitialValue = {
 const LeadgenComponent = () => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState(formInitialValue);
-  const [userToken, setUserToken] = useState<string | null>(null);
+  const [userToken, setUserToken] = useState<number | null>(null);
+
   const thankYou = useNavigateTo(Navigate.thanks);
   const { isDesktop } = useGlobalStore();
   const leadProgressList = ['Stromverbrauch', 'Komponenten', 'Kontaktdaten'];
   const leadProgressLinesList = !isDesktop ? [1, 2, 3, 4, 5, 6] : [1, 2, 3, 4];
   console.log('formData', formData);
-
+  console.log('userToken', userToken);
   const handlePrevStepClick = () => {
     clearStepValue(step - 1);
     setStep(step - 1);
@@ -126,6 +127,7 @@ const LeadgenComponent = () => {
       thankYou();
       setStep(1);
       setFormData(formInitialValue);
+      setUserToken(null);
     }
   }, [step]);
 

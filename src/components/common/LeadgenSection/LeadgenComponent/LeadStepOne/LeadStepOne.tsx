@@ -1,4 +1,3 @@
-import Button from '@/components/common/Button/Button';
 import styles from './LeadStepOne.module.css';
 import LeadStepOneList from './LeadSteOneList/LeadStepOneList';
 import { LeadStepProps } from '../../types';

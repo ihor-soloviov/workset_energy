@@ -1,5 +1,3 @@
-'use client';
-
 import styles from './LeadStepFourForm.module.css';
 import Button from '@/components/common/Button/Button';
 import { useFormik } from 'formik';
@@ -9,15 +7,9 @@ import { LeadFormProps } from '../../../types';
 import { useState } from 'react';
 import { ThreeDots } from 'react-loader-spinner';
 import { useGlobalStore } from '@/store/global-store';
-import { leadgenExtraFormDataPost, leadgenFormDataPost } from '@/utils/api';
+import { leadgenExtraFormDataPost } from '@/utils/api';
 
-const LeadStepFourForm = ({
-  formData,
-  setFormData,
-  step,
-  setStep,
-  userToken,
-}: LeadFormProps) => {
+const LeadStepFourForm = ({ step, setStep, userToken }: LeadFormProps) => {
   const [isLoading, setIsLoading] = useState(false);
   const { setPopupAction } = useGlobalStore();
   const {
@@ -95,7 +87,10 @@ const LeadStepFourForm = ({
         ></textarea>
       </label>
 
-      <Button type="submit" className={styles.stepFourBtn}>
+      <Button
+        type="submit"
+        className={`${styles.stepFourBtn} ${interTight.className}`}
+      >
         {isLoading ? (
           <ThreeDots
             visible={true}

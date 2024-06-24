@@ -45,6 +45,6 @@ export type LeadFormProps = {
   step: number;
   setStep: (step: number) => void;
   handlePrevStepClick?: () => void;
-  userToken?: string | null;
-  setUserToken?: Dispatch<SetStateAction<string | null>>;
+  userToken?: number | null;
+  setUserToken?: Dispatch<SetStateAction<number | null>>;
 };

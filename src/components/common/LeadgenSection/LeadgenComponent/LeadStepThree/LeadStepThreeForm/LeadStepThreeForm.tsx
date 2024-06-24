@@ -1,5 +1,3 @@
-'use client';
-
 import styles from './LeadStepThreeForm.module.css';
 import Button from '@/components/common/Button/Button';
 import { useFormik } from 'formik';
@@ -7,7 +5,7 @@ import * as Yup from 'yup';
 import { interTight, inter } from '@/utils/fonts';
 import { LeadFormProps } from '../../../types';
 import { useState } from 'react';
-import { leadgenFormDataPost } from '@/utils/api';
+import { formDataPost } from '@/utils/api';
 import { useGlobalStore } from '@/store/global-store';
 import { ThreeDots } from 'react-loader-spinner';
 
@@ -47,9 +45,8 @@ const LeadStepThreeForm = ({
       Object.entries(leadGenFinalData).forEach(([key, value]) => {
         if (typeof value === 'object' && !Array.isArray(value)) {
           leadGenData.append(key, JSON.stringify(value));
-        }
-        if (Array.isArray(value)) {
-          leadGenData.append(key, value.join(','));
+        } else if (Array.isArray(value)) {
+          leadGenData.append(key, value.join(', '));
         } else {
           leadGenData.append(key, value.toString());
         }
@@ -57,12 +54,14 @@ const LeadStepThreeForm = ({
 
       console.log('leadGenFinalData', leadGenFinalData);
 
-      const response = await leadgenFormDataPost(
+      const response = await formDataPost(
         leadGenData,
         'leadgen',
         setPopupAction,
       );
-      setUserToken && response?.data.token && setUserToken(response.data.token);
+      console.log('response', response);
+
+      setUserToken && response?.userToken && setUserToken(response.userToken);
       setIsLoading(false);
       resetForm();
       setStep(step + 1);
