@@ -25,7 +25,7 @@ const LeadStepFourForm = ({ step, setStep, leadId }: LeadFormProps) => {
     },
     validationSchema: Yup.object({
       userPostcode: Yup.string(),
-      userEmail: Yup.string().email('Invalid email address'),
+      userEmail: Yup.string(),
 
       userMessage: Yup.string(),
     }),
