@@ -1,56 +1,56 @@
-.stepOneWrap {
+.stepFiveWrap {
 }
 
-.stepOneTitle {
+.stepFiveTitle {
   color: var(--black--main);
   text-align: center;
   font-size: 20px;
   font-weight: 600;
   line-height: 130%;
-  width: 292px;
+  width: fit-content;
   margin: 0 auto;
   margin-bottom: 12px;
 }
 
-.stepOneText {
+.stepFiveText {
   color: var(--gray-text);
   font-size: 18px;
   font-weight: 400;
+  text-align: center;
   line-height: 140%;
-  width: fit-content;
+  width: 269px;
   margin: 0 auto;
   margin-bottom: 24px;
 }
 
 @media screen and (min-width: 1440px) {
-  .stepOneWrap {
+  .stepFiveWrap {
   }
 
-  .stepOneTitle {
+  .stepFiveTitle {
     font-size: 3.6rem;
     line-height: 140%;
-    width: 61.1rem;
     margin-bottom: 0.8rem;
   }
 
-  .stepOneText {
-    margin-bottom: 2.4rem;
+  .stepFiveText {
+    width: fit-content;
     font-size: 2rem;
+    margin-bottom: 3.6rem;
   }
 }
 
 @media screen and (min-width: 1728px) {
-  .stepOneWrap {
+  .stepFiveWrap {
   }
 
-  .stepOneTitle {
-    width: 611px;
+  .stepFiveTitle {
     font-size: 36px;
     margin-bottom: 8px;
   }
 
-  .stepOneText {
+  .stepFiveText {
     font-size: 20px;
-    margin-bottom: 24px;
+    margin-bottom: 36px;
   }
 }

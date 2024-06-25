@@ -37,7 +37,7 @@ const HeroForm: React.FC<Props> = ({ hideModal }) => {
       userName: '',
       userPhone: '',
       userEmail: '',
-      userAddress: '',
+      userPostcode: '',
     },
     validationSchema: Yup.object({
       userName: Yup.string().required('Required'),
@@ -45,16 +45,20 @@ const HeroForm: React.FC<Props> = ({ hideModal }) => {
       userEmail: Yup.string()
         .email('Invalid email address')
         .required('Required'),
-      userAddress: Yup.string().required('Required'),
+      userPostcode: Yup.string()
+        .matches(/^[0-9]+$/, 'Must be only digits')
+        .min(5, 'Must be exactly 5 digits')
+        .max(5, 'Must be exactly 5 digits')
+        .required('Required'),
     }),
-    onSubmit: async ({ userName, userPhone, userEmail, userAddress }) => {
+    onSubmit: async ({ userName, userPhone, userEmail, userPostcode }) => {
       setIsLoading(true);
       const formData = new FormData();
       const formDataFields = {
         userName,
         userPhone,
         userEmail,
-        userAddress,
+        userPostcode,
         userQuest: questValue,
       };
 
@@ -62,7 +66,7 @@ const HeroForm: React.FC<Props> = ({ hideModal }) => {
         formData.append(key, value);
       });
 
-      await formDataPost(formData, 'contact-hero');
+      await formDataPost(formData, 'contact-hero', setPopupAction);
       setIsLoading(false);
       hideModal();
       resetForm();
@@ -115,14 +119,14 @@ const HeroForm: React.FC<Props> = ({ hideModal }) => {
         )}
       </label>
       <label className={styles.heroLabel}>
-        Anschrift der geplanten PV-Anlage*
+        PLZ der Projektadresse*
         <input
-          placeholder="Anschrift der geplanten PV-Anlage"
-          className={`${styles.heroInput} ${touched.userAddress && errors.userAddress && styles.error}`}
-          {...getFieldProps('userAddress')}
+          placeholder="PLZ der Projektadresse"
+          className={`${styles.heroInput} ${touched.userPostcode && errors.userPostcode && styles.error}`}
+          {...getFieldProps('userPostcode')}
         />
-        {touched.userAddress && errors.userAddress && (
-          <p className={styles.errorText}>{errors.userAddress}</p>
+        {touched.userPostcode && errors.userPostcode && (
+          <p className={styles.errorText}>{errors.userPostcode}</p>
         )}
       </label>
 

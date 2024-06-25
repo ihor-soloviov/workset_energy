@@ -1,32 +1,45 @@
+import Button from '@/components/common/Button/Button';
 import styles from './LeadStepFour.module.css';
-import LeadStepFourForm from './LeadStepFourForm/LeadStepFourForm';
-import React from 'react';
-import { LeadFormProps } from '../../types';
-import { inter } from '@/utils/fonts';
-import useHashObserver from '@/hooks/useHashObserver';
+import LeadStepFourList from './LeadStepFourList/LeadStepFourList';
+import React, { useState, MouseEvent, useEffect } from 'react';
+import { LeadStepProps } from '../../types';
 
 const LeadStepFour = ({
-  formData,
-  setFormData,
-  step,
-  setStep,
-  leadId,
-}: LeadFormProps) => {
-  useHashObserver('optionalstep');
+  handleNextStepClick,
+  handlePrevStepClick,
+}: LeadStepProps) => {
+  const [stepFourValue, setStepFourValue] = useState<null | string>(null);
+
+  const handleItemClick = (e: MouseEvent<HTMLLIElement>, itemValue: string) => {
+    setStepFourValue(itemValue);
+  };
+
+  useEffect(() => {
+    if (stepFourValue) {
+      const timer = setTimeout(() => {
+        handleNextStepClick(stepFourValue, 'communicationType');
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [stepFourValue, handleNextStepClick]);
+
   return (
-    <div id="optionalstep" className={styles.stepFourWrap}>
-      <h2 className={styles.stepFourTitle}>WorkSET Energy sagt Danke!</h2>
-      <p className={`${styles.stepFourText} ${inter.className}`}>
-        Wir haben deine Anfrage erhalten. Schreibe uns eine Nachricht, damit wir
-        deine Anfrage schneller bearbeiten können.
-      </p>
-      <LeadStepFourForm
-        formData={formData}
-        setFormData={setFormData}
-        step={step}
-        setStep={setStep}
-        leadId={leadId}
+    <div className={styles.stepFourWrap}>
+      <h2 className={styles.stepFourTitle}>
+        Wann bist du am besten erreichbar?
+      </h2>
+      <LeadStepFourList
+        stepValue={stepFourValue}
+        handleItemClick={handleItemClick}
       />
+
+      <Button
+        handleClick={handlePrevStepClick}
+        type="button"
+        className={styles.stepFourBtn}
+      >
+        Zurück
+      </Button>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 .leadSection {
-  padding: 36px 0;
+  padding: 36px 0 64px;
   transition: all 0.2s ease-in-out;
 }
 
@@ -49,7 +49,7 @@
 
 @media screen and (min-width: 1440px) {
   .leadSection {
-    padding: 10rem 0;
+    padding: 7rem 0 10rem;
   }
 
   .extraSmall {
@@ -78,7 +78,7 @@
 
   .leadContainer {
     width: 172.8rem;
-    padding: 0 32.2rem;
+    padding: 0 37.3rem;
   }
 
   .leadTitle {
@@ -90,7 +90,7 @@
 
 @media screen and (min-width: 1728px) {
   .leadSection {
-    padding: 100px 0px;
+    padding: 70px 0 100px;
   }
 
   .extraSmall {
@@ -119,7 +119,7 @@
 
   .leadContainer {
     width: 1728px;
-    padding: 0 322px;
+    padding: 0 373px;
   }
 
   .leadTitle {

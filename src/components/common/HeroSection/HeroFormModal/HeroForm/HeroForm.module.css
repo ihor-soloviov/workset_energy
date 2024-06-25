@@ -81,7 +81,7 @@
 .errorText {
   position: absolute;
   right: 10px;
-  top: 77px;
+  top: 83px;
   width: fit-content;
   color: var(--red-main);
   font-size: 10px;
@@ -132,6 +132,7 @@
   }
 
   .errorText {
+    top: 7.7rem;
     font-size: 1rem;
   }
 }
@@ -163,5 +164,6 @@
 
   .errorText {
     font-size: 10px;
+    top: 77px;
   }
 }
