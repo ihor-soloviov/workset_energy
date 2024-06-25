@@ -31,7 +31,14 @@ const RegionSection = () => {
           Zum Angebot
         </Button>
         <div className={styles.regionImgWrap}>
-          {['Frankfurt', 'Mannheim', 'Ulm'].map(text => (
+          {[
+            'Frankfurt',
+            'Mannheim',
+            'Ulm',
+            'Marburg',
+            'Darmstadt',
+            'Stuttgart',
+          ].map(text => (
             <div className={styles.regionLocationWrap} key={text}>
               <LocationIcon className={styles.regionLocationIcon} />
               <p className={styles.regionLocationText}>{text}</p>
