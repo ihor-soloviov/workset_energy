@@ -94,12 +94,27 @@
   font-weight: 600;
   line-height: 130%;
   color: var(--black-main);
+  margin-bottom: 52px;
+}
+
+.planRangeMainWrap {
+  height: fit-content;
+  width: 236px;
   margin-bottom: 16px;
 }
 
-.planRangeWrap {
-  height: 82px;
-  width: 236px;
+.planRangeTextWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.planRangeText {
+  color: var(--red-main);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 157%;
+  width: fit-content;
 }
 
 .planListTitle {

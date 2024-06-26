@@ -1,11 +1,12 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import CheckMarker from '/public/icons/check-circle.svg';
 import { PlanT } from '@/types/infoTypes';
 import styles from './Plan.module.css';
 import { inter } from '@/utils/fonts';
 import { usePathname } from 'next/navigation';
+import LeadStepTwoSlider from './LeadStepTwoSlider/LeadStepTwoSlider';
 
 import useObserver from '@/hooks/useObserver';
 import Link from 'next/link';
@@ -27,12 +28,31 @@ const Plan: React.FC<Props> = ({
   plan: { name, imageMob, imageDesk, price, benefits },
   index,
 }) => {
+  const [rangeOneValue, setRangeOneValue] = useState<number>(4000);
+  const [rangeTwoValue, setRangeTwoValue] = useState<number>(4000);
+  const [rangeThreeValue, setRangeThreeValue] = useState<number>(4000);
   useObserver(
     `.${styles.pricingPlansItem}`,
     `${styles.pricingPlansItemVisible}`,
   );
 
+  const formatValue = (value: number) =>
+    value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
   const pathname = usePathname();
+
+  const getCurrentRange = (index: number, valueType: string) => {
+    switch (index) {
+      case 0:
+        return valueType == 'state' ? rangeOneValue : setRangeOneValue;
+      case 1:
+        return valueType == 'state' ? rangeTwoValue : setRangeTwoValue;
+      case 2:
+        return valueType == 'state' ? rangeThreeValue : setRangeThreeValue;
+
+      default:
+        return;
+    }
+  };
 
   return (
     <li className={styles.pricingPlansItem}>
@@ -63,7 +83,19 @@ const Plan: React.FC<Props> = ({
       <div className={styles.pricingPlanInfo}>
         <span className={styles.planTitle}>{name}</span>
         <h4 className={styles.planPrice}> ab {price}</h4>
-        <div className={styles.planRangeWrap}></div>
+
+        <div className={styles.planRangeMainWrap}>
+          {/* <LeadStepTwoSlider
+            rangeValue={getCurrentRange(index, 'state')}
+            setRangeValue={getCurrentRange(index, 'setState')}
+            formatValue={formatValue}
+          /> */}
+          <div className={`${styles.planRangeTextWrap} ${inter.className}`}>
+            <p className={styles.planRangeText}>3 kWp</p>
+            <p className={styles.planRangeText}>30+ kWp</p>
+          </div>
+        </div>
+
         <h5 className={styles.planListTitle}>Komplettpaket</h5>
         <ul className={`${styles.planBenefits} ${inter.className}`}>
           {benefits.map(benefit => (
