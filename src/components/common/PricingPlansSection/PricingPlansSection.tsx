@@ -28,6 +28,18 @@ const PricingPlansSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const swiperRef = useRef<SwiperType>();
 
+  const disableSwiper = () => {
+    if (swiperRef.current) {
+      swiperRef.current.allowTouchMove = false;
+    }
+  };
+
+  const enableSwiper = () => {
+    if (swiperRef.current) {
+      swiperRef.current.allowTouchMove = true;
+    }
+  };
+
   const handleActiveSlide = (index: number) => {
     setActiveIndex(index);
     swiperRef.current && swiperRef.current.slideTo(index);
@@ -58,7 +70,12 @@ const PricingPlansSection = () => {
             >
               {plans.map((plan, index) => (
                 <SwiperSlide className={styles.slideWrap} key={index}>
-                  <Plan plan={plan} index={index} />
+                  <Plan
+                    plan={plan}
+                    index={index}
+                    disableSwiper={disableSwiper}
+                    enableSwiper={enableSwiper}
+                  />
                 </SwiperSlide>
               ))}
             </Swiper>

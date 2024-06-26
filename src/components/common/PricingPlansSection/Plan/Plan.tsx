@@ -16,6 +16,8 @@ interface CustomCSSProperties extends React.CSSProperties {
 type Props = {
   plan: PlanT;
   index: number;
+  disableSwiper?: () => void;
+  enableSwiper?: () => void;
 };
 
 const customStyleFirst: CustomCSSProperties = { '--i': '0' };
@@ -27,10 +29,12 @@ const customStyleFifth: CustomCSSProperties = { '--i': '4' };
 const Plan: React.FC<Props> = ({
   plan: { name, imageMob, imageDesk, price, benefits },
   index,
+  disableSwiper,
+  enableSwiper,
 }) => {
-  const [rangeOneValue, setRangeOneValue] = useState<number>(4000);
-  const [rangeTwoValue, setRangeTwoValue] = useState<number>(4000);
-  const [rangeThreeValue, setRangeThreeValue] = useState<number>(4000);
+  const [rangeOneValue, setRangeOneValue] = useState<number>(3);
+  const [rangeTwoValue, setRangeTwoValue] = useState<number>(3);
+  const [rangeThreeValue, setRangeThreeValue] = useState<number>(3);
   useObserver(
     `.${styles.pricingPlansItem}`,
     `${styles.pricingPlansItemVisible}`,
@@ -40,17 +44,94 @@ const Plan: React.FC<Props> = ({
     value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
   const pathname = usePathname();
 
-  const getCurrentRange = (index: number, valueType: string) => {
+  const getCurrentRangeState = (index: number) => {
     switch (index) {
       case 0:
-        return valueType == 'state' ? rangeOneValue : setRangeOneValue;
+        return rangeOneValue;
       case 1:
-        return valueType == 'state' ? rangeTwoValue : setRangeTwoValue;
+        return rangeTwoValue;
       case 2:
-        return valueType == 'state' ? rangeThreeValue : setRangeThreeValue;
+        return rangeThreeValue;
 
       default:
-        return;
+        return rangeOneValue;
+    }
+  };
+  const getCurrentRangeSetState = (index: number) => {
+    switch (index) {
+      case 0:
+        return setRangeOneValue;
+      case 1:
+        return setRangeTwoValue;
+      case 2:
+        return setRangeThreeValue;
+
+      default:
+        return setRangeThreeValue;
+    }
+  };
+
+  const getCurrentPrice = (index: number, rangeValue: number) => {
+    switch (rangeValue) {
+      case 3:
+        return '11726';
+      case 4:
+        return '11726';
+      case 5:
+        return '11726';
+      case 6:
+        return '11726';
+      case 7:
+        return '11726';
+      case 8:
+        return '11726';
+      case 9:
+        return '11726';
+      case 10:
+        return '11726';
+      case 11:
+        return '11726';
+      case 12:
+        return '11726';
+      case 13:
+        return '11726';
+      case 14:
+        return '11726';
+      case 15:
+        return '11726';
+      case 16:
+        return '11726';
+      case 17:
+        return '11726';
+      case 18:
+        return '11726';
+      case 19:
+        return '11726';
+      case 20:
+        return '11726';
+      case 21:
+        return '11726';
+      case 22:
+        return '11726';
+      case 23:
+        return '11726';
+      case 24:
+        return '11726';
+      case 25:
+        return '11726';
+      case 26:
+        return '11726';
+      case 27:
+        return '11726';
+      case 28:
+        return '11726';
+      case 29:
+        return '11726';
+      case 30:
+        return '11726';
+
+      default:
+        return '';
     }
   };
 
@@ -82,14 +163,18 @@ const Plan: React.FC<Props> = ({
       />
       <div className={styles.pricingPlanInfo}>
         <span className={styles.planTitle}>{name}</span>
-        <h4 className={styles.planPrice}> ab {price}</h4>
+        <h4 className={styles.planPrice}>
+          ab {getCurrentPrice(index, getCurrentRangeState(index))} EUR
+        </h4>
 
         <div className={styles.planRangeMainWrap}>
-          {/* <LeadStepTwoSlider
-            rangeValue={getCurrentRange(index, 'state')}
-            setRangeValue={getCurrentRange(index, 'setState')}
+          <LeadStepTwoSlider
+            rangeValue={getCurrentRangeState(index)}
+            setRangeValue={getCurrentRangeSetState(index)}
             formatValue={formatValue}
-          /> */}
+            disableSwiper={disableSwiper}
+            enableSwiper={enableSwiper}
+          />
           <div className={`${styles.planRangeTextWrap} ${inter.className}`}>
             <p className={styles.planRangeText}>3 kWp</p>
             <p className={styles.planRangeText}>30+ kWp</p>
