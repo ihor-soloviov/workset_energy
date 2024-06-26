@@ -12,7 +12,8 @@
   flex-direction: column;
   padding: 54px 21px 32px;
   border-radius: 16px;
-  border: 1px solid var(--gray-stroke);
+  background-color: var(--white-main);
+  box-shadow: 4px 4px 44px 0px rgba(0, 0, 0, 0.14);
 }
 
 .planBestWrap {
@@ -59,8 +60,8 @@
 }
 
 .planImageMob {
-  width: 190px;
-  height: 190px;
+  width: 200px;
+  height: 200px;
   position: absolute;
   top: -154px;
   left: 48px;
@@ -74,10 +75,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 112px;
+  width: 104px;
   height: 42px;
-  padding: 12px 23px;
-  border-radius: 28px;
+  border-radius: 32px;
   font-size: 16px;
   font-weight: 600;
   line-height: normal;
@@ -90,11 +90,24 @@
 
 .planPrice {
   width: max-content;
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 600;
   line-height: 130%;
-  color: var(--gray-dark-text);
-  margin-bottom: 22px;
+  color: var(--black-main);
+  margin-bottom: 16px;
+}
+
+.planRangeWrap {
+  height: 82px;
+  width: 236px;
+}
+
+.planListTitle {
+  color: var(--black-main);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 130%;
+  margin-bottom: 18px;
 }
 
 .planBenefits {
@@ -103,21 +116,24 @@
   gap: 8px;
   width: 196px;
   margin-bottom: 20px;
-  border-top: 1px solid var(--gray-stroke);
-  padding-top: 16px;
 }
 
 .planBenefit {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 .benefit {
   font-size: 14px;
   font-style: normal;
-  line-height: 160%;
+  font-weight: 300;
+  line-height: 150%;
   color: var(--gray-text);
+}
+
+.planBenefit:first-child .benefit {
+  font-weight: 500;
 }
 
 .planBtn {

@@ -15,11 +15,10 @@ export const plans: PlanT[] = [
     imageMob: plan1Mob,
     imageDesk: plan1Desk,
     benefits: [
-      'Projektierung',
+      'inkl. Speicher + Montage',
       'Wirtschaftlichkeitsanalyse',
-      'inkl. Lieferung + Montage',
+      'Projektierung',
       'inkl. Inbetriebnahme',
-      'inkl. Netzanmeldung',
     ],
   },
   {
@@ -29,11 +28,10 @@ export const plans: PlanT[] = [
     imageMob: plan2Mob,
     imageDesk: plan2Desk,
     benefits: [
-      'Projektierung',
+      'inkl. Speicher + Montage',
       'Wirtschaftlichkeitsanalyse',
-      'inkl. Lieferung + Montage',
+      'Projektierung',
       'inkl. Inbetriebnahme',
-      'inkl. Netzanmeldung',
     ],
   },
   {
@@ -43,11 +41,10 @@ export const plans: PlanT[] = [
     imageMob: plan3Mob,
     imageDesk: plan3Desk,
     benefits: [
-      'Projektierung',
+      'inkl. Speicher + Montage',
       'Wirtschaftlichkeitsanalyse',
-      'inkl. Lieferung + Montage',
+      'Projektierung',
       'inkl. Inbetriebnahme',
-      'inkl. Netzanmeldung',
     ],
   },
 ];

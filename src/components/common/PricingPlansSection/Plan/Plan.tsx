@@ -33,7 +33,6 @@ const Plan: React.FC<Props> = ({
   );
 
   const pathname = usePathname();
-  // console.log(pathname);
 
   return (
     <li className={styles.pricingPlansItem}>
@@ -64,7 +63,8 @@ const Plan: React.FC<Props> = ({
       <div className={styles.pricingPlanInfo}>
         <span className={styles.planTitle}>{name}</span>
         <h4 className={styles.planPrice}> ab {price}</h4>
-
+        <div className={styles.planRangeWrap}></div>
+        <h5 className={styles.planListTitle}>Komplettpaket</h5>
         <ul className={`${styles.planBenefits} ${inter.className}`}>
           {benefits.map(benefit => (
             <li key={benefit} className={styles.planBenefit}>
@@ -73,11 +73,8 @@ const Plan: React.FC<Props> = ({
             </li>
           ))}
         </ul>
-        <Link
-          href={pathname === '/pv-anlagen' ? '/leadgen' : `${pathname}#kontact`}
-          className={styles.planBtn}
-        >
-          Zum Angebot
+        <Link href={'/leadgen'} className={styles.planBtn}>
+          Preis anfragen
         </Link>
       </div>
     </li>
