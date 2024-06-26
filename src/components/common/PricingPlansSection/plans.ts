@@ -9,7 +9,6 @@ import { PlanT } from '@/types/infoTypes';
 
 export const plans: PlanT[] = [
   {
-    price: '12.456 EUR',
     name: 'Huawei',
 
     imageMob: plan1Mob,
@@ -22,7 +21,6 @@ export const plans: PlanT[] = [
     ],
   },
   {
-    price: '15.590 EUR',
     name: 'Sungrow',
 
     imageMob: plan2Mob,
@@ -35,7 +33,6 @@ export const plans: PlanT[] = [
     ],
   },
   {
-    price: '22.300 EUR',
     name: 'Enphase',
 
     imageMob: plan3Mob,

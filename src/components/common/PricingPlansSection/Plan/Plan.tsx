@@ -1,13 +1,13 @@
 'use client';
+
 import React, { useState } from 'react';
 import Image from 'next/image';
 import CheckMarker from '/public/icons/check-circle.svg';
 import { PlanT } from '@/types/infoTypes';
 import styles from './Plan.module.css';
 import { inter } from '@/utils/fonts';
-import { usePathname } from 'next/navigation';
-import LeadStepTwoSlider from './LeadStepTwoSlider/LeadStepTwoSlider';
-
+import PvRangeSlider from './PvRangeSlider/PvRangeSlider';
+import { getCurrentPrice } from '@/utils/getCurrentPice';
 import useObserver from '@/hooks/useObserver';
 import Link from 'next/link';
 interface CustomCSSProperties extends React.CSSProperties {
@@ -27,7 +27,7 @@ const customStyleFourth: CustomCSSProperties = { '--i': '3' };
 const customStyleFifth: CustomCSSProperties = { '--i': '4' };
 
 const Plan: React.FC<Props> = ({
-  plan: { name, imageMob, imageDesk, price, benefits },
+  plan: { name, imageMob, imageDesk, benefits },
   index,
   disableSwiper,
   enableSwiper,
@@ -39,10 +39,6 @@ const Plan: React.FC<Props> = ({
     `.${styles.pricingPlansItem}`,
     `${styles.pricingPlansItemVisible}`,
   );
-
-  const formatValue = (value: number) =>
-    value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-  const pathname = usePathname();
 
   const getCurrentRangeState = (index: number) => {
     switch (index) {
@@ -68,70 +64,6 @@ const Plan: React.FC<Props> = ({
 
       default:
         return setRangeThreeValue;
-    }
-  };
-
-  const getCurrentPrice = (index: number, rangeValue: number) => {
-    switch (rangeValue) {
-      case 3:
-        return '11726';
-      case 4:
-        return '11726';
-      case 5:
-        return '11726';
-      case 6:
-        return '11726';
-      case 7:
-        return '11726';
-      case 8:
-        return '11726';
-      case 9:
-        return '11726';
-      case 10:
-        return '11726';
-      case 11:
-        return '11726';
-      case 12:
-        return '11726';
-      case 13:
-        return '11726';
-      case 14:
-        return '11726';
-      case 15:
-        return '11726';
-      case 16:
-        return '11726';
-      case 17:
-        return '11726';
-      case 18:
-        return '11726';
-      case 19:
-        return '11726';
-      case 20:
-        return '11726';
-      case 21:
-        return '11726';
-      case 22:
-        return '11726';
-      case 23:
-        return '11726';
-      case 24:
-        return '11726';
-      case 25:
-        return '11726';
-      case 26:
-        return '11726';
-      case 27:
-        return '11726';
-      case 28:
-        return '11726';
-      case 29:
-        return '11726';
-      case 30:
-        return '11726';
-
-      default:
-        return '';
     }
   };
 
@@ -164,14 +96,13 @@ const Plan: React.FC<Props> = ({
       <div className={styles.pricingPlanInfo}>
         <span className={styles.planTitle}>{name}</span>
         <h4 className={styles.planPrice}>
-          ab {getCurrentPrice(index, getCurrentRangeState(index))} EUR
+          {getCurrentPrice(index, getCurrentRangeState(index))}
         </h4>
 
         <div className={styles.planRangeMainWrap}>
-          <LeadStepTwoSlider
+          <PvRangeSlider
             rangeValue={getCurrentRangeState(index)}
             setRangeValue={getCurrentRangeSetState(index)}
-            formatValue={formatValue}
             disableSwiper={disableSwiper}
             enableSwiper={enableSwiper}
           />

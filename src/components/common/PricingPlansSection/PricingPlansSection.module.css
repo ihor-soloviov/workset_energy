@@ -58,12 +58,6 @@
 .pricingPlansItems {
   display: flex;
   flex-direction: column;
-  gap: 210px;
-}
-
-@media screen and (min-width: 390px) {
-  .pricingPlansWrap {
-  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -94,7 +88,7 @@
 
   .pricingPlansItems {
     flex-direction: row;
-    gap: 2.4rem;
+    gap: 2rem;
   }
 }
 
@@ -122,6 +116,6 @@
   }
 
   .pricingPlansItems {
-    gap: 24px;
+    gap: 20px;
   }
 }

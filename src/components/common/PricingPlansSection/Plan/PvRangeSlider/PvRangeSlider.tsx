@@ -1,22 +1,20 @@
 import React, { useState } from 'react';
-import styles from './LeadStepTwoSlider.module.css';
+import styles from './PvRangeSlider.module.css';
 import ReactSlider from 'react-slider';
 
-type LeadStepTwoSliderProps = {
+type PvRangeSliderProps = {
   rangeValue: number;
   setRangeValue: (value: number) => void;
-  formatValue: (value: number) => string;
   disableSwiper?: () => void;
   enableSwiper?: () => void;
 };
 
-const LeadStepTwoSlider = ({
+const PvRangeSlider = ({
   rangeValue,
   setRangeValue,
-  formatValue,
   disableSwiper,
   enableSwiper,
-}: LeadStepTwoSliderProps) => {
+}: PvRangeSliderProps) => {
   const [isActive, setIsActive] = useState<boolean>(false);
 
   return (
@@ -34,23 +32,23 @@ const LeadStepTwoSlider = ({
         setIsActive(false);
         enableSwiper && enableSwiper();
       }}
-      className={styles.stepTwoInput}
-      thumbClassName={styles.stepTwoInputThumb}
+      className={styles.pvRangeInput}
+      thumbClassName={styles.pvRangeInputThumb}
       thumbActiveClassName={`${isActive && styles.active}`}
-      trackClassName={styles.stepTwoInputTrack}
+      trackClassName={styles.pvRangeInputTrack}
       renderTrack={(props, state) => (
         <div
           {...props}
-          className={`${props.className} ${state.index === 0 ? styles.stepTwoInputTrackCompleted : ''}`}
+          className={`${props.className} ${state.index === 0 ? styles.pvRangeInputTrackCompleted : ''}`}
           key={props.key}
         />
       )}
       renderThumb={(props, state) => (
         <div {...props} key={props.key}>
-          <div className={styles.stepTwoActiveWrap}>
-            <span className={styles.stepTwoActiveCount}>
-              {formatValue(rangeValue)}
-            </span>
+          <div className={styles.pvRangeActiveWrap}>
+            <span
+              className={styles.pvRangeActiveCount}
+            >{`${rangeValue}${rangeValue === 30 ? '+' : ''}`}</span>
           </div>
         </div>
       )}
@@ -58,4 +56,4 @@ const LeadStepTwoSlider = ({
   );
 };
 
-export default LeadStepTwoSlider;
+export default PvRangeSlider;

@@ -179,13 +179,15 @@
 @media screen and (min-width: 1440px) {
   .pricingPlansItem {
     width: 39.4rem;
-    height: 62.4rem;
-    padding: 12rem 2.7rem 4.8rem;
+    height: 65.5rem;
+    padding: 12rem 3.5rem 4.8rem;
     opacity: 0;
-    border-radius: 1.6rem;
+    border-radius: 2.4rem;
     filter: blur(5px);
     transform: translateY(30%);
     transition: all 0.4s ease-in-out;
+
+    box-shadow: 0px 4px 31.2px 0px rgba(218, 218, 218, 0.7);
   }
 
   .pricingPlansItem:nth-child(1) {
@@ -228,20 +230,30 @@
     margin-bottom: 1.8rem;
     border-radius: 2.8rem;
     height: 4rem;
-    width: 12.4rem;
+    width: 12.5rem;
     padding: 0.6rem;
+  }
+
+  .planRangeMainWrap {
+    width: 30rem;
+    margin: 0 auto;
+    margin-bottom: 0.8rem;
   }
 
   .planPrice {
     font-size: 3.4rem;
+    margin-bottom: 5.1rem;
+  }
+
+  .planListTitle {
+    font-size: 2.2rem;
     margin-bottom: 2rem;
   }
 
   .planBenefits {
-    gap: 1.8rem;
-    padding-top: 2.4rem;
+    gap: 1.2rem;
     width: fit-content;
-    margin-bottom: 4.8rem;
+    margin-bottom: 3.6rem;
   }
 
   .planBtn {
@@ -260,8 +272,8 @@
 @media screen and (min-width: 1728px) {
   .pricingPlansItem {
     width: 394px;
-    height: 624px;
-    padding: 120px 27px 48px;
+    height: 655px;
+    padding: 120px 35px 48px;
     border-radius: 16px;
   }
 
@@ -279,20 +291,29 @@
     font-size: 18px;
     border-radius: 28px;
     height: 40px;
-    width: 124px;
+    width: 125px;
     padding: 6px;
     margin-bottom: 18px;
   }
 
+  .planRangeMainWrap {
+    width: 300px;
+    margin-bottom: 8px;
+  }
+
   .planPrice {
     font-size: 34px;
+    margin-bottom: 51px;
+  }
+
+  .planListTitle {
+    font-size: 22px;
     margin-bottom: 20px;
   }
 
   .planBenefits {
-    padding-top: 24px;
-    gap: 18px;
-    margin-bottom: 48px;
+    gap: 12px;
+    margin-bottom: 36px;
   }
 
   .benefit {
@@ -304,6 +325,5 @@
     font-size: 16px;
     height: 60px;
     border-radius: 28px;
-    padding: 14px 111px;
   }
 }

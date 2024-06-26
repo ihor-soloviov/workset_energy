@@ -1,10 +1,10 @@
-.stepTwoInput {
+.pvRangeInput {
   width: 100%;
   margin-bottom: 15px;
-  height: 6px;
+  height: 12px;
 }
 
-.stepTwoInputThumb {
+.pvRangeInputThumb {
   height: 25px;
   width: 25px;
   background-color: var(--white-main);
@@ -16,7 +16,7 @@
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.04);
 }
 
-.stepTwoInputThumb::before {
+.pvRangeInputThumb::before {
   content: '';
   position: absolute;
   top: -12px;
@@ -25,21 +25,21 @@
   left: -12px;
 }
 
-.stepTwoInputTrack {
+.pvRangeInputTrack {
   height: 12px;
   border-radius: 8px;
   background-color: var(--gray-stroke);
 }
 
-.stepTwoInputTrackCompleted {
+.pvRangeInputTrackCompleted {
   background-color: var(--red-main);
 }
 
-.stepTwoInputThumb.active .stepTwoActiveWrap {
+.pvRangeInputThumb.active .pvRangeActiveWrap {
   display: flex;
 }
 
-.stepTwoActiveWrap {
+.pvRangeActiveWrap {
   display: none;
   position: absolute;
   align-items: center;
@@ -52,23 +52,37 @@
   background-color: var(--red-main);
 }
 
-.stepTwoActiveCount {
+.pvRangeActiveCount {
   color: var(--white-main);
-
   font-size: 16px;
-
   font-weight: 700;
   line-height: normal;
 }
 
 @media screen and (min-width: 1440px) {
-  .stepTwoActiveWrap {
+  .pvRangeActiveWrap {
     bottom: 3.2rem;
+  }
+
+  .pvRangeInput {
+    height: 1rem;
+  }
+
+  .pvRangeInputTrack {
+    height: 1rem;
   }
 }
 
 @media screen and (min-width: 1728px) {
-  .stepTwoActiveWrap {
+  .pvRangeActiveWrap {
     bottom: 32px;
+  }
+
+  .pvRangeInput {
+    height: 10px;
+  }
+
+  .pvRangeInputTrack {
+    height: 10px;
   }
 }
