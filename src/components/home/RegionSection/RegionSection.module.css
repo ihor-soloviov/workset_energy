@@ -61,7 +61,7 @@
 }
 
 .regionLocationWrapVisible {
-  animation: pulse 1.5s infinite;
+  /* animation: pulse 1.5s infinite; */
 }
 
 .regionLocationWrap:nth-child(1) {
