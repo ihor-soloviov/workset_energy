@@ -24,7 +24,11 @@ const LeadStepFourForm = ({ step, setStep, leadId }: LeadFormProps) => {
       userMessage: '',
     },
     validationSchema: Yup.object({
-      userPostcode: Yup.string(),
+      userPostcode: Yup.string()
+        .matches(/^[0-9]+$/, 'Must be only digits')
+        .min(5, 'Must be exactly 5 digits')
+        .max(5, 'Must be exactly 5 digits')
+        .required('Required'),
       userEmail: Yup.string(),
 
       userMessage: Yup.string(),
