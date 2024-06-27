@@ -1,0 +1,168 @@
+.stepThreeForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stepThreeLabel {
+  color: var(--black-main);
+  font-weight: 500;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  gap: 4px;
+}
+
+.stepThreeInput {
+  color: var(--black-main);
+  font-size: 16px;
+  padding: 21px 12px;
+  width: 100%;
+  height: 60px;
+  border: 1px solid var(--gray-stroke);
+  border-radius: 8px;
+  outline: none;
+}
+
+.stepThreeInput.error {
+  border: 1px solid var(--red-main);
+}
+
+.stepThreeInput::placeholder {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--gray-text);
+}
+
+.errorText {
+  position: absolute;
+  right: 10px;
+  top: 82px;
+  width: fit-content;
+  color: var(--red-main);
+  font-size: 10px;
+}
+
+.stepThreeBtnWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 16px;
+}
+
+.stepThreeBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 32px;
+  border: 1px solid var(--gray-stroke);
+  width: 132px;
+  height: 44px;
+  background-color: var(--red-main);
+  outline: none;
+  color: var(--white-main);
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.15s ease-in-out;
+}
+
+.stepThreeBtn:not(:disabled):hover {
+  color: var(--red-main);
+  border: 1px solid var(--white-stroke);
+  background-color: var(--white-main);
+}
+
+.stepThreeBtn:disabled {
+  background-color: var(--white-main);
+  border: 1px solid var(--gray-stroke);
+  color: var(--black-main);
+  cursor: not-allowed;
+}
+
+.stepThreeBtn:first-child {
+  background-color: var(--white-main);
+  border-color: var(--gray-stroke);
+  color: var(--black-main);
+}
+
+.stepThreeBtn:first-child:hover {
+  background-color: var(--white-main);
+  border-color: var(--white-main);
+  color: var(--red-main);
+}
+
+.loader > svg {
+  fill: var(--white-main);
+}
+
+.stepThreeBtn:not(:disabled):hover .loader > svg {
+  fill: var(--red-main);
+}
+
+@media screen and (min-width: 1440px) {
+  .stepThreeForm {
+    width: 39.4rem;
+    margin: 0 auto;
+  }
+
+  .stepThreeLabel {
+    gap: 0.6rem;
+    font-size: 1.4rem;
+    line-height: 160%;
+  }
+
+  .stepThreeInput {
+    height: 5.8rem;
+  }
+
+  .errorText {
+    top: 8.3rem;
+  }
+
+  .stepThreeBtnWrap {
+    gap: 2rem;
+    width: 34.4rem;
+    margin: 0 auto;
+    margin-top: 3.8rem;
+  }
+
+  .stepThreeBtn {
+    width: 16.2rem;
+    font-size: 1.8rem;
+    height: 6rem;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .stepThreeForm {
+    width: 394px;
+  }
+
+  .stepThreeLabel {
+    gap: 6px;
+    font-size: 14px;
+  }
+
+  .stepThreeInput {
+    height: 58px;
+  }
+
+  .errorText {
+    top: 83px;
+  }
+
+  .stepThreeBtnWrap {
+    gap: 20px;
+    width: 344px;
+    margin-top: 38px;
+  }
+
+  .stepThreeBtn {
+    height: 60px;
+    width: 162px;
+    font-size: 18px;
+  }
+}

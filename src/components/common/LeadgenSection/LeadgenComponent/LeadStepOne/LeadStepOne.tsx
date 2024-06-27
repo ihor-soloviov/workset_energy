@@ -1,7 +1,8 @@
-import React, { useState, MouseEvent, useEffect } from 'react';
-import LeadStepOneList from './LeadStepOneList/LeadStepOneList';
-import { LeadStepProps } from '../../types';
 import styles from './LeadStepOne.module.css';
+import LeadStepOneList from './LeadSteOneList/LeadStepOneList';
+import { LeadStepProps } from '../../types';
+import React, { useState, MouseEvent, useEffect } from 'react';
+import { inter } from '@/utils/fonts';
 
 const LeadStepOne = ({ handleNextStepClick }: LeadStepProps) => {
   const [stepOneValue, setStepOneValue] = useState<null | string>(null);
@@ -13,7 +14,7 @@ const LeadStepOne = ({ handleNextStepClick }: LeadStepProps) => {
   useEffect(() => {
     if (stepOneValue) {
       const timer = setTimeout(() => {
-        handleNextStepClick(stepOneValue, 'propertyType');
+        handleNextStepClick(stepOneValue, 'kWp');
       }, 100);
       return () => clearTimeout(timer);
     }
@@ -21,10 +22,11 @@ const LeadStepOne = ({ handleNextStepClick }: LeadStepProps) => {
 
   return (
     <div className={styles.stepOneWrap}>
-      <h2 className={styles.stepOneTitle}>
-        {`Bist du Eigentümer(-in) der Immobilie,`}
-      </h2>
-      <p className={styles.stepOneText}>für die du die PV-Anlage planst?</p>
+      <h2 className={styles.stepOneTitle}>Welche Kapazität benötigen Sie?</h2>
+      <p className={`${styles.stepOneText} ${inter.className}`}>
+        Wählen Sie eine richtige Antwort aus den folgenden Optionen.
+      </p>
+
       <LeadStepOneList
         stepValue={stepOneValue}
         handleItemClick={handleItemClick}

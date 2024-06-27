@@ -63,7 +63,7 @@ const HeroFormTY = () => {
           className={styles.heroThankBtn}
           type="button"
         >
-          Hauptseite
+          Home Page
         </Button>
       </div>
     </div>
