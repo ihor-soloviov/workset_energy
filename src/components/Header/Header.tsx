@@ -113,10 +113,10 @@ const Header = () => {
               <HeaderNavList />
             </nav>
             <Link
-              href="/leadgen#leadgen"
+              href="/#unsere-projekte"
               className={`${styles.headerLeadLink} ${pathname === '/karriere/jobs' ? styles.jobs : ''}`}
             >
-              Jetzt berechnen
+              Unsere Projekte
               <Arrow className={styles.headerIcon} />
             </Link>
           </div>

@@ -48,6 +48,7 @@
   border: 1px solid var(--gray-stroke);
   padding: 12px;
   border-radius: 8px;
+  font-size: 16px;
   outline: none;
   resize: none;
 }

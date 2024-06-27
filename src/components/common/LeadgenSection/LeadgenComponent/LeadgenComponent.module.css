@@ -1,6 +1,10 @@
 .leadMainWrap {
 }
 
+.leadGoogleImg {
+  display: none;
+}
+
 .leadProgressWrap {
   margin: 0 auto;
   width: 100%;
@@ -110,6 +114,16 @@
 
 @media screen and (min-width: 1440px) {
   .leadMainWrap {
+    position: relative;
+  }
+
+  .leadGoogleImg {
+    display: block;
+    position: absolute;
+    top: -0.9rem;
+    right: -20.4rem;
+    width: 16.2rem;
+    height: 7.8rem;
   }
 
   .leadProgressWrap {
@@ -163,13 +177,25 @@
     width: 2rem;
     height: 3rem;
   }
+
   .leadAmentitesWrap {
+    margin-top: 20.4rem;
+  }
+
+  .leadAmentitesTitle {
     display: none;
   }
 }
 
 @media screen and (min-width: 1728px) {
   .leadMainWrap {
+  }
+
+  .leadGoogleImg {
+    top: -7px;
+    right: -204px;
+    width: fit-content;
+    height: fit-content;
   }
 
   .leadProgressWrap {
@@ -209,5 +235,9 @@
   .leadProgressIcon {
     width: 20px;
     height: 30px;
+  }
+
+  .leadAmentitesWrap {
+    margin-top: 204px;
   }
 }

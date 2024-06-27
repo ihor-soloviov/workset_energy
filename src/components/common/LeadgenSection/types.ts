@@ -1,4 +1,5 @@
 import { Dispatch, MouseEvent, SetStateAction } from 'react';
+import React from 'react';
 
 export type StepItem = {
   title: string;
@@ -42,4 +43,5 @@ export type LeadFormProps = {
   handlePrevStepClick?: () => void;
   leadId?: number | null;
   setLeadId?: Dispatch<SetStateAction<number | null>>;
+  leadMainWrapRef?: React.RefObject<HTMLDivElement>;
 };

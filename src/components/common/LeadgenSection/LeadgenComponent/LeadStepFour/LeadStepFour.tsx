@@ -11,6 +11,7 @@ const LeadStepFour = ({
   step,
   setStep,
   leadId,
+  leadMainWrapRef,
 }: LeadFormProps) => {
   useHashObserver('optionalstep');
   return (
@@ -26,6 +27,7 @@ const LeadStepFour = ({
         step={step}
         setStep={setStep}
         leadId={leadId}
+        leadMainWrapRef={leadMainWrapRef}
       />
     </div>
   );

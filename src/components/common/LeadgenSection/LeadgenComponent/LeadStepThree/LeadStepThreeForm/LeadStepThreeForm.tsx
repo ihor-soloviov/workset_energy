@@ -4,7 +4,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { interTight, inter } from '@/utils/fonts';
 import { LeadFormProps } from '../../../types';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { formDataPost } from '@/utils/api';
 import { useGlobalStore } from '@/store/global-store';
 import { ThreeDots } from 'react-loader-spinner';
@@ -15,6 +15,7 @@ const LeadStepThreeForm = ({
   setStep,
   handlePrevStepClick,
   setLeadId,
+  leadMainWrapRef,
 }: LeadFormProps) => {
   const [isLoading, setIsLoading] = useState(false);
   const { setPopupAction } = useGlobalStore();
@@ -63,6 +64,25 @@ const LeadStepThreeForm = ({
       setStep(step + 1);
     },
   });
+
+  const scrollToTop = () => {
+    if (leadMainWrapRef?.current) {
+      leadMainWrapRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  useEffect(() => {
+    const inputs = document.querySelectorAll('input');
+    inputs.forEach(input => {
+      input.addEventListener('blur', scrollToTop);
+    });
+
+    return () => {
+      inputs.forEach(input => {
+        input.removeEventListener('blur', scrollToTop);
+      });
+    };
+  }, []);
 
   return (
     <form

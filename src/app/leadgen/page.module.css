@@ -4,11 +4,12 @@
 
 @media screen and (min-width: 1440px) {
   .leadgenWrap {
+    padding: 9rem 0 0 0;
   }
 }
 
 @media screen and (min-width: 1728px) {
   .leadgenWrap {
-    padding: 24px 0;
+    padding: 90px 0 0 0;
   }
 }

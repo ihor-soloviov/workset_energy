@@ -105,7 +105,7 @@ const HeroSection = ({
               {text}
             </p>
             <div className={`${styles.heroBtnWrap} ${styles.heroAnim}`}>
-              <Link className={styles.heroLink} href="/leadgen#leadgen">
+              <Link className={styles.heroLink} href="/leadgen">
                 Jetzt berechnen
               </Link>
               {isDesktop && pathname === '/' ? (

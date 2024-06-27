@@ -40,10 +40,10 @@ const MobileMenu = ({ handleMenuClick }: MobileMenuProps) => {
         </nav>
         <Link
           onClick={handleLinkClick}
-          href="/leadgen#leadgen"
+          href="/#unsere-projekte"
           className={styles.menuBtn}
         >
-          Jetzt berechnen
+          Unsere Projekte
         </Link>
         <MobileContactList />
         <MobileSocialList />

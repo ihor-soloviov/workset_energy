@@ -2,7 +2,7 @@
 'use client';
 
 import { inter } from '@/utils/fonts';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import CheckIcon from '/public/icons/check.svg';
 import LeadStepOne from './LeadStepOne/LeadStepOne';
 import LeadStepTwo from './LeadStepTwo/LeadStepTwo';
@@ -15,6 +15,8 @@ import { Navigate } from '@/types/navigate';
 import { useGlobalStore } from '@/store/global-store';
 import LeadAmenitiesList from './LeadAmenitiesList/LeadAmenitiesList';
 import { usePathname } from 'next/navigation';
+import leadGoogleImg from '/public/images/common/lead-google.png';
+import Image from 'next/image';
 
 const formInitialValue: FormInitialValue = {
   kWp: '',
@@ -35,6 +37,8 @@ const LeadgenComponent = () => {
   const pathname = usePathname();
   const leadProgressList = ['Stromverbrauch', 'Komponenten', 'Kontaktdaten'];
   const leadProgressLinesList = !isDesktop ? [1, 2, 3, 4, 5, 6] : [1, 2, 3, 4];
+
+  const leadMainWrapRef = useRef<HTMLDivElement>(null);
 
   const handlePrevStepClick = () => {
     clearStepValue(step - 1);
@@ -72,6 +76,7 @@ const LeadgenComponent = () => {
             setFormData={setFormData}
             handlePrevStepClick={handlePrevStepClick}
             setLeadId={setLeadId}
+            leadMainWrapRef={leadMainWrapRef}
           />
         );
       case 4:
@@ -82,6 +87,7 @@ const LeadgenComponent = () => {
             formData={formData}
             setFormData={setFormData}
             leadId={leadId}
+            leadMainWrapRef={leadMainWrapRef}
           />
         );
 
@@ -125,7 +131,14 @@ const LeadgenComponent = () => {
   }, [step]);
 
   return (
-    <div className={styles.leadMainWrap}>
+    <div className={styles.leadMainWrap} ref={leadMainWrapRef}>
+      {pathname === '/leadgen' && (
+        <Image
+          className={styles.leadGoogleImg}
+          src={leadGoogleImg}
+          alt="google comments"
+        />
+      )}
       {step < 4 && (
         <div className={styles.leadProgressWrap}>
           <ul className={styles.leadProgressList}>

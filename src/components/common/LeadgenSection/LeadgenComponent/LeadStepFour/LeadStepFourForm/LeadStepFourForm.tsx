@@ -4,12 +4,17 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { interTight, inter } from '@/utils/fonts';
 import { LeadFormProps } from '../../../types';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ThreeDots } from 'react-loader-spinner';
 import { useGlobalStore } from '@/store/global-store';
 import { leadgenExtraFormDataPost } from '@/utils/api';
 
-const LeadStepFourForm = ({ step, setStep, leadId }: LeadFormProps) => {
+const LeadStepFourForm = ({
+  step,
+  setStep,
+  leadId,
+  leadMainWrapRef,
+}: LeadFormProps) => {
   const [isLoading, setIsLoading] = useState(false);
   const { setPopupAction } = useGlobalStore();
   const {
@@ -56,6 +61,25 @@ const LeadStepFourForm = ({ step, setStep, leadId }: LeadFormProps) => {
       setStep(step + 1);
     },
   });
+
+  const scrollToTop = () => {
+    if (leadMainWrapRef?.current) {
+      leadMainWrapRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  useEffect(() => {
+    const inputs = document.querySelectorAll('input, textarea');
+    inputs.forEach(input => {
+      input.addEventListener('blur', scrollToTop);
+    });
+
+    return () => {
+      inputs.forEach(input => {
+        input.removeEventListener('blur', scrollToTop);
+      });
+    };
+  }, []);
 
   return (
     <form

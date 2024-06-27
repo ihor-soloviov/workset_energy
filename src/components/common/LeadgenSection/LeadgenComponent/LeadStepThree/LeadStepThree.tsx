@@ -11,6 +11,7 @@ const LeadStepThree = ({
   setStep,
   handlePrevStepClick,
   setLeadId,
+  leadMainWrapRef,
 }: LeadFormProps) => {
   return (
     <div className={styles.stepThreeWrap}>
@@ -25,6 +26,7 @@ const LeadStepThree = ({
         setStep={setStep}
         handlePrevStepClick={handlePrevStepClick}
         setLeadId={setLeadId}
+        leadMainWrapRef={leadMainWrapRef}
       />
     </div>
   );

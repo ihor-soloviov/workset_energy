@@ -6,7 +6,7 @@ import styles from './ObjectSection.module.css';
 
 const ObjectSection = () => {
   return (
-    <section className={styles.objectSection}>
+    <section id="unsere-projekte" className={styles.objectSection}>
       <Container>
         <h2 className={styles.objectMainTitle}>
           Sehen Sie sich unsere Projekte an:
