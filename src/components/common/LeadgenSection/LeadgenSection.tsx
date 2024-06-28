@@ -2,11 +2,9 @@
 
 import React, { useState } from 'react';
 import { usePathname } from 'next/navigation';
-import dynamic from 'next/dynamic';
 import LeadTitleIcon from '/public/icons/leadgen/title-arrow.svg';
-const LeadgenComponent = dynamic(
-  () => import('./LeadgenComponent/LeadgenComponent'),
-);
+import LeadgenComponent from './LeadgenComponent/LeadgenComponent';
+
 import styles from './LeadgenSection.module.css';
 
 const LeadgenSection = () => {
