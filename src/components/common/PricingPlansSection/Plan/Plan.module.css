@@ -21,12 +21,12 @@
   top: -52px;
   right: -4px;
   border-radius: 50%;
-  width: 104px;
+  width: 84px;
   opacity: 1;
-  height: 104px;
+  height: 84px;
   background: var(--red-main);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  transform: rotate(12.158deg);
+  transform: rotate(19.558deg);
 }
 
 .planBestWrap span {
@@ -41,15 +41,14 @@
 
 .planBestText {
   color: var(--gray-input);
-  font-size: 20px;
+  font-size: 15px;
   font-style: normal;
-  width: 95px;
-  height: 26px;
+
   font-weight: 800;
   line-height: 130%;
   position: absolute;
-  top: 39px;
-  left: 5px;
+  top: 32px;
+  left: 8px;
 }
 
 .pricingPlanInfo {
@@ -94,13 +93,13 @@
   font-weight: 600;
   line-height: 130%;
   color: var(--black-main);
-  margin-bottom: 52px;
+  margin-bottom: 54px;
 }
 
 .planRangeMainWrap {
   height: fit-content;
   width: 236px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .planRangeTextWrap {
@@ -209,7 +208,7 @@
   }
 
   .pricingPlanInfo {
-    width: 34rem;
+    width: 32.4rem;
   }
 
   .planImageMob {
@@ -243,16 +242,20 @@
   .planPrice {
     font-size: 3.4rem;
     margin-bottom: 5.1rem;
+    font-weight: 500;
   }
 
   .planListTitle {
     font-size: 2.2rem;
     margin-bottom: 2rem;
+    font-weight: 500;
   }
 
   .planBenefits {
     gap: 1.2rem;
     width: fit-content;
+    margin-right: auto;
+    margin-left: 3rem;
     margin-bottom: 3.6rem;
   }
 
@@ -278,13 +281,19 @@
   }
 
   .pricingPlanInfo {
-    width: 340px;
+    width: 324px;
   }
 
   .planImageDesk {
     width: 265px;
     top: -200px;
     left: 64px;
+  }
+
+  .planBestWrap {
+  }
+
+  .planBestText {
   }
 
   .planTitle {
@@ -313,6 +322,7 @@
 
   .planBenefits {
     gap: 12px;
+    margin-left: 30px;
     margin-bottom: 36px;
   }
 

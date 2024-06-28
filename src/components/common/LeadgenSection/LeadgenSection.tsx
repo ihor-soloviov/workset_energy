@@ -1,14 +1,13 @@
 'use client';
 
 import React, { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import LeadTitleIcon from '/public/icons/leadgen/title-arrow.svg';
 const LeadgenComponent = dynamic(
   () => import('./LeadgenComponent/LeadgenComponent'),
 );
-
 import styles from './LeadgenSection.module.css';
-import { usePathname } from 'next/navigation';
 
 const LeadgenSection = () => {
   const [step, setStep] = useState(1);

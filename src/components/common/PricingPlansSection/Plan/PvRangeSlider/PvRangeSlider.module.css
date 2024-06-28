@@ -1,7 +1,7 @@
 .pvRangeInput {
   width: 100%;
-  margin-bottom: 15px;
-  height: 12px;
+  margin-bottom: 7px;
+  height: 10px;
 }
 
 .pvRangeInputThumb {
@@ -26,9 +26,9 @@
 }
 
 .pvRangeInputTrack {
-  height: 12px;
+  height: 10px;
   border-radius: 8px;
-  background-color: var(--gray-stroke);
+  background-color: #f4f4f4;
 }
 
 .pvRangeInputTrackCompleted {
@@ -66,6 +66,7 @@
 
   .pvRangeInput {
     height: 1rem;
+    margin-bottom: 0.9rem;
   }
 
   .pvRangeInputTrack {
@@ -80,6 +81,7 @@
 
   .pvRangeInput {
     height: 10px;
+    margin-bottom: 9px;
   }
 
   .pvRangeInputTrack {
