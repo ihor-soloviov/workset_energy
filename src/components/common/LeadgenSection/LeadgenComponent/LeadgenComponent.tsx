@@ -8,7 +8,7 @@ import LeadStepOne from './LeadStepOne/LeadStepOne';
 import LeadStepTwo from './LeadStepTwo/LeadStepTwo';
 import LeadStepThree from './LeadStepThree/LeadStepThree';
 import LeadStepFour from './LeadStepFour/LeadStepFour';
-import { FormInitialValue } from '../types';
+import { FormInitialValue, LeadComponentProps } from '../types';
 import { useNavigateTo } from '@/hooks/useNavigationToThanks';
 import styles from './LeadgenComponent.module.css';
 import { Navigate } from '@/types/navigate';
@@ -27,8 +27,7 @@ const formInitialValue: FormInitialValue = {
   },
 };
 
-const LeadgenComponent = () => {
-  const [step, setStep] = useState(1);
+const LeadgenComponent = ({ step, setStep }: LeadComponentProps) => {
   const [formData, setFormData] = useState(formInitialValue);
   const [leadId, setLeadId] = useState<number | null>(null);
 

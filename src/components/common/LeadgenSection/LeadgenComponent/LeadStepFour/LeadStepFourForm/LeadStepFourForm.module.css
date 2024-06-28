@@ -32,6 +32,15 @@
   outline: none;
 }
 
+.errorText {
+  position: absolute;
+  right: 10px;
+  top: 82px;
+  width: fit-content;
+  color: var(--red-main);
+  font-size: 10px;
+}
+
 .stepFourInput.error {
   border: 1px solid var(--red-main);
 }
@@ -114,6 +123,10 @@
     height: 5.8rem;
   }
 
+  .errorText {
+    top: 8.5rem;
+  }
+
   .stepFourBtnWrap {
     gap: 2rem;
     width: 31.8rem;
@@ -148,6 +161,10 @@
 
   .stepFourInput {
     height: 58px;
+  }
+
+  .errorText {
+    top: 85px;
   }
 
   .stepFourBtnWrap {

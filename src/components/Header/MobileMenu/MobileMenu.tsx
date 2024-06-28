@@ -8,12 +8,14 @@ import MobileSocialList from './MobileSocialList/MobileSocialList';
 import MenuCrossIcon from '/public/icons/cross.svg';
 import Link from 'next/link';
 import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 type MobileMenuProps = {
   handleMenuClick: () => void;
 };
 
 const MobileMenu = ({ handleMenuClick }: MobileMenuProps) => {
+  const pathname = usePathname();
   const handleLinkClick = () => handleMenuClick();
 
   useEffect(() => {
@@ -40,10 +42,10 @@ const MobileMenu = ({ handleMenuClick }: MobileMenuProps) => {
         </nav>
         <Link
           onClick={handleLinkClick}
-          href="/#unsere-projekte"
+          href={pathname === '/leadgen' ? '/#unsere-projekte' : '/leadgen'}
           className={styles.menuBtn}
         >
-          Unsere Projekte
+          {pathname === '/leadgen' ? 'Unsere Projekte' : 'Jetzt berechnen'}
         </Link>
         <MobileContactList />
         <MobileSocialList />

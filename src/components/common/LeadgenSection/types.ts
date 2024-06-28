@@ -45,3 +45,8 @@ export type LeadFormProps = {
   setLeadId?: Dispatch<SetStateAction<number | null>>;
   leadMainWrapRef?: React.RefObject<HTMLDivElement>;
 };
+
+export type LeadComponentProps = {
+  step: number;
+  setStep: (step: number) => void;
+};

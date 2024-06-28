@@ -20,7 +20,10 @@ const LeadStepFourForm = ({
   const {
     handleSubmit,
     getFieldProps,
-
+    errors,
+    isValid,
+    dirty,
+    touched,
     resetForm,
   } = useFormik({
     initialValues: {
@@ -32,9 +35,9 @@ const LeadStepFourForm = ({
       userPostcode: Yup.string()
         .matches(/^[0-9]+$/, 'Must be only digits')
         .min(5, 'Must be exactly 5 digits')
-        .max(5, 'Must be exactly 5 digits')
-        .required('Required'),
-      userEmail: Yup.string(),
+        .max(5, 'Must be exactly 5 digits'),
+
+      userEmail: Yup.string().email('Invalid email address'),
 
       userMessage: Yup.string(),
     }),
@@ -91,18 +94,24 @@ const LeadStepFourForm = ({
           PLZ
           <input
             placeholder="PLZ"
-            className={styles.stepFourInput}
+            className={`${styles.stepFourInput} ${touched.userPostcode && errors.userPostcode && styles.error}`}
             {...getFieldProps('userPostcode')}
           />
+          {touched.userPostcode && errors.userPostcode && (
+            <p className={styles.errorText}>{errors.userPostcode}</p>
+          )}
         </label>
 
         <label className={styles.stepFourLabel}>
           E-Mail
           <input
             placeholder="E-Mail"
-            className={styles.stepFourInput}
+            className={`${styles.stepFourInput} ${touched.userEmail && errors.userEmail && styles.error}`}
             {...getFieldProps('userEmail')}
           />
+          {touched.userEmail && errors.userEmail && (
+            <p className={styles.errorText}>{errors.userEmail}</p>
+          )}
         </label>
       </div>
       <label className={styles.stepFourLabel}>
@@ -116,6 +125,7 @@ const LeadStepFourForm = ({
 
       <Button
         type="submit"
+        disabled={!(isValid && dirty)}
         className={`${styles.stepFourBtn} ${interTight.className}`}
       >
         {isLoading ? (
