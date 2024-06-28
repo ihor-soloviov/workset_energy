@@ -125,7 +125,6 @@ const LeadStepFourForm = ({
 
       <Button
         type="submit"
-        disabled={!(isValid && dirty)}
         className={`${styles.stepFourBtn} ${interTight.className}`}
       >
         {isLoading ? (
