@@ -91,7 +91,6 @@
 
 .heroThankTitle {
   width: 342px;
-  height: 94px;
   text-align: center;
   color: var(--black-main);
   font-size: 28px;
@@ -105,6 +104,7 @@
   color: var(--gray-text);
   text-align: center;
   width: 342px;
+  font-weight: 400;
   font-size: 18px;
   width: 313px;
   line-height: 160%;
@@ -161,7 +161,7 @@
   }
 
   .heroThankYouContainer {
-    padding: 48px 25px 0;
+    padding: 12px 25px 0;
   }
 
   .heroTopWrap {
@@ -194,7 +194,7 @@
   }
 
   .heroThankYouWrap {
-    padding: 25.4rem 0 28.8rem;
+    padding: 19rem 0 28.8rem;
     height: 97.2rem;
     z-index: 97;
   }
@@ -314,7 +314,7 @@
   }
 
   .heroThankYouWrap {
-    padding: 254px 0 288px;
+    padding: 190px 0 288px;
     height: 972px;
   }
 

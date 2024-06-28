@@ -277,14 +277,15 @@ export const getCurrentPrice = (index: number, rangeValue: number) => {
         default:
           return '';
       }
+
     case 26:
       switch (index) {
         case 0:
-          return '';
+          return 'ab 27.716 EUR';
         case 1:
-          return '';
+          return 'ab 28.813 EUR';
         case 2:
-          return '';
+          return 'ab 37.653 EUR';
 
         default:
           return '';
@@ -292,11 +293,11 @@ export const getCurrentPrice = (index: number, rangeValue: number) => {
     case 27:
       switch (index) {
         case 0:
-          return '';
+          return 'ab 28.427 EUR';
         case 1:
-          return '';
+          return 'ab 29.529 EUR';
         case 2:
-          return '';
+          return 'ab 38.980 EUR';
 
         default:
           return '';
@@ -304,15 +305,16 @@ export const getCurrentPrice = (index: number, rangeValue: number) => {
     case 28:
       switch (index) {
         case 0:
-          return '';
+          return 'ab 29.179 EUR';
         case 1:
-          return '';
+          return 'ab 30.073 EUR';
         case 2:
-          return '';
+          return 'ab 40.110 EUR';
 
         default:
           return '';
       }
+
     case 29:
       switch (index) {
         case 0:

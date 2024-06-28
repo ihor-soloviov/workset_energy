@@ -8,13 +8,18 @@ const LeadgenComponent = dynamic(
 );
 
 import styles from './LeadgenSection.module.css';
+import { usePathname } from 'next/navigation';
 
 const LeadgenSection = () => {
   const [step, setStep] = useState(1);
+  const pathname = usePathname();
   return (
-    <section id="leadgen" className={`${styles.leadSection}`}>
+    <section
+      id="leadgen"
+      className={`${styles.leadSection} ${pathname === '/leadgen' && step === 4 ? styles.extraClass : ''}`}
+    >
       <div className={styles.leadContainer}>
-        {step < 4 && (
+        {pathname === '/' && step < 4 && (
           <>
             <h2 className={styles.leadMainTitle}>
               Jetzt Solaranlage berechnen

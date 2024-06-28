@@ -15,8 +15,7 @@ import { Navigate } from '@/types/navigate';
 import { useGlobalStore } from '@/store/global-store';
 import LeadAmenitiesList from './LeadAmenitiesList/LeadAmenitiesList';
 import { usePathname } from 'next/navigation';
-import leadGoogleImg from '/public/images/common/lead-google.png';
-import Image from 'next/image';
+import LeadGoogleIcon from '/public/icons/lead-google.svg';
 
 const formInitialValue: FormInitialValue = {
   kWp: '',
@@ -54,6 +53,22 @@ const LeadgenComponent = ({ step, setStep }: LeadComponentProps) => {
 
   const getCurrentClass = (step: number, index: number) =>
     step === index + 1 || index + 1 < step;
+
+  const getCurrentClassByStep = (step: number) => {
+    switch (step) {
+      case 1:
+        return 'one';
+      case 2:
+        return 'two';
+      case 3:
+        return 'three';
+      case 4:
+        return 'four';
+
+      default:
+        return '';
+    }
+  };
 
   const currentStep = (step: number) => {
     switch (step) {
@@ -132,11 +147,7 @@ const LeadgenComponent = ({ step, setStep }: LeadComponentProps) => {
   return (
     <div className={styles.leadMainWrap} ref={leadMainWrapRef}>
       {pathname === '/leadgen' && (
-        <Image
-          className={styles.leadGoogleImg}
-          src={leadGoogleImg}
-          alt="google comments"
-        />
+        <LeadGoogleIcon className={styles.leadGoogleIcon} />
       )}
       {step < 4 && (
         <div className={styles.leadProgressWrap}>
@@ -182,11 +193,10 @@ const LeadgenComponent = ({ step, setStep }: LeadComponentProps) => {
       )}
       {currentStep(step)}
 
-      {pathname !== '/' && step < 4 && (
-        <div className={styles.leadAmentitesWrap}>
-          <h3 className={`${styles.leadAmentitesTitle} ${inter.className}`}>
-            Unser Vorteile
-          </h3>
+      {pathname !== '/' && step < 5 && (
+        <div
+          className={`${styles.leadAmentitesWrap} ${styles[getCurrentClassByStep(step)]}`}
+        >
           <LeadAmenitiesList />
         </div>
       )}
