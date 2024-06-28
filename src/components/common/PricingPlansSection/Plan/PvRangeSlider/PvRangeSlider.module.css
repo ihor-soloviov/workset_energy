@@ -62,6 +62,9 @@
 @media screen and (min-width: 1440px) {
   .pvRangeActiveWrap {
     bottom: 3.2rem;
+    height: 2.8rem;
+    border-radius: 3.2rem;
+    width: 5.4rem;
   }
 
   .pvRangeInput {
@@ -77,6 +80,9 @@
 @media screen and (min-width: 1728px) {
   .pvRangeActiveWrap {
     bottom: 32px;
+    height: 28px;
+    border-radius: 32px;
+    width: 54px;
   }
 
   .pvRangeInput {

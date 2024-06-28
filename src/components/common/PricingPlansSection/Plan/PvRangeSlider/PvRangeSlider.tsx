@@ -15,8 +15,6 @@ const PvRangeSlider = ({
   disableSwiper,
   enableSwiper,
 }: PvRangeSliderProps) => {
-  const [isActive, setIsActive] = useState<boolean>(false);
-
   return (
     <ReactSlider
       step={1}
@@ -25,16 +23,15 @@ const PvRangeSlider = ({
       defaultValue={3}
       onChange={value => {
         setRangeValue(value);
-        setIsActive(true);
+
         disableSwiper && disableSwiper();
       }}
       onAfterChange={() => {
-        setIsActive(false);
         enableSwiper && enableSwiper();
       }}
       className={styles.pvRangeInput}
       thumbClassName={styles.pvRangeInputThumb}
-      thumbActiveClassName={`${isActive && styles.active}`}
+      thumbActiveClassName={`${styles.active}`}
       trackClassName={styles.pvRangeInputTrack}
       renderTrack={(props, state) => (
         <div
