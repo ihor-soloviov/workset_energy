@@ -10,6 +10,18 @@
   }
 }
 
+@keyframes swing {
+  0% {
+    transform: rotate(10deg) translateX(3px);
+  }
+  50% {
+    transform: rotate(-10deg) translateX(-3px);
+  }
+  100% {
+    transform: rotate(10deg) translateX(3px);
+  }
+}
+
 .regionSection {
   padding: 32px 0;
   position: relative;
@@ -97,6 +109,8 @@
 .regionLocationIcon {
   width: 24px;
   height: 24px;
+
+  animation: swing 5s infinite ease-in-out;
 }
 
 .regionLocationText {
