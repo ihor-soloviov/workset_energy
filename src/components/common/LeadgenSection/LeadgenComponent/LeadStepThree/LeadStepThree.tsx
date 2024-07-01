@@ -1,46 +1,33 @@
-import Button from '@/components/common/Button/Button';
 import styles from './LeadStepThree.module.css';
-import LeadStepThreeList from './LeadStepThreeList/LeadStepThreeList';
-import React, { useState, MouseEvent, useEffect } from 'react';
-import { LeadStepProps } from '../../types';
+import LeadStepThreeForm from './LeadStepThreeForm/LeadStepThreeForm';
+import React, { useState } from 'react';
+import { LeadFormProps } from '../../types';
+import { inter } from '@/utils/fonts';
 
 const LeadStepThree = ({
-  handleNextStepClick,
+  formData,
+  setFormData,
+  step,
+  setStep,
   handlePrevStepClick,
-}: LeadStepProps) => {
-  const [stepThreeValue, setStepThreeValue] = useState<null | string>(null);
-
-  const handleItemClick = (e: MouseEvent<HTMLLIElement>, itemValue: string) => {
-    setStepThreeValue(itemValue);
-  };
-
-  useEffect(() => {
-    if (stepThreeValue) {
-      const timer = setTimeout(() => {
-        handleNextStepClick(`${stepThreeValue} monate`, 'timePeriod');
-      }, 100);
-      return () => clearTimeout(timer);
-    }
-  }, [stepThreeValue, handleNextStepClick]);
-
+  setLeadId,
+  leadMainWrapRef,
+}: LeadFormProps) => {
   return (
     <div className={styles.stepThreeWrap}>
-      <h2 className={styles.stepThreeTitle}>Umsetzung</h2>
-      <p className={styles.stepThreeText}>
-        Wann wünschst du deine PV-Anlage zu realisieren?
+      <h2 className={styles.stepThreeTitle}>Kontaktdaten</h2>
+      <p className={`${styles.stepThreeText} ${inter.className}`}>
+        Bitte alle Felder ausfüllen, damit wir dich erreichen können.
       </p>
-      <LeadStepThreeList
-        stepValue={stepThreeValue}
-        handleItemClick={handleItemClick}
+      <LeadStepThreeForm
+        formData={formData}
+        setFormData={setFormData}
+        step={step}
+        setStep={setStep}
+        handlePrevStepClick={handlePrevStepClick}
+        setLeadId={setLeadId}
+        leadMainWrapRef={leadMainWrapRef}
       />
-
-      <Button
-        handleClick={handlePrevStepClick}
-        type="button"
-        className={styles.stepThreeBtn}
-      >
-        Zurück
-      </Button>
     </div>
   );
 };

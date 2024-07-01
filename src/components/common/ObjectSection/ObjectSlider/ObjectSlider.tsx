@@ -62,6 +62,7 @@ const ObjectSlider = () => {
                 className={styles.sliderImgMob}
                 src={mobile}
                 alt="slide"
+                loading="lazy"
                 placeholder="blur"
               />
               <Image
@@ -69,6 +70,7 @@ const ObjectSlider = () => {
                 className={styles.sliderImgDesk}
                 src={desktop}
                 alt="slide"
+                loading="lazy"
                 placeholder="blur"
               />
 

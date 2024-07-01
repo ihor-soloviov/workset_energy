@@ -1,39 +1,38 @@
-import { MouseEvent } from 'react';
+import { Dispatch, MouseEvent, SetStateAction } from 'react';
+import React from 'react';
 
 export type StepItem = {
   title: string;
-  icon?: React.ElementType;
   text?: string;
-};
-export type LeadgenComponentProps = {
-  step: number;
-  setStep: (step: number) => void;
+  icon?: React.ElementType;
+  iconMob?: React.ElementType;
+  iconDesk?: React.ElementType;
+  iconDeskWhite?: React.ElementType;
+  className?: string;
 };
 
 export type FormInitialValue = {
-  propertyType: string;
-  consultType: string;
-  timePeriod: string;
-  communicationType: string;
+  kWp: string;
+  componentsList: string[];
+
   contactData: {
-    userFirstName: string;
-    userLastName: string;
-    userEmail: string;
+    userName: string;
     userPhone: string;
-    userPostcode: string;
   };
-  projectMessage: string;
 };
 
 export type LeadStepProps = {
   isLoading?: boolean;
   handlePrevStepClick?: () => void;
-  handleNextStepClick: (stepValue: string | null, key: string) => void;
+  handleNextStepClick: (
+    stepValue: string | string[] | null,
+    key: string,
+  ) => void;
 };
 
 export type LeadStepListProps = {
   handleItemClick: (e: MouseEvent<HTMLLIElement>, itemValue: string) => void;
-  stepValue: null | string;
+  stepValue: null | string | string[];
 };
 
 export type LeadFormProps = {
@@ -42,4 +41,12 @@ export type LeadFormProps = {
   step: number;
   setStep: (step: number) => void;
   handlePrevStepClick?: () => void;
+  leadId?: number | null;
+  setLeadId?: Dispatch<SetStateAction<number | null>>;
+  leadMainWrapRef?: React.RefObject<HTMLDivElement>;
+};
+
+export type LeadComponentProps = {
+  step: number;
+  setStep: (step: number) => void;
 };

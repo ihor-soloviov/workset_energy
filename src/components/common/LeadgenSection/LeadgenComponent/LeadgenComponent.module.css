@@ -1,57 +1,189 @@
 .leadMainWrap {
 }
 
+.leadGoogleIcon {
+  display: none;
+}
+
 .leadProgressWrap {
   margin: 0 auto;
-  width: fit-content;
-  margin-bottom: 24px;
+  width: 100%;
+  margin-bottom: 36px;
 }
 
 .leadProgressList {
   display: flex;
   align-items: center;
-  gap: 9px;
+  justify-content: space-between;
   margin: 0 auto;
-  width: fit-content;
-  margin-bottom: 14px;
+  width: 100%;
 }
 
 .leadProgressItem {
-  width: 48px;
-  height: 6px;
-  border-radius: 26px;
-  background-color: var(--gray-stroke);
+  position: relative;
 }
 
-.leadProgressItem.active {
-  background-color: var(--red-main);
+.leadProgressCountWrap {
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  border: 1px solid var(--gray-stroke);
+  align-items: center;
+
+  justify-content: center;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+}
+
+.leadProgressCountWrap.active {
+  background-color: var(--red-second);
+}
+
+.leadProgressCount {
+  color: var(--gray-text);
+  font-size: 18.5px;
+  font-weight: 500;
+  line-height: 150%;
+  height: 25px;
+  letter-spacing: -0.185px;
+  transition: all 0.2s ease-in-out;
+}
+
+.leadProgressCount.active {
+  color: var(--white-main);
 }
 
 .leadProgressText {
-  color: var(--gray-text);
-  font-size: 15px;
-  font-weight: 600;
+  display: none;
+}
+
+.leadProgressIcon {
+  width: 18px;
+  height: 25px;
+  stroke: var(--white-main);
+  transition: all 0.2s ease-in-out;
+}
+
+.leadProgressLinesList {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100px;
+  bottom: 16px;
+  height: 2px;
+  right: -110px;
+}
+
+.leadProgressLine {
+  height: 2px;
+  width: 12px;
+  border-radius: 32px;
+  background-color: var(--gray-text);
+  transition: all 0.2s ease-in-out;
+  opacity: 0.2;
+}
+
+.leadProgressLine:first-child {
+  width: 8px;
+}
+.leadProgressLine:last-child {
+  width: 8px;
+}
+
+.leadProgressLine.active {
+  opacity: 1;
+  background-color: var(--red-second);
+}
+
+.leadAmentitesWrap {
+  margin-top: 64px;
 }
 
 @media screen and (min-width: 1440px) {
   .leadMainWrap {
+    position: relative;
+  }
+
+  .leadGoogleIcon {
+    display: flex;
+    position: absolute;
+    top: -0.9rem;
+    right: -23.4rem;
+    width: 20rem;
+    height: 8.3rem;
   }
 
   .leadProgressWrap {
-    margin-bottom: 3.2rem;
+    margin-bottom: 4.8rem;
+    width: 59.9rem;
   }
 
   .leadProgressList {
-    gap: 1.4rem;
+    width: 100%;
+
+    justify-content: unset;
+    gap: 7rem;
+  }
+
+  .leadProgressLinesList {
+    width: 5.4rem;
+    right: -6.2rem;
+    bottom: 1.8rem;
   }
 
   .leadProgressItem {
-    width: 6rem;
-    height: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
   }
 
   .leadProgressText {
-    font-size: 1.6rem;
+    display: block;
+    font-size: 1.5rem;
+    color: var(--gray-text);
+    font-weight: 600;
+    line-height: 133%;
+    letter-spacing: -0.1px;
+  }
+
+  .leadProgressText.active {
+    color: var(--red-main);
+  }
+
+  .leadProgressCountWrap {
+    width: 3.6rem;
+    height: 3.6rem;
+  }
+
+  .leadProgressCount {
+    font-size: 2rem;
+    height: 3rem;
+  }
+
+  .leadProgressIcon {
+    width: 2rem;
+    height: 3rem;
+  }
+
+  .leadAmentitesWrap {
+    margin-top: 17.8rem;
+  }
+
+  .one {
+  }
+
+  .two {
+    margin-top: 5.4rem;
+  }
+
+  .three {
+    margin-top: 14.4rem;
+  }
+
+  .four {
+    margin-top: 11.1rem;
   }
 }
 
@@ -59,20 +191,68 @@
   .leadMainWrap {
   }
 
+  .leadGoogleIcon {
+    top: -7px;
+    right: -220px;
+    width: 165px;
+    height: 78px;
+  }
+
   .leadProgressWrap {
-    margin-bottom: 32px;
+    margin-bottom: 48px;
+    width: 599px;
   }
 
   .leadProgressList {
-    gap: 14px;
+    gap: 70px;
+  }
+
+  .leadProgressLinesList {
+    width: 54px;
+    right: -62px;
+    bottom: 16px;
   }
 
   .leadProgressItem {
-    width: 60px;
-    height: 5px;
+    gap: 8px;
   }
 
   .leadProgressText {
-    font-size: 16px;
+    font-size: 15px;
+    letter-spacing: -0.1px;
+  }
+
+  .leadProgressCountWrap {
+    width: 36px;
+    height: 36px;
+  }
+
+  .leadProgressCount {
+    font-size: 20px;
+    height: 30px;
+  }
+
+  .leadProgressIcon {
+    width: 20px;
+    height: 30px;
+  }
+
+  .leadAmentitesWrap {
+    margin-top: 178px;
+  }
+
+  .one {
+  }
+
+  .two {
+    margin-top: 54px;
+  }
+
+  .three {
+    margin-top: 144px;
+  }
+
+  .four {
+    margin-top: 111px;
   }
 }

@@ -42,7 +42,11 @@ const ContactUsForm = () => {
         .email('Invalid email address')
         .required('Required'),
       userPhone: Yup.number().typeError('Invalid number').required('Required'),
-      userPostcode: Yup.string().required('Required'),
+      userPostcode: Yup.string()
+        .matches(/^[0-9]+$/, 'Must be only digits')
+        .min(5, 'Must be exactly 5 digits')
+        .max(5, 'Must be exactly 5 digits')
+        .required('Required'),
       userComment: Yup.string(),
     }),
     onSubmit: async ({
@@ -118,9 +122,9 @@ const ContactUsForm = () => {
         </label>
       </div>
       <label className={styles.contactUsLabel}>
-        PLZ und Stadt der Projektadresse*
+        PLZ der Projektadresse*
         <input
-          placeholder="PLZ und Stadt der Projektadresse"
+          placeholder="PLZ der Projektadresse"
           className={`${styles.contactUsInput}`}
           {...getFieldProps('userPostcode')}
         />

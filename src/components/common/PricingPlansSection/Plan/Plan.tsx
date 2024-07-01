@@ -1,12 +1,13 @@
 'use client';
-import React from 'react';
+
+import React, { useState } from 'react';
 import Image from 'next/image';
 import CheckMarker from '/public/icons/check-circle.svg';
 import { PlanT } from '@/types/infoTypes';
 import styles from './Plan.module.css';
 import { inter } from '@/utils/fonts';
-import { usePathname } from 'next/navigation';
-
+import PvRangeSlider from './PvRangeSlider/PvRangeSlider';
+import { getCurrentPrice } from '@/utils/getCurrentPice';
 import useObserver from '@/hooks/useObserver';
 import Link from 'next/link';
 interface CustomCSSProperties extends React.CSSProperties {
@@ -15,6 +16,8 @@ interface CustomCSSProperties extends React.CSSProperties {
 type Props = {
   plan: PlanT;
   index: number;
+  disableSwiper?: () => void;
+  enableSwiper?: () => void;
 };
 
 const customStyleFirst: CustomCSSProperties = { '--i': '0' };
@@ -24,16 +27,45 @@ const customStyleFourth: CustomCSSProperties = { '--i': '3' };
 const customStyleFifth: CustomCSSProperties = { '--i': '4' };
 
 const Plan: React.FC<Props> = ({
-  plan: { name, imageMob, imageDesk, price, benefits },
+  plan: { name, imageMob, imageDesk, benefits },
   index,
+  disableSwiper,
+  enableSwiper,
 }) => {
+  const [rangeOneValue, setRangeOneValue] = useState<number>(3);
+  const [rangeTwoValue, setRangeTwoValue] = useState<number>(3);
+  const [rangeThreeValue, setRangeThreeValue] = useState<number>(3);
   useObserver(
     `.${styles.pricingPlansItem}`,
     `${styles.pricingPlansItemVisible}`,
   );
 
-  const pathname = usePathname();
-  // console.log(pathname);
+  const getCurrentRangeState = (index: number) => {
+    switch (index) {
+      case 0:
+        return rangeOneValue;
+      case 1:
+        return rangeTwoValue;
+      case 2:
+        return rangeThreeValue;
+
+      default:
+        return rangeOneValue;
+    }
+  };
+  const getCurrentRangeSetState = (index: number) => {
+    switch (index) {
+      case 0:
+        return setRangeOneValue;
+      case 1:
+        return setRangeTwoValue;
+      case 2:
+        return setRangeThreeValue;
+
+      default:
+        return setRangeThreeValue;
+    }
+  };
 
   return (
     <li className={styles.pricingPlansItem}>
@@ -63,8 +95,24 @@ const Plan: React.FC<Props> = ({
       />
       <div className={styles.pricingPlanInfo}>
         <span className={styles.planTitle}>{name}</span>
-        <h4 className={styles.planPrice}> ab {price}</h4>
+        <h4 className={styles.planPrice}>
+          {getCurrentPrice(index, getCurrentRangeState(index))}
+        </h4>
 
+        <div className={styles.planRangeMainWrap}>
+          <PvRangeSlider
+            rangeValue={getCurrentRangeState(index)}
+            setRangeValue={getCurrentRangeSetState(index)}
+            disableSwiper={disableSwiper}
+            enableSwiper={enableSwiper}
+          />
+          <div className={`${styles.planRangeTextWrap} ${inter.className}`}>
+            <p className={styles.planRangeText}>3 kWp</p>
+            <p className={styles.planRangeText}>30+ kWp</p>
+          </div>
+        </div>
+
+        <h5 className={styles.planListTitle}>Komplettpaket</h5>
         <ul className={`${styles.planBenefits} ${inter.className}`}>
           {benefits.map(benefit => (
             <li key={benefit} className={styles.planBenefit}>
@@ -73,11 +121,8 @@ const Plan: React.FC<Props> = ({
             </li>
           ))}
         </ul>
-        <Link
-          href={pathname === '/pv-anlagen' ? '/leadgen' : `${pathname}#kontact`}
-          className={styles.planBtn}
-        >
-          Zum Angebot
+        <Link href={'/leadgen'} className={styles.planBtn}>
+          Preis anfragen
         </Link>
       </div>
     </li>

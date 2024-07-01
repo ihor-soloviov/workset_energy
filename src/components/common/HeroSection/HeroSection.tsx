@@ -39,7 +39,7 @@ const HeroSection = ({
   const pathname = usePathname();
   useObserver(`.${styles.heroAnim}`, `${styles.heroAnimVisible}`);
   useObserver(`.${styles.heroImgMob}`, `${styles.heroBgImgScaled}`);
-  useObserver(`.${styles.heroImgDesk}`, `${styles.heroBgImgScaled}`);
+  useObserver(`.${styles.heroImgDesc}`, `${styles.heroBgImgScaled}`);
 
   const scrollToTeamSection = () => {
     if (!isDesktop) {
@@ -105,7 +105,7 @@ const HeroSection = ({
               {text}
             </p>
             <div className={`${styles.heroBtnWrap} ${styles.heroAnim}`}>
-              <Link className={styles.heroLink} href="/leadgen#leadgen">
+              <Link className={styles.heroLink} href="/leadgen">
                 Jetzt berechnen
               </Link>
               {isDesktop && pathname === '/' ? (

@@ -19,7 +19,6 @@ type VisionLinkItem = TitleText;
 type VorteileSliderItems = TitleText;
 
 type PlanT = {
-  price: string;
   name: string;
 
   imageMob: StaticImageData;

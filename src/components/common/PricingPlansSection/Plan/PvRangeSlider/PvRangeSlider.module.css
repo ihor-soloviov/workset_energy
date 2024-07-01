@@ -1,0 +1,96 @@
+.pvRangeInput {
+  width: 100%;
+  margin-bottom: 7px;
+  height: 10px;
+}
+
+.pvRangeInputThumb {
+  height: 25px;
+  width: 25px;
+  background-color: var(--white-main);
+  border: 2px solid var(--gray-stroke);
+  top: -7px;
+  outline: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.04);
+}
+
+.pvRangeInputThumb::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  bottom: -12px;
+  left: -12px;
+}
+
+.pvRangeInputTrack {
+  height: 10px;
+  border-radius: 8px;
+  background-color: #f4f4f4;
+}
+
+.pvRangeInputTrackCompleted {
+  background-color: var(--red-main);
+}
+
+.pvRangeInputThumb.active .pvRangeActiveWrap {
+  display: flex;
+}
+
+.pvRangeActiveWrap {
+  display: none;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  bottom: 28px;
+  right: -23px;
+  width: 66px;
+  height: 32px;
+  border-radius: 24px;
+  background-color: var(--red-main);
+}
+
+.pvRangeActiveCount {
+  color: var(--white-main);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@media screen and (min-width: 1440px) {
+  .pvRangeActiveWrap {
+    bottom: 2.8rem;
+    height: 2.8rem;
+    border-radius: 3.2rem;
+    width: 5.4rem;
+  }
+
+  .pvRangeInput {
+    height: 1rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .pvRangeInputTrack {
+    height: 1rem;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .pvRangeActiveWrap {
+    bottom: 28px;
+    height: 28px;
+    border-radius: 32px;
+    width: 54px;
+  }
+
+  .pvRangeInput {
+    height: 10px;
+    margin-bottom: 9px;
+  }
+
+  .pvRangeInputTrack {
+    height: 10px;
+  }
+}

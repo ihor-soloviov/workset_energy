@@ -1,46 +1,73 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+'use client';
+
 import { inter } from '@/utils/fonts';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import CheckIcon from '/public/icons/check.svg';
 import LeadStepOne from './LeadStepOne/LeadStepOne';
 import LeadStepTwo from './LeadStepTwo/LeadStepTwo';
 import LeadStepThree from './LeadStepThree/LeadStepThree';
 import LeadStepFour from './LeadStepFour/LeadStepFour';
-import LeadStepFive from './LeadStepFive/LeadStepFive';
-import LeadStepSix from './LeadStepSix/LeadStepSix';
-
-import { FormInitialValue, LeadgenComponentProps } from '../types';
+import { FormInitialValue, LeadComponentProps } from '../types';
 import { useNavigateTo } from '@/hooks/useNavigationToThanks';
 import styles from './LeadgenComponent.module.css';
 import { Navigate } from '@/types/navigate';
+import { useGlobalStore } from '@/store/global-store';
+import LeadAmenitiesList from './LeadAmenitiesList/LeadAmenitiesList';
+import { usePathname } from 'next/navigation';
+import LeadGoogleIcon from '/public/icons/lead-google.svg';
 
 const formInitialValue: FormInitialValue = {
-  propertyType: '',
-  consultType: '',
-  timePeriod: '',
-  communicationType: '',
+  kWp: '',
+  componentsList: [],
   contactData: {
-    userFirstName: '',
-    userLastName: '',
-    userEmail: '',
+    userName: '',
     userPhone: '',
-    userPostcode: '',
   },
-  projectMessage: '',
 };
 
-const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
+const LeadgenComponent = ({ step, setStep }: LeadComponentProps) => {
   const [formData, setFormData] = useState(formInitialValue);
+  const [leadId, setLeadId] = useState<number | null>(null);
+
   const thankYou = useNavigateTo(Navigate.thanks);
-  // console.log('formData', formData);
+  const { isDesktop } = useGlobalStore();
+  const pathname = usePathname();
+  const leadProgressList = ['Stromverbrauch', 'Komponenten', 'Kontaktdaten'];
+  const leadProgressLinesList = !isDesktop ? [1, 2, 3, 4, 5, 6] : [1, 2, 3, 4];
+
+  const leadMainWrapRef = useRef<HTMLDivElement>(null);
 
   const handlePrevStepClick = () => {
     clearStepValue(step - 1);
     setStep(step - 1);
   };
 
-  const handleNextStepClick = (stepValue: string | null, key: string) => {
+  const handleNextStepClick = (
+    stepValue: string | string[] | null,
+    key: string,
+  ) => {
     stepValue && setFormData({ ...formData, [key]: stepValue });
     setStep(step + 1);
+  };
+
+  const getCurrentClass = (step: number, index: number) =>
+    step === index + 1 || index + 1 < step;
+
+  const getCurrentClassByStep = (step: number) => {
+    switch (step) {
+      case 1:
+        return 'one';
+      case 2:
+        return 'two';
+      case 3:
+        return 'three';
+      case 4:
+        return 'four';
+
+      default:
+        return '';
+    }
   };
 
   const currentStep = (step: number) => {
@@ -57,34 +84,24 @@ const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
       case 3:
         return (
           <LeadStepThree
+            step={step}
+            setStep={setStep}
+            formData={formData}
+            setFormData={setFormData}
             handlePrevStepClick={handlePrevStepClick}
-            handleNextStepClick={handleNextStepClick}
+            setLeadId={setLeadId}
+            leadMainWrapRef={leadMainWrapRef}
           />
         );
       case 4:
         return (
           <LeadStepFour
-            handlePrevStepClick={handlePrevStepClick}
-            handleNextStepClick={handleNextStepClick}
-          />
-        );
-      case 5:
-        return (
-          <LeadStepFive
             step={step}
             setStep={setStep}
             formData={formData}
             setFormData={setFormData}
-            handlePrevStepClick={handlePrevStepClick}
-          />
-        );
-      case 6:
-        return (
-          <LeadStepSix
-            step={step}
-            setStep={setStep}
-            formData={formData}
-            setFormData={setFormData}
+            leadId={leadId}
+            leadMainWrapRef={leadMainWrapRef}
           />
         );
 
@@ -98,34 +115,19 @@ const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
       case 1:
         return setFormData({
           ...formData,
-          propertyType: formInitialValue.propertyType,
+          kWp: formInitialValue.kWp,
         });
 
       case 2:
         return setFormData({
           ...formData,
-          consultType: formInitialValue.consultType,
+          componentsList: formInitialValue.componentsList,
         });
 
       case 3:
         return setFormData({
           ...formData,
-          timePeriod: formInitialValue.timePeriod,
-        });
-      case 4:
-        return setFormData({
-          ...formData,
-          communicationType: formInitialValue.communicationType,
-        });
-      case 5:
-        return setFormData({
-          ...formData,
           contactData: formInitialValue.contactData,
-        });
-      case 6:
-        return setFormData({
-          ...formData,
-          projectMessage: formInitialValue.projectMessage,
         });
 
       default:
@@ -134,31 +136,70 @@ const LeadgenComponent = ({ step, setStep }: LeadgenComponentProps) => {
   };
 
   useEffect(() => {
-    if (step === 7) {
+    if (step === 5) {
       thankYou();
       setStep(1);
       setFormData(formInitialValue);
+      setLeadId(null);
     }
   }, [step]);
 
   return (
-    <div className={styles.leadMainWrap}>
-      {step < 6 && (
+    <div className={styles.leadMainWrap} ref={leadMainWrapRef}>
+      {pathname === '/leadgen' && (
+        <LeadGoogleIcon className={styles.leadGoogleIcon} />
+      )}
+      {step < 4 && (
         <div className={styles.leadProgressWrap}>
           <ul className={styles.leadProgressList}>
-            {[1, 2, 3, 4, 5].map(item => (
+            {leadProgressList.map((text, index) => (
               <li
-                className={`${styles.leadProgressItem} ${step === item || item < step ? styles.active : ''}`}
-                key={item}
-              ></li>
+                className={`${styles.leadProgressItem} ${getCurrentClass(step, index) ? styles.active : ''}`}
+                key={text}
+              >
+                <div
+                  className={`${styles.leadProgressCountWrap} ${getCurrentClass(step, index) ? styles.active : ''}`}
+                >
+                  <p
+                    className={`${styles.leadProgressCount} ${getCurrentClass(step, index) ? styles.active : ''} ${inter.className}`}
+                  >
+                    {step > index + 1 ? (
+                      <CheckIcon className={styles.leadProgressIcon} />
+                    ) : (
+                      index + 1
+                    )}
+                  </p>
+                </div>
+
+                <p
+                  className={`${styles.leadProgressText} ${getCurrentClass(step, index) ? styles.active : ''}`}
+                >
+                  {text}
+                </p>
+                {index + 1 !== 3 && (
+                  <ul className={styles.leadProgressLinesList}>
+                    {leadProgressLinesList.map(num => (
+                      <li
+                        className={`${styles.leadProgressLine} ${index + 1 < step ? styles.active : ''}`}
+                        key={num}
+                      ></li>
+                    ))}
+                  </ul>
+                )}
+              </li>
             ))}
           </ul>
-          <p className={`${styles.leadProgressText} ${inter.className}`}>
-            <span>{`${step !== 6 && step !== 7 ? step : 5} `}</span>von 5
-          </p>
         </div>
       )}
       {currentStep(step)}
+
+      {pathname !== '/' && step < 5 && (
+        <div
+          className={`${styles.leadAmentitesWrap} ${styles[getCurrentClassByStep(step)]}`}
+        >
+          <LeadAmenitiesList />
+        </div>
+      )}
     </div>
   );
 };

@@ -1,0 +1,164 @@
+.stepOneList {
+  width: 342px;
+  height: 372px;
+  padding: 24px 25px;
+  background-color: var(--gray-input);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  border-radius: 16px;
+}
+
+.stepOneItem {
+  cursor: pointer;
+  width: 292px;
+  height: 72px;
+  padding: 8px 93px 8px 28px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  display: flex;
+  background-color: var(--white-main);
+  box-shadow: 4px 12px 19px 0px rgba(24, 24, 24, 0.08);
+  transition: all 0.15s ease-in-out;
+}
+
+.stepOneItem.active {
+  background-color: var(--red-main);
+}
+
+.stepOneWrap {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.stepOneIcon {
+  width: 56px;
+  height: 56px;
+  stroke: #3b3c4a;
+  transition: all 0.15s ease-in-out;
+}
+
+.stepOneIcon.active {
+  stroke: var(--white-main);
+}
+
+.stepOneTitle {
+  color: #3b3c4a;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.15s ease-in-out;
+}
+
+.stepOneTitle.active {
+  color: var(--white-main);
+}
+
+.stepOneIconWhite {
+  display: none;
+}
+
+@media screen and (min-width: 1440px) {
+  .stepOneList {
+    width: 69.4rem;
+    height: 28.2rem;
+    padding: unset;
+    border-radius: 1.6rem;
+    gap: 2rem;
+    flex-direction: row;
+    margin: 0 auto;
+    margin-bottom: unset;
+    background-color: transparent;
+  }
+
+  .stepOneItem {
+    width: 25.6rem;
+    height: 25.6rem;
+    padding: unset;
+    box-shadow: 0px 4px 31.2px 0px rgba(218, 218, 218, 0.7);
+    padding: 4.8rem 6.1rem 2.6rem;
+    border-radius: 2.4rem;
+  }
+
+  .stepOneItem:hover {
+    border: 0.2rem solid #ff8a97;
+  }
+
+  .stepOneItem.active:hover {
+    border-color: var(--red-main);
+  }
+
+  .stepOneWrap {
+    flex-direction: column;
+    gap: 2.2rem;
+  }
+
+  .stepOneIcon {
+    width: 13.4rem;
+    height: 13.4rem;
+  }
+
+  .stepOneIcon.active {
+    display: none;
+  }
+
+  .stepOneIconWhite {
+    width: 13.4rem;
+    height: 13.4rem;
+  }
+
+  .stepOneIconWhite.active {
+    display: block;
+  }
+
+  .stepOneTitle {
+    text-align: center;
+    font-weight: 600;
+    font-size: 2.2rem;
+    color: var(--red-main);
+    line-height: 120%;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .stepOneList {
+    width: 1084px;
+    height: 256px;
+    gap: 20px;
+  }
+
+  .stepOneItem {
+    width: 256px;
+    height: 256px;
+    padding: 48px 61px 26px;
+    border-radius: 24px;
+  }
+
+  .stepOneItem:hover {
+    border: 2px solid #ff8a97;
+  }
+
+  .stepOneItem.active:hover {
+    border-color: var(--red-main);
+  }
+
+  .stepOneWrap {
+    gap: 22px;
+  }
+
+  .stepOneIcon {
+    width: 134px;
+    height: 134px;
+  }
+
+  .stepOneTitle {
+    font-size: 22px;
+  }
+
+  .stepOneIconWhite {
+    width: 134px;
+    height: 134px;
+  }
+}

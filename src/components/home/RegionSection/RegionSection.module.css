@@ -10,8 +10,20 @@
   }
 }
 
+@keyframes swing {
+  0% {
+    transform: rotate(10deg) translateX(3px);
+  }
+  50% {
+    transform: rotate(-10deg) translateX(-3px);
+  }
+  100% {
+    transform: rotate(10deg) translateX(3px);
+  }
+}
+
 .regionSection {
-  padding: 36px 0;
+  padding: 32px 0;
   position: relative;
   overflow: hidden;
   background-color: var(--black-main);
@@ -36,12 +48,12 @@
   color: var(--white-main);
   font-size: 16px;
   line-height: 160%;
-  margin-bottom: 426px;
+  margin-bottom: 484px;
 }
 
 .regionImgWrap {
   position: absolute;
-  top: 216px;
+  top: 203px;
   left: -46px;
 }
 
@@ -56,86 +68,76 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  border: 1px solid var(--red-main);
-  background-color: rgba(243, 44, 64, 0.4);
+
   position: absolute;
 }
 
 .regionLocationWrapVisible {
-  animation: pulse 1.5s infinite;
+  /* animation: pulse 1.5s infinite; */
 }
 
 .regionLocationWrap:nth-child(1) {
-  width: 81px;
-  height: 82px;
-  top: 50px;
-  left: 121px;
+  top: 142px;
+  left: 165px;
 }
 
 .regionLocationWrap:nth-child(2) {
-  width: 78px;
-  height: 78px;
-  top: 108px;
-  left: 110px;
+  top: 205px;
+  left: 150px;
 }
 
 .regionLocationWrap:nth-child(3) {
-  width: 131px;
-  height: 132px;
-  top: 174px;
-  left: 182px;
+  top: 315px;
+  left: 250px;
+}
+
+.regionLocationWrap:nth-child(4) {
+  top: 81px;
+  left: 168px;
+}
+
+.regionLocationWrap:nth-child(5) {
+  top: 165px;
+  left: 165px;
+}
+
+.regionLocationWrap:nth-child(6) {
+  top: 279px;
+  left: 199px;
 }
 
 .regionLocationIcon {
-  position: absolute;
-}
+  width: 24px;
+  height: 24px;
 
-.regionLocationWrap:nth-child(1) .regionLocationIcon {
-  width: 27px;
-  height: 27px;
-  top: 13px;
-  left: 29px;
-}
-
-.regionLocationWrap:nth-child(2) .regionLocationIcon {
-  width: 32px;
-  height: 32px;
-  top: 11px;
-  left: 24px;
-}
-
-.regionLocationWrap:nth-child(3) .regionLocationIcon {
-  width: 38px;
-  height: 38px;
-  top: 48px;
-  left: 47px;
+  animation: swing 5s infinite ease-in-out;
 }
 
 .regionLocationText {
-  position: absolute;
   color: var(--white-main);
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 12px;
+  font-weight: 600;
   width: fit-content;
   line-height: 130%;
 }
 
 .regionLocationWrap:nth-child(1) .regionLocationText {
-  top: 24px;
-  left: 55px;
 }
 
 .regionLocationWrap:nth-child(2) .regionLocationText {
-  top: 24px;
-  left: 55px;
-  font-size: 16px;
+  font-size: 13px;
 }
 
 .regionLocationWrap:nth-child(3) .regionLocationText {
-  font-size: 18px;
-  top: 66px;
-  left: 85px;
+  font-size: 15px;
+}
+.regionLocationWrap:nth-child(4) .regionLocationText {
+}
+.regionLocationWrap:nth-child(5) .regionLocationText {
+}
+
+.regionLocationWrap:nth-child(6) .regionLocationText {
+  font-size: 14px;
 }
 
 .regionBtn {
@@ -208,10 +210,10 @@
   }
 
   .regionImgWrap {
-    top: -16.6rem;
-    left: 82rem;
-    width: 85.6rem;
-    height: 63.6rem;
+    top: -28.3rem;
+    left: 81rem;
+    width: 92.4rem;
+    height: 84.3rem;
   }
 
   .regionImgMob {
@@ -223,63 +225,66 @@
   }
 
   .regionLocationWrap:nth-child(1) {
-    width: 12.6rem;
-    height: 12.6rem;
-    top: 8.3rem;
-    left: 21.4rem;
+    top: 27.2rem;
+    left: 28.5rem;
   }
 
   .regionLocationWrap:nth-child(2) {
-    width: 14.4rem;
-    height: 14.4rem;
-    top: 17.2rem;
-    left: 18.2rem;
+    left: 26.2rem;
+    top: 38rem;
   }
 
   .regionLocationWrap:nth-child(3) {
-    width: 22.7rem;
-    height: 22.7rem;
-    top: 30.2rem;
-    left: 30.9rem;
+    top: 56.5rem;
+    left: 43rem;
   }
 
-  .regionLocationWrap:nth-child(1) .regionLocationIcon {
-    width: 4.6rem;
-    height: 4.6rem;
-    top: 2.8rem;
-    left: 4.2rem;
+  .regionLocationWrap:nth-child(4) {
+    top: 17rem;
+    left: 29.3rem;
   }
 
-  .regionLocationWrap:nth-child(2) .regionLocationIcon {
-    width: 5.4rem;
-    height: 5.4rem;
-    top: 3.4rem;
-    left: 4.6rem;
+  .regionLocationWrap:nth-child(5) {
+    top: 31.4rem;
+    left: 28.7rem;
   }
 
-  .regionLocationWrap:nth-child(3) .regionLocationIcon {
-    width: 6rem;
-    height: 6rem;
-    top: 8.4rem;
-    left: 8.4rem;
+  .regionLocationWrap:nth-child(6) {
+    top: 50.4rem;
+    left: 34.4rem;
+  }
+
+  .regionLocationIcon {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .regionLocationText {
+    font-weight: 500;
   }
 
   .regionLocationWrap:nth-child(1) .regionLocationText {
-    top: 5.1rem;
-    left: 8.5rem;
     font-size: 1.6rem;
   }
 
   .regionLocationWrap:nth-child(2) .regionLocationText {
-    top: 6.2rem;
-    left: 10rem;
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   .regionLocationWrap:nth-child(3) .regionLocationText {
-    font-size: 2.4rem;
-    top: 11.4rem;
-    left: 14rem;
+    font-size: 1.8rem;
+  }
+
+  .regionLocationWrap:nth-child(4) .regionLocationText {
+    font-size: 1.6rem;
+  }
+
+  .regionLocationWrap:nth-child(5) .regionLocationText {
+    font-size: 1.6rem;
+  }
+
+  .regionLocationWrap:nth-child(6) .regionLocationText {
+    font-size: 2rem;
   }
 
   .regionBtn {
@@ -312,70 +317,68 @@
   }
 
   .regionImgWrap {
-    top: -166px;
-    left: 820px;
-    width: 856px;
-    height: 636px;
+    top: -293px;
+    left: 810px;
+    width: 924px;
+    height: 843px;
   }
 
   .regionLocationWrap:nth-child(1) {
-    width: 126px;
-    height: 126px;
-    top: 83px;
-    left: 214px;
+    top: 272px;
+    left: 285px;
   }
 
   .regionLocationWrap:nth-child(2) {
-    width: 144px;
-    height: 144px;
-    top: 172px;
-    left: 182px;
+    left: 262px;
+    top: 380px;
   }
 
   .regionLocationWrap:nth-child(3) {
-    width: 227px;
-    height: 227px;
-    top: 302px;
-    left: 309px;
+    top: 565px;
+    left: 430px;
   }
 
-  .regionLocationWrap:nth-child(1) .regionLocationIcon {
-    width: 46px;
-    height: 46px;
-    top: 28px;
-    left: 42px;
+  .regionLocationWrap:nth-child(4) {
+    top: 170px;
+    left: 293px;
+  }
+  .regionLocationWrap:nth-child(5) {
+    top: 314px;
+    left: 287px;
   }
 
-  .regionLocationWrap:nth-child(2) .regionLocationIcon {
-    width: 54px;
-    height: 54px;
-    top: 34px;
-    left: 46px;
+  .regionLocationWrap:nth-child(6) {
+    top: 504px;
+    left: 344px;
   }
 
-  .regionLocationWrap:nth-child(3) .regionLocationIcon {
-    width: 60px;
-    height: 60px;
-    top: 84px;
-    left: 84px;
+  .regionLocationIcon {
+    width: 40px;
+    height: 40px;
   }
 
   .regionLocationWrap:nth-child(1) .regionLocationText {
-    top: 51px;
-    left: 85px;
     font-size: 16px;
   }
 
   .regionLocationWrap:nth-child(2) .regionLocationText {
-    top: 62px;
-    left: 100px;
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .regionLocationWrap:nth-child(3) .regionLocationText {
-    font-size: 24px;
-    top: 114px;
-    left: 140px;
+    font-size: 18px;
+  }
+
+  .regionLocationWrap:nth-child(4) .regionLocationText {
+    font-size: 16px;
+  }
+
+  .regionLocationWrap:nth-child(5) .regionLocationText {
+    font-size: 16px;
+  }
+
+  .regionLocationWrap:nth-child(6) .regionLocationText {
+    font-size: 20px;
   }
 
   .regionBtn {

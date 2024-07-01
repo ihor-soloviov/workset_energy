@@ -1,52 +1,30 @@
 'use client';
 
 import React, { useState } from 'react';
-import dynamic from 'next/dynamic';
+import { usePathname } from 'next/navigation';
+import LeadTitleIcon from '/public/icons/leadgen/title-arrow.svg';
+import LeadgenComponent from './LeadgenComponent/LeadgenComponent';
 
-const LeadgenComponent = dynamic(
-  () => import('./LeadgenComponent/LeadgenComponent'),
-);
-
-import { useGlobalStore } from '@/store/global-store';
 import styles from './LeadgenSection.module.css';
 
 const LeadgenSection = () => {
   const [step, setStep] = useState(1);
-  const { isDesktop } = useGlobalStore();
-
-  const getCurrentClass = () => {
-    switch (step) {
-      case 1:
-        return 'extraSmall';
-      case 2:
-        return 'small';
-      case 3:
-        return 'small';
-      case 4:
-        return !isDesktop ? 'medium' : 'extraMedium';
-      case 5:
-        return 'large';
-      case 6:
-        return 'smallMedium';
-      case 7:
-        return 'large';
-
-      default:
-        return '';
-    }
-  };
-
+  const pathname = usePathname();
   return (
     <section
       id="leadgen"
-      className={`${styles.leadSection} ${styles[getCurrentClass()]}`}
+      className={`${styles.leadSection} ${pathname === '/leadgen' && step === 4 ? styles.extraClass : ''}`}
     >
       <div className={styles.leadContainer}>
-        {step < 6 && (
-          <h2 className={styles.leadTitle}>
-            Investiere 30 Sekunden für dein PV-Projekt!
-          </h2>
+        {pathname === '/' && step < 4 && (
+          <>
+            <h2 className={styles.leadMainTitle}>
+              Jetzt Solaranlage berechnen
+            </h2>
+            <LeadTitleIcon className={styles.leadTitleIcon} />
+          </>
         )}
+
         <LeadgenComponent step={step} setStep={setStep} />
       </div>
     </section>

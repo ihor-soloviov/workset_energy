@@ -170,14 +170,6 @@
   background-color: var(--white-main);
 }
 
-.stepToggleBtn:hover {
-  background-color: var(--white-main);
-}
-
-.stepToggleBtn.white:hover {
-  background-color: var(--red-main);
-}
-
 .stepToggleIcon {
   width: 14px;
   height: 17px;
@@ -188,14 +180,6 @@
 
 .stepToggleIcon.white {
   fill: var(--red-main);
-}
-
-.stepToggleBtn:hover .stepToggleIcon {
-  fill: var(--red-main);
-}
-
-.stepToggleBtn.white:hover .stepToggleIcon {
-  fill: var(--white-main);
 }
 
 .stepToggleIcon.active {

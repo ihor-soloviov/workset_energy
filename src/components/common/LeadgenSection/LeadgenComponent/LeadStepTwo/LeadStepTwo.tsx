@@ -1,46 +1,59 @@
 import Button from '@/components/common/Button/Button';
 import styles from './LeadStepTwo.module.css';
 import LeadStepTwoList from './LeadStepTwoList/LeadStepTwoList';
-import { LeadStepProps } from '../../types';
 import React, { useState, MouseEvent, useEffect } from 'react';
+import { LeadStepProps } from '../../types';
+import { inter } from '@/utils/fonts';
 
 const LeadStepTwo = ({
   handleNextStepClick,
   handlePrevStepClick,
 }: LeadStepProps) => {
-  const [stepTwoValue, setStepTwoValue] = useState<null | string>(null);
+  const [stepTwoValues, setStepTwoValues] = useState<string[]>([]);
+  const [isDisabled, setIsDisabled] = useState(true);
 
   const handleItemClick = (e: MouseEvent<HTMLLIElement>, itemValue: string) => {
-    setStepTwoValue(itemValue);
+    setStepTwoValues(prevValues =>
+      prevValues.includes(itemValue)
+        ? prevValues.filter(value => value !== itemValue)
+        : [...prevValues, itemValue],
+    );
   };
 
   useEffect(() => {
-    if (stepTwoValue) {
-      const timer = setTimeout(() => {
-        handleNextStepClick(stepTwoValue, 'consultType');
-      }, 100);
-      return () => clearTimeout(timer);
-    }
-  }, [stepTwoValue, handleNextStepClick]);
+    stepTwoValues.length !== 0 ? setIsDisabled(false) : setIsDisabled(true);
+  }, [stepTwoValues]);
 
   return (
     <div className={styles.stepTwoWrap}>
-      <h2 className={styles.stepTwoTitle}>
-        Welche Art der Beratung wünschst du?
-      </h2>
-      <p className={styles.stepTwoText}>Wir wollen dich passgenau beraten!</p>
+      <h2 className={styles.stepTwoTitle}>Welche Komponenten benötigen Sie?</h2>
+      <p className={`${styles.stepTwoText} ${inter.className}`}>
+        Wählen Sie ein paar geeignete Optionen.
+      </p>
       <LeadStepTwoList
-        stepValue={stepTwoValue}
+        stepValue={stepTwoValues}
         handleItemClick={handleItemClick}
       />
 
-      <Button
-        handleClick={handlePrevStepClick}
-        type="button"
-        className={styles.stepTwoBtn}
-      >
-        Zurück
-      </Button>
+      <div className={styles.stepTwoBtnWrap}>
+        <Button
+          handleClick={handlePrevStepClick}
+          type="button"
+          className={styles.stepTwoBtn}
+        >
+          Zurück
+        </Button>
+        <Button
+          handleClick={() =>
+            handleNextStepClick(stepTwoValues, 'componentsList')
+          }
+          disabled={isDisabled}
+          type="button"
+          className={styles.stepTwoBtn}
+        >
+          Weiter
+        </Button>
+      </div>
     </div>
   );
 };

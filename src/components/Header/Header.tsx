@@ -113,10 +113,16 @@ const Header = () => {
               <HeaderNavList />
             </nav>
             <Link
-              href="/leadgen#leadgen"
+              href={
+                pathname === '/leadgen' || pathname.includes('thank-you')
+                  ? '/#unsere-projekte'
+                  : '/leadgen'
+              }
               className={`${styles.headerLeadLink} ${pathname === '/karriere/jobs' ? styles.jobs : ''}`}
             >
-              Jetzt berechnen
+              {pathname === '/leadgen' || pathname.includes('thank-you')
+                ? 'Unsere Projekte'
+                : 'Jetzt berechnen'}
               <Arrow className={styles.headerIcon} />
             </Link>
           </div>
