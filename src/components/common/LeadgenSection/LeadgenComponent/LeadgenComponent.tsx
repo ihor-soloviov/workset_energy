@@ -144,6 +144,16 @@ const LeadgenComponent = ({ step, setStep }: LeadComponentProps) => {
     }
   }, [step]);
 
+  const scrollToTop = () => {
+    if (leadMainWrapRef?.current) {
+      leadMainWrapRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  useEffect(() => {
+    scrollToTop();
+  }, [step]);
+
   return (
     <div className={styles.leadMainWrap} ref={leadMainWrapRef}>
       {pathname === '/leadgen' && (
