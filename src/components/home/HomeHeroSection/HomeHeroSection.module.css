@@ -14,6 +14,7 @@
 
 .heroSection {
   position: relative;
+  height: 723px;
   padding: 110px 0 36px;
   overflow: hidden;
 }
@@ -190,6 +191,7 @@
   }
 
   .heroSection {
+    height: 97.2rem;
     padding: 32.4rem 0 7.6rem;
   }
 
@@ -294,6 +296,7 @@
 @media screen and (min-width: 1728px) {
   .heroSection {
     padding: 358px 0 76px;
+    height: 972px;
   }
 
   .heroContainer {

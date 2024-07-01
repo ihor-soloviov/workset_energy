@@ -151,7 +151,7 @@ const LeadgenComponent = ({ step, setStep }: LeadComponentProps) => {
   };
 
   useEffect(() => {
-    scrollToTop();
+    step !== 1 && scrollToTop();
   }, [step]);
 
   return (
