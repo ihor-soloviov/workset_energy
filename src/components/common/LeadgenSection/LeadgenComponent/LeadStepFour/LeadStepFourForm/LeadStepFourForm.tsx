@@ -18,53 +18,47 @@ const LeadStepFourForm = ({
 }: LeadFormProps) => {
   const [isLoading, setIsLoading] = useState(false);
   const { setPopupAction } = useGlobalStore();
-  const {
-    handleSubmit,
-    getFieldProps,
-    errors,
-    isValid,
-    dirty,
-    touched,
-    resetForm,
-  } = useFormik({
-    initialValues: {
-      userPostcode: '',
-      userEmail: '',
-      userMessage: '',
+  const { handleSubmit, getFieldProps, errors, touched, resetForm } = useFormik(
+    {
+      initialValues: {
+        userPostcode: '',
+        userEmail: '',
+        userMessage: '',
+      },
+      validationSchema: Yup.object({
+        userPostcode: Yup.string()
+          .matches(/^[0-9]+$/, 'Must be only digits')
+          .min(5, 'Must be exactly 5 digits')
+          .max(5, 'Must be exactly 5 digits'),
+
+        userEmail: Yup.string().email('Invalid email address'),
+
+        userMessage: Yup.string(),
+      }),
+      onSubmit: async values => {
+        setIsLoading(true);
+
+        const leadGenData = new FormData();
+        const leadGenExtraData = { extraContactData: values };
+
+        Object.entries(leadGenExtraData).forEach(([key, value]) => {
+          leadGenData.append(key, JSON.stringify(value));
+        });
+
+        leadId &&
+          (await leadgenExtraFormDataPost(
+            leadGenData,
+            leadId,
+            'leadgen',
+            setPopupAction,
+          ));
+
+        setIsLoading(false);
+        resetForm();
+        setStep(step + 1);
+      },
     },
-    validationSchema: Yup.object({
-      userPostcode: Yup.string()
-        .matches(/^[0-9]+$/, 'Must be only digits')
-        .min(5, 'Must be exactly 5 digits')
-        .max(5, 'Must be exactly 5 digits'),
-
-      userEmail: Yup.string().email('Invalid email address'),
-
-      userMessage: Yup.string(),
-    }),
-    onSubmit: async values => {
-      setIsLoading(true);
-
-      const leadGenData = new FormData();
-      const leadGenExtraData = { extraContactData: values };
-
-      Object.entries(leadGenExtraData).forEach(([key, value]) => {
-        leadGenData.append(key, JSON.stringify(value));
-      });
-
-      leadId &&
-        (await leadgenExtraFormDataPost(
-          leadGenData,
-          leadId,
-          'leadgen',
-          setPopupAction,
-        ));
-
-      setIsLoading(false);
-      resetForm();
-      setStep(step + 1);
-    },
-  });
+  );
 
   const scrollToTop = () => {
     if (leadMainWrapRef?.current) {
